@@ -26,6 +26,7 @@ class LoginVM : ObservableObject{
     // Loading Screen...
     @Published var isLoading = false
     
+    
     // Getting BioMetricType....
     func getBioMetricStatus()->Bool{
         

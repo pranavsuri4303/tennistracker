@@ -42,7 +42,7 @@
 		76D731A025CA7BB7001D2D64 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D7319F25CA7BB7001D2D64 /* ProfileView.swift */; };
 		76DB132425CEDA41003EDA38 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DB132325CEDA41003EDA38 /* ProfileVM.swift */; };
 		76DB132925CEDAD9003EDA38 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DB132825CEDAD9003EDA38 /* Models.swift */; };
-		76DBB01425C29C8E00F238D9 /* StringsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DBB01325C29C8E00F238D9 /* StringsVM.swift */; };
+		76DBB01425C29C8E00F238D9 /* AddStringVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DBB01325C29C8E00F238D9 /* AddStringVM.swift */; };
 		76F5424825CDC81F00557BF9 /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F5424725CDC81F00557BF9 /* FriendsListView.swift */; };
 		76FA5EEC25C7E457005DACE9 /* AdvancedMatchScoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA5EEB25C7E457005DACE9 /* AdvancedMatchScoringView.swift */; };
 		76FA5EF125C7E495005DACE9 /* ExpertMatchScoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA5EF025C7E495005DACE9 /* ExpertMatchScoringView.swift */; };
@@ -55,6 +55,7 @@
 		B512C3DF27A7116A00231CD9 /* TTProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = B512C3DE27A7116A00231CD9 /* TTProgressHUD */; };
 		B513A39B26A038BD00145D2D /* MatchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B513A39A26A038BD00145D2D /* MatchVM.swift */; };
 		B513A39D26A0390600145D2D /* ClubsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B513A39C26A0390600145D2D /* ClubsView.swift */; };
+		B52F300227A92D4000237915 /* HalfModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52F300127A92D4000237915 /* HalfModalView.swift */; };
 		B53309F325CFA66B00A98800 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B53309F225CFA66B00A98800 /* GoogleService-Info.plist */; };
 		B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D40672791342D00F36EE1 /* RDTextField.swift */; };
 		B54D406A27913F8A00F36EE1 /* RDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D406927913F8A00F36EE1 /* RDButton.swift */; };
@@ -117,7 +118,7 @@
 		7662D3F925C392BB004544BF /* MatchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVM.swift; sourceTree = "<group>"; };
 		7662D40125C39DBE004544BF /* BasicMatchScoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMatchScoringView.swift; sourceTree = "<group>"; };
 		768F059925CDA03800E29BA7 /* FriendRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestView.swift; sourceTree = "<group>"; };
-		76AADB9D25C64F3800EB0C43 /* StringsListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsListVM.swift; sourceTree = "<group>"; };
+		76AADB9D25C64F3800EB0C43 /* StringsListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsListVM.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		76AADBA525C64F6A00EB0C43 /* PlayersSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersSearchView.swift; sourceTree = "<group>"; };
 		76AADBB325C6514800EB0C43 /* PlayersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersVM.swift; sourceTree = "<group>"; };
 		76B8152F25CD3AF10029EE83 /* TextFieldWithInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithInputView.swift; sourceTree = "<group>"; };
@@ -126,7 +127,7 @@
 		76D7319F25CA7BB7001D2D64 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		76DB132325CEDA41003EDA38 /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
 		76DB132825CEDAD9003EDA38 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		76DBB01325C29C8E00F238D9 /* StringsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsVM.swift; sourceTree = "<group>"; };
+		76DBB01325C29C8E00F238D9 /* AddStringVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStringVM.swift; sourceTree = "<group>"; };
 		76F5424725CDC81F00557BF9 /* FriendsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
 		76FA5EEB25C7E457005DACE9 /* AdvancedMatchScoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedMatchScoringView.swift; sourceTree = "<group>"; };
 		76FA5EF025C7E495005DACE9 /* ExpertMatchScoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertMatchScoringView.swift; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		9FFCF2E325CF2C7E00C6C94E /* FriendsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVM.swift; sourceTree = "<group>"; };
 		B513A39A26A038BD00145D2D /* MatchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVM.swift; sourceTree = "<group>"; };
 		B513A39C26A0390600145D2D /* ClubsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsView.swift; sourceTree = "<group>"; };
+		B52F300127A92D4000237915 /* HalfModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalView.swift; sourceTree = "<group>"; };
 		B53309F225CFA66B00A98800 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B54D40672791342D00F36EE1 /* RDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDTextField.swift; sourceTree = "<group>"; };
 		B54D406927913F8A00F36EE1 /* RDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDButton.swift; sourceTree = "<group>"; };
@@ -285,7 +287,7 @@
 			children = (
 				764A618225B9493F00789373 /* RegisterVM.swift */,
 				764A611A25B91C7300789373 /* LoginVM.swift */,
-				76DBB01325C29C8E00F238D9 /* StringsVM.swift */,
+				76DBB01325C29C8E00F238D9 /* AddStringVM.swift */,
 				76AADB9D25C64F3800EB0C43 /* StringsListVM.swift */,
 				76AADBB325C6514800EB0C43 /* PlayersVM.swift */,
 				7619A63A25CA68B900014ADA /* SliderMenuVM.swift */,
@@ -378,6 +380,7 @@
 				76D1B85F25BAEE4700FE1B4B /* LoadingScreenView.swift */,
 				762F87D925CA34FE004B46FD /* ProfileImagePickerView.swift */,
 				76B8152F25CD3AF10029EE83 /* TextFieldWithInputView.swift */,
+				B52F300127A92D4000237915 /* HalfModalView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */,
 				76B8153025CD3AF10029EE83 /* TextFieldWithInputView.swift in Sources */,
 				764A618325B9493F00789373 /* RegisterVM.swift in Sources */,
+				B52F300227A92D4000237915 /* HalfModalView.swift in Sources */,
 				9FFCF2E425CF2C7E00C6C94E /* FriendsVM.swift in Sources */,
 				B564F72F2799F13D00052CA3 /* RDHeader.swift in Sources */,
 				76FA5EF125C7E495005DACE9 /* ExpertMatchScoringView.swift in Sources */,
@@ -561,7 +565,7 @@
 				762F87DA25CA34FE004B46FD /* ProfileImagePickerView.swift in Sources */,
 				76F5424825CDC81F00557BF9 /* FriendsListView.swift in Sources */,
 				76D731A025CA7BB7001D2D64 /* ProfileView.swift in Sources */,
-				76DBB01425C29C8E00F238D9 /* StringsVM.swift in Sources */,
+				76DBB01425C29C8E00F238D9 /* AddStringVM.swift in Sources */,
 				B54D406A27913F8A00F36EE1 /* RDButton.swift in Sources */,
 				764A60C925B90E5600789373 /* TennisApp.swift in Sources */,
 				76FA5EEC25C7E457005DACE9 /* AdvancedMatchScoringView.swift in Sources */,
@@ -733,7 +737,7 @@
 				DEVELOPMENT_TEAM = Q8KFRAGT9K;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Tennis/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -755,7 +759,7 @@
 				DEVELOPMENT_TEAM = Q8KFRAGT9K;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Tennis/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

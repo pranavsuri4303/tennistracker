@@ -13,51 +13,84 @@ import CoreMedia
 
 class StringsListVM: ObservableObject {
     @Published var stringsList : [StringModel] = []
-    private var cancellables: Set<AnyCancellable> = []
+    @Published var sortType : Sort = .dateNewToOld
+    
+    // For Alerts..
+    @Published var alert = false
+    @Published var alertMsg = ""
+    // Loading Screen...
+    @Published var isLoading = false
+    
+    let db = Firestore.firestore()
     
     init() {
         getStringsList()
     }
     
+    
     func getStringsList(){
         print("String List VM GetData Called")
+        isLoading = true
+        let uid = Auth.auth().currentUser?.uid
         
+        let query = db.collection("users").document(uid!)
+                    .collection("strings")
+                    .order(by: sortType.key(),
+                           descending: sortType.order())
         
-//      Old Imlpementation
-//        Firestore.firestore().collection("users").document(Firebase.Auth.auth().currentUser!.uid).addSnapshotListener { (snap, error) in
-//            self.strings.removeAll()
-//            if let data = snap?.data() , let stringsArray  = data["strings"] as? [Any]  {
-//                stringsArray.publisher.compactMap {
-//                    if  let stringValue = $0 as? [String:Any]{
-//                        if  let date = (stringValue["date"] as? Timestamp)?.dateValue(),
-//                            let cross = stringValue["cross"] as? Int,
-//                            let mains = stringValue["mains"] as? Int,
-//                            let name = stringValue["name"] as? String{
-//
-//                            return StringModel(cross: cross, date: date, mains: mains, name: name)
-//
-//                        }
-//                    }
-//                    return nil
-//                }
-//                .sink {
-//                    self.strings.append($0)
-//                }
-//            }
-//        }
-//      ********************
-        
-        
+        query.addSnapshotListener() { (querySnapshot, error) in
+            if let error = error {
+                self.alert.toggle()
+                self.alertMsg = error.localizedDescription
+                self.isLoading = false
+                print("Error getting documents: \(error)")
+            } else {
+                print("String List VM GetData Called and inside else")
+                self.isLoading = false
+                self.stringsList = []
+                for document in querySnapshot!.documents {
+                    print("iterating through collection")
+                    print(document.data())
+                    let data = document.data()
+                    self.stringsList.append(StringModel(id: document.documentID,
+                                                        cross: data["cross"] as? Int ?? 10,
+                                                        date: data["date"] as? TimeInterval ?? TimeInterval(),
+                                                        mains: data["mains"] as? Int ?? 10,
+                                                        name: data["name"] as? String ?? "String Name"))
+                }
+//                self.stringsList = self.stringsList.reversed()
+            }
+            
+        }
     }
     
     func deleteString(at index: IndexSet) -> Void {
         print("deleteString Called from StringsListVm")
-        stringsList.remove(atOffsets: index)
+        let indexToDelete = index[index.startIndex]
+        
+        let uid = Auth.auth().currentUser?.uid
+        let collectionRef = db.collection("users").document(uid!).collection("strings")
 
+
+        collectionRef.document("\(stringsList[indexToDelete].id)").delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+                self.stringsList.remove(atOffsets: index)
+
+            }
+        }
     }
     
-    func sortStringsData(by sortType: SortStringsby) -> Void {
-        print("sortStringsData Called from StringsListVm")
-    }
+    
+
+    
+//    func sortQueryGenerator(key sortType: SortingTitles, isAscending) -> Void {
+//        
+//        
+//        print("sortStringsData Called from StringsListVm")
+//    }
+//    
 }
 

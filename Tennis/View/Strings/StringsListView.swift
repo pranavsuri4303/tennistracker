@@ -8,19 +8,11 @@
 import SwiftUI
 
 struct StringsListView: View {
-    @StateObject var addStringVM = StringsVM()
+    @StateObject var addStringVM = AddStringVM()
     @StateObject var stringsListVM = StringsListVM()
-    
-//  Template Data for View
-    @State var name = "String"
-    @State var main = 10
-    @State var cross = 10
-    @State var date = "01/01/01"
-    var strings = [0,1,2,3,4,5]
+    @State var showingAddString = false
 
-//  **************************
-    
-    
+
     var body: some View {
         ZStack{
             VStack{
@@ -30,26 +22,32 @@ struct StringsListView: View {
                     HStack{
                         Spacer()
                         RDBadgeButton(systemImageTitle: "plus.circle",
-                                      action: { addStringVM.showAddString.toggle() })
-                            .sheet(isPresented: $addStringVM.showAddString) {
-                                AddNewStringView(addStringIsPresented: $addStringVM.showAddString)}
+                                      action: { showingAddString.toggle() })
+                            .halfSheet(showSheet: $showingAddString){
+                                AddNewStringView()
+                            }onEnd: {
+                                print("Add String View Closed")
+                            }
+                        
                     }
                     .padding(.horizontal)
                 }.padding(.bottom, 10)
                 List{
-                    ForEach(strings, id: \.self) { (id)  in
-                        StringRowView(stringName: $name, mainsTension: $main, crossTension:   $cross, dateStrung: $date)
-                            .listRowBackground(Color.white.opacity(0.08))
+                    ForEach(stringsListVM.stringsList, id: \.id) { string  in
+                        if #available(iOS 15.0, *) {
+                            StringRowView(stringRowData: string)
+                                .listRowBackground(Color.black.opacity(0.02))
+                                .listRowSeparatorTint(.white)
+                        } else {
+                            // Fallback on earlier versions
+                            StringRowView(stringRowData: string)
+                                .listRowBackground(Color.black.opacity(0.02))
+                        }
                         
-                        
-// Commented out before connecting to VM
-//                        StringsRowView(stringName: id.name, mainsTension: id.mains, crossTension: id.cross, dateStrung: id.date).listRowBackground(Color.white.opacity(0.08))
-//  **************************
-
-                        
-                    }.onDelete(perform: stringsListVM.deleteString(at: ))
-                }.listStyle(.plain)
-                
+                    }.onDelete(perform: stringsListVM.deleteString(at:))
+                    
+                }
+                .listStyle(.plain)
                 Spacer()
                 
             }
@@ -58,21 +56,30 @@ struct StringsListView: View {
                 HStack{
                     Spacer()
                     Menu {
-                        ForEach(SortStringsby.allCases, id: \.self) { sortType in
-                            Button(sortType.rawValue, action: {print("\(sortType.rawValue)")})
+                        ForEach(Sort.allCases, id: \.self) { sortType in
+                            Button(sortType.title(), action: {
+                                stringsListVM.sortType = sortType
+                                stringsListVM.getStringsList()
+                            })
                         }
 
                     } label: {
-                        Image("filter")
-                            .resizable()
+                        Circle()
+                            .foregroundColor(.black)
                             .frame(width: 50, height: 50)
-                            .foregroundColor(Color("green"))
+                            .overlay(
+                                Image("filter")
+                                    .resizable()
+                                    .foregroundColor(Color("green")))
                             .padding()
+
                     }
                 }
             }
         }
         .background(Color("bg").ignoresSafeArea(.all, edges: .all))
+        .ignoresSafeArea(edges: .bottom)
+        
     }
 
 }

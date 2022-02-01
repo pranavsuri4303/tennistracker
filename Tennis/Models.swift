@@ -9,11 +9,11 @@ import Foundation
 import SwiftUI
 
 struct StringModel : Hashable  {
-    let id = UUID.init()
-    let cross : Int?
-    let date : Date?
-    let mains : Int?
-    let name : String?
+    let id : String
+    let cross : Int
+    var date : TimeInterval
+    var mains : Int
+    var name : String
 }
 
 struct PlayerModel : Hashable  {

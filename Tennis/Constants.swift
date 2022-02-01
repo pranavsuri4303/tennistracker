@@ -32,18 +32,63 @@ enum SlideMenuView : String , Equatable , CaseIterable {
     case none
 }
 
-enum SortStringsby : String , Equatable , CaseIterable {
-    case alphabeticalAsc = "A → Z"
-    case alphabeticalDesc = "Z → A"
-    case dateNewToOld = "Date: Oldest → Newest"
-    case dateOldToNew = "Date: Newest → Oldest"
-    case mainsDsc = "Mains: High → Low"
-    case mainsAsc = "Mains: Low → High"
-    case crossDsc = "Cross: High → Low"
-    case crossAsc = "Cross: Low → High"
+
+// MARK: Sorting Key Enums and Structs
+
+enum Sort: CaseIterable{
+    case alphabeticalAsc
+    case alphabeticalDesc
+    case dateNewToOld
+    case dateOldToNew
+    case mainsDsc
+    case mainsAsc
+    case crossDsc
+    case crossAsc
+    
+    func title() -> String {
+        switch self {
+        case .alphabeticalAsc:
+            return "A → Z"
+        case .alphabeticalDesc:
+            return "Z → A"
+        case .dateNewToOld:
+            return "Date: Newest → Oldest"
+        case .dateOldToNew:
+            return "Date: Oldest → Newest"
+        case .mainsDsc:
+            return "Mains: High → Low"
+        case .mainsAsc:
+            return "Mains: High → Low"
+        case .crossDsc:
+            return "Cross: High → Low"
+        case .crossAsc:
+            return "Cross: Low → High"
+        }
+    }
+    func key() -> String {
+        switch self {
+        case .alphabeticalAsc, .alphabeticalDesc:
+            return "name"
+        case .dateNewToOld, .dateOldToNew:
+            return "date"
+        case .mainsDsc, .mainsAsc:
+            return "mains"
+        case .crossDsc, .crossAsc:
+            return "cross"
+        }
+    }
+    
+    func order() -> Bool{
+        switch self{
+        case .alphabeticalAsc, .dateOldToNew, .mainsAsc, .crossAsc:
+            return false
+        case .alphabeticalDesc, .dateNewToOld, .mainsDsc, .crossDsc:
+            return true
+        }
+    }
 }
 
-
+// MARK: Nationalities List
 struct Nationalities {
     let list = [
         "",

@@ -19,10 +19,13 @@ struct LoginView : View {
     @State private var goToSignup = false
     
     @State var startAnimate = false
-    @State var showingDetail = false
+    @State var showingResetPassword = false
     var body: some View{
         
         ZStack{
+            
+//            Color.black.opacity(opacity)
+//                .ignoresSafeArea(.all, edges: .all)
 
             VStack{
                 
@@ -67,13 +70,16 @@ struct LoginView : View {
                 // Forget Button...
                 
                 Button(action: {
-                    self.showingDetail.toggle()
+                    self.showingResetPassword.toggle()
                 }, label: {
                     Text("Forget password?")
                         .foregroundColor(Color("green"))
-                }).sheet(isPresented: $showingDetail) {
+                }).halfSheet(showSheet: $showingResetPassword) {
                     ResetPasswordView()
+                } onEnd: {
+                    print(("Reset Password Closed"))
                 }
+                
                 .padding(.top,8)
                 .alert(isPresented: $vm.store_Info, content: {
                     Alert(title: Text("Message"), message: Text("Store Information For Future Login Using BioMetric Authentication?"), primaryButton: .default(Text("Accept"), action: {
@@ -112,6 +118,7 @@ struct LoginView : View {
             }
         }
         .onAppear(perform: {
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.startAnimate.toggle()
             }

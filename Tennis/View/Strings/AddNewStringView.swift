@@ -8,18 +8,17 @@
 import SwiftUI
 
 struct AddNewStringView: View {
-    @StateObject var vm = StringsVM()
-    @Binding var addStringIsPresented : Bool
+    @ObservedObject var vm = AddStringVM()
     var body: some View {
         ZStack{
             GeometryReader{ geo in
                 VStack{
-                    Image("welcomeLogo")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        //Dynamic Frame...
-                        .padding(.all,20)
-                        .padding()
+//                    Image("welcomeLogo")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        //Dynamic Frame...
+//                        .padding(.all,20)
+//                        .padding()
                     HStack{
                         
                         VStack(alignment: .leading, spacing: 12, content: {
@@ -31,49 +30,51 @@ struct AddNewStringView: View {
                         })
                         
                         Spacer(minLength: 0)
-                    }
-                    .padding()
-                    .padding(.leading,15)
+                    }.padding()
                     
                     RDTextField(title: "String name", text: $vm.stringName, imageName: "number", isSecure: false)
                     
                     HStack(spacing:30){
-                        VStack{
+                        VStack(alignment: .center, spacing: 8){
                             Text("\(vm.mainsTension)")
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
-                                .padding(.all)
+                                .padding(.top)
                             Stepper("", value: $vm.mainsTension, in: 35...65)
                                 .background(Color("green"))
                                 .cornerRadius(8)
                                 .labelsHidden()
+                                .padding(.horizontal)
                             Text("Main")
                                 .font(.headline)
                                 .foregroundColor(Color.white)
                                 .multilineTextAlignment(.center)
-                        }.padding()
-                        .background(Color(.white).opacity(0.1).cornerRadius(8))
+                                .padding(.bottom)
+                        }.background(Color(.white).opacity(0.1).cornerRadius(8))
                         
-                        VStack{
+                        VStack(alignment: .center, spacing: 8){
                             Text("\(vm.crossTension)")
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
-                                .padding(.all)
+                                .padding(.top)
                             Stepper("", value: $vm.crossTension, in: 35...65)
                                 .background(Color("green"))
                                 .cornerRadius(8)
                                 .labelsHidden()
+                                .padding(.horizontal)
                             Text("Cross")
                                 .font(.headline)
                                 .foregroundColor(Color.white)
                                 .multilineTextAlignment(.center)
-                        }.padding()
-                        .background(Color(.white).opacity(0.1).cornerRadius(8))
+                                .padding(.bottom)
+                        }.background(Color(.white).opacity(0.1).cornerRadius(8))
+                        
                     }.padding(.horizontal)
+                    
                     HStack{
                         Text("Restringing date")
                             .font(.headline)
@@ -90,14 +91,10 @@ struct AddNewStringView: View {
                     Spacer()
                     Button(action: {
                         vm.addString()
-                        addStringIsPresented.toggle()
                     }, label: {
                         RDButton(withTitle: "Add String")
                     }).opacity(vm.stringName != "" ? 1 : 0.5)
                     .disabled(vm.stringName != "" ? false : true)
-                    .sheet(isPresented: $vm.showAddString, content: {
-                        self
-                    })
                     .alert(isPresented: $vm.alert, content: {
                         Alert(title: Text(""), message: Text(vm.alertMsg), dismissButton: .destructive(Text("Ok")))
                         

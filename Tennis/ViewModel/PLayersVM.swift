@@ -28,7 +28,7 @@ class PlayersVM : ObservableObject{
             .whereField("email", isLessThanOrEqualTo: "\(playerName)z")
             .order(by: "email", descending: false)
 
-        query.getDocuments { [weak self] (results, err) in
+        query.addSnapshotListener { [weak self] (results, err) in
             guard let self = self else {return}
             
             if let err = err{

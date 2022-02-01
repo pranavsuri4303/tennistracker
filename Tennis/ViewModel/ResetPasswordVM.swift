@@ -18,7 +18,7 @@ class ResetPasswordVM : ObservableObject{
     @Published var alert = false
     @Published var alertMsg = ""
     
-    
+
     func resetPassword(){
         self.isLoading = true
         Auth.auth().sendPasswordReset(withEmail: email) { err in
@@ -31,6 +31,7 @@ class ResetPasswordVM : ObservableObject{
                 self.isLoading.toggle()
                 self.alertMsg = "A password reset email has been sent to the email address provided."
                 self.alert.toggle()
+                self.email = ""
             }
         }
     }

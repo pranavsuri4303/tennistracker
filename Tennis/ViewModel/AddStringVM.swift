@@ -9,14 +9,14 @@ import SwiftUI
 import LocalAuthentication
 import Firebase
 
-class StringsVM : ObservableObject{
+class AddStringVM : ObservableObject{
     // Firebase Stuff
     let db = Firestore.firestore()
     let uidStr = (Auth.auth().currentUser?.uid)!
     @Published var stringName = ""
     @Published var mainsTension = 50
     @Published var crossTension = 50
-    @Published var date = Date(timeIntervalSinceNow: 0)
+    @Published var date = Date()
     @Published var notes = ""
     // User Data....
     // For Alerts..
@@ -24,9 +24,6 @@ class StringsVM : ObservableObject{
     @Published var alertMsg = ""
     // Loading Screen...
     @Published var isLoading = false
-    @Published var showAddString = false
-    // Getting BioMetricType....
-    
 
     
     // Create User...
@@ -44,7 +41,13 @@ class StringsVM : ObservableObject{
                 self.alertMsg = err.localizedDescription
             }else{
                 self.isLoading = false
-                self.showAddString = false
+                self.alertMsg = "New string has been added!"
+                self.alert.toggle()
+                self.stringName = ""
+                self.mainsTension = 50
+                self.crossTension = 50
+                self.date = Date()
+                self.notes = ""
             }
             
         }

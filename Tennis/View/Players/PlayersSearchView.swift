@@ -89,6 +89,7 @@ struct PlayersSearchView: View {
         
     }
 }
+
 struct SearchPlayerRowView : View {
     let player : PlayerModel
     @ObservedObject var searchPlayerVM : SearchPlayerVM

@@ -9,20 +9,17 @@ import SwiftUI
 
 
 struct StringRowView: View {
-    @Binding var stringName: String
-    @Binding var mainsTension: Int
-    @Binding var crossTension: Int
-    @Binding var dateStrung: String
+    var stringRowData: StringModel
     var body: some View{
         VStack{
             HStack{
-                Text("\(stringName)")
+                Text("\(stringRowData.name)")
                 Spacer()
-                Text("\(dateStrung)")
+                Text(stringRowData.date.getDateOnly(fromTimeStamp: stringRowData.date))
             }
             HStack{
                 VStack{
-                    Text("\(mainsTension)")
+                    Text("\(stringRowData.mains)")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                         .multilineTextAlignment(.center)
@@ -31,7 +28,7 @@ struct StringRowView: View {
                 }
                 Spacer()
                 VStack{
-                    Text("\(crossTension)")
+                    Text("\(stringRowData.cross)")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                         .multilineTextAlignment(.center)

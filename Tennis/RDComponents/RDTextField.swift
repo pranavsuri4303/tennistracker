@@ -12,6 +12,7 @@ struct RDTextField: View {
     @Binding var text: String
     var imageName: String
     var isSecure: Bool
+    
 
     var body: some View {
         HStack{
@@ -35,6 +36,7 @@ struct RDTextField: View {
         .background(Color(.white).opacity(text=="" ? 0.02 : 0.12))
         .cornerRadius(15)
         .padding(.horizontal)
+        .preferredColorScheme(.dark)
     }
 }
 
