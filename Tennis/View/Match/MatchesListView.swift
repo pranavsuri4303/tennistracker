@@ -9,22 +9,14 @@ import SwiftUI
 
 struct MatchesHistoryView: View {
     @State var showAddMatch = false
+    @Binding var showMenu: Bool
+    @Binding var currentTab: CurrentTab
 
     var body: some View {
         ZStack{
             GeometryReader{ geo in
                 VStack{
-                    ZStack{
-                        RDHeader(title: "Matches")
-                        HStack{
-                            Spacer()
-                            RDBadgeButton(systemImageTitle: "plus.circle",
-                                              action: { self.showAddMatch.toggle() })
-                                .sheet(isPresented: $showAddMatch) { NewMatchView() }
-                        }.padding(.horizontal)
-                        
-
-                    }.padding(.bottom, 10)
+                    RDHeader(showMenu: $showMenu, title: currentTab.rawValue, rightBarButton: RDBadgeButton(imageTitle: "Matches", action: { self.showAddMatch.toggle() }))
                     
                     Spacer()
                 }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
@@ -34,11 +26,4 @@ struct MatchesHistoryView: View {
 }
 
 
-struct MatchesHistoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            MatchesHistoryView()
-            MatchesHistoryView()
-        }
-    }
-}
+

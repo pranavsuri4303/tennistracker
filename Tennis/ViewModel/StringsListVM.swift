@@ -47,7 +47,7 @@ class StringsListVM: ObservableObject {
             } else {
                 print("String List VM GetData Called and inside else")
                 self.isLoading = false
-                self.stringsList = []
+//                self.stringsList = []
                 for document in querySnapshot!.documents {
                     print("iterating through collection")
                     print(document.data())
@@ -77,8 +77,6 @@ class StringsListVM: ObservableObject {
                 print("Error removing document: \(err)")
             } else {
                 print("Document successfully removed!")
-                self.stringsList.remove(atOffsets: index)
-
             }
         }
     }

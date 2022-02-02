@@ -10,7 +10,7 @@ import ImagePickerView
 
 struct NewUserView: View {
     @Binding var isPresented : Bool
-    @StateObject var vm : RegisterVM
+    @ObservedObject var vm : RegisterVM
     @State var startAnimate = false
 
     @State var selectionIndex = 0
@@ -19,6 +19,7 @@ struct NewUserView: View {
     // Image
     @State var isImagePickerViewPresented = false
     @State var pickedImage: UIImage? = nil
+    
     
     // Creating an array of YOBs with range 100 yrs
     @State var years = Array(Calendar.current.component(.year, from: Date())-100...Calendar.current.component(.year, from: Date())).map { String($0) }

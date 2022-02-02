@@ -18,7 +18,7 @@ struct PlayerProfileView: View {
                 RDBadgeButton(systemImageTitle: "xmark.circle",
                               action: { profileIsPresented.toggle() })
                 Spacer()
-                RDHeader(title: playerModel.name)
+                RDHeaderTitle(title: playerModel.name)
                 Spacer()
                 RDBadgeButton(systemImageTitle: "person.crop.circle.badge.plus",
                               action: {                     sendFriendRequestVM.sendFriendRequest(recieverUserID: playerModel.uid) })

@@ -21,7 +21,7 @@ enum ViewState: String {
     case error = "Error"
 }
 
-enum SlideMenuView : String , Equatable , CaseIterable {
+enum CurrentTab : String , Equatable , CaseIterable {
     case profile = "Profile"
     case dashboard = "Dashboard"
     case string = "String"
@@ -29,7 +29,6 @@ enum SlideMenuView : String , Equatable , CaseIterable {
     case matches = "Matches"
     case friends = "Friends"
     case clubs = "Clubs"
-    case none
 }
 
 
@@ -58,7 +57,7 @@ enum Sort: CaseIterable{
         case .mainsDsc:
             return "Mains: High → Low"
         case .mainsAsc:
-            return "Mains: High → Low"
+            return "Mains: Low → High"
         case .crossDsc:
             return "Cross: High → Low"
         case .crossAsc:

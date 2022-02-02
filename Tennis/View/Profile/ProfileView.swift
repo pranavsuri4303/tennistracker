@@ -7,7 +7,10 @@
 
 import SwiftUI
 import Firebase
+
 struct ProfileView: View {
+    @Binding var showMenu: Bool
+    @Binding var currentTab: CurrentTab
     @AppStorage("status") var logged = false
     @ObservedObject var sliderMenueVM = DownloadedProfileImage.shared
     @ObservedObject var vm = ProfileVM()
@@ -15,17 +18,13 @@ struct ProfileView: View {
     
     var body: some View {
         VStack{
-            ZStack{
-                RDHeader(title: "Profile")
-                HStack{
-                    Spacer()
-                    RDBadgeButton(imageTitle:"Person_Settings",action:{ goToSettings.toggle() })
-                        .fullScreenCover(isPresented: $goToSettings, content: {
-                            ProfileSettings(profileSettingsPresented: $goToSettings, vm: vm)})
-                }.padding(.horizontal)
-                
-
-            }.padding(.bottom, 10)
+            RDHeader(showMenu: $showMenu,
+                     title: currentTab.rawValue,
+                     rightBarButton: RDBadgeButton(imageTitle: "Person_Settings",
+                                                   action: {goToSettings.toggle()}))
+                .fullScreenCover(isPresented: $goToSettings, content: {
+                    ProfileSettings(profileSettingsPresented: $goToSettings, vm: vm)
+                })
             
             ScrollView(.vertical, showsIndicators: false, content: {
                 GeometryReader{reader in
@@ -127,7 +126,7 @@ struct ProfileView: View {
                 .edgesIgnoringSafeArea(.all)
                 .background(Color("bg").edgesIgnoringSafeArea(.all))
         }
-        //        .edgesIgnoringSafeArea(.all)
+//                .edgesIgnoringSafeArea(.all)
         .background(Color("bg").edgesIgnoringSafeArea(.all))
         //        .onAppear(perform: {
         //            print("Shown")
@@ -147,8 +146,8 @@ struct ProfileView: View {
 
 
 
-struct ProfileView_Preview : PreviewProvider {
-    static var previews: some View {
-        ProfileView()
-    }
-}
+//struct ProfileView_Preview : PreviewProvider {
+//    static var previews: some View {
+//        ProfileView()
+//    }
+//}

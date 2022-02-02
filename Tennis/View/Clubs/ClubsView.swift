@@ -31,7 +31,7 @@ struct ClubsView: View {
                                     .foregroundColor(.white)
                                     .accentColor(.white)
                             }else{
-                                RDHeader(title: "Clubs")
+                                RDHeaderTitle(title: "Clubs")
 
                             }
                         }).padding(.horizontal)

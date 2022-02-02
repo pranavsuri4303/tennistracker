@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct StringsListView: View {
-    @StateObject var addStringVM = AddStringVM()
-    @StateObject var stringsListVM = StringsListVM()
+    @ObservedObject var stringsListVM = StringsListVM()
     @State var showingAddString = false
+//    @Binding var showMenu: Bool
+//    @Binding var currentTab: CurrentTab
 
 
     var body: some View {
@@ -18,7 +19,7 @@ struct StringsListView: View {
             VStack{
                 ZStack{
                     
-                    RDHeader(title: "String")
+                    RDHeaderTitle(title: "String")
                     HStack{
                         Spacer()
                         RDBadgeButton(systemImageTitle: "plus.circle",
@@ -60,7 +61,7 @@ struct StringsListView: View {
                             Button(sortType.title(), action: {
                                 stringsListVM.sortType = sortType
                                 stringsListVM.getStringsList()
-                            })
+                            }).foregroundColor(Color("green"))
                         }
 
                     } label: {

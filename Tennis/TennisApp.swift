@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import GoogleSignIn
 
 @main
 struct TennisApp: App {
@@ -30,6 +31,11 @@ class Delegate : NSObject, UIApplicationDelegate{
         FirebaseApp.configure()
         print(Auth.auth().currentUser?.uid)
         return true
+    }
+    func application(_ application: UIApplication, open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey: Any])
+      -> Bool {
+      return GIDSignIn.sharedInstance.handle(url)
     }
 
     

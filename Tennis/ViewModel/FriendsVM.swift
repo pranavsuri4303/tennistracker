@@ -99,7 +99,6 @@ class FriendsVM : ObservableObject {
                 print(error)
                 return
             }
-            
             self.currentStatus = .pending
         }
     }
@@ -110,15 +109,12 @@ class FriendsVM : ObservableObject {
                 print(error)
                 return
             }
-            
             Firestore.firestore().collection("users").document(self.currentUserID).setData(["friends": [senderUserID:FriendshipStatus.friend.rawValue]], merge: true) { (error) in
                 if let error = error {
                     print(error)
                     return
                 }
                 self.requestsUsers.removeAll(where: {$0.uid == senderUserID})
-                
-                
             }
         }
     }

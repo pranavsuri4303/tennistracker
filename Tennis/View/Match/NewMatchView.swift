@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NewMatchView: View {
     
+    
     @State var friendsVM = FriendsVM()
     init() {
         friendsVM.getFriendsList()

@@ -10,9 +10,11 @@ import SwiftUI
 struct PlayersSearchView: View {
     @State var showSearch = false
     @StateObject var vm = PlayersVM()
+//    @Binding var showMenu: Bool
+//    @Binding var currentTab: CurrentTab
     
     var body: some View {
-        ZStack{
+        NavigationView{
             GeometryReader{ geo in
                 VStack{
                     ZStack{
@@ -32,7 +34,7 @@ struct PlayersSearchView: View {
                                     .foregroundColor(.white)
                                     .accentColor(.white)
                             }else{
-                                RDHeader(title: "Players")
+                                RDHeaderTitle(title: "Players")
                             }
                         }).padding(.horizontal)
 
@@ -84,7 +86,7 @@ struct PlayersSearchView: View {
                     
                     Spacer()
                 }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
-            }
+            }.searchable(text: $vm.playerName)
         }
         
     }

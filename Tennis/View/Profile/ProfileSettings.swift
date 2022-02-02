@@ -22,7 +22,7 @@ struct ProfileSettings: View {
                 .edgesIgnoringSafeArea(.all)
             VStack{
                 ZStack{
-                    RDHeader(title: "Settings")
+                    RDHeaderTitle(title: "Settings")
                     HStack{
                         RDBadgeButton(systemImageTitle: "xmark.circle",
                                           action:{ profileSettingsPresented.toggle()})

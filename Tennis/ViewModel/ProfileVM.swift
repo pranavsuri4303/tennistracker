@@ -19,7 +19,9 @@ class ProfileVM : ObservableObject{
     @Published var alertMsg = ""
     // Loading Screen...
     @Published var isLoading = false
+    @Published var urlLoaded = false
     // Getting BioMetricType....
+    var urlImage: URL = URL(string: "www.google.com")!
     
     init() {
         print("hmm")
@@ -28,6 +30,7 @@ class ProfileVM : ObservableObject{
     
     // Fetch User Data
     func fetchUserData() {
+        print(Storage.storage().reference())
         if let uidStr = uidStr {
             isLoading = true
             Firestore.firestore().collection("users").document("\(uidStr)").addSnapshotListener { (results, err) in
@@ -43,6 +46,19 @@ class ProfileVM : ObservableObject{
             }
             
             
+        }
+    }
+    func fetchImageURL()  {
+        let userID = Auth.auth().currentUser?.uid
+        let imagePath = userID! + "/2x/profileImage.png"
+        let url = Storage.storage().reference().child(imagePath).downloadURL { url, err in
+            if let err = err{
+                print(err.localizedDescription)
+            }else{
+                self.urlImage = url!
+                print(self.urlImage.absoluteString)
+                self.urlLoaded = true
+            }
         }
     }
     

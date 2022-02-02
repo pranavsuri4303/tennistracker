@@ -10,33 +10,16 @@ import SwiftUI
 struct FriendsListView: View {
     @StateObject var friendRequestVM = FriendsVM()
     @State private var goToRequests = false
+    @Binding var showMenu: Bool
+    @Binding var currentTab: CurrentTab
     var body: some View {
         VStack{
-            
-            ZStack{
-                RDHeader(title: "Friends")
-                
-                HStack(alignment: .center, spacing: nil, content: {
-                    Spacer()
-                    Button(action: {
-                        goToRequests.toggle()
-                    }, label: {
-                        if self.friendRequestVM.requestsUsers.count == 0{
-                            Image(systemName: "bell")
-                                .font(.title2)
-                                .foregroundColor(Color("green"))
-                        }else{
-                            Image(systemName: "bell.badge")
-                                .font(.title2)
-                                .foregroundColor(Color("green"))
-                        }
-                    }).fullScreenCover(isPresented: $goToRequests, content: {
-                        FriendRequestView(friendRequestPresented: $goToRequests)})
-                }).padding(.horizontal)
-            }.padding(.bottom, 10)
-            
-            
-            
+            RDHeader(showMenu: $showMenu,
+                     title: currentTab.rawValue,
+                     rightBarButton: RDBadgeButton(systemImageTitle: (self.friendRequestVM.requestsUsers.count == 0 ? "bell" : "bell.badge"), action: {goToRequests.toggle()}))
+                .fullScreenCover(isPresented: $goToRequests, content: {
+                    FriendRequestView(friendRequestPresented: $goToRequests)})
+
             if friendRequestVM.friendsList.count == 0{
                 VStack(alignment: .center, spacing: 20){
                     Spacer()

@@ -9,20 +9,18 @@ import SwiftUI
 
 struct DashboardView: View {
     @State var showAddMatch = false
+    @Binding var showMenu: Bool
+    @Binding var currentTab: CurrentTab
     var body: some View {
         ZStack{
             GeometryReader{ geo in
                 VStack{
-                    ZStack{
-                        RDHeader(title: "Dashboard")
+                    RDHeader(showMenu: $showMenu,
+                             title: currentTab.rawValue,
+                             rightBarButton: RDBadgeButton(systemImageTitle: "plus",
+                                                           action: {showAddMatch.toggle()}))
+                        .sheet(isPresented: $showAddMatch) { NewMatchView() }
 
-                        HStack{
-                            Spacer()
-                            RDBadgeButton(systemImageTitle: "plus.circle",
-                                          action: {showAddMatch.toggle()})
-                                .sheet(isPresented: $showAddMatch) { NewMatchView() }
-                        }.padding(.horizontal)
-                    }.padding(.bottom, 10)
                     
                     Spacer()
                 }.background(Color("bg").ignoresSafeArea(.all, edges: .all))

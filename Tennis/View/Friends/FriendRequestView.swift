@@ -14,7 +14,7 @@ struct FriendRequestView: View {
         VStack{
             HStack{
                 ZStack{
-                    RDHeader(title: "Friends")
+                    RDHeaderTitle(title: "Friends")
                     HStack{
                         Button(action: {
                             // Go to Friends List view

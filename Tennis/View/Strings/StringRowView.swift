@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct StringRowView: View {
-    var stringRowData: StringModel
+    let stringRowData: StringModel
     var body: some View{
         VStack{
             HStack{

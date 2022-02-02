@@ -11,9 +11,9 @@ import SwiftUI
 struct StringModel : Hashable  {
     let id : String
     let cross : Int
-    var date : TimeInterval
-    var mains : Int
-    var name : String
+    let date : TimeInterval
+    let mains : Int
+    let name : String
 }
 
 struct PlayerModel : Hashable  {
@@ -26,3 +26,4 @@ struct PlayerModel : Hashable  {
     var downloadedImage : UIImage? = nil
     
 }
+

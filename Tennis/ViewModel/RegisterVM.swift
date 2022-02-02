@@ -21,6 +21,7 @@ class RegisterVM : ObservableObject{
     
     @AppStorage("status") var logged = false
     
+    
     // For Alerts..
     @Published var alert = false
     @Published var alertMsg = ""
