@@ -24,7 +24,7 @@ struct Home: View {
         let sideBarWidth = getRect().width - 90
         
         // Whole Navigation View....
-        NavigationView{
+        VStack{
             
             HStack(spacing: 0){
                 // Side Menu..
