@@ -7,18 +7,17 @@
 
 import SwiftUI
 
-
 struct StringRowView: View {
     let stringRowData: StringModel
-    var body: some View{
-        VStack{
-            HStack{
+    var body: some View {
+        VStack {
+            HStack {
                 Text("\(stringRowData.name)")
                 Spacer()
                 Text(stringRowData.date.getDateOnly(fromTimeStamp: stringRowData.date))
             }
-            HStack{
-                VStack{
+            HStack {
+                VStack {
                     Text("\(stringRowData.mains)")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
@@ -27,7 +26,7 @@ struct StringRowView: View {
                     Text("Mains")
                 }
                 Spacer()
-                VStack{
+                VStack {
                     Text("\(stringRowData.cross)")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
@@ -36,9 +35,6 @@ struct StringRowView: View {
                     Text("Cross")
                 }
             }
-
         }
     }
-    
 }
-

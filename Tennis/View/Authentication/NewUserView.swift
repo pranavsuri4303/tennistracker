@@ -5,12 +5,12 @@
 //  Created by Pranav Suri on 22/1/21.
 //
 
-import SwiftUI
 import ImagePickerView
+import SwiftUI
 
 struct NewUserView: View {
-    @Binding var isPresented : Bool
-    @ObservedObject var vm : RegisterVM
+    @Binding var isPresented: Bool
+    @ObservedObject var vm: RegisterVM
     @State var startAnimate = false
 
     @State var selectionIndex = 0
@@ -20,54 +20,50 @@ struct NewUserView: View {
     @State var isImagePickerViewPresented = false
     @State var pickedImage: UIImage? = nil
     
-    
     // Creating an array of YOBs with range 100 yrs
-    @State var years = Array(Calendar.current.component(.year, from: Date())-100...Calendar.current.component(.year, from: Date())).map { String($0) }
+    @State var years = Array(Calendar.current.component(.year, from: Date()) - 100 ... Calendar.current.component(.year, from: Date())).map { String($0) }
     
     var body: some View {
-        ZStack{
-            VStack{
-                Button{
+        ZStack {
+            VStack {
+                Button {
                     isImagePickerViewPresented = true
-                }label: {
+                } label: {
                     VStack {
                         if pickedImage == nil {
                             Circle()
                                 .accentColor(.blue)
                                 .frame(width: 210, height: 210, alignment: .center)
                                 .overlay(Image("\(vm.gender)")
-                                            .resizable()
-                                            .frame(width: 200, height: 200)
-                                            .cornerRadius(100)
-                                            .padding())
+                                    .resizable()
+                                    .frame(width: 200, height: 200)
+                                    .cornerRadius(100)
+                                    .padding())
                             
                         } else {
                             Circle()
                                 .accentColor(.blue)
                                 .frame(width: 210, height: 210, alignment: .center)
                                 .overlay(Image(uiImage: pickedImage!)
-                                            .resizable()
-                                            .frame(width: 200, height: 200)
-                                            .cornerRadius(100)
-                                            .padding())
-                            
+                                    .resizable()
+                                    .frame(width: 200, height: 200)
+                                    .cornerRadius(100)
+                                    .padding())
                         }
                     }
                 }
                 .sheet(isPresented: $isImagePickerViewPresented) {
-                    UIImagePickerView(allowsEditing: true, delegate: UIImagePickerView.Delegate(isPresented: $isImagePickerViewPresented, didCancel: { (uiImagePickerController) in
+                    UIImagePickerView(allowsEditing: true, delegate: UIImagePickerView.Delegate(isPresented: $isImagePickerViewPresented, didCancel: { uiImagePickerController in
                         print("Did Cancel: \(uiImagePickerController)")
-                    }, didSelect: { (result) in
+                    }, didSelect: { result in
                         let uiImagePickerController = result.picker
                         let image = result.image
                         print("Did Select image: \(image) from \(uiImagePickerController)")
                         pickedImage = image
                     }))
                 }
-                HStack{
-                    
+                HStack {
                     VStack(alignment: .leading, spacing: 10, content: {
-                        
                         Text("New user details")
                             .font(.title)
                             .fontWeight(.bold)
@@ -77,12 +73,11 @@ struct NewUserView: View {
                             .foregroundColor(Color.white.opacity(0.5))
                     })
                     .padding(.bottom)
-                    
                 }
                 .padding()
                 RDTextField(title: "Name", text: $vm.name, imageName: "person", isSecure: false)
                 
-                HStack{
+                HStack {
                     Image(systemName: "calendar")
                         .font(.title2)
                         .foregroundColor(.white)
@@ -95,7 +90,7 @@ struct NewUserView: View {
                 .cornerRadius(15)
                 .padding(.horizontal)
                 
-                HStack{
+                HStack {
                     Image(systemName: "flag")
                         .font(.title2)
                         .foregroundColor(.white)
@@ -115,13 +110,10 @@ struct NewUserView: View {
                 .pickerStyle(SegmentedPickerStyle())
                 .padding(.all)
                 Spacer()
-                HStack(spacing: 15){
-                    
+                HStack(spacing: 15) {
                     Button(action: {
-                        
                         isPresented.toggle()
                         DispatchQueue.main.async {
-                            
                             vm.configProfileImageDataFrom(UIImage: pickedImage)
                             vm.createUser()
                         }
@@ -134,14 +126,13 @@ struct NewUserView: View {
                     .alert(isPresented: $vm.alert, content: {
                         Alert(title: Text("Error"), message: Text(vm.alertMsg), dismissButton: .destructive(Text("Ok")))
                     })
-                    
                 }
                 .padding(.vertical)
                 
             }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
-            .animation(startAnimate ? .easeOut : .none)
+                .animation(startAnimate ? .easeOut : .none)
             
-            if vm.isLoading{
+            if vm.isLoading {
                 LoadingScreenView()
             }
         }.onAppear(perform: {
@@ -149,17 +140,11 @@ struct NewUserView: View {
                 self.startAnimate.toggle()
             }
         })
-        
-        
-        
     }
 }
 
-struct Register_Preview : PreviewProvider {
+struct Register_Preview: PreviewProvider {
     static var previews: some View {
-        NewUserView(isPresented: .constant(false), vm: RegisterVM.init())
+        NewUserView(isPresented: .constant(false), vm: RegisterVM())
     }
 }
-
-
-

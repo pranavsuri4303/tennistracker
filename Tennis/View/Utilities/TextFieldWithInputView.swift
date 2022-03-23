@@ -7,13 +7,12 @@
 
 import SwiftUI
 
-struct TextFieldWithInputView : UIViewRepresentable {
+struct TextFieldWithInputView: UIViewRepresentable {
+    @Binding var data: [String]
+    var placeholder: String
     
-    @Binding var data : [String]
-    var placeholder : String
-    
-    @Binding var selectionIndex : Int
-    @Binding var selectedText : String
+    @Binding var selectionIndex: Int
+    @Binding var selectedText: String
     
     private let textField = UITextField()
     private let picker = UIPickerView()
@@ -37,31 +36,33 @@ struct TextFieldWithInputView : UIViewRepresentable {
         uiView.text = selectedText
     }
     
-    class Coordinator: NSObject, UIPickerViewDataSource, UIPickerViewDelegate , UITextFieldDelegate {
+    class Coordinator: NSObject, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+        private let parent: TextFieldWithInputView
         
-        private let parent : TextFieldWithInputView
-        
-        init(textfield : TextFieldWithInputView) {
+        init(textfield: TextFieldWithInputView) {
             self.parent = textfield
         }
         
         func numberOfComponents(in pickerView: UIPickerView) -> Int {
-            return 1
+            1
         }
+
         func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-            return self.parent.data.count
+            parent.data.count
         }
+
         func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return self.parent.data[row]
+            parent.data[row]
         }
+
         func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-            self.parent.$selectionIndex.wrappedValue = row
-            self.parent.selectedText = self.parent.data[self.parent.selectionIndex]
-            self.parent.textField.endEditing(true)
-            
+            parent.$selectionIndex.wrappedValue = row
+            parent.selectedText = parent.data[parent.selectionIndex]
+            parent.textField.endEditing(true)
         }
+
         func textFieldDidEndEditing(_ textField: UITextField) {
-            self.parent.textField.resignFirstResponder()
+            parent.textField.resignFirstResponder()
         }
     }
 }

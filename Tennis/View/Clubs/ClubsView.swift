@@ -11,18 +11,17 @@ struct ClubsView: View {
     @State var showSearch = false
     @State var playerName = ""
     var body: some View {
-        ZStack{
-            GeometryReader{ geo in
-                VStack{
-                    ZStack{
-                        
+        ZStack {
+            GeometryReader { _ in
+                VStack {
+                    ZStack {
                         HStack(alignment: .center, spacing: nil, content: {
-                            if showSearch{
+                            if showSearch {
                                 TextField("Enter clubs' email...", text: $playerName)
-                                    .padding(.init(top:5, leading: 10,bottom:5, trailing: 10))
+                                    .padding(.init(top: 5, leading: 10, bottom: 5, trailing: 10))
                                     .background(Color(.white).opacity(0.1))
                                     .cornerRadius(8)
-                                    .padding(.horizontal,40)
+                                    .padding(.horizontal, 40)
                                     .autocapitalization(.none)
 //                                    .onChange(of: playerName, perform: { value in
 //                                        let _ =  downloadingImagesOperations.compactMap({$0}).map{$0.cancel()}
@@ -30,9 +29,8 @@ struct ClubsView: View {
 //                                    })
                                     .foregroundColor(.white)
                                     .accentColor(.white)
-                            }else{
+                            } else {
                                 RDHeaderTitle(title: "Clubs")
-
                             }
                         }).padding(.horizontal)
 
@@ -41,11 +39,11 @@ struct ClubsView: View {
                             Button(action: {
                                 showSearch.toggle()
                             }, label: {
-                                if showSearch{
+                                if showSearch {
                                     Image(systemName: "multiply")
                                         .font(.title2)
                                         .foregroundColor(Color("green"))
-                                }else{
+                                } else {
                                     Image(systemName: "magnifyingglass")
                                         .font(.title2)
                                         .foregroundColor(Color("green"))
@@ -56,19 +54,19 @@ struct ClubsView: View {
 
                     Spacer()
 //                    if playerName == ""{
-                        VStack(alignment: .center, spacing: 20){
-                            Spacer()
-                            Image(systemName: "magnifyingglass.circle")
-                                .resizable()
-                                .foregroundColor(Color("green"))
-                                .frame(width: 100, height: 100, alignment: .center)
-                            
-                            Text("Search for a club using their unique Club ID...")
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .multilineTextAlignment(.center)
-                            Spacer()
-                        }
+                    VStack(alignment: .center, spacing: 20) {
+                        Spacer()
+                        Image(systemName: "magnifyingglass.circle")
+                            .resizable()
+                            .foregroundColor(Color("green"))
+                            .frame(width: 100, height: 100, alignment: .center)
+
+                        Text("Search for a club using their unique Club ID...")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.center)
+                        Spacer()
+                    }
 //                    }
 //                    else{
 //                        ScrollView{
@@ -81,8 +79,7 @@ struct ClubsView: View {
 //                        }
 //
 //                    }
-                    
-                    
+
                     Spacer()
                 }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
             }

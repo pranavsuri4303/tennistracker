@@ -5,47 +5,47 @@
 //  Created by Pranav Suri on 20/7/21.
 //
 
-import SwiftUI
 import ImagePickerView
+import SwiftUI
 
 struct ProfileSettings: View {
-    @Binding var profileSettingsPresented : Bool
-    @ObservedObject var vm : ProfileVM
+    @Binding var profileSettingsPresented: Bool
+    @ObservedObject var vm: ProfileVM
     
     // Image
     @State var isImagePickerViewPresented = false
     @State var pickedImage: UIImage? = nil
     
     var body: some View {
-        ZStack{
+        ZStack {
             Color("bg")
                 .edgesIgnoringSafeArea(.all)
-            VStack{
-                ZStack{
+            VStack {
+                ZStack {
                     RDHeaderTitle(title: "Settings")
-                    HStack{
+                    HStack {
                         RDBadgeButton(systemImageTitle: "xmark.circle",
-                                          action:{ profileSettingsPresented.toggle()})
+                                      action: { profileSettingsPresented.toggle() })
                         Spacer()
                         RDBadgeButton(systemImageTitle: "pencil.circle",
-                                          action:{ print("pencil.circle Button Pressed") })
+                                      action: { print("pencil.circle Button Pressed") })
 
                     }.padding(.horizontal)
                 }.padding(.bottom, 10)
 
-                HStack{
-                    GeometryReader{ geo in
-                        ZStack{
+                HStack {
+                    GeometryReader { geo in
+                        ZStack {
                             Circle()
-                                .frame(width: geo.size.width*0.3 + 10 ,height: geo.size.width*0.3 + 10, alignment: .center)
+                                .frame(width: geo.size.width*0.3 + 10, height: geo.size.width*0.3 + 10, alignment: .center)
                                 .foregroundColor(.white.opacity(0.3))
                                 .overlay(Image("Male")
-                                            .resizable()
-                                            .frame(width: geo.size.width*0.3 ,height: geo.size.width*0.3, alignment: .center)
-                                            .aspectRatio(contentMode: .fit))
-                            VStack{
+                                    .resizable()
+                                    .frame(width: geo.size.width*0.3, height: geo.size.width*0.3, alignment: .center)
+                                    .aspectRatio(contentMode: .fit))
+                            VStack {
                                 Spacer()
-                                HStack{
+                                HStack {
                                     Spacer()
                                 
                                     Button(action: {
@@ -55,28 +55,24 @@ struct ProfileSettings: View {
                                             .foregroundColor(.blue)
                                             .font(.title)
                                     })
-                                        .sheet(isPresented: $isImagePickerViewPresented) {
-                                            UIImagePickerView(allowsEditing: true, delegate: UIImagePickerView.Delegate(isPresented: $isImagePickerViewPresented, didCancel: { (uiImagePickerController) in
-                                                print("Did Cancel: \(uiImagePickerController)")
-                                            }, didSelect: { (result) in
-                                                let uiImagePickerController = result.picker
-                                                let image = result.image
-                                                print("Did Select image: \(image) from \(uiImagePickerController)")
-                                                pickedImage = image
-                                            }))
-                                        }
-                                    
+                                    .sheet(isPresented: $isImagePickerViewPresented) {
+                                        UIImagePickerView(allowsEditing: true, delegate: UIImagePickerView.Delegate(isPresented: $isImagePickerViewPresented, didCancel: { uiImagePickerController in
+                                            print("Did Cancel: \(uiImagePickerController)")
+                                        }, didSelect: { result in
+                                            let uiImagePickerController = result.picker
+                                            let image = result.image
+                                            print("Did Select image: \(image) from \(uiImagePickerController)")
+                                            pickedImage = image
+                                        }))
+                                    }
                                 }
                             }
-                        }.frame(width: geo.size.width*0.3 + 10 ,height: geo.size.width*0.3 + 10, alignment: .center)
+                        }.frame(width: geo.size.width*0.3 + 10, height: geo.size.width*0.3 + 10, alignment: .center)
                     }
                     
                 }.padding(.horizontal)
                 Spacer()
             }
-            
-            
         }
     }
 }
-

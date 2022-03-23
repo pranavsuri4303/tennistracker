@@ -5,20 +5,16 @@
 //  Created by Pranav Suri on 30/01/2021.
 //
 
-
-import Firebase
 import Combine
 import CoreMedia
-
+import Firebase
 
 class StringsListVM: ObservableObject {
-    @Published var stringsList : [StringModel] = []
-    @Published var sortType : Sort = .dateNewToOld
+    @Published var stringsList: [StringModel] = []
+    @Published var sortType: Sort = .dateNewToOld
     
-    // For Alerts..
     @Published var alert = false
     @Published var alertMsg = ""
-    // Loading Screen...
     @Published var isLoading = false
     
     let db = Firestore.firestore()
@@ -27,18 +23,17 @@ class StringsListVM: ObservableObject {
         getStringsList()
     }
     
-    
-    func getStringsList(){
+    func getStringsList() {
         print("String List VM GetData Called")
         isLoading = true
         let uid = Auth.auth().currentUser?.uid
         
         let query = db.collection("users").document(uid!)
-                    .collection("strings")
-                    .order(by: sortType.key(),
-                           descending: sortType.order())
+            .collection("strings")
+            .order(by: sortType.key(),
+                   descending: sortType.order())
         
-        query.addSnapshotListener() { (querySnapshot, error) in
+        query.addSnapshotListener { querySnapshot, error in
             if let error = error {
                 self.alert.toggle()
                 self.alertMsg = error.localizedDescription
@@ -47,7 +42,6 @@ class StringsListVM: ObservableObject {
             } else {
                 print("String List VM GetData Called and inside else")
                 self.isLoading = false
-//                self.stringsList = []
                 for document in querySnapshot!.documents {
                     print("iterating through collection")
                     print(document.data())
@@ -58,21 +52,18 @@ class StringsListVM: ObservableObject {
                                                         mains: data["mains"] as? Int ?? 10,
                                                         name: data["name"] as? String ?? "String Name"))
                 }
-//                self.stringsList = self.stringsList.reversed()
             }
-            
         }
     }
     
-    func deleteString(at index: IndexSet) -> Void {
+    func deleteString(at index: IndexSet) {
         print("deleteString Called from StringsListVm")
         let indexToDelete = index[index.startIndex]
         
         let uid = Auth.auth().currentUser?.uid
         let collectionRef = db.collection("users").document(uid!).collection("strings")
 
-
-        collectionRef.document("\(stringsList[indexToDelete].id)").delete() { err in
+        collectionRef.document("\(stringsList[indexToDelete].id)").delete { err in
             if let err = err {
                 print("Error removing document: \(err)")
             } else {
@@ -80,15 +71,4 @@ class StringsListVM: ObservableObject {
             }
         }
     }
-    
-    
-
-    
-//    func sortQueryGenerator(key sortType: SortingTitles, isAscending) -> Void {
-//        
-//        
-//        print("sortStringsData Called from StringsListVm")
-//    }
-//    
 }
-

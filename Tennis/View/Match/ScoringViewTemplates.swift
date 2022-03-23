@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct BasicServerView: View {
-    @ObservedObject var vm : MatchVM
+    @ObservedObject var vm: MatchVM
     var body: some View {
-        HStack{
+        HStack {
             if vm.serveIn {
-                HStack{
-                    VStack(){
+                HStack {
+                    VStack {
                         Button(action: {
                             vm.serveIn.toggle()
                             vm.pointWon(by: vm.server, deuce: vm.deuceType, servingPlayer: vm.server)
@@ -28,12 +28,12 @@ struct BasicServerView: View {
                         })
                         .edgesIgnoringSafeArea(.all)
                     }.frame(height: 100, alignment: .center)
-                    .background(Color(.orange).cornerRadius(8))
+                        .background(Color(.orange).cornerRadius(8))
                     
                 }.padding(.horizontal)
-            }else{
-                HStack{
-                    VStack(){
+            } else {
+                HStack {
+                    VStack {
                         Button(action: {
                             vm.serveIn.toggle()
                         }, label: {
@@ -48,9 +48,9 @@ struct BasicServerView: View {
                         })
                         .edgesIgnoringSafeArea(.all)
                     }.frame(height: 100, alignment: .center)
-                    .background(Color(.orange).cornerRadius(8))
-                    if vm.serve == .firstServe{
-                        VStack(){
+                        .background(Color(.orange).cornerRadius(8))
+                    if vm.serve == .firstServe {
+                        VStack {
                             Button(action: {
                                 vm.serve = .secondServe
                             }, label: {
@@ -64,14 +64,14 @@ struct BasicServerView: View {
                             })
                             .edgesIgnoringSafeArea(.all)
                         }.frame(height: 100, alignment: .center)
-                        .background(Color(.orange).cornerRadius(8))
-                    }else if vm.serve == .secondServe{
-                        VStack(){
+                            .background(Color(.orange).cornerRadius(8))
+                    } else if vm.serve == .secondServe {
+                        VStack {
                             Button(action: {
                                 vm.serve = .firstServe
-                                if vm.server == .p1{
+                                if vm.server == .p1 {
                                     vm.pointWon(by: .p2, deuce: vm.deuceType, servingPlayer: vm.server)
-                                }else if vm.server == .p2{
+                                } else if vm.server == .p2 {
                                     vm.pointWon(by: .p1, deuce: vm.deuceType, servingPlayer: vm.server)
                                 }
                             }, label: {
@@ -85,9 +85,9 @@ struct BasicServerView: View {
                             })
                             .edgesIgnoringSafeArea(.all)
                         }.frame(height: 100, alignment: .center)
-                        .background(Color(.orange).cornerRadius(8))
+                            .background(Color(.orange).cornerRadius(8))
                     }
-                    VStack(){
+                    VStack {
                         Button(action: {
                             vm.aceCounter(server: vm.server)
                             vm.pointWon(by: vm.server, deuce: vm.deuceType, servingPlayer: vm.server)
@@ -102,26 +102,24 @@ struct BasicServerView: View {
                         })
                         .edgesIgnoringSafeArea(.all)
                     }.frame(height: 100, alignment: .center)
-                    .background(Color(.orange).cornerRadius(8))
+                        .background(Color(.orange).cornerRadius(8))
                 }.padding(.horizontal)
             }
         }
     }
 }
 
-
-
 struct BasicNonServerView: View {
-    @StateObject var vm : MatchVM
+    @StateObject var vm: MatchVM
     var body: some View {
-        HStack{
-            VStack(){
+        HStack {
+            VStack {
                 Button(action: {
-                    if vm.server == .p1{
+                    if vm.server == .p1 {
                         vm.serveIn = false
                         vm.serve = .firstServe
                         vm.pointWon(by: .p2, deuce: vm.deuceType, servingPlayer: vm.server)
-                    }else{
+                    } else {
                         vm.serveIn = false
                         vm.serve = .firstServe
                         vm.pointWon(by: .p1, deuce: vm.deuceType, servingPlayer: vm.server)
@@ -136,23 +134,22 @@ struct BasicNonServerView: View {
                 })
                 .edgesIgnoringSafeArea(.all)
             }.frame(height: 100, alignment: .center)
-            .background(Color(.orange).cornerRadius(8))
+                .background(Color(.orange).cornerRadius(8))
             
         }.padding(.horizontal)
     }
 }
 
 struct AdvancedServerView: View {
-    @StateObject var vm : MatchVM
+    @StateObject var vm: MatchVM
     var body: some View {
-        HStack{
+        HStack {
             if vm.serveIn {
-                HStack{
-                    
+                HStack {
                     Button(action: {
                         print("Winner")
                     }, label: {
-                        VStack(){
+                        VStack {
                             Spacer()
                             Text("WINNER")
                                 .font(.headline)
@@ -160,11 +157,11 @@ struct AdvancedServerView: View {
                                 .multilineTextAlignment(.center)
                             Spacer()
                         }.frame(height: 100, alignment: .center)
-                        .background(Color(.orange).cornerRadius(8))
+                            .background(Color(.orange).cornerRadius(8))
                     })
                     .edgesIgnoringSafeArea(.all)
                     
-                    VStack(){
+                    VStack {
                         Button(action: {
                             print("Forced Error")
                         }, label: {
@@ -177,8 +174,8 @@ struct AdvancedServerView: View {
                         })
                         .edgesIgnoringSafeArea(.all)
                     }.frame(height: 100, alignment: .center)
-                    .background(Color(.orange).cornerRadius(8))
-                    VStack(){
+                        .background(Color(.orange).cornerRadius(8))
+                    VStack {
                         Button(action: {
                             print("Unforced Error")
                         }, label: {
@@ -191,11 +188,11 @@ struct AdvancedServerView: View {
                         })
                         .edgesIgnoringSafeArea(.all)
                     }.frame(height: 100, alignment: .center)
-                    .background(Color(.orange).cornerRadius(8))
+                        .background(Color(.orange).cornerRadius(8))
                 }.padding(.horizontal)
-            }else{
-                HStack{
-                    VStack(){
+            } else {
+                HStack {
+                    VStack {
                         Button(action: {
                             vm.serveIn.toggle()
                         }, label: {
@@ -210,9 +207,9 @@ struct AdvancedServerView: View {
                         })
                         .edgesIgnoringSafeArea(.all)
                     }.frame(height: 100, alignment: .center)
-                    .background(Color(.orange).cornerRadius(8))
-                    if vm.serve == .firstServe{
-                        VStack(){
+                        .background(Color(.orange).cornerRadius(8))
+                    if vm.serve == .firstServe {
+                        VStack {
                             Button(action: {
                                 vm.serve = .secondServe
                             }, label: {
@@ -226,14 +223,14 @@ struct AdvancedServerView: View {
                             })
                             .edgesIgnoringSafeArea(.all)
                         }.frame(height: 100, alignment: .center)
-                        .background(Color(.orange).cornerRadius(8))
-                    }else if vm.serve == .secondServe{
-                        VStack(){
+                            .background(Color(.orange).cornerRadius(8))
+                    } else if vm.serve == .secondServe {
+                        VStack {
                             Button(action: {
                                 vm.serve = .firstServe
-                                if vm.server == .p1{
+                                if vm.server == .p1 {
                                     vm.pointWon(by: .p2, deuce: vm.deuceType, servingPlayer: vm.server)
-                                }else if vm.server == .p1{
+                                } else if vm.server == .p1 {
                                     vm.pointWon(by: .p1, deuce: vm.deuceType, servingPlayer: vm.server)
                                 }
                             }, label: {
@@ -247,9 +244,9 @@ struct AdvancedServerView: View {
                             })
                             .edgesIgnoringSafeArea(.all)
                         }.frame(height: 100, alignment: .center)
-                        .background(Color(.orange).cornerRadius(8))
+                            .background(Color(.orange).cornerRadius(8))
                     }
-                    VStack(){
+                    VStack {
                         Button(action: {
                             vm.pointWon(by: vm.server, deuce: vm.deuceType, servingPlayer: vm.server)
                         }, label: {
@@ -264,18 +261,19 @@ struct AdvancedServerView: View {
                         })
                         .edgesIgnoringSafeArea(.all)
                     }.frame(height: 100, alignment: .center)
-                    .background(Color(.orange).cornerRadius(8))
+                        .background(Color(.orange).cornerRadius(8))
                 }.padding(.horizontal)
             }
         }
     }
 }
+
 struct AdvancedNonServerView: View {
-    @StateObject var vm : MatchVM
+    @StateObject var vm: MatchVM
     var body: some View {
-        HStack{
+        HStack {
             if !(vm.serveIn) {
-                VStack(){
+                VStack {
                     Button(action: {
                         print("Return Winner")
                     }, label: {
@@ -288,8 +286,8 @@ struct AdvancedNonServerView: View {
                     })
                     .edgesIgnoringSafeArea(.all)
                 }.frame(height: 100, alignment: .center)
-                .background(Color(.orange).cornerRadius(8))
-                VStack(){
+                    .background(Color(.orange).cornerRadius(8))
+                VStack {
                     Button(action: {
                         print("Return Error")
                     }, label: {
@@ -302,9 +300,9 @@ struct AdvancedNonServerView: View {
                     })
                     .edgesIgnoringSafeArea(.all)
                 }.frame(height: 100, alignment: .center)
-                .background(Color(.orange).cornerRadius(8))
-            } else{
-                VStack(){
+                    .background(Color(.orange).cornerRadius(8))
+            } else {
+                VStack {
                     Button(action: {
                         print("Winner")
                     }, label: {
@@ -317,8 +315,8 @@ struct AdvancedNonServerView: View {
                     })
                     .edgesIgnoringSafeArea(.all)
                 }.frame(height: 100, alignment: .center)
-                .background(Color(.orange).cornerRadius(8))
-                VStack(){
+                    .background(Color(.orange).cornerRadius(8))
+                VStack {
                     Button(action: {
                         print("Forced Error")
                     }, label: {
@@ -331,8 +329,8 @@ struct AdvancedNonServerView: View {
                     })
                     .edgesIgnoringSafeArea(.all)
                 }.frame(height: 100, alignment: .center)
-                .background(Color(.orange).cornerRadius(8))
-                VStack(){
+                    .background(Color(.orange).cornerRadius(8))
+                VStack {
                     Button(action: {
                         print("Unforced Error")
                     }, label: {
@@ -345,7 +343,7 @@ struct AdvancedNonServerView: View {
                     })
                     .edgesIgnoringSafeArea(.all)
                 }.frame(height: 100, alignment: .center)
-                .background(Color(.orange).cornerRadius(8))
+                    .background(Color(.orange).cornerRadius(8))
             }
             
         }.padding(.horizontal)

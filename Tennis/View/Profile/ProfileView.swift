@@ -5,8 +5,8 @@
 //  Created by Pranav Suri on 3/2/21.
 //
 
-import SwiftUI
 import Firebase
+import SwiftUI
 
 struct ProfileView: View {
     @Binding var showMenu: Bool
@@ -17,47 +17,44 @@ struct ProfileView: View {
     @State private var goToSettings = false
     
     var body: some View {
-        VStack{
+        VStack {
             RDHeader(showMenu: $showMenu,
                      title: currentTab.rawValue,
                      rightBarButton: RDBadgeButton(imageTitle: "Person_Settings",
-                                                   action: {goToSettings.toggle()}))
+                                                   action: { goToSettings.toggle() }))
                 .fullScreenCover(isPresented: $goToSettings, content: {
                     ProfileSettings(profileSettingsPresented: $goToSettings, vm: vm)
                 })
             
             ScrollView(.vertical, showsIndicators: false, content: {
-                GeometryReader{reader in
+                GeometryReader { reader in
                     // Type 2 Parollax....
                     if reader.frame(in: .global).minY > -480 {
                         if let profileImage = sliderMenueVM.profileImage {
                             Image(uiImage: profileImage)
                                 .resizable()
-                                .padding(.top,50)
+                                .padding(.top, 50)
                                 .aspectRatio(contentMode: .fill)
-                            // moving View Up....
+                                // moving View Up....
                                 .offset(y: -reader.frame(in: .global).minY)
-                            // going to add parallax effect....
-                                .frame(width: UIScreen.main.bounds.width, height:  reader.frame(in: .global).minY > 0 ? reader.frame(in: .global).minY + 480 : 480)
+                                // going to add parallax effect....
+                                .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY > 0 ? reader.frame(in: .global).minY + 480 : 480)
                             
-                            
-                        }else {
+                        } else {
                             Image("\(vm.gender)")
                                 .resizable()
-                                .padding(.top,50)
+                                .padding(.top, 50)
                                 .aspectRatio(contentMode: .fill)
-                            // moving View Up....
+                                // moving View Up....
                                 .offset(y: -reader.frame(in: .global).minY)
-                            // going to add parallax effect....
-                                .frame(width: UIScreen.main.bounds.width, height:  reader.frame(in: .global).minY > 0 ? reader.frame(in: .global).minY + 480 : 480)
-                            
-                            
+                                // going to add parallax effect....
+                                .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY > 0 ? reader.frame(in: .global).minY + 480 : 480)
                         }
                     }
                 }
                 .frame(height: 400)
-                VStack(alignment: .leading,spacing: 15){
-                    HStack{
+                VStack(alignment: .leading, spacing: 15) {
+                    HStack {
                         Text("\(Auth.auth().currentUser?.displayName ?? "")")
                             .font(.title)
                             .fontWeight(.semibold)
@@ -67,13 +64,13 @@ struct ProfileView: View {
                         Text("Male")
                             .font(.body)
                             .foregroundColor(.white)
-                            .padding(.top,5)
+                            .padding(.top, 5)
                     }
                     Divider()
                         .foregroundColor(.white)
-                        .frame(height: 15, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .frame(height: 15, alignment: /*@START_MENU_TOKEN@*/ .center/*@END_MENU_TOKEN@*/)
                     
-                    HStack{
+                    HStack {
                         Text("Current String")
                             .font(.title3)
                             .fontWeight(.bold)
@@ -87,8 +84,8 @@ struct ProfileView: View {
                     }
                     Divider()
                         .foregroundColor(.white)
-                        .frame(height: 15, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    HStack{
+                        .frame(height: 15, alignment: /*@START_MENU_TOKEN@*/ .center/*@END_MENU_TOKEN@*/)
+                    HStack {
                         Text("Latest Match")
                             .font(.title3)
                             .fontWeight(.bold)
@@ -100,7 +97,7 @@ struct ProfileView: View {
                             .fontWeight(.regular)
                             .foregroundColor(.white)
                     }
-                    HStack{
+                    HStack {
                         Text("Outcome")
                             .font(.title3)
                             .fontWeight(.bold)
@@ -112,9 +109,6 @@ struct ProfileView: View {
                             .fontWeight(.regular)
                             .foregroundColor(.white)
                     }
-                    
-                    
-                    
                 }
                 .padding(.top, 25)
                 .padding(.horizontal)
@@ -123,8 +117,8 @@ struct ProfileView: View {
                 .offset(y: -10)
                 .edgesIgnoringSafeArea(.horizontal)
             })
-                .edgesIgnoringSafeArea(.all)
-                .background(Color("bg").edgesIgnoringSafeArea(.all))
+            .edgesIgnoringSafeArea(.all)
+            .background(Color("bg").edgesIgnoringSafeArea(.all))
         }
 //                .edgesIgnoringSafeArea(.all)
         .background(Color("bg").edgesIgnoringSafeArea(.all))
@@ -134,20 +128,15 @@ struct ProfileView: View {
         //        })
         
         .onAppear(perform: {
-            if DownloadedProfileImage.shared.profileImage == nil{
+            if DownloadedProfileImage.shared.profileImage == nil {
                 sliderMenueVM.loadImageFromStorageWithBiggerSize()
             }
         })
     }
-    
 }
 
-
-
-
-
-//struct ProfileView_Preview : PreviewProvider {
+// struct ProfileView_Preview : PreviewProvider {
 //    static var previews: some View {
 //        ProfileView()
 //    }
-//}
+// }

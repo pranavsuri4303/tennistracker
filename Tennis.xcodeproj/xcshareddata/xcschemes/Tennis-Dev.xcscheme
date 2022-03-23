@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "764A60C425B90E5500789373"
-               BuildableName = "Tennis-Dev.app"
+               BuildableName = "Tennis.app"
                BlueprintName = "Tennis"
                ReferencedContainer = "container:Tennis.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "764A60C425B90E5500789373"
-            BuildableName = "Tennis-Dev.app"
+            BuildableName = "Tennis.app"
             BlueprintName = "Tennis"
             ReferencedContainer = "container:Tennis.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "764A60C425B90E5500789373"
-            BuildableName = "Tennis-Dev.app"
+            BuildableName = "Tennis.app"
             BlueprintName = "Tennis"
             ReferencedContainer = "container:Tennis.xcodeproj">
          </BuildableReference>
@@ -73,6 +73,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Debug"
+      customArchiveName = "Tennis"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

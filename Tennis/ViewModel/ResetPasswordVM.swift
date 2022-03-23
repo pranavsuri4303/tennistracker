@@ -5,29 +5,27 @@
 //  Created by Pranav Suri on 27/3/21.
 //
 
-import SwiftUI
-import LocalAuthentication
 import Firebase
+import LocalAuthentication
+import SwiftUI
 
-class ResetPasswordVM : ObservableObject{
-    
+class ResetPasswordVM: ObservableObject {
     @Published var email = ""
     @Published var isLoading = false
-    
+
     // For Alerts..
     @Published var alert = false
     @Published var alertMsg = ""
-    
 
-    func resetPassword(){
-        self.isLoading = true
+    func resetPassword() {
+        isLoading = true
         Auth.auth().sendPasswordReset(withEmail: email) { err in
-            if let error = err{
+            if let error = err {
                 self.isLoading.toggle()
                 self.alertMsg = error.localizedDescription
                 self.alert.toggle()
                 return
-            }else{
+            } else {
                 self.isLoading.toggle()
                 self.alertMsg = "A password reset email has been sent to the email address provided."
                 self.alert.toggle()
@@ -36,4 +34,3 @@ class ResetPasswordVM : ObservableObject{
         }
     }
 }
-
