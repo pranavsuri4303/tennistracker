@@ -29,7 +29,7 @@ struct Home: View {
                         case .string: StringsListView(showMenu: $showMenu, currentTab: $currentTab)
                         case .profile: ProfileView(showMenu: $showMenu, currentTab: $currentTab)
                         case .dashboard: DashboardView(showMenu: $showMenu, currentTab: $currentTab)
-                        case .players: PlayersSearchView()
+                        case .players: PlayersSearchView(showMenu: $showMenu, currentTab: $currentTab)
                         case .matches: MatchesHistoryView(showMenu: $showMenu, currentTab: $currentTab)
                         case .friends: FriendsListView(showMenu: $showMenu, currentTab: $currentTab)
                         case .clubs: ClubsView()

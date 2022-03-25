@@ -10,80 +10,61 @@ import SwiftUI
 struct PlayersSearchView: View {
     @State var showSearch = false
     @StateObject var vm = PlayersVM()
-//    @Binding var showMenu: Bool
-//    @Binding var currentTab: CurrentTab
+    @Binding var showMenu: Bool
+    @Binding var currentTab: CurrentTab
     
     var body: some View {
         NavigationView {
-            GeometryReader { _ in
-                VStack {
-                    ZStack {
-                        HStack(alignment: .center, spacing: nil, content: {
-                            if showSearch {
-                                TextField("Enter players' email...", text: $vm.playerName)
-                                    .padding(.init(top: 4, leading: 10, bottom: 4, trailing: 10))
-                                    .background(Color(.white).opacity(0.1))
-                                    .cornerRadius(8)
-                                    .padding(.horizontal, 40)
-                                    .autocapitalization(.none)
-                                    .onChange(of: vm.playerName, perform: { _ in
-                                        _ = downloadingImagesOperations.compactMap { $0 }.map { $0.cancel() }
-                                        vm.searchPlayer()
-                                    })
-                                    .foregroundColor(.white)
-                                    .accentColor(.white)
-                            } else {
-                                RDHeaderTitle(title: "Players")
-                            }
-                        }).padding(.horizontal)
-
-                        HStack(alignment: .center, spacing: nil, content: {
-                            Spacer()
-                            Button(action: {
-                                showSearch.toggle()
-                            }, label: {
-                                if showSearch {
-                                    Image(systemName: "multiply")
-                                        .font(.title2)
-                                        .foregroundColor(Color("green"))
-                                } else {
-                                    Image(systemName: "magnifyingglass")
-                                        .font(.title2)
-                                        .foregroundColor(Color("green"))
-                                }
-                            })
-                        }).padding(.horizontal)
-                    }.padding(.bottom, 10)
-
-                    Spacer()
-                    if vm.playerName == "" {
+            VStack {
+                if vm.playerName == "" {
+                    HStack {
+                        Spacer()
                         VStack(alignment: .center, spacing: 20) {
                             Spacer()
                             Image(systemName: "magnifyingglass.circle")
                                 .resizable()
                                 .foregroundColor(Color("green"))
                                 .frame(width: 100, height: 100, alignment: .center)
-                            
+                                    
                             Text("Search for a user using his email...")
                                 .font(.headline)
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
+
                             Spacer()
                         }
-                    } else {
+                        Spacer()
+                    }
+
+                } else {
+                    HStack {
+                        Spacer()
                         ScrollView {
                             ForEach(vm.players, id: \.self) { player in
-                                
+                                    
                                 SearchPlayerRowView(player: player)
-                                
+                                    
                             }.padding()
                                 .edgesIgnoringSafeArea(.bottom)
                         }
+                        Spacer()
                     }
-                    
-                    Spacer()
-                }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
-            }.searchable(text: $vm.playerName)
+                }
+            }.navigationBarTitleDisplayMode(.inline)
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        showMenu.toggle()
+                    } label: {
+                        Image(systemName: "line.horizontal.3")
+                            .font(.title3)
+                            .foregroundColor(Color("green"))
+                    }
+                }
+            })
+            .searchable(text: $vm.playerName, prompt: "Enter player's email...")
+            .navigationBarTitle("\(currentTab.rawValue)")
+            .background(Color("bg").ignoresSafeArea(.all, edges: .all))
         }
     }
 }

@@ -17,15 +17,16 @@ struct StringsListView: View {
     var body: some View {
         ZStack{
             VStack{
-                RDHeader(showMenu: $showMenu,
-                         title: currentTab.rawValue,
-                         rightBarButton: RDBadgeButton(systemImageTitle: "plus.circle", action: { showingAddString.toggle() }))
-                    .halfSheet(showSheet: $showingAddString) {
-                        AddNewStringView()
-                    } onEnd: {
+                RDHeader(title: currentTab.rawValue,
+                         leftBarButton: RDBadgeButton(systemImageTitle: "line.horizontal.3",
+                                                      action: { showMenu.toggle() }),
+                         rightBarButton: RDBadgeButton(systemImageTitle: "plus",
+                                                       action: { showingAddString.toggle() }))
+                    .halfSheet(showSheet: $showingAddString) { AddNewStringView() }
+                    onEnd: {
                         print("Add String View Closed")
                     }
- 
+                
                 List{
                     ForEach(stringsListVM.stringsList, id: \.id) { string  in
                         if #available(iOS 15.0, *) {

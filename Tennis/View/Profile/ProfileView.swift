@@ -18,13 +18,15 @@ struct ProfileView: View {
     
     var body: some View {
         VStack {
-            RDHeader(showMenu: $showMenu,
-                     title: currentTab.rawValue,
-                     rightBarButton: RDBadgeButton(imageTitle: "Person_Settings",
-                                                   action: { goToSettings.toggle() }))
-                .fullScreenCover(isPresented: $goToSettings, content: {
-                    ProfileSettings(profileSettingsPresented: $goToSettings, vm: vm)
-                })
+            RDHeader(title: currentTab.rawValue,
+                     leftBarButton: RDBadgeButton(systemImageTitle: "line.horizontal.3",
+                                                   action: { showMenu.toggle() }),
+                     rightBarButton: RDBadgeButton(systemImageTitle: "gear",
+                                                  action: { goToSettings.toggle() }))
+                .fullScreenCover(isPresented: $goToSettings,
+                                 content: { ProfileSettings(profileSettingsPresented: $goToSettings,
+                                                            vm: vm)})
+
             
             ScrollView(.vertical, showsIndicators: false, content: {
                 GeometryReader { reader in

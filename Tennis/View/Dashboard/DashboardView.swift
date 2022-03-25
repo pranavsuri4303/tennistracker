@@ -12,19 +12,16 @@ struct DashboardView: View {
     @Binding var showMenu: Bool
     @Binding var currentTab: CurrentTab
     var body: some View {
-        ZStack {
-            GeometryReader { _ in
-                VStack {
-                    RDHeader(showMenu: $showMenu,
-                             title: currentTab.rawValue,
-                             rightBarButton: RDBadgeButton(systemImageTitle: "plus",
-                                                           action: { showAddMatch.toggle() }))
-                        .sheet(isPresented: $showAddMatch) { NewMatchView() }
+        VStack {
+            RDHeader(title: currentTab.rawValue,
+                     leftBarButton: RDBadgeButton(systemImageTitle: "line.horizontal.3",
+                                                  action: { showMenu.toggle() }),
+                     rightBarButton: RDBadgeButton(systemImageTitle: "plus",
+                                                   action: { showAddMatch.toggle() }))
+                .sheet(isPresented: $showAddMatch) { NewMatchView() }
 
-                    Spacer()
-                }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
-            }
-        }
+            Spacer()
+        }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
     }
 }
 

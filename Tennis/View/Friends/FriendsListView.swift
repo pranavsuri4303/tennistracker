@@ -14,8 +14,7 @@ struct FriendsListView: View {
     @Binding var currentTab: CurrentTab
     var body: some View {
         VStack {
-            RDHeader(showMenu: $showMenu,
-                     title: currentTab.rawValue,
+            RDHeader(title: currentTab.rawValue,
                      rightBarButton: RDBadgeButton(systemImageTitle: self.friendRequestVM.requestsUsers.count == 0 ? "bell" : "bell.badge", action: { goToRequests.toggle() }))
                 .fullScreenCover(isPresented: $goToRequests, content: {
                     FriendRequestView(friendRequestPresented: $goToRequests)
