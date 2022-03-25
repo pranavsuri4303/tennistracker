@@ -4,48 +4,38 @@
 //
 //  Created by Pranav Suri on 21/1/21.
 //
-import SwiftUI
-import LocalAuthentication
-import Firebase
 
-class LoginVM : ObservableObject{
-    
+import Firebase
+import LocalAuthentication
+import SwiftUI
+
+class LoginVM: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     
-    // For Alerts..
     @Published var alert = false
     @Published var alertMsg = ""
     
-    // User Data....
     @AppStorage("stored_User") var Stored_User = ""
     @AppStorage("stored_Password") var Stored_Password = ""
     @AppStorage("status") var logged = false
     @Published var store_Info = false
     
-    // Loading Screen...
     @Published var isLoading = false
     
-    
-    // Getting BioMetricType....
-    func getBioMetricStatus()->Bool{
-        
+    func getBioMetricStatus() -> Bool {
         let scanner = LAContext()
-        if email != "" && email == Stored_User && scanner.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: .none){
-            
+        if email != "", email == Stored_User, scanner.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: .none) {
             return true
         }
         
         return false
     }
     
-    // authenticate User...
-    
-    func authenticateUser(){
-        
+    func authenticateUser() {
         let scanner = LAContext()
-        scanner.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To Unlock \(email)") { (status, err) in
-            if err != nil{
+        scanner.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To Unlock \(email)") { _, err in
+            if err != nil {
                 print(err!.localizedDescription)
                 return
             }
@@ -62,36 +52,25 @@ class LoginVM : ObservableObject{
         print("Sign in with google")
     }
     
-    // Verifying User...
-    
-    func verifyUser(){
-        
+    func verifyUser() {
         isLoading = true
         
-        Auth.auth().signIn(withEmail: email, password: password) { (res, err) in
+        Auth.auth().signIn(withEmail: email, password: password) { _, err in
             
             self.isLoading = false
             
-            if let error = err{
+            if let error = err {
                 self.alertMsg = error.localizedDescription
                 self.alert.toggle()
                 return
             }
-            
-            // Success
-            
-            // Promoting User For Save data or not...
-            
-            if self.Stored_User == "" || self.Stored_Password == ""{
+
+            if self.Stored_User == "" || self.Stored_Password == "" {
                 self.store_Info.toggle()
                 return
             }
             
-            // Else Goto Home...
-            
-            withAnimation{self.logged = true}
+            withAnimation { self.logged = true }
         }
     }
-
 }
-

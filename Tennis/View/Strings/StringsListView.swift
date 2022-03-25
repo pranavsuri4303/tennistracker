@@ -10,29 +10,23 @@ import SwiftUI
 struct StringsListView: View {
     @ObservedObject var stringsListVM = StringsListVM()
     @State var showingAddString = false
-//    @Binding var showMenu: Bool
-//    @Binding var currentTab: CurrentTab
+    @Binding var showMenu: Bool
+    @Binding var currentTab: CurrentTab
 
 
     var body: some View {
         ZStack{
             VStack{
-                ZStack{
-                    
-                    RDHeaderTitle(title: "String")
-                    HStack{
-                        Spacer()
-                        RDBadgeButton(systemImageTitle: "plus.circle",
-                                      action: { showingAddString.toggle() })
-                            .halfSheet(showSheet: $showingAddString){
-                                AddNewStringView()
-                            }onEnd: {
-                                print("Add String View Closed")
-                            }
-                        
+                RDHeader(title: currentTab.rawValue,
+                         leftBarButton: RDBadgeButton(systemImageTitle: "line.horizontal.3",
+                                                      action: { showMenu.toggle() }),
+                         rightBarButton: RDBadgeButton(systemImageTitle: "plus",
+                                                       action: { showingAddString.toggle() }))
+                    .halfSheet(showSheet: $showingAddString) { AddNewStringView() }
+                    onEnd: {
+                        print("Add String View Closed")
                     }
-                    .padding(.horizontal)
-                }.padding(.bottom, 10)
+                
                 List{
                     ForEach(stringsListVM.stringsList, id: \.id) { string  in
                         if #available(iOS 15.0, *) {

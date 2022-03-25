@@ -235,7 +235,6 @@
 		764A60C725B90E5500789373 /* Tennis */ = {
 			isa = PBXGroup;
 			children = (
-				B54D40662791340800F36EE1 /* RDComponents */,
 				764A60C825B90E5600789373 /* TennisApp.swift */,
 				764A60CA25B90E5600789373 /* ContentView.swift */,
 				76DB132825CEDAD9003EDA38 /* Models.swift */,
@@ -280,6 +279,7 @@
 		764A60FE25B90E8900789373 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B54D40662791340800F36EE1 /* RDComponents */,
 				B5D1F76627AA0EA40091AC2F /* SlideMenuUpdate */,
 				76AADBC325C6718E00EB0C43 /* Authentication */,
 				B5297F7B27A62CE3003641E3 /* Profile */,

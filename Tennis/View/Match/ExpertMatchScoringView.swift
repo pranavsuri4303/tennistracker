@@ -7,16 +7,17 @@
 
 import SwiftUI
 
-struct ExpertMatchScoringView
-: View {
+struct ExpertMatchScoringView:
+    View
+{
     @Binding var isPresented: Bool
     // Players Names
-    @StateObject var vm :MatchVM
+    @StateObject var vm: MatchVM
     
     @State var dashboardIsPresented = false
     var body: some View {
-        VStack{
-            HStack{
+        VStack {
+            HStack {
                 Spacer()
                 Button(action: {
                     dashboardIsPresented.toggle()
@@ -28,17 +29,16 @@ struct ExpertMatchScoringView
                 }).fullScreenCover(isPresented: $dashboardIsPresented, content: {
                     Home()
                 }).padding(.all)
-                
             }
-            VStack{
+            VStack {
                 Text("Expert")
                     .font(.title2)
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
-                HStack{
-                    VStack(alignment: .leading, spacing: 10){
-                        VStack{
-                            HStack{
+                HStack {
+                    VStack(alignment: .leading, spacing: 10) {
+                        VStack {
+                            HStack {
                                 Text("\(vm.P1.name)")
                                     .font(.title3)
                                     .foregroundColor(.white)
@@ -53,8 +53,8 @@ struct ExpertMatchScoringView
                                 }
                             }
                         }
-                        VStack{
-                            HStack{
+                        VStack {
+                            HStack {
                                 Text("\(vm.P2.name)")
                                     .font(.title3)
                                     .foregroundColor(.white)
@@ -68,7 +68,6 @@ struct ExpertMatchScoringView
                                         .hidden()
                                 }
                             }
-                            
                         }
                         
                     }.padding()
@@ -83,7 +82,7 @@ struct ExpertMatchScoringView
 //                            .foregroundColor(Color("green"))
 //                            .multilineTextAlignment(.leading)
 //                    }.padding()
-                    VStack(spacing: 10){
+                    VStack(spacing: 10) {
                         Text("\(vm.P1.games)")
                             .font(.title3)
                             .foregroundColor(Color("green"))
@@ -93,7 +92,7 @@ struct ExpertMatchScoringView
                             .foregroundColor(Color("green"))
                             .multilineTextAlignment(.leading)
                     }.padding()
-                    VStack(spacing: 10){
+                    VStack(spacing: 10) {
                         Text("\(vm.ptsToScore(pts: vm.P2.pts))")
                             .font(.title3)
                             .foregroundColor(Color("green"))
@@ -105,10 +104,10 @@ struct ExpertMatchScoringView
                     }.padding()
                     
                 }.background(Color(.white).opacity(0.1).cornerRadius(8))
-                .padding()
+                    .padding()
             }
-            VStack{
-                HStack{
+            VStack {
+                HStack {
                     Text("\(vm.P1.name)")
                         .font(.title2)
                         .foregroundColor(.white)
@@ -126,9 +125,9 @@ struct ExpertMatchScoringView
                 }.padding()
                 
             }.background(Color(.white).opacity(0.1).cornerRadius(8))
-            .padding(.horizontal)
-            HStack{
-                VStack(){
+                .padding(.horizontal)
+            HStack {
+                VStack {
                     Button(action: {}, label: {
                         Spacer()
 
@@ -141,38 +140,38 @@ struct ExpertMatchScoringView
                     })
                     .edgesIgnoringSafeArea(.all)
                 }.frame(height: 100, alignment: .center)
-                .background(Color("Orange").opacity(0.5).cornerRadius(8))
-                VStack(){
-                        Button(action: {}, label: {
-                            Spacer()
-
-                            Text("FIRST FAULT")
-                                .font(.headline)
-                                .foregroundColor(Color("blue"))
-                                .multilineTextAlignment(.center)
-                            Spacer()
-
-                        })
-                        .edgesIgnoringSafeArea(.all)
-                    }.frame(height: 100, alignment: .center)
                     .background(Color("Orange").opacity(0.5).cornerRadius(8))
-                VStack(){
-                        Button(action: {}, label: {
-                            Spacer()
+                VStack {
+                    Button(action: {}, label: {
+                        Spacer()
 
-                            Text("ACE")
-                                .font(.headline)
-                                .foregroundColor(Color("blue"))
-                                .multilineTextAlignment(.center)
-                            Spacer()
+                        Text("FIRST FAULT")
+                            .font(.headline)
+                            .foregroundColor(Color("blue"))
+                            .multilineTextAlignment(.center)
+                        Spacer()
 
-                        })
-                        .edgesIgnoringSafeArea(.all)
-                    }.frame(height: 100, alignment: .center)
+                    })
+                    .edgesIgnoringSafeArea(.all)
+                }.frame(height: 100, alignment: .center)
+                    .background(Color("Orange").opacity(0.5).cornerRadius(8))
+                VStack {
+                    Button(action: {}, label: {
+                        Spacer()
+
+                        Text("ACE")
+                            .font(.headline)
+                            .foregroundColor(Color("blue"))
+                            .multilineTextAlignment(.center)
+                        Spacer()
+
+                    })
+                    .edgesIgnoringSafeArea(.all)
+                }.frame(height: 100, alignment: .center)
                     .background(Color("Orange").opacity(0.5).cornerRadius(8))
             }.padding(.horizontal)
-            VStack{
-                HStack{
+            VStack {
+                HStack {
                     Text("\(vm.P2.name)")
                         .font(.title2)
                         .foregroundColor(.white)
@@ -189,9 +188,9 @@ struct ExpertMatchScoringView
                     
                 }.padding()
             }.background(Color(.white).opacity(0.1).cornerRadius(8))
-            .padding(.horizontal)
-            HStack{
-                VStack(){
+                .padding(.horizontal)
+            HStack {
+                VStack {
                     Button(action: {}, label: {
                         Spacer()
                         Text("POINT WON")
@@ -202,13 +201,11 @@ struct ExpertMatchScoringView
                     })
                     .edgesIgnoringSafeArea(.all)
                 }.frame(height: 100, alignment: .center)
-                .background(Color("Orange").opacity(0.5).cornerRadius(8))
+                    .background(Color("Orange").opacity(0.5).cornerRadius(8))
 
             }.padding(.horizontal)
             
             Spacer()
         }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
-        
-        
     }
 }

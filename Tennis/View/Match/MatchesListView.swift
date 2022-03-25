@@ -13,17 +13,15 @@ struct MatchesHistoryView: View {
     @Binding var currentTab: CurrentTab
 
     var body: some View {
-        ZStack{
-            GeometryReader{ geo in
-                VStack{
-                    RDHeader(showMenu: $showMenu, title: currentTab.rawValue, rightBarButton: RDBadgeButton(imageTitle: "Matches", action: { self.showAddMatch.toggle() }))
-                    
-                    Spacer()
-                }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
-            }
-        }
+        VStack {
+            RDHeader(title: currentTab.rawValue,
+                     leftBarButton: RDBadgeButton(systemImageTitle: "line.horizontal.3",
+                                                  action: { showMenu.toggle() }),
+                     rightBarButton: RDBadgeButton(systemImageTitle: "plus",
+                                                   action: { showAddMatch.toggle() }))
+                .sheet(isPresented: $showAddMatch) { NewMatchView() }
+
+            Spacer()
+        }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
     }
 }
-
-
-

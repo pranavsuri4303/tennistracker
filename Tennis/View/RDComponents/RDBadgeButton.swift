@@ -10,9 +10,8 @@ import SwiftUI
 struct RDBadgeButton: View {
     var imageTitle: String?
     var systemImageTitle: String?
-    var action: (() -> Void?)
+    var action: () -> Void?
     var body: some View {
-        
         Button(action: {
             action()
         }, label: {
@@ -29,8 +28,5 @@ struct RDBadgeButton: View {
             }
 
         })
-        
-        
     }
 }
-

@@ -7,28 +7,21 @@
 
 import SwiftUI
 
-
-struct HalfModalView: View{
-    
+struct HalfModalView: View {
     @State var showSheet: Bool = false
     
-    var body: some View{
-        
+    var body: some View {
         Button {
             showSheet.toggle()
         } label: {
-            
             Text("Present Sheet")
         }
         .halfSheet(showSheet: $showSheet) {
-            
             // Your Half Sheet View....
-            ZStack{
-                
+            ZStack {
                 Color.orange
                 
-                VStack{
-                    
+                VStack {
                     Text("Hello iJustine")
                         .font(.title.bold())
                         .foregroundColor(.white)
@@ -40,12 +33,10 @@ struct HalfModalView: View{
                             .foregroundColor(.white)
                     }
                     .padding(10)
-
                 }
             }
             .ignoresSafeArea()
         } onEnd: {
-            
             print("Dismissed")
         }
     }

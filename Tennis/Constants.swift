@@ -5,8 +5,8 @@
 //  Created by Pranav Suri on 21/1/21.
 //
 
-import Foundation
 import FirebaseAuth
+import Foundation
 enum AuthState: String {
     case success = "Success"
     case error = "Error"
@@ -21,7 +21,7 @@ enum ViewState: String {
     case error = "Error"
 }
 
-enum CurrentTab : String , Equatable , CaseIterable {
+enum CurrentTab: String, Equatable, CaseIterable {
     case profile = "Profile"
     case dashboard = "Dashboard"
     case string = "String"
@@ -31,10 +31,9 @@ enum CurrentTab : String , Equatable , CaseIterable {
     case clubs = "Clubs"
 }
 
-
 // MARK: Sorting Key Enums and Structs
 
-enum Sort: CaseIterable{
+enum Sort: CaseIterable {
     case alphabeticalAsc
     case alphabeticalDesc
     case dateNewToOld
@@ -43,7 +42,7 @@ enum Sort: CaseIterable{
     case mainsAsc
     case crossDsc
     case crossAsc
-    
+
     func title() -> String {
         switch self {
         case .alphabeticalAsc:
@@ -64,6 +63,7 @@ enum Sort: CaseIterable{
             return "Cross: Low → High"
         }
     }
+
     func key() -> String {
         switch self {
         case .alphabeticalAsc, .alphabeticalDesc:
@@ -76,9 +76,9 @@ enum Sort: CaseIterable{
             return "cross"
         }
     }
-    
-    func order() -> Bool{
-        switch self{
+
+    func order() -> Bool {
+        switch self {
         case .alphabeticalAsc, .dateOldToNew, .mainsAsc, .crossAsc:
             return false
         case .alphabeticalDesc, .dateNewToOld, .mainsDsc, .crossDsc:
@@ -88,6 +88,7 @@ enum Sort: CaseIterable{
 }
 
 // MARK: Nationalities List
+
 struct Nationalities {
     let list = [
         "",
@@ -342,4 +343,3 @@ struct Nationalities {
         "Åland Islands"
     ]
 }
-

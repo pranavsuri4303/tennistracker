@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct CurrentMatchStatistics: View {
-    @ObservedObject var vm : MatchVM
-    @State var winner : String
-    @Binding var selfIsPresented : Bool
+    @ObservedObject var vm: MatchVM
+    @State var winner: String
+    @Binding var selfIsPresented: Bool
     var body: some View {
-        VStack{
-            HStack{
+        VStack {
+            HStack {
                 Text("\(winner) won!")
                     .foregroundColor(.white)
                     .font(.largeTitle)
                 Spacer()
             }.padding([.top, .horizontal])
-            VStack{
-                HStack{
-                    VStack(alignment: .leading, spacing: 10){
+            VStack {
+                HStack {
+                    VStack(alignment: .leading, spacing: 10) {
                         Text("\(vm.P1.name)")
                             .font(.headline)
                             .foregroundColor(.white)
@@ -32,7 +32,7 @@ struct CurrentMatchStatistics: View {
                             .multilineTextAlignment(.leading)
                     }.padding()
                     Spacer()
-                    VStack(spacing: 10){
+                    VStack(spacing: 10) {
                         Text("\(vm.P1.games)")
                             .font(.headline)
                             .foregroundColor(Color("green"))
@@ -44,9 +44,9 @@ struct CurrentMatchStatistics: View {
                     }.padding()
                     
                 }.background(Color(.white).opacity(0.1).cornerRadius(8))
-                .padding()
+                    .padding()
             }
-            ScrollView(){
+            ScrollView {
                 PlayerStatsCard(player: vm.P1)
                 PlayerStatsCard(player: vm.P2)
             }.edgesIgnoringSafeArea(.all)
@@ -56,21 +56,18 @@ struct CurrentMatchStatistics: View {
     }
 }
 
-
-
-
 struct PlayerStatsCard: View {
-    @State var player : Player
+    @State var player: Player
     
-    var body: some View{
-        VStack(spacing: 10){
-            HStack{
+    var body: some View {
+        VStack(spacing: 10) {
+            HStack {
                 Text("\(player.name)")
                     .foregroundColor(.white)
                     .font(.title2)
                 Spacer()
             }.padding()
-            HStack{
+            HStack {
                 Text("Points won")
                     .foregroundColor(.white)
                     .font(.headline)
@@ -80,7 +77,7 @@ struct PlayerStatsCard: View {
                     .font(.headline)
                 
             }.padding(.horizontal)
-            HStack{
+            HStack {
                 Text("First serve %")
                     .foregroundColor(.white)
                     .font(.headline)
@@ -90,7 +87,7 @@ struct PlayerStatsCard: View {
                     .font(.headline)
                 
             }.padding(.horizontal)
-            HStack{
+            HStack {
                 Text("Second serve %")
                     .foregroundColor(.white)
                     .font(.headline)
@@ -100,7 +97,7 @@ struct PlayerStatsCard: View {
                     .font(.headline)
                 
             }.padding(.horizontal)
-            HStack{
+            HStack {
                 Text("Aces")
                     .foregroundColor(.white)
                     .font(.headline)
@@ -110,7 +107,7 @@ struct PlayerStatsCard: View {
                     .font(.headline)
                 
             }.padding(.horizontal)
-            HStack{
+            HStack {
                 Text("Double faults")
                     .foregroundColor(.white)
                     .font(.headline)
@@ -121,7 +118,5 @@ struct PlayerStatsCard: View {
                 
             }.padding(.horizontal)
         }
-
-        
     }
 }

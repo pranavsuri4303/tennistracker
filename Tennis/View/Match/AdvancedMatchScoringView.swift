@@ -10,17 +10,17 @@ import SwiftUI
 struct AdvancedMatchScoringView: View {
     @Binding var isPresented: Bool
     // Players Names
-    @StateObject var vm :MatchVM
+    @StateObject var vm: MatchVM
     
     @State var dashboardIsPresented = false
     var body: some View {
-        VStack{
-            ZStack{
+        VStack {
+            ZStack {
                 Text("Advanced")
                     .font(.title2)
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
-                HStack{
+                HStack {
                     Spacer()
                     Button(action: {
                         dashboardIsPresented.toggle()
@@ -32,16 +32,14 @@ struct AdvancedMatchScoringView: View {
                     }).fullScreenCover(isPresented: $dashboardIsPresented, content: {
                         Home()
                     }).padding(.all)
-                    
                 }
             }
             
-            VStack{
-
-                HStack{
-                    VStack(alignment: .leading, spacing: 10){
-                        VStack{
-                            HStack{
+            VStack {
+                HStack {
+                    VStack(alignment: .leading, spacing: 10) {
+                        VStack {
+                            HStack {
                                 Text("\(vm.P1.name)")
                                     .font(.headline)
                                     .foregroundColor(.white)
@@ -56,8 +54,8 @@ struct AdvancedMatchScoringView: View {
                                 }
                             }
                         }
-                        VStack{
-                            HStack{
+                        VStack {
+                            HStack {
                                 Text("\(vm.P2.name)")
                                     .font(.headline)
                                     .foregroundColor(.white)
@@ -71,13 +69,12 @@ struct AdvancedMatchScoringView: View {
                                         .hidden()
                                 }
                             }
-                            
                         }
                         
                     }.padding()
                     Spacer()
 
-                    VStack(spacing: 10){
+                    VStack(spacing: 10) {
                         Text("\(vm.P1.games)")
                             .font(.headline)
                             .foregroundColor(Color("green"))
@@ -87,7 +84,7 @@ struct AdvancedMatchScoringView: View {
                             .foregroundColor(Color("green"))
                             .multilineTextAlignment(.leading)
                     }.padding()
-                    VStack(spacing: 10){
+                    VStack(spacing: 10) {
                         Text("\(vm.ptsToScore(pts: vm.P2.pts))")
                             .font(.headline)
                             .foregroundColor(Color("green"))
@@ -99,11 +96,11 @@ struct AdvancedMatchScoringView: View {
                     }.padding()
                     
                 }.background(Color(.white).opacity(0.1).cornerRadius(8))
-                .padding()
+                    .padding()
             }
-            VStack{
-                VStack{
-                    HStack{
+            VStack {
+                VStack {
+                    HStack {
                         Text("\(vm.P1.name)")
                             .font(.title3)
                             .foregroundColor(.white)
@@ -121,16 +118,16 @@ struct AdvancedMatchScoringView: View {
                     }.padding()
                     
                 }.background(Color(.white).opacity(0.1).cornerRadius(8))
-                .padding(.horizontal)
-                if vm.server == .p1{
+                    .padding(.horizontal)
+                if vm.server == .p1 {
                     AdvancedServerView(vm: vm)
-                }else{
+                } else {
                     AdvancedNonServerView(vm: vm)
                 }
             }.padding(.bottom)
             
-            VStack{
-                HStack{
+            VStack {
+                HStack {
                     Text("\(vm.P2.name)")
                         .font(.title3)
                         .foregroundColor(.white)
@@ -146,16 +143,13 @@ struct AdvancedMatchScoringView: View {
                     }
                 }.padding()
             }.background(Color(.white).opacity(0.1).cornerRadius(8))
-            .padding(.horizontal)
-            if vm.server == .p2{
+                .padding(.horizontal)
+            if vm.server == .p2 {
                 AdvancedServerView(vm: vm)
-            }else{
+            } else {
                 AdvancedNonServerView(vm: vm)
             }
             Spacer()
         }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
-        
     }
 }
-
-

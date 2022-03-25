@@ -10,19 +10,17 @@ import SwiftUI
 struct ResetPasswordView: View {
     @StateObject var vm = ResetPasswordVM()
     
-    var body: some View{
-        ZStack{
-            GeometryReader{ geo in
-                VStack{
+    var body: some View {
+        ZStack {
+            GeometryReader { _ in
+                VStack {
                     Image("resetPassword")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        //Dynamic Frame...
+                        // Dynamic Frame...
                         .padding()
-                    HStack{
-                        
+                    HStack {
                         VStack(alignment: .leading, spacing: 12, content: {
-                            
                             Text("Reset password")
                                 .font(.title)
                                 .fontWeight(.bold)
@@ -32,17 +30,15 @@ struct ResetPasswordView: View {
                                 .foregroundColor(Color(.white).opacity(0.5))
                         })
                         Spacer()
-                        
                     }
                     .padding()
-                    .padding(.leading,15)
+                    .padding(.leading, 15)
                     
                     RDTextField(title: "Email", text: $vm.email, imageName: "envelope", isSecure: false)
 
                     Spacer()
                     
                     Button(action: {
-                        
                         vm.resetPassword()
                     }, label: {
                         Text("Reset Password")
@@ -62,15 +58,16 @@ struct ResetPasswordView: View {
                 .background(Color("bg").ignoresSafeArea(.all, edges: .all))
             }
             
-            if vm.isLoading{
+            if vm.isLoading {
                 LoadingScreenView()
             }
         }.edgesIgnoringSafeArea(.top)
     }
 }
+
 //
-//struct ResetPasswordView_Previews: PreviewProvider {
+// struct ResetPasswordView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ResetPasswordView()
 //    }
-//}
+// }

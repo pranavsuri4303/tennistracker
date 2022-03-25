@@ -13,15 +13,15 @@ struct FriendsListView: View {
     @Binding var showMenu: Bool
     @Binding var currentTab: CurrentTab
     var body: some View {
-        VStack{
-            RDHeader(showMenu: $showMenu,
-                     title: currentTab.rawValue,
-                     rightBarButton: RDBadgeButton(systemImageTitle: (self.friendRequestVM.requestsUsers.count == 0 ? "bell" : "bell.badge"), action: {goToRequests.toggle()}))
+        VStack {
+            RDHeader(title: currentTab.rawValue,
+                     rightBarButton: RDBadgeButton(systemImageTitle: self.friendRequestVM.requestsUsers.count == 0 ? "bell" : "bell.badge", action: { goToRequests.toggle() }))
                 .fullScreenCover(isPresented: $goToRequests, content: {
-                    FriendRequestView(friendRequestPresented: $goToRequests)})
+                    FriendRequestView(friendRequestPresented: $goToRequests)
+                })
 
-            if friendRequestVM.friendsList.count == 0{
-                VStack(alignment: .center, spacing: 20){
+            if friendRequestVM.friendsList.count == 0 {
+                VStack(alignment: .center, spacing: 20) {
                     Spacer()
                     Image(systemName: "magnifyingglass.circle")
                         .resizable()
@@ -41,48 +41,44 @@ struct FriendsListView: View {
                         .padding()
                     Spacer()
                 }
-            }else{
-                ScrollView(){
-                    ForEach(friendRequestVM.friendsList , id : \.self) { (player) in
+            } else {
+                ScrollView {
+                    ForEach(friendRequestVM.friendsList, id: \.self) { player in
                         FriendsListCell(player: player)
                     }
                 }.padding(.horizontal)
                 Spacer()
             }
-            
         }
         .background(Color("bg").ignoresSafeArea(.all, edges: .all))
         .onAppear(perform: {
             friendRequestVM.getFriendsList()
             friendRequestVM.getPendingRequests()
         })
-        
     }
-    
-    
 }
-struct FriendsListCell : View {
-    @ObservedObject var searchPlayerVM : SearchPlayerVM
-    let player : PlayerModel
+
+struct FriendsListCell: View {
+    @ObservedObject var searchPlayerVM: SearchPlayerVM
+    let player: PlayerModel
     
-    init(player : PlayerModel) {
+    init(player: PlayerModel) {
         self.searchPlayerVM = SearchPlayerVM(player: player)
         self.player = player
     }
-    var body: some View{
+
+    var body: some View {
         NavigationLink(
             destination: Text("Friend Profile View"),
             label: {
-                HStack(alignment: .center){
-                    
+                HStack(alignment: .center) {
                     if let downloadedImage = searchPlayerVM.downloadedImage {
                         Image(uiImage: downloadedImage)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .clipShape(Circle())
                             .frame(width: 50, height: 50, alignment: .center)
-                    }
-                    else {
+                    } else {
                         Image("Male")
                             .resizable()
                             .frame(width: 50, height: 50, alignment: .center)
@@ -97,11 +93,9 @@ struct FriendsListCell : View {
                     Image(systemName: "chevron.right")
                         .foregroundColor(Color("green"))
                 }.padding(.all)
-                .background(Color(.white).opacity(0.1).cornerRadius(8))
-                .edgesIgnoringSafeArea(.all)
-                .onDisappear {
-                    
-                }
+                    .background(Color(.white).opacity(0.1).cornerRadius(8))
+                    .edgesIgnoringSafeArea(.all)
+                    .onDisappear {}
             })
     }
 }

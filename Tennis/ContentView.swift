@@ -5,29 +5,25 @@
 //  Created by Pranav Suri on 21/1/21.
 //
 
-import SwiftUI
 import LocalAuthentication
+import SwiftUI
 struct ContentView: View {
     @AppStorage("status") var logged = false
     @ObservedObject var sliderMenueVM = DownloadedProfileImage.shared
     let sliderVM = SliderMenuVM()
     var body: some View {
-        NavigationView{
-            
-            if logged{
-                
+        NavigationView {
+            if logged {
                 Home()
-//                    .preferredColorScheme(.dark)
                     .navigationBarHidden(true)
                     .onAppear(perform: {
                         print("Shown")
-                        SliderMenuVM.init().loadImageFromStorage()
-                        
+                        SliderMenuVM().loadImageFromStorage()
+
                     })
             }
-            else{
+            else {
                 LoginView()
-//                    .preferredColorScheme(.dark)
                     .navigationBarHidden(true)
             }
         }

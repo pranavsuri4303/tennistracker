@@ -5,11 +5,10 @@
 //  Created by Pranav Suri on 21/1/21.
 //
 
-import SwiftUI
 import LocalAuthentication
+import SwiftUI
 
-struct LoginView : View {
-    
+struct LoginView: View {
     @StateObject var vm = LoginVM()
     // when first time user logged in via email store this for future biometric login....
     @AppStorage("stored_User") var Stored_User = ""
@@ -20,26 +19,22 @@ struct LoginView : View {
     
     @State var startAnimate = false
     @State var showingResetPassword = false
-    var body: some View{
-        
-        ZStack{
-            
+    var body: some View {
+        ZStack {
 //            Color.black.opacity(opacity)
 //                .ignoresSafeArea(.all, edges: .all)
 
-            VStack{
-                
+            VStack {
                 Spacer(minLength: 0)
                 
                 Image("homeLogo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    //Dynamic Frame...
-                    .padding(.horizontal,35)
+                    // Dynamic Frame...
+                    .padding(.horizontal, 35)
                     .padding(.vertical)
-                HStack{
+                HStack {
                     VStack(alignment: .leading, spacing: 12, content: {
-                        
                         Text("Sign In")
                             .font(.title)
                             .fontWeight(.bold)
@@ -52,7 +47,7 @@ struct LoginView : View {
                     Spacer(minLength: 0)
                 }
                 .padding()
-                .padding(.leading,15)
+                .padding(.leading, 15)
                 
                 RDTextField(title: "EMAIL", text: $vm.email, imageName: "envelope", isSecure: false)
                 
@@ -65,8 +60,6 @@ struct LoginView : View {
                         Alert(title: Text("Error"), message: Text(vm.alertMsg), dismissButton: .destructive(Text("Ok")))
                     })
                 
-
-                
                 // Forget Button...
                 
                 Button(action: {
@@ -77,53 +70,47 @@ struct LoginView : View {
                 }).halfSheet(showSheet: $showingResetPassword) {
                     ResetPasswordView()
                 } onEnd: {
-                    print(("Reset Password Closed"))
+                    print("Reset Password Closed")
                 }
                 
-                .padding(.top,8)
+                .padding(.top, 8)
                 .alert(isPresented: $vm.store_Info, content: {
                     Alert(title: Text("Message"), message: Text("Store Information For Future Login Using BioMetric Authentication?"), primaryButton: .default(Text("Accept"), action: {
-                        
                         // storing Info For BioMetric...
                         Stored_User = vm.email
                         Stored_Password = vm.password
-                        withAnimation{self.logged = true}
-                    }), secondaryButton: .cancel({
+                        withAnimation { self.logged = true }
+                    }), secondaryButton: .cancel {
                         // redirecting to Home
-                        withAnimation{self.logged = true}
-                    }))
+                        withAnimation { self.logged = true }
+                    })
                 })
                 Spacer()
                 
-                HStack(spacing: 5){
-                    
+                HStack(spacing: 5) {
                     Text("Don't have an account? ")
                         .foregroundColor(Color(.white).opacity(0.6))
-                    Button("Signup"){
+                    Button("Signup") {
                         goToSignup.toggle()
                     }
                     .foregroundColor(Color("green"))
                     .fullScreenCover(isPresented: $goToSignup) {
-                        RegisterView( registerViewPresented: $goToSignup)
+                        RegisterView(registerViewPresented: $goToSignup)
                     }
-
                 }
                 .padding(.vertical)
             }
             .background(Color("bg").ignoresSafeArea(.all, edges: .all))
             .animation(startAnimate ? .easeOut : .none)
             
-            if vm.isLoading{
+            if vm.isLoading {
                 LoadingScreenView()
             }
         }
         .onAppear(perform: {
-            
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.startAnimate.toggle()
             }
         })
     }
 }
-
-

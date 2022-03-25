@@ -10,14 +10,11 @@ import SwiftUI
 struct HomeView: View {
     @Binding var showMenu: Bool
     var body: some View {
-        
-        VStack{
-            VStack(spacing: 0){
-                
-                HStack{
-                    
+        VStack {
+            VStack(spacing: 0) {
+                HStack {
                     Button {
-                        withAnimation{showMenu.toggle()}
+                        withAnimation { showMenu.toggle() }
                     } label: {
                         Image("Person")
                             .resizable()
@@ -32,12 +29,10 @@ struct HomeView: View {
                     
                     // Navigation Link...
                     NavigationLink {
-                        
                         Text("Timeline View")
                             .navigationTitle("Timeline")
                         
                     } label: {
-                        
                         Image("Sparkles")
                             .resizable()
                             .renderingMode(.template)
@@ -45,15 +40,13 @@ struct HomeView: View {
                             .frame(width: 22, height: 22)
                             .foregroundColor(.primary)
                     }
-
                 }
                 .padding(.horizontal)
-                .padding(.vertical,10)
+                .padding(.vertical, 10)
                 
                 Divider()
             }
             .overlay(
-            
                 Image("Logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
