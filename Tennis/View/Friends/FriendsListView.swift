@@ -14,12 +14,6 @@ struct FriendsListView: View {
     @Binding var currentTab: CurrentTab
     var body: some View {
         VStack {
-            RDHeader(title: currentTab.rawValue,
-                     rightBarButton: RDBadgeButton(systemImageTitle: self.friendRequestVM.requestsUsers.count == 0 ? "bell" : "bell.badge", action: { goToRequests.toggle() }))
-                .fullScreenCover(isPresented: $goToRequests, content: {
-                    FriendRequestView(friendRequestPresented: $goToRequests)
-                })
-
             if friendRequestVM.friendsList.count == 0 {
                 VStack(alignment: .center, spacing: 20) {
                     Spacer()
@@ -50,10 +44,19 @@ struct FriendsListView: View {
                 Spacer()
             }
         }
-        .background(Color("bg").ignoresSafeArea(.all, edges: .all))
+        //        .background(Color("bg").ignoresSafeArea(.all, edges: .all))
         .onAppear(perform: {
             friendRequestVM.getFriendsList()
             friendRequestVM.getPendingRequests()
+        })
+        .frame(width: getRect().width, height: getRect().height)
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                RDBadgeButton(systemImageTitle: self.friendRequestVM.requestsUsers.count == 0 ? "bell" : "bell.badge", action: { goToRequests.toggle() })
+                    .fullScreenCover(isPresented: $goToRequests, content: {
+                        FriendRequestView(friendRequestPresented: $goToRequests)
+                    })
+            }
         })
     }
 }
@@ -66,7 +69,7 @@ struct FriendsListCell: View {
         self.searchPlayerVM = SearchPlayerVM(player: player)
         self.player = player
     }
-
+    
     var body: some View {
         NavigationLink(
             destination: Text("Friend Profile View"),

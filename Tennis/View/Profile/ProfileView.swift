@@ -9,8 +9,6 @@ import Firebase
 import SwiftUI
 
 struct ProfileView: View {
-    @Binding var showMenu: Bool
-    @Binding var currentTab: CurrentTab
     @AppStorage("status") var logged = false
     @ObservedObject var sliderMenueVM = DownloadedProfileImage.shared
     @ObservedObject var vm = ProfileVM()
@@ -18,17 +16,7 @@ struct ProfileView: View {
     
     var body: some View {
         VStack {
-            RDHeader(title: currentTab.rawValue,
-                     leftBarButton: RDBadgeButton(systemImageTitle: "line.horizontal.3",
-                                                   action: { showMenu.toggle() }),
-                     rightBarButton: RDBadgeButton(systemImageTitle: "gear",
-                                                  action: { goToSettings.toggle() }))
-                .fullScreenCover(isPresented: $goToSettings,
-                                 content: { ProfileSettings(profileSettingsPresented: $goToSettings,
-                                                            vm: vm)})
-
-            
-            ScrollView(.vertical, showsIndicators: false, content: {
+            ScrollView(.vertical, showsIndicators: false){
                 GeometryReader { reader in
                     // Type 2 Parollax....
                     if reader.frame(in: .global).minY > -480 {
@@ -37,9 +25,9 @@ struct ProfileView: View {
                                 .resizable()
                                 .padding(.top, 50)
                                 .aspectRatio(contentMode: .fill)
-                                // moving View Up....
+                            // moving View Up....
                                 .offset(y: -reader.frame(in: .global).minY)
-                                // going to add parallax effect....
+                            // going to add parallax effect....
                                 .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY > 0 ? reader.frame(in: .global).minY + 480 : 480)
                             
                         } else {
@@ -47,9 +35,9 @@ struct ProfileView: View {
                                 .resizable()
                                 .padding(.top, 50)
                                 .aspectRatio(contentMode: .fill)
-                                // moving View Up....
+                            // moving View Up....
                                 .offset(y: -reader.frame(in: .global).minY)
-                                // going to add parallax effect....
+                            // going to add parallax effect....
                                 .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY > 0 ? reader.frame(in: .global).minY + 480 : 480)
                         }
                     }
@@ -114,24 +102,19 @@ struct ProfileView: View {
                 }
                 .padding(.top, 25)
                 .padding(.horizontal)
-                .background(Color("bg"))
                 .cornerRadius(20)
                 .offset(y: -10)
                 .edgesIgnoringSafeArea(.horizontal)
-            })
-            .edgesIgnoringSafeArea(.all)
-            .background(Color("bg").edgesIgnoringSafeArea(.all))
+            }
         }
-//                .edgesIgnoringSafeArea(.all)
-        .background(Color("bg").edgesIgnoringSafeArea(.all))
-        //        .onAppear(perform: {
-        //            print("Shown")
-        //            SliderMenueVM.init().loadImageFromStorage()
-        //        })
-        
-        .onAppear(perform: {
-            if DownloadedProfileImage.shared.profileImage == nil {
-                sliderMenueVM.loadImageFromStorageWithBiggerSize()
+        .frame(width: getRect().width, height: getRect().height)
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                RDBadgeButton(systemImageTitle: "gear",
+                              action: { goToSettings.toggle() })
+                    .fullScreenCover(isPresented: $goToSettings,
+                                     content: { ProfileSettings(profileSettingsPresented: $goToSettings,
+                                                                vm: vm)})
             }
         })
     }

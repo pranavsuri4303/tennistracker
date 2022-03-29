@@ -27,7 +27,7 @@ struct ExpertMatchScoringView:
                         .foregroundColor(Color("green"))
                         .multilineTextAlignment(.trailing)
                 }).fullScreenCover(isPresented: $dashboardIsPresented, content: {
-                    Home()
+                    BaseView()
                 }).padding(.all)
             }
             VStack {

@@ -8,7 +8,7 @@
 import FirebaseAuth
 import SwiftUI
 
-struct SideMenu: View {
+struct SideMenuView: View {
     @Binding var currentSelectedView: CurrentTab
     @Binding var showMenu: Bool
     @AppStorage("status") var logged = false
@@ -88,6 +88,5 @@ extension View {
 
 var menuButtons: [CurrentTab] {
     var all = CurrentTab.allCases
-    all.removeLast()
     return all
 }

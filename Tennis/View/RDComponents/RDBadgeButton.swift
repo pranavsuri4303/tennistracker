@@ -22,9 +22,9 @@ struct RDBadgeButton: View {
                     .foregroundColor(Color("green"))
             }else{
                 Image(systemName: "\(systemImageTitle!)")
-                    .font(.title2)
-//                    .frame(width: 22, height: 20, alignment: .center)
+                    .frame(width: 24, height: 24, alignment: .center)
                     .foregroundColor(Color("green"))
+                    .scaledToFit()
             }
 
         })

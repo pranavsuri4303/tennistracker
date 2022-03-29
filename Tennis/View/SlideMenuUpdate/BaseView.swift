@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Home: View {
+struct BaseView: View {
     @State var currentTab: CurrentTab = .profile
     @State var showMenu: Bool = false
     
@@ -21,38 +21,48 @@ struct Home: View {
         
         VStack {
             HStack(spacing: 0) {
-                SideMenu(currentSelectedView: $currentTab, showMenu: $showMenu)
-
-                VStack(spacing: 0) {
-                    ZStack(alignment: Alignment(horizontal: .leading, vertical: .top)) {
+                SideMenuView(currentSelectedView: $currentTab, showMenu: $showMenu)
+                NavigationView{
+                    VStack{
                         switch currentTab {
-                        case .string: StringsListView(showMenu: $showMenu, currentTab: $currentTab)
-                        case .profile: ProfileView(showMenu: $showMenu, currentTab: $currentTab)
-                        case .dashboard: DashboardView(showMenu: $showMenu, currentTab: $currentTab)
-                        case .players: PlayersSearchView(showMenu: $showMenu, currentTab: $currentTab)
-                        case .matches: MatchesHistoryView(showMenu: $showMenu, currentTab: $currentTab)
+                        case .string: StringsListView()
+                        case .profile: ProfileView()
+                        case .dashboard: DashboardView()
+                        case .players: PlayersView()
+                        case .matches: MatchesHistoryView()
                         case .friends: FriendsListView(showMenu: $showMenu, currentTab: $currentTab)
                         case .clubs: ClubsView()
                         }
                     }
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar(content: {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            RDBadgeButton(systemImageTitle: "line.horizontal.3") {
+                                showMenu.toggle()
+                            }
+                        }
+                    })
+                    .navigationBarTitle("\(currentTab.rawValue)")
+                    .background(Color("bg").ignoresSafeArea(.all, edges: .all))
                 }
+                .background(Color("bg").ignoresSafeArea(.all, edges: .all))
                 .frame(width: getRect().width)
                 .overlay(Rectangle()
-                    .fill(Color.primary.opacity(Double((offset / sideBarWidth) / 5)))
-                    .ignoresSafeArea(.container, edges: .vertical)
-                    .onTapGesture {
-                        withAnimation { showMenu.toggle() }
+                            .fill(Color.primary.opacity(Double((offset / sideBarWidth) / 5)))
+                            .ignoresSafeArea(.container, edges: .vertical)
+                            .onTapGesture {
+                    withAnimation { showMenu.toggle() }
                     
-                    })
+                })
             }
             .frame(width: getRect().width + sideBarWidth)
             .offset(x: -sideBarWidth / 2)
             .offset(x: offset > 0 ? offset : 0)
             .gesture(DragGesture()
-                .updating($gestureOffset, body: { value, out, _ in
-                    out = value.translation.width
-                })
-                .onEnded(onEnd(value:)))
+                        .updating($gestureOffset, body: { value, out, _ in
+                out = value.translation.width
+            })
+                        .onEnded(onEnd(value:)))
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
         }

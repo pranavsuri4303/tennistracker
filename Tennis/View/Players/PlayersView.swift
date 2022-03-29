@@ -7,14 +7,10 @@
 
 import SwiftUI
 
-struct PlayersSearchView: View {
+struct PlayersView: View {
     @State var showSearch = false
     @StateObject var vm = PlayersVM()
-    @Binding var showMenu: Bool
-    @Binding var currentTab: CurrentTab
-    
     var body: some View {
-        NavigationView {
             VStack {
                 if vm.playerName == "" {
                     HStack {
@@ -51,21 +47,7 @@ struct PlayersSearchView: View {
                     }
                 }
             }.navigationBarTitleDisplayMode(.inline)
-            .toolbar(content: {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        showMenu.toggle()
-                    } label: {
-                        Image(systemName: "line.horizontal.3")
-                            .font(.title3)
-                            .foregroundColor(Color("green"))
-                    }
-                }
-            })
             .searchable(text: $vm.playerName, prompt: "Enter player's email...")
-            .navigationBarTitle("\(currentTab.rawValue)")
-            .background(Color("bg").ignoresSafeArea(.all, edges: .all))
-        }
     }
 }
 
