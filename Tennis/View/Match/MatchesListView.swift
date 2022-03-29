@@ -9,19 +9,18 @@ import SwiftUI
 
 struct MatchesHistoryView: View {
     @State var showAddMatch = false
-    @Binding var showMenu: Bool
-    @Binding var currentTab: CurrentTab
 
     var body: some View {
         VStack {
-            RDHeader(title: currentTab.rawValue,
-                     leftBarButton: RDBadgeButton(systemImageTitle: "line.horizontal.3",
-                                                  action: { showMenu.toggle() }),
-                     rightBarButton: RDBadgeButton(systemImageTitle: "plus",
-                                                   action: { showAddMatch.toggle() }))
-                .sheet(isPresented: $showAddMatch) { NewMatchView() }
 
-            Spacer()
-        }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
+        }
+        .frame(width: getRect().width, height: getRect().height)
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                RDBadgeButton(systemImageTitle: "plus",
+                                              action: { showAddMatch.toggle() })
+                    .sheet(isPresented: $showAddMatch) { NewMatchView() }
+            }
+        })
     }
 }

@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             if logged {
-                Home()
+                BaseView()
                     .navigationBarHidden(true)
                     .onAppear(perform: {
                         print("Shown")
@@ -23,8 +23,7 @@ struct ContentView: View {
                     })
             }
             else {
-                LoginView()
-                    .navigationBarHidden(true)
+                BaseView()
             }
         }
     }
