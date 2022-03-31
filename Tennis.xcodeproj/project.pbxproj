@@ -63,6 +63,10 @@
 		B595E718269FB42900BAD8D6 /* ImagePickerView in Frameworks */ = {isa = PBXBuildFile; productRef = B595E717269FB42900BAD8D6 /* ImagePickerView */; };
 		B595E71A269FE17F00BAD8D6 /* MatchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7662D3F925C392BB004544BF /* MatchVM.swift */; };
 		B59C408927A9DBB400ACE493 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B59C408827A9DBB400ACE493 /* GoogleSignIn */; };
+		B59E2DE127F3CDAF00CB6B27 /* AlgoliaSearchClient in Frameworks */ = {isa = PBXBuildFile; productRef = B59E2DE027F3CDAF00CB6B27 /* AlgoliaSearchClient */; };
+		B59E2DE427F3F9DC00CB6B27 /* PlayerSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E2DE327F3F9DB00CB6B27 /* PlayerSearchModel.swift */; };
+		B59E2DE727F4DF4600CB6B27 /* PlayerSearchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E2DE627F4DF4600CB6B27 /* PlayerSearchCellView.swift */; };
+		B59E2DEA27F4E08900CB6B27 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = B59E2DE927F4E08900CB6B27 /* CachedAsyncImage */; };
 		B5B22A3526A6DECA002CAA61 /* ProfileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B22A3426A6DECA002CAA61 /* ProfileSettings.swift */; };
 		B5D1F76527AA0C140091AC2F /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76427AA0C140091AC2F /* SideMenuView.swift */; };
 		B5D1F76827AA0EBC0091AC2F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76727AA0EBC0091AC2F /* BaseView.swift */; };
@@ -146,6 +150,8 @@
 		B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHeaderTitle.swift; sourceTree = "<group>"; };
 		B564F7302799F73A00052CA3 /* RDBadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDBadgeButton.swift; sourceTree = "<group>"; };
 		B567575227A8EFE200381DD5 /* StringRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRowView.swift; sourceTree = "<group>"; };
+		B59E2DE327F3F9DB00CB6B27 /* PlayerSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchModel.swift; sourceTree = "<group>"; };
+		B59E2DE627F4DF4600CB6B27 /* PlayerSearchCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchCellView.swift; sourceTree = "<group>"; };
 		B5B22A3426A6DECA002CAA61 /* ProfileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettings.swift; sourceTree = "<group>"; };
 		B5D1F76427AA0C140091AC2F /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		B5D1F76727AA0EBC0091AC2F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -160,7 +166,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5D1F77427AA3F770091AC2F /* SDWebImageSwiftUI in Frameworks */,
+				B59E2DE127F3CDAF00CB6B27 /* AlgoliaSearchClient in Frameworks */,
 				9F73852925CE4DA800CF79D1 /* FirebaseAuth in Frameworks */,
+				B59E2DEA27F4E08900CB6B27 /* CachedAsyncImage in Frameworks */,
 				9F73852B25CE4DA800CF79D1 /* FirebaseFirestore in Frameworks */,
 				B512C3DF27A7116A00231CD9 /* TTProgressHUD in Frameworks */,
 				9F73852D25CE4DA800CF79D1 /* FirebaseStorage in Frameworks */,
@@ -191,6 +199,7 @@
 			children = (
 				76AADBA525C64F6A00EB0C43 /* PlayersView.swift */,
 				7619A62825CA421700014ADA /* PlayerProfileView.swift */,
+				B59E2DE627F4DF4600CB6B27 /* PlayerSearchCellView.swift */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -238,6 +247,7 @@
 				76DB132825CEDAD9003EDA38 /* Models.swift */,
 				9FA0978525CFAF320039A73E /* Extensions.swift */,
 				764A613C25B9204B00789373 /* Constants.swift */,
+				B59E2DE527F3FA2800CB6B27 /* Models */,
 				764A611925B91C6300789373 /* ViewModel */,
 				764A60FE25B90E8900789373 /* View */,
 				764A60CC25B90E5600789373 /* Assets.xcassets */,
@@ -397,6 +407,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		B59E2DE527F3FA2800CB6B27 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B59E2DE327F3F9DB00CB6B27 /* PlayerSearchModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B5D1F76627AA0EA40091AC2F /* SlideMenuUpdate */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +448,8 @@
 				B512C3DE27A7116A00231CD9 /* TTProgressHUD */,
 				B59C408827A9DBB400ACE493 /* GoogleSignIn */,
 				B5D1F77327AA3F770091AC2F /* SDWebImageSwiftUI */,
+				B59E2DE027F3CDAF00CB6B27 /* AlgoliaSearchClient */,
+				B59E2DE927F4E08900CB6B27 /* CachedAsyncImage */,
 			);
 			productName = Tennis;
 			productReference = 764A60C525B90E5500789373 /* Tennis.app */;
@@ -509,6 +529,8 @@
 				B512C3DD27A7116A00231CD9 /* XCRemoteSwiftPackageReference "TTProgressHUD" */,
 				B59C408727A9DBB400ACE493 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				B5D1F77227AA3F760091AC2F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				B59E2DDF27F3CDAF00CB6B27 /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */,
+				B59E2DE827F4E08800CB6B27 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = 764A60C625B90E5500789373 /* Products */;
 			projectDirPath = "";
@@ -564,11 +586,13 @@
 				B513A39D26A0390600145D2D /* ClubsView.swift in Sources */,
 				B5B22A3526A6DECA002CAA61 /* ProfileSettings.swift in Sources */,
 				B564F7312799F73A00052CA3 /* RDBadgeButton.swift in Sources */,
+				B59E2DE727F4DF4600CB6B27 /* PlayerSearchCellView.swift in Sources */,
 				76DB132425CEDA41003EDA38 /* ProfileVM.swift in Sources */,
 				7619A62925CA421800014ADA /* PlayerProfileView.swift in Sources */,
 				764B745E25D2552E0035B02C /* CurrentMatchStatistics.swift in Sources */,
 				76343B8625C2B2140061ABB5 /* StringsListView.swift in Sources */,
 				B567575327A8EFE200381DD5 /* StringRowView.swift in Sources */,
+				B59E2DE427F3F9DC00CB6B27 /* PlayerSearchModel.swift in Sources */,
 				762F87CF25C9C0EC004B46FD /* MatchesListView.swift in Sources */,
 				760719B925BB52F000F09A1A /* DashboardView.swift in Sources */,
 				B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */,
@@ -969,6 +993,22 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		B59E2DDF27F3CDAF00CB6B27 /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/algolia/algoliasearch-client-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		B59E2DE827F4E08800CB6B27 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		B5D1F77227AA3F760091AC2F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
@@ -1009,6 +1049,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B59C408727A9DBB400ACE493 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignIn;
+		};
+		B59E2DE027F3CDAF00CB6B27 /* AlgoliaSearchClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B59E2DDF27F3CDAF00CB6B27 /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */;
+			productName = AlgoliaSearchClient;
+		};
+		B59E2DE927F4E08900CB6B27 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B59E2DE827F4E08800CB6B27 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
 		};
 		B5D1F77327AA3F770091AC2F /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
