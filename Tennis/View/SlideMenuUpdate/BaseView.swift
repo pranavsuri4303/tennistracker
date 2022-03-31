@@ -63,8 +63,6 @@ struct BaseView: View {
                 out = value.translation.width
             })
                         .onEnded(onEnd(value:)))
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarHidden(true)
         }
         .background(Color("bg"))
         .animation(.easeOut, value: offset == 0)

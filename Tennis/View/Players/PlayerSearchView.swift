@@ -18,7 +18,7 @@ struct PlayerSearchView: View {
                     ScrollView {
                         LazyVStack {
                             ForEach(vm.hits) { player in
-                                PlayerSearchCellView(imageUrl: URL(string: "https://media.wired.com/photos/5b899992404e112d2df1e94e/master/pass/trash2-01.jpg")!,
+                                PlayerSearchCellView(imageUrl: URL(string: "https://www.atptour.com/-/media/alias/player-headshot/N409")!,
                                                      hit: player)
                             }
                         }
@@ -37,7 +37,6 @@ struct PlayerSearchView: View {
                 }.padding(.horizontal, 8)
             }
         }
-        .navigationBarTitleDisplayMode(.inline)
         .searchable(text: $searchString, placement: .navigationBarDrawer(displayMode: .automatic), prompt: "Search for a player...")
         .onSubmit(of: .search) {
             vm.resetData()

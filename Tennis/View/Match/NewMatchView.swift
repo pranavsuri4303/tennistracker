@@ -9,9 +9,7 @@ import SwiftUI
 
 struct NewMatchView: View {
     @State var friendsVM = FriendsVM()
-    init() {
-        friendsVM.getFriendsList()
-    }
+
 
     @ObservedObject var vm = MatchVM()
     @State var matchScorerIsPresented = false

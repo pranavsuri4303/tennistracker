@@ -6,30 +6,57 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct FriendsListView: View {
     @StateObject var friendRequestVM = FriendsVM()
     @State private var goToRequests = false
+    let imageUrl = "https://www.atptour.com/-/media/alias/player-headshot/N409"
+    var count = 1
     var body: some View {
         VStack {
-            if friendRequestVM.friendsList.count == 0 {
+            if count == 0 {
                 RDEmptyListPlaceholder(headlineText: "What are you waiting for?!",
                                        subHeadlineText: "Go to the Players tab now to search and add your friends...")
             } else {
+//                ScrollView {
+//                    ForEach(friendRequestVM.friendsList, id: \.self) { player in
+//                        FriendsListCell(imageUrl: URL(string: "shorturl.at/atwW3")!, player: player)
+//                    }
+//                }.padding(.horizontal)
                 ScrollView {
-                    ForEach(friendRequestVM.friendsList, id: \.self) { player in
-                        FriendsListCell(player: player)
-                    }
-                }.padding(.horizontal)
+                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+                                    firstName: "Test",
+                                    lastName: "1")
+                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+                                    firstName: "Test",
+                                    lastName: "2")
+                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+                                    firstName: "Test",
+                                    lastName: "3")
+                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+                                    firstName: "Test",
+                                    lastName: "4")
+                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+                                    firstName: "Test",
+                                    lastName: "5")
+                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+                                    firstName: "Test",
+                                    lastName: "6")
+                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+                                    firstName: "Test",
+                                    lastName: "7")
+                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+                                    firstName: "Test",
+                                    lastName: "8")
+                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+                                    firstName: "Test",
+                                    lastName: "9")
+                }.padding(.horizontal, 8)
+                
                 Spacer()
             }
         }
-        //        .background(Color("bg").ignoresSafeArea(.all, edges: .all))
-        .onAppear(perform: {
-            friendRequestVM.getFriendsList()
-            friendRequestVM.getPendingRequests()
-        })
-        .frame(width: getRect().width, height: getRect().height)
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
                 RDBadgeButton(systemImageTitle: self.friendRequestVM.requestsUsers.count == 0 ? "bell" : "bell.badge", action: { goToRequests.toggle() })
@@ -44,43 +71,41 @@ struct FriendsListView: View {
 
 
 struct FriendsListCell: View {
-    @ObservedObject var searchPlayerVM: SearchPlayerVM
-    let player: PlayerModel
-    
-    init(player: PlayerModel) {
-        self.searchPlayerVM = SearchPlayerVM(player: player)
-        self.player = player
-    }
+    let imageUrl: URL
+    //    let player: PlayerModel
+    var firstName: String
+    var lastName: String
     
     var body: some View {
-        NavigationLink(
-            destination: Text("Friend Profile View"),
-            label: {
-                HStack(alignment: .center) {
-                    if let downloadedImage = searchPlayerVM.downloadedImage {
-                        Image(uiImage: downloadedImage)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .clipShape(Circle())
-                            .frame(width: 50, height: 50, alignment: .center)
-                    } else {
-                        Image("Male")
-                            .resizable()
-                            .frame(width: 50, height: 50, alignment: .center)
-                            .scaledToFit()
-                    }
-                    Text(player.name)
-                        .font(.title2)
-                        .multilineTextAlignment(.leading)
-                        .foregroundColor(.white)
-                        .edgesIgnoringSafeArea(.all)
-                    Spacer()
-                    Image(systemName: "chevron.right")
-                        .foregroundColor(Color("green"))
-                }.padding(.all)
-                    .background(Color(.white).opacity(0.1).cornerRadius(8))
-                    .edgesIgnoringSafeArea(.all)
-                    .onDisappear {}
-            })
+        HStack(spacing: 8){
+            CachedAsyncImage(url: imageUrl) { image in
+                image
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: getRect().width*0.15, height: getRect().width*0.15)
+                    .clipShape(Circle())
+            } placeholder: {
+                ZStack{
+                    Circle()
+                        .frame(width: getRect().width*0.15, height: getRect().width*0.15)
+                        .foregroundColor(.white.opacity(0.1))
+                    ProgressView()
+                    
+                }
+            }
+            VStack{
+                Text("\(firstName) \(lastName)")
+                    .font(.title2)
+            }
+            Spacer()
+            VStack{
+                Image(systemName: "arrow.right")
+                    .foregroundColor(Color("green"))
+                    .font(.title3)
+            }
+        }
+        .padding(8)
+        .background(Color(.white).opacity(0.1))
+        .cornerRadius(6)
     }
 }
