@@ -39,9 +39,7 @@ struct FriendRequestView: View {
             }.padding(.horizontal)
             Spacer()
         }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
-            .onAppear {
-                self.friendRequestVM.getPendingRequests()
-            }
+
     }
 }
 
@@ -79,15 +77,15 @@ struct FriendRequestCell: View {
             Spacer()
             HStack(spacing: 10) {
                 Button(action: {
-                    sendFriendRequestVM.acceptFriendRequest(senderUserID: playerModel.uid)
-                    
+                    print("accept friend request")
+
                 }, label: {
                     Image(systemName: "checkmark.circle")
                         .foregroundColor(Color(.green))
                         .padding()
                 })
                 Button(action: {
-                    sendFriendRequestVM.declineFriendRequest(senderUserID: playerModel.uid)
+                    print("decline friend request")
                 }, label: {
                     Image(systemName: "xmark.octagon.fill")
                         .foregroundColor(Color(.red))

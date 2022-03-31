@@ -20,6 +20,8 @@ struct PlayerModel: Hashable {
     let id = UUID()
     let uid: String
     let name: String
+    let firstName: String
+    let lastName: String
     let gender: String
     let imagePath: String
     let nationality: String

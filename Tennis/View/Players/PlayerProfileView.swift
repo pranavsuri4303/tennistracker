@@ -21,7 +21,7 @@ struct PlayerProfileView: View {
                 RDHeaderTitle(title: playerModel.name)
                 Spacer()
                 RDBadgeButton(systemImageTitle: "person.crop.circle.badge.plus",
-                              action: { sendFriendRequestVM.sendFriendRequest(recieverUserID: playerModel.uid) })
+                              action: { print("Send friend request") })
                     .disabled(sendFriendRequestVM.currentStatus == .friend || sendFriendRequestVM.currentStatus == .pending || sendFriendRequestVM.currentStatus == .me)
                     .opacity(sendFriendRequestVM.currentStatus == .friend || sendFriendRequestVM.currentStatus == .pending || sendFriendRequestVM.currentStatus == .me ? 0.5 : 1)
 
@@ -74,8 +74,7 @@ struct PlayerProfileView: View {
                     HStack {
                         Spacer()
                         Button(action: {
-                            sendFriendRequestVM.sendFriendRequest(recieverUserID: playerModel.uid)
-                            
+                            print("send friend request")
                         }, label: {
                             RDButton(withTitle: sendFriendRequestVM.buttonTitle)
                         }).padding()
@@ -94,7 +93,6 @@ struct PlayerProfileView: View {
             .edgesIgnoringSafeArea(.all)
             .background(Color("bg").edgesIgnoringSafeArea(.all))
             .onAppear(perform: {
-                sendFriendRequestVM.setFriendshipStatus(recieverUserID: playerModel.uid)
                 searchVM.loadImageFromStorageWithBiggerSize()
             })
         }

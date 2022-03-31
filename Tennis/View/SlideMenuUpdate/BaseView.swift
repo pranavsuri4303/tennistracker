@@ -28,9 +28,9 @@ struct BaseView: View {
                         case .string: StringsListView()
                         case .profile: ProfileView()
                         case .dashboard: DashboardView()
-                        case .players: PlayersView()
+                        case .players: PlayerSearchView()
                         case .matches: MatchesHistoryView()
-                        case .friends: FriendsListView(showMenu: $showMenu, currentTab: $currentTab)
+                        case .friends: FriendsListView()
                         case .clubs: ClubsView()
                         }
                     }
@@ -63,8 +63,6 @@ struct BaseView: View {
                 out = value.translation.width
             })
                         .onEnded(onEnd(value:)))
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarHidden(true)
         }
         .background(Color("bg"))
         .animation(.easeOut, value: offset == 0)
