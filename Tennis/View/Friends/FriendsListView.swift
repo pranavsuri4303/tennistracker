@@ -10,8 +10,6 @@ import SwiftUI
 struct FriendsListView: View {
     @StateObject var friendRequestVM = FriendsVM()
     @State private var goToRequests = false
-    @Binding var showMenu: Bool
-    @Binding var currentTab: CurrentTab
     var body: some View {
         VStack {
             if friendRequestVM.friendsList.count == 0 {
