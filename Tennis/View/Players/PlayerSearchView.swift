@@ -1,36 +1,18 @@
 //
-//  PlayersView.swift
+//  PlayerSearchView.swift
 //  Tennis
 //
 //  Created by Pranav Suri on 31/1/21.
 //
 
 import SwiftUI
-struct PlayersView: View {
+struct PlayerSearchView: View {
     @State var searchString = ""
     @StateObject var vm = PlayersVM()
     var body: some View {
         VStack {
             if searchString == "" {
-                HStack {
-                    Spacer()
-                    VStack(alignment: .center, spacing: 20) {
-                        Spacer()
-                        Image(systemName: "magnifyingglass.circle")
-                            .resizable()
-                            .foregroundColor(Color("green"))
-                            .frame(width: 100, height: 100, alignment: .center)
-                        
-                        Text("Search for a player...")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
-                        
-                        Spacer()
-                    }
-                    Spacer()
-                }
-                
+                RDEmptyListPlaceholder(headlineText: "Search for a player.")                
             } else {
                 HStack {
                     ScrollView {
@@ -48,6 +30,8 @@ struct PlayersView: View {
                             }
                         } else {
                             Text(vm.totalHits == 0 ? "No results found." : "\(vm.totalHits) results.")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
                         }
                     }
                 }.padding(.horizontal, 8)

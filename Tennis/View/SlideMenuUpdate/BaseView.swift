@@ -28,9 +28,9 @@ struct BaseView: View {
                         case .string: StringsListView()
                         case .profile: ProfileView()
                         case .dashboard: DashboardView()
-                        case .players: PlayersView()
+                        case .players: PlayerSearchView()
                         case .matches: MatchesHistoryView()
-                        case .friends: FriendsListView(showMenu: $showMenu, currentTab: $currentTab)
+                        case .friends: FriendsListView()
                         case .clubs: ClubsView()
                         }
                     }

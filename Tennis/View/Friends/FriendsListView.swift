@@ -13,26 +13,8 @@ struct FriendsListView: View {
     var body: some View {
         VStack {
             if friendRequestVM.friendsList.count == 0 {
-                VStack(alignment: .center, spacing: 20) {
-                    Spacer()
-                    Image(systemName: "magnifyingglass.circle")
-                        .resizable()
-                        .foregroundColor(Color("green"))
-                        .frame(width: 100, height: 100, alignment: .center)
-                    Text("What are you waiting for?!")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.center)
-                        .lineLimit(1)
-                        .padding(.horizontal)
-                    Text("Go to the Players tab now to search for users and add them as friends...")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.center)
-                        .lineLimit(2)
-                        .padding()
-                    Spacer()
-                }
+                RDEmptyListPlaceholder(headlineText: "What are you waiting for?!",
+                                       subHeadlineText: "Go to the Players tab now to search and add your friends...")
             } else {
                 ScrollView {
                     ForEach(friendRequestVM.friendsList, id: \.self) { player in
@@ -58,6 +40,8 @@ struct FriendsListView: View {
         })
     }
 }
+
+
 
 struct FriendsListCell: View {
     @ObservedObject var searchPlayerVM: SearchPlayerVM
