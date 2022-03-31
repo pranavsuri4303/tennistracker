@@ -23,7 +23,7 @@ struct ContentView: View {
                     })
             }
             else {
-                BaseView()
+                LoginView()
             }
         }
     }

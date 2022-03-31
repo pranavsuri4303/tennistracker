@@ -1,5 +1,5 @@
 //
-//  PLayersVM.swift
+//  PlayersVM.swift
 //  Tennis
 //
 //  Created by Pranav Suri on 31/1/21.
@@ -9,42 +9,63 @@ import Combine
 import Firebase
 import LocalAuthentication
 import SwiftUI
+import AlgoliaSearchClient
+
 class PlayersVM: ObservableObject {
-    var subscriptions: Set<AnyCancellable> = []
-    @Published var playerName = ""
-    @Published var alert = false
-    @Published var alertMsg = ""
-    @Published var players: [PlayerModel] = []
-
-    func searchPlayer() {
-        players = []
-        let usersRef = Firestore.firestore().collection("users")
-        let query = usersRef.whereField("email", isGreaterThanOrEqualTo: "\(playerName)")
-            .whereField("email", isLessThanOrEqualTo: "\(playerName)z")
-            .order(by: "email", descending: false)
-
-        query.addSnapshotListener { [weak self] results, err in
-            guard let self = self else { return }
-            
-            if let err = err {
-                self.alert.toggle()
-                self.alertMsg = err.localizedDescription
-            } else {
-                self.players = []
-                for document in results!.documents {
-                    guard
-                        let uid = document["uid"] as? String,
-                        let name = document["name"] as? String,
-                        let gender = document["gender"] as? String,
-                        let imagePath = document["uid"] as? String,
-                        let nationality = document["nationality"] as? String
-                    else { return }
-                    let player = PlayerModel(uid: uid, name: name, gender: gender, imagePath: imagePath + "/profileImage.jpeg", nationality: nationality)
-                    
-                    self.players.append(player)
+    
+    private let index = SearchClient(appID: "FLI02CKHLZ", apiKey: "da18a12522a494f64204acf9c6f09e6c").index(withName: "dev_users")
+    @Published var hits: [Hit] = []
+//    @Published var viewState = ViewState.state
+    
+    @Published var pageNo = 0
+    @Published var pages = 0
+    @Published var totalHits = 0
+    
+    func resetData(){
+        pageNo = 0
+        pages = 0
+        totalHits = 0
+        hits = []
+    }
+    func loadMoreHits(queryString: String){
+        self.pageNo += 1
+        getHits(queryString: queryString)
+    }
+    func getHits(queryString: String){
+        let query = Query("\(queryString)")
+            .set(\.page, to: pageNo)
+        index.search(query: query){ result in
+            if case .success(let response) = result{
+                self.pages = response.nbPages ?? 0
+                self.pageNo = response.page ?? 1
+                self.totalHits = response.nbHits ?? 0
+                print("Total Hits: \(response.nbHits)")
+                print("Pages: \(response.nbPages)")
+                print("Page no.: \(response.page)")
+                do{
+                    self.hits += try response.extractHits()
+                } catch let error{
+                    print("Erros: \(error)")
                 }
-                print(self.players.count)
             }
         }
     }
+    func getImageURL(uid: String){
+        
+    }
+    func generateImageUrl(uid: String){
+        var url = URL(string: "")
+        let storage = Storage.storage()
+        let pathReference = storage.reference(withPath: "\(uid)/profilePicture/\(uid).jpg")
+        pathReference.downloadURL { urlReturned, err in
+            if let err = err {
+                print("Error downloading URL: \(err.localizedDescription)")
+            }else{
+                url = urlReturned!
+            }
+            print("\(url?.absoluteString)")
+        }
+    }
+    
+    
 }
