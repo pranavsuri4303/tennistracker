@@ -14,7 +14,7 @@ struct NewUserView: View {
     @State var startAnimate = false
 
     @State var selectionIndex = 0
-    @State var nations = Nations().names
+    @State var nations = Locale.isoRegionCodes.compactMap { Locale.current.localizedString(forRegionCode: $0) }.sorted { $0 < $1 }
     // Image
     @State var isImagePickerViewPresented = false
     @State var pickedImage: UIImage? = nil
@@ -146,8 +146,4 @@ struct Register_Preview: PreviewProvider {
     static var previews: some View {
         NewUserView(isPresented: .constant(false), vm: RegisterVM())
     }
-}
-
-public struct Nations{
-    let names = Locale.isoRegionCodes.compactMap { Locale.current.localizedString(forRegionCode: $0) }.sorted { $0 < $1 }
 }
