@@ -25,7 +25,7 @@ class RegisterVM: ObservableObject {
     @Published var isLoading = false
 
     func createUser() {
-        print(#function)
+        print("[Function Called]: \(#function)")
         isLoading = true
         
         Auth.auth().createUser(withEmail: email, password: password) { res, errora in
@@ -87,12 +87,14 @@ class RegisterVM: ObservableObject {
     }
     
     func configProfileImageDataFrom(UIImage image: UIImage?) {
+        print("[Function Called]: \(#function)")
         if let image = image, let dataImageSizeSmall = image.resizeImage(targetSize: .init(width: 100, height: 100)).pngData(), let dataImageSizeBig = image.resizeImage(targetSize: .init(width: 400, height: 400)).pngData() {
             imageData = (dataImageSizeSmall, dataImageSizeBig)
         }
     }
     
     func uploadImageToDatabase(userID: String, completion: @escaping (Result<String?, Error>) -> Void) {
+        print("[Function Called]: \(#function)")
         struct FaildToUploadImage: Error {}
         if let smallData = imageData.0, let bigData = imageData.1 {
             Firebase.Storage.storage().reference().child(userID).child("1x").child("profileImage.png").putData(smallData, metadata: nil) { _, error in

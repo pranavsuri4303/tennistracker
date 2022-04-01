@@ -68,6 +68,9 @@
 		B59E2DE727F4DF4600CB6B27 /* PlayerSearchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E2DE627F4DF4600CB6B27 /* PlayerSearchCellView.swift */; };
 		B59E2DEA27F4E08900CB6B27 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = B59E2DE927F4E08900CB6B27 /* CachedAsyncImage */; };
 		B5A239A827F5538500D7A9FE /* RDEmptyListPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A239A727F5538500D7A9FE /* RDEmptyListPlaceholder.swift */; };
+		B5A239AE27F6FFF000D7A9FE /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A239AD27F6FFF000D7A9FE /* UserDataModel.swift */; };
+		B5A239B027F7036400D7A9FE /* BaseViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A239AF27F7036400D7A9FE /* BaseViewVM.swift */; };
+		B5A239B327F768CC00D7A9FE /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = B5A239B227F768CC00D7A9FE /* FirebaseFirestoreSwift-Beta */; };
 		B5B22A3526A6DECA002CAA61 /* ProfileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B22A3426A6DECA002CAA61 /* ProfileSettings.swift */; };
 		B5D1F76527AA0C140091AC2F /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76427AA0C140091AC2F /* SideMenuView.swift */; };
 		B5D1F76827AA0EBC0091AC2F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76727AA0EBC0091AC2F /* BaseView.swift */; };
@@ -154,6 +157,8 @@
 		B59E2DE327F3F9DB00CB6B27 /* PlayerSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchModel.swift; sourceTree = "<group>"; };
 		B59E2DE627F4DF4600CB6B27 /* PlayerSearchCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchCellView.swift; sourceTree = "<group>"; };
 		B5A239A727F5538500D7A9FE /* RDEmptyListPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDEmptyListPlaceholder.swift; sourceTree = "<group>"; };
+		B5A239AD27F6FFF000D7A9FE /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		B5A239AF27F7036400D7A9FE /* BaseViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewVM.swift; sourceTree = "<group>"; };
 		B5B22A3426A6DECA002CAA61 /* ProfileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettings.swift; sourceTree = "<group>"; };
 		B5D1F76427AA0C140091AC2F /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		B5D1F76727AA0EBC0091AC2F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -174,6 +179,7 @@
 				9F73852B25CE4DA800CF79D1 /* FirebaseFirestore in Frameworks */,
 				B512C3DF27A7116A00231CD9 /* TTProgressHUD in Frameworks */,
 				9F73852D25CE4DA800CF79D1 /* FirebaseStorage in Frameworks */,
+				B5A239B327F768CC00D7A9FE /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				B595E718269FB42900BAD8D6 /* ImagePickerView in Frameworks */,
 				B59C408927A9DBB400ACE493 /* GoogleSignIn in Frameworks */,
 			);
@@ -228,6 +234,7 @@
 				764A60E425B90E5600789373 /* TennisUITests */,
 				764A60C625B90E5500789373 /* Products */,
 				B5EFB4E527E9D550004180E6 /* GoogleService-Info.plist */,
+				B5A239B127F768CC00D7A9FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -318,6 +325,7 @@
 				9FFCF2E325CF2C7E00C6C94E /* FriendsVM.swift */,
 				76183EE1260ED38D00189619 /* ResetPasswordVM.swift */,
 				B513A39A26A038BD00145D2D /* MatchVM.swift */,
+				B5A239AF27F7036400D7A9FE /* BaseViewVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -414,8 +422,16 @@
 			isa = PBXGroup;
 			children = (
 				B59E2DE327F3F9DB00CB6B27 /* PlayerSearchModel.swift */,
+				B5A239AD27F6FFF000D7A9FE /* UserDataModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B5A239B127F768CC00D7A9FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B5D1F76627AA0EA40091AC2F /* SlideMenuUpdate */ = {
@@ -453,6 +469,7 @@
 				B5D1F77327AA3F770091AC2F /* SDWebImageSwiftUI */,
 				B59E2DE027F3CDAF00CB6B27 /* AlgoliaSearchClient */,
 				B59E2DE927F4E08900CB6B27 /* CachedAsyncImage */,
+				B5A239B227F768CC00D7A9FE /* FirebaseFirestoreSwift-Beta */,
 			);
 			productName = Tennis;
 			productReference = 764A60C525B90E5500789373 /* Tennis.app */;
@@ -579,6 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B513A39B26A038BD00145D2D /* MatchVM.swift in Sources */,
+				B5A239B027F7036400D7A9FE /* BaseViewVM.swift in Sources */,
 				76AADBA625C64F6A00EB0C43 /* PlayerSearchView.swift in Sources */,
 				76183EE2260ED38D00189619 /* ResetPasswordVM.swift in Sources */,
 				B5D1F76527AA0C140091AC2F /* SideMenuView.swift in Sources */,
@@ -602,6 +620,7 @@
 				B5D1F76E27AA342A0091AC2F /* RDMenuButton.swift in Sources */,
 				76B8153025CD3AF10029EE83 /* TextFieldWithPickerView.swift in Sources */,
 				764A618325B9493F00789373 /* RegisterVM.swift in Sources */,
+				B5A239AE27F6FFF000D7A9FE /* UserDataModel.swift in Sources */,
 				B52F300227A92D4000237915 /* HalfModalView.swift in Sources */,
 				9FFCF2E425CF2C7E00C6C94E /* FriendsVM.swift in Sources */,
 				B564F72F2799F13D00052CA3 /* RDHeaderTitle.swift in Sources */,
@@ -1063,6 +1082,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B59E2DE827F4E08800CB6B27 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
+		};
+		B5A239B227F768CC00D7A9FE /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F73852725CE4DA800CF79D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
 		};
 		B5D1F77327AA3F770091AC2F /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;

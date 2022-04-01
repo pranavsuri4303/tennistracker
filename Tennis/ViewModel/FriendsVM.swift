@@ -37,6 +37,7 @@ class FriendsVM: ObservableObject {
     }
     
     func acceptFriendRequest(){
+        print("[Function Called]: \(#function)")
         // 1. Get basic array data from friend request          1 Read
         // 2. Add data to friends collection                    1 Write
         // 3. Add current users data to friend's collection     1 Write
@@ -44,19 +45,23 @@ class FriendsVM: ObservableObject {
     }
     
     func rejectFriendRequest(){
+        print("[Function Called]: \(#function)")
         // 1. Delete index from friend requests array
     }
     
     func removeFriend(){
+        print("[Function Called]: \(#function)")
         // 1. Delete index from user list array
         // 1. Delete index from friend's list array
     }
     
     func fetchFriendRequests(){
+        print("[Function Called]: \(#function)")
         // 1. Get list from users collection already loaded
     }
     
     func fetchFriendsList(){
+        print("[Function Called]: \(#function)")
         // 1. Get list from users collection already loaded
     }
 }

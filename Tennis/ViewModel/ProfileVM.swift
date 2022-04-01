@@ -26,6 +26,7 @@ class ProfileVM: ObservableObject {
     }
     
     func fetchUserData() {
+        print("[Function Called]: \(#function)")
         print(Storage.storage().reference())
         if let uidStr = uidStr {
             isLoading = true

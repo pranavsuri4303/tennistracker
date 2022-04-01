@@ -22,16 +22,19 @@ class PlayersVM: ObservableObject {
     @Published var totalHits = 0
     
     func resetData(){
+        print("[Function Called]: \(#function)")
         pageNo = 0
         pages = 0
         totalHits = 0
         hits = []
     }
     func loadMoreHits(queryString: String){
+        print("[Function Called]: \(#function)")
         self.pageNo += 1
         getHits(queryString: queryString)
     }
     func getHits(queryString: String){
+        print("[Function Called]: \(#function)")
         let query = Query("\(queryString)")
             .set(\.page, to: pageNo)
         index.search(query: query){ result in
@@ -51,9 +54,10 @@ class PlayersVM: ObservableObject {
         }
     }
     func getImageURL(uid: String){
-        
+        print("[Function Called]: \(#function)")
     }
     func generateImageUrl(uid: String){
+        print("[Function Called]: \(#function)")
         var url = URL(string: "")
         let storage = Storage.storage()
         let pathReference = storage.reference(withPath: "\(uid)/profilePicture/\(uid).jpg")
