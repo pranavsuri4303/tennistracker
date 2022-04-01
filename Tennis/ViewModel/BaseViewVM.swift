@@ -9,8 +9,8 @@ import Foundation
 import FirebaseAuth
 import Firebase
 class BaseViewVM: ObservableObject {
-    let uidStr = Auth.auth().currentUser?.uid ?? ""
-    let db = Firestore.firestore().collection("users")
+    private let uidStr = Auth.auth().currentUser?.uid ?? ""
+    private let db = Firestore.firestore().collection("users")
     @Published var userData: UserDataModel?
     
     func fetchUserData() {

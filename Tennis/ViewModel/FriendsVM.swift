@@ -55,15 +55,6 @@ class FriendsVM: ObservableObject {
         // 1. Delete index from friend's list array
     }
     
-    func fetchFriendRequests(){
-        print("[Function Called]: \(#function)")
-        // 1. Get list from users collection already loaded
-    }
-    
-    func fetchFriendsList(){
-        print("[Function Called]: \(#function)")
-        // 1. Get list from users collection already loaded
-    }
 }
 
 

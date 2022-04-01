@@ -14,6 +14,7 @@ struct UserDataModel: Identifiable, Codable {
     let name: String?
     let firsName: String?
     let lastName: String?
+    let gender: String?
     let nationality: String?
     let yob: String?
     let imagePath: String?
@@ -22,9 +23,11 @@ struct UserDataModel: Identifiable, Codable {
     let friends: [FriendsCellModel]?
 }
 
-struct FriendsCellModel: Codable {
+struct FriendsCellModel: Identifiable, Codable, Equatable {
+    let id = UUID()
     let uid: String
     let name: String?
+    let gender: String?
     let nationality: String?
     let yob: String?
     let imagePath: String?

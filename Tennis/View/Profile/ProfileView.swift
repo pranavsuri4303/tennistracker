@@ -11,7 +11,7 @@ import SwiftUI
 struct ProfileView: View {
     @AppStorage("status") var logged = false
     @ObservedObject var sliderMenueVM = DownloadedProfileImage.shared
-    @ObservedObject var vm = ProfileVM()
+    @EnvironmentObject var vm2: BaseViewVM
     @State private var goToSettings = false
     
     var body: some View {
@@ -31,7 +31,7 @@ struct ProfileView: View {
                                 .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY > 0 ? reader.frame(in: .global).minY + 480 : 480)
                             
                         } else {
-                            Image("\(vm.gender)")
+                            Image("\(vm2.userData?.gender ?? "")")
                                 .resizable()
                                 .padding(.top, 50)
                                 .aspectRatio(contentMode: .fill)
@@ -45,13 +45,13 @@ struct ProfileView: View {
                 .frame(height: 400)
                 VStack(alignment: .leading, spacing: 15) {
                     HStack {
-                        Text("\(Auth.auth().currentUser?.displayName ?? "")")
+                        Text("\(vm2.userData?.name ?? "")")
                             .font(.title)
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .multilineTextAlignment(.leading)
                         Spacer()
-                        Text("Male")
+                        Text("\(vm2.userData?.gender ?? "")")
                             .font(.body)
                             .foregroundColor(.white)
                             .padding(.top, 5)
@@ -108,20 +108,15 @@ struct ProfileView: View {
             }
         }
         .frame(width: getRect().width, height: getRect().height)
-        .toolbar(content: {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                RDBadgeButton(systemImageTitle: "gear",
-                              action: { goToSettings.toggle() })
-                    .fullScreenCover(isPresented: $goToSettings,
-                                     content: { ProfileSettings(profileSettingsPresented: $goToSettings,
-                                                                vm: vm)})
-            }
-        })
+//        .toolbar(content: {
+//            ToolbarItem(placement: .navigationBarTrailing) {
+//                RDBadgeButton(systemImageTitle: "gear",
+//                              action: { goToSettings.toggle() })
+//                    .fullScreenCover(isPresented: $goToSettings,
+//                                     content: { ProfileSettings(profileSettingsPresented: $goToSettings,
+//                                                                vm: vm)})
+//            }
+//        })
     }
 }
 
-// struct ProfileView_Preview : PreviewProvider {
-//    static var previews: some View {
-//        ProfileView()
-//    }
-// }

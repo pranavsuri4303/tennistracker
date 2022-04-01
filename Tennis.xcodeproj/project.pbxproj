@@ -39,7 +39,6 @@
 		76B8153025CD3AF10029EE83 /* TextFieldWithPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B8152F25CD3AF10029EE83 /* TextFieldWithPickerView.swift */; };
 		76D1B86025BAEE4700FE1B4B /* LoadingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D1B85F25BAEE4700FE1B4B /* LoadingScreenView.swift */; };
 		76D731A025CA7BB7001D2D64 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D7319F25CA7BB7001D2D64 /* ProfileView.swift */; };
-		76DB132425CEDA41003EDA38 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DB132325CEDA41003EDA38 /* ProfileVM.swift */; };
 		76DB132925CEDAD9003EDA38 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DB132825CEDAD9003EDA38 /* Models.swift */; };
 		76DBB01425C29C8E00F238D9 /* AddStringVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DBB01325C29C8E00F238D9 /* AddStringVM.swift */; };
 		76F5424825CDC81F00557BF9 /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F5424725CDC81F00557BF9 /* FriendsListView.swift */; };
@@ -137,7 +136,6 @@
 		76B8152F25CD3AF10029EE83 /* TextFieldWithPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithPickerView.swift; sourceTree = "<group>"; };
 		76D1B85F25BAEE4700FE1B4B /* LoadingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenView.swift; sourceTree = "<group>"; };
 		76D7319F25CA7BB7001D2D64 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		76DB132325CEDA41003EDA38 /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
 		76DB132825CEDAD9003EDA38 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		76DBB01325C29C8E00F238D9 /* AddStringVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStringVM.swift; sourceTree = "<group>"; };
 		76F5424725CDC81F00557BF9 /* FriendsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
@@ -321,7 +319,6 @@
 				76AADBB325C6514800EB0C43 /* PlayersVM.swift */,
 				7619A63A25CA68B900014ADA /* SliderMenuVM.swift */,
 				7619A63F25CA699200014ADA /* SearchPlayerVM.swift */,
-				76DB132325CEDA41003EDA38 /* ProfileVM.swift */,
 				9FFCF2E325CF2C7E00C6C94E /* FriendsVM.swift */,
 				76183EE1260ED38D00189619 /* ResetPasswordVM.swift */,
 				B513A39A26A038BD00145D2D /* MatchVM.swift */,
@@ -608,7 +605,6 @@
 				B5B22A3526A6DECA002CAA61 /* ProfileSettings.swift in Sources */,
 				B564F7312799F73A00052CA3 /* RDBadgeButton.swift in Sources */,
 				B59E2DE727F4DF4600CB6B27 /* PlayerSearchCellView.swift in Sources */,
-				76DB132425CEDA41003EDA38 /* ProfileVM.swift in Sources */,
 				7619A62925CA421800014ADA /* PlayerProfileView.swift in Sources */,
 				764B745E25D2552E0035B02C /* CurrentMatchStatistics.swift in Sources */,
 				76343B8625C2B2140061ABB5 /* StringsListView.swift in Sources */,

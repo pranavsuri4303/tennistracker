@@ -36,6 +36,7 @@ struct BaseView: View {
                         case .clubs: ClubsView()
                         }
                     }
+                    .environmentObject(vm)
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar(content: {
                         ToolbarItem(placement: .navigationBarLeading) {
