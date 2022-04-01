@@ -35,4 +35,43 @@ class FriendsVM: ObservableObject {
             }
         }
     }
+    
+    func acceptFriendRequest(){
+        // 1. Get basic array data from friend request          1 Read
+        // 2. Add data to friends collection                    1 Write
+        // 3. Add current users data to friend's collection     1 Write
+        // 4. Delete array data from friend request             1 Write
+    }
+    
+    func rejectFriendRequest(){
+        // 1. Delete index from friend requests array
+    }
+    
+    func removeFriend(){
+        // 1. Delete index from user list array
+        // 1. Delete index from friend's list array
+    }
+    
+    func fetchFriendRequests(){
+        // 1. Get list from users collection already loaded
+    }
+    
+    func fetchFriendsList(){
+        // 1. Get list from users collection already loaded
+    }
 }
+
+
+
+
+/*
+--->Users
+    --->Friends
+            friendUID|uid, name, country, yob, friendSince|
+    --->Matches
+            randomID|uid?, name, country?, yob?, friendStatus
+    --->Strings
+
+
+
+*/

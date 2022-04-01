@@ -46,7 +46,7 @@ struct NewMatchView: View {
                                 TextField("Player 1 Name", text: $vm.P1.name)
                                     .autocapitalization(.words)
                             } else {
-                                TextFieldWithInputView(data: $friendsVM.friendsListP1, placeholder: "Select Player 1", selectionIndex: self.$selectionP1, selectedText: $vm.P1.name)
+                                TextFieldWithPickerView(data: $friendsVM.friendsListP1, placeholder: "Select Player 1", selectionIndex: self.$selectionP1, selectedText: $vm.P1.name)
                                     .frame(height: 0)
                             }
                         }
@@ -79,7 +79,7 @@ struct NewMatchView: View {
                                 TextField("Player 2 Name", text: $vm.P2.name)
                                     .autocapitalization(.words)
                             } else {
-                                TextFieldWithInputView(data: $friendsVM.friendsListP2, placeholder: "Select Player 2", selectionIndex: self.$selectionP2, selectedText: $vm.P2.name)
+                                TextFieldWithPickerView(data: $friendsVM.friendsListP2, placeholder: "Select Player 2", selectionIndex: self.$selectionP2, selectedText: $vm.P2.name)
                                     .frame(height: 0)
                             }
                         }

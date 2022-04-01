@@ -6,6 +6,7 @@
 //
 
 import FirebaseAuth
+import Firebase
 import Foundation
 enum AuthState: String {
     case success = "Success"
@@ -86,6 +87,12 @@ enum Sort: CaseIterable {
         }
     }
 }
+
+// MARK: Firestore Paths
+struct FSPath {
+    static let users = Firestore.firestore().collection("users")
+}
+
 
 // MARK: Nationalities List
 
