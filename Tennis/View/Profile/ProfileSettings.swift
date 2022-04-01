@@ -9,9 +9,7 @@ import ImagePickerView
 import SwiftUI
 
 struct ProfileSettings: View {
-    @Binding var profileSettingsPresented: Bool
-    @ObservedObject var vm: ProfileVM
-    
+    @Binding var profileSettingsPresented: Bool    
     // Image
     @State var isImagePickerViewPresented = false
     @State var pickedImage: UIImage? = nil

@@ -20,6 +20,7 @@ class SliderMenuVM: ObservableObject {
     var operation: StorageDownloadTask?
     
     func loadImageFromStorage() {
+        print("[Function Called]: \(#function)")
         if DownloadedProfileImage.shared.image == nil {
             print(imagePath)
             operation = Storage.storage().reference().child(imagePath).getData(maxSize: .max) { data, _ in

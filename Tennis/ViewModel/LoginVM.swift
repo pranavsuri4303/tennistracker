@@ -33,6 +33,7 @@ class LoginVM: ObservableObject {
     }
     
     func authenticateUser() {
+        print("[Function Called]: \(#function)")
         let scanner = LAContext()
         scanner.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To Unlock \(email)") { _, err in
             if err != nil {
@@ -49,10 +50,11 @@ class LoginVM: ObservableObject {
     }
     
     func signInWithGoogle() {
-        print("Sign in with google")
+        print("[Function Called]: \(#function)")
     }
     
     func verifyUser() {
+        print("[Function Called]: \(#function)")
         isLoading = true
         
         Auth.auth().signIn(withEmail: email, password: password) { _, err in

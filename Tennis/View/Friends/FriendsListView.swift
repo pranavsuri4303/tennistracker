@@ -12,47 +12,48 @@ struct FriendsListView: View {
     @StateObject var friendRequestVM = FriendsVM()
     @State private var goToRequests = false
     let imageUrl = "https://www.atptour.com/-/media/alias/player-headshot/N409"
+    @EnvironmentObject var baseVm: BaseViewVM
     var count = 1
     var body: some View {
         VStack {
-            if count == 0 {
+            if baseVm.userData?.friends == nil || baseVm.userData?.friends == [] {
                 RDEmptyListPlaceholder(headlineText: "What are you waiting for?!",
                                        subHeadlineText: "Go to the Players tab now to search and add your friends...")
             } else {
-//                ScrollView {
-//                    ForEach(friendRequestVM.friendsList, id: \.self) { player in
-//                        FriendsListCell(imageUrl: URL(string: "shorturl.at/atwW3")!, player: player)
-//                    }
-//                }.padding(.horizontal)
                 ScrollView {
-                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
-                                    firstName: "Test",
-                                    lastName: "1")
-                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
-                                    firstName: "Test",
-                                    lastName: "2")
-                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
-                                    firstName: "Test",
-                                    lastName: "3")
-                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
-                                    firstName: "Test",
-                                    lastName: "4")
-                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
-                                    firstName: "Test",
-                                    lastName: "5")
-                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
-                                    firstName: "Test",
-                                    lastName: "6")
-                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
-                                    firstName: "Test",
-                                    lastName: "7")
-                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
-                                    firstName: "Test",
-                                    lastName: "8")
-                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
-                                    firstName: "Test",
-                                    lastName: "9")
+                    ForEach((baseVm.userData?.friends)!) { friend in
+                        FriendsListCell(player: friend)
+                    }
                 }.padding(.horizontal, 8)
+//                ScrollView {
+//                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+//                                    firstName: "Test",
+//                                    lastName: "1")
+//                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+//                                    firstName: "Test",
+//                                    lastName: "2")
+//                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+//                                    firstName: "Test",
+//                                    lastName: "3")
+//                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+//                                    firstName: "Test",
+//                                    lastName: "4")
+//                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+//                                    firstName: "Test",
+//                                    lastName: "5")
+//                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+//                                    firstName: "Test",
+//                                    lastName: "6")
+//                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+//                                    firstName: "Test",
+//                                    lastName: "7")
+//                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+//                                    firstName: "Test",
+//                                    lastName: "8")
+//                    FriendsListCell(imageUrl: URL(string: imageUrl)!,
+//                                    firstName: "Test",
+//                                    lastName: "9")
+//                }.padding(.horizontal, 8)
                 
                 Spacer()
             }
@@ -71,14 +72,13 @@ struct FriendsListView: View {
 
 
 struct FriendsListCell: View {
-    let imageUrl: URL
-    //    let player: PlayerModel
-    var firstName: String
-    var lastName: String
+    let player: FriendsCellModel
+//    var firstName: String
+//    var lastName: String
     
     var body: some View {
         HStack(spacing: 8){
-            CachedAsyncImage(url: imageUrl) { image in
+            CachedAsyncImage(url: URL(string: player.imagePath!)) { image in
                 image
                     .resizable()
                     .scaledToFill()
@@ -94,7 +94,7 @@ struct FriendsListCell: View {
                 }
             }
             VStack{
-                Text("\(firstName) \(lastName)")
+                Text("\(player.name!)")
                     .font(.title2)
             }
             Spacer()

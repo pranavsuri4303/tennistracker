@@ -16,6 +16,8 @@ struct BaseView: View {
     
     @GestureState var gestureOffset: CGFloat = 0
     
+    @StateObject var vm = BaseViewVM()
+    
     var body: some View {
         let sideBarWidth = getRect().width - 90
         
@@ -34,6 +36,7 @@ struct BaseView: View {
                         case .clubs: ClubsView()
                         }
                     }
+                    .environmentObject(vm)
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar(content: {
                         ToolbarItem(placement: .navigationBarLeading) {
@@ -79,6 +82,9 @@ struct BaseView: View {
         }
         .onChange(of: gestureOffset) { _ in
             onChange()
+        }
+        .onAppear {
+            vm.fetchUserData()
         }
     }
     
