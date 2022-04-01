@@ -36,7 +36,7 @@
 		76AADB9E25C64F3800EB0C43 /* StringsListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AADB9D25C64F3800EB0C43 /* StringsListVM.swift */; };
 		76AADBA625C64F6A00EB0C43 /* PlayerSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AADBA525C64F6A00EB0C43 /* PlayerSearchView.swift */; };
 		76AADBB425C6514800EB0C43 /* PlayersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AADBB325C6514800EB0C43 /* PlayersVM.swift */; };
-		76B8153025CD3AF10029EE83 /* TextFieldWithInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B8152F25CD3AF10029EE83 /* TextFieldWithInputView.swift */; };
+		76B8153025CD3AF10029EE83 /* TextFieldWithPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B8152F25CD3AF10029EE83 /* TextFieldWithPickerView.swift */; };
 		76D1B86025BAEE4700FE1B4B /* LoadingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D1B85F25BAEE4700FE1B4B /* LoadingScreenView.swift */; };
 		76D731A025CA7BB7001D2D64 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D7319F25CA7BB7001D2D64 /* ProfileView.swift */; };
 		76DB132425CEDA41003EDA38 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DB132325CEDA41003EDA38 /* ProfileVM.swift */; };
@@ -68,6 +68,7 @@
 		B59E2DE727F4DF4600CB6B27 /* PlayerSearchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E2DE627F4DF4600CB6B27 /* PlayerSearchCellView.swift */; };
 		B59E2DEA27F4E08900CB6B27 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = B59E2DE927F4E08900CB6B27 /* CachedAsyncImage */; };
 		B5A239A827F5538500D7A9FE /* RDEmptyListPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A239A727F5538500D7A9FE /* RDEmptyListPlaceholder.swift */; };
+		B5A239AC27F6FBFD00D7A9FE /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A239AB27F6FBFD00D7A9FE /* FriendModel.swift */; };
 		B5B22A3526A6DECA002CAA61 /* ProfileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B22A3426A6DECA002CAA61 /* ProfileSettings.swift */; };
 		B5D1F76527AA0C140091AC2F /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76427AA0C140091AC2F /* SideMenuView.swift */; };
 		B5D1F76827AA0EBC0091AC2F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76727AA0EBC0091AC2F /* BaseView.swift */; };
@@ -131,7 +132,7 @@
 		76AADB9D25C64F3800EB0C43 /* StringsListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsListVM.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		76AADBA525C64F6A00EB0C43 /* PlayerSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchView.swift; sourceTree = "<group>"; };
 		76AADBB325C6514800EB0C43 /* PlayersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersVM.swift; sourceTree = "<group>"; };
-		76B8152F25CD3AF10029EE83 /* TextFieldWithInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithInputView.swift; sourceTree = "<group>"; };
+		76B8152F25CD3AF10029EE83 /* TextFieldWithPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithPickerView.swift; sourceTree = "<group>"; };
 		76D1B85F25BAEE4700FE1B4B /* LoadingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenView.swift; sourceTree = "<group>"; };
 		76D7319F25CA7BB7001D2D64 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		76DB132325CEDA41003EDA38 /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
@@ -154,6 +155,7 @@
 		B59E2DE327F3F9DB00CB6B27 /* PlayerSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchModel.swift; sourceTree = "<group>"; };
 		B59E2DE627F4DF4600CB6B27 /* PlayerSearchCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchCellView.swift; sourceTree = "<group>"; };
 		B5A239A727F5538500D7A9FE /* RDEmptyListPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDEmptyListPlaceholder.swift; sourceTree = "<group>"; };
+		B5A239AB27F6FBFD00D7A9FE /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		B5B22A3426A6DECA002CAA61 /* ProfileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettings.swift; sourceTree = "<group>"; };
 		B5D1F76427AA0C140091AC2F /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		B5D1F76727AA0EBC0091AC2F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -404,7 +406,7 @@
 			children = (
 				76D1B85F25BAEE4700FE1B4B /* LoadingScreenView.swift */,
 				762F87D925CA34FE004B46FD /* ProfileImagePickerView.swift */,
-				76B8152F25CD3AF10029EE83 /* TextFieldWithInputView.swift */,
+				76B8152F25CD3AF10029EE83 /* TextFieldWithPickerView.swift */,
 				B52F300127A92D4000237915 /* HalfModalView.swift */,
 			);
 			path = Utilities;
@@ -414,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				B59E2DE327F3F9DB00CB6B27 /* PlayerSearchModel.swift */,
+				B5A239AB27F6FBFD00D7A9FE /* FriendModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				76278C1F25B9E8060005EBD4 /* NewUserView.swift in Sources */,
 				7662D3F525C391A1004544BF /* NewMatchView.swift in Sources */,
 				B513A39D26A0390600145D2D /* ClubsView.swift in Sources */,
+				B5A239AC27F6FBFD00D7A9FE /* FriendModel.swift in Sources */,
 				B5B22A3526A6DECA002CAA61 /* ProfileSettings.swift in Sources */,
 				B564F7312799F73A00052CA3 /* RDBadgeButton.swift in Sources */,
 				B59E2DE727F4DF4600CB6B27 /* PlayerSearchCellView.swift in Sources */,
@@ -600,7 +604,7 @@
 				760719B925BB52F000F09A1A /* DashboardView.swift in Sources */,
 				B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */,
 				B5D1F76E27AA342A0091AC2F /* RDMenuButton.swift in Sources */,
-				76B8153025CD3AF10029EE83 /* TextFieldWithInputView.swift in Sources */,
+				76B8153025CD3AF10029EE83 /* TextFieldWithPickerView.swift in Sources */,
 				764A618325B9493F00789373 /* RegisterVM.swift in Sources */,
 				B52F300227A92D4000237915 /* HalfModalView.swift in Sources */,
 				9FFCF2E425CF2C7E00C6C94E /* FriendsVM.swift in Sources */,
@@ -800,7 +804,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rocketdestroyer.com.Tennis;
+				PRODUCT_BUNDLE_IDENTIFIER = "pranav-suri.com.Tennis";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -824,7 +828,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rocketdestroyer.com.Tennis;
+				PRODUCT_BUNDLE_IDENTIFIER = "pranav-suri.com.Tennis";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

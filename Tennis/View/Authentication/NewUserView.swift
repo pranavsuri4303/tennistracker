@@ -14,8 +14,7 @@ struct NewUserView: View {
     @State var startAnimate = false
 
     @State var selectionIndex = 0
-    @State var nations = Nationalities().list
-    
+    @State var nations = Nations().names
     // Image
     @State var isImagePickerViewPresented = false
     @State var pickedImage: UIImage? = nil
@@ -82,7 +81,7 @@ struct NewUserView: View {
                         .font(.title2)
                         .foregroundColor(.white)
                         .frame(width: 35)
-                    TextFieldWithInputView(data: $years, placeholder: "Year of Birth", selectionIndex: self.$selectionIndex, selectedText: $vm.yob)
+                    TextFieldWithPickerView(data: $years, placeholder: "Year of Birth", selectionIndex: self.$selectionIndex, selectedText: $vm.yob)
                         .frame(height: 0)
                 }
                 .padding()
@@ -95,7 +94,7 @@ struct NewUserView: View {
                         .font(.title2)
                         .foregroundColor(.white)
                         .frame(width: 35)
-                    TextFieldWithInputView(data: $nations, placeholder: "Select your country", selectionIndex: self.$selectionIndex, selectedText: $vm.nationality)
+                    TextFieldWithPickerView(data: $nations, placeholder: "Select your country", selectionIndex: self.$selectionIndex, selectedText: $vm.nationality)
                         .frame(height: 0)
                 }
                 .padding()
@@ -147,4 +146,8 @@ struct Register_Preview: PreviewProvider {
     static var previews: some View {
         NewUserView(isPresented: .constant(false), vm: RegisterVM())
     }
+}
+
+public struct Nations{
+    let names = Locale.isoRegionCodes.compactMap { Locale.current.localizedString(forRegionCode: $0) }.sorted { $0 < $1 }
 }

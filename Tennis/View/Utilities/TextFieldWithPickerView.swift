@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TextFieldWithInputView: UIViewRepresentable {
+struct TextFieldWithPickerView: UIViewRepresentable {
     @Binding var data: [String]
     var placeholder: String
     
@@ -17,11 +17,11 @@ struct TextFieldWithInputView: UIViewRepresentable {
     private let textField = UITextField()
     private let picker = UIPickerView()
     private let keyboard = UIInputView()
-    func makeCoordinator() -> TextFieldWithInputView.Coordinator {
+    func makeCoordinator() -> TextFieldWithPickerView.Coordinator {
         Coordinator(textfield: self)
     }
     
-    func makeUIView(context: UIViewRepresentableContext<TextFieldWithInputView>) -> UITextField {
+    func makeUIView(context: UIViewRepresentableContext<TextFieldWithPickerView>) -> UITextField {
         picker.delegate = context.coordinator
         picker.dataSource = context.coordinator
         picker.backgroundColor = .gray
@@ -32,14 +32,14 @@ struct TextFieldWithInputView: UIViewRepresentable {
         return textField
     }
     
-    func updateUIView(_ uiView: UITextField, context: UIViewRepresentableContext<TextFieldWithInputView>) {
+    func updateUIView(_ uiView: UITextField, context: UIViewRepresentableContext<TextFieldWithPickerView>) {
         uiView.text = selectedText
     }
     
     class Coordinator: NSObject, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
-        private let parent: TextFieldWithInputView
+        private let parent: TextFieldWithPickerView
         
-        init(textfield: TextFieldWithInputView) {
+        init(textfield: TextFieldWithPickerView) {
             self.parent = textfield
         }
         
