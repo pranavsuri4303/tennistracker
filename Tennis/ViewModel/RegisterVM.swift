@@ -10,98 +10,110 @@ import LocalAuthentication
 import SwiftUI
 
 class RegisterVM: ObservableObject {
-    @Published var userData = UserDataModel(uid: "", name: "", firsName: "", lastName: "", email: "", gender: "", nationality: "", yob: "", imagePath: "", accountCreated: Date(), friendRequests: [], friends: [])
+    @Published var email = ""
     @Published var password = ""
-    @Published var isLoading = false
-    private let usersCollectionRef = Firestore.firestore().collection("users")
-    var imageData: (Data?)
+    @Published var name = ""
+    @Published var yob = ""
+    @Published var nationality = ""
+    @Published var gender = "Male"
+    var imageData: (Data?, Data?)
+    
     @AppStorage("status") var logged = false
+    
+    @Published var alert = false
+    @Published var alertMsg = ""
+    @Published var isLoading = false
 
-    func uploadImage(UIImage image: UIImage, completion: @escaping (Result<Data?, Error>) -> Void){
-        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
-        imageData = (image.jpegData(compressionQuality: 0.9))
-        let imageRef = Firebase.Storage.storage().reference().child(self.userData.uid).child("profilePicture").child("\(self.userData.uid).jpg")
-            imageRef.putData(imageData!, metadata: nil) { metaData, err in
-            if let err = err{
-                completion(.failure(err))
-            }else{
-                self.userData.imagePath = "https://firebasestorage.googleapis.com/v0/b/tennistrackerdev.appspot.com/o/\(self.userData.uid)%2FprofilePicture%2F\(self.userData.uid).jpg?alt=media"
-                completion(.success(nil))
-            }
-        }
-    }
-    
-    func uploadFirestore(completion: @escaping (Result<Data?, Error>) -> Void){
-        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
-        do{
-            try self.usersCollectionRef.document(self.userData.uid).setData(from: self.userData)
-            completion(.success(nil))
-        } catch let error{
-            completion(.failure(error))
-        }
-    }
-    
-    func uploadUserData(UIImage image: UIImage?, completion: @escaping (Result<Data?, Error>) -> Void){
-        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
-        self.isLoading = true
-        if let image = image {
-            print(Firebase.Storage.storage().reference().child(self.userData.uid).child("profilePicture").child("\(self.userData.uid).jpg"))
-            uploadImage(UIImage: image) { res in
+    func createUser() {
+        print("[Function Called]: \(#function)")
+        isLoading = true
+        
+        Auth.auth().createUser(withEmail: email, password: password) { res, errora in
+            if let err = errora {
+                self.alert.toggle()
+                self.alertMsg = err.localizedDescription
                 self.isLoading = false
-                switch res {
-                case .success:
-                    self.uploadFirestore() { res in
-                        self.isLoading = false
-                        switch res {
-                        case .success:
-                            withAnimation {
-                                self.logged = true
-                                self.isLoading = false
+                
+            } else {
+                if let userID = res?.user.uid {
+                    self.uploadImageToDatabase(userID: userID) { result in
+                        switch result {
+                        case .success(let path):
+                            let change = res?.user.createProfileChangeRequest()
+                            change?.displayName = self.name
+                            change?.commitChanges { erro in
+                                if let error = erro {
+                                    self.alertMsg = error.localizedDescription
+                                    self.alert.toggle()
+                                    return
+                                }
                             }
-                            completion(.success(nil))
+                            let db = Firestore.firestore()
+                            let uidStr = (res?.user.uid)!
+                            var docData: [String: Any] = [
+                                "name": "\(self.name)",
+                                "email": "\(self.email)",
+                                "uid": "\(String(describing: uidStr))",
+                                "yob": "\(self.yob)",
+                                "nationality": "\(self.nationality)",
+                                "gender": "\(self.gender)",
+                            ]
+                            if let path = path {
+                                docData.updateValue(path, forKey: "imageProfilePath")
+                            }
+                            db.collection("users").document(uidStr).setData(docData) { err in
+                                print("uploading data")
+                                if let err = err {
+                                    self.alertMsg = err.localizedDescription
+                                    self.alert.toggle()
+                                    return
+                                    
+                                } else {
+                                    print("Finished Without Error")
+                                    withAnimation {
+                                        self.logged.toggle()
+                                        self.isLoading = false
+                                    }
+                                }
+                            }
                         case .failure(let error):
-                            completion(.failure(error))
+                            self.alertMsg = error.localizedDescription
+                            self.alert.toggle()
                         }
                     }
-                case .failure(let error):
-                    print(error.localizedDescription)
-                    completion(.failure(error))
                 }
-            }
-        }else{
-            uploadFirestore { res in
-                self.isLoading = false
-                switch res {
-                case .success:
-                    withAnimation {
-                        self.logged = true
-                        self.isLoading = false
-                    }
-                    completion(.success(nil))
-                case .failure(let error):
-                    completion(.failure(error))
-                }
-            }
-        }
-    }
-
-    func createAccount(completion: @escaping (Result<Data?, Error>) -> (Void)){
-        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
-        self.isLoading = true
-        Auth.auth().createUser(withEmail: userData.email, password: password) { res, err in
-            if let err = err{
-                self.isLoading = false
-                completion(.failure(err))
-            } else{
-                self.isLoading = false
-                if let uid = res?.user.uid,
-                    let email = res?.user.email{
-                    self.userData.uid = uid
-                    self.userData.email = email
-                }
-                completion(.success(nil))
             }
         }
     }
     
+    func configProfileImageDataFrom(UIImage image: UIImage?) {
+        print("[Function Called]: \(#function)")
+        if let image = image, let dataImageSizeSmall = image.resizeImage(targetSize: .init(width: 100, height: 100)).pngData(), let dataImageSizeBig = image.resizeImage(targetSize: .init(width: 400, height: 400)).pngData() {
+            imageData = (dataImageSizeSmall, dataImageSizeBig)
+        }
+    }
+    
+    func uploadImageToDatabase(userID: String, completion: @escaping (Result<String?, Error>) -> Void) {
+        print("[Function Called]: \(#function)")
+        struct FaildToUploadImage: Error {}
+        if let smallData = imageData.0, let bigData = imageData.1 {
+            Firebase.Storage.storage().reference().child(userID).child("1x").child("profileImage.png").putData(smallData, metadata: nil) { _, error in
+                if let error = error {
+                    completion(Result.failure(error))
+                    return
+                }
+                
+                Firebase.Storage.storage().reference().child(userID).child("2x").child("profileImage.png").putData(bigData, metadata: nil) { _, error in
+                    if let error = error {
+                        completion(Result.failure(error))
+                        return
+                    }
+                    let path = userID.description
+                    completion(Result.success(path))
+                }
+            }
+        } else {
+            completion(Result.success(nil))
+        }
+    }
 }

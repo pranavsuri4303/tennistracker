@@ -33,7 +33,7 @@ class LoginVM: ObservableObject {
     }
     
     func authenticateUser() {
-        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
+        print("[Function Called]: \(#function)")
         let scanner = LAContext()
         scanner.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To Unlock \(email)") { _, err in
             if err != nil {
@@ -50,13 +50,13 @@ class LoginVM: ObservableObject {
     }
     
     func signInWithGoogle() {
-        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
+        print("[Function Called]: \(#function)")
     }
     
     func verifyUser() {
-        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
-
+        print("[Function Called]: \(#function)")
         isLoading = true
+        
         Auth.auth().signIn(withEmail: email, password: password) { _, err in
             
             self.isLoading = false
@@ -66,7 +66,7 @@ class LoginVM: ObservableObject {
                 self.alert.toggle()
                 return
             }
-            print(Auth.auth().userAccessGroup)
+
             if self.Stored_User == "" || self.Stored_Password == "" {
                 self.store_Info.toggle()
                 return

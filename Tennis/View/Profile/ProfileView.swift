@@ -7,12 +7,11 @@
 
 import Firebase
 import SwiftUI
-import CachedAsyncImage
 
 struct ProfileView: View {
     @AppStorage("status") var logged = false
     @ObservedObject var sliderMenueVM = DownloadedProfileImage.shared
-    @EnvironmentObject var vm: BaseViewVM
+    @EnvironmentObject var vm2: BaseViewVM
     @State private var goToSettings = false
     
     var body: some View {
@@ -21,22 +20,18 @@ struct ProfileView: View {
                 GeometryReader { reader in
                     // Type 2 Parollax....
                     if reader.frame(in: .global).minY > -480 {
-                        if let imageURL = vm.userData?.imagePath {
-                            CachedAsyncImage(url: URL(string: imageURL)) { Image in
-                                Image
-                                    .resizable()
-                                    .padding(.top, 50)
-                                    .aspectRatio(contentMode: .fill)
-                                // moving View Up....
-                                    .offset(y: -reader.frame(in: .global).minY)
-                                // going to add parallax effect....
-                                    .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY > 0 ? reader.frame(in: .global).minY + 480 : 480)
-
-                            } placeholder: {
-                                ProgressView()
-                            }
+                        if let profileImage = sliderMenueVM.profileImage {
+                            Image(uiImage: profileImage)
+                                .resizable()
+                                .padding(.top, 50)
+                                .aspectRatio(contentMode: .fill)
+                            // moving View Up....
+                                .offset(y: -reader.frame(in: .global).minY)
+                            // going to add parallax effect....
+                                .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY > 0 ? reader.frame(in: .global).minY + 480 : 480)
+                            
                         } else {
-                            Image("\(vm.userData?.gender ?? "")")
+                            Image("\(vm2.userData?.gender ?? "")")
                                 .resizable()
                                 .padding(.top, 50)
                                 .aspectRatio(contentMode: .fill)
@@ -50,13 +45,13 @@ struct ProfileView: View {
                 .frame(height: 400)
                 VStack(alignment: .leading, spacing: 15) {
                     HStack {
-                        Text("\(vm.userData?.firstName ?? "")")
+                        Text("\(vm2.userData?.name ?? "")")
                             .font(.title)
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .multilineTextAlignment(.leading)
                         Spacer()
-                        Text("\(vm.userData?.gender ?? "")")
+                        Text("\(vm2.userData?.gender ?? "")")
                             .font(.body)
                             .foregroundColor(.white)
                             .padding(.top, 5)

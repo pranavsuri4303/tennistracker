@@ -10,7 +10,7 @@ import SwiftUI
 
 struct NewUserView: View {
     @Binding var isPresented: Bool
-    @ObservedObject var vm = RegisterVM()
+    @ObservedObject var vm: RegisterVM
     @State var startAnimate = false
 
     @State var selectionIndex = 0
@@ -18,18 +18,11 @@ struct NewUserView: View {
     // Image
     @State var isImagePickerViewPresented = false
     @State var pickedImage: UIImage? = nil
-    @State var newUserViewPresented = false
-    @State private var alertShown = false
-    @State private var errorMessage = ""
     
-
     // Creating an array of YOBs with range 100 yrs
     @State var years = Array(Calendar.current.component(.year, from: Date()) - 100 ... Calendar.current.component(.year, from: Date())).map { String($0) }
     
     var body: some View {
-//        VStack{
-//            Text("New User View")
-//        }
         ZStack {
             VStack {
                 Button {
@@ -40,12 +33,12 @@ struct NewUserView: View {
                             Circle()
                                 .accentColor(.blue)
                                 .frame(width: 210, height: 210, alignment: .center)
-                                .overlay(Image("Male")
+                                .overlay(Image("\(vm.gender)")
                                     .resizable()
                                     .frame(width: 200, height: 200)
                                     .cornerRadius(100)
                                     .padding())
-
+                            
                         } else {
                             Circle()
                                 .accentColor(.blue)
@@ -74,20 +67,41 @@ struct NewUserView: View {
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(.white)
-
+                        
                         Text("Please enter the following details for a more personalized experience.")
                             .foregroundColor(Color.white.opacity(0.5))
                     })
                     .padding(.bottom)
                 }
                 .padding()
-                RDTextField(placeholder: "First name", text: $vm.userData.firstName, imageName: "person", isSecure: false, isPicker: false)
-                RDTextField(placeholder: "Last name", text: $vm.userData.lastName, imageName: "person", isSecure: false, isPicker: false)
-
-                RDTextField(placeholder: "Year of Birth", text: $vm.userData.yob, imageName: "calendar", isSecure: false, isPicker: true, data: years, selectionIndex: self.selectionIndex)
-                RDTextField(placeholder: "Select your country", text: $vm.userData.nationality, imageName: "flag", isSecure: false, isPicker: true, data: nations, selectionIndex: self.selectionIndex)
-
-                Picker(selection: $vm.userData.gender, label: Text(""), content: {
+                RDTextField(title: "Name", text: $vm.name, imageName: "person", isSecure: false)
+                
+                HStack {
+                    Image(systemName: "calendar")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .frame(width: 35)
+                    TextFieldWithPickerView(data: $years, placeholder: "Year of Birth", selectionIndex: self.$selectionIndex, selectedText: $vm.yob)
+                        .frame(height: 0)
+                }
+                .padding()
+                .background(Color(.white).opacity(vm.yob == "" ? 0.02 : 0.12))
+                .cornerRadius(15)
+                .padding(.horizontal)
+                
+                HStack {
+                    Image(systemName: "flag")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .frame(width: 35)
+                    TextFieldWithPickerView(data: $nations, placeholder: "Select your country", selectionIndex: self.$selectionIndex, selectedText: $vm.nationality)
+                        .frame(height: 0)
+                }
+                .padding()
+                .background(Color(.white).opacity(vm.nationality == "" ? 0.02 : 0.12))
+                .cornerRadius(15)
+                .padding(.horizontal)
+                Picker(selection: $vm.gender, label: Text(""), content: {
                     Text("Male").tag("Male")
                         .foregroundColor(Color.white)
                     Text("Female").foregroundColor(Color(.white)).tag("Female")
@@ -97,29 +111,26 @@ struct NewUserView: View {
                 Spacer()
                 HStack(spacing: 15) {
                     Button(action: {
+                        isPresented.toggle()
                         DispatchQueue.main.async {
-                            vm.uploadUserData(UIImage: pickedImage) { res in
-                                switch res {
-                                case .success:
-                                    return
-                                case .failure(let err):
-                                    self.errorMessage = err.localizedDescription
-                                    self.alertShown = true
-                                }
-                            }
+                            vm.configProfileImageDataFrom(UIImage: pickedImage)
+                            vm.createUser()
                         }
                         
                     }, label: {
                         RDButton(withTitle: "Create Account")
                     })
-                        .opacity(vm.userData.firstName != "" && vm.userData.lastName != "" && vm.userData.gender != "" && vm.userData.yob != "" && vm.userData.nationality != "" ? 1 : 0.5)
-                        .disabled(vm.userData.firstName != "" && vm.userData.lastName != "" && vm.userData.gender != "" && vm.userData.yob != "" && vm.userData.nationality != "" ? false : true)
+                    .opacity(vm.name != "" && vm.yob != "" && vm.nationality != "" ? 1 : 0.5)
+                    .disabled(vm.name != "" && vm.yob != "" && vm.nationality != "" ? false : true)
+                    .alert(isPresented: $vm.alert, content: {
+                        Alert(title: Text("Error"), message: Text(vm.alertMsg), dismissButton: .destructive(Text("Ok")))
+                    })
                 }
                 .padding(.vertical)
-
+                
             }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
                 .animation(startAnimate ? .easeOut : .none)
-
+            
             if vm.isLoading {
                 LoadingScreenView()
             }

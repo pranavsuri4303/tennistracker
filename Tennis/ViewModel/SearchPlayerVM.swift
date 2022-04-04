@@ -21,7 +21,7 @@ class SearchPlayerVM: ObservableObject {
     }
     
     func loadImageFromStorage() {
-        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
+        print("[Function Called]: \(#function)")
         if downloadedImage == nil {
             let imagePath = player.uid + "/1x/profileImage.png"
             
@@ -40,7 +40,7 @@ class SearchPlayerVM: ObservableObject {
     }
     
     func loadImageFromStorageWithBiggerSize() {
-        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
+        print("[Function Called]: \(#function)")
         let imagePath = player.uid + "/2x/profileImage.png"
         print(imagePath)
         operation = Storage.storage().reference().child(imagePath).getData(maxSize: .max) { data, _ in

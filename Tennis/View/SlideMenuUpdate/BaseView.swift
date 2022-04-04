@@ -24,7 +24,6 @@ struct BaseView: View {
         VStack {
             HStack(spacing: 0) {
                 SideMenuView(currentSelectedView: $currentTab, showMenu: $showMenu)
-                    .environmentObject(vm)
                 NavigationView{
                     VStack{
                         switch currentTab {
