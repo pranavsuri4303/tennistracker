@@ -1,5 +1,5 @@
 //
-//  RegisterViewModel.swift
+//  RegisterVM.swift
 //  Tennis
 //
 //  Created by Pranav Suri on 21/1/21.
