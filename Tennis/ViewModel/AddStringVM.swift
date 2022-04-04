@@ -23,7 +23,7 @@ class AddStringVM: ObservableObject {
     @Published var isLoading = false
 
     func addString() {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         isLoading = true
         let docRef = db.collection("users").document(uidStr).collection("strings")
         let data: [String: Any] = ["name": stringName,

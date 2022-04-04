@@ -49,9 +49,9 @@ struct LoginView: View {
                 .padding()
                 .padding(.leading, 15)
                 
-                RDTextField(title: "EMAIL", text: $vm.email, imageName: "envelope", isSecure: false)
+                RDTextField(placeholder: "EMAIL", text: $vm.email, imageName: "envelope", isSecure: false, isPicker: false)
                 
-                RDTextField(title: "PASSWORD", text: $vm.password, imageName: "lock", isSecure: true)
+                RDTextField(placeholder: "PASSWORD", text: $vm.password, imageName: "lock", isSecure: true, isPicker: false)
 
                 RDButton(withTitle: "SIGN IN", performAction: { vm.verifyUser() })
                     .opacity(vm.email != "" && vm.password != "" ? 1 : 0.5)

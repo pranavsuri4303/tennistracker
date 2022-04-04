@@ -22,7 +22,7 @@ class FriendsVM: ObservableObject {
     @Published var buttonTitle: String = FriendshipStatus.notFriend.rawValue
     @Published var requestsUsers: [PlayerModel] = []
     @Published var friendsList: [PlayerModel] = []
-    @Published var friendsListP1: [String] = ["\((Auth.auth().currentUser?.displayName)!)(You)"]
+    @Published var friendsListP1: [String] = ["(You)"]
     @Published var friendsListP2: [String] = [""]
     
     var currentStatus = FriendshipStatus.notFriend {
@@ -37,7 +37,7 @@ class FriendsVM: ObservableObject {
     }
     
     func acceptFriendRequest(){
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         // 1. Get basic array data from friend request          1 Read
         // 2. Add data to friends collection                    1 Write
         // 3. Add current users data to friend's collection     1 Write
@@ -45,12 +45,12 @@ class FriendsVM: ObservableObject {
     }
     
     func rejectFriendRequest(){
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         // 1. Delete index from friend requests array
     }
     
     func removeFriend(){
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         // 1. Delete index from user list array
         // 1. Delete index from friend's list array
     }

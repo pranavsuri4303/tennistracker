@@ -78,7 +78,7 @@ struct FriendsListCell: View {
     
     var body: some View {
         HStack(spacing: 8){
-            CachedAsyncImage(url: URL(string: player.imagePath!)) { image in
+            CachedAsyncImage(url: URL(string: player.imagePath)) { image in
                 image
                     .resizable()
                     .scaledToFill()
@@ -94,7 +94,7 @@ struct FriendsListCell: View {
                 }
             }
             VStack{
-                Text("\(player.name!)")
+                Text("\(player.name)")
                     .font(.title2)
             }
             Spacer()

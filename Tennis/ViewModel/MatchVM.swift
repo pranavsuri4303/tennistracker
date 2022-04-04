@@ -33,12 +33,12 @@ final class MatchVM: ObservableObject {
     
     
     func getFriends() {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         print("Fetching Friends")
     }
     
     func pointWon(by: PlayerType, deuce: DeuceType, servingPlayer: PlayerType) {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         switch deuce {
         case .noDeuce:
             if by == .p1 {
@@ -94,19 +94,19 @@ final class MatchVM: ObservableObject {
     }
     
     func resetPts() {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         P1.pts = 0
         P2.pts = 0
     }
 
     func resetGames() {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         P1.games = 0
         P2.games = 0
     }
 
     func changeServer(oldServer: PlayerType) {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         if oldServer == .p1 {
             server = .p2
         } else if oldServer == .p2 {
@@ -115,7 +115,7 @@ final class MatchVM: ObservableObject {
     }
 
     func gameWon(by: PlayerType, servingPlayer: PlayerType) {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         print(by)
         if by == .p1 {
             P1.games += 1
@@ -131,7 +131,7 @@ final class MatchVM: ObservableObject {
     }
     
     func checkIfGameIsOver(p1: Int, p2: Int, deuce: DeuceType, servingPlayer: PlayerType) {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         switch deuce {
         case .noDeuce:
             print(p1, p2)
@@ -174,7 +174,7 @@ final class MatchVM: ObservableObject {
     }
     
     func checkIfMatchIsOver(p1: Int, p2: Int) {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         if p1 == 6 || p2 == 6 {
             if p1 > p2 {
                 //                resetPts()
@@ -192,7 +192,7 @@ final class MatchVM: ObservableObject {
     }
     
     func aceCounter(server: PlayerType) {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         switch server {
         case .p1:
             P1.aces += 1
@@ -204,19 +204,19 @@ final class MatchVM: ObservableObject {
     }
     
     func firstServe() {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
 
     func secondServe() {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
 
     func doubleFault() {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
     
     func ptsToScore(pts: Int) -> String {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         switch pts {
         case 0:
             return "0"

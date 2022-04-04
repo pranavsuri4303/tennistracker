@@ -18,7 +18,7 @@ class ResetPasswordVM: ObservableObject {
     @Published var alertMsg = ""
 
     func resetPassword() {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         isLoading = true
         Auth.auth().sendPasswordReset(withEmail: email) { err in
             if let error = err {

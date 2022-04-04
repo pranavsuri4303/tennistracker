@@ -14,7 +14,7 @@ class BaseViewVM: ObservableObject {
     @Published var userData: UserDataModel?
     
     func fetchUserData() {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         db.document(uidStr).addSnapshotListener { snap, err in
             if let err = err{
                 print(("[Error]: \(err.localizedDescription)"))

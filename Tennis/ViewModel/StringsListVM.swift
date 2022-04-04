@@ -24,7 +24,7 @@ class StringsListVM: ObservableObject {
     }
     
     func getStringsList() {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         isLoading = true
         let uid = Auth.auth().currentUser?.uid
         
@@ -57,7 +57,7 @@ class StringsListVM: ObservableObject {
     }
     
     func deleteString(at index: IndexSet) {
-        print("[Function Called]: \(#function)")
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         let indexToDelete = index[index.startIndex]
         
         let uid = Auth.auth().currentUser?.uid
