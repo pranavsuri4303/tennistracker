@@ -12,18 +12,11 @@ import SwiftUI
 @main
 struct TennisApp: App {
     @UIApplicationDelegateAdaptor(Delegate.self) var delegate
-    @AppStorage("status") var logged = false
+
     var body: some Scene {
         WindowGroup {
-            if logged {
-                BaseView()
-                    .navigationBarHidden(true)
-                    .preferredColorScheme(.dark)
-            }
-            else {
-                LoginView()
-                    .preferredColorScheme(.dark)
-            }
+            ContentView()
+                .preferredColorScheme(.dark)
         }
     }
 }
