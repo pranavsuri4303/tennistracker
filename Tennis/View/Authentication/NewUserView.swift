@@ -15,6 +15,7 @@ struct NewUserView: View {
 
     @State var selectionIndex = 0
     @State var nations = Locale.isoRegionCodes.compactMap { Locale.current.localizedString(forRegionCode: $0) }.sorted { $0 < $1 }
+    @State var yob = ""
     // Image
     @State var isImagePickerViewPresented = false
     @State var pickedImage: UIImage? = nil
@@ -84,7 +85,7 @@ struct NewUserView: View {
                 RDTextField(placeholder: "First name", text: $vm.userData.firstName, imageName: "person", isSecure: false, isPicker: false)
                 RDTextField(placeholder: "Last name", text: $vm.userData.lastName, imageName: "person", isSecure: false, isPicker: false)
 
-                RDTextField(placeholder: "Year of Birth", text: $vm.userData.yob, imageName: "calendar", isSecure: false, isPicker: true, data: years, selectionIndex: self.selectionIndex)
+                RDTextField(placeholder: "Year of Birth", text: $yob, imageName: "calendar", isSecure: false, isPicker: true, data: years, selectionIndex: self.selectionIndex)
                 RDTextField(placeholder: "Select your country", text: $vm.userData.nationality, imageName: "flag", isSecure: false, isPicker: true, data: nations, selectionIndex: self.selectionIndex)
 
                 Picker(selection: $vm.userData.gender, label: Text(""), content: {
@@ -112,8 +113,8 @@ struct NewUserView: View {
                     }, label: {
                         RDButton(withTitle: "Create Account")
                     })
-                        .opacity(vm.userData.firstName != "" && vm.userData.lastName != "" && vm.userData.gender != "" && vm.userData.yob != "" && vm.userData.nationality != "" ? 1 : 0.5)
-                        .disabled(vm.userData.firstName != "" && vm.userData.lastName != "" && vm.userData.gender != "" && vm.userData.yob != "" && vm.userData.nationality != "" ? false : true)
+                        .opacity(vm.userData.firstName != "" && vm.userData.lastName != "" && vm.userData.gender != "" && yob != "" && vm.userData.nationality != "" ? 1 : 0.5)
+                        .disabled(vm.userData.firstName != "" && vm.userData.lastName != "" && vm.userData.gender != "" && yob != "" && vm.userData.nationality != "" ? false : true)
                 }
                 .padding(.vertical)
 

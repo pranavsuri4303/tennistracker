@@ -8,14 +8,6 @@
 import Foundation
 import SwiftUI
 
-struct StringModel: Hashable {
-    let id: String
-    let cross: Int
-    let date: TimeInterval
-    let mains: Int
-    let name: String
-}
-
 struct PlayerModel: Hashable {
     let id = UUID()
     let uid: String

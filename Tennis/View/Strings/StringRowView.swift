@@ -14,7 +14,7 @@ struct StringRowView: View {
             HStack {
                 Text("\(stringRowData.name)")
                 Spacer()
-                Text(stringRowData.date.getDateOnly(fromTimeStamp: stringRowData.date))
+//                Text(stringRowData.date.getDateOnly(fromTimeStamp: stringRowData.date))
             }
             HStack {
                 VStack {

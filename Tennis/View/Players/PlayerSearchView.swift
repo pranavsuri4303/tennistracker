@@ -18,13 +18,14 @@ struct PlayerSearchView: View {
                     ScrollView {
                         LazyVStack {
                             ForEach(vm.hits) { player in
-                                PlayerSearchCellView(imageUrl: URL(string: "https://www.atptour.com/-/media/alias/player-headshot/N409")!,
-                                                     hit: player)
+                                PlayerSearchCellView(hit: player)
                             }
                         }
                         if vm.pages - 1 != vm.pageNo, vm.totalHits != 0 {
                             Button {
-                                vm.loadMoreHits(queryString: searchString)
+                                DispatchQueue.main.async {
+                                    vm.loadMoreHits(queryString: searchString)
+                                }
                             } label: {
                                 Text("Search more results.")
                             }
@@ -39,8 +40,10 @@ struct PlayerSearchView: View {
         }
         .searchable(text: $searchString, placement: .navigationBarDrawer(displayMode: .automatic), prompt: "Search for a player...")
         .onSubmit(of: .search) {
-            vm.resetData()
-            vm.getHits(queryString: searchString)
+            DispatchQueue.main.async {
+                vm.resetData()
+                vm.getHits(queryString: searchString)
+            }
         }
         .disableAutocorrection(true)
     }
