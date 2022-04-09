@@ -9,7 +9,7 @@ import Combine
 import CoreMedia
 import Firebase
 
-class StringsListVM: ObservableObject {
+class StringsVM: ObservableObject {
     @Published var stringsList: [StringModel] = []
     @Published var sortType: Sort = .dateNewToOld
     

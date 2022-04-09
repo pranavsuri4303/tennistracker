@@ -10,31 +10,41 @@ import SwiftUI
 struct StringRowView: View {
     let stringRowData: StringModel
     var body: some View {
-        VStack {
-            HStack {
-                Text("\(stringRowData.name)")
-                Spacer()
-//                Text(stringRowData.date.getDateOnly(fromTimeStamp: stringRowData.date))
-            }
-            HStack {
-                VStack {
-                    Text("\(stringRowData.mains)")
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color("green"))
-                    Text("Mains")
+        HStack{
+            VStack(spacing: 5) {
+                HStack{
+                    Text("\(stringRowData.name)")
+                        .fontWeight(.bold)
+                    Spacer()
                 }
-                Spacer()
-                VStack {
-                    Text("\(stringRowData.cross)")
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color("green"))
-                    Text("Cross")
+                HStack {
+                    VStack {
+                        Text("\(stringRowData.mains)")
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color("green"))
+                        Text("Mains")
+                            .foregroundColor(.secondary)
+                    }
+                    Spacer()
+                    VStack {
+                        Text("\(stringRowData.cross)")
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color("green"))
+                        Text("Cross")
+                            .foregroundColor(.secondary)
+                    }
                 }
             }
         }
+        .padding(8)
+        .background(Color(.white).opacity(0.1))
+        .cornerRadius(6)
+        .padding(.horizontal,8)
+        .padding(.vertical, 4)
+        
     }
 }

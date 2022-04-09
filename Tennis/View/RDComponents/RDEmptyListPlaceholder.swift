@@ -10,12 +10,13 @@ import SwiftUI
 struct RDEmptyListPlaceholder: View {
     var headlineText : String?
     var subHeadlineText : String?
+    var systemImageName : String
     var body: some View {
         HStack{
             Spacer()
             VStack(alignment: .center, spacing: 20){
                 Spacer()
-                Image(systemName: "magnifyingglass.circle")
+                Image(systemName: "\(systemImageName)")
                     .resizable()
                     .frame(width: getRect().width*0.4, height: getRect().width*0.4, alignment: .center)
                     .scaledToFit()
@@ -45,6 +46,6 @@ struct RDEmptyListPlaceholder: View {
 
 struct RDEmptyListPlaceholder_Previews: PreviewProvider {
     static var previews: some View {
-        RDEmptyListPlaceholder()
+        RDEmptyListPlaceholder(systemImageName: "plus")
     }
 }
