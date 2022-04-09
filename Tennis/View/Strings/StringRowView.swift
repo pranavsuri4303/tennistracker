@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseFirestoreSwift
+import Firebase
 
 struct StringRowView: View {
     let stringRowData: StringModel
@@ -16,6 +18,8 @@ struct StringRowView: View {
                     Text("\(stringRowData.name)")
                         .fontWeight(.bold)
                     Spacer()
+                    Text("\(stringRowData.date.dateValue().formatted(date: .abbreviated, time: .omitted))")
+                        .foregroundColor(.secondary)
                 }
                 HStack {
                     VStack {

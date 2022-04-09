@@ -22,7 +22,7 @@ struct FriendsListView: View {
                                        systemImageName: "magnifyingglass.circle")
             } else {
                 ScrollView {
-                    ForEach((baseVm.userData?.friends)!) { friend in
+                    ForEach((baseVm.userData?.friends)!, id: \.self) { friend in
                         FriendsListCell(player: friend)
                     }
                 }.padding(.horizontal, 8)
@@ -61,7 +61,7 @@ struct FriendsListView: View {
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
-                RDBadgeButton(systemImageTitle: self.baseVm.userData?.friendRequests.count == 0 ? "bell" : "bell.badge", action: { goToRequests.toggle() })
+                RDBadgeButton(systemImageTitle: self.baseVm.userData?.friendRequests?.count == 0 ? "bell" : "bell.badge", action: { goToRequests.toggle() })
                     .fullScreenCover(isPresented: $goToRequests, content: {
                         FriendRequestView(friendRequestPresented: $goToRequests)
                     })
@@ -74,8 +74,6 @@ struct FriendsListView: View {
 
 struct FriendsListCell: View {
     let player: FriendsCellModel
-//    var firstName: String
-//    var lastName: String
     
     var body: some View {
         HStack(spacing: 8){
@@ -95,8 +93,16 @@ struct FriendsListCell: View {
                 }
             }
             VStack{
-                Text("\(player.name)")
-                    .font(.title2)
+                HStack{
+                    Text("\(player.name)")
+                        .font(.title2)
+                    Spacer()
+                }
+                HStack{
+                    Text("\(String(player.yob).replacingOccurrences(of: ",", with: "")) | \(player.nationality)")
+                        .foregroundColor(.secondary)
+                    Spacer()
+                }
             }
             Spacer()
             VStack{

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct StringsListView: View {
-    @ObservedObject var stringsListVM = StringsVM()
     @State var showingAddString = false
     @EnvironmentObject var baseVM: BaseViewVM
     

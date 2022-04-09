@@ -36,22 +36,23 @@ struct UserDataModel: Identifiable, Codable {
     var yob: Int
     var imagePath: String
     var accountCreated: Date
-    var friendRequests: [FriendsCellModel]
-    var friends: [FriendsCellModel]
+    var friendRequests: [FriendsCellModel]?
+    var friends: [FriendsCellModel]?
     var strings: [StringModel]?
 }
 
-struct FriendsCellModel: Identifiable, Codable, Equatable {
-    internal init(uid: String, name: String, gender: String, nationality: String, yob: Int, imagePath: String) {
+struct FriendsCellModel: Codable, Equatable, Hashable {
+    internal init(uid: String, name: String, gender: String, nationality: String, yob: Int, imagePath: String, friendRequestReceived: Timestamp? = nil, friendsSince: Timestamp? = nil) {
         self.uid = uid
         self.name = name
         self.gender = gender
         self.nationality = nationality
         self.yob = yob
         self.imagePath = imagePath
+        self.friendRequestReceived = friendRequestReceived
+        self.friendsSince = friendsSince
     }
-
-    var id = UUID()
+    
     var uid: String
     var name: String
     var gender: String
@@ -62,16 +63,15 @@ struct FriendsCellModel: Identifiable, Codable, Equatable {
     var friendsSince: Timestamp?
 }
 
-struct StringModel: Identifiable, Codable, Equatable, Hashable {
+struct StringModel: Codable, Equatable, Hashable {
     internal init(cross: Int, date: Timestamp, mains: Int, name: String) {
         self.cross = cross
         self.date = date
         self.mains = mains
         self.name = name
     }
-    var id = UUID()
-    let cross: Int
-    let date: Timestamp
-    let mains: Int
-    let name: String
+    var cross: Int
+    var date: Timestamp
+    var mains: Int
+    var name: String
 }

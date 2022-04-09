@@ -6,19 +6,16 @@
 //
 
 import SwiftUI
+import FirebaseFirestoreSwift
+import Firebase
 
 struct AddNewStringView: View {
-    @StateObject var vm = AddStringVM()
+    @StateObject var vm = StringsVM()
+    @State var dateSelected = Date()
     var body: some View {
         ZStack {
             GeometryReader { _ in
                 VStack {
-//                    Image("welcomeLogo")
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        //Dynamic Frame...
-//                        .padding(.all,20)
-//                        .padding()
                     HStack {
                         VStack(alignment: .leading, spacing: 12, content: {
                             Text("Add new string")
@@ -30,17 +27,17 @@ struct AddNewStringView: View {
                         Spacer(minLength: 0)
                     }.padding()
                     
-                    RDTextField(placeholder: "String name", text: $vm.stringName, imageName: "number", isSecure: false, isPicker: false)
+                    RDTextField(placeholder: "String name", text: $vm.newString.name, imageName: "number", isSecure: false, isPicker: false)
                     
                     HStack(spacing: 30) {
                         VStack(alignment: .center, spacing: 8) {
-                            Text("\(vm.mainsTension)")
+                            Text("\(vm.newString.mains)")
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
                                 .padding(.top)
-                            Stepper("", value: $vm.mainsTension, in: 35...65)
+                            Stepper("", value: $vm.newString.mains, in: 35...65)
                                 .background(Color("green"))
                                 .cornerRadius(8)
                                 .labelsHidden()
@@ -53,13 +50,13 @@ struct AddNewStringView: View {
                         }.background(Color(.white).opacity(0.1).cornerRadius(8))
                         
                         VStack(alignment: .center, spacing: 8) {
-                            Text("\(vm.crossTension)")
+                            Text("\(vm.newString.cross)")
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
                                 .padding(.top)
-                            Stepper("", value: $vm.crossTension, in: 35...65)
+                            Stepper("", value: $vm.newString.cross, in: 35...65)
                                 .background(Color("green"))
                                 .cornerRadius(8)
                                 .labelsHidden()
@@ -79,7 +76,7 @@ struct AddNewStringView: View {
                             .foregroundColor(.white)
                             .multilineTextAlignment(.leading)
                         Spacer()
-                        DatePicker("", selection: $vm.date)
+                        DatePicker("", selection: $dateSelected, displayedComponents: .date)
                             .foregroundColor(.white)
                             .labelsHidden()
                             .cornerRadius(8)
@@ -88,14 +85,14 @@ struct AddNewStringView: View {
                     
                     Spacer()
                     Button(action: {
+                        vm.newString.date = Timestamp(date: dateSelected)
                         vm.addString()
                     }, label: {
                         RDButton(withTitle: "Add String")
-                    }).opacity(vm.stringName != "" ? 1 : 0.5)
-                        .disabled(vm.stringName != "" ? false : true)
+                    }).opacity(vm.newString.name != "" ? 1 : 0.5)
+                        .disabled(vm.newString.name != "" ? false : true)
                         .alert(isPresented: $vm.alert, content: {
                             Alert(title: Text(""), message: Text(vm.alertMsg), dismissButton: .destructive(Text("Ok")))
-                        
                         })
                 }
                 .background(Color("bg").ignoresSafeArea(.all, edges: .all))
