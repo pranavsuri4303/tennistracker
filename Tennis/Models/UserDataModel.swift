@@ -10,7 +10,7 @@ import FirebaseFirestoreSwift
 import Foundation
 
 struct UserDataModel: Identifiable, Codable {
-    internal init(uid: String, name: String, firsName: String, lastName: String, email: String, gender: String, nationality: String, yob: Int, imagePath: String, accountCreated: Date, friendRequests: [FriendsCellModel], friends: [FriendsCellModel], strings: [StringModel]) {
+    internal init(uid: String, name: String, firsName: String, lastName: String, email: String, gender: String, nationality: String, yob: Int, imagePath: String, accountCreated: Date, friendRequests: [FriendsCellModel], friends: [FriendsCellModel]) {
         self.uid = uid
         self.name = name
         self.firstName = firsName
@@ -23,7 +23,6 @@ struct UserDataModel: Identifiable, Codable {
         self.accountCreated = accountCreated
         self.friendRequests = friendRequests
         self.friends = friends
-        self.strings = strings
     }
 
     @DocumentID public var id: String?
@@ -39,7 +38,7 @@ struct UserDataModel: Identifiable, Codable {
     var accountCreated: Date
     var friendRequests: [FriendsCellModel]
     var friends: [FriendsCellModel]
-    var strings: [StringModel]
+    var strings: [StringModel]?
 }
 
 struct FriendsCellModel: Identifiable, Codable, Equatable {
@@ -52,7 +51,7 @@ struct FriendsCellModel: Identifiable, Codable, Equatable {
         self.imagePath = imagePath
     }
 
-    @DocumentID public var id: String?
+    var id = UUID()
     var uid: String
     var name: String
     var gender: String
@@ -63,16 +62,14 @@ struct FriendsCellModel: Identifiable, Codable, Equatable {
     var friendsSince: Timestamp?
 }
 
-struct StringModel: Identifiable, Codable, Equatable {
-    internal init(id: String, cross: Int, date: Timestamp, mains: Int, name: String) {
-        self.id = id
+struct StringModel: Identifiable, Codable, Equatable, Hashable {
+    internal init(cross: Int, date: Timestamp, mains: Int, name: String) {
         self.cross = cross
         self.date = date
         self.mains = mains
         self.name = name
     }
-
-    let id: String
+    var id = UUID()
     let cross: Int
     let date: Timestamp
     let mains: Int

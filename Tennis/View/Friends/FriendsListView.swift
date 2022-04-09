@@ -18,7 +18,8 @@ struct FriendsListView: View {
         VStack {
             if baseVm.userData?.friends == nil || baseVm.userData?.friends == [] {
                 RDEmptyListPlaceholder(headlineText: "What are you waiting for?!",
-                                       subHeadlineText: "Go to the Players tab now to search and add your friends...")
+                                       subHeadlineText: "Go to the Players tab now to search and add your friends...",
+                                       systemImageName: "magnifyingglass.circle")
             } else {
                 ScrollView {
                     ForEach((baseVm.userData?.friends)!) { friend in
@@ -60,7 +61,7 @@ struct FriendsListView: View {
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
-                RDBadgeButton(systemImageTitle: self.friendRequestVM.requestsUsers.count == 0 ? "bell" : "bell.badge", action: { goToRequests.toggle() })
+                RDBadgeButton(systemImageTitle: self.baseVm.userData?.friendRequests.count == 0 ? "bell" : "bell.badge", action: { goToRequests.toggle() })
                     .fullScreenCover(isPresented: $goToRequests, content: {
                         FriendRequestView(friendRequestPresented: $goToRequests)
                     })

@@ -12,7 +12,7 @@ struct PlayerSearchView: View {
     var body: some View {
         VStack {
             if searchString == "" {
-                RDEmptyListPlaceholder(headlineText: "Search for a player.")                
+                RDEmptyListPlaceholder(headlineText: "Search for a player.", systemImageName: "magnifyingglass.circle")
             } else {
                 HStack {
                     ScrollView {
