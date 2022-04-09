@@ -10,7 +10,7 @@ import LocalAuthentication
 import SwiftUI
 
 class RegisterVM: ObservableObject {
-    @Published var userData = UserDataModel(uid: "", name: "", firsName: "", lastName: "", email: "", gender: "", nationality: "", yob: "", imagePath: "", accountCreated: Date(), friendRequests: [], friends: [])
+    @Published var userData = UserDataModel(uid: "", name: "", firsName: "", lastName: "", email: "", gender: "", nationality: "", yob: 0, imagePath: "", accountCreated: Date(), friendRequests: [], friends: [], strings: [])
     @Published var password = ""
     @Published var isLoading = false
     private let usersCollectionRef = Firestore.firestore().collection("users")

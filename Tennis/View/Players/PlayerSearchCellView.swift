@@ -9,11 +9,10 @@ import SwiftUI
 import CachedAsyncImage
 
 struct PlayerSearchCellView: View {
-    let imageUrl: URL
     let hit: Hit
     var body: some View {
         HStack(spacing: 8){
-            CachedAsyncImage(url: imageUrl) { image in
+            CachedAsyncImage(url: URL(string: hit.imagePath)) { image in
                 image
                     .resizable()
                     .scaledToFill()

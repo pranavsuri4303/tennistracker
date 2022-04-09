@@ -200,8 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				76AADBA525C64F6A00EB0C43 /* PlayerSearchView.swift */,
-				7619A62825CA421700014ADA /* PlayerProfileView.swift */,
 				B59E2DE627F4DF4600CB6B27 /* PlayerSearchCellView.swift */,
+				7619A62825CA421700014ADA /* PlayerProfileView.swift */,
 			);
 			path = Players;
 			sourceTree = "<group>";

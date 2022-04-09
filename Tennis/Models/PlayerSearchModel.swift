@@ -24,13 +24,13 @@ struct PlayerSearchModel: Decodable {
 
 struct Hit: Decodable, Identifiable {
     var id = UUID()
-    let path, firstName, lastName, email: String
+    let path, firstName, lastName, imagePath, email: String
     let lastmodified: Int
     let objectID: String
     let highlightResult: HighlightResult
 
     enum CodingKeys: String, CodingKey {
-        case path, firstName, lastName, email, lastmodified, objectID
+        case path, firstName, lastName, imagePath, email, lastmodified, objectID
         case highlightResult = "_highlightResult"
     }
 }
