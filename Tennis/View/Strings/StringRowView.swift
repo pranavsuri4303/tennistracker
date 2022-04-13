@@ -18,7 +18,7 @@ struct StringRowView: View {
                     Text("\(stringRowData.name)")
                         .fontWeight(.bold)
                     Spacer()
-                    Text("\(stringRowData.date.dateValue().formatted(date: .abbreviated, time: .omitted))")
+                    Text("\(stringRowData.date.formatted(date: .abbreviated, time: .omitted))")
                         .foregroundColor(.secondary)
                 }
                 HStack {
@@ -49,6 +49,5 @@ struct StringRowView: View {
         .cornerRadius(6)
         .padding(.horizontal,8)
         .padding(.vertical, 4)
-        
     }
 }

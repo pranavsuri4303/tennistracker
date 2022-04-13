@@ -46,7 +46,7 @@ struct StringsListView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 RDBadgeButton(systemImageTitle: "plus",
                               action: { showingAddString.toggle() })
-                .halfSheet(showSheet: $showingAddString) { AddNewStringView() }
+                .halfSheet(showSheet: $showingAddString) { AddNewStringView(showingAddString: $showingAddString) }
             onEnd: { print("Add String View Closed") }
             }
         })

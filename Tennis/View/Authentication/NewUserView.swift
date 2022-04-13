@@ -129,6 +129,11 @@ struct NewUserView: View {
                 self.startAnimate.toggle()
             }
         })
+        .alert(errorMessage, isPresented: $alertShown) {
+            Button("Ok"){
+                alertShown = false
+            }
+        }
     }
 }
 
