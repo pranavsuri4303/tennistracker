@@ -14,7 +14,7 @@ struct NewUserView: View {
     @State var startAnimate = false
 
     @State var selectionIndex = 0
-    @State var nations = Locale.isoRegionCodes.compactMap { Locale.current.localizedString(forRegionCode: $0) }.sorted { $0 < $1 }
+    @State var nations = Locale.isoRegionCodes.compactMap { "\($0) | \(Locale(identifier: "en_US").localizedString(forRegionCode: $0)!)" }.sorted { $0 < $1 }
     @State var yob = ""
     // Image
     @State var isImagePickerViewPresented = false
@@ -99,6 +99,8 @@ struct NewUserView: View {
                 HStack(spacing: 15) {
                     Button(action: {
                         DispatchQueue.main.async {
+                            vm.userData.nationality = String(vm.userData.nationality.prefix(2))
+                            vm.userData.name = "\(vm.userData.firstName) \(vm.userData.lastName)"
                             vm.uploadUserData(UIImage: pickedImage) { res in
                                 switch res {
                                 case .success:

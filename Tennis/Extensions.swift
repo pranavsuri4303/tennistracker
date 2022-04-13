@@ -107,24 +107,3 @@ class CustomHostingController<Content: View>: UIHostingController<Content> {
         }
     }
 }
-
-class DownloadedProfileImage: ObservableObject {
-    @Published var image: UIImage? = nil
-    @Published var profileImage: UIImage? = nil
-    static let shared = DownloadedProfileImage()
-    
-    func loadImageFromStorageWithBiggerSize() {
-        if let userID = Auth.auth().currentUser?.uid, profileImage == nil {
-            let imagePath = userID + "/2x/profileImage.png"
-            Storage.storage().reference().child(imagePath).getData(maxSize: .max) { data, _ in
-                print("Downloaded Data")
-                data.publisher
-                    .compactMap { $0 }
-                    .map { data in
-                        UIImage(data: data)
-                    }
-                    .assign(to: \.profileImage, on: self)
-            }
-        }
-    }
-}

@@ -12,6 +12,7 @@ struct SideMenuView: View {
     @Binding var currentSelectedView: CurrentTab
     @Binding var showMenu: Bool
     @AppStorage("status") var logged = false
+    @EnvironmentObject var vm: BaseViewVM
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -28,7 +29,7 @@ struct SideMenuView: View {
 
                     }.frame(alignment: .center)
                 }
-                Text("\(Auth.auth().currentUser?.displayName ?? "User")")
+                Text(vm.userData?.firstName ?? "User")
                     .font(.title3)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
@@ -42,8 +43,6 @@ struct SideMenuView: View {
                 Button(action: {
                     try! Auth.auth().signOut()
                     withAnimation { logged = false }
-                    DownloadedProfileImage.shared.image = nil
-                    DownloadedProfileImage.shared.profileImage = nil
                 }) {
                     Text("Log out")
                         .foregroundColor(Color("green"))

@@ -68,21 +68,21 @@ struct NewMatchView: View {
                 })
             }
             
-            //                    HStack {
-            //                        Text("Server")
-            //                            .foregroundColor(.white)
-            //                        Spacer()
-            //                        Picker(selection: $vm.server, label: Text(""), content: {
-            //                            Text("\(vm.P1.name)")
-            //                                .tag(PlayerType.p1)
-            //                                .foregroundColor(.white)
-            //                            Text("\(vm.P2.name)")
-            //                                .tag(PlayerType.p2)
-            //                                .foregroundColor(.white)
-            //
-            //                        })
-            //                        .pickerStyle(SegmentedPickerStyle())
-            //                    }.padding(.horizontal)
+                                HStack {
+                                    Text("Server")
+                                        .foregroundColor(.white)
+                                    Spacer()
+                                    Picker(selection: $vm.server, label: Text("TEST"), content: {
+                                        Text("\(vm.P1.name)")
+                                            .tag(PlayerType.p1)
+                                            .foregroundColor(.white)
+                                        Text("\(vm.P2.name)")
+                                            .tag(PlayerType.p2)
+                                            .foregroundColor(.white)
+            
+                                    })
+                                    .pickerStyle(SegmentedPickerStyle())
+                                }.padding(.horizontal)
             
             Picker(selection: $vm.deuceType, label: Text(""), content: {
                 Text("Deuce")
@@ -104,19 +104,19 @@ struct NewMatchView: View {
                 Text("Expert").foregroundColor(Color(.white)).tag(TrackingType.expert)
             }).pickerStyle(SegmentedPickerStyle())
                 .padding(.horizontal)
-            HStack {
-                Text("1 Set: First to 6 Games")
-                    .foregroundColor(.white)
-                //                        Spacer()
-                //                        Picker(selection: $vm.noOfSets, label: Text(""), content: {
-                //                                Text("1")
-                //                                    .foregroundColor(.white)
-                //                                    .multilineTextAlignment(.center)
-                //                                    .tag(1)
-                //                                Text("3").tag(3)
-                //                                    .foregroundColor(.white)
-                //                        }).pickerStyle(SegmentedPickerStyle())
-            }.padding(.horizontal)
+//            HStack {
+//                Text("1 Set: First to 6 Games")
+//                    .foregroundColor(.white)
+//                //                        Spacer()
+//                //                        Picker(selection: $vm.noOfSets, label: Text(""), content: {
+//                //                                Text("1")
+//                //                                    .foregroundColor(.white)
+//                //                                    .multilineTextAlignment(.center)
+//                //                                    .tag(1)
+//                //                                Text("3").tag(3)
+//                //                                    .foregroundColor(.white)
+//                //                        }).pickerStyle(SegmentedPickerStyle())
+//            }.padding(.horizontal)
             
             Spacer()
             RDButton(withTitle: "Start Match",
@@ -150,11 +150,3 @@ struct NewMatchView_Previews: PreviewProvider {
     }
 }
 
-struct Friends {
-    var list = ["",
-                "Aldrin",
-                "Jemma"]
-    var list2 = ["You",
-                 "Aldrin",
-                 "Jemma"]
-}

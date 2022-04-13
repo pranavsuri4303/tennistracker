@@ -59,6 +59,8 @@ class PlayersVM: ObservableObject {
     func getImageURL(uid: String) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
+    
+
 
     func generateImageURL(uid: String) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")

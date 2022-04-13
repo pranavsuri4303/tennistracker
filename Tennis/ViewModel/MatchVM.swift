@@ -200,6 +200,8 @@ final class MatchVM: ObservableObject {
         case .p2:
             P2.aces += 1
             print("Player 2 aces : \(P2.aces)")
+        case .initial:
+            return 
         }
     }
     
@@ -251,6 +253,7 @@ final class MatchVM: ObservableObject {
 enum PlayerType {
     case p1
     case p2
+    case initial
 }
 
 enum DeuceType {

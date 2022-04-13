@@ -10,6 +10,7 @@ import CachedAsyncImage
 
 struct PlayerSearchCellView: View {
     let hit: Hit
+    
     var body: some View {
         HStack(spacing: 8){
             CachedAsyncImage(url: URL(string: hit.imagePath)) { image in
@@ -28,8 +29,18 @@ struct PlayerSearchCellView: View {
                 }
             }
             VStack{
-                Text("\(hit.firstName) \(hit.lastName)")
-                    .font(.title2)
+                HStack{
+                    Text("\(hit.firstName) \(hit.lastName)")
+                        .font(.title2)
+                    Spacer()
+                }
+                HStack{
+                    Text("\(self.getFlag(from: hit.nationality)) | \(Locale(identifier: "en_US").localizedString(forRegionCode: hit.nationality) ?? hit.nationality)")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                    Spacer()
+                }
+
             }
             Spacer()
             VStack{
@@ -41,6 +52,15 @@ struct PlayerSearchCellView: View {
         .padding(8)
         .background(Color(.white).opacity(0.1))
         .cornerRadius(6)
+    }
+    func getFlag(from countryCode: String) -> String {
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
+        return countryCode
+            .unicodeScalars
+            .map({ 127397 + $0.value })
+            .compactMap(UnicodeScalar.init)
+            .map(String.init)
+            .joined()
     }
 }
 

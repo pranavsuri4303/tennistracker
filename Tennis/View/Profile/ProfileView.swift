@@ -11,7 +11,6 @@ import CachedAsyncImage
 
 struct ProfileView: View {
     @AppStorage("status") var logged = false
-    @ObservedObject var sliderMenueVM = DownloadedProfileImage.shared
     @EnvironmentObject var vm: BaseViewVM
     @State private var goToSettings = false
     
