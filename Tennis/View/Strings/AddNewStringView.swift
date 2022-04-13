@@ -11,7 +11,10 @@ import Firebase
 
 struct AddNewStringView: View {
     @StateObject var vm = StringsVM()
+    @Binding var showingAddString: Bool
     @State var dateSelected = Date()
+    @State private var alertShown = false
+    @State private var errorMessage = ""
     var body: some View {
         ZStack {
             GeometryReader { _ in
@@ -85,8 +88,16 @@ struct AddNewStringView: View {
                     
                     Spacer()
                     Button(action: {
-                        vm.newString.date = Timestamp(date: dateSelected)
-                        vm.addString()
+                        vm.newString.date = dateSelected
+                        vm.addString { res in
+                            switch res{
+                            case .failure(let err):
+                                self.alertShown = true
+                                self.errorMessage = err.localizedDescription
+                            case .success:
+                                self.showingAddString = false
+                            }
+                        }
                     }, label: {
                         RDButton(withTitle: "Add String")
                     }).opacity(vm.newString.name != "" ? 1 : 0.5)
@@ -94,6 +105,11 @@ struct AddNewStringView: View {
                         .alert(isPresented: $vm.alert, content: {
                             Alert(title: Text(""), message: Text(vm.alertMsg), dismissButton: .destructive(Text("Ok")))
                         })
+                }
+                .alert(errorMessage, isPresented: $alertShown) {
+                    Button("Ok"){
+                        alertShown = false
+                    }
                 }
                 .background(Color("bg").ignoresSafeArea(.all, edges: .all))
                 if vm.isLoading {

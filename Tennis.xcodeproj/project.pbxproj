@@ -380,10 +380,10 @@
 			children = (
 				B54D40672791342D00F36EE1 /* RDTextField.swift */,
 				B54D406927913F8A00F36EE1 /* RDButton.swift */,
-				B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */,
-				B564F7302799F73A00052CA3 /* RDBadgeButton.swift */,
-				B5D1F76B27AA1E370091AC2F /* RDHeader.swift */,
 				B5D1F76D27AA342A0091AC2F /* RDMenuButton.swift */,
+				B564F7302799F73A00052CA3 /* RDBadgeButton.swift */,
+				B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */,
+				B5D1F76B27AA1E370091AC2F /* RDHeader.swift */,
 				B5A239A727F5538500D7A9FE /* RDEmptyListPlaceholder.swift */,
 			);
 			path = RDComponents;

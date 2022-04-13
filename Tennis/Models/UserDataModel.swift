@@ -64,14 +64,18 @@ struct FriendsCellModel: Codable, Equatable, Hashable {
 }
 
 struct StringModel: Codable, Equatable, Hashable {
-    internal init(cross: Int, date: Timestamp, mains: Int, name: String) {
-        self.cross = cross
-        self.date = date
-        self.mains = mains
-        self.name = name
-    }
     var cross: Int
-    var date: Timestamp
     var mains: Int
     var name: String
+    var date: Date
+    var firestoreData: [String: Any] {
+        return [
+            "cross": cross,
+            "mains": mains,
+            "name": name,
+            "date": date
+        ]
+    }
 }
+
+
