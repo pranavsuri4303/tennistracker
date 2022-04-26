@@ -48,10 +48,11 @@ struct LoginView: View {
                 }
                 .padding()
                 .padding(.leading, 15)
-                
-                RDTextField(placeholder: "EMAIL", text: $vm.email, imageName: "envelope", isSecure: false, isPicker: false)
-                
-                RDTextField(placeholder: "PASSWORD", text: $vm.password, imageName: "lock", isSecure: true, isPicker: false)
+                VStack{
+                    RDTextField(placeholder: "Email", text: $vm.email, imageName: "envelope", isSecure: false, isPicker: false)
+                    RDTextField(placeholder: "Password", text: $vm.password, imageName: "lock", isSecure: true, isPicker: false)
+                }
+                .padding(.horizontal)
 
                 RDButton(withTitle: "SIGN IN", performAction: { vm.verifyUser() })
                     .opacity(vm.email != "" && vm.password != "" ? 1 : 0.5)
@@ -59,9 +60,7 @@ struct LoginView: View {
                     .alert(isPresented: $vm.alert, content: {
                         Alert(title: Text("Error"), message: Text(vm.alertMsg), dismissButton: .destructive(Text("Ok")))
                     })
-                
-                // Forget Button...
-                
+                                
                 Button(action: {
                     self.showingResetPassword.toggle()
                 }, label: {

@@ -52,45 +52,39 @@ extension View {
 
 struct HalfSheetHelper<SheetView: View>: UIViewControllerRepresentable {
     var sheetView: SheetView
-    @Binding var showSheet: Bool
-    var onEnd: () -> ()
-    
     let controller = UIViewController()
+    @Binding var showSheet: Bool
+    var onEnd: ()->()
     
     func makeCoordinator() -> Coordinator {
-        Coordinator(parent: self)
+        return Coordinator(parent: self)
     }
     
     func makeUIViewController(context: Context) -> UIViewController {
         controller.view.backgroundColor = .clear
-        
         return controller
     }
     
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        if showSheet {
-            if uiViewController.presentedViewController == nil {
-                let sheetController = CustomHostingController(rootView: sheetView)
-                sheetController.presentationController?.delegate = context.coordinator
-                uiViewController.present(sheetController, animated: true)
-            }
-        }
-        else {
-            if uiViewController.presentedViewController != nil {
-                uiViewController.dismiss(animated: true)
-            }
+        let presenting = uiViewController.presentedViewController != nil
+        if showSheet && !presenting {
+            let sheetController = CustomHostingController(rootView: sheetView)
+            sheetController.presentationController?.delegate = context.coordinator
+            uiViewController.present(sheetController, animated: true)
+        } else if !showSheet && presenting {
+            uiViewController.dismiss(animated: true)
         }
     }
     
-    class Coordinator: NSObject, UISheetPresentationControllerDelegate {
+    class Coordinator:NSObject, UISheetPresentationControllerDelegate {
         var parent: HalfSheetHelper
-        
         init(parent: HalfSheetHelper) {
             self.parent = parent
         }
         
         func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-            parent.showSheet = false
+            self.parent.showSheet = false
+            self.parent.onEnd()
         }
     }
 }
@@ -105,5 +99,12 @@ class CustomHostingController<Content: View>: UIHostingController<Content> {
             
             presentationController.prefersGrabberVisible = true
         }
+    }
+}
+
+struct TransparentGroupBox: GroupBoxStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.content
+            .background(RoundedRectangle(cornerRadius: 8).fill(Color.white.opacity(0.12)))
     }
 }

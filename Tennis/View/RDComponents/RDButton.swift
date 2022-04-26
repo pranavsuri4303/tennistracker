@@ -12,7 +12,6 @@ struct RDButton: View {
     var performAction: (() -> Void?)?
     
     var body: some View {
-        HStack(spacing: 15){
             if let performAction = performAction {
                 Button(action: {
                     performAction()
@@ -21,21 +20,20 @@ struct RDButton: View {
                     Text("\(withTitle)")
                         .fontWeight(.heavy)
                         .foregroundColor(.black)
-                        .padding(.vertical)
-                        .frame(width: UIScreen.main.bounds.width - 150)
+                        .padding(.vertical,10)
+                        .frame(width: getRect().width*0.6)
                         .background(Color("green"))
-                        .clipShape(Capsule())
+                        .cornerRadius(15)
                 })
             }else{
                 Text("\(withTitle)")
                     .fontWeight(.heavy)
                     .foregroundColor(.black)
-                    .padding(.vertical)
-                    .frame(width: UIScreen.main.bounds.width - 150)
+                    .padding(.vertical,10)
+                    .frame(width: getRect().width*0.6)
                     .background(Color("green"))
-                    .clipShape(Capsule())
+                    .cornerRadius(15)
             }
-        }
     }
 }
 

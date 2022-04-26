@@ -35,6 +35,7 @@ struct ResetPasswordView: View {
                     .padding(.leading, 15)
                     
                     RDTextField(placeholder: "Email", text: $vm.email, imageName: "envelope", isSecure: false, isPicker: false)
+                        .padding(.horizontal)
 
                     Spacer()
                     

@@ -21,8 +21,8 @@ struct RDTextField: View {
         HStack{
             Image(systemName: "\(imageName)")
                 .foregroundColor(.white)
-                .frame(width: 35)
-                .frame(height: 25)
+                .frame(width: 30)
+                .frame(height: 20)
             if isPicker{
                 TextFieldWithPickerView(data: $data,
                                         placeholder: placeholder,
@@ -34,17 +34,18 @@ struct RDTextField: View {
                     SecureField("\(placeholder)", text: $text)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
+                        .frame(height: 0)
                 }else{
                     TextField("\(placeholder)", text: $text)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
+                        .frame(height: 0)
                 }
             }
         }
-        .padding()
-        .background(Color(.white).opacity(text=="" ? 0.02 : 0.12))
-        .cornerRadius(15)
-        .padding(.horizontal)
+        .padding(12)
+        .background(Color(.white).opacity(text=="" ? 0.04 : 0.12))
+        .cornerRadius(12)
         .preferredColorScheme(.dark)
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 struct PlayerSearchView: View {
     @State var searchString = ""
     @StateObject var vm = PlayersVM()
+    @State var showProfile = false
     var body: some View {
         VStack {
             if searchString == "" {
@@ -18,7 +19,14 @@ struct PlayerSearchView: View {
                     ScrollView {
                         LazyVStack {
                             ForEach(vm.hits) { player in
-                                PlayerSearchCellView(hit: player)
+                                NavigationLink {
+                                    Text("Test")
+                                        .navigationTitle(Text("\(player.firstName)"))
+                                        .navigationBarTitleDisplayMode(.large)
+                                } label: {
+                                    PlayerSearchCellView(hit: player)
+                                }
+                                .buttonStyle(.plain)
                             }
                         }
                         if vm.pages - 1 != vm.pageNo, vm.totalHits != 0 {

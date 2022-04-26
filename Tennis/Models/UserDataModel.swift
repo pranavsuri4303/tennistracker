@@ -32,6 +32,7 @@ struct UserDataModel: Identifiable, Codable {
     var lastName: String
     var email: String
     var gender: String
+    var playingStyle: String?
     var nationality: String
     var yob: Int
     var imagePath: String

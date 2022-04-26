@@ -45,9 +45,11 @@ struct RegisterView: View {
                 .padding(.leading, 15)
                 
                 RDTextField(placeholder: "Email", text: $vm.userData.email, imageName: "envelope", isSecure: false, isPicker: false)
-                
+                    .padding(.horizontal)
+
                 RDTextField(placeholder: "Password", text: $vm.password, imageName: "lock", isSecure: true, isPicker: false)
-                
+                    .padding(.horizontal)
+
                 RDButton(withTitle: "REGISTER", performAction: {
                     vm.createAccount() { result in
                         switch result {

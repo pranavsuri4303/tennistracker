@@ -13,6 +13,11 @@ class RegisterVM: ObservableObject {
     @Published var userData = UserDataModel(uid: "", name: "", firsName: "", lastName: "", email: "", gender: "", nationality: "", yob: 0, imagePath: "", accountCreated: Date(), friendRequests: [], friends: [])
     @Published var password = ""
     @Published var isLoading = false
+    
+    
+    let yearsList = Array(Calendar.current.component(.year, from: Date()) - 100 ... Calendar.current.component(.year, from: Date()) - 5).map { String($0) }.sorted{ $0 > $1}
+    let nationsList = Locale.isoRegionCodes.compactMap { "\($0) | \(Locale(identifier: "en_US").localizedString(forRegionCode: $0)!)" }.sorted { $0 < $1 }
+
     private let usersCollectionRef = Firestore.firestore().collection("users")
     var imageData: (Data?)
     @AppStorage("status") var logged = false

@@ -20,7 +20,7 @@ class StringsVM: ObservableObject {
     let db = Firestore.firestore().collection("users")
     private let uidStr = Auth.auth().currentUser?.uid
 
-    func deleteString(at index: IndexSet) {
+    func deleteString(withData data: StringModel) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
     

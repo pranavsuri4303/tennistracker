@@ -12,25 +12,20 @@ struct NewUserView: View {
     @Binding var isPresented: Bool
     @ObservedObject var vm = RegisterVM()
     @State var startAnimate = false
-
+    
     @State var selectionIndex = 0
-    @State var nations = Locale.isoRegionCodes.compactMap { "\($0) | \(Locale(identifier: "en_US").localizedString(forRegionCode: $0)!)" }.sorted { $0 < $1 }
     @State var yob = ""
     // Image
     @State var isImagePickerViewPresented = false
     @State var pickedImage: UIImage? = nil
-    @State var newUserViewPresented = false
+    
+    
     @State private var alertShown = false
     @State private var errorMessage = ""
+    @State private var playingStyle = ""
     
-
-    // Creating an array of YOBs with range 100 yrs
-    @State var years = Array(Calendar.current.component(.year, from: Date()) - 100 ... Calendar.current.component(.year, from: Date())).map { String($0) }
     
     var body: some View {
-//        VStack{
-//            Text("New User View")
-//        }
         ZStack {
             VStack {
                 Button {
@@ -40,21 +35,20 @@ struct NewUserView: View {
                         if pickedImage == nil {
                             Circle()
                                 .accentColor(.blue)
-                                .frame(width: 210, height: 210, alignment: .center)
+                                .frame(width: getRect().width*0.4, height: getRect().width*0.4, alignment: .center)
                                 .overlay(Image("Male")
                                     .resizable()
-                                    .frame(width: 200, height: 200)
-                                    .cornerRadius(100)
+                                    .frame(width: getRect().width*0.4 - 10, height: getRect().width*0.4 - 10)
+                                    .clipShape(Circle())
                                     .padding())
-
                         } else {
                             Circle()
                                 .accentColor(.blue)
-                                .frame(width: 210, height: 210, alignment: .center)
+                                .frame(width: getRect().width*0.4, height: getRect().width*0.4, alignment: .center)
                                 .overlay(Image(uiImage: pickedImage!)
                                     .resizable()
-                                    .frame(width: 200, height: 200)
-                                    .cornerRadius(100)
+                                    .frame(width: getRect().width*0.4 - 10, height: getRect().width*0.4 - 10)
+                                    .clipShape(Circle())
                                     .padding())
                         }
                     }
@@ -69,60 +63,99 @@ struct NewUserView: View {
                         pickedImage = image
                     }))
                 }
-                HStack {
-                    VStack(alignment: .leading, spacing: 10, content: {
+                
+                VStack{
+                    HStack{
                         Text("New user details")
                             .font(.title)
                             .fontWeight(.bold)
-                            .foregroundColor(.white)
-
+                        Spacer()
+                    }.padding(.leading)
+                    HStack{
                         Text("Please enter the following details for a more personalized experience.")
-                            .foregroundColor(Color.white.opacity(0.5))
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                            .lineLimit(nil)
+                            .multilineTextAlignment(.leading)
+                        Spacer()
+                    }.padding(.leading)
+                }.padding(.vertical)
+                
+                
+                VStack{
+                    RDTextField(placeholder: "First name", text: $vm.userData.firstName, imageName: "person", isSecure: false, isPicker: false)
+                    RDTextField(placeholder: "Last name", text: $vm.userData.lastName, imageName: "person", isSecure: false, isPicker: false)
+                    RDTextField(placeholder: "Year of Birth", text: $yob, imageName: "calendar", isSecure: false, isPicker: true, data: vm.yearsList, selectionIndex: self.selectionIndex)
+                    RDTextField(placeholder: "Nationality", text: $vm.userData.nationality, imageName: "flag", isSecure: false, isPicker: true, data: vm.nationsList, selectionIndex: self.selectionIndex)
+                }.padding(.horizontal)
+                
+                VStack(alignment: .leading, spacing: 5){
+                    Text("Gender")
+                        .font(.headline)
+                    Picker(selection: $vm.userData.gender, label: Text(""), content: {
+                        Text("Male").tag("Male")
+                            .foregroundColor(Color.white)
+                        Text("Female").tag("Female")
+                            .foregroundColor(Color(.white))
+                        Text("Other").tag("Other")
+                            .foregroundColor(Color(.white))
                     })
-                    .padding(.bottom)
+                    .pickerStyle(.segmented)
+                    .padding(.horizontal)
                 }
-                .padding()
-                RDTextField(placeholder: "First name", text: $vm.userData.firstName, imageName: "person", isSecure: false, isPicker: false)
-                RDTextField(placeholder: "Last name", text: $vm.userData.lastName, imageName: "person", isSecure: false, isPicker: false)
+                .padding(10)
+                .background(.white.opacity(vm.userData.gender == "" ? 0.04 : 0.12))
+                .cornerRadius(12)
+                .padding(.horizontal)
 
-                RDTextField(placeholder: "Year of Birth", text: $yob, imageName: "calendar", isSecure: false, isPicker: true, data: years, selectionIndex: self.selectionIndex)
-                RDTextField(placeholder: "Select your country", text: $vm.userData.nationality, imageName: "flag", isSecure: false, isPicker: true, data: nations, selectionIndex: self.selectionIndex)
+                VStack(alignment: .leading, spacing: 5){
+                    Text("Playing Style")
+                        .font(.headline)
+                    Picker(selection: $playingStyle, label: Text(""), content: {
+                        Text("Left handed").tag("Left")
+                            .foregroundColor(Color(.white))
+                        Text("Right handed").tag("Right")
+                            .foregroundColor(Color.white)
+                    })
+                    .pickerStyle(.segmented)
+                    .padding(.horizontal)
+                    .onChange(of: playingStyle) { style in
+                        vm.userData.playingStyle = style
+                    }
+                }
+                .padding(10)
+                .background(.white.opacity(playingStyle == "" ? 0.04 : 0.12))
+                .cornerRadius(12)
+                .padding(.horizontal)
 
-                Picker(selection: $vm.userData.gender, label: Text(""), content: {
-                    Text("Male").tag("Male")
-                        .foregroundColor(Color.white)
-                    Text("Female").foregroundColor(Color(.white)).tag("Female")
-                })
-                .pickerStyle(SegmentedPickerStyle())
-                .padding(.all)
                 Spacer()
-                HStack(spacing: 15) {
-                    Button(action: {
-                        DispatchQueue.main.async {
-                            vm.userData.nationality = String(vm.userData.nationality.prefix(2))
-                            vm.userData.name = "\(vm.userData.firstName) \(vm.userData.lastName)"
-                            vm.uploadUserData(UIImage: pickedImage) { res in
-                                switch res {
-                                case .success:
-                                    return
-                                case .failure(let err):
-                                    self.errorMessage = err.localizedDescription
-                                    self.alertShown = true
-                                }
+                Button(action: {
+                    DispatchQueue.main.async {
+                        vm.userData.nationality = String(vm.userData.nationality.prefix(2))
+                        vm.userData.name = "\(vm.userData.firstName) \(vm.userData.lastName)"
+                        if playingStyle != "" {
+                            vm.userData.playingStyle = playingStyle
+                        }
+                        vm.uploadUserData(UIImage: pickedImage) { res in
+                            switch res {
+                            case .success:
+                                return
+                            case .failure(let err):
+                                self.errorMessage = err.localizedDescription
+                                self.alertShown = true
                             }
                         }
-                        
-                    }, label: {
-                        RDButton(withTitle: "Create Account")
-                    })
-                        .opacity(vm.userData.firstName != "" && vm.userData.lastName != "" && vm.userData.gender != "" && yob != "" && vm.userData.nationality != "" ? 1 : 0.5)
-                        .disabled(vm.userData.firstName != "" && vm.userData.lastName != "" && vm.userData.gender != "" && yob != "" && vm.userData.nationality != "" ? false : true)
-                }
-                .padding(.vertical)
-
+                    }
+                    
+                }, label: {
+                    RDButton(withTitle: "Create Account")
+                })
+                .opacity(vm.userData.firstName != "" && vm.userData.lastName != "" && vm.userData.gender != "" && yob != "" && vm.userData.nationality != "" ? 1 : 0.5)
+                .disabled(vm.userData.firstName != "" && vm.userData.lastName != "" && vm.userData.gender != "" && yob != "" && vm.userData.nationality != "" ? false : true)
+                
             }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
                 .animation(startAnimate ? .easeOut : .none)
-
+            
             if vm.isLoading {
                 LoadingScreenView()
             }

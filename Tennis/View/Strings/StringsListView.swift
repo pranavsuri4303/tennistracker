@@ -10,6 +10,7 @@ import SwiftUI
 struct StringsListView: View {
     @State var showingAddString = false
     @EnvironmentObject var baseVM: BaseViewVM
+    @ObservedObject var vm = StringsVM()
     
     var body: some View {
         HStack{
@@ -19,9 +20,6 @@ struct StringsListView: View {
                         StringRowView(stringRowData: string)
                             .listRowBackground(Color.clear)
                             .listRowInsets(.init())
-                    }
-                    .onDelete { test in
-                        print("delete item")
                     }
                     .listRowSeparator(.hidden)
                     HStack{
