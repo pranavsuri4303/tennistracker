@@ -34,7 +34,6 @@ final class MatchVM: ObservableObject {
     
     func getFriends() {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
-        print("Fetching Friends")
     }
     
     func pointWon(by: PlayerType, deuce: DeuceType, servingPlayer: PlayerType) {
@@ -61,26 +60,21 @@ final class MatchVM: ObservableObject {
                 } else {
                     P1.pts += 1
                     P1.totalPtsWon += 1
-                    print("\(P1.pts) - \(P2.pts)")
                     checkIfGameIsOver(p1: P1.pts, p2: P2.pts, deuce: deuce, servingPlayer: servingPlayer)
                 }
             } else if by == .p2 {
                 if P1.pts == 4, P2.pts == 3 {
                     P1.pts -= 1
                     P2.totalPtsWon += 1
-                    
-                    print("\(P1.pts) - \(P2.pts)")
                     checkIfGameIsOver(p1: P1.pts, p2: P2.pts, deuce: deuce, servingPlayer: servingPlayer)
                     
                 } else {
                     P2.pts += 1
                     P2.totalPtsWon += 1
-                    
-                    print("\(P1.pts) - \(P2.pts)")
                     checkIfGameIsOver(p1: P1.pts, p2: P2.pts, deuce: deuce, servingPlayer: servingPlayer)
                 }
             }
-        case .oneDeuce:
+        case .none:
             if by == .p1 {
                 P1.pts += 1
                 P1.totalPtsWon += 1
@@ -116,7 +110,6 @@ final class MatchVM: ObservableObject {
 
     func gameWon(by: PlayerType, servingPlayer: PlayerType) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
-        print(by)
         if by == .p1 {
             P1.games += 1
             changeServer(oldServer: servingPlayer)
@@ -134,7 +127,6 @@ final class MatchVM: ObservableObject {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         switch deuce {
         case .noDeuce:
-            print(p1, p2)
             if P1.pts == 4 || P2.pts == 4 {
                 if P1.pts > P2.pts {
                     gameWon(by: .p1, servingPlayer: servingPlayer)
@@ -143,7 +135,6 @@ final class MatchVM: ObservableObject {
                 }
             }
         case .deuce:
-            print(p1, p2)
             if P1.pts > P2.pts {
                 if P1.pts == 4 || P1.pts == 5, (P1.pts - P2.pts) >= 2 {
                     gameWon(by: .p1, servingPlayer: servingPlayer)
@@ -153,8 +144,7 @@ final class MatchVM: ObservableObject {
                     gameWon(by: .p2, servingPlayer: servingPlayer)
                 }
             }
-        case .oneDeuce:
-            print(p1, p2)
+        case .none:
             if P1.pts == 5 || P2.pts == 5 {
                 if P1.pts > P2.pts {
                     gameWon(by: .p1, servingPlayer: servingPlayer)
@@ -196,11 +186,9 @@ final class MatchVM: ObservableObject {
         switch server {
         case .p1:
             P1.aces += 1
-            print("Player 1 aces : \(P1.aces)")
         case .p2:
             P2.aces += 1
-            print("Player 2 aces : \(P2.aces)")
-        case .initial:
+        case .none:
             return 
         }
     }
@@ -231,7 +219,7 @@ final class MatchVM: ObservableObject {
         case 4:
             if deuceType == .deuce {
                 return "AD"
-            } else if deuceType == .oneDeuce {
+            } else if deuceType == .none {
                 if P1.pts == 4, P2.pts == 4 {
                     return "40"
                 } else {
@@ -244,7 +232,6 @@ final class MatchVM: ObservableObject {
             return "0"
 
         default:
-            print("Going to Default!! Erroor")
             return"0"
         }
     }
@@ -253,19 +240,20 @@ final class MatchVM: ObservableObject {
 enum PlayerType {
     case p1
     case p2
-    case initial
+    case none
 }
 
 enum DeuceType {
     case deuce
     case noDeuce
-    case oneDeuce
+    case none
 }
 
 enum TrackingType {
     case basic
     case advanced
     case expert
+    case none
 }
 
 enum Serve {

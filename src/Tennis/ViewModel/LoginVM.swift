@@ -37,7 +37,6 @@ class LoginVM: ObservableObject {
         let scanner = LAContext()
         scanner.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To Unlock \(email)") { _, err in
             if err != nil {
-                print(err!.localizedDescription)
                 return
             }
             
@@ -66,7 +65,6 @@ class LoginVM: ObservableObject {
                 self.alert.toggle()
                 return
             }
-            print(Auth.auth().userAccessGroup)
             if self.Stored_User == "" || self.Stored_Password == "" {
                 self.store_Info.toggle()
                 return

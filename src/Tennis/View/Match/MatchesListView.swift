@@ -19,7 +19,7 @@ struct MatchesHistoryView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 RDBadgeButton(systemImageTitle: "plus",
                                               action: { showAddMatch.toggle() })
-                    .sheet(isPresented: $showAddMatch) { AddMatchView() }
+                    .fullScreenCover(isPresented: $showAddMatch) { AddMatchView(newMatchViewPresented: $showAddMatch) }
             }
         })
     }

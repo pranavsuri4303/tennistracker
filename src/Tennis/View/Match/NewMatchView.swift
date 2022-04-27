@@ -91,7 +91,7 @@ struct NewMatchView: View {
                     .tag(DeuceType.deuce)
                 Text("Sudden death").tag(DeuceType.noDeuce)
                     .foregroundColor(.white)
-                Text("One Deuce").foregroundColor(Color(.white)).tag(DeuceType.oneDeuce)
+                Text("One Deuce").foregroundColor(Color(.white)).tag(DeuceType.none)
             }).pickerStyle(SegmentedPickerStyle())
                 .padding(.horizontal)
             Picker(selection: $vm.trackingStyle, label: Text(""), content: {

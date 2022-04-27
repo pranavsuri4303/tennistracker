@@ -31,6 +31,7 @@ struct AddNewStringView: View {
                     }.padding()
                     
                     RDTextField(placeholder: "String name", text: $vm.newString.name, imageName: "number", isSecure: false, isPicker: false)
+                        .padding(.horizontal)
                     
                     HStack(spacing: 30) {
                         VStack(alignment: .center, spacing: 8) {

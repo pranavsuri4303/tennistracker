@@ -43,15 +43,9 @@ class PlayersVM: ObservableObject {
                 self.pages = response.nbPages ?? 0
                 self.pageNo = response.page ?? 1
                 self.totalHits = response.nbHits ?? 0
-                print("Total Hits: \(response.nbHits)")
-                print("Pages: \(response.nbPages)")
-                print("Page no.: \(response.page)")
                 do {
                     self.hits += try response.extractHits()
-                    print(self.hits)
-                } catch {
-                    print("Erros: \(error)")
-                }
+                } catch { }
             }
         }
     }
@@ -73,7 +67,6 @@ class PlayersVM: ObservableObject {
             } else {
                 url = urlReturned!
             }
-            print("\(url?.absoluteString)")
         }
     }
 }

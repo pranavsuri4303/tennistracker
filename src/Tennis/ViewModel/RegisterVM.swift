@@ -69,7 +69,6 @@ class RegisterVM: ObservableObject {
                         }
                     }
                 case .failure(let error):
-                    print(error.localizedDescription)
                     completion(.failure(error))
                 }
             }

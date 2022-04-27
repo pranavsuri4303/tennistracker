@@ -24,12 +24,12 @@ struct ProfileView: View {
                             CachedAsyncImage(url: URL(string: imageURL)) { Image in
                                 Image
                                     .resizable()
-                                    .padding(.top, 50)
+                                    .padding(.top, 90)
                                     .aspectRatio(contentMode: .fill)
                                 // moving View Up....
                                     .offset(y: -reader.frame(in: .global).minY)
                                 // going to add parallax effect....
-                                    .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY > 0 ? reader.frame(in: .global).minY + 480 : 480)
+                                    .frame(width: getRect().width, height: reader.frame(in: .global).minY > 0 ? reader.frame(in: .global).minY + 480 : 480)
 
                             } placeholder: {
                                 ProgressView()
@@ -37,7 +37,7 @@ struct ProfileView: View {
                         } else {
                             Image("\(vm.userData?.gender ?? "")")
                                 .resizable()
-                                .padding(.top, 50)
+                                .padding(.top, 90)
                                 .aspectRatio(contentMode: .fill)
                             // moving View Up....
                                 .offset(y: -reader.frame(in: .global).minY)
@@ -106,12 +106,14 @@ struct ProfileView: View {
                 }
                 .padding(.top, 25)
                 .padding(.horizontal)
+                .background(Color("bg"))
                 .cornerRadius(20)
-                .offset(y: -10)
+                .offset(y: 55)
                 .edgesIgnoringSafeArea(.horizontal)
             }
         }
         .frame(width: getRect().width, height: getRect().height)
+        .background(Color("bg"))
 //        .toolbar(content: {
 //            ToolbarItem(placement: .navigationBarTrailing) {
 //                RDBadgeButton(systemImageTitle: "gear",

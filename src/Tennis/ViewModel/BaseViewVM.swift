@@ -20,7 +20,7 @@ class BaseViewVM: ObservableObject {
                 print(("[Error]: \(err.localizedDescription)"))
             }else{
                 self.userData = try! snap?.data(as: UserDataModel.self)
-                print("[User Data]: \(self.userData)")
+                dump(self.userData)
             }
         }
     }
