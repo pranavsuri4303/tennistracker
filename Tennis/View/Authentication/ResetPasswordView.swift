@@ -17,7 +17,7 @@ struct ResetPasswordView: View {
                     Image("resetPassword")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        // Dynamic Frame...
+                    // Dynamic Frame...
                         .padding()
                     HStack {
                         VStack(alignment: .leading, spacing: 12, content: {
@@ -36,25 +36,18 @@ struct ResetPasswordView: View {
                     
                     RDTextField(placeholder: "Email", text: $vm.email, imageName: "envelope", isSecure: false, isPicker: false)
                         .padding(.horizontal)
-
+                    
                     Spacer()
                     
-                    Button(action: {
+                    RDButton(withTitle: "Reset Password") {
                         vm.resetPassword()
-                    }, label: {
-                        Text("Reset Password")
-                            .fontWeight(.heavy)
-                            .foregroundColor(.black)
-                            .padding(.vertical)
-                            .frame(width: UIScreen.main.bounds.width - 150)
-                            .background(Color("green"))
-                            .clipShape(Capsule())
-                    })
+                    }
                     .opacity(vm.email != "" ? 1 : 0.5)
                     .disabled(vm.email != "" ? false : true)
                     .alert(isPresented: $vm.alert, content: {
                         Alert(title: Text(""), message: Text(vm.alertMsg), dismissButton: .destructive(Text("Ok")))
                     })
+                    
                 }
                 .background(Color("bg").ignoresSafeArea(.all, edges: .all))
             }
