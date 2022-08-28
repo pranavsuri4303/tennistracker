@@ -10,7 +10,6 @@ import SwiftUI
 struct PlayerProfileView: View {
     let playerModel: PlayerModel
     @StateObject var sendFriendRequestVM = FriendsVM()
-    let searchVM: SearchPlayerVM
     @Binding var profileIsPresented: Bool
     var body: some View {
         VStack {
@@ -92,9 +91,6 @@ struct PlayerProfileView: View {
             })
             .edgesIgnoringSafeArea(.all)
             .background(Color("bg").edgesIgnoringSafeArea(.all))
-            .onAppear(perform: {
-                searchVM.loadImageFromStorageWithBiggerSize()
-            })
         }
         .background(Color("bg"))
     }

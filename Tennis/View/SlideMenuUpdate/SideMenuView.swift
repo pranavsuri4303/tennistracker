@@ -86,6 +86,6 @@ extension View {
 }
 
 var menuButtons: [CurrentTab] {
-    var all = CurrentTab.allCases
+    let all = CurrentTab.allCases
     return all
 }

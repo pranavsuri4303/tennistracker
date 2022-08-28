@@ -63,7 +63,7 @@ struct FriendsListView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 RDBadgeButton(systemImageTitle: self.baseVm.userData?.friendRequests?.count == 0 ? "bell" : "bell.badge", action: { goToRequests.toggle() })
                     .fullScreenCover(isPresented: $goToRequests, content: {
-                        FriendRequestView(friendRequestPresented: $goToRequests)
+                        Text("Friend")
                     })
             }
         })

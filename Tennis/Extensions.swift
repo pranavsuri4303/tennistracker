@@ -9,6 +9,7 @@ import Firebase
 import FirebaseAuth
 import SwiftUI
 import UIKit
+
 extension UIImage {
     func resizeImage(targetSize: CGSize) -> UIImage {
         let size = size
