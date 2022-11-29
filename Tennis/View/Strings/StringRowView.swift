@@ -5,16 +5,16 @@
 //  Created by Pranav Suri on 31/1/22.
 //
 
-import SwiftUI
-import FirebaseFirestoreSwift
 import Firebase
+import FirebaseFirestoreSwift
+import SwiftUI
 
 struct StringRowView: View {
     let stringRowData: StringModel
     var body: some View {
-        HStack{
+        HStack {
             VStack(spacing: 5) {
-                HStack{
+                HStack {
                     Text("\(stringRowData.name)")
                         .fontWeight(.bold)
                     Spacer()
@@ -47,7 +47,7 @@ struct StringRowView: View {
         .padding(8)
         .background(Color(.white).opacity(0.1))
         .cornerRadius(6)
-        .padding(.horizontal,8)
+        .padding(.horizontal, 8)
         .padding(.vertical, 4)
     }
 }

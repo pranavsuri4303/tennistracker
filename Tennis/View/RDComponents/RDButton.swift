@@ -10,31 +10,29 @@ import SwiftUI
 struct RDButton: View {
     var withTitle: String
     var performAction: (() -> Void?)?
-    
-    var body: some View {
-            if let performAction = performAction {
-                Button(action: {
-                    performAction()
 
-                }, label: {
-                    Text("\(withTitle)")
-                        .fontWeight(.heavy)
-                        .foregroundColor(.black)
-                        .padding(.vertical,10)
-                        .frame(width: getRect().width*0.6)
-                        .background(Color("green"))
-                        .cornerRadius(15)
-                })
-            }else{
+    var body: some View {
+        if let performAction = performAction {
+            Button(action: {
+                performAction()
+
+            }, label: {
                 Text("\(withTitle)")
                     .fontWeight(.heavy)
                     .foregroundColor(.black)
-                    .padding(.vertical,10)
-                    .frame(width: getRect().width*0.6)
+                    .padding(.vertical, 10)
+                    .frame(width: getRect().width * 0.6)
                     .background(Color("green"))
                     .cornerRadius(15)
-            }
+            })
+        } else {
+            Text("\(withTitle)")
+                .fontWeight(.heavy)
+                .foregroundColor(.black)
+                .padding(.vertical, 10)
+                .frame(width: getRect().width * 0.6)
+                .background(Color("green"))
+                .cornerRadius(15)
+        }
     }
 }
-
-

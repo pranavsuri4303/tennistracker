@@ -39,7 +39,7 @@ extension TimeInterval {
 // MARK: Extension for half modal view
 
 extension View {
-    func halfSheet<SheetView: View>(showSheet: Binding<Bool>, @ViewBuilder sheetView: @escaping () -> SheetView, onEnd: @escaping () -> ()) -> some View {
+    func halfSheet<SheetView: View>(showSheet: Binding<Bool>, @ViewBuilder sheetView: @escaping () -> SheetView, onEnd: @escaping () -> Void) -> some View {
         background(
             HalfSheetHelper(sheetView: sheetView(), showSheet: showSheet, onEnd: onEnd)
         )
@@ -55,37 +55,37 @@ struct HalfSheetHelper<SheetView: View>: UIViewControllerRepresentable {
     var sheetView: SheetView
     let controller = UIViewController()
     @Binding var showSheet: Bool
-    var onEnd: ()->()
-    
+    var onEnd: () -> Void
+
     func makeCoordinator() -> Coordinator {
-        return Coordinator(parent: self)
+        Coordinator(parent: self)
     }
-    
-    func makeUIViewController(context: Context) -> UIViewController {
+
+    func makeUIViewController(context _: Context) -> UIViewController {
         controller.view.backgroundColor = .clear
         return controller
     }
-    
+
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
         let presenting = uiViewController.presentedViewController != nil
-        if showSheet && !presenting {
+        if showSheet, !presenting {
             let sheetController = CustomHostingController(rootView: sheetView)
             sheetController.presentationController?.delegate = context.coordinator
             uiViewController.present(sheetController, animated: true)
-        } else if !showSheet && presenting {
+        } else if !showSheet, presenting {
             uiViewController.dismiss(animated: true)
         }
     }
-    
-    class Coordinator:NSObject, UISheetPresentationControllerDelegate {
+
+    class Coordinator: NSObject, UISheetPresentationControllerDelegate {
         var parent: HalfSheetHelper
         init(parent: HalfSheetHelper) {
             self.parent = parent
         }
-        
-        func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-            self.parent.showSheet = false
-            self.parent.onEnd()
+
+        func presentationControllerDidDismiss(_: UIPresentationController) {
+            parent.showSheet = false
+            parent.onEnd()
         }
     }
 }
@@ -95,9 +95,9 @@ class CustomHostingController<Content: View>: UIHostingController<Content> {
         if let presentationController = presentationController as? UISheetPresentationController {
             presentationController.detents = [
                 .medium(),
-                .large()
+                .large(),
             ]
-            
+
             presentationController.prefersGrabberVisible = true
         }
     }

@@ -401,6 +401,7 @@
 		B59E2DE527F3FA2800CB6B27 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B5C1142E293615CB007A6685 /* TODS Models */,
 				B59E2DE327F3F9DB00CB6B27 /* PlayerSearchModel.swift */,
 				B5A239AD27F6FFF000D7A9FE /* UserDataModel.swift */,
 			);
@@ -412,6 +413,13 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5C1142E293615CB007A6685 /* TODS Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "TODS Models";
 			sourceTree = "<group>";
 		};
 		B5D1F76627AA0EA40091AC2F /* SlideMenuUpdate */ = {
@@ -834,7 +842,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3B5M536V2W;
 				INFOPLIST_FILE = TennisTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -856,7 +864,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3B5M536V2W;
 				INFOPLIST_FILE = TennisTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

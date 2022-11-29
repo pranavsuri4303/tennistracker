@@ -17,25 +17,24 @@ final class MatchVM: ObservableObject {
     @Published var trackingStyle = TrackingType.basic
     @Published var matchIsOver = false
     @Published var winner = PlayerType.p1
-    
+
     // Serve
     @Published var serve = Serve.firstServe
     @Published var serveIn = false
-    
+
     // For Alerts..
     @Published var alert = false
     @Published var alertMsg = ""
     // Loading Screen...
     @Published var isLoading = false
     // Stats
-    @Published var P1 = Player()
-    @Published var P2 = Player()
-    
-    
+    @Published var P1 = Playered()
+    @Published var P2 = Playered()
+
     func getFriends() {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
-    
+
     func pointWon(by: PlayerType, deuce: DeuceType, servingPlayer: PlayerType) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         switch deuce {
@@ -56,7 +55,7 @@ final class MatchVM: ObservableObject {
                     P1.totalPtsWon += 1
                     print("\(P1.pts) - \(P2.pts)")
                     checkIfGameIsOver(p1: P1.pts, p2: P2.pts, deuce: deuce, servingPlayer: servingPlayer)
-                    
+
                 } else {
                     P1.pts += 1
                     P1.totalPtsWon += 1
@@ -67,7 +66,7 @@ final class MatchVM: ObservableObject {
                     P1.pts -= 1
                     P2.totalPtsWon += 1
                     checkIfGameIsOver(p1: P1.pts, p2: P2.pts, deuce: deuce, servingPlayer: servingPlayer)
-                    
+
                 } else {
                     P2.pts += 1
                     P2.totalPtsWon += 1
@@ -86,7 +85,7 @@ final class MatchVM: ObservableObject {
             }
         }
     }
-    
+
     func resetPts() {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         P1.pts = 0
@@ -122,8 +121,8 @@ final class MatchVM: ObservableObject {
             checkIfMatchIsOver(p1: P1.games, p2: P2.games)
         }
     }
-    
-    func checkIfGameIsOver(p1: Int, p2: Int, deuce: DeuceType, servingPlayer: PlayerType) {
+
+    func checkIfGameIsOver(p1 _: Int, p2 _: Int, deuce: DeuceType, servingPlayer: PlayerType) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         switch deuce {
         case .noDeuce:
@@ -162,7 +161,7 @@ final class MatchVM: ObservableObject {
             }
         }
     }
-    
+
     func checkIfMatchIsOver(p1: Int, p2: Int) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         if p1 == 6 || p2 == 6 {
@@ -180,7 +179,7 @@ final class MatchVM: ObservableObject {
             }
         }
     }
-    
+
     func aceCounter(server: PlayerType) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         switch server {
@@ -189,10 +188,10 @@ final class MatchVM: ObservableObject {
         case .p2:
             P2.aces += 1
         case .none:
-            return 
+            return
         }
     }
-    
+
     func firstServe() {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
@@ -204,7 +203,7 @@ final class MatchVM: ObservableObject {
     func doubleFault() {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
-    
+
     func ptsToScore(pts: Int) -> String {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         switch pts {
@@ -261,7 +260,7 @@ enum Serve {
     case secondServe
 }
 
-struct Player {
+struct Playered {
     var name = ""
     // Game Scoring
     var pts = 0

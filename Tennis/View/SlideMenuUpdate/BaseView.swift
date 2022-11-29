@@ -10,23 +10,23 @@ import SwiftUI
 struct BaseView: View {
     @State var currentTab: CurrentTab = .profile
     @State var showMenu: Bool = false
-    
+
     @State var offset: CGFloat = 0
     @State var lastStoredOffset: CGFloat = 0
-    
+
     @GestureState var gestureOffset: CGFloat = 0
-    
+
     @StateObject var vm = BaseViewVM()
-    
+
     var body: some View {
         let sideBarWidth = getRect().width - 90
-        
+
         VStack {
             HStack(spacing: 0) {
                 SideMenuView(currentSelectedView: $currentTab, showMenu: $showMenu)
                     .environmentObject(vm)
-                NavigationView{
-                    VStack{
+                NavigationView {
+                    VStack {
                         switch currentTab {
                         case .string: StringsListView()
                         case .profile: ProfileView()
@@ -52,21 +52,21 @@ struct BaseView: View {
                 .background(Color("bg").ignoresSafeArea(.all, edges: .all))
                 .frame(width: getRect().width)
                 .overlay(Rectangle()
-                            .fill(Color.primary.opacity(Double((offset / sideBarWidth) / 5)))
-                            .ignoresSafeArea(.container, edges: .vertical)
-                            .onTapGesture {
-                    withAnimation { showMenu.toggle() }
-                    
-                })
+                    .fill(Color.primary.opacity(Double((offset / sideBarWidth) / 5)))
+                    .ignoresSafeArea(.container, edges: .vertical)
+                    .onTapGesture {
+                        withAnimation { showMenu.toggle() }
+
+                    })
             }
             .frame(width: getRect().width + sideBarWidth)
             .offset(x: -sideBarWidth / 2)
             .offset(x: offset > 0 ? offset : 0)
             .gesture(DragGesture()
-                        .updating($gestureOffset, body: { value, out, _ in
-                out = value.translation.width
-            })
-                        .onEnded(onEnd(value:)))
+                .updating($gestureOffset, body: { value, out, _ in
+                    out = value.translation.width
+                })
+                .onEnded(onEnd(value:)))
         }
         .background(Color("bg"))
         .animation(.easeOut, value: offset == 0)
@@ -88,37 +88,34 @@ struct BaseView: View {
             vm.fetchUserData()
         }
     }
-    
+
     func onChange() {
         let sideBarWidth = getRect().width - 90
         offset = (gestureOffset != 0) ? ((gestureOffset + lastStoredOffset) < sideBarWidth ? (gestureOffset + lastStoredOffset) : offset) : offset
         offset = (gestureOffset + lastStoredOffset) > 0 ? offset : 0
     }
-    
+
     func onEnd(value: DragGesture.Value) {
         let sideBarWidth = getRect().width - 90
         let translation = value.translation.width
-        
+
         withAnimation {
             if translation > 0 {
                 if translation > (sideBarWidth / 2) {
                     offset = sideBarWidth
                     showMenu = true
-                }
-                else {
+                } else {
                     if offset == sideBarWidth || showMenu {
                         return
                     }
                     offset = 0
                     showMenu = false
                 }
-            }
-            else {
+            } else {
                 if -translation > (sideBarWidth / 2) {
                     offset = 0
                     showMenu = false
-                }
-                else {
+                } else {
                     if offset == 0 || !showMenu {
                         return
                     }

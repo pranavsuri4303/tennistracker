@@ -5,11 +5,11 @@
 //  Created by Pranav Suri on 29/1/21.
 //
 
-import SwiftUI
-import LocalAuthentication
 import Firebase
+import LocalAuthentication
+import SwiftUI
 
-final class MatchVM : ObservableObject{
+final class MatchVM: ObservableObject {
     // Games
     @Published var server = PlayerType.p1
     @Published var noOfSets = 1
@@ -30,89 +30,90 @@ final class MatchVM : ObservableObject{
     // Stats
     @Published var P1 = Player()
     @Published var P2 = Player()
-    
-    
+
     func getFriends() {
         print("Fetching Friends")
     }
-    
-    func pointWon(by: PlayerType, deuce: DeuceType, servingPlayer: PlayerType){
+
+    func pointWon(by: PlayerType, deuce: DeuceType, servingPlayer: PlayerType) {
         switch by {
         case .p1:
-            self.P1.pts += 1
+            P1.pts += 1
             checkIfGameIsOver(p1: P1.pts, p2: P2.pts, deuce: deuce, servingPlayer: servingPlayer)
         case .p2:
-            self.P2.pts += 1
+            P2.pts += 1
             checkIfGameIsOver(p1: P1.pts, p2: P2.pts, deuce: deuce, servingPlayer: servingPlayer)
         }
     }
+
     func resetPts() {
         P1.pts = 0
         P2.pts = 0
     }
+
     func resetGames() {
         P1.games = 0
         P2.games = 0
     }
+
     func changeServer(oldServer: PlayerType) {
-        if oldServer == .p1{
+        if oldServer == .p1 {
             server = .p2
-        }else if oldServer == .p2{
+        } else if oldServer == .p2 {
             server = .p1
         }
     }
+
     func gameWon(by: PlayerType, servingPlayer: PlayerType) {
         print(by)
-        if by == .p1{
+        if by == .p1 {
             P1.games += 1
             changeServer(oldServer: servingPlayer)
             resetPts()
             checkIfMatchIsOver(p1: P1.games, p2: P2.games)
-        }else if by == .p2{
+        } else if by == .p2 {
             P2.games += 1
             changeServer(oldServer: servingPlayer)
             resetPts()
             checkIfMatchIsOver(p1: P1.games, p2: P2.games)
         }
     }
-    
-    func checkIfGameIsOver(p1: Int, p2: Int, deuce: DeuceType, servingPlayer: PlayerType){
+
+    func checkIfGameIsOver(p1: Int, p2: Int, deuce: DeuceType, servingPlayer: PlayerType) {
         switch deuce {
         case .noDeuce:
-            print(p1,p2)
+            print(p1, p2)
             if P1.pts == 4 || P2.pts == 4 {
-                if P1.pts > P2.pts{
+                if P1.pts > P2.pts {
                     gameWon(by: .p1, servingPlayer: servingPlayer)
-                }else if P2.pts > P1.pts{
+                } else if P2.pts > P1.pts {
                     gameWon(by: .p2, servingPlayer: servingPlayer)
                 }
-                
             }
         case .deuce:
-            print(p1,p2)
+            print(p1, p2)
         case .oneDeuce:
-            print(p1,p2)
+            print(p1, p2)
         }
     }
-    
+
     func checkIfMatchIsOver(p1: Int, p2: Int) {
         if p1 == 6 || p2 == 6 {
-            if p1>p2 {
+            if p1 > p2 {
 //                resetPts()
 //                resetGames()
                 winner = .p1
-                self.matchIsOver.toggle()
+                matchIsOver.toggle()
                 print("Player 1 wins")
-            }else if p1<p2 {
+            } else if p1 < p2 {
 //                resetPts()
 //                resetGames()
                 winner = .p2
-                self.matchIsOver.toggle()
-
+                matchIsOver.toggle()
             }
         }
     }
-    
+
     func aceCounter(server: PlayerType) {
         switch server {
         case .p1:
@@ -123,15 +124,13 @@ final class MatchVM : ObservableObject{
             print("Player 2 aces : \(P2.aces)")
         }
     }
-    
-    func firstServe() {
-    }
-    func secondServe() {
-    }
-    func doubleFault() {
-    }
-    
-    
+
+    func firstServe() {}
+
+    func secondServe() {}
+
+    func doubleFault() {}
+
     func ptsToScore(pts: Int) -> String {
         switch pts {
         case 0:
@@ -143,9 +142,9 @@ final class MatchVM : ObservableObject{
         case 3:
             return "40"
         case 4:
-            if self.deuceType == .oneDeuce{
+            if deuceType == .oneDeuce {
                 return "AD"
-            }else{
+            } else {
                 return "0"
             }
         case 5:
@@ -167,11 +166,13 @@ enum DeuceType {
     case noDeuce
     case oneDeuce
 }
+
 enum TrackingType {
     case basic
     case advanced
     case expert
 }
+
 enum Serve {
     case firstServe
     case secondServe
@@ -192,4 +193,3 @@ struct Player {
     var totalSecondServes = 0
     var secondServesIn = 0
 }
-

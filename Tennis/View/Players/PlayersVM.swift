@@ -14,12 +14,10 @@ import SwiftUI
 class PlayersVM: ObservableObject {
     private let index = SearchClient(appID: "FLI02CKHLZ", apiKey: "da18a12522a494f64204acf9c6f09e6c").index(withName: "dev_users")
     @Published var hits: [Hit] = []
-//    @Published var viewState = ViewState.state
-    
     @Published var pageNo = 0
     @Published var pages = 0
     @Published var totalHits = 0
-    
+
     func resetData() {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         pageNo = 0
@@ -39,22 +37,22 @@ class PlayersVM: ObservableObject {
         let query = Query("\(queryString)")
             .set(\.page, to: pageNo)
         index.search(query: query) { result in
-            if case .success(let response) = result {
-                self.pages = response.nbPages ?? 0
-                self.pageNo = response.page ?? 1
-                self.totalHits = response.nbHits ?? 0
+            if case let .success(response) = result {
+                DispatchQueue.main.async {
+                    self.pages = response.nbPages ?? 0
+                    self.pageNo = response.page ?? 1
+                    self.totalHits = response.nbHits ?? 0
+                }
                 do {
                     self.hits += try response.extractHits()
-                } catch { }
+                } catch {}
             }
         }
     }
 
-    func getImageURL(uid: String) {
+    func getImageURL(uid _: String) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
-    
-
 
     func generateImageURL(uid: String) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")

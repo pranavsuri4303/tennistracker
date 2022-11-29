@@ -42,7 +42,7 @@ struct CurrentMatchStatistics: View {
                             .foregroundColor(Color("green"))
                             .multilineTextAlignment(.leading)
                     }.padding()
-                    
+
                 }.background(Color(.white).opacity(0.1).cornerRadius(8))
                     .padding()
             }
@@ -51,14 +51,14 @@ struct CurrentMatchStatistics: View {
                 PlayerStatsCard(player: vm.P2)
             }.edgesIgnoringSafeArea(.all)
             Spacer()
-            
+
         }.background(Color("bg").edgesIgnoringSafeArea(.all))
     }
 }
 
 struct PlayerStatsCard: View {
-    @State var player: Player
-    
+    @State var player: Playered
+
     var body: some View {
         VStack(spacing: 10) {
             HStack {
@@ -75,7 +75,7 @@ struct PlayerStatsCard: View {
                 Text("\(player.totalPtsWon)")
                     .foregroundColor(Color("green"))
                     .font(.headline)
-                
+
             }.padding(.horizontal)
             HStack {
                 Text("First serve %")
@@ -85,7 +85,7 @@ struct PlayerStatsCard: View {
                 Text("Serve %")
                     .foregroundColor(Color("green"))
                     .font(.headline)
-                
+
             }.padding(.horizontal)
             HStack {
                 Text("Second serve %")
@@ -95,7 +95,7 @@ struct PlayerStatsCard: View {
                 Text("\(player.pts)")
                     .foregroundColor(Color("green"))
                     .font(.headline)
-                
+
             }.padding(.horizontal)
             HStack {
                 Text("Aces")
@@ -105,7 +105,7 @@ struct PlayerStatsCard: View {
                 Text("\(player.pts)")
                     .foregroundColor(Color("green"))
                     .font(.headline)
-                
+
             }.padding(.horizontal)
             HStack {
                 Text("Double faults")
@@ -115,7 +115,7 @@ struct PlayerStatsCard: View {
                 Text("\(player.pts)")
                     .foregroundColor(Color("green"))
                     .font(.headline)
-                
+
             }.padding(.horizontal)
         }
     }

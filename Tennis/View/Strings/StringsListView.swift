@@ -11,32 +11,31 @@ struct StringsListView: View {
     @State var showingAddString = false
     @EnvironmentObject var baseVM: BaseViewVM
     @ObservedObject var vm = StringsVM()
-    
+
     var body: some View {
-        HStack{
-            if let strings = baseVM.userData?.strings{
-                List{
-                    ForEach(strings, id: \.self){ string in
+        HStack {
+            if let strings = baseVM.userData?.strings {
+                List {
+                    ForEach(strings, id: \.self) { string in
                         StringRowView(stringRowData: string)
                             .listRowBackground(Color.clear)
                             .listRowInsets(.init())
                     }
                     .listRowSeparator(.hidden)
-                    HStack{
+                    HStack {
                         Spacer()
                         Text("Swipe left ← to delete string entry.")
                             .foregroundColor(.secondary)
 
                         Spacer()
                     }
-                        .listRowBackground(Color.clear)
-                        .listRowInsets(.init())
-                        .listRowSeparator(.hidden)
-
+                    .listRowBackground(Color.clear)
+                    .listRowInsets(.init())
+                    .listRowSeparator(.hidden)
                 }
                 .listStyle(.plain)
                 .frame(width: getRect().width)
-            }else{
+            } else {
                 RDEmptyListPlaceholder(headlineText: "Add a string now!", systemImageName: "plus.circle")
             }
         }
@@ -44,12 +43,9 @@ struct StringsListView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 RDBadgeButton(systemImageTitle: "plus",
                               action: { showingAddString.toggle() })
-                .halfSheet(showSheet: $showingAddString) { AddNewStringView(showingAddString: $showingAddString) }
+                    .halfSheet(showSheet: $showingAddString) { AddNewStringView(showingAddString: $showingAddString) }
             onEnd: { print("Add String View Closed") }
             }
         })
     }
-    
 }
-
-

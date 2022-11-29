@@ -5,8 +5,8 @@
 //  Created by Pranav Suri on 6/2/21.
 //
 
-import SwiftUI
 import CachedAsyncImage
+import SwiftUI
 
 struct FriendsListView: View {
     @StateObject var friendRequestVM = FriendsVM()
@@ -55,7 +55,7 @@ struct FriendsListView: View {
 //                                    firstName: "Test",
 //                                    lastName: "9")
 //                }.padding(.horizontal, 8)
-                
+
                 Spacer()
             }
         }
@@ -70,42 +70,39 @@ struct FriendsListView: View {
     }
 }
 
-
-
 struct FriendsListCell: View {
     let player: FriendsCellModel
-    
+
     var body: some View {
-        HStack(spacing: 8){
+        HStack(spacing: 8) {
             CachedAsyncImage(url: URL(string: player.imagePath)) { image in
                 image
                     .resizable()
                     .scaledToFill()
-                    .frame(width: getRect().width*0.15, height: getRect().width*0.15)
+                    .frame(width: getRect().width * 0.15, height: getRect().width * 0.15)
                     .clipShape(Circle())
             } placeholder: {
-                ZStack{
+                ZStack {
                     Circle()
-                        .frame(width: getRect().width*0.15, height: getRect().width*0.15)
+                        .frame(width: getRect().width * 0.15, height: getRect().width * 0.15)
                         .foregroundColor(.white.opacity(0.1))
                     ProgressView()
-                    
                 }
             }
-            VStack{
-                HStack{
+            VStack {
+                HStack {
                     Text("\(player.name)")
                         .font(.title2)
                     Spacer()
                 }
-                HStack{
+                HStack {
                     Text("\(String(player.yob).replacingOccurrences(of: ",", with: "")) | \(player.nationality)")
                         .foregroundColor(.secondary)
                     Spacer()
                 }
             }
             Spacer()
-            VStack{
+            VStack {
                 Image(systemName: "arrow.right")
                     .foregroundColor(Color("green"))
                     .font(.title3)

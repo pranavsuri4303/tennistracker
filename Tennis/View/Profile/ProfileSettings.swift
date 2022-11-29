@@ -9,11 +9,11 @@ import ImagePickerView
 import SwiftUI
 
 struct ProfileSettings: View {
-    @Binding var profileSettingsPresented: Bool    
+    @Binding var profileSettingsPresented: Bool
     // Image
     @State var isImagePickerViewPresented = false
     @State var pickedImage: UIImage? = nil
-    
+
     var body: some View {
         ZStack {
             Color("bg")
@@ -35,17 +35,17 @@ struct ProfileSettings: View {
                     GeometryReader { geo in
                         ZStack {
                             Circle()
-                                .frame(width: geo.size.width*0.3 + 10, height: geo.size.width*0.3 + 10, alignment: .center)
+                                .frame(width: geo.size.width * 0.3 + 10, height: geo.size.width * 0.3 + 10, alignment: .center)
                                 .foregroundColor(.white.opacity(0.3))
                                 .overlay(Image("Male")
                                     .resizable()
-                                    .frame(width: geo.size.width*0.3, height: geo.size.width*0.3, alignment: .center)
+                                    .frame(width: geo.size.width * 0.3, height: geo.size.width * 0.3, alignment: .center)
                                     .aspectRatio(contentMode: .fit))
                             VStack {
                                 Spacer()
                                 HStack {
                                     Spacer()
-                                
+
                                     Button(action: {
                                         isImagePickerViewPresented.toggle()
                                     }, label: {
@@ -65,9 +65,9 @@ struct ProfileSettings: View {
                                     }
                                 }
                             }
-                        }.frame(width: geo.size.width*0.3 + 10, height: geo.size.width*0.3 + 10, alignment: .center)
+                        }.frame(width: geo.size.width * 0.3 + 10, height: geo.size.width * 0.3 + 10, alignment: .center)
                     }
-                    
+
                 }.padding(.horizontal)
                 Spacer()
             }

@@ -13,7 +13,7 @@ struct ExpertMatchScoringView:
     @Binding var isPresented: Bool
     // Players Names
     @StateObject var vm: MatchVM
-    
+
     @State var dashboardIsPresented = false
     var body: some View {
         VStack {
@@ -69,7 +69,7 @@ struct ExpertMatchScoringView:
                                 }
                             }
                         }
-                        
+
                     }.padding()
                     Spacer()
 //                    VStack(spacing: 10){
@@ -102,7 +102,7 @@ struct ExpertMatchScoringView:
                             .foregroundColor(Color("green"))
                             .multilineTextAlignment(.leading)
                     }.padding()
-                    
+
                 }.background(Color(.white).opacity(0.1).cornerRadius(8))
                     .padding()
             }
@@ -121,9 +121,9 @@ struct ExpertMatchScoringView:
                             .foregroundColor(Color("green"))
                             .hidden()
                     }
-                    
+
                 }.padding()
-                
+
             }.background(Color(.white).opacity(0.1).cornerRadius(8))
                 .padding(.horizontal)
             HStack {
@@ -185,7 +185,7 @@ struct ExpertMatchScoringView:
                             .foregroundColor(Color("green"))
                             .hidden()
                     }
-                    
+
                 }.padding()
             }.background(Color(.white).opacity(0.1).cornerRadius(8))
                 .padding(.horizontal)
@@ -204,7 +204,7 @@ struct ExpertMatchScoringView:
                     .background(Color("Orange").opacity(0.5).cornerRadius(8))
 
             }.padding(.horizontal)
-            
+
             Spacer()
         }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
     }

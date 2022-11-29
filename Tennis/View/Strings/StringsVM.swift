@@ -12,26 +12,26 @@ import Firebase
 class StringsVM: ObservableObject {
     @Published var newString = StringModel(cross: 50, mains: 50, name: "", date: Date())
     @Published var sortType: Sort = .dateNewToOld
-    
+
     @Published var alert = false
     @Published var alertMsg = ""
     @Published var isLoading = false
-    
+
     let db = Firestore.firestore().collection("users")
     private let uidStr = Auth.auth().currentUser?.uid
 
-    func deleteString(withData data: StringModel) {
+    func deleteString(withData _: StringModel) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
-    
+
     func addString(completion: @escaping (Result<Data?, Error>) -> Void) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         isLoading = true
-        FSPath.users.document(uidStr!).updateData(["strings" : FieldValue.arrayUnion([newString.firestoreData])]) { err in
-            if let err = err{
+        FSPath.users.document(uidStr!).updateData(["strings": FieldValue.arrayUnion([newString.firestoreData])]) { err in
+            if let err = err {
                 self.isLoading = false
                 completion(.failure(err))
-            }else{
+            } else {
                 self.isLoading = false
                 completion(.success(nil))
             }

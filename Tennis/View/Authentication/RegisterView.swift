@@ -10,21 +10,21 @@ import SwiftUI
 struct RegisterView: View {
     @ObservedObject var vm = RegisterVM()
     @Binding var registerViewPresented: Bool
-    
+
     @State var newUserViewPresented = false
     @State private var alertShown = false
     @State private var errorMessage = ""
-    
+
     @State var startAnimate = false
     var body: some View {
         ZStack {
             VStack {
                 Spacer(minLength: 0)
-                
+
                 Image("signup")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                // Dynamic Frame...
+                    // Dynamic Frame...
                     .padding([.leading, .bottom, .trailing], 35)
                     .padding()
                 HStack {
@@ -33,17 +33,17 @@ struct RegisterView: View {
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(.white)
-                        
+
                         Text("Please sign up to create account")
                             .foregroundColor(Color(.white).opacity(0.5))
                     })
-                        .padding(.bottom)
-                    
+                    .padding(.bottom)
+
                     Spacer(minLength: 0)
                 }
                 .padding()
                 .padding(.leading, 15)
-                
+
                 RDTextField(placeholder: "Email", text: $vm.userData.email, imageName: "envelope", isSecure: false, isPicker: false)
                     .padding(.horizontal)
 
@@ -51,46 +51,46 @@ struct RegisterView: View {
                     .padding(.horizontal)
 
                 RDButton(withTitle: "REGISTER", performAction: {
-                    vm.createAccount() { result in
+                    vm.createAccount { result in
                         switch result {
                         case .success:
                             newUserViewPresented.toggle()
-                        case .failure(let error):
+                        case let .failure(error):
                             self.errorMessage = error.localizedDescription
                             self.alertShown = true
                         }
                     }
                 })
-                    .opacity(vm.userData.email != "" && vm.password != "" && (vm.userData.gender != "Male" || vm.userData.gender != "Female") ? 1 : 0.5)
-                    .disabled(vm.userData.email != "" && vm.password != "" && (vm.userData.gender != "Male" || vm.userData.gender != "Female") ? false : true)
-                    .padding(.top)
-                
+                .opacity(vm.userData.email != "" && vm.password != "" && (vm.userData.gender != "Male" || vm.userData.gender != "Female") ? 1 : 0.5)
+                .disabled(vm.userData.email != "" && vm.password != "" && (vm.userData.gender != "Male" || vm.userData.gender != "Female") ? false : true)
+                .padding(.top)
+
                 Button(action: {}, label: {
                     Image("googleLogo")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 40, height: 40, alignment: .center)
-                    
+
                 })
-                    .padding(.all)
-                
+                .padding(.all)
+
                 // SignUp...
-                
+
                 HStack(spacing: 5) {
                     Text("Already have an account? ")
                         .foregroundColor(Color(.white).opacity(0.6))
-                    
+
                     Button("Login") {
                         registerViewPresented.toggle()
                     }
                     .foregroundColor(Color("green"))
                 }
-                
+
                 .padding(.vertical)
             }
             .background(Color("bg").ignoresSafeArea(.all, edges: .all))
             .animation(startAnimate ? .easeOut : .none)
-            
+
             if vm.isLoading {
                 LoadingScreenView()
             }
@@ -104,7 +104,7 @@ struct RegisterView: View {
             NewUserView(isPresented: $newUserViewPresented, vm: vm)
         })
         .alert(errorMessage, isPresented: $alertShown) {
-            Button("Ok"){
+            Button("Ok") {
                 alertShown = false
             }
         }

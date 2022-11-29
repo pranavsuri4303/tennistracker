@@ -5,18 +5,18 @@
 //  Created by Pranav Suri on 3/2/21.
 //
 
+import CachedAsyncImage
 import Firebase
 import SwiftUI
-import CachedAsyncImage
 
 struct ProfileView: View {
     @AppStorage("status") var logged = false
     @EnvironmentObject var vm: BaseViewVM
     @State private var goToSettings = false
-    
+
     var body: some View {
         VStack {
-            ScrollView(.vertical, showsIndicators: false){
+            ScrollView(.vertical, showsIndicators: false) {
                 GeometryReader { reader in
                     // Type 2 Parollax....
                     if reader.frame(in: .global).minY > -480 {
@@ -26,9 +26,9 @@ struct ProfileView: View {
                                     .resizable()
                                     .padding(.top, 90)
                                     .aspectRatio(contentMode: .fill)
-                                // moving View Up....
+                                    // moving View Up....
                                     .offset(y: -reader.frame(in: .global).minY)
-                                // going to add parallax effect....
+                                    // going to add parallax effect....
                                     .frame(width: getRect().width, height: reader.frame(in: .global).minY > 0 ? reader.frame(in: .global).minY + 480 : 480)
 
                             } placeholder: {
@@ -39,9 +39,9 @@ struct ProfileView: View {
                                 .resizable()
                                 .padding(.top, 90)
                                 .aspectRatio(contentMode: .fill)
-                            // moving View Up....
+                                // moving View Up....
                                 .offset(y: -reader.frame(in: .global).minY)
-                            // going to add parallax effect....
+                                // going to add parallax effect....
                                 .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY > 0 ? reader.frame(in: .global).minY + 480 : 480)
                         }
                     }
@@ -63,7 +63,7 @@ struct ProfileView: View {
                     Divider()
                         .foregroundColor(.white)
                         .frame(height: 15, alignment: /*@START_MENU_TOKEN@*/ .center/*@END_MENU_TOKEN@*/)
-                    
+
                     HStack {
                         Text("Current String")
                             .font(.title3)
@@ -125,4 +125,3 @@ struct ProfileView: View {
 //        })
     }
 }
-

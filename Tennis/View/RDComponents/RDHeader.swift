@@ -41,4 +41,3 @@ struct RDHeader: View {
         .padding(.bottom, 8)
     }
 }
-

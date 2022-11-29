@@ -28,9 +28,9 @@ struct PlayerProfileView: View {
                 .background(Color("bg").edgesIgnoringSafeArea(.all))
             ScrollView(.vertical, showsIndicators: false, content: {
                 GeometryReader { reader in
-                    
+
                     // Type 2 Parollax....
-                    
+
                     if reader.frame(in: .global).minY > -480 {
                         if let playerImage = playerModel.downloadedImage {
                             Image(uiImage: playerImage)
@@ -42,7 +42,7 @@ struct PlayerProfileView: View {
                                 // going to add parallax effect....
                                 .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY > 0 ? reader.frame(in: .global).minY + 480 : 480)
                                 .transition(.asymmetric(insertion: .scale, removal: .opacity))
-                            
+
                         } else {
                             Image(playerModel.gender == "Male" ? "Male" : "Female")
                                 .resizable()

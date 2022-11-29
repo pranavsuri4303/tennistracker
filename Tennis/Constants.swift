@@ -5,8 +5,8 @@
 //  Created by Pranav Suri on 21/1/21.
 //
 
-import FirebaseAuth
 import Firebase
+import FirebaseAuth
 import Foundation
 enum AuthState: String {
     case success = "Success"
@@ -89,6 +89,7 @@ enum Sort: CaseIterable {
 }
 
 // MARK: Firestore Paths
-struct FSPath {
+
+enum FSPath {
     static let users = Firestore.firestore().collection("users")
 }

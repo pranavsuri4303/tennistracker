@@ -15,27 +15,26 @@ struct RDTextField: View {
     var isPicker: Bool
     @State var data: [String] = []
     @State var selectionIndex = 0
-    
 
     var body: some View {
-        HStack{
+        HStack {
             Image(systemName: "\(imageName)")
                 .foregroundColor(.white)
                 .frame(width: 30)
                 .frame(height: 20)
-            if isPicker{
+            if isPicker {
                 TextFieldWithPickerView(data: $data,
                                         placeholder: placeholder,
                                         selectionIndex: self.$selectionIndex,
                                         selectedText: $text)
                     .frame(height: 0)
-            }else{
-                if isSecure{
+            } else {
+                if isSecure {
                     SecureField("\(placeholder)", text: $text)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
                         .frame(height: 0)
-                }else{
+                } else {
                     TextField("\(placeholder)", text: $text)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
@@ -44,9 +43,8 @@ struct RDTextField: View {
             }
         }
         .padding(12)
-        .background(Color(.white).opacity(text=="" ? 0.04 : 0.12))
+        .background(Color(.white).opacity(text == "" ? 0.04 : 0.12))
         .cornerRadius(12)
         .preferredColorScheme(.dark)
     }
 }
-

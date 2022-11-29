@@ -9,10 +9,9 @@ import SwiftUI
 
 struct ClubsView: View {
     var body: some View {
-        VStack{
+        VStack {
             Text("Clubs")
-        }        .frame(width: getRect().width, height: getRect().height)
-
+        }.frame(width: getRect().width, height: getRect().height)
     }
 }
 

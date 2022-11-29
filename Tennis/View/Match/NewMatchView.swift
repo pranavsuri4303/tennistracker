@@ -14,7 +14,7 @@ struct NewMatchView: View {
     @State var matchScorerIsPresented = false
     @State var selectionP1 = 0
     @State var selectionP2 = 0
-    
+
     @State private var p1Other = false
     @State private var p2Other = false
     var body: some View {
@@ -27,12 +27,12 @@ struct NewMatchView: View {
                     .multilineTextAlignment(.leading)
                     .padding(.top)
             }
-            if p1Other{
+            if p1Other {
                 RDTextField(placeholder: "Player 1 Name", text: $vm.P1.name, imageName: "1.circle", isSecure: false, isPicker: false)
-            } else{
-                RDTextField(placeholder: "Select Player 1", text: $vm.P1.name, imageName: "1.circle", isSecure: false, isPicker: true, data: (baseVM.userData?.friends)!.map({ $0.name }), selectionIndex: selectionP1)
+            } else {
+                RDTextField(placeholder: "Select Player 1", text: $vm.P1.name, imageName: "1.circle", isSecure: false, isPicker: true, data: (baseVM.userData?.friends)!.map(\.name), selectionIndex: selectionP1)
             }
-            
+
             VStack(alignment: .center) {
                 Button(action: {
                     self.p1Other.toggle()
@@ -47,10 +47,10 @@ struct NewMatchView: View {
                     }
                 })
             }
-            
-            if p2Other{
+
+            if p2Other {
                 RDTextField(placeholder: "Player 2 Name", text: $vm.P2.name, imageName: "2.circle", isSecure: false, isPicker: false)
-            } else{
+            } else {
                 RDTextField(placeholder: "Select Player 2", text: $vm.P2.name, imageName: "2.circle", isSecure: false, isPicker: true, data: friendsVM.friendsListP2, selectionIndex: selectionP2)
             }
             VStack(alignment: .center) {
@@ -67,23 +67,23 @@ struct NewMatchView: View {
                     }
                 })
             }
-            
-                                HStack {
-                                    Text("Server")
-                                        .foregroundColor(.white)
-                                    Spacer()
-                                    Picker(selection: $vm.server, label: Text("TEST"), content: {
-                                        Text("\(vm.P1.name)")
-                                            .tag(PlayerType.p1)
-                                            .foregroundColor(.white)
-                                        Text("\(vm.P2.name)")
-                                            .tag(PlayerType.p2)
-                                            .foregroundColor(.white)
-            
-                                    })
-                                    .pickerStyle(SegmentedPickerStyle())
-                                }.padding(.horizontal)
-            
+
+            HStack {
+                Text("Server")
+                    .foregroundColor(.white)
+                Spacer()
+                Picker(selection: $vm.server, label: Text("TEST"), content: {
+                    Text("\(vm.P1.name)")
+                        .tag(PlayerType.p1)
+                        .foregroundColor(.white)
+                    Text("\(vm.P2.name)")
+                        .tag(PlayerType.p2)
+                        .foregroundColor(.white)
+
+                })
+                .pickerStyle(SegmentedPickerStyle())
+            }.padding(.horizontal)
+
             Picker(selection: $vm.deuceType, label: Text(""), content: {
                 Text("Deuce")
                     .foregroundColor(.white)
@@ -117,25 +117,25 @@ struct NewMatchView: View {
 //                //                                    .foregroundColor(.white)
 //                //                        }).pickerStyle(SegmentedPickerStyle())
 //            }.padding(.horizontal)
-            
+
             Spacer()
             RDButton(withTitle: "Start Match",
                      performAction: { matchScorerIsPresented.toggle() })
-            .fullScreenCover(isPresented: $matchScorerIsPresented, content: {
-                if vm.trackingStyle == .basic {
-                    BasicMatchScoringView(isPresented: $matchScorerIsPresented, vm: vm)
-                } else if vm.trackingStyle == .advanced {
-                    AdvancedMatchScoringView(isPresented: $matchScorerIsPresented, vm: vm)
-                } else {
-                    ExpertMatchScoringView(isPresented: $matchScorerIsPresented, vm: vm)
-                }
-                
-            })
-            .opacity(vm.P2.name == "" || vm.P1.name == "" || vm.P1.name == vm.P2.name ? 0.5 : 1)
-            .disabled(vm.P2.name == "" || vm.P1.name == "" || vm.P1.name == vm.P2.name ? true : false)
-            .alert(isPresented: $vm.alert, content: {
-                Alert(title: Text("Error"), message: Text(vm.alertMsg), dismissButton: .destructive(Text("Ok")))
-            })
+                .fullScreenCover(isPresented: $matchScorerIsPresented, content: {
+                    if vm.trackingStyle == .basic {
+                        BasicMatchScoringView(isPresented: $matchScorerIsPresented, vm: vm)
+                    } else if vm.trackingStyle == .advanced {
+                        AdvancedMatchScoringView(isPresented: $matchScorerIsPresented, vm: vm)
+                    } else {
+                        ExpertMatchScoringView(isPresented: $matchScorerIsPresented, vm: vm)
+                    }
+
+                })
+                .opacity(vm.P2.name == "" || vm.P1.name == "" || vm.P1.name == vm.P2.name ? 0.5 : 1)
+                .disabled(vm.P2.name == "" || vm.P1.name == "" || vm.P1.name == vm.P2.name ? true : false)
+                .alert(isPresented: $vm.alert, content: {
+                    Alert(title: Text("Error"), message: Text(vm.alertMsg), dismissButton: .destructive(Text("Ok")))
+                })
         }
         .background(Color("bg").ignoresSafeArea(.all, edges: .all))
         if vm.isLoading {
@@ -149,4 +149,3 @@ struct NewMatchView_Previews: PreviewProvider {
         NewMatchView()
     }
 }
-

@@ -5,9 +5,9 @@
 //  Created by Pranav Suri on 23/1/21.
 //
 
-import SwiftUI
-import FirebaseFirestoreSwift
 import Firebase
+import FirebaseFirestoreSwift
+import SwiftUI
 
 struct AddNewStringView: View {
     @StateObject var vm = StringsVM()
@@ -26,13 +26,13 @@ struct AddNewStringView: View {
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                         })
-                        
+
                         Spacer(minLength: 0)
                     }.padding()
-                    
+
                     RDTextField(placeholder: "String name", text: $vm.newString.name, imageName: "number", isSecure: false, isPicker: false)
                         .padding(.horizontal)
-                    
+
                     HStack(spacing: 30) {
                         VStack(alignment: .center, spacing: 8) {
                             Text("\(vm.newString.mains)")
@@ -41,7 +41,7 @@ struct AddNewStringView: View {
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
                                 .padding(.top)
-                            Stepper("", value: $vm.newString.mains, in: 35...65)
+                            Stepper("", value: $vm.newString.mains, in: 35 ... 65)
                                 .background(Color("green"))
                                 .cornerRadius(8)
                                 .labelsHidden()
@@ -52,7 +52,7 @@ struct AddNewStringView: View {
                                 .multilineTextAlignment(.center)
                                 .padding(.bottom)
                         }.background(Color(.white).opacity(0.1).cornerRadius(8))
-                        
+
                         VStack(alignment: .center, spacing: 8) {
                             Text("\(vm.newString.cross)")
                                 .font(.title)
@@ -60,7 +60,7 @@ struct AddNewStringView: View {
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
                                 .padding(.top)
-                            Stepper("", value: $vm.newString.cross, in: 35...65)
+                            Stepper("", value: $vm.newString.cross, in: 35 ... 65)
                                 .background(Color("green"))
                                 .cornerRadius(8)
                                 .labelsHidden()
@@ -71,9 +71,9 @@ struct AddNewStringView: View {
                                 .multilineTextAlignment(.center)
                                 .padding(.bottom)
                         }.background(Color(.white).opacity(0.1).cornerRadius(8))
-                        
+
                     }.padding(.horizontal)
-                    
+
                     HStack {
                         Text("Restringing date")
                             .font(.headline)
@@ -86,13 +86,13 @@ struct AddNewStringView: View {
                             .cornerRadius(8)
                             .accentColor(Color("green"))
                     }.padding(.horizontal)
-                    
+
                     Spacer()
                     Button(action: {
                         vm.newString.date = dateSelected
                         vm.addString { res in
-                            switch res{
-                            case .failure(let err):
+                            switch res {
+                            case let .failure(err):
                                 self.alertShown = true
                                 self.errorMessage = err.localizedDescription
                             case .success:
@@ -108,7 +108,7 @@ struct AddNewStringView: View {
                         })
                 }
                 .alert(errorMessage, isPresented: $alertShown) {
-                    Button("Ok"){
+                    Button("Ok") {
                         alertShown = false
                     }
                 }

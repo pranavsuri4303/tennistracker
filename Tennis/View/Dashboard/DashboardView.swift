@@ -9,18 +9,16 @@ import SwiftUI
 
 struct DashboardView: View {
     @State var showAddMatch = false
-    
+
     var body: some View {
-        VStack() {
-            
-        }
-        .frame(width: getRect().width, height: getRect().height)
-        .toolbar(content: {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                RDBadgeButton(systemImageTitle: "plus",
-                              action: { showAddMatch.toggle() })
-                    .sheet(isPresented: $showAddMatch) { NewMatchView() }
-            }
-        })
+        VStack {}
+            .frame(width: getRect().width, height: getRect().height)
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    RDBadgeButton(systemImageTitle: "plus",
+                                  action: { showAddMatch.toggle() })
+                        .sheet(isPresented: $showAddMatch) { NewMatchView() }
+                }
+            })
     }
 }

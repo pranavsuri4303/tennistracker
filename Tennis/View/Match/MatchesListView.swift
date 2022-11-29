@@ -11,16 +11,14 @@ struct MatchesHistoryView: View {
     @State var showAddMatch = false
 
     var body: some View {
-        VStack {
-
-        }
-        .frame(width: getRect().width, height: getRect().height)
-        .toolbar(content: {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                RDBadgeButton(systemImageTitle: "plus",
-                                              action: { showAddMatch.toggle() })
-                    .fullScreenCover(isPresented: $showAddMatch) { AddMatchView(newMatchViewPresented: $showAddMatch) }
-            }
-        })
+        VStack {}
+            .frame(width: getRect().width, height: getRect().height)
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    RDBadgeButton(systemImageTitle: "plus",
+                                  action: { showAddMatch.toggle() })
+                        .fullScreenCover(isPresented: $showAddMatch) { AddMatchView(newMatchViewPresented: $showAddMatch) }
+                }
+            })
     }
 }

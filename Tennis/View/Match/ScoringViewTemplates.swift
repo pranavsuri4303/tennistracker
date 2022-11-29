@@ -17,7 +17,7 @@ struct BasicServerView: View {
                         Button(action: {
                             vm.serveIn.toggle()
                             vm.pointWon(by: vm.server, deuce: vm.deuceType, servingPlayer: vm.server)
-                            
+
                         }, label: {
                             Spacer()
                             Text("POINT WON")
@@ -29,7 +29,7 @@ struct BasicServerView: View {
                         .edgesIgnoringSafeArea(.all)
                     }.frame(height: 100, alignment: .center)
                         .background(Color(.orange).cornerRadius(8))
-                    
+
                 }.padding(.horizontal)
             } else {
                 HStack {
@@ -38,13 +38,13 @@ struct BasicServerView: View {
                             vm.serveIn.toggle()
                         }, label: {
                             Spacer()
-                            
+
                             Text("SERVE IN")
                                 .font(.headline)
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
                             Spacer()
-                            
+
                         })
                         .edgesIgnoringSafeArea(.all)
                     }.frame(height: 100, alignment: .center)
@@ -60,7 +60,7 @@ struct BasicServerView: View {
                                     .foregroundColor(.white)
                                     .multilineTextAlignment(.center)
                                 Spacer()
-                                
+
                             })
                             .edgesIgnoringSafeArea(.all)
                         }.frame(height: 100, alignment: .center)
@@ -81,7 +81,7 @@ struct BasicServerView: View {
                                     .foregroundColor(.white)
                                     .multilineTextAlignment(.center)
                                 Spacer()
-                                
+
                             })
                             .edgesIgnoringSafeArea(.all)
                         }.frame(height: 100, alignment: .center)
@@ -98,7 +98,7 @@ struct BasicServerView: View {
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
                             Spacer()
-                            
+
                         })
                         .edgesIgnoringSafeArea(.all)
                     }.frame(height: 100, alignment: .center)
@@ -135,7 +135,7 @@ struct BasicNonServerView: View {
                 .edgesIgnoringSafeArea(.all)
             }.frame(height: 100, alignment: .center)
                 .background(Color(.orange).cornerRadius(8))
-            
+
         }.padding(.horizontal)
     }
 }
@@ -160,7 +160,7 @@ struct AdvancedServerView: View {
                             .background(Color(.orange).cornerRadius(8))
                     })
                     .edgesIgnoringSafeArea(.all)
-                    
+
                     VStack {
                         Button(action: {
                             print("Forced Error")
@@ -197,13 +197,13 @@ struct AdvancedServerView: View {
                             vm.serveIn.toggle()
                         }, label: {
                             Spacer()
-                            
+
                             Text("SERVE IN")
                                 .font(.headline)
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
                             Spacer()
-                            
+
                         })
                         .edgesIgnoringSafeArea(.all)
                     }.frame(height: 100, alignment: .center)
@@ -219,7 +219,7 @@ struct AdvancedServerView: View {
                                     .foregroundColor(.white)
                                     .multilineTextAlignment(.center)
                                 Spacer()
-                                
+
                             })
                             .edgesIgnoringSafeArea(.all)
                         }.frame(height: 100, alignment: .center)
@@ -240,7 +240,7 @@ struct AdvancedServerView: View {
                                     .foregroundColor(.white)
                                     .multilineTextAlignment(.center)
                                 Spacer()
-                                
+
                             })
                             .edgesIgnoringSafeArea(.all)
                         }.frame(height: 100, alignment: .center)
@@ -251,13 +251,13 @@ struct AdvancedServerView: View {
                             vm.pointWon(by: vm.server, deuce: vm.deuceType, servingPlayer: vm.server)
                         }, label: {
                             Spacer()
-                            
+
                             Text("ACE")
                                 .font(.headline)
                                 .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
                             Spacer()
-                            
+
                         })
                         .edgesIgnoringSafeArea(.all)
                     }.frame(height: 100, alignment: .center)
@@ -345,7 +345,7 @@ struct AdvancedNonServerView: View {
                 }.frame(height: 100, alignment: .center)
                     .background(Color(.orange).cornerRadius(8))
             }
-            
+
         }.padding(.horizontal)
     }
 }

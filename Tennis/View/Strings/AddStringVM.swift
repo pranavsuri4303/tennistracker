@@ -47,4 +47,9 @@ class AddStringVM: ObservableObject {
             }
         }
     }
+
+    func deleteString() {
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
+        isLoading = true
+    }
 }

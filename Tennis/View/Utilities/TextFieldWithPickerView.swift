@@ -10,17 +10,17 @@ import SwiftUI
 struct TextFieldWithPickerView: UIViewRepresentable {
     @Binding var data: [String]
     var placeholder: String
-    
+
     @Binding var selectionIndex: Int
     @Binding var selectedText: String
-    
+
     private let textField = UITextField()
     private let picker = UIPickerView()
     private let keyboard = UIInputView()
     func makeCoordinator() -> TextFieldWithPickerView.Coordinator {
         Coordinator(textfield: self)
     }
-    
+
     func makeUIView(context: UIViewRepresentableContext<TextFieldWithPickerView>) -> UITextField {
         picker.delegate = context.coordinator
         picker.dataSource = context.coordinator
@@ -31,37 +31,37 @@ struct TextFieldWithPickerView: UIViewRepresentable {
         textField.delegate = context.coordinator
         return textField
     }
-    
-    func updateUIView(_ uiView: UITextField, context: UIViewRepresentableContext<TextFieldWithPickerView>) {
+
+    func updateUIView(_ uiView: UITextField, context _: UIViewRepresentableContext<TextFieldWithPickerView>) {
         uiView.text = selectedText
     }
-    
+
     class Coordinator: NSObject, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
         private let parent: TextFieldWithPickerView
-        
+
         init(textfield: TextFieldWithPickerView) {
-            self.parent = textfield
+            parent = textfield
         }
-        
-        func numberOfComponents(in pickerView: UIPickerView) -> Int {
+
+        func numberOfComponents(in _: UIPickerView) -> Int {
             1
         }
 
-        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        func pickerView(_: UIPickerView, numberOfRowsInComponent _: Int) -> Int {
             parent.data.count
         }
 
-        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        func pickerView(_: UIPickerView, titleForRow row: Int, forComponent _: Int) -> String? {
             parent.data[row]
         }
 
-        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        func pickerView(_: UIPickerView, didSelectRow row: Int, inComponent _: Int) {
             parent.$selectionIndex.wrappedValue = row
             parent.selectedText = parent.data[parent.selectionIndex]
             parent.textField.endEditing(true)
         }
 
-        func textFieldDidEndEditing(_ textField: UITextField) {
+        func textFieldDidEndEditing(_: UITextField) {
             parent.textField.resignFirstResponder()
         }
     }

@@ -15,8 +15,5 @@ struct RDHeaderTitle: View {
                 .fontWeight(.heavy)
                 .font(.title3)
         }).padding(.horizontal)
-        
     }
 }
-
-

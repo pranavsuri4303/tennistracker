@@ -12,19 +12,17 @@ struct NewUserView: View {
     @Binding var isPresented: Bool
     @ObservedObject var vm = RegisterVM()
     @State var startAnimate = false
-    
+
     @State var selectionIndex = 0
     @State var yob = ""
     // Image
     @State var isImagePickerViewPresented = false
     @State var pickedImage: UIImage? = nil
-    
-    
+
     @State private var alertShown = false
     @State private var errorMessage = ""
     @State private var playingStyle = ""
-    
-    
+
     var body: some View {
         ZStack {
             VStack {
@@ -35,19 +33,19 @@ struct NewUserView: View {
                         if pickedImage == nil {
                             Circle()
                                 .accentColor(.blue)
-                                .frame(width: getRect().width*0.4, height: getRect().width*0.4, alignment: .center)
+                                .frame(width: getRect().width * 0.4, height: getRect().width * 0.4, alignment: .center)
                                 .overlay(Image("Male")
                                     .resizable()
-                                    .frame(width: getRect().width*0.4 - 10, height: getRect().width*0.4 - 10)
+                                    .frame(width: getRect().width * 0.4 - 10, height: getRect().width * 0.4 - 10)
                                     .clipShape(Circle())
                                     .padding())
                         } else {
                             Circle()
                                 .accentColor(.blue)
-                                .frame(width: getRect().width*0.4, height: getRect().width*0.4, alignment: .center)
+                                .frame(width: getRect().width * 0.4, height: getRect().width * 0.4, alignment: .center)
                                 .overlay(Image(uiImage: pickedImage!)
                                     .resizable()
-                                    .frame(width: getRect().width*0.4 - 10, height: getRect().width*0.4 - 10)
+                                    .frame(width: getRect().width * 0.4 - 10, height: getRect().width * 0.4 - 10)
                                     .clipShape(Circle())
                                     .padding())
                         }
@@ -63,15 +61,15 @@ struct NewUserView: View {
                         pickedImage = image
                     }))
                 }
-                
-                VStack{
-                    HStack{
+
+                VStack {
+                    HStack {
                         Text("New user details")
                             .font(.title)
                             .fontWeight(.bold)
                         Spacer()
                     }.padding(.leading)
-                    HStack{
+                    HStack {
                         Text("Please enter the following details for a more personalized experience.")
                             .font(.subheadline)
                             .foregroundColor(.secondary)
@@ -80,16 +78,15 @@ struct NewUserView: View {
                         Spacer()
                     }.padding(.leading)
                 }.padding(.vertical)
-                
-                
-                VStack{
+
+                VStack {
                     RDTextField(placeholder: "First name", text: $vm.userData.firstName, imageName: "person", isSecure: false, isPicker: false)
                     RDTextField(placeholder: "Last name", text: $vm.userData.lastName, imageName: "person", isSecure: false, isPicker: false)
                     RDTextField(placeholder: "Year of Birth", text: $yob, imageName: "calendar", isSecure: false, isPicker: true, data: vm.yearsList, selectionIndex: self.selectionIndex)
                     RDTextField(placeholder: "Nationality", text: $vm.userData.nationality, imageName: "flag", isSecure: false, isPicker: true, data: vm.nationsList, selectionIndex: self.selectionIndex)
                 }.padding(.horizontal)
-                
-                VStack(alignment: .leading, spacing: 5){
+
+                VStack(alignment: .leading, spacing: 5) {
                     Text("Gender")
                         .font(.headline)
                     Picker(selection: $vm.userData.gender, label: Text(""), content: {
@@ -108,7 +105,7 @@ struct NewUserView: View {
                 .cornerRadius(12)
                 .padding(.horizontal)
 
-                VStack(alignment: .leading, spacing: 5){
+                VStack(alignment: .leading, spacing: 5) {
                     Text("Playing Style")
                         .font(.headline)
                     Picker(selection: $playingStyle, label: Text(""), content: {
@@ -140,22 +137,22 @@ struct NewUserView: View {
                             switch res {
                             case .success:
                                 return
-                            case .failure(let err):
+                            case let .failure(err):
                                 self.errorMessage = err.localizedDescription
                                 self.alertShown = true
                             }
                         }
                     }
-                    
+
                 }, label: {
                     RDButton(withTitle: "Create Account")
                 })
                 .opacity(vm.userData.firstName != "" && vm.userData.lastName != "" && vm.userData.gender != "" && yob != "" && vm.userData.nationality != "" ? 1 : 0.5)
                 .disabled(vm.userData.firstName != "" && vm.userData.lastName != "" && vm.userData.gender != "" && yob != "" && vm.userData.nationality != "" ? false : true)
-                
+
             }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
                 .animation(startAnimate ? .easeOut : .none)
-            
+
             if vm.isLoading {
                 LoadingScreenView()
             }
@@ -165,7 +162,7 @@ struct NewUserView: View {
             }
         })
         .alert(errorMessage, isPresented: $alertShown) {
-            Button("Ok"){
+            Button("Ok") {
                 alertShown = false
             }
         }

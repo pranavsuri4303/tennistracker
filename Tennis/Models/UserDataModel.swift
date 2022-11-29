@@ -13,7 +13,7 @@ struct UserDataModel: Identifiable, Codable {
     internal init(uid: String, name: String, firsName: String, lastName: String, email: String, gender: String, nationality: String, yob: Int, imagePath: String, accountCreated: Date, friendRequests: [FriendsCellModel], friends: [FriendsCellModel]) {
         self.uid = uid
         self.name = name
-        self.firstName = firsName
+        firstName = firsName
         self.lastName = lastName
         self.email = email
         self.gender = gender
@@ -53,7 +53,7 @@ struct FriendsCellModel: Codable, Equatable, Hashable {
         self.friendRequestReceived = friendRequestReceived
         self.friendsSince = friendsSince
     }
-    
+
     var uid: String
     var name: String
     var gender: String
@@ -70,13 +70,11 @@ struct StringModel: Codable, Equatable, Hashable {
     var name: String
     var date: Date
     var firestoreData: [String: Any] {
-        return [
+        [
             "cross": cross,
             "mains": mains,
             "name": name,
-            "date": date
+            "date": date,
         ]
     }
 }
-
-

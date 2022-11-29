@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ResetPasswordView: View {
     @StateObject var vm = ResetPasswordVM()
-    
+
     var body: some View {
         ZStack {
             GeometryReader { _ in
@@ -17,7 +17,7 @@ struct ResetPasswordView: View {
                     Image("resetPassword")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                    // Dynamic Frame...
+                        // Dynamic Frame...
                         .padding()
                     HStack {
                         VStack(alignment: .leading, spacing: 12, content: {
@@ -25,7 +25,7 @@ struct ResetPasswordView: View {
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
-                            
+
                             Text("Enter email to reset password")
                                 .foregroundColor(Color(.white).opacity(0.5))
                         })
@@ -33,12 +33,12 @@ struct ResetPasswordView: View {
                     }
                     .padding()
                     .padding(.leading, 15)
-                    
+
                     RDTextField(placeholder: "Email", text: $vm.email, imageName: "envelope", isSecure: false, isPicker: false)
                         .padding(.horizontal)
-                    
+
                     Spacer()
-                    
+
                     RDButton(withTitle: "Reset Password") {
                         vm.resetPassword()
                     }
@@ -47,11 +47,10 @@ struct ResetPasswordView: View {
                     .alert(isPresented: $vm.alert, content: {
                         Alert(title: Text(""), message: Text(vm.alertMsg), dismissButton: .destructive(Text("Ok")))
                     })
-                    
                 }
                 .background(Color("bg").ignoresSafeArea(.all, edges: .all))
             }
-            
+
             if vm.isLoading {
                 LoadingScreenView()
             }

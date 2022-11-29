@@ -14,9 +14,9 @@ struct LoginView: View {
     @AppStorage("stored_User") var Stored_User = ""
     @AppStorage("stored_Password") var Stored_Password = ""
     @AppStorage("status") var logged = false
-    
+
     @State private var goToSignup = false
-    
+
     @State var startAnimate = false
     @State var showingResetPassword = false
     var body: some View {
@@ -26,7 +26,7 @@ struct LoginView: View {
 
             VStack {
                 Spacer(minLength: 0)
-                
+
                 Image("homeLogo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -39,16 +39,16 @@ struct LoginView: View {
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(.white)
-                        
+
                         Text("Please sign in to continue")
                             .foregroundColor(Color(.white).opacity(0.5))
                     })
-                    
+
                     Spacer(minLength: 0)
                 }
                 .padding()
                 .padding(.leading, 15)
-                VStack{
+                VStack {
                     RDTextField(placeholder: "Email", text: $vm.email, imageName: "envelope", isSecure: false, isPicker: false)
                     RDTextField(placeholder: "Password", text: $vm.password, imageName: "lock", isSecure: true, isPicker: false)
                 }
@@ -60,7 +60,7 @@ struct LoginView: View {
                     .alert(isPresented: $vm.alert, content: {
                         Alert(title: Text("Error"), message: Text(vm.alertMsg), dismissButton: .destructive(Text("Ok")))
                     })
-                                
+
                 Button(action: {
                     self.showingResetPassword.toggle()
                 }, label: {
@@ -71,7 +71,7 @@ struct LoginView: View {
                 } onEnd: {
                     print("Reset Password Closed")
                 }
-                
+
                 .padding(.top, 8)
                 .alert(isPresented: $vm.store_Info, content: {
                     Alert(title: Text("Message"), message: Text("Store Information For Future Login Using BioMetric Authentication?"), primaryButton: .default(Text("Accept"), action: {
@@ -85,7 +85,7 @@ struct LoginView: View {
                     })
                 })
                 Spacer()
-                
+
                 HStack(spacing: 5) {
                     Text("Don't have an account? ")
                         .foregroundColor(Color(.white).opacity(0.6))
@@ -101,7 +101,7 @@ struct LoginView: View {
             }
             .background(Color("bg").ignoresSafeArea(.all, edges: .all))
             .animation(startAnimate ? .easeOut : .none)
-            
+
             if vm.isLoading {
                 LoadingScreenView()
             }

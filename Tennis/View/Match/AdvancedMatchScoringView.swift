@@ -11,7 +11,7 @@ struct AdvancedMatchScoringView: View {
     @Binding var isPresented: Bool
     // Players Names
     @StateObject var vm: MatchVM
-    
+
     @State var dashboardIsPresented = false
     var body: some View {
         VStack {
@@ -34,7 +34,7 @@ struct AdvancedMatchScoringView: View {
                     }).padding(.all)
                 }
             }
-            
+
             VStack {
                 HStack {
                     VStack(alignment: .leading, spacing: 10) {
@@ -70,7 +70,7 @@ struct AdvancedMatchScoringView: View {
                                 }
                             }
                         }
-                        
+
                     }.padding()
                     Spacer()
 
@@ -94,7 +94,7 @@ struct AdvancedMatchScoringView: View {
                             .foregroundColor(Color("green"))
                             .multilineTextAlignment(.leading)
                     }.padding()
-                    
+
                 }.background(Color(.white).opacity(0.1).cornerRadius(8))
                     .padding()
             }
@@ -114,9 +114,9 @@ struct AdvancedMatchScoringView: View {
                                 .foregroundColor(Color("green"))
                                 .hidden()
                         }
-                        
+
                     }.padding()
-                    
+
                 }.background(Color(.white).opacity(0.1).cornerRadius(8))
                     .padding(.horizontal)
                 if vm.server == .p1 {
@@ -125,7 +125,7 @@ struct AdvancedMatchScoringView: View {
                     AdvancedNonServerView(vm: vm)
                 }
             }.padding(.bottom)
-            
+
             VStack {
                 HStack {
                     Text("\(vm.P2.name)")
