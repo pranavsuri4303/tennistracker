@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Team
+
 class Team: Codable, Equatable {
     var extensions: [Extension?]?
     var gender: String?
@@ -34,34 +35,34 @@ class Team: Codable, Equatable {
         self.teamID = teamID
         self.updated = updated
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case extensions = "extensions"
-        case gender = "gender"
-        case ids = "ids"
-        case name = "name"
-        case nativeTeamName = "nativeTeamName"
-        case notes = "notes"
-        case onlineProfiles = "onlineProfiles"
-        case organisation = "organisation"
-        case otherNames = "otherNames"
-        case previousNames = "previousNames"
+        case extensions
+        case gender
+        case ids
+        case name
+        case nativeTeamName
+        case notes
+        case onlineProfiles
+        case organisation
+        case otherNames
+        case previousNames
         case teamID = "teamId"
-        case updated = "updated"
+        case updated
     }
 
     static func == (lhs: Team, rhs: Team) -> Bool {
         return lhs.extensions == rhs.extensions &&
-        lhs.gender == rhs.gender &&
-        lhs.ids == rhs.ids &&
-        lhs.name == rhs.name &&
-        lhs.nativeTeamName == rhs.nativeTeamName &&
-        lhs.notes == rhs.notes &&
-        lhs.onlineProfiles == rhs.onlineProfiles &&
-        lhs.organisation == rhs.organisation &&
-        lhs.otherNames == rhs.otherNames &&
-        lhs.previousNames == rhs.previousNames &&
-        lhs.teamID == rhs.teamID &&
-        lhs.updated == rhs.updated
+            lhs.gender == rhs.gender &&
+            lhs.ids == rhs.ids &&
+            lhs.name == rhs.name &&
+            lhs.nativeTeamName == rhs.nativeTeamName &&
+            lhs.notes == rhs.notes &&
+            lhs.onlineProfiles == rhs.onlineProfiles &&
+            lhs.organisation == rhs.organisation &&
+            lhs.otherNames == rhs.otherNames &&
+            lhs.previousNames == rhs.previousNames &&
+            lhs.teamID == rhs.teamID &&
+            lhs.updated == rhs.updated
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 class IDS: Codable, Equatable {
     var id: [String?]?
-    
+
     internal init(id: [String?]? = nil) {
         self.id = id
     }

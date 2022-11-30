@@ -31,12 +31,16 @@ class RegisterVM: ObservableObject {
                 if let err = err {
                     completion(.failure(err))
                 } else {
-                    self.newUser.notes = "https://firebasestorage.googleapis.com/v0/b/tennistrackerdev.appspot.com/o/\(uid)%2FprofilePicture%2F\(uid).jpg?alt=media"
+                    let userImageUrl = Extension()
+                    userImageUrl.extensionDescription = "URL for Profile Picture"
+                    userImageUrl.name = "profilePicture"
+                    userImageUrl.value = "https://firebasestorage.googleapis.com/v0/b/tennistrackerdev.appspot.com/o/\(uid)%2FprofilePicture%2F\(uid).jpg?alt=media"
+                    self.newUser.extensions = []
+                    self.newUser.extensions?.append(userImageUrl)
                     completion(.success(nil))
                 }
             }
         }
-
     }
 
     func uploadFirestore(completion: @escaping (Result<Data?, Error>) -> Void) {

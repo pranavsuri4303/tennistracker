@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - PrizeMoney
+
 class PrizeMoney: Codable, Equatable {
     var amount: Double?
     var currencyCode: String?
@@ -14,14 +15,14 @@ class PrizeMoney: Codable, Equatable {
         self.amount = amount
         self.currencyCode = currencyCode
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case amount = "amount"
-        case currencyCode = "currencyCode"
+        case amount
+        case currencyCode
     }
 
     static func == (lhs: PrizeMoney, rhs: PrizeMoney) -> Bool {
         return lhs.amount == rhs.amount &&
-        lhs.currencyCode == rhs.currencyCode
+            lhs.currencyCode == rhs.currencyCode
     }
 }

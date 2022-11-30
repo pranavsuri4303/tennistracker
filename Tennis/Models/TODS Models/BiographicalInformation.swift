@@ -19,7 +19,7 @@ class BiographicalInformation: Codable, Equatable {
     var playingHand: String?
     var residenceCountryCode: String?
     var weight: Double?
-    
+
     internal init(ageBeganTennis: Int? = nil, ageTurnedPro: Int? = nil, birthCountryCode: String? = nil, club: Organisation? = nil, coach: Person? = nil, doublePlayingHand: String? = nil, height: Double? = nil, placeOfResidence: String? = nil, playingHand: String? = nil, residenceCountryCode: String? = nil, weight: Double? = nil) {
         self.ageBeganTennis = ageBeganTennis
         self.ageTurnedPro = ageTurnedPro

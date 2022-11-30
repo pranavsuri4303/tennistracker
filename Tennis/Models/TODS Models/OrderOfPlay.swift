@@ -6,8 +6,8 @@
 import Foundation
 
 // MARK: - OrderOfPlay
-class OrderOfPlay: Codable, Equatable {
 
+class OrderOfPlay: Codable, Equatable {
     var extensions: [Extension?]?
     var ids: IDS?
     var localTimeZone: String?
@@ -19,7 +19,7 @@ class OrderOfPlay: Codable, Equatable {
     var startDate: Date?
     var updated: Date?
     var venue: Venue?
-    
+
     internal init(extensions: [Extension?]? = nil, ids: IDS? = nil, localTimeZone: String? = nil, name: String? = nil, notes: String? = nil, orderOfPlayID: String? = nil, orderOfPlayItems: [OrderOfPlayItem?]? = nil, scheduleItem: ScheduleItem? = nil, startDate: Date? = nil, updated: Date? = nil, venue: Venue? = nil) {
         self.extensions = extensions
         self.ids = ids
@@ -33,32 +33,32 @@ class OrderOfPlay: Codable, Equatable {
         self.updated = updated
         self.venue = venue
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case extensions = "extensions"
-        case ids = "ids"
-        case localTimeZone = "localTimeZone"
-        case name = "name"
-        case notes = "notes"
+        case extensions
+        case ids
+        case localTimeZone
+        case name
+        case notes
         case orderOfPlayID = "orderOfPlayId"
-        case orderOfPlayItems = "orderOfPlayItems"
-        case scheduleItem = "scheduleItem"
-        case startDate = "startDate"
-        case updated = "updated"
-        case venue = "venue"
+        case orderOfPlayItems
+        case scheduleItem
+        case startDate
+        case updated
+        case venue
     }
-    
+
     static func == (lhs: OrderOfPlay, rhs: OrderOfPlay) -> Bool {
         return lhs.extensions == rhs.extensions &&
-        lhs.ids == rhs.ids &&
-        lhs.localTimeZone == rhs.localTimeZone &&
-        lhs.name == rhs.name &&
-        lhs.notes == rhs.notes &&
-        lhs.orderOfPlayID == rhs.orderOfPlayID &&
-        lhs.orderOfPlayItems == rhs.orderOfPlayItems &&
-        lhs.scheduleItem == rhs.scheduleItem &&
-        lhs.startDate == rhs.startDate &&
-        lhs.updated == rhs.updated &&
-        lhs.venue == rhs.venue
+            lhs.ids == rhs.ids &&
+            lhs.localTimeZone == rhs.localTimeZone &&
+            lhs.name == rhs.name &&
+            lhs.notes == rhs.notes &&
+            lhs.orderOfPlayID == rhs.orderOfPlayID &&
+            lhs.orderOfPlayItems == rhs.orderOfPlayItems &&
+            lhs.scheduleItem == rhs.scheduleItem &&
+            lhs.startDate == rhs.startDate &&
+            lhs.updated == rhs.updated &&
+            lhs.venue == rhs.venue
     }
 }

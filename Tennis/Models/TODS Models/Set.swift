@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Set
+
 class Set: Codable, Equatable {
     var extensions: [Extension?]?
     var games: [Game?]?
@@ -38,39 +39,38 @@ class Set: Codable, Equatable {
         self.updated = updated
         self.winningSide = winningSide
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case extensions = "extensions"
-        case games = "games"
-        case ids = "ids"
-        case notes = "notes"
-        case setDuration = "setDuration"
-        case setFormat = "setFormat"
-        case setNumber = "setNumber"
-        case side1Score = "side1Score"
-        case side1TieBreakScore = "side1TieBreakScore"
-        case side2Score = "side2Score"
-        case side2TieBreakScore = "side2TieBreakScore"
-        case timestamp = "timestamp"
-        case updated = "updated"
-        case winningSide = "winningSide"
-    }
-    
-    static func == (lhs: Set, rhs: Set) -> Bool {
-        return lhs.extensions == rhs.extensions &&
-        lhs.games == rhs.games &&
-        lhs.ids == rhs.ids &&
-        lhs.notes == rhs.notes &&
-        lhs.setDuration == rhs.setDuration &&
-        lhs.setFormat == rhs.setFormat &&
-        lhs.setNumber == rhs.setNumber &&
-        lhs.side1Score == rhs.side1Score &&
-        lhs.side1TieBreakScore == rhs.side1TieBreakScore &&
-        lhs.side2Score == rhs.side2Score &&
-        lhs.side2TieBreakScore == rhs.side2TieBreakScore &&
-        lhs.timestamp == rhs.timestamp &&
-        lhs.updated == rhs.updated &&
-        lhs.winningSide == rhs.winningSide
+        case extensions
+        case games
+        case ids
+        case notes
+        case setDuration
+        case setFormat
+        case setNumber
+        case side1Score
+        case side1TieBreakScore
+        case side2Score
+        case side2TieBreakScore
+        case timestamp
+        case updated
+        case winningSide
     }
 
+    static func == (lhs: Set, rhs: Set) -> Bool {
+        return lhs.extensions == rhs.extensions &&
+            lhs.games == rhs.games &&
+            lhs.ids == rhs.ids &&
+            lhs.notes == rhs.notes &&
+            lhs.setDuration == rhs.setDuration &&
+            lhs.setFormat == rhs.setFormat &&
+            lhs.setNumber == rhs.setNumber &&
+            lhs.side1Score == rhs.side1Score &&
+            lhs.side1TieBreakScore == rhs.side1TieBreakScore &&
+            lhs.side2Score == rhs.side2Score &&
+            lhs.side2TieBreakScore == rhs.side2TieBreakScore &&
+            lhs.timestamp == rhs.timestamp &&
+            lhs.updated == rhs.updated &&
+            lhs.winningSide == rhs.winningSide
+    }
 }

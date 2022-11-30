@@ -108,6 +108,7 @@
 		B5C95EC32936632700C9C8A7 /* RoundItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E9A2936632700C9C8A7 /* RoundItem.swift */; };
 		B5C95EC42936632700C9C8A7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E9B2936632700C9C8A7 /* Person.swift */; };
 		B5C95EC52936632700C9C8A7 /* Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E9C2936632700C9C8A7 /* Side.swift */; };
+		B5C95EC8293777F000C9C8A7 /* StandardCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95EC7293777EF00C9C8A7 /* StandardCodes.swift */; };
 		B5D1F76527AA0C140091AC2F /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76427AA0C140091AC2F /* SideMenuView.swift */; };
 		B5D1F76827AA0EBC0091AC2F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76727AA0EBC0091AC2F /* BaseView.swift */; };
 		B5D1F76C27AA1E370091AC2F /* RDHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76B27AA1E370091AC2F /* RDHeader.swift */; };
@@ -232,6 +233,7 @@
 		B5C95E9A2936632700C9C8A7 /* RoundItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundItem.swift; sourceTree = "<group>"; };
 		B5C95E9B2936632700C9C8A7 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		B5C95E9C2936632700C9C8A7 /* Side.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Side.swift; sourceTree = "<group>"; };
+		B5C95EC7293777EF00C9C8A7 /* StandardCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCodes.swift; sourceTree = "<group>"; };
 		B5D1F76427AA0C140091AC2F /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		B5D1F76727AA0EBC0091AC2F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B5D1F76B27AA1E370091AC2F /* RDHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHeader.swift; sourceTree = "<group>"; };
@@ -538,6 +540,7 @@
 				B5C95E782936632500C9C8A7 /* TournamentGroup.swift */,
 				B5C95E7A2936632500C9C8A7 /* Venue.swift */,
 				B5C95E752936632400C9C8A7 /* WorldTennisNumber.swift */,
+				B5C95EC7293777EF00C9C8A7 /* StandardCodes.swift */,
 			);
 			path = "TODS Models";
 			sourceTree = "<group>";
@@ -752,6 +755,7 @@
 				B5A239AE27F6FFF000D7A9FE /* UserDataModel.swift in Sources */,
 				B52F300227A92D4000237915 /* HalfModalView.swift in Sources */,
 				9FFCF2E425CF2C7E00C6C94E /* FriendsVM.swift in Sources */,
+				B5C95EC8293777F000C9C8A7 /* StandardCodes.swift in Sources */,
 				B564F72F2799F13D00052CA3 /* RDHeaderTitle.swift in Sources */,
 				B5C95EAE2936632700C9C8A7 /* TotalPrizeMoney.swift in Sources */,
 				B5C95EA42936632700C9C8A7 /* TODSModel.swift in Sources */,

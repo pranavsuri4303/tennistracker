@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Event
+
 class Event: Codable, Equatable {
     var ageCategory: String?
     var ageCategoryCutoffDate: Date?
@@ -27,7 +28,7 @@ class Event: Codable, Equatable {
     var tennisOfficials: TennisOfficials?
     var updated: Date?
     var wheelchairClass: String?
-    
+
     internal init(ageCategory: String? = nil, ageCategoryCutoffDate: Date? = nil, ballType: String? = nil, discipline: String? = nil, endDate: Date? = nil, entries: [Entry?]? = nil, eventID: String? = nil, eventLevel: String? = nil, eventType: String? = nil, extensions: [Extension?]? = nil, gender: String? = nil, ids: IDS? = nil, name: String? = nil, notes: String? = nil, stages: [Stage?]? = nil, startDate: Date? = nil, surfaceCategory: String? = nil, tennisOfficials: TennisOfficials? = nil, updated: Date? = nil, wheelchairClass: String? = nil) {
         self.ageCategory = ageCategory
         self.ageCategoryCutoffDate = ageCategoryCutoffDate
@@ -50,50 +51,50 @@ class Event: Codable, Equatable {
         self.updated = updated
         self.wheelchairClass = wheelchairClass
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case ageCategory = "ageCategory"
-        case ageCategoryCutoffDate = "ageCategoryCutoffDate"
-        case ballType = "ballType"
-        case discipline = "discipline"
-        case endDate = "endDate"
-        case entries = "entries"
+        case ageCategory
+        case ageCategoryCutoffDate
+        case ballType
+        case discipline
+        case endDate
+        case entries
         case eventID = "eventId"
-        case eventLevel = "eventLevel"
-        case eventType = "eventType"
-        case extensions = "extensions"
-        case gender = "gender"
-        case ids = "ids"
-        case name = "name"
-        case notes = "notes"
-        case stages = "stages"
-        case startDate = "startDate"
-        case surfaceCategory = "surfaceCategory"
-        case tennisOfficials = "tennisOfficials"
-        case updated = "updated"
-        case wheelchairClass = "wheelchairClass"
+        case eventLevel
+        case eventType
+        case extensions
+        case gender
+        case ids
+        case name
+        case notes
+        case stages
+        case startDate
+        case surfaceCategory
+        case tennisOfficials
+        case updated
+        case wheelchairClass
     }
-    
+
     static func == (lhs: Event, rhs: Event) -> Bool {
         return lhs.ageCategory == rhs.ageCategory &&
-        lhs.ageCategoryCutoffDate == rhs.ageCategoryCutoffDate &&
-        lhs.ballType == rhs.ballType &&
-        lhs.discipline == rhs.discipline &&
-        lhs.endDate == rhs.endDate &&
-        lhs.entries == rhs.entries &&
-        lhs.eventID == rhs.eventID &&
-        lhs.eventLevel == rhs.eventLevel &&
-        lhs.eventType == rhs.eventType &&
-        lhs.extensions == rhs.extensions &&
-        lhs.gender == rhs.gender &&
-        lhs.ids == rhs.ids &&
-        lhs.name == rhs.name &&
-        lhs.notes == rhs.notes &&
-        lhs.stages == rhs.stages &&
-        lhs.startDate == rhs.startDate &&
-        lhs.surfaceCategory == rhs.surfaceCategory &&
-        lhs.tennisOfficials == rhs.tennisOfficials &&
-        lhs.updated == rhs.updated &&
-        lhs.wheelchairClass == rhs.wheelchairClass
+            lhs.ageCategoryCutoffDate == rhs.ageCategoryCutoffDate &&
+            lhs.ballType == rhs.ballType &&
+            lhs.discipline == rhs.discipline &&
+            lhs.endDate == rhs.endDate &&
+            lhs.entries == rhs.entries &&
+            lhs.eventID == rhs.eventID &&
+            lhs.eventLevel == rhs.eventLevel &&
+            lhs.eventType == rhs.eventType &&
+            lhs.extensions == rhs.extensions &&
+            lhs.gender == rhs.gender &&
+            lhs.ids == rhs.ids &&
+            lhs.name == rhs.name &&
+            lhs.notes == rhs.notes &&
+            lhs.stages == rhs.stages &&
+            lhs.startDate == rhs.startDate &&
+            lhs.surfaceCategory == rhs.surfaceCategory &&
+            lhs.tennisOfficials == rhs.tennisOfficials &&
+            lhs.updated == rhs.updated &&
+            lhs.wheelchairClass == rhs.wheelchairClass
     }
 }

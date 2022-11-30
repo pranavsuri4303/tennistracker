@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Ranking
+
 class Ranking: Codable, Equatable {
     var ageCategory: String?
     var discipline: String?
@@ -26,26 +27,26 @@ class Ranking: Codable, Equatable {
         self.rankingType = rankingType
         self.wheelchairClass = wheelchairClass
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case ageCategory = "ageCategory"
-        case discipline = "discipline"
-        case gender = "gender"
-        case name = "name"
+        case ageCategory
+        case discipline
+        case gender
+        case name
         case rankingID = "rankingId"
-        case rankingItems = "rankingItems"
-        case rankingType = "rankingType"
-        case wheelchairClass = "wheelchairClass"
+        case rankingItems
+        case rankingType
+        case wheelchairClass
     }
 
     static func == (lhs: Ranking, rhs: Ranking) -> Bool {
         return lhs.ageCategory == rhs.ageCategory &&
-        lhs.discipline == rhs.discipline &&
-        lhs.gender == rhs.gender &&
-        lhs.name == rhs.name &&
-        lhs.rankingID == rhs.rankingID &&
-        lhs.rankingItems == rhs.rankingItems &&
-        lhs.rankingType == rhs.rankingType &&
-        lhs.wheelchairClass == rhs.wheelchairClass
+            lhs.discipline == rhs.discipline &&
+            lhs.gender == rhs.gender &&
+            lhs.name == rhs.name &&
+            lhs.rankingID == rhs.rankingID &&
+            lhs.rankingItems == rhs.rankingItems &&
+            lhs.rankingType == rhs.rankingType &&
+            lhs.wheelchairClass == rhs.wheelchairClass
     }
 }

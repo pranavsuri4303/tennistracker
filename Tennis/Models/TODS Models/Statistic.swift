@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Statistic
+
 class Statistic: Codable, Equatable {
     var code: String?
     var extensions: [Extension?]?
@@ -24,24 +25,24 @@ class Statistic: Codable, Equatable {
         self.updated = updated
         self.value = value
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case code = "code"
-        case extensions = "extensions"
-        case ids = "ids"
-        case name = "name"
-        case notes = "notes"
-        case updated = "updated"
-        case value = "value"
+        case code
+        case extensions
+        case ids
+        case name
+        case notes
+        case updated
+        case value
     }
 
     static func == (lhs: Statistic, rhs: Statistic) -> Bool {
         return lhs.code == rhs.code &&
-        lhs.extensions == rhs.extensions &&
-        lhs.ids == rhs.ids &&
-        lhs.name == rhs.name &&
-        lhs.notes == rhs.notes &&
-        lhs.updated == rhs.updated &&
-        lhs.value == rhs.value
+            lhs.extensions == rhs.extensions &&
+            lhs.ids == rhs.ids &&
+            lhs.name == rhs.name &&
+            lhs.notes == rhs.notes &&
+            lhs.updated == rhs.updated &&
+            lhs.value == rhs.value
     }
 }

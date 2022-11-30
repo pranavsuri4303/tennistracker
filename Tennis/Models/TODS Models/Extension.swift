@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Extension
+
 class Extension: Codable, Equatable {
     var extensionDescription: String?
     var name: String?
@@ -16,16 +17,16 @@ class Extension: Codable, Equatable {
         self.name = name
         self.value = value
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case extensionDescription = "description"
-        case name = "name"
-        case value = "value"
+        case name
+        case value
     }
-    
+
     static func == (lhs: Extension, rhs: Extension) -> Bool {
         return lhs.extensionDescription == rhs.extensionDescription &&
-        lhs.name == rhs.name &&
-        lhs.value == rhs.value
+            lhs.name == rhs.name &&
+            lhs.value == rhs.value
     }
 }

@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Round
+
 class Round: Codable, Equatable {
     var roundItems: [RoundItem?]?
     var roundNumber: Int?
@@ -14,14 +15,14 @@ class Round: Codable, Equatable {
         self.roundItems = roundItems
         self.roundNumber = roundNumber
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case roundItems = "roundItems"
-        case roundNumber = "roundNumber"
+        case roundItems
+        case roundNumber
     }
 
     static func == (lhs: Round, rhs: Round) -> Bool {
         return lhs.roundItems == rhs.roundItems &&
-        lhs.roundNumber == rhs.roundNumber
+            lhs.roundNumber == rhs.roundNumber
     }
 }

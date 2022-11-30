@@ -23,7 +23,7 @@ class TODSModel: Codable, Equatable {
     var tournaments: [Tournament?]?
     var venues: [Venue?]?
     var worldTennisNumbers: [WorldTennisNumber?]?
-    
+
     internal init(codesVersion: String? = nil, courts: [Court?]? = nil, dataStandardsVersion: String? = nil, date: Date? = nil, extensions: [Extension?]? = nil, orderOfPlays: [OrderOfPlay?]? = nil, organisations: [Organisation?]? = nil, persons: [Person?]? = nil, providerOrganisationID: String? = nil, rankings: [Ranking?]? = nil, statistics: [Statistic?]? = nil, teams: [Team?]? = nil, tournaments: [Tournament?]? = nil, venues: [Venue?]? = nil, worldTennisNumbers: [WorldTennisNumber?]? = nil) {
         self.codesVersion = codesVersion
         self.courts = courts

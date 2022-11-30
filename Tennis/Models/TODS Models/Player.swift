@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Player
+
 class Player: Codable, Equatable {
     var participant: Participant1?
     var playerNumber: Int?
@@ -14,14 +15,14 @@ class Player: Codable, Equatable {
         self.participant = participant
         self.playerNumber = playerNumber
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case participant = "participant"
-        case playerNumber = "playerNumber"
+        case participant
+        case playerNumber
     }
 
     static func == (lhs: Player, rhs: Player) -> Bool {
         return lhs.participant == rhs.participant &&
-        lhs.playerNumber == rhs.playerNumber
+            lhs.playerNumber == rhs.playerNumber
     }
 }

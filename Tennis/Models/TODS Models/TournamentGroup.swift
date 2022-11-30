@@ -6,15 +6,16 @@
 import Foundation
 
 // MARK: - TournamentGroup
+
 class TournamentGroup: Codable, Equatable {
     var group: String?
 
     internal init(group: String?) {
         self.group = group
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case group = "group"
+        case group
     }
 
     static func == (lhs: TournamentGroup, rhs: TournamentGroup) -> Bool {

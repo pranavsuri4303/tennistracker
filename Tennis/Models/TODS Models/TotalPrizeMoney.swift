@@ -6,15 +6,16 @@
 import Foundation
 
 // MARK: - TotalPrizeMoney
+
 class TotalPrizeMoney: Codable, Equatable {
     var prizeMoney: [PrizeMoney?]?
 
     internal init(prizeMoney: [PrizeMoney?]?) {
         self.prizeMoney = prizeMoney
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case prizeMoney = "prizeMoney"
+        case prizeMoney
     }
 
     static func == (lhs: TotalPrizeMoney, rhs: TotalPrizeMoney) -> Bool {

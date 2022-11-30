@@ -56,21 +56,21 @@ class Participant: Codable, Equatable {
         case team
         case updated
     }
-    
+
     static func == (lhs: Participant, rhs: Participant) -> Bool {
         return lhs.extensions == rhs.extensions &&
-        lhs.ids == rhs.ids &&
-        lhs.members == rhs.members &&
-        lhs.name == rhs.name &&
-        lhs.notes == rhs.notes &&
-        lhs.participantID == rhs.participantID &&
-        lhs.participantRole == rhs.participantRole &&
-        lhs.participantStatus == rhs.participantStatus &&
-        lhs.participantType == rhs.participantType &&
-        lhs.person == rhs.person &&
-        lhs.preferredGivenName == rhs.preferredGivenName &&
-        lhs.representing == rhs.representing &&
-        lhs.team == rhs.team &&
-        lhs.updated == rhs.updated
+            lhs.ids == rhs.ids &&
+            lhs.members == rhs.members &&
+            lhs.name == rhs.name &&
+            lhs.notes == rhs.notes &&
+            lhs.participantID == rhs.participantID &&
+            lhs.participantRole == rhs.participantRole &&
+            lhs.participantStatus == rhs.participantStatus &&
+            lhs.participantType == rhs.participantType &&
+            lhs.person == rhs.person &&
+            lhs.preferredGivenName == rhs.preferredGivenName &&
+            lhs.representing == rhs.representing &&
+            lhs.team == rhs.team &&
+            lhs.updated == rhs.updated
     }
 }

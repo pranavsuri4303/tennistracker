@@ -6,17 +6,18 @@
 import Foundation
 
 // MARK: - TennisOfficials
+
 class TennisOfficials: Codable, Equatable {
     var tennisOfficial: [Participant?]?
 
     internal init(tennisOfficial: [Participant?]? = nil) {
         self.tennisOfficial = tennisOfficial
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case tennisOfficial = "tennisOfficial"
+        case tennisOfficial
     }
-    
+
     static func == (lhs: TennisOfficials, rhs: TennisOfficials) -> Bool {
         return lhs.tennisOfficial == rhs.tennisOfficial
     }

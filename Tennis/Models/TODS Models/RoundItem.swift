@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - RoundItem
+
 class RoundItem: Codable, Equatable {
     var loserGoesTo: GoesTo?
     var position: Int?
@@ -16,16 +17,16 @@ class RoundItem: Codable, Equatable {
         self.position = position
         self.winnerGoesTo = winnerGoesTo
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case loserGoesTo = "loserGoesTo"
-        case position = "position"
-        case winnerGoesTo = "winnerGoesTo"
+        case loserGoesTo
+        case position
+        case winnerGoesTo
     }
 
     static func == (lhs: RoundItem, rhs: RoundItem) -> Bool {
         return lhs.loserGoesTo == rhs.loserGoesTo &&
-        lhs.position == rhs.position &&
-        lhs.winnerGoesTo == rhs.winnerGoesTo
+            lhs.position == rhs.position &&
+            lhs.winnerGoesTo == rhs.winnerGoesTo
     }
 }

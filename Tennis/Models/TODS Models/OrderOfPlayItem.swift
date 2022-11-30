@@ -6,8 +6,8 @@
 import Foundation
 
 // MARK: - OrderOfPlayItem
+
 class OrderOfPlayItem: Codable, Equatable {
-    
     var orderOfPlayItemDescription: String?
     var endDate: Date?
     var endType: String?
@@ -39,38 +39,38 @@ class OrderOfPlayItem: Codable, Equatable {
         self.startType = startType
         self.updated = updated
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case orderOfPlayItemDescription = "description"
-        case endDate = "endDate"
-        case endType = "endType"
-        case extensions = "extensions"
-        case ids = "ids"
-        case name = "name"
-        case notes = "notes"
+        case endDate
+        case endType
+        case extensions
+        case ids
+        case name
+        case notes
         case orderOfPlayItemID = "orderOfPlayItemId"
-        case previousOrderOfPlayItem = "previousOrderOfPlayItem"
-        case scheduleItem = "scheduleItem"
-        case startDate = "startDate"
-        case startDelay = "startDelay"
-        case startType = "startType"
-        case updated = "updated"
+        case previousOrderOfPlayItem
+        case scheduleItem
+        case startDate
+        case startDelay
+        case startType
+        case updated
     }
-    
+
     static func == (lhs: OrderOfPlayItem, rhs: OrderOfPlayItem) -> Bool {
         return lhs.orderOfPlayItemDescription == rhs.orderOfPlayItemDescription &&
-        lhs.endDate == rhs.endDate &&
-        lhs.endType == rhs.endType &&
-        lhs.extensions == rhs.extensions &&
-        lhs.ids == rhs.ids &&
-        lhs.name == rhs.name &&
-        lhs.notes == rhs.notes &&
-        lhs.orderOfPlayItemID == rhs.orderOfPlayItemID &&
-        lhs.previousOrderOfPlayItem == rhs.previousOrderOfPlayItem &&
-        lhs.scheduleItem == rhs.scheduleItem &&
-        lhs.startDate == rhs.startDate &&
-        lhs.startDelay == rhs.startDelay &&
-        lhs.startType == rhs.startType &&
-        lhs.updated == rhs.updated
+            lhs.endDate == rhs.endDate &&
+            lhs.endType == rhs.endType &&
+            lhs.extensions == rhs.extensions &&
+            lhs.ids == rhs.ids &&
+            lhs.name == rhs.name &&
+            lhs.notes == rhs.notes &&
+            lhs.orderOfPlayItemID == rhs.orderOfPlayItemID &&
+            lhs.previousOrderOfPlayItem == rhs.previousOrderOfPlayItem &&
+            lhs.scheduleItem == rhs.scheduleItem &&
+            lhs.startDate == rhs.startDate &&
+            lhs.startDelay == rhs.startDelay &&
+            lhs.startType == rhs.startType &&
+            lhs.updated == rhs.updated
     }
 }

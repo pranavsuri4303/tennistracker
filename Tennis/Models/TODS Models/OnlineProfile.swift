@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - OnlineProfile
+
 class OnlineProfile: Codable, Equatable {
     var identifier: String?
     var type: String?
@@ -14,14 +15,14 @@ class OnlineProfile: Codable, Equatable {
         self.identifier = identifier
         self.type = type
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case identifier = "identifier"
-        case type = "type"
+        case identifier
+        case type
     }
-    
+
     static func == (lhs: OnlineProfile, rhs: OnlineProfile) -> Bool {
         return lhs.identifier == rhs.identifier &&
-        lhs.type == rhs.type
+            lhs.type == rhs.type
     }
 }

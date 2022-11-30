@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - WorldTennisNumber
+
 class WorldTennisNumber: Codable, Equatable {
     var confidence: Double?
     var extensions: [Extension?]?
@@ -30,30 +31,30 @@ class WorldTennisNumber: Codable, Equatable {
         self.updated = updated
         self.worldTennisNumberType = worldTennisNumberType
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case confidence = "confidence"
-        case extensions = "extensions"
-        case ids = "ids"
+        case confidence
+        case extensions
+        case ids
         case matchUPS = "matchUps"
-        case notes = "notes"
-        case ratingDate = "ratingDate"
+        case notes
+        case ratingDate
         case tennisID = "tennisId"
-        case tennisNumber = "tennisNumber"
-        case updated = "updated"
-        case worldTennisNumberType = "worldTennisNumberType"
+        case tennisNumber
+        case updated
+        case worldTennisNumberType
     }
 
     static func == (lhs: WorldTennisNumber, rhs: WorldTennisNumber) -> Bool {
         return lhs.confidence == rhs.confidence &&
-        lhs.extensions == rhs.extensions &&
-        lhs.ids == rhs.ids &&
-        lhs.matchUPS == rhs.matchUPS &&
-        lhs.notes == rhs.notes &&
-        lhs.ratingDate == rhs.ratingDate &&
-        lhs.tennisID == rhs.tennisID &&
-        lhs.tennisNumber == rhs.tennisNumber &&
-        lhs.updated == rhs.updated &&
-        lhs.worldTennisNumberType == rhs.worldTennisNumberType
+            lhs.extensions == rhs.extensions &&
+            lhs.ids == rhs.ids &&
+            lhs.matchUPS == rhs.matchUPS &&
+            lhs.notes == rhs.notes &&
+            lhs.ratingDate == rhs.ratingDate &&
+            lhs.tennisID == rhs.tennisID &&
+            lhs.tennisNumber == rhs.tennisNumber &&
+            lhs.updated == rhs.updated &&
+            lhs.worldTennisNumberType == rhs.worldTennisNumberType
     }
 }

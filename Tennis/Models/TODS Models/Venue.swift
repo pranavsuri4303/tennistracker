@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Venue
+
 class Venue: Codable, Equatable {
     var addresses: [Address?]?
     var courts: [Court?]?
@@ -32,32 +33,32 @@ class Venue: Codable, Equatable {
         self.venueType = venueType
         self.website = website
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case addresses = "addresses"
-        case courts = "courts"
-        case extensions = "extensions"
-        case ids = "ids"
-        case name = "name"
-        case notes = "notes"
-        case subVenue = "subVenue"
-        case updated = "updated"
+        case addresses
+        case courts
+        case extensions
+        case ids
+        case name
+        case notes
+        case subVenue
+        case updated
         case venueID = "venueId"
-        case venueType = "venueType"
-        case website = "website"
+        case venueType
+        case website
     }
 
     static func == (lhs: Venue, rhs: Venue) -> Bool {
         return lhs.addresses == rhs.addresses &&
-        lhs.courts == rhs.courts &&
-        lhs.extensions == rhs.extensions &&
-        lhs.ids == rhs.ids &&
-        lhs.name == rhs.name &&
-        lhs.notes == rhs.notes &&
-        lhs.subVenue == rhs.subVenue &&
-        lhs.updated == rhs.updated &&
-        lhs.venueID == rhs.venueID &&
-        lhs.venueType == rhs.venueType &&
-        lhs.website == rhs.website
+            lhs.courts == rhs.courts &&
+            lhs.extensions == rhs.extensions &&
+            lhs.ids == rhs.ids &&
+            lhs.name == rhs.name &&
+            lhs.notes == rhs.notes &&
+            lhs.subVenue == rhs.subVenue &&
+            lhs.updated == rhs.updated &&
+            lhs.venueID == rhs.venueID &&
+            lhs.venueType == rhs.venueType &&
+            lhs.website == rhs.website
     }
 }

@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - RankingItem
+
 class RankingItem: Codable, Equatable {
     var person: Person?
     var rank: Int?
@@ -24,24 +25,24 @@ class RankingItem: Codable, Equatable {
         self.team = team
         self.type = type
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case person = "person"
-        case rank = "rank"
-        case rankingItemCode = "rankingItemCode"
-        case result = "result"
-        case sortOrder = "sortOrder"
-        case team = "team"
-        case type = "type"
+        case person
+        case rank
+        case rankingItemCode
+        case result
+        case sortOrder
+        case team
+        case type
     }
 
     static func == (lhs: RankingItem, rhs: RankingItem) -> Bool {
         return lhs.person == rhs.person &&
-        lhs.rank == rhs.rank &&
-        lhs.rankingItemCode == rhs.rankingItemCode &&
-        lhs.result == rhs.result &&
-        lhs.sortOrder == rhs.sortOrder &&
-        lhs.team == rhs.team &&
-        lhs.type == rhs.type
+            lhs.rank == rhs.rank &&
+            lhs.rankingItemCode == rhs.rankingItemCode &&
+            lhs.result == rhs.result &&
+            lhs.sortOrder == rhs.sortOrder &&
+            lhs.team == rhs.team &&
+            lhs.type == rhs.type
     }
 }

@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - ScheduleItem
+
 class ScheduleItem: Codable, Equatable {
     var scheduleItemDescription: String?
     var endDate: Date?
@@ -32,32 +33,32 @@ class ScheduleItem: Codable, Equatable {
         self.startDate = startDate
         self.updated = updated
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case scheduleItemDescription = "description"
-        case endDate = "endDate"
-        case extensions = "extensions"
-        case ids = "ids"
-        case localTimeZone = "localTimeZone"
-        case name = "name"
-        case notes = "notes"
-        case parentScheduleItem = "parentScheduleItem"
+        case endDate
+        case extensions
+        case ids
+        case localTimeZone
+        case name
+        case notes
+        case parentScheduleItem
         case scheduleItemID = "scheduleItemId"
-        case startDate = "startDate"
-        case updated = "updated"
+        case startDate
+        case updated
     }
 
     static func == (lhs: ScheduleItem, rhs: ScheduleItem) -> Bool {
         return lhs.scheduleItemDescription == rhs.scheduleItemDescription &&
-        lhs.endDate == rhs.endDate &&
-        lhs.extensions == rhs.extensions &&
-        lhs.ids == rhs.ids &&
-        lhs.localTimeZone == rhs.localTimeZone &&
-        lhs.name == rhs.name &&
-        lhs.notes == rhs.notes &&
-        lhs.parentScheduleItem == rhs.parentScheduleItem &&
-        lhs.scheduleItemID == rhs.scheduleItemID &&
-        lhs.startDate == rhs.startDate &&
-        lhs.updated == rhs.updated
+            lhs.endDate == rhs.endDate &&
+            lhs.extensions == rhs.extensions &&
+            lhs.ids == rhs.ids &&
+            lhs.localTimeZone == rhs.localTimeZone &&
+            lhs.name == rhs.name &&
+            lhs.notes == rhs.notes &&
+            lhs.parentScheduleItem == rhs.parentScheduleItem &&
+            lhs.scheduleItemID == rhs.scheduleItemID &&
+            lhs.startDate == rhs.startDate &&
+            lhs.updated == rhs.updated
     }
 }

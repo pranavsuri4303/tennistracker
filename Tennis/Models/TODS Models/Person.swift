@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Person
+
 class Person: Codable, Equatable {
     var addresses: [Address?]?
     var biographicalInformation: BiographicalInformation?
@@ -52,53 +53,52 @@ class Person: Codable, Equatable {
         self.tennisID = tennisID
         self.updated = updated
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case addresses = "addresses"
-        case biographicalInformation = "biographicalInformation"
-        case birthDate = "birthDate"
-        case emailAddress = "emailAddress"
-        case extensions = "extensions"
-        case ids = "ids"
-        case nationalityCode = "nationalityCode"
-        case nativeFamilyName = "nativeFamilyName"
-        case nativeGivenName = "nativeGivenName"
-        case notes = "notes"
-        case onlineProfiles = "onlineProfiles"
-        case otherNames = "otherNames"
-        case passportFamilyName = "passportFamilyName"
-        case passportGivenName = "passportGivenName"
+        case addresses
+        case biographicalInformation
+        case birthDate
+        case emailAddress
+        case extensions
+        case ids
+        case nationalityCode
+        case nativeFamilyName
+        case nativeGivenName
+        case notes
+        case onlineProfiles
+        case otherNames
+        case passportFamilyName
+        case passportGivenName
         case personID = "personId"
-        case previousNames = "previousNames"
-        case sex = "sex"
-        case standardFamilyName = "standardFamilyName"
-        case standardGivenName = "standardGivenName"
+        case previousNames
+        case sex
+        case standardFamilyName
+        case standardGivenName
         case tennisID = "tennisId"
-        case updated = "updated"
+        case updated
     }
-    
+
     static func == (lhs: Person, rhs: Person) -> Bool {
         return lhs.addresses == rhs.addresses &&
-        lhs.biographicalInformation == rhs.biographicalInformation &&
-        lhs.birthDate == rhs.birthDate &&
-        lhs.emailAddress == rhs.emailAddress &&
-        lhs.extensions == rhs.extensions &&
-        lhs.ids == rhs.ids &&
-        lhs.nationalityCode == rhs.nationalityCode &&
-        lhs.nativeFamilyName == rhs.nativeFamilyName &&
-        lhs.nativeGivenName == rhs.nativeGivenName &&
-        lhs.notes == rhs.notes &&
-        lhs.onlineProfiles == rhs.onlineProfiles &&
-        lhs.otherNames == rhs.otherNames &&
-        lhs.passportFamilyName == rhs.passportFamilyName &&
-        lhs.passportGivenName == rhs.passportGivenName &&
-        lhs.personID == rhs.personID &&
-        lhs.previousNames == rhs.previousNames &&
-        lhs.sex == rhs.sex &&
-        lhs.standardFamilyName == rhs.standardFamilyName &&
-        lhs.standardGivenName == rhs.standardGivenName &&
-        lhs.tennisID == rhs.tennisID &&
-        lhs.updated == rhs.updated
+            lhs.biographicalInformation == rhs.biographicalInformation &&
+            lhs.birthDate == rhs.birthDate &&
+            lhs.emailAddress == rhs.emailAddress &&
+            lhs.extensions == rhs.extensions &&
+            lhs.ids == rhs.ids &&
+            lhs.nationalityCode == rhs.nationalityCode &&
+            lhs.nativeFamilyName == rhs.nativeFamilyName &&
+            lhs.nativeGivenName == rhs.nativeGivenName &&
+            lhs.notes == rhs.notes &&
+            lhs.onlineProfiles == rhs.onlineProfiles &&
+            lhs.otherNames == rhs.otherNames &&
+            lhs.passportFamilyName == rhs.passportFamilyName &&
+            lhs.passportGivenName == rhs.passportGivenName &&
+            lhs.personID == rhs.personID &&
+            lhs.previousNames == rhs.previousNames &&
+            lhs.sex == rhs.sex &&
+            lhs.standardFamilyName == rhs.standardFamilyName &&
+            lhs.standardGivenName == rhs.standardGivenName &&
+            lhs.tennisID == rhs.tennisID &&
+            lhs.updated == rhs.updated
     }
-    
 }

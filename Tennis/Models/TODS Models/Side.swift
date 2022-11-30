@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Side
+
 class Side: Codable, Equatable {
     var extensions: [Extension?]?
     var ids: IDS?
@@ -26,26 +27,26 @@ class Side: Codable, Equatable {
         self.sideNumber = sideNumber
         self.updated = updated
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case extensions = "extensions"
-        case ids = "ids"
-        case notes = "notes"
-        case participant = "participant"
-        case players = "players"
-        case score = "score"
-        case sideNumber = "sideNumber"
-        case updated = "updated"
+        case extensions
+        case ids
+        case notes
+        case participant
+        case players
+        case score
+        case sideNumber
+        case updated
     }
 
     static func == (lhs: Side, rhs: Side) -> Bool {
         return lhs.extensions == rhs.extensions &&
-        lhs.ids == rhs.ids &&
-        lhs.notes == rhs.notes &&
-        lhs.participant == rhs.participant &&
-        lhs.players == rhs.players &&
-        lhs.score == rhs.score &&
-        lhs.sideNumber == rhs.sideNumber &&
-        lhs.updated == rhs.updated
+            lhs.ids == rhs.ids &&
+            lhs.notes == rhs.notes &&
+            lhs.participant == rhs.participant &&
+            lhs.players == rhs.players &&
+            lhs.score == rhs.score &&
+            lhs.sideNumber == rhs.sideNumber &&
+            lhs.updated == rhs.updated
     }
 }

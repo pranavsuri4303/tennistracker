@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Organisation
+
 class Organisation: Codable, Equatable {
     var addresses: [Address?]?
     var extensions: [Extension?]?
@@ -28,28 +29,28 @@ class Organisation: Codable, Equatable {
         self.updated = updated
         self.website = website
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case addresses = "addresses"
-        case extensions = "extensions"
-        case ids = "ids"
-        case name = "name"
-        case notes = "notes"
+        case addresses
+        case extensions
+        case ids
+        case name
+        case notes
         case organisationID = "organisationId"
-        case organisationType = "organisationType"
-        case updated = "updated"
-        case website = "website"
+        case organisationType
+        case updated
+        case website
     }
-    
+
     static func == (lhs: Organisation, rhs: Organisation) -> Bool {
         return lhs.addresses == rhs.addresses &&
-        lhs.extensions == rhs.extensions &&
-        lhs.ids == rhs.ids &&
-        lhs.name == rhs.name &&
-        lhs.notes == rhs.notes &&
-        lhs.organisationID == rhs.organisationID &&
-        lhs.organisationType == rhs.organisationType &&
-        lhs.updated == rhs.updated &&
-        lhs.website == rhs.website
+            lhs.extensions == rhs.extensions &&
+            lhs.ids == rhs.ids &&
+            lhs.name == rhs.name &&
+            lhs.notes == rhs.notes &&
+            lhs.organisationID == rhs.organisationID &&
+            lhs.organisationType == rhs.organisationType &&
+            lhs.updated == rhs.updated &&
+            lhs.website == rhs.website
     }
 }

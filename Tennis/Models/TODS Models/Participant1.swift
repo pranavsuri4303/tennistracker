@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Participant1
+
 class Participant1: Codable, Equatable {
     var extensions: [Extension?]?
     var ids: IDS?
@@ -38,38 +39,38 @@ class Participant1: Codable, Equatable {
         self.team = team
         self.updated = updated
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case extensions = "extensions"
-        case ids = "ids"
-        case members = "members"
-        case name = "name"
-        case notes = "notes"
+        case extensions
+        case ids
+        case members
+        case name
+        case notes
         case participantID = "participantId"
-        case participantRole = "participantRole"
-        case participantStatus = "participantStatus"
-        case participantType = "participantType"
-        case person = "person"
-        case preferredGivenName = "preferredGivenName"
-        case representing = "representing"
-        case team = "team"
-        case updated = "updated"
+        case participantRole
+        case participantStatus
+        case participantType
+        case person
+        case preferredGivenName
+        case representing
+        case team
+        case updated
     }
-    
+
     static func == (lhs: Participant1, rhs: Participant1) -> Bool {
         return lhs.extensions == rhs.extensions &&
-        lhs.ids == rhs.ids &&
-        lhs.members == rhs.members &&
-        lhs.name == rhs.name &&
-        lhs.notes == rhs.notes &&
-        lhs.participantID == rhs.participantID &&
-        lhs.participantRole == rhs.participantRole &&
-        lhs.participantStatus == rhs.participantStatus &&
-        lhs.participantType == rhs.participantType &&
-        lhs.person == rhs.person &&
-        lhs.preferredGivenName == rhs.preferredGivenName &&
-        lhs.representing == rhs.representing &&
-        lhs.team == rhs.team &&
-        lhs.updated == rhs.updated
+            lhs.ids == rhs.ids &&
+            lhs.members == rhs.members &&
+            lhs.name == rhs.name &&
+            lhs.notes == rhs.notes &&
+            lhs.participantID == rhs.participantID &&
+            lhs.participantRole == rhs.participantRole &&
+            lhs.participantStatus == rhs.participantStatus &&
+            lhs.participantType == rhs.participantType &&
+            lhs.person == rhs.person &&
+            lhs.preferredGivenName == rhs.preferredGivenName &&
+            lhs.representing == rhs.representing &&
+            lhs.team == rhs.team &&
+            lhs.updated == rhs.updated
     }
 }

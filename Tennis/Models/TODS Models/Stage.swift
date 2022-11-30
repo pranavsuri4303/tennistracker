@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Stage
+
 class Stage: Codable, Equatable {
     var draws: [Draw?]?
     var entries: [Entry?]?
@@ -22,22 +23,22 @@ class Stage: Codable, Equatable {
         self.stageID = stageID
         self.stageType = stageType
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case draws = "draws"
-        case entries = "entries"
-        case name = "name"
-        case sortOrder = "sortOrder"
+        case draws
+        case entries
+        case name
+        case sortOrder
         case stageID = "stageId"
-        case stageType = "stageType"
+        case stageType
     }
 
     static func == (lhs: Stage, rhs: Stage) -> Bool {
         return lhs.draws == rhs.draws &&
-        lhs.entries == rhs.entries &&
-        lhs.name == rhs.name &&
-        lhs.sortOrder == rhs.sortOrder &&
-        lhs.stageID == rhs.stageID &&
-        lhs.stageType == rhs.stageType
+            lhs.entries == rhs.entries &&
+            lhs.name == rhs.name &&
+            lhs.sortOrder == rhs.sortOrder &&
+            lhs.stageID == rhs.stageID &&
+            lhs.stageType == rhs.stageType
     }
 }

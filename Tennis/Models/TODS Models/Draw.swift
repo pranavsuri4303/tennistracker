@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Draw
+
 class Draw: Codable, Equatable {
     var drawID: String?
     var drawSize: Int?
@@ -42,42 +43,42 @@ class Draw: Codable, Equatable {
         self.startDate = startDate
         self.updated = updated
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case drawID = "drawId"
-        case drawSize = "drawSize"
-        case drawStatus = "drawStatus"
-        case drawStructure = "drawStructure"
-        case endDate = "endDate"
-        case entries = "entries"
-        case extensions = "extensions"
-        case ids = "ids"
+        case drawSize
+        case drawStatus
+        case drawStructure
+        case endDate
+        case entries
+        case extensions
+        case ids
         case matchUPS = "matchUps"
-        case name = "name"
-        case noOfRounds = "noOfRounds"
-        case notes = "notes"
-        case rounds = "rounds"
-        case sortOrder = "sortOrder"
-        case startDate = "startDate"
-        case updated = "updated"
+        case name
+        case noOfRounds
+        case notes
+        case rounds
+        case sortOrder
+        case startDate
+        case updated
     }
-    
+
     static func == (lhs: Draw, rhs: Draw) -> Bool {
         return lhs.drawID == rhs.drawID &&
-        lhs.drawSize == rhs.drawSize &&
-        lhs.drawStatus == rhs.drawStatus &&
-        lhs.drawStructure == rhs.drawStructure &&
-        lhs.endDate == rhs.endDate &&
-        lhs.entries == rhs.entries &&
-        lhs.extensions == rhs.extensions &&
-        lhs.ids == rhs.ids &&
-        lhs.matchUPS == rhs.matchUPS &&
-        lhs.name == rhs.name &&
-        lhs.noOfRounds == rhs.noOfRounds &&
-        lhs.notes == rhs.notes &&
-        lhs.rounds == rhs.rounds &&
-        lhs.sortOrder == rhs.sortOrder &&
-        lhs.startDate == rhs.startDate &&
-        lhs.updated == rhs.updated
+            lhs.drawSize == rhs.drawSize &&
+            lhs.drawStatus == rhs.drawStatus &&
+            lhs.drawStructure == rhs.drawStructure &&
+            lhs.endDate == rhs.endDate &&
+            lhs.entries == rhs.entries &&
+            lhs.extensions == rhs.extensions &&
+            lhs.ids == rhs.ids &&
+            lhs.matchUPS == rhs.matchUPS &&
+            lhs.name == rhs.name &&
+            lhs.noOfRounds == rhs.noOfRounds &&
+            lhs.notes == rhs.notes &&
+            lhs.rounds == rhs.rounds &&
+            lhs.sortOrder == rhs.sortOrder &&
+            lhs.startDate == rhs.startDate &&
+            lhs.updated == rhs.updated
     }
 }

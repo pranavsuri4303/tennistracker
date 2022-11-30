@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Shot
+
 class Shot: Codable, Equatable {
     var bounceAt: String?
     var participant: Participant?
@@ -32,32 +33,32 @@ class Shot: Codable, Equatable {
         self.speed = speed
         self.spin = spin
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case bounceAt = "bounceAt"
-        case participant = "participant"
-        case returned = "returned"
-        case shotDetail = "shotDetail"
-        case shotMadeFrom = "shotMadeFrom"
-        case shotNumber = "shotNumber"
-        case shotOutcome = "shotOutcome"
-        case shotType = "shotType"
-        case side = "side"
-        case speed = "speed"
-        case spin = "spin"
+        case bounceAt
+        case participant
+        case returned
+        case shotDetail
+        case shotMadeFrom
+        case shotNumber
+        case shotOutcome
+        case shotType
+        case side
+        case speed
+        case spin
     }
 
     static func == (lhs: Shot, rhs: Shot) -> Bool {
         return lhs.bounceAt == rhs.bounceAt &&
-        lhs.participant == rhs.participant &&
-        lhs.returned == rhs.returned &&
-        lhs.shotDetail == rhs.shotDetail &&
-        lhs.shotMadeFrom == rhs.shotMadeFrom &&
-        lhs.shotNumber == rhs.shotNumber &&
-        lhs.shotOutcome == rhs.shotOutcome &&
-        lhs.shotType == rhs.shotType &&
-        lhs.side == rhs.side &&
-        lhs.speed == rhs.speed &&
-        lhs.spin == rhs.spin
+            lhs.participant == rhs.participant &&
+            lhs.returned == rhs.returned &&
+            lhs.shotDetail == rhs.shotDetail &&
+            lhs.shotMadeFrom == rhs.shotMadeFrom &&
+            lhs.shotNumber == rhs.shotNumber &&
+            lhs.shotOutcome == rhs.shotOutcome &&
+            lhs.shotType == rhs.shotType &&
+            lhs.side == rhs.side &&
+            lhs.speed == rhs.speed &&
+            lhs.spin == rhs.spin
     }
 }

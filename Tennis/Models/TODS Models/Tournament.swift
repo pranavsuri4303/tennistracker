@@ -6,6 +6,7 @@
 import Foundation
 
 // MARK: - Tournament
+
 class Tournament: Codable, Equatable {
     var endDate: Date?
     var entriesClose: Date?
@@ -70,70 +71,70 @@ class Tournament: Codable, Equatable {
         self.venue = venue
         self.withdrawalDeadline = withdrawalDeadline
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        case endDate = "endDate"
-        case entriesClose = "entriesClose"
-        case entriesOpen = "entriesOpen"
-        case events = "events"
-        case extensions = "extensions"
-        case formalName = "formalName"
-        case hostCountryCode = "hostCountryCode"
-        case ids = "ids"
-        case indoorOutdoor = "indoorOutdoor"
-        case localTimeZone = "localTimeZone"
+        case endDate
+        case entriesClose
+        case entriesOpen
+        case events
+        case extensions
+        case formalName
+        case hostCountryCode
+        case ids
+        case indoorOutdoor
+        case localTimeZone
         case matchUPS = "matchUps"
-        case notes = "notes"
-        case participants = "participants"
-        case promotionalName = "promotionalName"
-        case providerTournamentID = "providerTournamentID"
-        case scheduleItem = "scheduleItem"
-        case season = "season"
-        case startDate = "startDate"
-        case surfaceCategory = "surfaceCategory"
-        case tennisOfficials = "tennisOfficials"
-        case totalPrizeMoney = "totalPrizeMoney"
-        case tournamentAddresses = "tournamentAddresses"
-        case tournamentContacts = "tournamentContacts"
-        case tournamentGroups = "tournamentGroups"
-        case tournamentLevel = "tournamentLevel"
-        case tournamentName = "tournamentName"
-        case unifiedTournamentID = "unifiedTournamentID"
-        case updated = "updated"
-        case venue = "venue"
-        case withdrawalDeadline = "withdrawalDeadline"
+        case notes
+        case participants
+        case promotionalName
+        case providerTournamentID
+        case scheduleItem
+        case season
+        case startDate
+        case surfaceCategory
+        case tennisOfficials
+        case totalPrizeMoney
+        case tournamentAddresses
+        case tournamentContacts
+        case tournamentGroups
+        case tournamentLevel
+        case tournamentName
+        case unifiedTournamentID
+        case updated
+        case venue
+        case withdrawalDeadline
     }
 
     static func == (lhs: Tournament, rhs: Tournament) -> Bool {
         return lhs.endDate == rhs.endDate &&
-        lhs.entriesClose == rhs.entriesClose &&
-        lhs.entriesOpen == rhs.entriesOpen &&
-        lhs.events == rhs.events &&
-        lhs.extensions == rhs.extensions &&
-        lhs.formalName == rhs.formalName &&
-        lhs.hostCountryCode == rhs.hostCountryCode &&
-        lhs.ids == rhs.ids &&
-        lhs.indoorOutdoor == rhs.indoorOutdoor &&
-        lhs.localTimeZone == rhs.localTimeZone &&
-        lhs.matchUPS == rhs.matchUPS &&
-        lhs.notes == rhs.notes &&
-        lhs.participants == rhs.participants &&
-        lhs.promotionalName == rhs.promotionalName &&
-        lhs.providerTournamentID == rhs.providerTournamentID &&
-        lhs.scheduleItem == rhs.scheduleItem &&
-        lhs.season == rhs.season &&
-        lhs.startDate == rhs.startDate &&
-        lhs.surfaceCategory == rhs.surfaceCategory &&
-        lhs.tennisOfficials == rhs.tennisOfficials &&
-        lhs.totalPrizeMoney == rhs.totalPrizeMoney &&
-        lhs.tournamentAddresses == rhs.tournamentAddresses &&
-        lhs.tournamentContacts == rhs.tournamentContacts &&
-        lhs.tournamentGroups == rhs.tournamentGroups &&
-        lhs.tournamentLevel == rhs.tournamentLevel &&
-        lhs.tournamentName == rhs.tournamentName &&
-        lhs.unifiedTournamentID == rhs.unifiedTournamentID &&
-        lhs.updated == rhs.updated &&
-        lhs.venue == rhs.venue &&
-        lhs.withdrawalDeadline == rhs.withdrawalDeadline
+            lhs.entriesClose == rhs.entriesClose &&
+            lhs.entriesOpen == rhs.entriesOpen &&
+            lhs.events == rhs.events &&
+            lhs.extensions == rhs.extensions &&
+            lhs.formalName == rhs.formalName &&
+            lhs.hostCountryCode == rhs.hostCountryCode &&
+            lhs.ids == rhs.ids &&
+            lhs.indoorOutdoor == rhs.indoorOutdoor &&
+            lhs.localTimeZone == rhs.localTimeZone &&
+            lhs.matchUPS == rhs.matchUPS &&
+            lhs.notes == rhs.notes &&
+            lhs.participants == rhs.participants &&
+            lhs.promotionalName == rhs.promotionalName &&
+            lhs.providerTournamentID == rhs.providerTournamentID &&
+            lhs.scheduleItem == rhs.scheduleItem &&
+            lhs.season == rhs.season &&
+            lhs.startDate == rhs.startDate &&
+            lhs.surfaceCategory == rhs.surfaceCategory &&
+            lhs.tennisOfficials == rhs.tennisOfficials &&
+            lhs.totalPrizeMoney == rhs.totalPrizeMoney &&
+            lhs.tournamentAddresses == rhs.tournamentAddresses &&
+            lhs.tournamentContacts == rhs.tournamentContacts &&
+            lhs.tournamentGroups == rhs.tournamentGroups &&
+            lhs.tournamentLevel == rhs.tournamentLevel &&
+            lhs.tournamentName == rhs.tournamentName &&
+            lhs.unifiedTournamentID == rhs.unifiedTournamentID &&
+            lhs.updated == rhs.updated &&
+            lhs.venue == rhs.venue &&
+            lhs.withdrawalDeadline == rhs.withdrawalDeadline
     }
 }
