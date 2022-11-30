@@ -98,7 +98,6 @@
 		B5C95EB92936632700C9C8A7 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E902936632600C9C8A7 /* Team.swift */; };
 		B5C95EBA2936632700C9C8A7 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E912936632600C9C8A7 /* Event.swift */; };
 		B5C95EBB2936632700C9C8A7 /* OnlineProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E922936632600C9C8A7 /* OnlineProfile.swift */; };
-		B5C95EBC2936632700C9C8A7 /* Participant1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E932936632600C9C8A7 /* Participant1.swift */; };
 		B5C95EBD2936632700C9C8A7 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E942936632700C9C8A7 /* Stage.swift */; };
 		B5C95EBE2936632700C9C8A7 /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E952936632700C9C8A7 /* Statistic.swift */; };
 		B5C95EBF2936632700C9C8A7 /* TennisOfficials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E962936632700C9C8A7 /* TennisOfficials.swift */; };
@@ -223,7 +222,6 @@
 		B5C95E902936632600C9C8A7 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		B5C95E912936632600C9C8A7 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B5C95E922936632600C9C8A7 /* OnlineProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineProfile.swift; sourceTree = "<group>"; };
-		B5C95E932936632600C9C8A7 /* Participant1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Participant1.swift; sourceTree = "<group>"; };
 		B5C95E942936632700C9C8A7 /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		B5C95E952936632700C9C8A7 /* Statistic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 		B5C95E962936632700C9C8A7 /* TennisOfficials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TennisOfficials.swift; sourceTree = "<group>"; };
@@ -518,7 +516,6 @@
 				B5C95E772936632400C9C8A7 /* OrderOfPlayItem.swift */,
 				B5C95E8B2936632600C9C8A7 /* Organisation.swift */,
 				B5C95E7C2936632500C9C8A7 /* Participant.swift */,
-				B5C95E932936632600C9C8A7 /* Participant1.swift */,
 				B5C95E9B2936632700C9C8A7 /* Person.swift */,
 				B5C95E882936632600C9C8A7 /* Player.swift */,
 				B5C95E8D2936632600C9C8A7 /* Point.swift */,
@@ -774,7 +771,6 @@
 				B5C95EC02936632700C9C8A7 /* Contact.swift in Sources */,
 				76D1B86025BAEE4700FE1B4B /* LoadingScreenView.swift in Sources */,
 				76AADB9E25C64F3800EB0C43 /* StringsVM.swift in Sources */,
-				B5C95EBC2936632700C9C8A7 /* Participant1.swift in Sources */,
 				B5C95EAF2936632700C9C8A7 /* PrizeMoney.swift in Sources */,
 				764A617E25B9479700789373 /* ResetPasswordView.swift in Sources */,
 				B5D1F76C27AA1E370091AC2F /* RDHeader.swift in Sources */,
