@@ -1,22 +1,25 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let game = try Game(json)
+//   let game = try? newJSONDecoder().decode(Game.self, from: jsonData)
 
 import Foundation
 
 // MARK: - Game
-class Game: Codable {
+
+class Game: Codable, Equatable {
     var extensions: [Extension?]?
-    var gameDuration, gameFormat: String?
+    var gameDuration: String?
+    var gameFormat: String?
     var gameNumber: Int?
     var ids: IDS?
     var notes: String?
     var points: [Point?]?
-    var timestamp, updated: Date?
+    var timestamp: Date?
+    var updated: Date?
     var winningSide: Int?
 
-    init(extensions: [Extension?]?, gameDuration: String?, gameFormat: String?, gameNumber: Int?, ids: IDS?, notes: String?, points: [Point?]?, timestamp: Date?, updated: Date?, winningSide: Int?) {
+    internal init(extensions: [Extension?]? = nil, gameDuration: String? = nil, gameFormat: String? = nil, gameNumber: Int? = nil, ids: IDS? = nil, notes: String? = nil, points: [Point?]? = nil, timestamp: Date? = nil, updated: Date? = nil, winningSide: Int? = nil) {
         self.extensions = extensions
         self.gameDuration = gameDuration
         self.gameFormat = gameFormat
@@ -28,58 +31,30 @@ class Game: Codable {
         self.updated = updated
         self.winningSide = winningSide
     }
-}
 
-// MARK: Game convenience initializers and mutators
-
-extension Game {
-    convenience init(data: Data) throws {
-        let me = try newJSONDecoder().decode(Game.self, from: data)
-        self.init(extensions: me.extensions, gameDuration: me.gameDuration, gameFormat: me.gameFormat, gameNumber: me.gameNumber, ids: me.ids, notes: me.notes, points: me.points, timestamp: me.timestamp, updated: me.updated, winningSide: me.winningSide)
+    enum CodingKeys: String, CodingKey {
+        case extensions
+        case gameDuration
+        case gameFormat
+        case gameNumber
+        case ids
+        case notes
+        case points
+        case timestamp
+        case updated
+        case winningSide
     }
 
-    convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {
-        guard let data = json.data(using: encoding) else {
-            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
-        }
-        try self.init(data: data)
-    }
-
-    convenience init(fromURL url: URL) throws {
-        try self.init(data: try Data(contentsOf: url))
-    }
-
-    func with(
-        extensions: [Extension?]?? = nil,
-        gameDuration: String?? = nil,
-        gameFormat: String?? = nil,
-        gameNumber: Int?? = nil,
-        ids: IDS?? = nil,
-        notes: String?? = nil,
-        points: [Point?]?? = nil,
-        timestamp: Date?? = nil,
-        updated: Date?? = nil,
-        winningSide: Int?? = nil
-    ) -> Game {
-        return Game(
-            extensions: extensions ?? self.extensions,
-            gameDuration: gameDuration ?? self.gameDuration,
-            gameFormat: gameFormat ?? self.gameFormat,
-            gameNumber: gameNumber ?? self.gameNumber,
-            ids: ids ?? self.ids,
-            notes: notes ?? self.notes,
-            points: points ?? self.points,
-            timestamp: timestamp ?? self.timestamp,
-            updated: updated ?? self.updated,
-            winningSide: winningSide ?? self.winningSide
-        )
-    }
-
-    func jsonData() throws -> Data {
-        return try newJSONEncoder().encode(self)
-    }
-
-    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
-        return String(data: try self.jsonData(), encoding: encoding)
+    static func == (lhs: Game, rhs: Game) -> Bool {
+        lhs.extensions == rhs.extensions &&
+            lhs.gameDuration == rhs.gameDuration &&
+            lhs.gameFormat == rhs.gameFormat &&
+            lhs.gameNumber == rhs.gameNumber &&
+            lhs.ids == rhs.ids &&
+            lhs.notes == rhs.notes &&
+            lhs.points == rhs.points &&
+            lhs.timestamp == rhs.timestamp &&
+            lhs.updated == rhs.updated &&
+            lhs.winningSide == rhs.winningSide
     }
 }

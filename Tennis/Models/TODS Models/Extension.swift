@@ -1,62 +1,31 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let extension = try Extension(json)
+//   let extension = try? newJSONDecoder().decode(Extension.self, from: jsonData)
 
 import Foundation
 
 // MARK: - Extension
-class Extension: Codable {
-    var extensionDescription, name, value: String?
+class Extension: Codable, Equatable {
+    var extensionDescription: String?
+    var name: String?
+    var value: String?
 
-    enum CodingKeys: String, CodingKey {
-        case extensionDescription = "description"
-        case name, value
-    }
-
-    init(extensionDescription: String?, name: String?, value: String?) {
+    internal init(extensionDescription: String? = nil, name: String? = nil, value: String? = nil) {
         self.extensionDescription = extensionDescription
         self.name = name
         self.value = value
     }
-}
-
-// MARK: Extension convenience initializers and mutators
-
-extension Extension {
-    convenience init(data: Data) throws {
-        let me = try newJSONDecoder().decode(Extension.self, from: data)
-        self.init(extensionDescription: me.extensionDescription, name: me.name, value: me.value)
+    
+    enum CodingKeys: String, CodingKey {
+        case extensionDescription = "description"
+        case name = "name"
+        case value = "value"
     }
-
-    convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {
-        guard let data = json.data(using: encoding) else {
-            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
-        }
-        try self.init(data: data)
-    }
-
-    convenience init(fromURL url: URL) throws {
-        try self.init(data: try Data(contentsOf: url))
-    }
-
-    func with(
-        extensionDescription: String?? = nil,
-        name: String?? = nil,
-        value: String?? = nil
-    ) -> Extension {
-        return Extension(
-            extensionDescription: extensionDescription ?? self.extensionDescription,
-            name: name ?? self.name,
-            value: value ?? self.value
-        )
-    }
-
-    func jsonData() throws -> Data {
-        return try newJSONEncoder().encode(self)
-    }
-
-    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
-        return String(data: try self.jsonData(), encoding: encoding)
+    
+    static func == (lhs: Extension, rhs: Extension) -> Bool {
+        return lhs.extensionDescription == rhs.extensionDescription &&
+        lhs.name == rhs.name &&
+        lhs.value == rhs.value
     }
 }

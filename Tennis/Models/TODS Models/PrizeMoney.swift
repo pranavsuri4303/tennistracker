@@ -1,55 +1,27 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let prizeMoney = try PrizeMoney(json)
+//   let prizeMoney = try? newJSONDecoder().decode(PrizeMoney.self, from: jsonData)
 
 import Foundation
 
 // MARK: - PrizeMoney
-class PrizeMoney: Codable {
+class PrizeMoney: Codable, Equatable {
     var amount: Double?
     var currencyCode: String?
 
-    init(amount: Double?, currencyCode: String?) {
+    internal init(amount: Double?, currencyCode: String?) {
         self.amount = amount
         self.currencyCode = currencyCode
     }
-}
-
-// MARK: PrizeMoney convenience initializers and mutators
-
-extension PrizeMoney {
-    convenience init(data: Data) throws {
-        let me = try newJSONDecoder().decode(PrizeMoney.self, from: data)
-        self.init(amount: me.amount, currencyCode: me.currencyCode)
+    
+    enum CodingKeys: String, CodingKey {
+        case amount = "amount"
+        case currencyCode = "currencyCode"
     }
 
-    convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {
-        guard let data = json.data(using: encoding) else {
-            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
-        }
-        try self.init(data: data)
-    }
-
-    convenience init(fromURL url: URL) throws {
-        try self.init(data: try Data(contentsOf: url))
-    }
-
-    func with(
-        amount: Double?? = nil,
-        currencyCode: String?? = nil
-    ) -> PrizeMoney {
-        return PrizeMoney(
-            amount: amount ?? self.amount,
-            currencyCode: currencyCode ?? self.currencyCode
-        )
-    }
-
-    func jsonData() throws -> Data {
-        return try newJSONEncoder().encode(self)
-    }
-
-    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
-        return String(data: try self.jsonData(), encoding: encoding)
+    static func == (lhs: PrizeMoney, rhs: PrizeMoney) -> Bool {
+        return lhs.amount == rhs.amount &&
+        lhs.currencyCode == rhs.currencyCode
     }
 }

@@ -1,13 +1,12 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let participant = try? newJSONDecoder().decode(Participant.self, from: jsonData)
+//   let participant1 = try? newJSONDecoder().decode(Participant1.self, from: jsonData)
 
 import Foundation
 
-// MARK: - Participant
-
-class Participant: Codable, Equatable {
+// MARK: - Participant1
+class Participant1: Codable, Equatable {
     var extensions: [Extension?]?
     var ids: IDS?
     var members: [Participant?]?
@@ -39,25 +38,25 @@ class Participant: Codable, Equatable {
         self.team = team
         self.updated = updated
     }
-
+    
     enum CodingKeys: String, CodingKey {
-        case extensions
-        case ids
-        case members
-        case name
-        case notes
+        case extensions = "extensions"
+        case ids = "ids"
+        case members = "members"
+        case name = "name"
+        case notes = "notes"
         case participantID = "participantId"
-        case participantRole
-        case participantStatus
-        case participantType
-        case person
-        case preferredGivenName
-        case representing
-        case team
-        case updated
+        case participantRole = "participantRole"
+        case participantStatus = "participantStatus"
+        case participantType = "participantType"
+        case person = "person"
+        case preferredGivenName = "preferredGivenName"
+        case representing = "representing"
+        case team = "team"
+        case updated = "updated"
     }
     
-    static func == (lhs: Participant, rhs: Participant) -> Bool {
+    static func == (lhs: Participant1, rhs: Participant1) -> Bool {
         return lhs.extensions == rhs.extensions &&
         lhs.ids == rhs.ids &&
         lhs.members == rhs.members &&

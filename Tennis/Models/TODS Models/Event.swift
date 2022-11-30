@@ -1,37 +1,34 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let event = try Event(json)
+//   let event = try? newJSONDecoder().decode(Event.self, from: jsonData)
 
 import Foundation
 
 // MARK: - Event
-class Event: Codable {
+class Event: Codable, Equatable {
     var ageCategory: String?
     var ageCategoryCutoffDate: Date?
-    var ballType, discipline: String?
+    var ballType: String?
+    var discipline: String?
     var endDate: Date?
     var entries: [Entry?]?
     var eventID: String?
-    var eventLevel, eventType: String?
+    var eventLevel: String?
+    var eventType: String?
     var extensions: [Extension?]?
     var gender: String?
     var ids: IDS?
-    var name, notes: String?
+    var name: String?
+    var notes: String?
     var stages: [Stage?]?
     var startDate: Date?
     var surfaceCategory: String?
     var tennisOfficials: TennisOfficials?
     var updated: Date?
     var wheelchairClass: String?
-
-    enum CodingKeys: String, CodingKey {
-        case ageCategory, ageCategoryCutoffDate, ballType, discipline, endDate, entries
-        case eventID = "eventId"
-        case eventLevel, eventType, extensions, gender, ids, name, notes, stages, startDate, surfaceCategory, tennisOfficials, updated, wheelchairClass
-    }
-
-    init(ageCategory: String?, ageCategoryCutoffDate: Date?, ballType: String?, discipline: String?, endDate: Date?, entries: [Entry?]?, eventID: String?, eventLevel: String?, eventType: String?, extensions: [Extension?]?, gender: String?, ids: IDS?, name: String?, notes: String?, stages: [Stage?]?, startDate: Date?, surfaceCategory: String?, tennisOfficials: TennisOfficials?, updated: Date?, wheelchairClass: String?) {
+    
+    internal init(ageCategory: String? = nil, ageCategoryCutoffDate: Date? = nil, ballType: String? = nil, discipline: String? = nil, endDate: Date? = nil, entries: [Entry?]? = nil, eventID: String? = nil, eventLevel: String? = nil, eventType: String? = nil, extensions: [Extension?]? = nil, gender: String? = nil, ids: IDS? = nil, name: String? = nil, notes: String? = nil, stages: [Stage?]? = nil, startDate: Date? = nil, surfaceCategory: String? = nil, tennisOfficials: TennisOfficials? = nil, updated: Date? = nil, wheelchairClass: String? = nil) {
         self.ageCategory = ageCategory
         self.ageCategoryCutoffDate = ageCategoryCutoffDate
         self.ballType = ballType
@@ -53,78 +50,50 @@ class Event: Codable {
         self.updated = updated
         self.wheelchairClass = wheelchairClass
     }
-}
-
-// MARK: Event convenience initializers and mutators
-
-extension Event {
-    convenience init(data: Data) throws {
-        let me = try newJSONDecoder().decode(Event.self, from: data)
-        self.init(ageCategory: me.ageCategory, ageCategoryCutoffDate: me.ageCategoryCutoffDate, ballType: me.ballType, discipline: me.discipline, endDate: me.endDate, entries: me.entries, eventID: me.eventID, eventLevel: me.eventLevel, eventType: me.eventType, extensions: me.extensions, gender: me.gender, ids: me.ids, name: me.name, notes: me.notes, stages: me.stages, startDate: me.startDate, surfaceCategory: me.surfaceCategory, tennisOfficials: me.tennisOfficials, updated: me.updated, wheelchairClass: me.wheelchairClass)
+    
+    enum CodingKeys: String, CodingKey {
+        case ageCategory = "ageCategory"
+        case ageCategoryCutoffDate = "ageCategoryCutoffDate"
+        case ballType = "ballType"
+        case discipline = "discipline"
+        case endDate = "endDate"
+        case entries = "entries"
+        case eventID = "eventId"
+        case eventLevel = "eventLevel"
+        case eventType = "eventType"
+        case extensions = "extensions"
+        case gender = "gender"
+        case ids = "ids"
+        case name = "name"
+        case notes = "notes"
+        case stages = "stages"
+        case startDate = "startDate"
+        case surfaceCategory = "surfaceCategory"
+        case tennisOfficials = "tennisOfficials"
+        case updated = "updated"
+        case wheelchairClass = "wheelchairClass"
     }
-
-    convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {
-        guard let data = json.data(using: encoding) else {
-            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
-        }
-        try self.init(data: data)
-    }
-
-    convenience init(fromURL url: URL) throws {
-        try self.init(data: try Data(contentsOf: url))
-    }
-
-    func with(
-        ageCategory: String?? = nil,
-        ageCategoryCutoffDate: Date?? = nil,
-        ballType: String?? = nil,
-        discipline: String?? = nil,
-        endDate: Date?? = nil,
-        entries: [Entry?]?? = nil,
-        eventID: String?? = nil,
-        eventLevel: String?? = nil,
-        eventType: String?? = nil,
-        extensions: [Extension?]?? = nil,
-        gender: String?? = nil,
-        ids: IDS?? = nil,
-        name: String?? = nil,
-        notes: String?? = nil,
-        stages: [Stage?]?? = nil,
-        startDate: Date?? = nil,
-        surfaceCategory: String?? = nil,
-        tennisOfficials: TennisOfficials?? = nil,
-        updated: Date?? = nil,
-        wheelchairClass: String?? = nil
-    ) -> Event {
-        return Event(
-            ageCategory: ageCategory ?? self.ageCategory,
-            ageCategoryCutoffDate: ageCategoryCutoffDate ?? self.ageCategoryCutoffDate,
-            ballType: ballType ?? self.ballType,
-            discipline: discipline ?? self.discipline,
-            endDate: endDate ?? self.endDate,
-            entries: entries ?? self.entries,
-            eventID: eventID ?? self.eventID,
-            eventLevel: eventLevel ?? self.eventLevel,
-            eventType: eventType ?? self.eventType,
-            extensions: extensions ?? self.extensions,
-            gender: gender ?? self.gender,
-            ids: ids ?? self.ids,
-            name: name ?? self.name,
-            notes: notes ?? self.notes,
-            stages: stages ?? self.stages,
-            startDate: startDate ?? self.startDate,
-            surfaceCategory: surfaceCategory ?? self.surfaceCategory,
-            tennisOfficials: tennisOfficials ?? self.tennisOfficials,
-            updated: updated ?? self.updated,
-            wheelchairClass: wheelchairClass ?? self.wheelchairClass
-        )
-    }
-
-    func jsonData() throws -> Data {
-        return try newJSONEncoder().encode(self)
-    }
-
-    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
-        return String(data: try self.jsonData(), encoding: encoding)
+    
+    static func == (lhs: Event, rhs: Event) -> Bool {
+        return lhs.ageCategory == rhs.ageCategory &&
+        lhs.ageCategoryCutoffDate == rhs.ageCategoryCutoffDate &&
+        lhs.ballType == rhs.ballType &&
+        lhs.discipline == rhs.discipline &&
+        lhs.endDate == rhs.endDate &&
+        lhs.entries == rhs.entries &&
+        lhs.eventID == rhs.eventID &&
+        lhs.eventLevel == rhs.eventLevel &&
+        lhs.eventType == rhs.eventType &&
+        lhs.extensions == rhs.extensions &&
+        lhs.gender == rhs.gender &&
+        lhs.ids == rhs.ids &&
+        lhs.name == rhs.name &&
+        lhs.notes == rhs.notes &&
+        lhs.stages == rhs.stages &&
+        lhs.startDate == rhs.startDate &&
+        lhs.surfaceCategory == rhs.surfaceCategory &&
+        lhs.tennisOfficials == rhs.tennisOfficials &&
+        lhs.updated == rhs.updated &&
+        lhs.wheelchairClass == rhs.wheelchairClass
     }
 }

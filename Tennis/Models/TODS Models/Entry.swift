@@ -1,31 +1,30 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let entry = try Entry(json)
+//   let entry = try? newJSONDecoder().decode(Entry.self, from: jsonData)
 
 import Foundation
 
 // MARK: - Entry
-class Entry: Codable {
+class Entry: Codable, Equatable {
+
+    
     var entryID: String?
     var entryStatus: String?
     var extensions: [Extension?]?
     var finalPosition: String?
     var ids: IDS?
     var losses: Int?
-    var name, notes: String?
+    var name: String?
+    var notes: String?
     var participant: Participant?
-    var participantType, points: String?
+    var participantType: String?
+    var points: String?
     var seed: Int?
     var updated: Date?
     var wins: Int?
-
-    enum CodingKeys: String, CodingKey {
-        case entryID = "entryId"
-        case entryStatus, extensions, finalPosition, ids, losses, name, notes, participant, participantType, points, seed, updated, wins
-    }
-
-    init(entryID: String?, entryStatus: String?, extensions: [Extension?]?, finalPosition: String?, ids: IDS?, losses: Int?, name: String?, notes: String?, participant: Participant?, participantType: String?, points: String?, seed: Int?, updated: Date?, wins: Int?) {
+    
+    internal init(entryID: String? = nil, entryStatus: String? = nil, extensions: [Extension?]? = nil, finalPosition: String? = nil, ids: IDS? = nil, losses: Int? = nil, name: String? = nil, notes: String? = nil, participant: Participant? = nil, participantType: String? = nil, points: String? = nil, seed: Int? = nil, updated: Date? = nil, wins: Int? = nil) {
         self.entryID = entryID
         self.entryStatus = entryStatus
         self.extensions = extensions
@@ -41,66 +40,37 @@ class Entry: Codable {
         self.updated = updated
         self.wins = wins
     }
-}
-
-// MARK: Entry convenience initializers and mutators
-
-extension Entry {
-    convenience init(data: Data) throws {
-        let me = try newJSONDecoder().decode(Entry.self, from: data)
-        self.init(entryID: me.entryID, entryStatus: me.entryStatus, extensions: me.extensions, finalPosition: me.finalPosition, ids: me.ids, losses: me.losses, name: me.name, notes: me.notes, participant: me.participant, participantType: me.participantType, points: me.points, seed: me.seed, updated: me.updated, wins: me.wins)
+    enum CodingKeys: String, CodingKey {
+        case entryID = "entryId"
+        case entryStatus = "entryStatus"
+        case extensions = "extensions"
+        case finalPosition = "finalPosition"
+        case ids = "ids"
+        case losses = "losses"
+        case name = "name"
+        case notes = "notes"
+        case participant = "participant"
+        case participantType = "participantType"
+        case points = "points"
+        case seed = "seed"
+        case updated = "updated"
+        case wins = "wins"
     }
-
-    convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {
-        guard let data = json.data(using: encoding) else {
-            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
-        }
-        try self.init(data: data)
-    }
-
-    convenience init(fromURL url: URL) throws {
-        try self.init(data: try Data(contentsOf: url))
-    }
-
-    func with(
-        entryID: String?? = nil,
-        entryStatus: String?? = nil,
-        extensions: [Extension?]?? = nil,
-        finalPosition: String?? = nil,
-        ids: IDS?? = nil,
-        losses: Int?? = nil,
-        name: String?? = nil,
-        notes: String?? = nil,
-        participant: Participant?? = nil,
-        participantType: String?? = nil,
-        points: String?? = nil,
-        seed: Int?? = nil,
-        updated: Date?? = nil,
-        wins: Int?? = nil
-    ) -> Entry {
-        return Entry(
-            entryID: entryID ?? self.entryID,
-            entryStatus: entryStatus ?? self.entryStatus,
-            extensions: extensions ?? self.extensions,
-            finalPosition: finalPosition ?? self.finalPosition,
-            ids: ids ?? self.ids,
-            losses: losses ?? self.losses,
-            name: name ?? self.name,
-            notes: notes ?? self.notes,
-            participant: participant ?? self.participant,
-            participantType: participantType ?? self.participantType,
-            points: points ?? self.points,
-            seed: seed ?? self.seed,
-            updated: updated ?? self.updated,
-            wins: wins ?? self.wins
-        )
-    }
-
-    func jsonData() throws -> Data {
-        return try newJSONEncoder().encode(self)
-    }
-
-    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
-        return String(data: try self.jsonData(), encoding: encoding)
+    
+    static func == (lhs: Entry, rhs: Entry) -> Bool {
+        return lhs.entryID == rhs.entryID &&
+        lhs.entryStatus == rhs.entryStatus &&
+        lhs.extensions == rhs.extensions &&
+        lhs.finalPosition == rhs.finalPosition &&
+        lhs.ids == rhs.ids &&
+        lhs.losses == rhs.losses &&
+        lhs.name == rhs.name &&
+        lhs.notes == rhs.notes &&
+        lhs.participant == rhs.participant &&
+        lhs.participantType == rhs.participantType &&
+        lhs.points == rhs.points &&
+        lhs.seed == rhs.seed &&
+        lhs.updated == rhs.updated &&
+        lhs.wins == rhs.wins
     }
 }

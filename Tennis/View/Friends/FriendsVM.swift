@@ -17,7 +17,7 @@ enum FriendshipStatus: String {
 }
 
 class FriendsVM: ObservableObject {
-    private var subscribtions: Set<AnyCancellable> = []
+//    private var subscribtions: Set<AnyCancellable> = []
     let currentUserID: String = Auth.auth().currentUser!.uid
     @Published var buttonTitle: String = FriendshipStatus.notFriend.rawValue
     @Published var requestsUsers: [PlayerModel] = []

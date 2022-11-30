@@ -1,18 +1,22 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let tournament = try Tournament(json)
+//   let tournament = try? newJSONDecoder().decode(Tournament.self, from: jsonData)
 
 import Foundation
 
 // MARK: - Tournament
-class Tournament: Codable {
-    var endDate, entriesClose, entriesOpen: Date?
+class Tournament: Codable, Equatable {
+    var endDate: Date?
+    var entriesClose: Date?
+    var entriesOpen: Date?
     var events: [Event?]?
     var extensions: [Extension?]?
-    var formalName, hostCountryCode: String?
+    var formalName: String?
+    var hostCountryCode: String?
     var ids: IDS?
-    var indoorOutdoor, localTimeZone: String?
+    var indoorOutdoor: String?
+    var localTimeZone: String?
     var matchUPS: [MatchUp?]?
     var notes: String?
     var participants: [Participant?]?
@@ -27,19 +31,14 @@ class Tournament: Codable {
     var tournamentAddresses: [Address?]?
     var tournamentContacts: [Contact?]?
     var tournamentGroups: [TournamentGroup?]?
-    var tournamentLevel, tournamentName: String?
+    var tournamentLevel: String?
+    var tournamentName: String?
     var unifiedTournamentID: String?
     var updated: Date?
     var venue: Venue?
     var withdrawalDeadline: Date?
 
-    enum CodingKeys: String, CodingKey {
-        case endDate, entriesClose, entriesOpen, events, extensions, formalName, hostCountryCode, ids, indoorOutdoor, localTimeZone
-        case matchUPS = "matchUps"
-        case notes, participants, promotionalName, providerTournamentID, scheduleItem, season, startDate, surfaceCategory, tennisOfficials, totalPrizeMoney, tournamentAddresses, tournamentContacts, tournamentGroups, tournamentLevel, tournamentName, unifiedTournamentID, updated, venue, withdrawalDeadline
-    }
-
-    init(endDate: Date?, entriesClose: Date?, entriesOpen: Date?, events: [Event?]?, extensions: [Extension?]?, formalName: String?, hostCountryCode: String?, ids: IDS?, indoorOutdoor: String?, localTimeZone: String?, matchUPS: [MatchUp?]?, notes: String?, participants: [Participant?]?, promotionalName: String?, providerTournamentID: String?, scheduleItem: ScheduleItem?, season: String?, startDate: Date?, surfaceCategory: String?, tennisOfficials: TennisOfficials?, totalPrizeMoney: TotalPrizeMoney?, tournamentAddresses: [Address?]?, tournamentContacts: [Contact?]?, tournamentGroups: [TournamentGroup?]?, tournamentLevel: String?, tournamentName: String?, unifiedTournamentID: String?, updated: Date?, venue: Venue?, withdrawalDeadline: Date?) {
+    internal init(endDate: Date?, entriesClose: Date?, entriesOpen: Date?, events: [Event?]?, extensions: [Extension?]?, formalName: String?, hostCountryCode: String?, ids: IDS?, indoorOutdoor: String?, localTimeZone: String?, matchUPS: [MatchUp?]?, notes: String?, participants: [Participant?]?, promotionalName: String?, providerTournamentID: String?, scheduleItem: ScheduleItem?, season: String?, startDate: Date?, surfaceCategory: String?, tennisOfficials: TennisOfficials?, totalPrizeMoney: TotalPrizeMoney?, tournamentAddresses: [Address?]?, tournamentContacts: [Contact?]?, tournamentGroups: [TournamentGroup?]?, tournamentLevel: String?, tournamentName: String?, unifiedTournamentID: String?, updated: Date?, venue: Venue?, withdrawalDeadline: Date?) {
         self.endDate = endDate
         self.entriesClose = entriesClose
         self.entriesOpen = entriesOpen
@@ -71,98 +70,70 @@ class Tournament: Codable {
         self.venue = venue
         self.withdrawalDeadline = withdrawalDeadline
     }
-}
-
-// MARK: Tournament convenience initializers and mutators
-
-extension Tournament {
-    convenience init(data: Data) throws {
-        let me = try newJSONDecoder().decode(Tournament.self, from: data)
-        self.init(endDate: me.endDate, entriesClose: me.entriesClose, entriesOpen: me.entriesOpen, events: me.events, extensions: me.extensions, formalName: me.formalName, hostCountryCode: me.hostCountryCode, ids: me.ids, indoorOutdoor: me.indoorOutdoor, localTimeZone: me.localTimeZone, matchUPS: me.matchUPS, notes: me.notes, participants: me.participants, promotionalName: me.promotionalName, providerTournamentID: me.providerTournamentID, scheduleItem: me.scheduleItem, season: me.season, startDate: me.startDate, surfaceCategory: me.surfaceCategory, tennisOfficials: me.tennisOfficials, totalPrizeMoney: me.totalPrizeMoney, tournamentAddresses: me.tournamentAddresses, tournamentContacts: me.tournamentContacts, tournamentGroups: me.tournamentGroups, tournamentLevel: me.tournamentLevel, tournamentName: me.tournamentName, unifiedTournamentID: me.unifiedTournamentID, updated: me.updated, venue: me.venue, withdrawalDeadline: me.withdrawalDeadline)
+    
+    enum CodingKeys: String, CodingKey {
+        case endDate = "endDate"
+        case entriesClose = "entriesClose"
+        case entriesOpen = "entriesOpen"
+        case events = "events"
+        case extensions = "extensions"
+        case formalName = "formalName"
+        case hostCountryCode = "hostCountryCode"
+        case ids = "ids"
+        case indoorOutdoor = "indoorOutdoor"
+        case localTimeZone = "localTimeZone"
+        case matchUPS = "matchUps"
+        case notes = "notes"
+        case participants = "participants"
+        case promotionalName = "promotionalName"
+        case providerTournamentID = "providerTournamentID"
+        case scheduleItem = "scheduleItem"
+        case season = "season"
+        case startDate = "startDate"
+        case surfaceCategory = "surfaceCategory"
+        case tennisOfficials = "tennisOfficials"
+        case totalPrizeMoney = "totalPrizeMoney"
+        case tournamentAddresses = "tournamentAddresses"
+        case tournamentContacts = "tournamentContacts"
+        case tournamentGroups = "tournamentGroups"
+        case tournamentLevel = "tournamentLevel"
+        case tournamentName = "tournamentName"
+        case unifiedTournamentID = "unifiedTournamentID"
+        case updated = "updated"
+        case venue = "venue"
+        case withdrawalDeadline = "withdrawalDeadline"
     }
 
-    convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {
-        guard let data = json.data(using: encoding) else {
-            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
-        }
-        try self.init(data: data)
-    }
-
-    convenience init(fromURL url: URL) throws {
-        try self.init(data: try Data(contentsOf: url))
-    }
-
-    func with(
-        endDate: Date?? = nil,
-        entriesClose: Date?? = nil,
-        entriesOpen: Date?? = nil,
-        events: [Event?]?? = nil,
-        extensions: [Extension?]?? = nil,
-        formalName: String?? = nil,
-        hostCountryCode: String?? = nil,
-        ids: IDS?? = nil,
-        indoorOutdoor: String?? = nil,
-        localTimeZone: String?? = nil,
-        matchUPS: [MatchUp?]?? = nil,
-        notes: String?? = nil,
-        participants: [Participant?]?? = nil,
-        promotionalName: String?? = nil,
-        providerTournamentID: String?? = nil,
-        scheduleItem: ScheduleItem?? = nil,
-        season: String?? = nil,
-        startDate: Date?? = nil,
-        surfaceCategory: String?? = nil,
-        tennisOfficials: TennisOfficials?? = nil,
-        totalPrizeMoney: TotalPrizeMoney?? = nil,
-        tournamentAddresses: [Address?]?? = nil,
-        tournamentContacts: [Contact?]?? = nil,
-        tournamentGroups: [TournamentGroup?]?? = nil,
-        tournamentLevel: String?? = nil,
-        tournamentName: String?? = nil,
-        unifiedTournamentID: String?? = nil,
-        updated: Date?? = nil,
-        venue: Venue?? = nil,
-        withdrawalDeadline: Date?? = nil
-    ) -> Tournament {
-        return Tournament(
-            endDate: endDate ?? self.endDate,
-            entriesClose: entriesClose ?? self.entriesClose,
-            entriesOpen: entriesOpen ?? self.entriesOpen,
-            events: events ?? self.events,
-            extensions: extensions ?? self.extensions,
-            formalName: formalName ?? self.formalName,
-            hostCountryCode: hostCountryCode ?? self.hostCountryCode,
-            ids: ids ?? self.ids,
-            indoorOutdoor: indoorOutdoor ?? self.indoorOutdoor,
-            localTimeZone: localTimeZone ?? self.localTimeZone,
-            matchUPS: matchUPS ?? self.matchUPS,
-            notes: notes ?? self.notes,
-            participants: participants ?? self.participants,
-            promotionalName: promotionalName ?? self.promotionalName,
-            providerTournamentID: providerTournamentID ?? self.providerTournamentID,
-            scheduleItem: scheduleItem ?? self.scheduleItem,
-            season: season ?? self.season,
-            startDate: startDate ?? self.startDate,
-            surfaceCategory: surfaceCategory ?? self.surfaceCategory,
-            tennisOfficials: tennisOfficials ?? self.tennisOfficials,
-            totalPrizeMoney: totalPrizeMoney ?? self.totalPrizeMoney,
-            tournamentAddresses: tournamentAddresses ?? self.tournamentAddresses,
-            tournamentContacts: tournamentContacts ?? self.tournamentContacts,
-            tournamentGroups: tournamentGroups ?? self.tournamentGroups,
-            tournamentLevel: tournamentLevel ?? self.tournamentLevel,
-            tournamentName: tournamentName ?? self.tournamentName,
-            unifiedTournamentID: unifiedTournamentID ?? self.unifiedTournamentID,
-            updated: updated ?? self.updated,
-            venue: venue ?? self.venue,
-            withdrawalDeadline: withdrawalDeadline ?? self.withdrawalDeadline
-        )
-    }
-
-    func jsonData() throws -> Data {
-        return try newJSONEncoder().encode(self)
-    }
-
-    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
-        return String(data: try self.jsonData(), encoding: encoding)
+    static func == (lhs: Tournament, rhs: Tournament) -> Bool {
+        return lhs.endDate == rhs.endDate &&
+        lhs.entriesClose == rhs.entriesClose &&
+        lhs.entriesOpen == rhs.entriesOpen &&
+        lhs.events == rhs.events &&
+        lhs.extensions == rhs.extensions &&
+        lhs.formalName == rhs.formalName &&
+        lhs.hostCountryCode == rhs.hostCountryCode &&
+        lhs.ids == rhs.ids &&
+        lhs.indoorOutdoor == rhs.indoorOutdoor &&
+        lhs.localTimeZone == rhs.localTimeZone &&
+        lhs.matchUPS == rhs.matchUPS &&
+        lhs.notes == rhs.notes &&
+        lhs.participants == rhs.participants &&
+        lhs.promotionalName == rhs.promotionalName &&
+        lhs.providerTournamentID == rhs.providerTournamentID &&
+        lhs.scheduleItem == rhs.scheduleItem &&
+        lhs.season == rhs.season &&
+        lhs.startDate == rhs.startDate &&
+        lhs.surfaceCategory == rhs.surfaceCategory &&
+        lhs.tennisOfficials == rhs.tennisOfficials &&
+        lhs.totalPrizeMoney == rhs.totalPrizeMoney &&
+        lhs.tournamentAddresses == rhs.tournamentAddresses &&
+        lhs.tournamentContacts == rhs.tournamentContacts &&
+        lhs.tournamentGroups == rhs.tournamentGroups &&
+        lhs.tournamentLevel == rhs.tournamentLevel &&
+        lhs.tournamentName == rhs.tournamentName &&
+        lhs.unifiedTournamentID == rhs.unifiedTournamentID &&
+        lhs.updated == rhs.updated &&
+        lhs.venue == rhs.venue &&
+        lhs.withdrawalDeadline == rhs.withdrawalDeadline
     }
 }

@@ -12,6 +12,7 @@ class BaseViewVM: ObservableObject {
     private let uidStr = Auth.auth().currentUser?.uid ?? ""
     private let db = Firestore.firestore().collection("users")
     @Published var userData: UserDataModel?
+    @Published var userDAtaTest: Person?
 
     func fetchUserData() {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
@@ -19,7 +20,9 @@ class BaseViewVM: ObservableObject {
             if let err = err {
                 print("[Error]: \(err.localizedDescription)")
             } else {
-                self.userData = try! snap?.data(as: UserDataModel.self)
+                self.userDAtaTest = try! snap?.data(as: Person.self)
+
+                dump(self.userDAtaTest)
                 dump(self.userData)
             }
         }

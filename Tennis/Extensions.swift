@@ -109,3 +109,9 @@ struct TransparentGroupBox: GroupBoxStyle {
             .background(RoundedRectangle(cornerRadius: 8).fill(Color.white.opacity(0.12)))
     }
 }
+
+extension Binding {
+     func toUnwrapped<T>(defaultValue: T) -> Binding<T> where Value == Optional<T>  {
+        Binding<T>(get: { self.wrappedValue ?? defaultValue }, set: { self.wrappedValue = $0 })
+    }
+}

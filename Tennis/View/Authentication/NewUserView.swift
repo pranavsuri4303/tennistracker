@@ -80,16 +80,16 @@ struct NewUserView: View {
                 }.padding(.vertical)
 
                 VStack {
-                    RDTextField(placeholder: "First name", text: $vm.userData.firstName, imageName: "person", isSecure: false, isPicker: false)
-                    RDTextField(placeholder: "Last name", text: $vm.userData.lastName, imageName: "person", isSecure: false, isPicker: false)
+                    RDTextField(placeholder: "First name", text: $vm.newUser.standardGivenName.toUnwrapped(defaultValue: ""), imageName: "person", isSecure: false, isPicker: false)
+                    RDTextField(placeholder: "Last name", text: $vm.newUser.standardFamilyName.toUnwrapped(defaultValue: ""), imageName: "person", isSecure: false, isPicker: false)
                     RDTextField(placeholder: "Year of Birth", text: $yob, imageName: "calendar", isSecure: false, isPicker: true, data: vm.yearsList, selectionIndex: self.selectionIndex)
-                    RDTextField(placeholder: "Nationality", text: $vm.userData.nationality, imageName: "flag", isSecure: false, isPicker: true, data: vm.nationsList, selectionIndex: self.selectionIndex)
+                    RDTextField(placeholder: "Nationality", text: $vm.newUser.nationalityCode.toUnwrapped(defaultValue: ""), imageName: "flag", isSecure: false, isPicker: true, data: vm.nationsList, selectionIndex: self.selectionIndex)
                 }.padding(.horizontal)
 
                 VStack(alignment: .leading, spacing: 5) {
                     Text("Gender")
                         .font(.headline)
-                    Picker(selection: $vm.userData.gender, label: Text(""), content: {
+                    Picker(selection: $vm.newUser.sex.toUnwrapped(defaultValue: ""), label: Text(""), content: {
                         Text("Male").tag("Male")
                             .foregroundColor(Color.white)
                         Text("Female").tag("Female")
@@ -101,7 +101,7 @@ struct NewUserView: View {
                     .padding(.horizontal)
                 }
                 .padding(10)
-                .background(.white.opacity(vm.userData.gender == "" ? 0.04 : 0.12))
+                .background(.white.opacity(vm.newUser.sex == "" ? 0.04 : 0.12))
                 .cornerRadius(12)
                 .padding(.horizontal)
 
@@ -117,7 +117,8 @@ struct NewUserView: View {
                     .pickerStyle(.segmented)
                     .padding(.horizontal)
                     .onChange(of: playingStyle) { style in
-                        vm.userData.playingStyle = style
+                        vm.newUser.biographicalInformation = BiographicalInformation()
+                        vm.newUser.biographicalInformation?.playingHand = style
                     }
                 }
                 .padding(10)
@@ -128,10 +129,10 @@ struct NewUserView: View {
                 Spacer()
                 Button(action: {
                     DispatchQueue.main.async {
-                        vm.userData.nationality = String(vm.userData.nationality.prefix(2))
-                        vm.userData.name = "\(vm.userData.firstName) \(vm.userData.lastName)"
+                        vm.newUser.nationalityCode = String(vm.newUser.nationalityCode!.prefix(2))
+//                        vm.userData.name = "\(vm.userData.firstName) \(vm.userData.lastName)"
                         if playingStyle != "" {
-                            vm.userData.playingStyle = playingStyle
+                            vm.newUser.biographicalInformation?.playingHand = playingStyle
                         }
                         vm.uploadUserData(UIImage: pickedImage) { res in
                             switch res {
@@ -147,8 +148,8 @@ struct NewUserView: View {
                 }, label: {
                     RDButton(withTitle: "Create Account")
                 })
-                .opacity(vm.userData.firstName != "" && vm.userData.lastName != "" && vm.userData.gender != "" && yob != "" && vm.userData.nationality != "" ? 1 : 0.5)
-                .disabled(vm.userData.firstName != "" && vm.userData.lastName != "" && vm.userData.gender != "" && yob != "" && vm.userData.nationality != "" ? false : true)
+                .opacity(vm.newUser.standardGivenName != "" && vm.newUser.standardFamilyName != "" && vm.newUser.sex != "" && yob != "" && vm.newUser.nationalityCode != "" ? 1 : 0.5)
+                .disabled(vm.newUser.standardGivenName != "" && vm.newUser.standardFamilyName != "" && vm.newUser.sex != "" && yob != "" && vm.newUser.nationalityCode != "" ? false : true)
 
             }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
                 .animation(startAnimate ? .easeOut : .none)

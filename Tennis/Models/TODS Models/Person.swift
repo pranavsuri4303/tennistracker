@@ -1,35 +1,35 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let person = try Person(json)
+//   let person = try? newJSONDecoder().decode(Person.self, from: jsonData)
 
 import Foundation
 
 // MARK: - Person
-class Person: Codable {
+class Person: Codable, Equatable {
     var addresses: [Address?]?
     var biographicalInformation: BiographicalInformation?
     var birthDate: Date?
     var emailAddress: String?
     var extensions: [Extension?]?
     var ids: IDS?
-    var nationalityCode, nativeFamilyName, nativeGivenName, notes: String?
+    var nationalityCode: String?
+    var nativeFamilyName: String?
+    var nativeGivenName: String?
+    var notes: String?
     var onlineProfiles: [OnlineProfile?]?
-    var otherNames, passportFamilyName, passportGivenName: String?
+    var otherNames: String?
+    var passportFamilyName: String?
+    var passportGivenName: String?
     var personID: String?
-    var previousNames, sex, standardFamilyName, standardGivenName: String?
+    var previousNames: String?
+    var sex: String?
+    var standardFamilyName: String?
+    var standardGivenName: String?
     var tennisID: String?
     var updated: Date?
 
-    enum CodingKeys: String, CodingKey {
-        case addresses, biographicalInformation, birthDate, emailAddress, extensions, ids, nationalityCode, nativeFamilyName, nativeGivenName, notes, onlineProfiles, otherNames, passportFamilyName, passportGivenName
-        case personID = "personId"
-        case previousNames, sex, standardFamilyName, standardGivenName
-        case tennisID = "tennisId"
-        case updated
-    }
-
-    init(addresses: [Address?]?, biographicalInformation: BiographicalInformation?, birthDate: Date?, emailAddress: String?, extensions: [Extension?]?, ids: IDS?, nationalityCode: String?, nativeFamilyName: String?, nativeGivenName: String?, notes: String?, onlineProfiles: [OnlineProfile?]?, otherNames: String?, passportFamilyName: String?, passportGivenName: String?, personID: String?, previousNames: String?, sex: String?, standardFamilyName: String?, standardGivenName: String?, tennisID: String?, updated: Date?) {
+    internal init(addresses: [Address?]? = nil, biographicalInformation: BiographicalInformation? = nil, birthDate: Date? = nil, emailAddress: String? = nil, extensions: [Extension?]? = nil, ids: IDS? = nil, nationalityCode: String? = nil, nativeFamilyName: String? = nil, nativeGivenName: String? = nil, notes: String? = nil, onlineProfiles: [OnlineProfile?]? = nil, otherNames: String? = nil, passportFamilyName: String? = nil, passportGivenName: String? = nil, personID: String? = nil, previousNames: String? = nil, sex: String? = nil, standardFamilyName: String? = nil, standardGivenName: String? = nil, tennisID: String? = nil, updated: Date? = nil) {
         self.addresses = addresses
         self.biographicalInformation = biographicalInformation
         self.birthDate = birthDate
@@ -52,80 +52,53 @@ class Person: Codable {
         self.tennisID = tennisID
         self.updated = updated
     }
-}
-
-// MARK: Person convenience initializers and mutators
-
-extension Person {
-    convenience init(data: Data) throws {
-        let me = try newJSONDecoder().decode(Person.self, from: data)
-        self.init(addresses: me.addresses, biographicalInformation: me.biographicalInformation, birthDate: me.birthDate, emailAddress: me.emailAddress, extensions: me.extensions, ids: me.ids, nationalityCode: me.nationalityCode, nativeFamilyName: me.nativeFamilyName, nativeGivenName: me.nativeGivenName, notes: me.notes, onlineProfiles: me.onlineProfiles, otherNames: me.otherNames, passportFamilyName: me.passportFamilyName, passportGivenName: me.passportGivenName, personID: me.personID, previousNames: me.previousNames, sex: me.sex, standardFamilyName: me.standardFamilyName, standardGivenName: me.standardGivenName, tennisID: me.tennisID, updated: me.updated)
+    
+    enum CodingKeys: String, CodingKey {
+        case addresses = "addresses"
+        case biographicalInformation = "biographicalInformation"
+        case birthDate = "birthDate"
+        case emailAddress = "emailAddress"
+        case extensions = "extensions"
+        case ids = "ids"
+        case nationalityCode = "nationalityCode"
+        case nativeFamilyName = "nativeFamilyName"
+        case nativeGivenName = "nativeGivenName"
+        case notes = "notes"
+        case onlineProfiles = "onlineProfiles"
+        case otherNames = "otherNames"
+        case passportFamilyName = "passportFamilyName"
+        case passportGivenName = "passportGivenName"
+        case personID = "personId"
+        case previousNames = "previousNames"
+        case sex = "sex"
+        case standardFamilyName = "standardFamilyName"
+        case standardGivenName = "standardGivenName"
+        case tennisID = "tennisId"
+        case updated = "updated"
     }
-
-    convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {
-        guard let data = json.data(using: encoding) else {
-            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
-        }
-        try self.init(data: data)
+    
+    static func == (lhs: Person, rhs: Person) -> Bool {
+        return lhs.addresses == rhs.addresses &&
+        lhs.biographicalInformation == rhs.biographicalInformation &&
+        lhs.birthDate == rhs.birthDate &&
+        lhs.emailAddress == rhs.emailAddress &&
+        lhs.extensions == rhs.extensions &&
+        lhs.ids == rhs.ids &&
+        lhs.nationalityCode == rhs.nationalityCode &&
+        lhs.nativeFamilyName == rhs.nativeFamilyName &&
+        lhs.nativeGivenName == rhs.nativeGivenName &&
+        lhs.notes == rhs.notes &&
+        lhs.onlineProfiles == rhs.onlineProfiles &&
+        lhs.otherNames == rhs.otherNames &&
+        lhs.passportFamilyName == rhs.passportFamilyName &&
+        lhs.passportGivenName == rhs.passportGivenName &&
+        lhs.personID == rhs.personID &&
+        lhs.previousNames == rhs.previousNames &&
+        lhs.sex == rhs.sex &&
+        lhs.standardFamilyName == rhs.standardFamilyName &&
+        lhs.standardGivenName == rhs.standardGivenName &&
+        lhs.tennisID == rhs.tennisID &&
+        lhs.updated == rhs.updated
     }
-
-    convenience init(fromURL url: URL) throws {
-        try self.init(data: try Data(contentsOf: url))
-    }
-
-    func with(
-        addresses: [Address?]?? = nil,
-        biographicalInformation: BiographicalInformation?? = nil,
-        birthDate: Date?? = nil,
-        emailAddress: String?? = nil,
-        extensions: [Extension?]?? = nil,
-        ids: IDS?? = nil,
-        nationalityCode: String?? = nil,
-        nativeFamilyName: String?? = nil,
-        nativeGivenName: String?? = nil,
-        notes: String?? = nil,
-        onlineProfiles: [OnlineProfile?]?? = nil,
-        otherNames: String?? = nil,
-        passportFamilyName: String?? = nil,
-        passportGivenName: String?? = nil,
-        personID: String?? = nil,
-        previousNames: String?? = nil,
-        sex: String?? = nil,
-        standardFamilyName: String?? = nil,
-        standardGivenName: String?? = nil,
-        tennisID: String?? = nil,
-        updated: Date?? = nil
-    ) -> Person {
-        return Person(
-            addresses: addresses ?? self.addresses,
-            biographicalInformation: biographicalInformation ?? self.biographicalInformation,
-            birthDate: birthDate ?? self.birthDate,
-            emailAddress: emailAddress ?? self.emailAddress,
-            extensions: extensions ?? self.extensions,
-            ids: ids ?? self.ids,
-            nationalityCode: nationalityCode ?? self.nationalityCode,
-            nativeFamilyName: nativeFamilyName ?? self.nativeFamilyName,
-            nativeGivenName: nativeGivenName ?? self.nativeGivenName,
-            notes: notes ?? self.notes,
-            onlineProfiles: onlineProfiles ?? self.onlineProfiles,
-            otherNames: otherNames ?? self.otherNames,
-            passportFamilyName: passportFamilyName ?? self.passportFamilyName,
-            passportGivenName: passportGivenName ?? self.passportGivenName,
-            personID: personID ?? self.personID,
-            previousNames: previousNames ?? self.previousNames,
-            sex: sex ?? self.sex,
-            standardFamilyName: standardFamilyName ?? self.standardFamilyName,
-            standardGivenName: standardGivenName ?? self.standardGivenName,
-            tennisID: tennisID ?? self.tennisID,
-            updated: updated ?? self.updated
-        )
-    }
-
-    func jsonData() throws -> Data {
-        return try newJSONEncoder().encode(self)
-    }
-
-    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
-        return String(data: try self.jsonData(), encoding: encoding)
-    }
+    
 }

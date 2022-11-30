@@ -44,7 +44,7 @@ struct RegisterView: View {
                 .padding()
                 .padding(.leading, 15)
 
-                RDTextField(placeholder: "Email", text: $vm.userData.email, imageName: "envelope", isSecure: false, isPicker: false)
+                RDTextField(placeholder: "Email", text: $vm.newUser.emailAddress.toUnwrapped(defaultValue: ""), imageName: "envelope", isSecure: false, isPicker: false)
                     .padding(.horizontal)
 
                 RDTextField(placeholder: "Password", text: $vm.password, imageName: "lock", isSecure: true, isPicker: false)
@@ -61,8 +61,8 @@ struct RegisterView: View {
                         }
                     }
                 })
-                .opacity(vm.userData.email != "" && vm.password != "" && (vm.userData.gender != "Male" || vm.userData.gender != "Female") ? 1 : 0.5)
-                .disabled(vm.userData.email != "" && vm.password != "" && (vm.userData.gender != "Male" || vm.userData.gender != "Female") ? false : true)
+                .opacity(vm.newUser.emailAddress != "" && vm.password != "" && (vm.newUser.sex != "Male" || vm.newUser.sex != "Female") ? 1 : 0.5)
+                .disabled(vm.newUser.emailAddress != "" && vm.password != "" && (vm.newUser.sex != "Male" || vm.newUser.sex != "Female") ? false : true)
                 .padding(.top)
 
                 Button(action: {}, label: {

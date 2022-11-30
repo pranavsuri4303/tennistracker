@@ -1,22 +1,28 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let set = try Set(json)
+//   let set = try? newJSONDecoder().decode(Set.self, from: jsonData)
 
 import Foundation
 
 // MARK: - Set
-class Set: Codable {
+class Set: Codable, Equatable {
     var extensions: [Extension?]?
     var games: [Game?]?
     var ids: IDS?
-    var notes, setDuration, setFormat: String?
+    var notes: String?
+    var setDuration: String?
+    var setFormat: String?
     var setNumber: Int?
-    var side1Score, side1TieBreakScore, side2Score, side2TieBreakScore: Int?
-    var timestamp, updated: Date?
+    var side1Score: Int?
+    var side1TieBreakScore: Int?
+    var side2Score: Int?
+    var side2TieBreakScore: Int?
+    var timestamp: Date?
+    var updated: Date?
     var winningSide: Int?
 
-    init(extensions: [Extension?]?, games: [Game?]?, ids: IDS?, notes: String?, setDuration: String?, setFormat: String?, setNumber: Int?, side1Score: Int?, side1TieBreakScore: Int?, side2Score: Int?, side2TieBreakScore: Int?, timestamp: Date?, updated: Date?, winningSide: Int?) {
+    internal init(extensions: [Extension?]?, games: [Game?]?, ids: IDS?, notes: String?, setDuration: String?, setFormat: String?, setNumber: Int?, side1Score: Int?, side1TieBreakScore: Int?, side2Score: Int?, side2TieBreakScore: Int?, timestamp: Date?, updated: Date?, winningSide: Int?) {
         self.extensions = extensions
         self.games = games
         self.ids = ids
@@ -32,66 +38,39 @@ class Set: Codable {
         self.updated = updated
         self.winningSide = winningSide
     }
-}
-
-// MARK: Set convenience initializers and mutators
-
-extension Set {
-    convenience init(data: Data) throws {
-        let me = try newJSONDecoder().decode(Set.self, from: data)
-        self.init(extensions: me.extensions, games: me.games, ids: me.ids, notes: me.notes, setDuration: me.setDuration, setFormat: me.setFormat, setNumber: me.setNumber, side1Score: me.side1Score, side1TieBreakScore: me.side1TieBreakScore, side2Score: me.side2Score, side2TieBreakScore: me.side2TieBreakScore, timestamp: me.timestamp, updated: me.updated, winningSide: me.winningSide)
+    
+    enum CodingKeys: String, CodingKey {
+        case extensions = "extensions"
+        case games = "games"
+        case ids = "ids"
+        case notes = "notes"
+        case setDuration = "setDuration"
+        case setFormat = "setFormat"
+        case setNumber = "setNumber"
+        case side1Score = "side1Score"
+        case side1TieBreakScore = "side1TieBreakScore"
+        case side2Score = "side2Score"
+        case side2TieBreakScore = "side2TieBreakScore"
+        case timestamp = "timestamp"
+        case updated = "updated"
+        case winningSide = "winningSide"
+    }
+    
+    static func == (lhs: Set, rhs: Set) -> Bool {
+        return lhs.extensions == rhs.extensions &&
+        lhs.games == rhs.games &&
+        lhs.ids == rhs.ids &&
+        lhs.notes == rhs.notes &&
+        lhs.setDuration == rhs.setDuration &&
+        lhs.setFormat == rhs.setFormat &&
+        lhs.setNumber == rhs.setNumber &&
+        lhs.side1Score == rhs.side1Score &&
+        lhs.side1TieBreakScore == rhs.side1TieBreakScore &&
+        lhs.side2Score == rhs.side2Score &&
+        lhs.side2TieBreakScore == rhs.side2TieBreakScore &&
+        lhs.timestamp == rhs.timestamp &&
+        lhs.updated == rhs.updated &&
+        lhs.winningSide == rhs.winningSide
     }
 
-    convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {
-        guard let data = json.data(using: encoding) else {
-            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
-        }
-        try self.init(data: data)
-    }
-
-    convenience init(fromURL url: URL) throws {
-        try self.init(data: try Data(contentsOf: url))
-    }
-
-    func with(
-        extensions: [Extension?]?? = nil,
-        games: [Game?]?? = nil,
-        ids: IDS?? = nil,
-        notes: String?? = nil,
-        setDuration: String?? = nil,
-        setFormat: String?? = nil,
-        setNumber: Int?? = nil,
-        side1Score: Int?? = nil,
-        side1TieBreakScore: Int?? = nil,
-        side2Score: Int?? = nil,
-        side2TieBreakScore: Int?? = nil,
-        timestamp: Date?? = nil,
-        updated: Date?? = nil,
-        winningSide: Int?? = nil
-    ) -> Set {
-        return Set(
-            extensions: extensions ?? self.extensions,
-            games: games ?? self.games,
-            ids: ids ?? self.ids,
-            notes: notes ?? self.notes,
-            setDuration: setDuration ?? self.setDuration,
-            setFormat: setFormat ?? self.setFormat,
-            setNumber: setNumber ?? self.setNumber,
-            side1Score: side1Score ?? self.side1Score,
-            side1TieBreakScore: side1TieBreakScore ?? self.side1TieBreakScore,
-            side2Score: side2Score ?? self.side2Score,
-            side2TieBreakScore: side2TieBreakScore ?? self.side2TieBreakScore,
-            timestamp: timestamp ?? self.timestamp,
-            updated: updated ?? self.updated,
-            winningSide: winningSide ?? self.winningSide
-        )
-    }
-
-    func jsonData() throws -> Data {
-        return try newJSONEncoder().encode(self)
-    }
-
-    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
-        return String(data: try self.jsonData(), encoding: encoding)
-    }
 }

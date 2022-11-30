@@ -10,9 +10,10 @@ import LocalAuthentication
 import SwiftUI
 
 class RegisterVM: ObservableObject {
-    @Published var userData = UserDataModel(uid: "", name: "", firsName: "", lastName: "", email: "", gender: "", nationality: "", yob: 0, imagePath: "", accountCreated: Date(), friendRequests: [], friends: [])
+//    @Published var userData = UserDataModel(uid: "", name: "", firsName: "", lastName: "", email: "", gender: "", nationality: "", yob: 0, imagePath: "", accountCreated: Date(), friendRequests: [], friends: [])
     @Published var password = ""
     @Published var isLoading = false
+    @Published var newUser = Person()
 
     let yearsList = Array(Calendar.current.component(.year, from: Date()) - 100 ... Calendar.current.component(.year, from: Date()) - 5).map { String($0) }.sorted { $0 > $1 }
     let nationsList = Locale.isoRegionCodes.compactMap { "\($0) | \(Locale(identifier: "en_US").localizedString(forRegionCode: $0)!)" }.sorted { $0 < $1 }
@@ -24,22 +25,28 @@ class RegisterVM: ObservableObject {
     func uploadImage(UIImage image: UIImage, completion: @escaping (Result<Data?, Error>) -> Void) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         imageData = (image.jpegData(compressionQuality: 0.9))
-        let imageRef = Firebase.Storage.storage().reference().child(userData.uid).child("profilePicture").child("\(userData.uid).jpg")
-        imageRef.putData(imageData!, metadata: nil) { _, err in
-            if let err = err {
-                completion(.failure(err))
-            } else {
-                self.userData.imagePath = "https://firebasestorage.googleapis.com/v0/b/tennistrackerdev.appspot.com/o/\(self.userData.uid)%2FprofilePicture%2F\(self.userData.uid).jpg?alt=media"
-                completion(.success(nil))
+        if let uid = newUser.personID {
+            let imageRef = Firebase.Storage.storage().reference().child(uid).child("profilePicture").child("\(uid).jpg")
+            imageRef.putData(imageData!, metadata: nil) { _, err in
+                if let err = err {
+                    completion(.failure(err))
+                } else {
+                    self.newUser.notes = "https://firebasestorage.googleapis.com/v0/b/tennistrackerdev.appspot.com/o/\(uid)%2FprofilePicture%2F\(uid).jpg?alt=media"
+                    completion(.success(nil))
+                }
             }
         }
+
     }
 
     func uploadFirestore(completion: @escaping (Result<Data?, Error>) -> Void) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         do {
-            try usersCollectionRef.document(userData.uid).setData(from: userData)
-            completion(.success(nil))
+            if let uid = newUser.personID {
+                try usersCollectionRef.document(uid).setData(from: newUser)
+                dump(newUser)
+                completion(.success(nil))
+            }
         } catch {
             completion(.failure(error))
         }
@@ -49,7 +56,6 @@ class RegisterVM: ObservableObject {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         isLoading = true
         if let image = image {
-            print(Firebase.Storage.storage().reference().child(userData.uid).child("profilePicture").child("\(userData.uid).jpg"))
             uploadImage(UIImage: image) { res in
                 self.isLoading = false
                 switch res {
@@ -91,19 +97,21 @@ class RegisterVM: ObservableObject {
     func createAccount(completion: @escaping (Result<Data?, Error>) -> Void) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         isLoading = true
-        Auth.auth().createUser(withEmail: userData.email, password: password) { res, err in
-            if let err = err {
-                self.isLoading = false
-                completion(.failure(err))
-            } else {
-                self.isLoading = false
-                if let uid = res?.user.uid,
-                   let email = res?.user.email
-                {
-                    self.userData.uid = uid
-                    self.userData.email = email
+        if let email = newUser.emailAddress {
+            Auth.auth().createUser(withEmail: email, password: password) { res, err in
+                if let err = err {
+                    self.isLoading = false
+                    completion(.failure(err))
+                } else {
+                    self.isLoading = false
+                    if let uid = res?.user.uid,
+                       let email = res?.user.email
+                    {
+                        self.newUser.personID = uid
+                        self.newUser.emailAddress = email
+                    }
+                    completion(.success(nil))
                 }
-                completion(.success(nil))
             }
         }
     }

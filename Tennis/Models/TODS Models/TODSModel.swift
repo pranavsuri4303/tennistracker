@@ -1,12 +1,13 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let tODSModel = try TODSModel(json)
+//   let coordinate = try? newJSONDecoder().decode(Coordinate.self, from: jsonData)
 
 import Foundation
 
-// MARK: - TODSModel
-class TODSModel: Codable {
+// MARK: - Coordinate
+
+class TODSModel: Codable, Equatable {
     var codesVersion: String?
     var courts: [Court?]?
     var dataStandardsVersion: String?
@@ -22,8 +23,8 @@ class TODSModel: Codable {
     var tournaments: [Tournament?]?
     var venues: [Venue?]?
     var worldTennisNumbers: [WorldTennisNumber?]?
-
-    init(codesVersion: String?, courts: [Court?]?, dataStandardsVersion: String?, date: Date?, extensions: [Extension?]?, orderOfPlays: [OrderOfPlay?]?, organisations: [Organisation?]?, persons: [Person?]?, providerOrganisationID: String?, rankings: [Ranking?]?, statistics: [Statistic?]?, teams: [Team?]?, tournaments: [Tournament?]?, venues: [Venue?]?, worldTennisNumbers: [WorldTennisNumber?]?) {
+    
+    internal init(codesVersion: String? = nil, courts: [Court?]? = nil, dataStandardsVersion: String? = nil, date: Date? = nil, extensions: [Extension?]? = nil, orderOfPlays: [OrderOfPlay?]? = nil, organisations: [Organisation?]? = nil, persons: [Person?]? = nil, providerOrganisationID: String? = nil, rankings: [Ranking?]? = nil, statistics: [Statistic?]? = nil, teams: [Team?]? = nil, tournaments: [Tournament?]? = nil, venues: [Venue?]? = nil, worldTennisNumbers: [WorldTennisNumber?]? = nil) {
         self.codesVersion = codesVersion
         self.courts = courts
         self.dataStandardsVersion = dataStandardsVersion
@@ -40,68 +41,40 @@ class TODSModel: Codable {
         self.venues = venues
         self.worldTennisNumbers = worldTennisNumbers
     }
-}
 
-// MARK: TODSModel convenience initializers and mutators
-
-extension TODSModel {
-    convenience init(data: Data) throws {
-        let me = try newJSONDecoder().decode(TODSModel.self, from: data)
-        self.init(codesVersion: me.codesVersion, courts: me.courts, dataStandardsVersion: me.dataStandardsVersion, date: me.date, extensions: me.extensions, orderOfPlays: me.orderOfPlays, organisations: me.organisations, persons: me.persons, providerOrganisationID: me.providerOrganisationID, rankings: me.rankings, statistics: me.statistics, teams: me.teams, tournaments: me.tournaments, venues: me.venues, worldTennisNumbers: me.worldTennisNumbers)
+    enum CodingKeys: String, CodingKey {
+        case codesVersion
+        case courts
+        case dataStandardsVersion
+        case date
+        case extensions
+        case orderOfPlays
+        case organisations
+        case persons
+        case providerOrganisationID
+        case rankings
+        case statistics
+        case teams
+        case tournaments
+        case venues
+        case worldTennisNumbers
     }
 
-    convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {
-        guard let data = json.data(using: encoding) else {
-            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
-        }
-        try self.init(data: data)
-    }
-
-    convenience init(fromURL url: URL) throws {
-        try self.init(data: try Data(contentsOf: url))
-    }
-
-    func with(
-        codesVersion: String?? = nil,
-        courts: [Court?]?? = nil,
-        dataStandardsVersion: String?? = nil,
-        date: Date?? = nil,
-        extensions: [Extension?]?? = nil,
-        orderOfPlays: [OrderOfPlay?]?? = nil,
-        organisations: [Organisation?]?? = nil,
-        persons: [Person?]?? = nil,
-        providerOrganisationID: String?? = nil,
-        rankings: [Ranking?]?? = nil,
-        statistics: [Statistic?]?? = nil,
-        teams: [Team?]?? = nil,
-        tournaments: [Tournament?]?? = nil,
-        venues: [Venue?]?? = nil,
-        worldTennisNumbers: [WorldTennisNumber?]?? = nil
-    ) -> TODSModel {
-        return TODSModel(
-            codesVersion: codesVersion ?? self.codesVersion,
-            courts: courts ?? self.courts,
-            dataStandardsVersion: dataStandardsVersion ?? self.dataStandardsVersion,
-            date: date ?? self.date,
-            extensions: extensions ?? self.extensions,
-            orderOfPlays: orderOfPlays ?? self.orderOfPlays,
-            organisations: organisations ?? self.organisations,
-            persons: persons ?? self.persons,
-            providerOrganisationID: providerOrganisationID ?? self.providerOrganisationID,
-            rankings: rankings ?? self.rankings,
-            statistics: statistics ?? self.statistics,
-            teams: teams ?? self.teams,
-            tournaments: tournaments ?? self.tournaments,
-            venues: venues ?? self.venues,
-            worldTennisNumbers: worldTennisNumbers ?? self.worldTennisNumbers
-        )
-    }
-
-    func jsonData() throws -> Data {
-        return try newJSONEncoder().encode(self)
-    }
-
-    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
-        return String(data: try self.jsonData(), encoding: encoding)
+    static func == (lhs: TODSModel, rhs: TODSModel) -> Bool {
+        lhs.codesVersion == rhs.codesVersion &&
+            lhs.courts == rhs.courts &&
+            lhs.dataStandardsVersion == rhs.dataStandardsVersion &&
+            lhs.date == rhs.date &&
+            lhs.extensions == rhs.extensions &&
+            lhs.orderOfPlays == rhs.orderOfPlays &&
+            lhs.organisations == rhs.organisations &&
+            lhs.persons == rhs.persons &&
+            lhs.providerOrganisationID == rhs.providerOrganisationID &&
+            lhs.rankings == rhs.rankings &&
+            lhs.statistics == rhs.statistics &&
+            lhs.teams == rhs.teams &&
+            lhs.tournaments == rhs.tournaments &&
+            lhs.venues == rhs.venues &&
+            lhs.worldTennisNumbers == rhs.worldTennisNumbers
     }
 }
