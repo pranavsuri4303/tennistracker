@@ -17,12 +17,12 @@ class Court: Codable, Equatable {
     var longitude: String?
     var notes: String?
     var pace: String?
-    var surfaceCategory: String?
+    var surfaceCategory: SurfaceCategory?
     var surfacedDate: Date?
     var surfaceType: String?
     var updated: Date?
 
-    internal init(altitude: String? = nil, courtDimensions: String? = nil, courtID: String? = nil, extensions: [Extension?]? = nil, ids: IDS? = nil, latitude: String? = nil, longitude: String? = nil, notes: String? = nil, pace: String? = nil, surfaceCategory: String? = nil, surfacedDate: Date? = nil, surfaceType: String? = nil, updated: Date? = nil) {
+    internal init(altitude: String? = nil, courtDimensions: String? = nil, courtID: String? = nil, extensions: [Extension?]? = nil, ids: IDS? = nil, latitude: String? = nil, longitude: String? = nil, notes: String? = nil, pace: String? = nil, surfaceCategory: SurfaceCategory? = nil, surfacedDate: Date? = nil, surfaceType: String? = nil, updated: Date? = nil) {
         self.altitude = altitude
         self.courtDimensions = courtDimensions
         self.courtID = courtID

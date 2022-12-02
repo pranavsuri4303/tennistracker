@@ -8,15 +8,15 @@ import Foundation
 // MARK: - Event
 
 class Event: Codable, Equatable {
-    var ageCategory: String?
+    var ageCategory: String? //TODO: create parses for age category
     var ageCategoryCutoffDate: Date?
-    var ballType: String?
-    var discipline: String?
+    var ballType: BallType?
+    var discipline: Discipline?
     var endDate: Date?
     var entries: [Entry?]?
     var eventID: String?
-    var eventLevel: String?
-    var eventType: String?
+    var eventLevel: EventLevel?
+    var eventType: EventType?
     var extensions: [Extension?]?
     var gender: String?
     var ids: IDS?
@@ -24,12 +24,12 @@ class Event: Codable, Equatable {
     var notes: String?
     var stages: [Stage?]?
     var startDate: Date?
-    var surfaceCategory: String?
+    var surfaceCategory: SurfaceCategory?
     var tennisOfficials: TennisOfficials?
     var updated: Date?
-    var wheelchairClass: String?
+    var wheelchairClass: WheelchairClass?
 
-    internal init(ageCategory: String? = nil, ageCategoryCutoffDate: Date? = nil, ballType: String? = nil, discipline: String? = nil, endDate: Date? = nil, entries: [Entry?]? = nil, eventID: String? = nil, eventLevel: String? = nil, eventType: String? = nil, extensions: [Extension?]? = nil, gender: String? = nil, ids: IDS? = nil, name: String? = nil, notes: String? = nil, stages: [Stage?]? = nil, startDate: Date? = nil, surfaceCategory: String? = nil, tennisOfficials: TennisOfficials? = nil, updated: Date? = nil, wheelchairClass: String? = nil) {
+    internal init(ageCategory: String? = nil, ageCategoryCutoffDate: Date? = nil, ballType: BallType? = nil, discipline: Discipline? = nil, endDate: Date? = nil, entries: [Entry?]? = nil, eventID: String? = nil, eventLevel: EventLevel? = nil, eventType: EventType? = nil, extensions: [Extension?]? = nil, gender: String? = nil, ids: IDS? = nil, name: String? = nil, notes: String? = nil, stages: [Stage?]? = nil, startDate: Date? = nil, surfaceCategory: SurfaceCategory? = nil, tennisOfficials: TennisOfficials? = nil, updated: Date? = nil, wheelchairClass: WheelchairClass? = nil) {
         self.ageCategory = ageCategory
         self.ageCategoryCutoffDate = ageCategoryCutoffDate
         self.ballType = ballType

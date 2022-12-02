@@ -9,7 +9,7 @@ import Foundation
 
 class Entry: Codable, Equatable {
     var entryID: String?
-    var entryStatus: String?
+    var entryStatus: EntryStatus?
     var extensions: [Extension?]?
     var finalPosition: String?
     var ids: IDS?
@@ -23,7 +23,7 @@ class Entry: Codable, Equatable {
     var updated: Date?
     var wins: Int?
 
-    internal init(entryID: String? = nil, entryStatus: String? = nil, extensions: [Extension?]? = nil, finalPosition: String? = nil, ids: IDS? = nil, losses: Int? = nil, name: String? = nil, notes: String? = nil, participant: Participant? = nil, participantType: String? = nil, points: String? = nil, seed: Int? = nil, updated: Date? = nil, wins: Int? = nil) {
+    internal init(entryID: String? = nil, entryStatus: EntryStatus? = nil, extensions: [Extension?]? = nil, finalPosition: String? = nil, ids: IDS? = nil, losses: Int? = nil, name: String? = nil, notes: String? = nil, participant: Participant? = nil, participantType: String? = nil, points: String? = nil, seed: Int? = nil, updated: Date? = nil, wins: Int? = nil) {
         self.entryID = entryID
         self.entryStatus = entryStatus
         self.extensions = extensions

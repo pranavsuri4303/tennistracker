@@ -14,13 +14,13 @@ class MatchUp: Codable, Equatable {
     var extensions: [Extension?]?
     var humidity: Double?
     var ids: IDS?
-    var indoorOutdoor: String?
+    var indoorOutdoor: IndoorOutdoor?
     var loserGoesTo: GoesTo?
     var matchUpDuration: String?
-    var matchUpFormat: String?
+    var matchUpFormat: String? //TODO: add parser for matchUpForma
     var matchUpID: String?
-    var matchUpStatus: String?
-    var matchUpType: String?
+    var matchUpStatus: MatchUpStatus?
+    var matchUpType: MatchUpType?
     var notes: String?
     var orderOfPlayItem: OrderOfPlayItem?
     var roundNumber: Int?
@@ -30,13 +30,13 @@ class MatchUp: Codable, Equatable {
     var sets: [Set?]?
     var sides: [Side?]?
     var startDate: Date?
-    var surfaceCategory: String?
+    var surfaceCategory: SurfaceCategory?
     var temperature: Double?
     var updated: Date?
     var winnerGoesTo: GoesTo?
     var winningSide: Int?
 
-    internal init(court: Court? = nil, drawID: String? = nil, endDate: Date? = nil, extensions: [Extension?]? = nil, humidity: Double? = nil, ids: IDS? = nil, indoorOutdoor: String? = nil, loserGoesTo: GoesTo? = nil, matchUpDuration: String? = nil, matchUpFormat: String? = nil, matchUpID: String? = nil, matchUpStatus: String? = nil, matchUpType: String? = nil, notes: String? = nil, orderOfPlayItem: OrderOfPlayItem? = nil, roundNumber: Int? = nil, roundPosition: Int? = nil, scheduleItems: [ScheduleItem?]? = nil, score: String? = nil, sets: [Set?]? = nil, sides: [Side?]? = nil, startDate: Date? = nil, surfaceCategory: String? = nil, temperature: Double? = nil, updated: Date? = nil, winnerGoesTo: GoesTo? = nil, winningSide: Int? = nil) {
+    internal init(court: Court? = nil, drawID: String? = nil, endDate: Date? = nil, extensions: [Extension?]? = nil, humidity: Double? = nil, ids: IDS? = nil, indoorOutdoor: IndoorOutdoor? = nil, loserGoesTo: GoesTo? = nil, matchUpDuration: String? = nil, matchUpFormat: String? = nil, matchUpID: String? = nil, matchUpStatus: MatchUpStatus? = nil, matchUpType: MatchUpType? = nil, notes: String? = nil, orderOfPlayItem: OrderOfPlayItem? = nil, roundNumber: Int? = nil, roundPosition: Int? = nil, scheduleItems: [ScheduleItem?]? = nil, score: String? = nil, sets: [Set?]? = nil, sides: [Side?]? = nil, startDate: Date? = nil, surfaceCategory: SurfaceCategory? = nil, temperature: Double? = nil, updated: Date? = nil, winnerGoesTo: GoesTo? = nil, winningSide: Int? = nil) {
         self.court = court
         self.drawID = drawID
         self.endDate = endDate

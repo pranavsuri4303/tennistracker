@@ -10,7 +10,7 @@ import Foundation
 class OrderOfPlayItem: Codable, Equatable {
     var orderOfPlayItemDescription: String?
     var endDate: Date?
-    var endType: String?
+    var endType: EndType?
     var extensions: [Extension?]?
     var ids: IDS?
     var name: String?
@@ -20,10 +20,10 @@ class OrderOfPlayItem: Codable, Equatable {
     var scheduleItem: ScheduleItem?
     var startDate: Date?
     var startDelay: Int?
-    var startType: String?
+    var startType: StartType?
     var updated: Date?
 
-    internal init(orderOfPlayItemDescription: String? = nil, endDate: Date? = nil, endType: String? = nil, extensions: [Extension?]? = nil, ids: IDS? = nil, name: String? = nil, notes: String? = nil, orderOfPlayItemID: String? = nil, previousOrderOfPlayItem: OrderOfPlayItem? = nil, scheduleItem: ScheduleItem? = nil, startDate: Date? = nil, startDelay: Int? = nil, startType: String? = nil, updated: Date? = nil) {
+    internal init(orderOfPlayItemDescription: String? = nil, endDate: Date? = nil, endType: EndType? = nil, extensions: [Extension?]? = nil, ids: IDS? = nil, name: String? = nil, notes: String? = nil, orderOfPlayItemID: String? = nil, previousOrderOfPlayItem: OrderOfPlayItem? = nil, scheduleItem: ScheduleItem? = nil, startDate: Date? = nil, startDelay: Int? = nil, startType: StartType? = nil, updated: Date? = nil) {
         self.orderOfPlayItemDescription = orderOfPlayItemDescription
         self.endDate = endDate
         self.endType = endType

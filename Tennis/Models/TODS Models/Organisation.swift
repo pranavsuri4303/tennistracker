@@ -14,11 +14,11 @@ class Organisation: Codable, Equatable {
     var name: String?
     var notes: String?
     var organisationID: String?
-    var organisationType: String?
+    var organisationType: OrganisationType?
     var updated: Date?
     var website: String?
 
-    internal init(addresses: [Address?]? = nil, extensions: [Extension?]? = nil, ids: IDS? = nil, name: String? = nil, notes: String? = nil, organisationID: String? = nil, organisationType: String? = nil, updated: Date? = nil, website: String? = nil) {
+    internal init(addresses: [Address?]? = nil, extensions: [Extension?]? = nil, ids: IDS? = nil, name: String? = nil, notes: String? = nil, organisationID: String? = nil, organisationType: OrganisationType? = nil, updated: Date? = nil, website: String? = nil) {
         self.addresses = addresses
         self.extensions = extensions
         self.ids = ids

@@ -11,7 +11,7 @@ class Address: Codable, Equatable {
     var addressLine1: String?
     var addressLine2: String?
     var addressLine3: String?
-    var addressType: String?
+    var addressType: AddressType?
     var city: String?
     var countryCode: String?
     var latitude: String?
@@ -19,7 +19,7 @@ class Address: Codable, Equatable {
     var postalCode: String?
     var state: String?
 
-    internal init(addressLine1: String?, addressLine2: String?, addressLine3: String?, addressType: String?, city: String?, countryCode: String?, latitude: String?, longitude: String?, postalCode: String?, state: String?) {
+    internal init(addressLine1: String?, addressLine2: String?, addressLine3: String?, addressType: AddressType?, city: String?, countryCode: String?, latitude: String?, longitude: String?, postalCode: String?, state: String?) {
         self.addressLine1 = addressLine1
         self.addressLine2 = addressLine2
         self.addressLine3 = addressLine3

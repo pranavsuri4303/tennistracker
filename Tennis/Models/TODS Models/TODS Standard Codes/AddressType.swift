@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AddressType: String {
+enum AddressType: String, CaseIterable {
     case home
     case work
     case mail

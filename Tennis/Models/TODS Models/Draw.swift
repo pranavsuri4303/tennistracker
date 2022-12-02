@@ -10,8 +10,8 @@ import Foundation
 class Draw: Codable, Equatable {
     var drawID: String?
     var drawSize: Int?
-    var drawStatus: String?
-    var drawStructure: String?
+    var drawStatus: DrawStatus?
+    var drawStructure: DrawStructure?
     var endDate: Date?
     var entries: [Entry?]?
     var extensions: [Extension?]?
@@ -25,7 +25,7 @@ class Draw: Codable, Equatable {
     var startDate: Date?
     var updated: Date?
 
-    internal init(drawID: String? = nil, drawSize: Int? = nil, drawStatus: String? = nil, drawStructure: String? = nil, endDate: Date? = nil, entries: [Entry?]? = nil, extensions: [Extension?]? = nil, ids: IDS? = nil, matchUPS: [MatchUp?]? = nil, name: String? = nil, noOfRounds: Int? = nil, notes: String? = nil, rounds: [Round?]? = nil, sortOrder: Int? = nil, startDate: Date? = nil, updated: Date? = nil) {
+    internal init(drawID: String? = nil, drawSize: Int? = nil, drawStatus: DrawStatus? = nil, drawStructure: DrawStructure? = nil, endDate: Date? = nil, entries: [Entry?]? = nil, extensions: [Extension?]? = nil, ids: IDS? = nil, matchUPS: [MatchUp?]? = nil, name: String? = nil, noOfRounds: Int? = nil, notes: String? = nil, rounds: [Round?]? = nil, sortOrder: Int? = nil, startDate: Date? = nil, updated: Date? = nil) {
         self.drawID = drawID
         self.drawSize = drawSize
         self.drawStatus = drawStatus

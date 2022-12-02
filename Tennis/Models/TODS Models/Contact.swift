@@ -8,7 +8,7 @@ import Foundation
 // MARK: - Contact
 
 class Contact: Codable, Equatable {
-    var contactType: String?
+    var contactType: ContactType?
     var emailAddress: String?
     var fax: String?
     var isPrivate: Bool?
@@ -17,7 +17,7 @@ class Contact: Codable, Equatable {
     var telephone: String?
     var website: String?
 
-    internal init(contactType: String? = nil, emailAddress: String? = nil, fax: String? = nil, isPrivate: Bool? = nil, mobileTelephone: String? = nil, name: String? = nil, telephone: String? = nil, website: String? = nil) {
+    internal init(contactType: ContactType? = nil, emailAddress: String? = nil, fax: String? = nil, isPrivate: Bool? = nil, mobileTelephone: String? = nil, name: String? = nil, telephone: String? = nil, website: String? = nil) {
         self.contactType = contactType
         self.emailAddress = emailAddress
         self.fax = fax
