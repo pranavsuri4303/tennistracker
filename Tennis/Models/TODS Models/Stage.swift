@@ -13,9 +13,9 @@ class Stage: Codable, Equatable {
     var name: String?
     var sortOrder: Int?
     var stageID: String?
-    var stageType: String?
+    var stageType: StageType?
 
-    internal init(draws: [Draw?]?, entries: [Entry?]?, name: String?, sortOrder: Int?, stageID: String?, stageType: String?) {
+    internal init(draws: [Draw?]?, entries: [Entry?]?, name: String?, sortOrder: Int?, stageID: String?, stageType: StageType?) {
         self.draws = draws
         self.entries = entries
         self.name = name

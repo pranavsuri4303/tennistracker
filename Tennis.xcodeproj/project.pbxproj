@@ -47,6 +47,19 @@
 		9FA0978625CFAF320039A73E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0978525CFAF320039A73E /* Extensions.swift */; };
 		9FFCF2E425CF2C7E00C6C94E /* FriendsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFCF2E325CF2C7E00C6C94E /* FriendsVM.swift */; };
 		B512C3DF27A7116A00231CD9 /* TTProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = B512C3DE27A7116A00231CD9 /* TTProgressHUD */; };
+		B5132A58293A1A4500C2E396 /* ParticipantRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5132A57293A1A4500C2E396 /* ParticipantRole.swift */; };
+		B5132A5A293A1A5000C2E396 /* ParticipantStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5132A59293A1A5000C2E396 /* ParticipantStatus.swift */; };
+		B5132A5C293A1A5800C2E396 /* ParticipantType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5132A5B293A1A5800C2E396 /* ParticipantType.swift */; };
+		B5132A5E293A1CA400C2E396 /* WinReason.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5132A5D293A1CA400C2E396 /* WinReason.swift */; };
+		B5132A60293A1E3800C2E396 /* RankingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5132A5F293A1E3800C2E396 /* RankingType.swift */; };
+		B5132A62293A1FE900C2E396 /* ShotDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5132A61293A1FE800C2E396 /* ShotDetail.swift */; };
+		B5132A64293A20B100C2E396 /* ShotType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5132A63293A20B100C2E396 /* ShotType.swift */; };
+		B5132A66293A213000C2E396 /* ShotMadeFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5132A65293A212F00C2E396 /* ShotMadeFrom.swift */; };
+		B5132A68293A21AF00C2E396 /* ShotOutcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5132A67293A21AF00C2E396 /* ShotOutcome.swift */; };
+		B5132A6A293A223100C2E396 /* RoundCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5132A69293A223100C2E396 /* RoundCode.swift */; };
+		B5132A6C293A237900C2E396 /* StageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5132A6B293A237900C2E396 /* StageType.swift */; };
+		B5132A6E293A23E100C2E396 /* TieStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5132A6D293A23E100C2E396 /* TieStatus.swift */; };
+		B5132A70293A244500C2E396 /* TournamentLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5132A6F293A244500C2E396 /* TournamentLevel.swift */; };
 		B513A39B26A038BD00145D2D /* MatchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B513A39A26A038BD00145D2D /* MatchVM.swift */; };
 		B513A39D26A0390600145D2D /* ClubsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B513A39C26A0390600145D2D /* ClubsView.swift */; };
 		B52F300227A92D4000237915 /* HalfModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52F300127A92D4000237915 /* HalfModalView.swift */; };
@@ -127,7 +140,6 @@
 		B5C95EC32936632700C9C8A7 /* RoundItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E9A2936632700C9C8A7 /* RoundItem.swift */; };
 		B5C95EC42936632700C9C8A7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E9B2936632700C9C8A7 /* Person.swift */; };
 		B5C95EC52936632700C9C8A7 /* Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E9C2936632700C9C8A7 /* Side.swift */; };
-		B5C95EC8293777F000C9C8A7 /* StandardCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95EC7293777EF00C9C8A7 /* StandardCodes.swift */; };
 		B5CF6EA82938E11300DFFF16 /* AddressType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF6EA72938E11300DFFF16 /* AddressType.swift */; };
 		B5CF6EAB2938E2D300DFFF16 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF6EAA2938E2D300DFFF16 /* Sex.swift */; };
 		B5D1F76527AA0C140091AC2F /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76427AA0C140091AC2F /* SideMenuView.swift */; };
@@ -199,6 +211,19 @@
 		76FA5EF525C7E6E9005DACE9 /* ScoringViewTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringViewTemplates.swift; sourceTree = "<group>"; };
 		9FA0978525CFAF320039A73E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9FFCF2E325CF2C7E00C6C94E /* FriendsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVM.swift; sourceTree = "<group>"; };
+		B5132A57293A1A4500C2E396 /* ParticipantRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantRole.swift; sourceTree = "<group>"; };
+		B5132A59293A1A5000C2E396 /* ParticipantStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantStatus.swift; sourceTree = "<group>"; };
+		B5132A5B293A1A5800C2E396 /* ParticipantType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantType.swift; sourceTree = "<group>"; };
+		B5132A5D293A1CA400C2E396 /* WinReason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinReason.swift; sourceTree = "<group>"; };
+		B5132A5F293A1E3800C2E396 /* RankingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingType.swift; sourceTree = "<group>"; };
+		B5132A61293A1FE800C2E396 /* ShotDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotDetail.swift; sourceTree = "<group>"; };
+		B5132A63293A20B100C2E396 /* ShotType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotType.swift; sourceTree = "<group>"; };
+		B5132A65293A212F00C2E396 /* ShotMadeFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotMadeFrom.swift; sourceTree = "<group>"; };
+		B5132A67293A21AF00C2E396 /* ShotOutcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotOutcome.swift; sourceTree = "<group>"; };
+		B5132A69293A223100C2E396 /* RoundCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCode.swift; sourceTree = "<group>"; };
+		B5132A6B293A237900C2E396 /* StageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageType.swift; sourceTree = "<group>"; };
+		B5132A6D293A23E100C2E396 /* TieStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TieStatus.swift; sourceTree = "<group>"; };
+		B5132A6F293A244500C2E396 /* TournamentLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentLevel.swift; sourceTree = "<group>"; };
 		B513A39A26A038BD00145D2D /* MatchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVM.swift; sourceTree = "<group>"; };
 		B513A39C26A0390600145D2D /* ClubsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsView.swift; sourceTree = "<group>"; };
 		B52F300127A92D4000237915 /* HalfModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalView.swift; sourceTree = "<group>"; };
@@ -273,7 +298,6 @@
 		B5C95E9A2936632700C9C8A7 /* RoundItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundItem.swift; sourceTree = "<group>"; };
 		B5C95E9B2936632700C9C8A7 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		B5C95E9C2936632700C9C8A7 /* Side.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Side.swift; sourceTree = "<group>"; };
-		B5C95EC7293777EF00C9C8A7 /* StandardCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCodes.swift; sourceTree = "<group>"; };
 		B5CF6EA72938E11300DFFF16 /* AddressType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressType.swift; sourceTree = "<group>"; };
 		B5CF6EAA2938E2D300DFFF16 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		B5D1F76427AA0C140091AC2F /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
@@ -605,13 +629,25 @@
 				B5BDA1E1293A16250048B727 /* MatchUpStatus.swift */,
 				B5BDA1DF293A15D30048B727 /* MatchUpType.swift */,
 				B5BDA1E5293A18300048B727 /* OrganisationType.swift */,
+				B5132A57293A1A4500C2E396 /* ParticipantRole.swift */,
+				B5132A59293A1A5000C2E396 /* ParticipantStatus.swift */,
+				B5132A5B293A1A5800C2E396 /* ParticipantType.swift */,
 				B5BDA1D3293A0ED80048B727 /* PlayingDoubleHandCode.swift */,
 				B5BDA1B32939F3960048B727 /* PlayingHandCode.swift */,
+				B5132A5F293A1E3800C2E396 /* RankingType.swift */,
+				B5132A69293A223100C2E396 /* RoundCode.swift */,
 				B5BDA1D5293A10740048B727 /* SurfaceCategory.swift */,
 				B5CF6EAA2938E2D300DFFF16 /* Sex.swift */,
+				B5132A61293A1FE800C2E396 /* ShotDetail.swift */,
+				B5132A65293A212F00C2E396 /* ShotMadeFrom.swift */,
+				B5132A67293A21AF00C2E396 /* ShotOutcome.swift */,
+				B5132A63293A20B100C2E396 /* ShotType.swift */,
+				B5132A6B293A237900C2E396 /* StageType.swift */,
 				B5BDA1E3293A177C0048B727 /* StartType.swift */,
+				B5132A6D293A23E100C2E396 /* TieStatus.swift */,
+				B5132A6F293A244500C2E396 /* TournamentLevel.swift */,
 				B5BDA1DB293A13C80048B727 /* WheelchairClass.swift */,
-				B5C95EC7293777EF00C9C8A7 /* StandardCodes.swift */,
+				B5132A5D293A1CA400C2E396 /* WinReason.swift */,
 			);
 			path = "TODS Standard Codes";
 			sourceTree = "<group>";
@@ -779,6 +815,8 @@
 			files = (
 				B513A39B26A038BD00145D2D /* MatchVM.swift in Sources */,
 				B5A239B027F7036400D7A9FE /* BaseViewVM.swift in Sources */,
+				B5132A62293A1FE900C2E396 /* ShotDetail.swift in Sources */,
+				B5132A60293A1E3800C2E396 /* RankingType.swift in Sources */,
 				76AADBA625C64F6A00EB0C43 /* PlayerSearchView.swift in Sources */,
 				B5C95EB02936632700C9C8A7 /* ScheduleItem.swift in Sources */,
 				B5C95EAC2936632700C9C8A7 /* Draw.swift in Sources */,
@@ -791,6 +829,7 @@
 				B5C95EA62936632700C9C8A7 /* MatchUp.swift in Sources */,
 				B5C95EBB2936632700C9C8A7 /* OnlineProfile.swift in Sources */,
 				9FA0978625CFAF320039A73E /* Extensions.swift in Sources */,
+				B5132A5A293A1A5000C2E396 /* ParticipantStatus.swift in Sources */,
 				B5C95EA12936632700C9C8A7 /* TournamentGroup.swift in Sources */,
 				7662D40225C39DBE004544BF /* BasicMatchScoringView.swift in Sources */,
 				B5BDA1BE293A0A060048B727 /* DrawStructure.swift in Sources */,
@@ -799,11 +838,14 @@
 				7662D3F525C391A1004544BF /* NewMatchView.swift in Sources */,
 				B513A39D26A0390600145D2D /* ClubsView.swift in Sources */,
 				B5B22A3526A6DECA002CAA61 /* ProfileSettings.swift in Sources */,
+				B5132A70293A244500C2E396 /* TournamentLevel.swift in Sources */,
 				B564F7312799F73A00052CA3 /* RDBadgeButton.swift in Sources */,
 				B5BDA1BC293A097C0048B727 /* ContactType.swift in Sources */,
 				B5BDA1E0293A15D30048B727 /* MatchUpType.swift in Sources */,
+				B5132A6C293A237900C2E396 /* StageType.swift in Sources */,
 				B59E2DE727F4DF4600CB6B27 /* PlayerSearchCellView.swift in Sources */,
 				B5BDA1E4293A177C0048B727 /* StartType.swift in Sources */,
+				B5132A66293A213000C2E396 /* ShotMadeFrom.swift in Sources */,
 				B5C95EBF2936632700C9C8A7 /* TennisOfficials.swift in Sources */,
 				B5BDA1DC293A13C80048B727 /* WheelchairClass.swift in Sources */,
 				B5C95EAB2936632700C9C8A7 /* Game.swift in Sources */,
@@ -815,6 +857,7 @@
 				B5C95EBA2936632700C9C8A7 /* Event.swift in Sources */,
 				764B745E25D2552E0035B02C /* CurrentMatchStatistics.swift in Sources */,
 				76343B8625C2B2140061ABB5 /* StringsListView.swift in Sources */,
+				B5132A64293A20B100C2E396 /* ShotType.swift in Sources */,
 				B5BDA1E2293A16250048B727 /* MatchUpStatus.swift in Sources */,
 				B5C95EBD2936632700C9C8A7 /* Stage.swift in Sources */,
 				B5BDA1E6293A18300048B727 /* OrganisationType.swift in Sources */,
@@ -835,19 +878,22 @@
 				B5D1F76E27AA342A0091AC2F /* RDMenuButton.swift in Sources */,
 				76B8153025CD3AF10029EE83 /* TextFieldWithPickerView.swift in Sources */,
 				B5C95EB12936632700C9C8A7 /* Player.swift in Sources */,
+				B5132A5E293A1CA400C2E396 /* WinReason.swift in Sources */,
 				764A618325B9493F00789373 /* RegisterVM.swift in Sources */,
 				B5BDA1D2293A0BF60048B727 /* Gender.swift in Sources */,
 				B5BDA1D6293A10740048B727 /* SurfaceCategory.swift in Sources */,
 				B5A239AE27F6FFF000D7A9FE /* UserDataModel.swift in Sources */,
 				B52F300227A92D4000237915 /* HalfModalView.swift in Sources */,
 				9FFCF2E425CF2C7E00C6C94E /* FriendsVM.swift in Sources */,
-				B5C95EC8293777F000C9C8A7 /* StandardCodes.swift in Sources */,
+				B5132A5C293A1A5800C2E396 /* ParticipantType.swift in Sources */,
+				B5132A6A293A223100C2E396 /* RoundCode.swift in Sources */,
 				B564F72F2799F13D00052CA3 /* RDHeaderTitle.swift in Sources */,
 				B5C95EAE2936632700C9C8A7 /* TotalPrizeMoney.swift in Sources */,
 				B5C95EA42936632700C9C8A7 /* TODSModel.swift in Sources */,
 				76FA5EF125C7E495005DACE9 /* ExpertMatchScoringView.swift in Sources */,
 				764A612825B91C8E00789373 /* LoginView.swift in Sources */,
 				76DB132925CEDAD9003EDA38 /* Models.swift in Sources */,
+				B5132A58293A1A4500C2E396 /* ParticipantRole.swift in Sources */,
 				B5C95E9E2936632700C9C8A7 /* WorldTennisNumber.swift in Sources */,
 				760719C325BB530600F09A1A /* AddNewStringView.swift in Sources */,
 				B5C95EA02936632700C9C8A7 /* OrderOfPlayItem.swift in Sources */,
@@ -857,8 +903,10 @@
 				B5C95EB92936632700C9C8A7 /* Team.swift in Sources */,
 				B5C95EC42936632700C9C8A7 /* Person.swift in Sources */,
 				764A611B25B91C7300789373 /* LoginVM.swift in Sources */,
+				B5132A6E293A23E100C2E396 /* TieStatus.swift in Sources */,
 				B5C95EB82936632700C9C8A7 /* OrderOfPlay.swift in Sources */,
 				B5C95EC02936632700C9C8A7 /* Contact.swift in Sources */,
+				B5132A68293A21AF00C2E396 /* ShotOutcome.swift in Sources */,
 				76D1B86025BAEE4700FE1B4B /* LoadingScreenView.swift in Sources */,
 				76AADB9E25C64F3800EB0C43 /* StringsVM.swift in Sources */,
 				B5BDA1B42939F3960048B727 /* PlayingHandCode.swift in Sources */,

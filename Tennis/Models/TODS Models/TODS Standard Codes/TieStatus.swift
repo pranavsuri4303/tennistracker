@@ -1,5 +1,5 @@
 //
-//  DrawStatus.swift
+//  TieStatus.swift
 //  Tennis
 //
 //  Created by Pranav Suri on 2/12/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DrawStatus: String, CaseIterable {
+enum TieStatus: String, CaseIterable {
     case toBePlayed
     case inProgress
     case complete
@@ -36,8 +36,8 @@ enum DrawStatus: String, CaseIterable {
         }
     }
     
-    static func getDrawStatus(drawStatus: String) -> DrawStatus {
-        switch drawStatus {
+    static func getTieStatus(tieStatus: String) -> TieStatus {
+        switch tieStatus {
         case "TP":
             return .toBePlayed
         case "IP":
@@ -50,11 +50,11 @@ enum DrawStatus: String, CaseIterable {
     }
 }
 
-extension DrawStatus: Codable {
+extension TieStatus: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let rawValue = try container.decode(String.self)
-        self = DrawStatus.getDrawStatus(drawStatus: rawValue)
+        self = TieStatus.getTieStatus(tieStatus: rawValue)
     }
 
     func encode(to encoder: Encoder) throws {

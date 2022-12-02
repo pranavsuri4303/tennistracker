@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EventType {
+enum EventType: String, CaseIterable {
     case singles
     case doubles
     case team

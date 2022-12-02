@@ -10,17 +10,17 @@ import Foundation
 class Shot: Codable, Equatable {
     var bounceAt: String?
     var participant: Participant?
-    var returned: String?
-    var shotDetail: String?
-    var shotMadeFrom: String?
+    var returned: String? // Yes or No
+    var shotDetail: ShotDetail?
+    var shotMadeFrom: ShotMadeFrom?
     var shotNumber: Int?
-    var shotOutcome: String?
-    var shotType: String?
+    var shotOutcome: ShotOutcome?
+    var shotType: ShotType?
     var side: String?
     var speed: Double?
     var spin: String?
 
-    internal init(bounceAt: String?, participant: Participant?, returned: String?, shotDetail: String?, shotMadeFrom: String?, shotNumber: Int?, shotOutcome: String?, shotType: String?, side: String?, speed: Double?, spin: String?) {
+    internal init(bounceAt: String?, participant: Participant?, returned: String?, shotDetail: ShotDetail?, shotMadeFrom: ShotMadeFrom?, shotNumber: Int?, shotOutcome: ShotOutcome?, shotType: ShotType?, side: String?, speed: Double?, spin: String?) {
         self.bounceAt = bounceAt
         self.participant = participant
         self.returned = returned

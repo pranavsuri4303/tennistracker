@@ -16,7 +16,7 @@ class Tournament: Codable, Equatable {
     var formalName: String?
     var hostCountryCode: String?
     var ids: IDS?
-    var indoorOutdoor: String?
+    var indoorOutdoor: IndoorOutdoor?
     var localTimeZone: String?
     var matchUPS: [MatchUp?]?
     var notes: String?
@@ -26,20 +26,20 @@ class Tournament: Codable, Equatable {
     var scheduleItem: ScheduleItem?
     var season: String?
     var startDate: Date?
-    var surfaceCategory: String?
+    var surfaceCategory: SurfaceCategory?
     var tennisOfficials: TennisOfficials?
     var totalPrizeMoney: TotalPrizeMoney?
     var tournamentAddresses: [Address?]?
     var tournamentContacts: [Contact?]?
     var tournamentGroups: [TournamentGroup?]?
-    var tournamentLevel: String?
+    var tournamentLevel: TournamentLevel?
     var tournamentName: String?
     var unifiedTournamentID: String?
     var updated: Date?
     var venue: Venue?
     var withdrawalDeadline: Date?
 
-    internal init(endDate: Date?, entriesClose: Date?, entriesOpen: Date?, events: [Event?]?, extensions: [Extension?]?, formalName: String?, hostCountryCode: String?, ids: IDS?, indoorOutdoor: String?, localTimeZone: String?, matchUPS: [MatchUp?]?, notes: String?, participants: [Participant?]?, promotionalName: String?, providerTournamentID: String?, scheduleItem: ScheduleItem?, season: String?, startDate: Date?, surfaceCategory: String?, tennisOfficials: TennisOfficials?, totalPrizeMoney: TotalPrizeMoney?, tournamentAddresses: [Address?]?, tournamentContacts: [Contact?]?, tournamentGroups: [TournamentGroup?]?, tournamentLevel: String?, tournamentName: String?, unifiedTournamentID: String?, updated: Date?, venue: Venue?, withdrawalDeadline: Date?) {
+    internal init(endDate: Date?, entriesClose: Date?, entriesOpen: Date?, events: [Event?]?, extensions: [Extension?]?, formalName: String?, hostCountryCode: String?, ids: IDS?, indoorOutdoor: IndoorOutdoor?, localTimeZone: String?, matchUPS: [MatchUp?]?, notes: String?, participants: [Participant?]?, promotionalName: String?, providerTournamentID: String?, scheduleItem: ScheduleItem?, season: String?, startDate: Date?, surfaceCategory: SurfaceCategory?, tennisOfficials: TennisOfficials?, totalPrizeMoney: TotalPrizeMoney?, tournamentAddresses: [Address?]?, tournamentContacts: [Contact?]?, tournamentGroups: [TournamentGroup?]?, tournamentLevel: TournamentLevel?, tournamentName: String?, unifiedTournamentID: String?, updated: Date?, venue: Venue?, withdrawalDeadline: Date?) {
         self.endDate = endDate
         self.entriesClose = entriesClose
         self.entriesOpen = entriesOpen

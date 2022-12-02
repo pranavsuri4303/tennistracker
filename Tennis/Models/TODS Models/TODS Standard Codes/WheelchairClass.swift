@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum WheelchairClass {
+enum WheelchairClass: String, CaseIterable {
     case quad
     case standard
 

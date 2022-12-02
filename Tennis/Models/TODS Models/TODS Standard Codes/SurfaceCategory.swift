@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SurfaceCategory {
+enum SurfaceCategory: String, CaseIterable {
     case hard
     case clay
     case artificial

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PlayingDoubleHandCode {
+enum PlayingDoubleHandCode: String, CaseIterable {
     case forehand
     case backhand
     case both

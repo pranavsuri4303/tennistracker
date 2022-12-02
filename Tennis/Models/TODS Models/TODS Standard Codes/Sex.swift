@@ -34,12 +34,9 @@ enum Sex: String, CaseIterable {
     
     static func getSex(sex: String) -> Sex {
         switch sex {
-        case "M":
-            return .male
-        case "F":
-            return .female
-        default:
-            return .male
+        case "M": return .male
+        case "F": return .female
+        default: return .male
         }
     }
 }

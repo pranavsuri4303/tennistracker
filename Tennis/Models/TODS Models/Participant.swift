@@ -14,16 +14,16 @@ class Participant: Codable, Equatable {
     var name: String?
     var notes: String?
     var participantID: String?
-    var participantRole: String?
-    var participantStatus: String?
-    var participantType: String?
+    var participantRole: ParticipantRole?
+    var participantStatus: ParticipantStatus?
+    var participantType: ParticipantType?
     var person: Person?
     var preferredGivenName: String?
     var representing: String?
     var team: Team?
     var updated: Date?
 
-    internal init(extensions: [Extension?]?, ids: IDS?, members: [Participant?]?, name: String?, notes: String?, participantID: String?, participantRole: String?, participantStatus: String?, participantType: String?, person: Person?, preferredGivenName: String?, representing: String?, team: Team?, updated: Date?) {
+    internal init(extensions: [Extension?]?, ids: IDS?, members: [Participant?]?, name: String?, notes: String?, participantID: String?, participantRole: ParticipantRole?, participantStatus: ParticipantStatus?, participantType: ParticipantType?, person: Person?, preferredGivenName: String?, representing: String?, team: Team?, updated: Date?) {
         self.extensions = extensions
         self.ids = ids
         self.members = members

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Discipline {
+enum Discipline: String, CaseIterable {
     case tennis
     case beachTennis
     case wheelchairTennis

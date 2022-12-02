@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum MatchUpType {
+enum MatchUpType: String, CaseIterable {
     case singles
     case doubles
 

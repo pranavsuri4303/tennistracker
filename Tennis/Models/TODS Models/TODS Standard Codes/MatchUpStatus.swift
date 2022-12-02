@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum MatchUpStatus {
+enum MatchUpStatus: String, CaseIterable {
     case abandoned
     case bye
     case defaulted

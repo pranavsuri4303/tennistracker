@@ -9,7 +9,7 @@ import Foundation
 
 class Team: Codable, Equatable {
     var extensions: [Extension?]?
-    var gender: String?
+    var gender: Gender?
     var ids: IDS?
     var name: String?
     var nativeTeamName: String?
@@ -21,7 +21,7 @@ class Team: Codable, Equatable {
     var teamID: String?
     var updated: Date?
 
-    internal init(extensions: [Extension?]?, gender: String?, ids: IDS?, name: String?, nativeTeamName: String?, notes: String?, onlineProfiles: [OnlineProfile?]?, organisation: Organisation?, otherNames: String?, previousNames: String?, teamID: String?, updated: Date?) {
+    internal init(extensions: [Extension?]?, gender: Gender?, ids: IDS?, name: String?, nativeTeamName: String?, notes: String?, onlineProfiles: [OnlineProfile?]?, organisation: Organisation?, otherNames: String?, previousNames: String?, teamID: String?, updated: Date?) {
         self.extensions = extensions
         self.gender = gender
         self.ids = ids

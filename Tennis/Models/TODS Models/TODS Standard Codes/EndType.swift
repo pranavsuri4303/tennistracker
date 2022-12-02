@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EndType {
+enum EndType: String, CaseIterable {
     case fixed
     case actual
 

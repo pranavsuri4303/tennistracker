@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DrawStructure {
+enum DrawStructure: String, CaseIterable {
     case knockOut
     case roundRobin
     case feedIn

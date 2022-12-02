@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum OrganisationType {
+enum OrganisationType: String, CaseIterable {
     case club
     case nationalAssociation
     case school
@@ -35,13 +35,13 @@ enum OrganisationType {
         case .school: return "School"
         }
     }
-    
+
     static func getOrganisationType(organisationType: String) -> OrganisationType {
         switch organisationType {
-        case "CL" : return .club
-        case "NA" : return .nationalAssociation
-        case "SC" : return .school
-        default : return .club
+        case "CL": return .club
+        case "NA": return .nationalAssociation
+        case "SC": return .school
+        default: return .club
         }
     }
 }

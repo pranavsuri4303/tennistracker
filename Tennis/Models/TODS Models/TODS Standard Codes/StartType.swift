@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum StartType {
+enum StartType: String, CaseIterable {
     case fixed
     case follows
     case followsWithDelay

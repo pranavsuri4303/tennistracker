@@ -8,16 +8,16 @@ import Foundation
 // MARK: - Ranking
 
 class Ranking: Codable, Equatable {
-    var ageCategory: String?
-    var discipline: String?
-    var gender: String?
+    var ageCategory: String? //TODO: add parser for age category
+    var discipline: Discipline?
+    var gender: Gender?
     var name: String?
     var rankingID: String?
     var rankingItems: [RankingItem?]?
-    var rankingType: String?
-    var wheelchairClass: String?
+    var rankingType: RankingType?
+    var wheelchairClass: WheelchairClass?
 
-    internal init(ageCategory: String?, discipline: String?, gender: String?, name: String?, rankingID: String?, rankingItems: [RankingItem?]?, rankingType: String?, wheelchairClass: String?) {
+    internal init(ageCategory: String?, discipline: Discipline?, gender: Gender?, name: String?, rankingID: String?, rankingItems: [RankingItem?]?, rankingType: RankingType?, wheelchairClass: WheelchairClass?) {
         self.ageCategory = ageCategory
         self.discipline = discipline
         self.gender = gender

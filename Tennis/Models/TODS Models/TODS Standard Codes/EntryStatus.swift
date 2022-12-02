@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EntryStatus {
+enum EntryStatus: String, CaseIterable {
     case directAcceptance
     case qualifier
     case luckyLoser

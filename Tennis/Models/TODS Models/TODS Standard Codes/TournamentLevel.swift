@@ -1,5 +1,5 @@
 //
-//  EventLevel.swift
+//  TournamentLevel.swift
 //  Tennis
 //
 //  Created by Pranav Suri on 2/12/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EventLevel: String, CaseIterable {
+enum TournamentLevel: String, CaseIterable {
     case international
     case national
     case regional
@@ -52,8 +52,8 @@ enum EventLevel: String, CaseIterable {
         }
     }
     
-    static func getEventLevel(eventLevel: String) -> EventLevel {
-        switch eventLevel {
+    static func getTournamentLevel(tournamentLevel: String) -> TournamentLevel {
+        switch tournamentLevel {
         case "INT":
             return .international
         case "NAT":
@@ -74,11 +74,11 @@ enum EventLevel: String, CaseIterable {
     }
 }
 
-extension EventLevel: Codable {
+extension TournamentLevel: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let rawValue = try container.decode(String.self)
-        self = EventLevel.getEventLevel(eventLevel: rawValue)
+        self = TournamentLevel.getTournamentLevel(tournamentLevel: rawValue)
     }
 
     func encode(to encoder: Encoder) throws {

@@ -38,14 +38,10 @@ enum PlayingHandCode: String, CaseIterable {
     
     static func getPlayingHandCode(playingHandCode: String) -> PlayingHandCode {
         switch playingHandCode {
-        case "A":
-            return .ambidextrous
-        case "L":
-            return .left
-        case "R":
-            return .right
-        default:
-            return .ambidextrous
+        case "A": return .ambidextrous
+        case "L": return .left
+        case "R": return .right
+        default: return .ambidextrous
         }
     }
 }

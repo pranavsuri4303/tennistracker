@@ -15,9 +15,9 @@ class Point: Codable, Equatable {
     var side2Score: String?
     var timestamp: Date?
     var winningSide: Int?
-    var winReason: String?
+    var winReason: WinReason?
 
-    internal init(pointDuration: String?, pointNumber: Int?, shots: [Shot?]?, side1Score: String?, side2Score: String?, timestamp: Date?, winningSide: Int?, winReason: String?) {
+    internal init(pointDuration: String?, pointNumber: Int?, shots: [Shot?]?, side1Score: String?, side2Score: String?, timestamp: Date?, winningSide: Int?, winReason: WinReason?) {
         self.pointDuration = pointDuration
         self.pointNumber = pointNumber
         self.shots = shots

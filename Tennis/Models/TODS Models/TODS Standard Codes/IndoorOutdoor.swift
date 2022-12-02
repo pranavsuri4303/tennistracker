@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum IndoorOutdoor {
+enum IndoorOutdoor: String, CaseIterable {
     case indoor
     case outdoor
 
