@@ -21,7 +21,8 @@ struct NewUserView: View {
 
     @State private var alertShown = false
     @State private var errorMessage = ""
-    @State private var playingStyle = ""
+    @State private var playingHandCode = ""
+    @State private var sex = ""
 
     var body: some View {
         ZStack {
@@ -87,42 +88,36 @@ struct NewUserView: View {
                 }.padding(.horizontal)
 
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("Gender")
+                    Text("Sex")
                         .font(.headline)
-                    Picker(selection: $vm.newUser.sex.toUnwrapped(defaultValue: ""), label: Text(""), content: {
-                        Text("Male").tag("Male")
-                            .foregroundColor(Color.white)
-                        Text("Female").tag("Female")
-                            .foregroundColor(Color(.white))
-                        Text("Other").tag("Other")
-                            .foregroundColor(Color(.white))
+                    Picker(selection: $sex, label: Text(""), content: {
+                        ForEach(Sex.allCases, id: \.rawValue) { item in
+                            Text(item.description).tag(item.code)
+                                .foregroundColor(Color.white)
+                        }
                     })
                     .pickerStyle(.segmented)
                     .padding(.horizontal)
                 }
                 .padding(10)
-                .background(.white.opacity(vm.newUser.sex == "" ? 0.04 : 0.12))
+                .background(.white.opacity(sex == "" ? 0.04 : 0.12))
                 .cornerRadius(12)
                 .padding(.horizontal)
-
+                
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("Playing Style")
+                    Text("Playing Hand")
                         .font(.headline)
-                    Picker(selection: $playingStyle, label: Text(""), content: {
-                        Text("Left handed").tag("Left")
-                            .foregroundColor(Color(.white))
-                        Text("Right handed").tag("Right")
-                            .foregroundColor(Color.white)
+                    Picker(selection: $playingHandCode, label: Text(""), content: {
+                        ForEach(PlayingHandCode.allCases, id: \.rawValue) { item in
+                            Text(item.description).tag(item.code)
+                                .foregroundColor(Color.white)
+                        }
                     })
                     .pickerStyle(.segmented)
                     .padding(.horizontal)
-                    .onChange(of: playingStyle) { style in
-                        vm.newUser.biographicalInformation = BiographicalInformation()
-                        vm.newUser.biographicalInformation?.playingHand = style
-                    }
                 }
                 .padding(10)
-                .background(.white.opacity(playingStyle == "" ? 0.04 : 0.12))
+                .background(.white.opacity(playingHandCode == "" ? 0.04 : 0.12))
                 .cornerRadius(12)
                 .padding(.horizontal)
 
@@ -130,9 +125,12 @@ struct NewUserView: View {
                 Button(action: {
                     DispatchQueue.main.async {
                         vm.newUser.nationalityCode = String(vm.newUser.nationalityCode!.prefix(2))
-//                        vm.userData.name = "\(vm.userData.firstName) \(vm.userData.lastName)"
-                        if playingStyle != "" {
-                            vm.newUser.biographicalInformation?.playingHand = playingStyle
+                        vm.newUser.biographicalInformation = BiographicalInformation()
+                        if playingHandCode != "" {
+                            vm.newUser.biographicalInformation?.playingHand = PlayingHandCode.getPlayingHandCode(playingHandCode: playingHandCode)
+                        }
+                        if sex != "" {
+                            vm.newUser.sex = Sex.getSex(sex: sex)
                         }
                         vm.uploadUserData(UIImage: pickedImage) { res in
                             switch res {
@@ -148,8 +146,8 @@ struct NewUserView: View {
                 }, label: {
                     RDButton(withTitle: "Create Account")
                 })
-                .opacity(vm.newUser.standardGivenName != "" && vm.newUser.standardFamilyName != "" && vm.newUser.sex != "" && yob != "" && vm.newUser.nationalityCode != "" ? 1 : 0.5)
-                .disabled(vm.newUser.standardGivenName != "" && vm.newUser.standardFamilyName != "" && vm.newUser.sex != "" && yob != "" && vm.newUser.nationalityCode != "" ? false : true)
+                .opacity(vm.newUser.standardGivenName != "" && vm.newUser.standardFamilyName != "" && sex != "" && yob != "" && vm.newUser.nationalityCode != "" ? 1 : 0.5)
+                .disabled(vm.newUser.standardGivenName != "" && vm.newUser.standardFamilyName != "" && sex != "" && yob != "" && vm.newUser.nationalityCode != "" ? false : true)
 
             }.background(Color("bg").ignoresSafeArea(.all, edges: .all))
                 .animation(startAnimate ? .easeOut : .none)
@@ -169,9 +167,9 @@ struct NewUserView: View {
         }
     }
 }
-
-struct Register_Preview: PreviewProvider {
-    static var previews: some View {
-        NewUserView(isPresented: .constant(false), vm: RegisterVM())
-    }
-}
+//
+//struct Register_Preview: PreviewProvider {
+//    static var previews: some View {
+//        NewUserView(isPresented: .constant(false), vm: RegisterVM())
+//    }
+//}

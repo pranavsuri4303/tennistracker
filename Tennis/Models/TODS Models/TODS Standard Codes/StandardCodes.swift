@@ -7,44 +7,6 @@
 
 import Foundation
 
-enum AddressType {
-    case home
-    case work
-    case mail
-    case residential
-    case venue
-
-    var code: String {
-        switch self {
-        case .home: return "H"
-        case .work: return "W"
-        case .mail: return "M"
-        case .residential: return "R"
-        case .venue: return "V"
-        }
-    }
-
-    var extendedCode: String {
-        switch self {
-        case .home: return "HOME"
-        case .work: return "WORK"
-        case .mail: return "MAIL"
-        case .residential: return "RESIDENTIAL"
-        case .venue: return "VENUE"
-        }
-    }
-
-    var description: String {
-        switch self {
-        case .home: return "Home Address"
-        case .work: return "Work Address"
-        case .mail: return "Mail Address"
-        case .residential: return "Residential Address"
-        case .venue: return "Venue Location"
-        }
-    }
-}
-
 enum AgeCategory {
     case under
     case over
@@ -805,31 +767,6 @@ enum RoundCode {
 
 // MARK: Sex
 
-enum Sex {
-    case male
-    case female
-
-    var code: String {
-        switch self {
-        case .male: return "M"
-        case .female: return "F"
-        }
-    }
-
-    var extendedCode: String {
-        switch self {
-        case .male: return "MALE"
-        case .female: return "FEMALE"
-        }
-    }
-
-    var description: String {
-        switch self {
-        case .male: return "Male"
-        case .female: return "Female"
-        }
-    }
-}
 
 // MARK: ShotDetail
 

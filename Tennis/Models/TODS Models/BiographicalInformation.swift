@@ -16,11 +16,11 @@ class BiographicalInformation: Codable, Equatable {
     var doublePlayingHand: String?
     var height: Double?
     var placeOfResidence: String?
-    var playingHand: String?
+    var playingHand: PlayingHandCode?
     var residenceCountryCode: String?
     var weight: Double?
 
-    internal init(ageBeganTennis: Int? = nil, ageTurnedPro: Int? = nil, birthCountryCode: String? = nil, club: Organisation? = nil, coach: Person? = nil, doublePlayingHand: String? = nil, height: Double? = nil, placeOfResidence: String? = nil, playingHand: String? = nil, residenceCountryCode: String? = nil, weight: Double? = nil) {
+    internal init(ageBeganTennis: Int? = nil, ageTurnedPro: Int? = nil, birthCountryCode: String? = nil, club: Organisation? = nil, coach: Person? = nil, doublePlayingHand: String? = nil, height: Double? = nil, placeOfResidence: String? = nil, playingHand: PlayingHandCode? = nil, residenceCountryCode: String? = nil, weight: Double? = nil) {
         self.ageBeganTennis = ageBeganTennis
         self.ageTurnedPro = ageTurnedPro
         self.birthCountryCode = birthCountryCode

@@ -61,10 +61,12 @@ struct RegisterView: View {
                         }
                     }
                 })
-                .opacity(vm.newUser.emailAddress != "" && vm.password != "" && (vm.newUser.sex != "Male" || vm.newUser.sex != "Female") ? 1 : 0.5)
-                .disabled(vm.newUser.emailAddress != "" && vm.password != "" && (vm.newUser.sex != "Male" || vm.newUser.sex != "Female") ? false : true)
+                .opacity(vm.newUser.emailAddress != "" && vm.password != "" ? 1 : 0.5)
+                .disabled(vm.newUser.emailAddress != "" && vm.password != "" ? false : true)
                 .padding(.top)
-
+//                .onAppear {
+//                    vm.newUser.sex = .male
+//                }
                 Button(action: {}, label: {
                     Image("googleLogo")
                         .resizable()
@@ -109,4 +111,5 @@ struct RegisterView: View {
             }
         }
     }
+    
 }

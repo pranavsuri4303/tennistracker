@@ -23,7 +23,6 @@ class BaseViewVM: ObservableObject {
                 self.userDAtaTest = try! snap?.data(as: Person.self)
 
                 dump(self.userDAtaTest)
-                dump(self.userData)
             }
         }
     }

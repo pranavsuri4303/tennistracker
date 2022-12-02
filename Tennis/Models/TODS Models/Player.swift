@@ -8,10 +8,10 @@ import Foundation
 // MARK: - Player
 
 class Player: Codable, Equatable {
-    var participant: Participant1?
+    var participant: Participant?
     var playerNumber: Int?
 
-    internal init(participant: Participant1?, playerNumber: Int?) {
+    internal init(participant: Participant?, playerNumber: Int?) {
         self.participant = participant
         self.playerNumber = playerNumber
     }

@@ -68,6 +68,7 @@
 		B5A239B027F7036400D7A9FE /* BaseViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A239AF27F7036400D7A9FE /* BaseViewVM.swift */; };
 		B5A239B327F768CC00D7A9FE /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = B5A239B227F768CC00D7A9FE /* FirebaseFirestoreSwift-Beta */; };
 		B5B22A3526A6DECA002CAA61 /* ProfileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B22A3426A6DECA002CAA61 /* ProfileSettings.swift */; };
+		B5BDA1B42939F3960048B727 /* PlayingHandCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BDA1B32939F3960048B727 /* PlayingHandCode.swift */; };
 		B5C95E9E2936632700C9C8A7 /* WorldTennisNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E752936632400C9C8A7 /* WorldTennisNumber.swift */; };
 		B5C95E9F2936632700C9C8A7 /* BiographicalInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E762936632400C9C8A7 /* BiographicalInformation.swift */; };
 		B5C95EA02936632700C9C8A7 /* OrderOfPlayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E772936632400C9C8A7 /* OrderOfPlayItem.swift */; };
@@ -108,6 +109,8 @@
 		B5C95EC42936632700C9C8A7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E9B2936632700C9C8A7 /* Person.swift */; };
 		B5C95EC52936632700C9C8A7 /* Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E9C2936632700C9C8A7 /* Side.swift */; };
 		B5C95EC8293777F000C9C8A7 /* StandardCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95EC7293777EF00C9C8A7 /* StandardCodes.swift */; };
+		B5CF6EA82938E11300DFFF16 /* AddressType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF6EA72938E11300DFFF16 /* AddressType.swift */; };
+		B5CF6EAB2938E2D300DFFF16 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF6EAA2938E2D300DFFF16 /* Sex.swift */; };
 		B5D1F76527AA0C140091AC2F /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76427AA0C140091AC2F /* SideMenuView.swift */; };
 		B5D1F76827AA0EBC0091AC2F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76727AA0EBC0091AC2F /* BaseView.swift */; };
 		B5D1F76C27AA1E370091AC2F /* RDHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76B27AA1E370091AC2F /* RDHeader.swift */; };
@@ -192,6 +195,7 @@
 		B5A239AD27F6FFF000D7A9FE /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		B5A239AF27F7036400D7A9FE /* BaseViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewVM.swift; sourceTree = "<group>"; };
 		B5B22A3426A6DECA002CAA61 /* ProfileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettings.swift; sourceTree = "<group>"; };
+		B5BDA1B32939F3960048B727 /* PlayingHandCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingHandCode.swift; sourceTree = "<group>"; };
 		B5C95E752936632400C9C8A7 /* WorldTennisNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldTennisNumber.swift; sourceTree = "<group>"; };
 		B5C95E762936632400C9C8A7 /* BiographicalInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiographicalInformation.swift; sourceTree = "<group>"; };
 		B5C95E772936632400C9C8A7 /* OrderOfPlayItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderOfPlayItem.swift; sourceTree = "<group>"; };
@@ -232,6 +236,8 @@
 		B5C95E9B2936632700C9C8A7 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		B5C95E9C2936632700C9C8A7 /* Side.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Side.swift; sourceTree = "<group>"; };
 		B5C95EC7293777EF00C9C8A7 /* StandardCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCodes.swift; sourceTree = "<group>"; };
+		B5CF6EA72938E11300DFFF16 /* AddressType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressType.swift; sourceTree = "<group>"; };
+		B5CF6EAA2938E2D300DFFF16 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		B5D1F76427AA0C140091AC2F /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		B5D1F76727AA0EBC0091AC2F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B5D1F76B27AA1E370091AC2F /* RDHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHeader.swift; sourceTree = "<group>"; };
@@ -537,9 +543,20 @@
 				B5C95E782936632500C9C8A7 /* TournamentGroup.swift */,
 				B5C95E7A2936632500C9C8A7 /* Venue.swift */,
 				B5C95E752936632400C9C8A7 /* WorldTennisNumber.swift */,
-				B5C95EC7293777EF00C9C8A7 /* StandardCodes.swift */,
+				B5CF6EA92938E28500DFFF16 /* TODS Standard Codes */,
 			);
 			path = "TODS Models";
+			sourceTree = "<group>";
+		};
+		B5CF6EA92938E28500DFFF16 /* TODS Standard Codes */ = {
+			isa = PBXGroup;
+			children = (
+				B5CF6EA72938E11300DFFF16 /* AddressType.swift */,
+				B5BDA1B32939F3960048B727 /* PlayingHandCode.swift */,
+				B5CF6EAA2938E2D300DFFF16 /* Sex.swift */,
+				B5C95EC7293777EF00C9C8A7 /* StandardCodes.swift */,
+			);
+			path = "TODS Standard Codes";
 			sourceTree = "<group>";
 		};
 		B5D1F76627AA0EA40091AC2F /* SlideMenuUpdate */ = {
@@ -743,6 +760,7 @@
 				B53CCA1F2806F39A00258FBC /* AddMatchView.swift in Sources */,
 				760719B925BB52F000F09A1A /* DashboardView.swift in Sources */,
 				B5C95EA72936632700C9C8A7 /* RankingItem.swift in Sources */,
+				B5CF6EA82938E11300DFFF16 /* AddressType.swift in Sources */,
 				B5C95EC12936632700C9C8A7 /* Set.swift in Sources */,
 				B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */,
 				B5D1F76E27AA342A0091AC2F /* RDMenuButton.swift in Sources */,
@@ -771,7 +789,9 @@
 				B5C95EC02936632700C9C8A7 /* Contact.swift in Sources */,
 				76D1B86025BAEE4700FE1B4B /* LoadingScreenView.swift in Sources */,
 				76AADB9E25C64F3800EB0C43 /* StringsVM.swift in Sources */,
+				B5BDA1B42939F3960048B727 /* PlayingHandCode.swift in Sources */,
 				B5C95EAF2936632700C9C8A7 /* PrizeMoney.swift in Sources */,
+				B5CF6EAB2938E2D300DFFF16 /* Sex.swift in Sources */,
 				764A617E25B9479700789373 /* ResetPasswordView.swift in Sources */,
 				B5D1F76C27AA1E370091AC2F /* RDHeader.swift in Sources */,
 				B5C95EAD2936632700C9C8A7 /* IDS.swift in Sources */,
