@@ -495,6 +495,18 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		B5132A71293E361800C2E396 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				B5C95E822936632500C9C8A7 /* Game.swift */,
+				B5C95E7D2936632500C9C8A7 /* MatchUp.swift */,
+				B5C95E8D2936632600C9C8A7 /* Point.swift */,
+				B5C95E982936632700C9C8A7 /* Set.swift */,
+				B5C95E8E2936632600C9C8A7 /* Shot.swift */,
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
 		B513A39E26A03B4B00145D2D /* Clubs */ = {
 			isa = PBXGroup;
 			children = (
@@ -575,10 +587,9 @@
 				B5C95E7F2936632500C9C8A7 /* Entry.swift */,
 				B5C95E912936632600C9C8A7 /* Event.swift */,
 				B5C95E992936632700C9C8A7 /* Extension.swift */,
-				B5C95E822936632500C9C8A7 /* Game.swift */,
+				B5132A71293E361800C2E396 /* Match */,
 				B5C95E8C2936632600C9C8A7 /* GoesTo.swift */,
 				B5C95E842936632600C9C8A7 /* IDS.swift */,
-				B5C95E7D2936632500C9C8A7 /* MatchUp.swift */,
 				B5C95E922936632600C9C8A7 /* OnlineProfile.swift */,
 				B5C95E8F2936632600C9C8A7 /* OrderOfPlay.swift */,
 				B5C95E772936632400C9C8A7 /* OrderOfPlayItem.swift */,
@@ -586,15 +597,12 @@
 				B5C95E7C2936632500C9C8A7 /* Participant.swift */,
 				B5C95E9B2936632700C9C8A7 /* Person.swift */,
 				B5C95E882936632600C9C8A7 /* Player.swift */,
-				B5C95E8D2936632600C9C8A7 /* Point.swift */,
 				B5C95E862936632600C9C8A7 /* PrizeMoney.swift */,
 				B5C95E802936632500C9C8A7 /* Ranking.swift */,
 				B5C95E7E2936632500C9C8A7 /* RankingItem.swift */,
 				B5C95E792936632500C9C8A7 /* Round.swift */,
 				B5C95E9A2936632700C9C8A7 /* RoundItem.swift */,
 				B5C95E872936632600C9C8A7 /* ScheduleItem.swift */,
-				B5C95E982936632700C9C8A7 /* Set.swift */,
-				B5C95E8E2936632600C9C8A7 /* Shot.swift */,
 				B5C95E9C2936632700C9C8A7 /* Side.swift */,
 				B5C95E942936632700C9C8A7 /* Stage.swift */,
 				B5C95E952936632700C9C8A7 /* Statistic.swift */,

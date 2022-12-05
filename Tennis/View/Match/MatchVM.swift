@@ -17,6 +17,7 @@ final class MatchVM: ObservableObject {
     @Published var trackingStyle = TrackingType.basic
     @Published var matchIsOver = false
     @Published var winner = PlayerType.p1
+    @Published var matchUp = MatchUp()
 
     // Serve
     @Published var serve = Serve.firstServe
