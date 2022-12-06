@@ -37,4 +37,8 @@ class StringsVM: ObservableObject {
             }
         }
     }
+    
+    func deleteString(completion: @escaping (Result<Data?, Error>) -> Void) {
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
+    }
 }
