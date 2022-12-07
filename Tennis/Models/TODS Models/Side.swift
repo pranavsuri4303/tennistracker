@@ -17,7 +17,7 @@ class Side: Codable, Equatable {
     var sideNumber: Int?
     var updated: Date?
 
-    internal init(extensions: [Extension?]?, ids: IDS?, notes: String?, participant: Participant?, players: [Player?]?, score: String?, sideNumber: Int?, updated: Date?) {
+    internal init(extensions: [Extension?]? = nil, ids: IDS? = nil, notes: String? = nil, participant: Participant? = nil, players: [Player?]? = nil, score: String? = nil, sideNumber: Int? = nil, updated: Date? = nil) {
         self.extensions = extensions
         self.ids = ids
         self.notes = notes

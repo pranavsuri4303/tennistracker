@@ -73,6 +73,7 @@
 		B5132AA7293EA5C100C2E396 /* TennisWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5132AA6293EA5C100C2E396 /* TennisWatchUITests.swift */; };
 		B5132AA9293EA5C100C2E396 /* TennisWatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5132AA8293EA5C100C2E396 /* TennisWatchUITestsLaunchTests.swift */; };
 		B5132AAC293EA5C100C2E396 /* TennisWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B5132A76293EA5B900C2E396 /* TennisWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B5132ABD293F4FA100C2E396 /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = B5132ABC293F4FA100C2E396 /* Fakery */; };
 		B513A39B26A038BD00145D2D /* MatchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B513A39A26A038BD00145D2D /* MatchVM.swift */; };
 		B513A39D26A0390600145D2D /* ClubsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B513A39C26A0390600145D2D /* ClubsView.swift */; };
 		B52F300227A92D4000237915 /* HalfModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52F300127A92D4000237915 /* HalfModalView.swift */; };
@@ -160,6 +161,9 @@
 		B5D1F76C27AA1E370091AC2F /* RDHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76B27AA1E370091AC2F /* RDHeader.swift */; };
 		B5D1F76E27AA342A0091AC2F /* RDMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76D27AA342A0091AC2F /* RDMenuButton.swift */; };
 		B5D1F77427AA3F770091AC2F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B5D1F77327AA3F770091AC2F /* SDWebImageSwiftUI */; };
+		B5EA4D7F29404FEB0015D379 /* MatchUpFormatParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA4D7E29404FEB0015D379 /* MatchUpFormatParser.swift */; };
+		B5EA4D812940777F0015D379 /* StringEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA4D802940777F0015D379 /* StringEntries.swift */; };
+		B5EA4D83294079FA0015D379 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA4D82294079FA0015D379 /* Friends.swift */; };
 		B5EFB4ED27E9D745004180E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5EFB4E527E9D550004180E6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -387,6 +391,9 @@
 		B5D1F76727AA0EBC0091AC2F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B5D1F76B27AA1E370091AC2F /* RDHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHeader.swift; sourceTree = "<group>"; };
 		B5D1F76D27AA342A0091AC2F /* RDMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDMenuButton.swift; sourceTree = "<group>"; };
+		B5EA4D7E29404FEB0015D379 /* MatchUpFormatParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchUpFormatParser.swift; sourceTree = "<group>"; };
+		B5EA4D802940777F0015D379 /* StringEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEntries.swift; sourceTree = "<group>"; };
+		B5EA4D82294079FA0015D379 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		B5EFB4E527E9D550004180E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -395,6 +402,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5132ABD293F4FA100C2E396 /* Fakery in Frameworks */,
 				B5D1F77427AA3F770091AC2F /* SDWebImageSwiftUI in Frameworks */,
 				B59E2DE127F3CDAF00CB6B27 /* AlgoliaSearchClient in Frameworks */,
 				9F73852925CE4DA800CF79D1 /* FirebaseAuth in Frameworks */,
@@ -722,9 +730,12 @@
 		B59E2DE527F3FA2800CB6B27 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B5C95E742936631600C9C8A7 /* TODS Models */,
 				B59E2DE327F3F9DB00CB6B27 /* PlayerSearchModel.swift */,
 				B5A239AD27F6FFF000D7A9FE /* UserDataModel.swift */,
+				B5EA4D7E29404FEB0015D379 /* MatchUpFormatParser.swift */,
+				B5EA4D802940777F0015D379 /* StringEntries.swift */,
+				B5C95E742936631600C9C8A7 /* TODS Models */,
+				B5EA4D82294079FA0015D379 /* Friends.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -859,6 +870,7 @@
 				B59E2DE027F3CDAF00CB6B27 /* AlgoliaSearchClient */,
 				B59E2DE927F4E08900CB6B27 /* CachedAsyncImage */,
 				B5A239B227F768CC00D7A9FE /* FirebaseFirestoreSwift-Beta */,
+				B5132ABC293F4FA100C2E396 /* Fakery */,
 			);
 			productName = Tennis;
 			productReference = 764A60C525B90E5500789373 /* Tennis.app */;
@@ -1024,6 +1036,7 @@
 				B5D1F77227AA3F760091AC2F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				B59E2DDF27F3CDAF00CB6B27 /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */,
 				B59E2DE827F4E08800CB6B27 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				B5132ABB293F4FA000C2E396 /* XCRemoteSwiftPackageReference "Fakery" */,
 			);
 			productRefGroup = 764A60C625B90E5500789373 /* Products */;
 			projectDirPath = "";
@@ -1108,6 +1121,7 @@
 				B5132A62293A1FE900C2E396 /* ShotDetail.swift in Sources */,
 				B5132A60293A1E3800C2E396 /* RankingType.swift in Sources */,
 				76AADBA625C64F6A00EB0C43 /* PlayerSearchView.swift in Sources */,
+				B5EA4D812940777F0015D379 /* StringEntries.swift in Sources */,
 				B5C95EB02936632700C9C8A7 /* ScheduleItem.swift in Sources */,
 				B5C95EAC2936632700C9C8A7 /* Draw.swift in Sources */,
 				76183EE2260ED38D00189619 /* ResetPasswordVM.swift in Sources */,
@@ -1175,6 +1189,7 @@
 				B5A239AE27F6FFF000D7A9FE /* UserDataModel.swift in Sources */,
 				B52F300227A92D4000237915 /* HalfModalView.swift in Sources */,
 				9FFCF2E425CF2C7E00C6C94E /* FriendsVM.swift in Sources */,
+				B5EA4D83294079FA0015D379 /* Friends.swift in Sources */,
 				B5132A5C293A1A5800C2E396 /* ParticipantType.swift in Sources */,
 				B5132A6A293A223100C2E396 /* RoundCode.swift in Sources */,
 				B564F72F2799F13D00052CA3 /* RDHeaderTitle.swift in Sources */,
@@ -1227,6 +1242,7 @@
 				764A617625B9475000789373 /* RegisterView.swift in Sources */,
 				B5BDA1CC293A0B850048B727 /* EndType.swift in Sources */,
 				B5C95EA22936632700C9C8A7 /* Round.swift in Sources */,
+				B5EA4D7F29404FEB0015D379 /* MatchUpFormatParser.swift in Sources */,
 				764A613D25B9204B00789373 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1857,6 +1873,14 @@
 				minimumVersion = 0.0.5;
 			};
 		};
+		B5132ABB293F4FA000C2E396 /* XCRemoteSwiftPackageReference "Fakery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Fakery";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		B5297F7C27A640C0003641E3 /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet";
@@ -1927,6 +1951,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B512C3DD27A7116A00231CD9 /* XCRemoteSwiftPackageReference "TTProgressHUD" */;
 			productName = TTProgressHUD;
+		};
+		B5132ABC293F4FA100C2E396 /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5132ABB293F4FA000C2E396 /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
 		};
 		B595E717269FB42900BAD8D6 /* ImagePickerView */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -17,8 +17,7 @@ enum FriendshipStatus: String {
 }
 
 class FriendsVM: ObservableObject {
-//    private var subscribtions: Set<AnyCancellable> = []
-    let currentUserID: String = Auth.auth().currentUser!.uid
+    let friendsDocRef = Firestore.firestore().collection("users").document(Auth.auth().currentUser!.uid).collection("extensions").document("friends")
     @Published var buttonTitle: String = FriendshipStatus.notFriend.rawValue
     @Published var requestsUsers: [PlayerModel] = []
     @Published var friendsList: [PlayerModel] = []

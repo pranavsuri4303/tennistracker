@@ -11,7 +11,7 @@ class Player: Codable, Equatable {
     var participant: Participant?
     var playerNumber: Int?
 
-    internal init(participant: Participant?, playerNumber: Int?) {
+    internal init(participant: Participant? = nil, playerNumber: Int? = nil) {
         self.participant = participant
         self.playerNumber = playerNumber
     }

@@ -20,7 +20,7 @@ class Shot: Codable, Equatable {
     var speed: Double?
     var spin: String?
 
-    internal init(bounceAt: String?, participant: Participant?, returned: String?, shotDetail: ShotDetail?, shotMadeFrom: ShotMadeFrom?, shotNumber: Int?, shotOutcome: ShotOutcome?, shotType: ShotType?, side: String?, speed: Double?, spin: String?) {
+    internal init(bounceAt: String? = nil, participant: Participant? = nil, returned: String? = nil, shotDetail: ShotDetail? = nil, shotMadeFrom: ShotMadeFrom? = nil, shotNumber: Int? = nil, shotOutcome: ShotOutcome? = nil, shotType: ShotType? = nil, side: String? = nil, speed: Double? = nil, spin: String? = nil) {
         self.bounceAt = bounceAt
         self.participant = participant
         self.returned = returned

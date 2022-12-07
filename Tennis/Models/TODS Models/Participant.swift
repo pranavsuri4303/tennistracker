@@ -23,7 +23,7 @@ class Participant: Codable, Equatable {
     var team: Team?
     var updated: Date?
 
-    internal init(extensions: [Extension?]?, ids: IDS?, members: [Participant?]?, name: String?, notes: String?, participantID: String?, participantRole: ParticipantRole?, participantStatus: ParticipantStatus?, participantType: ParticipantType?, person: Person?, preferredGivenName: String?, representing: String?, team: Team?, updated: Date?) {
+    internal init(extensions: [Extension?]? = nil, ids: IDS? = nil, members: [Participant?]? = nil, name: String? = nil, notes: String? = nil, participantID: String? = nil, participantRole: ParticipantRole? = nil, participantStatus: ParticipantStatus? = nil, participantType: ParticipantType? = nil, person: Person? = nil, preferredGivenName: String? = nil, representing: String? = nil, team: Team? = nil, updated: Date? = nil) {
         self.extensions = extensions
         self.ids = ids
         self.members = members

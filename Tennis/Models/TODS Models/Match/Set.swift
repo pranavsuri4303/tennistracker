@@ -23,7 +23,7 @@ class Set: Codable, Equatable {
     var updated: Date?
     var winningSide: Int?
 
-    internal init(extensions: [Extension?]?, games: [Game?]?, ids: IDS?, notes: String?, setDuration: String?, setFormat: String?, setNumber: Int?, side1Score: Int?, side1TieBreakScore: Int?, side2Score: Int?, side2TieBreakScore: Int?, timestamp: Date?, updated: Date?, winningSide: Int?) {
+    internal init(extensions: [Extension?]? = nil, games: [Game?]? = nil, ids: IDS? = nil, notes: String? = nil, setDuration: String? = nil, setFormat: String? = nil, setNumber: Int? = nil, side1Score: Int? = nil, side1TieBreakScore: Int? = nil, side2Score: Int? = nil, side2TieBreakScore: Int? = nil, timestamp: Date? = nil, updated: Date? = nil, winningSide: Int? = nil) {
         self.extensions = extensions
         self.games = games
         self.ids = ids
@@ -39,7 +39,7 @@ class Set: Codable, Equatable {
         self.updated = updated
         self.winningSide = winningSide
     }
-
+    
     enum CodingKeys: String, CodingKey {
         case extensions
         case games
