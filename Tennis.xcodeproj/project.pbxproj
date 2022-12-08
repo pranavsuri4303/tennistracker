@@ -80,6 +80,85 @@
 		B53CCA1F2806F39A00258FBC /* AddMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CCA1E2806F39A00258FBC /* AddMatchView.swift */; };
 		B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D40672791342D00F36EE1 /* RDTextField.swift */; };
 		B54D406A27913F8A00F36EE1 /* RDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D406927913F8A00F36EE1 /* RDButton.swift */; };
+		B561AFDF29422CEF001CA23F /* KymaToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF7E29422CEF001CA23F /* KymaToast.swift */; };
+		B561AFE029422CEF001CA23F /* KymaUserAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF7F29422CEF001CA23F /* KymaUserAvatar.swift */; };
+		B561AFE129422CEF001CA23F /* KymaDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8029422CEF001CA23F /* KymaDatePicker.swift */; };
+		B561AFE229422CEF001CA23F /* KymaBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8129422CEF001CA23F /* KymaBadge.swift */; };
+		B561AFE329422CEF001CA23F /* KymaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8229422CEF001CA23F /* KymaButton.swift */; };
+		B561AFE429422CEF001CA23F /* KymaDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8329422CEF001CA23F /* KymaDialog.swift */; };
+		B561AFE529422CEF001CA23F /* KymaTooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8429422CEF001CA23F /* KymaTooltip.swift */; };
+		B561AFE629422CEF001CA23F /* KymaAccordion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8529422CEF001CA23F /* KymaAccordion.swift */; };
+		B561AFE729422CEF001CA23F /* KymaSegmentedControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8629422CEF001CA23F /* KymaSegmentedControll.swift */; };
+		B561AFE829422CEF001CA23F /* KymaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8729422CEF001CA23F /* KymaTextField.swift */; };
+		B561AFE929422CEF001CA23F /* KymaTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8A29422CEF001CA23F /* KymaTab.swift */; };
+		B561AFEA29422CEF001CA23F /* KymaTabsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8B29422CEF001CA23F /* KymaTabsItem.swift */; };
+		B561AFEB29422CEF001CA23F /* KymaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8C29422CEF001CA23F /* KymaColor.swift */; };
+		B561AFEC29422CEF001CA23F /* KymaTooltipArrowAlign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8E29422CEF001CA23F /* KymaTooltipArrowAlign.swift */; };
+		B561AFED29422CEF001CA23F /* KymaTooltipTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8F29422CEF001CA23F /* KymaTooltipTriangle.swift */; };
+		B561AFEE29422CEF001CA23F /* KymaTooltipAlign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9029422CEF001CA23F /* KymaTooltipAlign.swift */; };
+		B561AFEF29422CEF001CA23F /* KymaRadioButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9229422CEF001CA23F /* KymaRadioButtonState.swift */; };
+		B561AFF029422CEF001CA23F /* KymaRadioButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9329422CEF001CA23F /* KymaRadioButtonSize.swift */; };
+		B561AFF129422CEF001CA23F /* KymaRadioButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9429422CEF001CA23F /* KymaRadioButtonItem.swift */; };
+		B561AFF229422CEF001CA23F /* KymaColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9529422CEF001CA23F /* KymaColorModel.swift */; };
+		B561AFF329422CEF001CA23F /* KymaSegmentedControllButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9729422CEF001CA23F /* KymaSegmentedControllButton.swift */; };
+		B561AFF429422CEF001CA23F /* KymaSegmentedControllItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9829422CEF001CA23F /* KymaSegmentedControllItem.swift */; };
+		B561AFF529422CEF001CA23F /* KymaColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9A29422CEF001CA23F /* KymaColorSettings.swift */; };
+		B561AFF629422CEF001CA23F /* KymaDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9B29422CEF001CA23F /* KymaDate.swift */; };
+		B561AFF729422CEF001CA23F /* KymaDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9C29422CEF001CA23F /* KymaDatePickerCell.swift */; };
+		B561AFF829422CEF001CA23F /* KymaMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9D29422CEF001CA23F /* KymaMonth.swift */; };
+		B561AFF929422CEF001CA23F /* KymaDateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9E29422CEF001CA23F /* KymaDateManager.swift */; };
+		B561AFFA29422CEF001CA23F /* KymaWeekdayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9F29422CEF001CA23F /* KymaWeekdayHeader.swift */; };
+		B561AFFB29422CEF001CA23F /* KymaDoughnutChartBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA129422CEF001CA23F /* KymaDoughnutChartBody.swift */; };
+		B561AFFC29422CEF001CA23F /* KymaBarDatasets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA229422CEF001CA23F /* KymaBarDatasets.swift */; };
+		B561AFFD29422CEF001CA23F /* KymaLineDatasets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA329422CEF001CA23F /* KymaLineDatasets.swift */; };
+		B561AFFE29422CEF001CA23F /* KymaLineChartBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA429422CEF001CA23F /* KymaLineChartBody.swift */; };
+		B561AFFF29422CEF001CA23F /* KymaChartDataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA529422CEF001CA23F /* KymaChartDataset.swift */; };
+		B561B00029422CEF001CA23F /* KymaChartLineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA629422CEF001CA23F /* KymaChartLineShape.swift */; };
+		B561B00129422CEF001CA23F /* KymaChartPieItemShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA729422CEF001CA23F /* KymaChartPieItemShape.swift */; };
+		B561B00229422CEF001CA23F /* KymaChartType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA829422CEF001CA23F /* KymaChartType.swift */; };
+		B561B00329422CEF001CA23F /* KymaPieDatasets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA929422CEF001CA23F /* KymaPieDatasets.swift */; };
+		B561B00429422CEF001CA23F /* KymaDoughnutDatasets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFAA29422CEF001CA23F /* KymaDoughnutDatasets.swift */; };
+		B561B00529422CEF001CA23F /* KymaBarChartBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFAB29422CEF001CA23F /* KymaBarChartBody.swift */; };
+		B561B00629422CEF001CA23F /* KymaPieChartBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFAC29422CEF001CA23F /* KymaPieChartBody.swift */; };
+		B561B00729422CEF001CA23F /* KymaChipSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFAE29422CEF001CA23F /* KymaChipSize.swift */; };
+		B561B00829422CEF001CA23F /* KymaCheckboxSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFB029422CEF001CA23F /* KymaCheckboxSize.swift */; };
+		B561B00929422CEF001CA23F /* KymaCheckboxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFB129422CEF001CA23F /* KymaCheckboxState.swift */; };
+		B561B00A29422CEF001CA23F /* KymaTextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFB329422CEF001CA23F /* KymaTextFieldState.swift */; };
+		B561B00B29422CEF001CA23F /* KymaToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFB529422CEF001CA23F /* KymaToggleStyle.swift */; };
+		B561B00C29422CEF001CA23F /* KymaToggleSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFB629422CEF001CA23F /* KymaToggleSize.swift */; };
+		B561B00D29422CEF001CA23F /* KymaTextareaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFB829422CEF001CA23F /* KymaTextareaState.swift */; };
+		B561B00E29422CEF001CA23F /* KymaButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFBA29422CEF001CA23F /* KymaButtonSize.swift */; };
+		B561B00F29422CEF001CA23F /* KymaButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFBB29422CEF001CA23F /* KymaButtonType.swift */; };
+		B561B01029422CEF001CA23F /* KymaButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFBC29422CEF001CA23F /* KymaButtonState.swift */; };
+		B561B01129422CEF001CA23F /* KymaStepItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFBE29422CEF001CA23F /* KymaStepItem.swift */; };
+		B561B01229422CEF001CA23F /* KymaStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFBF29422CEF001CA23F /* KymaStep.swift */; };
+		B561B01329422CEF001CA23F /* KymaStepsOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC029422CEF001CA23F /* KymaStepsOrientation.swift */; };
+		B561B01429422CEF001CA23F /* KymaStepsItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC129422CEF001CA23F /* KymaStepsItems.swift */; };
+		B561B01529422CEF001CA23F /* KymaStepsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC229422CEF001CA23F /* KymaStepsState.swift */; };
+		B561B01629422CEF001CA23F /* KymaDividerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC429422CEF001CA23F /* KymaDividerStyle.swift */; };
+		B561B01729422CEF001CA23F /* KymaDividerOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC529422CEF001CA23F /* KymaDividerOrientation.swift */; };
+		B561B01829422CEF001CA23F /* KymaUserAvatarSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC729422CEF001CA23F /* KymaUserAvatarSize.swift */; };
+		B561B01929422CEF001CA23F /* KymaUserAvatarDecorationPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC829422CEF001CA23F /* KymaUserAvatarDecorationPosition.swift */; };
+		B561B01A29422CEF001CA23F /* KymaUserAvatarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC929422CEF001CA23F /* KymaUserAvatarStyle.swift */; };
+		B561B01B29422CEF001CA23F /* KymaUserAvatarDecoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFCA29422CEF001CA23F /* KymaUserAvatarDecoration.swift */; };
+		B561B01C29422CEF001CA23F /* KymaNumberInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFCC29422CEF001CA23F /* KymaNumberInputState.swift */; };
+		B561B01D29422CEF001CA23F /* KymaNumberInputControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFCD29422CEF001CA23F /* KymaNumberInputControls.swift */; };
+		B561B01E29422CEF001CA23F /* KymaRoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFCE29422CEF001CA23F /* KymaRoundedCorner.swift */; };
+		B561B01F29422CEF001CA23F /* KymaChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFCF29422CEF001CA23F /* KymaChart.swift */; };
+		B561B02029422CEF001CA23F /* KymaTextarea.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD029422CEF001CA23F /* KymaTextarea.swift */; };
+		B561B02129422CEF001CA23F /* KymaSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD129422CEF001CA23F /* KymaSlider.swift */; };
+		B561B02229422CEF001CA23F /* KymaTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD229422CEF001CA23F /* KymaTabs.swift */; };
+		B561B02329422CEF001CA23F /* KymaChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD329422CEF001CA23F /* KymaChip.swift */; };
+		B561B02429422CEF001CA23F /* KymaSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD429422CEF001CA23F /* KymaSteps.swift */; };
+		B561B02529422CEF001CA23F /* KymaCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD529422CEF001CA23F /* KymaCheckbox.swift */; };
+		B561B02629422CEF001CA23F /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD729422CEF001CA23F /* TextExtensions.swift */; };
+		B561B02729422CEF001CA23F /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD829422CEF001CA23F /* ColorExtensions.swift */; };
+		B561B02829422CEF001CA23F /* OtherExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD929422CEF001CA23F /* OtherExtensions.swift */; };
+		B561B02929422CEF001CA23F /* KymaRangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFDA29422CEF001CA23F /* KymaRangeSlider.swift */; };
+		B561B02A29422CEF001CA23F /* KymaDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFDB29422CEF001CA23F /* KymaDivider.swift */; };
+		B561B02B29422CEF001CA23F /* KymaAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFDC29422CEF001CA23F /* KymaAlert.swift */; };
+		B561B02C29422CEF001CA23F /* KymaRadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFDD29422CEF001CA23F /* KymaRadioButtonGroup.swift */; };
+		B561B02D29422CEF001CA23F /* KymaNumberInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFDE29422CEF001CA23F /* KymaNumberInput.swift */; };
 		B564F72F2799F13D00052CA3 /* RDHeaderTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */; };
 		B564F7312799F73A00052CA3 /* RDBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564F7302799F73A00052CA3 /* RDBadgeButton.swift */; };
 		B567575327A8EFE200381DD5 /* StringRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567575227A8EFE200381DD5 /* StringRowView.swift */; };
@@ -317,6 +396,85 @@
 		B53CCA1E2806F39A00258FBC /* AddMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMatchView.swift; sourceTree = "<group>"; };
 		B54D40672791342D00F36EE1 /* RDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDTextField.swift; sourceTree = "<group>"; };
 		B54D406927913F8A00F36EE1 /* RDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDButton.swift; sourceTree = "<group>"; };
+		B561AF7E29422CEF001CA23F /* KymaToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaToast.swift; sourceTree = "<group>"; };
+		B561AF7F29422CEF001CA23F /* KymaUserAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaUserAvatar.swift; sourceTree = "<group>"; };
+		B561AF8029422CEF001CA23F /* KymaDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDatePicker.swift; sourceTree = "<group>"; };
+		B561AF8129422CEF001CA23F /* KymaBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaBadge.swift; sourceTree = "<group>"; };
+		B561AF8229422CEF001CA23F /* KymaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaButton.swift; sourceTree = "<group>"; };
+		B561AF8329422CEF001CA23F /* KymaDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDialog.swift; sourceTree = "<group>"; };
+		B561AF8429422CEF001CA23F /* KymaTooltip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTooltip.swift; sourceTree = "<group>"; };
+		B561AF8529422CEF001CA23F /* KymaAccordion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaAccordion.swift; sourceTree = "<group>"; };
+		B561AF8629422CEF001CA23F /* KymaSegmentedControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaSegmentedControll.swift; sourceTree = "<group>"; };
+		B561AF8729422CEF001CA23F /* KymaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTextField.swift; sourceTree = "<group>"; };
+		B561AF8A29422CEF001CA23F /* KymaTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTab.swift; sourceTree = "<group>"; };
+		B561AF8B29422CEF001CA23F /* KymaTabsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTabsItem.swift; sourceTree = "<group>"; };
+		B561AF8C29422CEF001CA23F /* KymaColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaColor.swift; sourceTree = "<group>"; };
+		B561AF8E29422CEF001CA23F /* KymaTooltipArrowAlign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTooltipArrowAlign.swift; sourceTree = "<group>"; };
+		B561AF8F29422CEF001CA23F /* KymaTooltipTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTooltipTriangle.swift; sourceTree = "<group>"; };
+		B561AF9029422CEF001CA23F /* KymaTooltipAlign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTooltipAlign.swift; sourceTree = "<group>"; };
+		B561AF9229422CEF001CA23F /* KymaRadioButtonState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaRadioButtonState.swift; sourceTree = "<group>"; };
+		B561AF9329422CEF001CA23F /* KymaRadioButtonSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaRadioButtonSize.swift; sourceTree = "<group>"; };
+		B561AF9429422CEF001CA23F /* KymaRadioButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaRadioButtonItem.swift; sourceTree = "<group>"; };
+		B561AF9529422CEF001CA23F /* KymaColorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaColorModel.swift; sourceTree = "<group>"; };
+		B561AF9729422CEF001CA23F /* KymaSegmentedControllButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaSegmentedControllButton.swift; sourceTree = "<group>"; };
+		B561AF9829422CEF001CA23F /* KymaSegmentedControllItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaSegmentedControllItem.swift; sourceTree = "<group>"; };
+		B561AF9A29422CEF001CA23F /* KymaColorSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaColorSettings.swift; sourceTree = "<group>"; };
+		B561AF9B29422CEF001CA23F /* KymaDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDate.swift; sourceTree = "<group>"; };
+		B561AF9C29422CEF001CA23F /* KymaDatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDatePickerCell.swift; sourceTree = "<group>"; };
+		B561AF9D29422CEF001CA23F /* KymaMonth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaMonth.swift; sourceTree = "<group>"; };
+		B561AF9E29422CEF001CA23F /* KymaDateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDateManager.swift; sourceTree = "<group>"; };
+		B561AF9F29422CEF001CA23F /* KymaWeekdayHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaWeekdayHeader.swift; sourceTree = "<group>"; };
+		B561AFA129422CEF001CA23F /* KymaDoughnutChartBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDoughnutChartBody.swift; sourceTree = "<group>"; };
+		B561AFA229422CEF001CA23F /* KymaBarDatasets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaBarDatasets.swift; sourceTree = "<group>"; };
+		B561AFA329422CEF001CA23F /* KymaLineDatasets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaLineDatasets.swift; sourceTree = "<group>"; };
+		B561AFA429422CEF001CA23F /* KymaLineChartBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaLineChartBody.swift; sourceTree = "<group>"; };
+		B561AFA529422CEF001CA23F /* KymaChartDataset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaChartDataset.swift; sourceTree = "<group>"; };
+		B561AFA629422CEF001CA23F /* KymaChartLineShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaChartLineShape.swift; sourceTree = "<group>"; };
+		B561AFA729422CEF001CA23F /* KymaChartPieItemShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaChartPieItemShape.swift; sourceTree = "<group>"; };
+		B561AFA829422CEF001CA23F /* KymaChartType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaChartType.swift; sourceTree = "<group>"; };
+		B561AFA929422CEF001CA23F /* KymaPieDatasets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaPieDatasets.swift; sourceTree = "<group>"; };
+		B561AFAA29422CEF001CA23F /* KymaDoughnutDatasets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDoughnutDatasets.swift; sourceTree = "<group>"; };
+		B561AFAB29422CEF001CA23F /* KymaBarChartBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaBarChartBody.swift; sourceTree = "<group>"; };
+		B561AFAC29422CEF001CA23F /* KymaPieChartBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaPieChartBody.swift; sourceTree = "<group>"; };
+		B561AFAE29422CEF001CA23F /* KymaChipSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaChipSize.swift; sourceTree = "<group>"; };
+		B561AFB029422CEF001CA23F /* KymaCheckboxSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaCheckboxSize.swift; sourceTree = "<group>"; };
+		B561AFB129422CEF001CA23F /* KymaCheckboxState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaCheckboxState.swift; sourceTree = "<group>"; };
+		B561AFB329422CEF001CA23F /* KymaTextFieldState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTextFieldState.swift; sourceTree = "<group>"; };
+		B561AFB529422CEF001CA23F /* KymaToggleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaToggleStyle.swift; sourceTree = "<group>"; };
+		B561AFB629422CEF001CA23F /* KymaToggleSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaToggleSize.swift; sourceTree = "<group>"; };
+		B561AFB829422CEF001CA23F /* KymaTextareaState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTextareaState.swift; sourceTree = "<group>"; };
+		B561AFBA29422CEF001CA23F /* KymaButtonSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaButtonSize.swift; sourceTree = "<group>"; };
+		B561AFBB29422CEF001CA23F /* KymaButtonType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaButtonType.swift; sourceTree = "<group>"; };
+		B561AFBC29422CEF001CA23F /* KymaButtonState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaButtonState.swift; sourceTree = "<group>"; };
+		B561AFBE29422CEF001CA23F /* KymaStepItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaStepItem.swift; sourceTree = "<group>"; };
+		B561AFBF29422CEF001CA23F /* KymaStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaStep.swift; sourceTree = "<group>"; };
+		B561AFC029422CEF001CA23F /* KymaStepsOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaStepsOrientation.swift; sourceTree = "<group>"; };
+		B561AFC129422CEF001CA23F /* KymaStepsItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaStepsItems.swift; sourceTree = "<group>"; };
+		B561AFC229422CEF001CA23F /* KymaStepsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaStepsState.swift; sourceTree = "<group>"; };
+		B561AFC429422CEF001CA23F /* KymaDividerStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDividerStyle.swift; sourceTree = "<group>"; };
+		B561AFC529422CEF001CA23F /* KymaDividerOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDividerOrientation.swift; sourceTree = "<group>"; };
+		B561AFC729422CEF001CA23F /* KymaUserAvatarSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaUserAvatarSize.swift; sourceTree = "<group>"; };
+		B561AFC829422CEF001CA23F /* KymaUserAvatarDecorationPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaUserAvatarDecorationPosition.swift; sourceTree = "<group>"; };
+		B561AFC929422CEF001CA23F /* KymaUserAvatarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaUserAvatarStyle.swift; sourceTree = "<group>"; };
+		B561AFCA29422CEF001CA23F /* KymaUserAvatarDecoration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaUserAvatarDecoration.swift; sourceTree = "<group>"; };
+		B561AFCC29422CEF001CA23F /* KymaNumberInputState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaNumberInputState.swift; sourceTree = "<group>"; };
+		B561AFCD29422CEF001CA23F /* KymaNumberInputControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaNumberInputControls.swift; sourceTree = "<group>"; };
+		B561AFCE29422CEF001CA23F /* KymaRoundedCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaRoundedCorner.swift; sourceTree = "<group>"; };
+		B561AFCF29422CEF001CA23F /* KymaChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaChart.swift; sourceTree = "<group>"; };
+		B561AFD029422CEF001CA23F /* KymaTextarea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTextarea.swift; sourceTree = "<group>"; };
+		B561AFD129422CEF001CA23F /* KymaSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaSlider.swift; sourceTree = "<group>"; };
+		B561AFD229422CEF001CA23F /* KymaTabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTabs.swift; sourceTree = "<group>"; };
+		B561AFD329422CEF001CA23F /* KymaChip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaChip.swift; sourceTree = "<group>"; };
+		B561AFD429422CEF001CA23F /* KymaSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaSteps.swift; sourceTree = "<group>"; };
+		B561AFD529422CEF001CA23F /* KymaCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaCheckbox.swift; sourceTree = "<group>"; };
+		B561AFD729422CEF001CA23F /* TextExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextExtensions.swift; sourceTree = "<group>"; };
+		B561AFD829422CEF001CA23F /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		B561AFD929422CEF001CA23F /* OtherExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherExtensions.swift; sourceTree = "<group>"; };
+		B561AFDA29422CEF001CA23F /* KymaRangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaRangeSlider.swift; sourceTree = "<group>"; };
+		B561AFDB29422CEF001CA23F /* KymaDivider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDivider.swift; sourceTree = "<group>"; };
+		B561AFDC29422CEF001CA23F /* KymaAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaAlert.swift; sourceTree = "<group>"; };
+		B561AFDD29422CEF001CA23F /* KymaRadioButtonGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaRadioButtonGroup.swift; sourceTree = "<group>"; };
+		B561AFDE29422CEF001CA23F /* KymaNumberInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaNumberInput.swift; sourceTree = "<group>"; };
 		B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHeaderTitle.swift; sourceTree = "<group>"; };
 		B564F7302799F73A00052CA3 /* RDBadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDBadgeButton.swift; sourceTree = "<group>"; };
 		B567575227A8EFE200381DD5 /* StringRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRowView.swift; sourceTree = "<group>"; };
@@ -514,6 +672,7 @@
 		764A60C725B90E5500789373 /* Tennis */ = {
 			isa = PBXGroup;
 			children = (
+				B561AF7D29422CEF001CA23F /* KymaUIKit */,
 				764A60C825B90E5600789373 /* TennisApp.swift */,
 				76DB132825CEDAD9003EDA38 /* Models.swift */,
 				9FA0978525CFAF320039A73E /* Extensions.swift */,
@@ -705,6 +864,236 @@
 				B5A239A727F5538500D7A9FE /* RDEmptyListPlaceholder.swift */,
 			);
 			path = RDComponents;
+			sourceTree = "<group>";
+		};
+		B561AF7D29422CEF001CA23F /* KymaUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B561AF8529422CEF001CA23F /* KymaAccordion.swift */,
+				B561AFDC29422CEF001CA23F /* KymaAlert.swift */,
+				B561AF8129422CEF001CA23F /* KymaBadge.swift */,
+				B561AF8229422CEF001CA23F /* KymaButton.swift */,
+				B561AFCF29422CEF001CA23F /* KymaChart.swift */,
+				B561AFD529422CEF001CA23F /* KymaCheckbox.swift */,
+				B561AFD329422CEF001CA23F /* KymaChip.swift */,
+				B561AF8029422CEF001CA23F /* KymaDatePicker.swift */,
+				B561AF8329422CEF001CA23F /* KymaDialog.swift */,
+				B561AFDB29422CEF001CA23F /* KymaDivider.swift */,
+				B561AFDE29422CEF001CA23F /* KymaNumberInput.swift */,
+				B561AFDD29422CEF001CA23F /* KymaRadioButtonGroup.swift */,
+				B561AFDA29422CEF001CA23F /* KymaRangeSlider.swift */,
+				B561AF8629422CEF001CA23F /* KymaSegmentedControll.swift */,
+				B561AFD129422CEF001CA23F /* KymaSlider.swift */,
+				B561AFD429422CEF001CA23F /* KymaSteps.swift */,
+				B561AFD229422CEF001CA23F /* KymaTabs.swift */,
+				B561AFD029422CEF001CA23F /* KymaTextarea.swift */,
+				B561AF8729422CEF001CA23F /* KymaTextField.swift */,
+				B561AF7E29422CEF001CA23F /* KymaToast.swift */,
+				B561AF8429422CEF001CA23F /* KymaTooltip.swift */,
+				B561AF7F29422CEF001CA23F /* KymaUserAvatar.swift */,
+				B561AFD629422CEF001CA23F /* Extentions */,
+				B561AF8829422CEF001CA23F /* Models */,
+			);
+			path = KymaUIKit;
+			sourceTree = "<group>";
+		};
+		B561AF8829422CEF001CA23F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B561AF8C29422CEF001CA23F /* KymaColor.swift */,
+				B561AF9529422CEF001CA23F /* KymaColorModel.swift */,
+				B561AFCE29422CEF001CA23F /* KymaRoundedCorner.swift */,
+				B561AFB929422CEF001CA23F /* Button */,
+				B561AFA029422CEF001CA23F /* Chart */,
+				B561AFAF29422CEF001CA23F /* Checkbox */,
+				B561AFAD29422CEF001CA23F /* Chip */,
+				B561AF9929422CEF001CA23F /* DatePicker */,
+				B561AFC329422CEF001CA23F /* Divider */,
+				B561AFCB29422CEF001CA23F /* NumberInput */,
+				B561AF9129422CEF001CA23F /* RadioButton */,
+				B561AF9629422CEF001CA23F /* SegmentedControll */,
+				B561AFBD29422CEF001CA23F /* Steps */,
+				B561AF8929422CEF001CA23F /* Tabs */,
+				B561AFB729422CEF001CA23F /* Textarea */,
+				B561AFB229422CEF001CA23F /* TextField */,
+				B561AF8D29422CEF001CA23F /* Tooltip */,
+				B561AFB429422CEF001CA23F /* Toggle */,
+				B561AFC629422CEF001CA23F /* UserAvatar */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B561AF8929422CEF001CA23F /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				B561AF8A29422CEF001CA23F /* KymaTab.swift */,
+				B561AF8B29422CEF001CA23F /* KymaTabsItem.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		B561AF8D29422CEF001CA23F /* Tooltip */ = {
+			isa = PBXGroup;
+			children = (
+				B561AF8E29422CEF001CA23F /* KymaTooltipArrowAlign.swift */,
+				B561AF8F29422CEF001CA23F /* KymaTooltipTriangle.swift */,
+				B561AF9029422CEF001CA23F /* KymaTooltipAlign.swift */,
+			);
+			path = Tooltip;
+			sourceTree = "<group>";
+		};
+		B561AF9129422CEF001CA23F /* RadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				B561AF9229422CEF001CA23F /* KymaRadioButtonState.swift */,
+				B561AF9329422CEF001CA23F /* KymaRadioButtonSize.swift */,
+				B561AF9429422CEF001CA23F /* KymaRadioButtonItem.swift */,
+			);
+			path = RadioButton;
+			sourceTree = "<group>";
+		};
+		B561AF9629422CEF001CA23F /* SegmentedControll */ = {
+			isa = PBXGroup;
+			children = (
+				B561AF9729422CEF001CA23F /* KymaSegmentedControllButton.swift */,
+				B561AF9829422CEF001CA23F /* KymaSegmentedControllItem.swift */,
+			);
+			path = SegmentedControll;
+			sourceTree = "<group>";
+		};
+		B561AF9929422CEF001CA23F /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				B561AF9A29422CEF001CA23F /* KymaColorSettings.swift */,
+				B561AF9B29422CEF001CA23F /* KymaDate.swift */,
+				B561AF9C29422CEF001CA23F /* KymaDatePickerCell.swift */,
+				B561AF9D29422CEF001CA23F /* KymaMonth.swift */,
+				B561AF9E29422CEF001CA23F /* KymaDateManager.swift */,
+				B561AF9F29422CEF001CA23F /* KymaWeekdayHeader.swift */,
+			);
+			path = DatePicker;
+			sourceTree = "<group>";
+		};
+		B561AFA029422CEF001CA23F /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				B561AFA129422CEF001CA23F /* KymaDoughnutChartBody.swift */,
+				B561AFA229422CEF001CA23F /* KymaBarDatasets.swift */,
+				B561AFA329422CEF001CA23F /* KymaLineDatasets.swift */,
+				B561AFA429422CEF001CA23F /* KymaLineChartBody.swift */,
+				B561AFA529422CEF001CA23F /* KymaChartDataset.swift */,
+				B561AFA629422CEF001CA23F /* KymaChartLineShape.swift */,
+				B561AFA729422CEF001CA23F /* KymaChartPieItemShape.swift */,
+				B561AFA829422CEF001CA23F /* KymaChartType.swift */,
+				B561AFA929422CEF001CA23F /* KymaPieDatasets.swift */,
+				B561AFAA29422CEF001CA23F /* KymaDoughnutDatasets.swift */,
+				B561AFAB29422CEF001CA23F /* KymaBarChartBody.swift */,
+				B561AFAC29422CEF001CA23F /* KymaPieChartBody.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		B561AFAD29422CEF001CA23F /* Chip */ = {
+			isa = PBXGroup;
+			children = (
+				B561AFAE29422CEF001CA23F /* KymaChipSize.swift */,
+			);
+			path = Chip;
+			sourceTree = "<group>";
+		};
+		B561AFAF29422CEF001CA23F /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				B561AFB029422CEF001CA23F /* KymaCheckboxSize.swift */,
+				B561AFB129422CEF001CA23F /* KymaCheckboxState.swift */,
+			);
+			path = Checkbox;
+			sourceTree = "<group>";
+		};
+		B561AFB229422CEF001CA23F /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				B561AFB329422CEF001CA23F /* KymaTextFieldState.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		B561AFB429422CEF001CA23F /* Toggle */ = {
+			isa = PBXGroup;
+			children = (
+				B561AFB529422CEF001CA23F /* KymaToggleStyle.swift */,
+				B561AFB629422CEF001CA23F /* KymaToggleSize.swift */,
+			);
+			path = Toggle;
+			sourceTree = "<group>";
+		};
+		B561AFB729422CEF001CA23F /* Textarea */ = {
+			isa = PBXGroup;
+			children = (
+				B561AFB829422CEF001CA23F /* KymaTextareaState.swift */,
+			);
+			path = Textarea;
+			sourceTree = "<group>";
+		};
+		B561AFB929422CEF001CA23F /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				B561AFBA29422CEF001CA23F /* KymaButtonSize.swift */,
+				B561AFBB29422CEF001CA23F /* KymaButtonType.swift */,
+				B561AFBC29422CEF001CA23F /* KymaButtonState.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		B561AFBD29422CEF001CA23F /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				B561AFBE29422CEF001CA23F /* KymaStepItem.swift */,
+				B561AFBF29422CEF001CA23F /* KymaStep.swift */,
+				B561AFC029422CEF001CA23F /* KymaStepsOrientation.swift */,
+				B561AFC129422CEF001CA23F /* KymaStepsItems.swift */,
+				B561AFC229422CEF001CA23F /* KymaStepsState.swift */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
+		B561AFC329422CEF001CA23F /* Divider */ = {
+			isa = PBXGroup;
+			children = (
+				B561AFC429422CEF001CA23F /* KymaDividerStyle.swift */,
+				B561AFC529422CEF001CA23F /* KymaDividerOrientation.swift */,
+			);
+			path = Divider;
+			sourceTree = "<group>";
+		};
+		B561AFC629422CEF001CA23F /* UserAvatar */ = {
+			isa = PBXGroup;
+			children = (
+				B561AFC729422CEF001CA23F /* KymaUserAvatarSize.swift */,
+				B561AFC829422CEF001CA23F /* KymaUserAvatarDecorationPosition.swift */,
+				B561AFC929422CEF001CA23F /* KymaUserAvatarStyle.swift */,
+				B561AFCA29422CEF001CA23F /* KymaUserAvatarDecoration.swift */,
+			);
+			path = UserAvatar;
+			sourceTree = "<group>";
+		};
+		B561AFCB29422CEF001CA23F /* NumberInput */ = {
+			isa = PBXGroup;
+			children = (
+				B561AFCC29422CEF001CA23F /* KymaNumberInputState.swift */,
+				B561AFCD29422CEF001CA23F /* KymaNumberInputControls.swift */,
+			);
+			path = NumberInput;
+			sourceTree = "<group>";
+		};
+		B561AFD629422CEF001CA23F /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				B561AFD829422CEF001CA23F /* ColorExtensions.swift */,
+				B561AFD929422CEF001CA23F /* OtherExtensions.swift */,
+				B561AFD729422CEF001CA23F /* TextExtensions.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 		B58917DA25CF26E1001BFA0E /* Friends */ = {
@@ -1116,29 +1505,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B561AFE329422CEF001CA23F /* KymaButton.swift in Sources */,
 				B513A39B26A038BD00145D2D /* MatchVM.swift in Sources */,
 				B5A239B027F7036400D7A9FE /* BaseViewVM.swift in Sources */,
 				B5132A62293A1FE900C2E396 /* ShotDetail.swift in Sources */,
 				B5132A60293A1E3800C2E396 /* RankingType.swift in Sources */,
 				76AADBA625C64F6A00EB0C43 /* PlayerSearchView.swift in Sources */,
 				B5EA4D812940777F0015D379 /* StringEntries.swift in Sources */,
+				B561B00829422CEF001CA23F /* KymaCheckboxSize.swift in Sources */,
+				B561B02529422CEF001CA23F /* KymaCheckbox.swift in Sources */,
+				B561B01129422CEF001CA23F /* KymaStepItem.swift in Sources */,
 				B5C95EB02936632700C9C8A7 /* ScheduleItem.swift in Sources */,
 				B5C95EAC2936632700C9C8A7 /* Draw.swift in Sources */,
+				B561B02429422CEF001CA23F /* KymaSteps.swift in Sources */,
 				76183EE2260ED38D00189619 /* ResetPasswordVM.swift in Sources */,
 				B5C95EBE2936632700C9C8A7 /* Statistic.swift in Sources */,
+				B561AFE529422CEF001CA23F /* KymaTooltip.swift in Sources */,
 				B5C95EA32936632700C9C8A7 /* Venue.swift in Sources */,
+				B561AFFB29422CEF001CA23F /* KymaDoughnutChartBody.swift in Sources */,
+				B561B00129422CEF001CA23F /* KymaChartPieItemShape.swift in Sources */,
 				B5D1F76527AA0C140091AC2F /* SideMenuView.swift in Sources */,
 				B5BDA1D8293A11710048B727 /* DrawStatus.swift in Sources */,
 				B5C95EB62936632700C9C8A7 /* Point.swift in Sources */,
 				B5C95EA62936632700C9C8A7 /* MatchUp.swift in Sources */,
+				B561AFEC29422CEF001CA23F /* KymaTooltipArrowAlign.swift in Sources */,
 				B5C95EBB2936632700C9C8A7 /* OnlineProfile.swift in Sources */,
 				9FA0978625CFAF320039A73E /* Extensions.swift in Sources */,
+				B561B01B29422CEF001CA23F /* KymaUserAvatarDecoration.swift in Sources */,
+				B561AFF429422CEF001CA23F /* KymaSegmentedControllItem.swift in Sources */,
 				B5132A5A293A1A5000C2E396 /* ParticipantStatus.swift in Sources */,
 				B5C95EA12936632700C9C8A7 /* TournamentGroup.swift in Sources */,
 				7662D40225C39DBE004544BF /* BasicMatchScoringView.swift in Sources */,
 				B5BDA1BE293A0A060048B727 /* DrawStructure.swift in Sources */,
+				B561B02D29422CEF001CA23F /* KymaNumberInput.swift in Sources */,
 				B5C95EC22936632700C9C8A7 /* Extension.swift in Sources */,
 				76278C1F25B9E8060005EBD4 /* NewUserView.swift in Sources */,
+				B561B01229422CEF001CA23F /* KymaStep.swift in Sources */,
 				7662D3F525C391A1004544BF /* NewMatchView.swift in Sources */,
 				B513A39D26A0390600145D2D /* ClubsView.swift in Sources */,
 				B5B22A3526A6DECA002CAA61 /* ProfileSettings.swift in Sources */,
@@ -1146,103 +1548,169 @@
 				B564F7312799F73A00052CA3 /* RDBadgeButton.swift in Sources */,
 				B5BDA1BC293A097C0048B727 /* ContactType.swift in Sources */,
 				B5BDA1E0293A15D30048B727 /* MatchUpType.swift in Sources */,
+				B561B01D29422CEF001CA23F /* KymaNumberInputControls.swift in Sources */,
 				B5132A6C293A237900C2E396 /* StageType.swift in Sources */,
+				B561B02B29422CEF001CA23F /* KymaAlert.swift in Sources */,
 				B59E2DE727F4DF4600CB6B27 /* PlayerSearchCellView.swift in Sources */,
+				B561AFF929422CEF001CA23F /* KymaDateManager.swift in Sources */,
+				B561B02329422CEF001CA23F /* KymaChip.swift in Sources */,
+				B561AFFF29422CEF001CA23F /* KymaChartDataset.swift in Sources */,
 				B5BDA1E4293A177C0048B727 /* StartType.swift in Sources */,
 				B5132A66293A213000C2E396 /* ShotMadeFrom.swift in Sources */,
 				B5C95EBF2936632700C9C8A7 /* TennisOfficials.swift in Sources */,
+				B561AFEF29422CEF001CA23F /* KymaRadioButtonState.swift in Sources */,
 				B5BDA1DC293A13C80048B727 /* WheelchairClass.swift in Sources */,
 				B5C95EAB2936632700C9C8A7 /* Game.swift in Sources */,
+				B561B02C29422CEF001CA23F /* KymaRadioButtonGroup.swift in Sources */,
 				B5C95EB52936632700C9C8A7 /* GoesTo.swift in Sources */,
+				B561AFEA29422CEF001CA23F /* KymaTabsItem.swift in Sources */,
+				B561B00929422CEF001CA23F /* KymaCheckboxState.swift in Sources */,
 				B5C95EA82936632700C9C8A7 /* Entry.swift in Sources */,
 				B5BDA1D0293A0BD20048B727 /* EventType.swift in Sources */,
+				B561B01429422CEF001CA23F /* KymaStepsItems.swift in Sources */,
+				B561AFFA29422CEF001CA23F /* KymaWeekdayHeader.swift in Sources */,
 				B5C95EA52936632700C9C8A7 /* Participant.swift in Sources */,
+				B561AFF529422CEF001CA23F /* KymaColorSettings.swift in Sources */,
+				B561B01C29422CEF001CA23F /* KymaNumberInputState.swift in Sources */,
 				7619A62925CA421800014ADA /* PlayerProfileView.swift in Sources */,
+				B561B01E29422CEF001CA23F /* KymaRoundedCorner.swift in Sources */,
 				B5C95EBA2936632700C9C8A7 /* Event.swift in Sources */,
 				764B745E25D2552E0035B02C /* CurrentMatchStatistics.swift in Sources */,
+				B561AFF329422CEF001CA23F /* KymaSegmentedControllButton.swift in Sources */,
 				76343B8625C2B2140061ABB5 /* StringsListView.swift in Sources */,
 				B5132A64293A20B100C2E396 /* ShotType.swift in Sources */,
 				B5BDA1E2293A16250048B727 /* MatchUpStatus.swift in Sources */,
 				B5C95EBD2936632700C9C8A7 /* Stage.swift in Sources */,
 				B5BDA1E6293A18300048B727 /* OrganisationType.swift in Sources */,
+				B561B00B29422CEF001CA23F /* KymaToggleStyle.swift in Sources */,
+				B561B01829422CEF001CA23F /* KymaUserAvatarSize.swift in Sources */,
 				B5C95EC52936632700C9C8A7 /* Side.swift in Sources */,
 				B567575327A8EFE200381DD5 /* StringRowView.swift in Sources */,
 				B59E2DE427F3F9DC00CB6B27 /* PlayerSearchModel.swift in Sources */,
 				762F87CF25C9C0EC004B46FD /* MatchesListView.swift in Sources */,
 				B5BDA1CA293A0B390048B727 /* Discipline.swift in Sources */,
 				B5C95EAA2936632700C9C8A7 /* Tournament.swift in Sources */,
+				B561B01529422CEF001CA23F /* KymaStepsState.swift in Sources */,
 				B53CCA1F2806F39A00258FBC /* AddMatchView.swift in Sources */,
+				B561B02629422CEF001CA23F /* TextExtensions.swift in Sources */,
+				B561B02029422CEF001CA23F /* KymaTextarea.swift in Sources */,
+				B561B00C29422CEF001CA23F /* KymaToggleSize.swift in Sources */,
 				B5BDA1BA293A08C20048B727 /* BallType.swift in Sources */,
 				760719B925BB52F000F09A1A /* DashboardView.swift in Sources */,
 				B5C95EA72936632700C9C8A7 /* RankingItem.swift in Sources */,
+				B561AFF029422CEF001CA23F /* KymaRadioButtonSize.swift in Sources */,
 				B5CF6EA82938E11300DFFF16 /* AddressType.swift in Sources */,
 				B5C95EC12936632700C9C8A7 /* Set.swift in Sources */,
+				B561B00329422CEF001CA23F /* KymaPieDatasets.swift in Sources */,
 				B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */,
 				B5BDA1DA293A13000048B727 /* EventLevel.swift in Sources */,
+				B561AFE229422CEF001CA23F /* KymaBadge.swift in Sources */,
+				B561AFFE29422CEF001CA23F /* KymaLineChartBody.swift in Sources */,
+				B561B02729422CEF001CA23F /* ColorExtensions.swift in Sources */,
+				B561B01329422CEF001CA23F /* KymaStepsOrientation.swift in Sources */,
 				B5D1F76E27AA342A0091AC2F /* RDMenuButton.swift in Sources */,
 				76B8153025CD3AF10029EE83 /* TextFieldWithPickerView.swift in Sources */,
+				B561B01629422CEF001CA23F /* KymaDividerStyle.swift in Sources */,
 				B5C95EB12936632700C9C8A7 /* Player.swift in Sources */,
 				B5132A5E293A1CA400C2E396 /* WinReason.swift in Sources */,
+				B561AFDF29422CEF001CA23F /* KymaToast.swift in Sources */,
 				764A618325B9493F00789373 /* RegisterVM.swift in Sources */,
 				B5BDA1D2293A0BF60048B727 /* Gender.swift in Sources */,
 				B5BDA1D6293A10740048B727 /* SurfaceCategory.swift in Sources */,
+				B561B00F29422CEF001CA23F /* KymaButtonType.swift in Sources */,
+				B561AFE629422CEF001CA23F /* KymaAccordion.swift in Sources */,
+				B561AFE429422CEF001CA23F /* KymaDialog.swift in Sources */,
 				B5A239AE27F6FFF000D7A9FE /* UserDataModel.swift in Sources */,
 				B52F300227A92D4000237915 /* HalfModalView.swift in Sources */,
+				B561B00529422CEF001CA23F /* KymaBarChartBody.swift in Sources */,
 				9FFCF2E425CF2C7E00C6C94E /* FriendsVM.swift in Sources */,
+				B561B01029422CEF001CA23F /* KymaButtonState.swift in Sources */,
 				B5EA4D83294079FA0015D379 /* Friends.swift in Sources */,
 				B5132A5C293A1A5800C2E396 /* ParticipantType.swift in Sources */,
+				B561B01A29422CEF001CA23F /* KymaUserAvatarStyle.swift in Sources */,
 				B5132A6A293A223100C2E396 /* RoundCode.swift in Sources */,
 				B564F72F2799F13D00052CA3 /* RDHeaderTitle.swift in Sources */,
 				B5C95EAE2936632700C9C8A7 /* TotalPrizeMoney.swift in Sources */,
 				B5C95EA42936632700C9C8A7 /* TODSModel.swift in Sources */,
+				B561AFF129422CEF001CA23F /* KymaRadioButtonItem.swift in Sources */,
 				76FA5EF125C7E495005DACE9 /* ExpertMatchScoringView.swift in Sources */,
 				764A612825B91C8E00789373 /* LoginView.swift in Sources */,
+				B561B02929422CEF001CA23F /* KymaRangeSlider.swift in Sources */,
 				76DB132925CEDAD9003EDA38 /* Models.swift in Sources */,
 				B5132A58293A1A4500C2E396 /* ParticipantRole.swift in Sources */,
+				B561B00729422CEF001CA23F /* KymaChipSize.swift in Sources */,
 				B5C95E9E2936632700C9C8A7 /* WorldTennisNumber.swift in Sources */,
 				760719C325BB530600F09A1A /* AddNewStringView.swift in Sources */,
 				B5C95EA02936632700C9C8A7 /* OrderOfPlayItem.swift in Sources */,
+				B561AFE129422CEF001CA23F /* KymaDatePicker.swift in Sources */,
 				B5C95E9F2936632700C9C8A7 /* BiographicalInformation.swift in Sources */,
+				B561AFED29422CEF001CA23F /* KymaTooltipTriangle.swift in Sources */,
 				B5BDA1D4293A0ED80048B727 /* PlayingDoubleHandCode.swift in Sources */,
 				B5C95EB42936632700C9C8A7 /* Organisation.swift in Sources */,
+				B561AFF629422CEF001CA23F /* KymaDate.swift in Sources */,
+				B561B01929422CEF001CA23F /* KymaUserAvatarDecorationPosition.swift in Sources */,
+				B561B01F29422CEF001CA23F /* KymaChart.swift in Sources */,
 				B5C95EB92936632700C9C8A7 /* Team.swift in Sources */,
 				B5C95EC42936632700C9C8A7 /* Person.swift in Sources */,
 				764A611B25B91C7300789373 /* LoginVM.swift in Sources */,
 				B5132A6E293A23E100C2E396 /* TieStatus.swift in Sources */,
 				B5C95EB82936632700C9C8A7 /* OrderOfPlay.swift in Sources */,
 				B5C95EC02936632700C9C8A7 /* Contact.swift in Sources */,
+				B561AFEE29422CEF001CA23F /* KymaTooltipAlign.swift in Sources */,
+				B561AFF229422CEF001CA23F /* KymaColorModel.swift in Sources */,
 				B5132A68293A21AF00C2E396 /* ShotOutcome.swift in Sources */,
 				76D1B86025BAEE4700FE1B4B /* LoadingScreenView.swift in Sources */,
 				76AADB9E25C64F3800EB0C43 /* StringsVM.swift in Sources */,
+				B561AFE829422CEF001CA23F /* KymaTextField.swift in Sources */,
+				B561AFF729422CEF001CA23F /* KymaDatePickerCell.swift in Sources */,
 				B5BDA1B42939F3960048B727 /* PlayingHandCode.swift in Sources */,
 				B5C95EAF2936632700C9C8A7 /* PrizeMoney.swift in Sources */,
+				B561AFE729422CEF001CA23F /* KymaSegmentedControll.swift in Sources */,
 				B5CF6EAB2938E2D300DFFF16 /* Sex.swift in Sources */,
+				B561B00E29422CEF001CA23F /* KymaButtonSize.swift in Sources */,
 				764A617E25B9479700789373 /* ResetPasswordView.swift in Sources */,
 				B5BDA1CE293A0B9E0048B727 /* EntryStatus.swift in Sources */,
 				B5D1F76C27AA1E370091AC2F /* RDHeader.swift in Sources */,
+				B561B02229422CEF001CA23F /* KymaTabs.swift in Sources */,
+				B561B00229422CEF001CA23F /* KymaChartType.swift in Sources */,
 				B5C95EAD2936632700C9C8A7 /* IDS.swift in Sources */,
 				762F87DA25CA34FE004B46FD /* ProfileImagePickerView.swift in Sources */,
+				B561B00629422CEF001CA23F /* KymaPieChartBody.swift in Sources */,
 				76F5424825CDC81F00557BF9 /* FriendsListView.swift in Sources */,
 				76D731A025CA7BB7001D2D64 /* ProfileView.swift in Sources */,
 				B5BDA1B8293A07A30048B727 /* AgeCategory.swift in Sources */,
 				B5C95EB72936632700C9C8A7 /* Shot.swift in Sources */,
+				B561B00429422CEF001CA23F /* KymaDoughnutDatasets.swift in Sources */,
 				B5C95EB22936632700C9C8A7 /* Court.swift in Sources */,
 				76DBB01425C29C8E00F238D9 /* AddStringVM.swift in Sources */,
+				B561AFE029422CEF001CA23F /* KymaUserAvatar.swift in Sources */,
 				B5C95EC32936632700C9C8A7 /* RoundItem.swift in Sources */,
 				B5C95EB32936632700C9C8A7 /* Address.swift in Sources */,
 				B5BDA1DE293A15050048B727 /* IndoorOutdoor.swift in Sources */,
+				B561AFF829422CEF001CA23F /* KymaMonth.swift in Sources */,
 				B5C95EA92936632700C9C8A7 /* Ranking.swift in Sources */,
+				B561AFE929422CEF001CA23F /* KymaTab.swift in Sources */,
+				B561B01729422CEF001CA23F /* KymaDividerOrientation.swift in Sources */,
 				B5D1F76827AA0EBC0091AC2F /* BaseView.swift in Sources */,
+				B561AFEB29422CEF001CA23F /* KymaColor.swift in Sources */,
+				B561B02829422CEF001CA23F /* OtherExtensions.swift in Sources */,
 				B5A239A827F5538500D7A9FE /* RDEmptyListPlaceholder.swift in Sources */,
+				B561B00D29422CEF001CA23F /* KymaTextareaState.swift in Sources */,
 				B54D406A27913F8A00F36EE1 /* RDButton.swift in Sources */,
+				B561B00A29422CEF001CA23F /* KymaTextFieldState.swift in Sources */,
 				764A60C925B90E5600789373 /* TennisApp.swift in Sources */,
 				76FA5EEC25C7E457005DACE9 /* AdvancedMatchScoringView.swift in Sources */,
 				76FA5EF625C7E6E9005DACE9 /* ScoringViewTemplates.swift in Sources */,
+				B561B02A29422CEF001CA23F /* KymaDivider.swift in Sources */,
 				76AADBB425C6514800EB0C43 /* PlayersVM.swift in Sources */,
+				B561B00029422CEF001CA23F /* KymaChartLineShape.swift in Sources */,
+				B561B02129422CEF001CA23F /* KymaSlider.swift in Sources */,
+				B561AFFC29422CEF001CA23F /* KymaBarDatasets.swift in Sources */,
 				764A617625B9475000789373 /* RegisterView.swift in Sources */,
 				B5BDA1CC293A0B850048B727 /* EndType.swift in Sources */,
 				B5C95EA22936632700C9C8A7 /* Round.swift in Sources */,
 				B5EA4D7F29404FEB0015D379 /* MatchUpFormatParser.swift in Sources */,
+				B561AFFD29422CEF001CA23F /* KymaLineDatasets.swift in Sources */,
 				764A613D25B9204B00789373 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
