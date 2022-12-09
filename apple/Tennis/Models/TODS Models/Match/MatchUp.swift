@@ -27,7 +27,7 @@ class MatchUp: Codable, Equatable {
     var roundPosition: Int?
     var scheduleItems: [ScheduleItem?]?
     var score: String?
-    var sets: [Set?]?
+    var sets: [Sett?]?
     var sides: [Side?]?
     var startDate: Date?
     var surfaceCategory: SurfaceCategory?
@@ -36,7 +36,7 @@ class MatchUp: Codable, Equatable {
     var winnerGoesTo: GoesTo?
     var winningSide: Int?
 
-    internal init(court: Court? = nil, drawID: String? = nil, endDate: Date? = nil, extensions: [Extension?]? = nil, humidity: Double? = nil, ids: IDS? = nil, indoorOutdoor: IndoorOutdoor? = nil, loserGoesTo: GoesTo? = nil, matchUpDuration: String? = nil, matchUpFormat: String? = nil, matchUpID: String? = nil, matchUpStatus: MatchUpStatus? = nil, matchUpType: MatchUpType? = nil, notes: String? = nil, orderOfPlayItem: OrderOfPlayItem? = nil, roundNumber: Int? = nil, roundPosition: Int? = nil, scheduleItems: [ScheduleItem?]? = nil, score: String? = nil, sets: [Set?]? = nil, sides: [Side?]? = nil, startDate: Date? = nil, surfaceCategory: SurfaceCategory? = nil, temperature: Double? = nil, updated: Date? = nil, winnerGoesTo: GoesTo? = nil, winningSide: Int? = nil) {
+    internal init(court: Court? = nil, drawID: String? = nil, endDate: Date? = nil, extensions: [Extension?]? = nil, humidity: Double? = nil, ids: IDS? = nil, indoorOutdoor: IndoorOutdoor? = nil, loserGoesTo: GoesTo? = nil, matchUpDuration: String? = nil, matchUpFormat: String? = nil, matchUpID: String? = nil, matchUpStatus: MatchUpStatus? = nil, matchUpType: MatchUpType? = nil, notes: String? = nil, orderOfPlayItem: OrderOfPlayItem? = nil, roundNumber: Int? = nil, roundPosition: Int? = nil, scheduleItems: [ScheduleItem?]? = nil, score: String? = nil, sets: [Sett?]? = nil, sides: [Side?]? = nil, startDate: Date? = nil, surfaceCategory: SurfaceCategory? = nil, temperature: Double? = nil, updated: Date? = nil, winnerGoesTo: GoesTo? = nil, winningSide: Int? = nil) {
         self.court = court
         self.drawID = drawID
         self.endDate = endDate

@@ -18,7 +18,7 @@ struct RDButton: View {
 
             }, label: {
                 Text("\(withTitle)")
-                    .fontWeight(.heavy)
+                    .xelaButtonLarge()
                     .foregroundColor(.black)
                     .padding(.vertical, 10)
                     .frame(width: getRect().width * 0.6)

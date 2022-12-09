@@ -18,10 +18,10 @@ struct TennisApp: App {
             if logged {
                 BaseView()
                     .navigationBarHidden(true)
-                    .preferredColorScheme(.dark)
+                //                    .preferredColorScheme(.dark)
             } else {
                 LoginView()
-                    .preferredColorScheme(.dark)
+                //                    .preferredColorScheme(.dark)
             }
         }
     }
@@ -30,12 +30,20 @@ struct TennisApp: App {
 class Delegate: NSObject, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         FirebaseApp.configure()
+        for family in UIFont.familyNames {
+            print(family)
+            
+            for names in UIFont.fontNames(forFamilyName: family){
+                print("== \(names)")
+            }
+        }
+        
         return true
     }
-
+    
     func application(_: UIApplication, open url: URL,
                      options _: [UIApplication.OpenURLOptionsKey: Any])
-        -> Bool
+    -> Bool
     {
         GIDSignIn.sharedInstance.handle(url)
     }

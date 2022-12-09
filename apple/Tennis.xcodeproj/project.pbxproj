@@ -77,88 +77,160 @@
 		B513A39B26A038BD00145D2D /* MatchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B513A39A26A038BD00145D2D /* MatchVM.swift */; };
 		B513A39D26A0390600145D2D /* ClubsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B513A39C26A0390600145D2D /* ClubsView.swift */; };
 		B52F300227A92D4000237915 /* HalfModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52F300127A92D4000237915 /* HalfModalView.swift */; };
+		B53004442942670300184795 /* UsersList2Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530040B2942670200184795 /* UsersList2Block.swift */; };
+		B53004452942670300184795 /* SocialMediaCardsBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530040C2942670200184795 /* SocialMediaCardsBlock.swift */; };
+		B53004462942670300184795 /* Form3Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530040D2942670200184795 /* Form3Block.swift */; };
+		B53004472942670300184795 /* Sidebar2Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530040E2942670200184795 /* Sidebar2Block.swift */; };
+		B53004482942670300184795 /* Form4Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530040F2942670200184795 /* Form4Block.swift */; };
+		B53004492942670300184795 /* Cryptocurrency2Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004102942670200184795 /* Cryptocurrency2Block.swift */; };
+		B530044A2942670300184795 /* EcommerceCardsBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004112942670200184795 /* EcommerceCardsBlock.swift */; };
+		B530044B2942670300184795 /* Filter2Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004122942670200184795 /* Filter2Block.swift */; };
+		B530044C2942670300184795 /* MusicApp2Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004132942670200184795 /* MusicApp2Block.swift */; };
+		B530044D2942670300184795 /* Form1Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004142942670200184795 /* Form1Block.swift */; };
+		B530044E2942670300184795 /* Filter1Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004152942670200184795 /* Filter1Block.swift */; };
+		B530044F2942670300184795 /* Form2Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004162942670200184795 /* Form2Block.swift */; };
+		B53004502942670300184795 /* MusicApp1Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004172942670200184795 /* MusicApp1Block.swift */; };
+		B53004512942670300184795 /* Cryptocurrency1Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004182942670200184795 /* Cryptocurrency1Block.swift */; };
+		B53004522942670300184795 /* Sidebar1Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004192942670200184795 /* Sidebar1Block.swift */; };
+		B53004532942670300184795 /* UsersList3Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530041A2942670200184795 /* UsersList3Block.swift */; };
+		B53004542942670300184795 /* MusicApp3Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530041B2942670200184795 /* MusicApp3Block.swift */; };
+		B53004552942670300184795 /* Sidebar3Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530041C2942670200184795 /* Sidebar3Block.swift */; };
+		B53004562942670300184795 /* UsersList1Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530041D2942670200184795 /* UsersList1Block.swift */; };
+		B53004572942670300184795 /* Cryptocurrency3Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530041E2942670200184795 /* Cryptocurrency3Block.swift */; };
+		B53004582942670300184795 /* SliderInputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004202942670200184795 /* SliderInputComponent.swift */; };
+		B53004592942670300184795 /* TextareaComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004212942670200184795 /* TextareaComponent.swift */; };
+		B530045A2942670300184795 /* ColorsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004222942670200184795 /* ColorsComponent.swift */; };
+		B530045B2942670300184795 /* TextInputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004232942670200184795 /* TextInputComponent.swift */; };
+		B530045C2942670300184795 /* ButtonsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004242942670200184795 /* ButtonsComponent.swift */; };
+		B530045D2942670300184795 /* SegmentedControllComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004252942670200184795 /* SegmentedControllComponent.swift */; };
+		B530045E2942670300184795 /* NumberInputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004262942670200184795 /* NumberInputComponent.swift */; };
+		B530045F2942670300184795 /* DialogsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004272942670200184795 /* DialogsComponent.swift */; };
+		B53004602942670300184795 /* ToggleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004282942670200184795 /* ToggleComponent.swift */; };
+		B53004612942670300184795 /* TabsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004292942670200184795 /* TabsComponent.swift */; };
+		B53004622942670300184795 /* UserAvatarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530042A2942670200184795 /* UserAvatarComponent.swift */; };
+		B53004632942670300184795 /* ChipsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530042B2942670200184795 /* ChipsComponent.swift */; };
+		B53004642942670300184795 /* CheckboxComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530042C2942670200184795 /* CheckboxComponent.swift */; };
+		B53004652942670300184795 /* ToastComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530042D2942670200184795 /* ToastComponent.swift */; };
+		B53004662942670300184795 /* StepsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530042E2942670200184795 /* StepsComponent.swift */; };
+		B53004672942670300184795 /* ChartsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530042F2942670200184795 /* ChartsComponent.swift */; };
+		B53004682942670300184795 /* AlertComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004302942670200184795 /* AlertComponent.swift */; };
+		B53004692942670300184795 /* RangeSliderInputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004312942670200184795 /* RangeSliderInputComponent.swift */; };
+		B530046A2942670300184795 /* BadgeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004322942670200184795 /* BadgeComponent.swift */; };
+		B530046B2942670300184795 /* DividerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004332942670200184795 /* DividerComponent.swift */; };
+		B530046C2942670300184795 /* TooltipsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004342942670200184795 /* TooltipsComponent.swift */; };
+		B530046D2942670300184795 /* DatePickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004352942670200184795 /* DatePickerComponent.swift */; };
+		B530046E2942670300184795 /* RadioButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004362942670200184795 /* RadioButtonComponent.swift */; };
+		B530046F2942670300184795 /* TypographyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004372942670200184795 /* TypographyComponent.swift */; };
+		B53004702942670300184795 /* AccordionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004382942670200184795 /* AccordionComponent.swift */; };
+		B53004712942670300184795 /* CheckoutTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530043A2942670200184795 /* CheckoutTemplate.swift */; };
+		B53004722942670300184795 /* MusicServiceTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530043B2942670200184795 /* MusicServiceTemplate.swift */; };
+		B53004732942670300184795 /* SocialTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530043C2942670200184795 /* SocialTemplate.swift */; };
+		B53004742942670300184795 /* TaskManagerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530043D2942670200184795 /* TaskManagerTemplate.swift */; };
+		B53004752942670300184795 /* MailboxTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530043E2942670200184795 /* MailboxTemplate.swift */; };
+		B53004762942670300184795 /* AnaliticsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530043F2942670200184795 /* AnaliticsTemplate.swift */; };
+		B53004772942670300184795 /* JobSearchTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004402942670200184795 /* JobSearchTemplate.swift */; };
+		B53004782942670300184795 /* DataTableTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004412942670200184795 /* DataTableTemplate.swift */; };
+		B53004792942670300184795 /* EcommerceTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004422942670200184795 /* EcommerceTemplate.swift */; };
+		B530047A2942670300184795 /* TasksProjectsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004432942670200184795 /* TasksProjectsTemplate.swift */; };
+		B53004DD2942677600184795 /* XelaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530047C2942677500184795 /* XelaTextField.swift */; };
+		B53004DE2942677600184795 /* XelaAccordion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530047D2942677500184795 /* XelaAccordion.swift */; };
+		B53004DF2942677600184795 /* XelaSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530047E2942677500184795 /* XelaSteps.swift */; };
+		B53004E02942677600184795 /* XelaCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530047F2942677500184795 /* XelaCheckbox.swift */; };
+		B53004E12942677600184795 /* XelaAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004802942677500184795 /* XelaAlert.swift */; };
+		B53004E22942677600184795 /* XelaTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004832942677500184795 /* XelaTab.swift */; };
+		B53004E32942677600184795 /* XelaTabsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004842942677500184795 /* XelaTabsItem.swift */; };
+		B53004E42942677600184795 /* XelaTooltipAlign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004862942677500184795 /* XelaTooltipAlign.swift */; };
+		B53004E52942677600184795 /* XelaTooltipArrowAlign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004872942677500184795 /* XelaTooltipArrowAlign.swift */; };
+		B53004E62942677600184795 /* XelaTooltipTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004882942677500184795 /* XelaTooltipTriangle.swift */; };
+		B53004E72942677600184795 /* XelaRadioButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530048A2942677500184795 /* XelaRadioButtonState.swift */; };
+		B53004E82942677600184795 /* XelaRadioButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530048B2942677500184795 /* XelaRadioButtonItem.swift */; };
+		B53004E92942677600184795 /* XelaRadioButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530048C2942677500184795 /* XelaRadioButtonSize.swift */; };
+		B53004EA2942677600184795 /* XelaRoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530048D2942677500184795 /* XelaRoundedCorner.swift */; };
+		B53004EB2942677600184795 /* XelaSegmentedControllItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530048F2942677500184795 /* XelaSegmentedControllItem.swift */; };
+		B53004EC2942677600184795 /* XelaSegmentedControllButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004902942677500184795 /* XelaSegmentedControllButton.swift */; };
+		B53004ED2942677600184795 /* XelaDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004922942677500184795 /* XelaDatePickerCell.swift */; };
+		B53004EE2942677600184795 /* XelaDateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004932942677500184795 /* XelaDateManager.swift */; };
+		B53004EF2942677600184795 /* XelaWeekdayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004942942677500184795 /* XelaWeekdayHeader.swift */; };
+		B53004F02942677600184795 /* XelaDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004952942677500184795 /* XelaDate.swift */; };
+		B53004F12942677600184795 /* XelaColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004962942677500184795 /* XelaColorSettings.swift */; };
+		B53004F22942677600184795 /* XelaMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004972942677500184795 /* XelaMonth.swift */; };
+		B53004F32942677600184795 /* XelaLineDatasets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004992942677500184795 /* XelaLineDatasets.swift */; };
+		B53004F42942677600184795 /* XelaChartDataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530049A2942677500184795 /* XelaChartDataset.swift */; };
+		B53004F52942677600184795 /* XelaChartLineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530049B2942677500184795 /* XelaChartLineShape.swift */; };
+		B53004F62942677600184795 /* XelaBarDatasets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530049C2942677500184795 /* XelaBarDatasets.swift */; };
+		B53004F72942677600184795 /* XelaPieDatasets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530049D2942677500184795 /* XelaPieDatasets.swift */; };
+		B53004F82942677600184795 /* XelaDoughnutChartBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530049E2942677500184795 /* XelaDoughnutChartBody.swift */; };
+		B53004F92942677600184795 /* XelaBarChartBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530049F2942677500184795 /* XelaBarChartBody.swift */; };
+		B53004FA2942677600184795 /* XelaChartPieItemShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004A02942677500184795 /* XelaChartPieItemShape.swift */; };
+		B53004FB2942677600184795 /* XelaChartType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004A12942677500184795 /* XelaChartType.swift */; };
+		B53004FC2942677600184795 /* XelaDoughnutDatasets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004A22942677500184795 /* XelaDoughnutDatasets.swift */; };
+		B53004FD2942677600184795 /* XelaLineChartBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004A32942677500184795 /* XelaLineChartBody.swift */; };
+		B53004FE2942677600184795 /* XelaPieChartBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004A42942677500184795 /* XelaPieChartBody.swift */; };
+		B53004FF2942677600184795 /* XelaChipSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004A62942677500184795 /* XelaChipSize.swift */; };
+		B53005002942677600184795 /* XelaCheckboxSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004A82942677500184795 /* XelaCheckboxSize.swift */; };
+		B53005012942677600184795 /* XelaCheckboxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004A92942677500184795 /* XelaCheckboxState.swift */; };
+		B53005022942677600184795 /* XelaTextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004AB2942677500184795 /* XelaTextFieldState.swift */; };
+		B53005032942677600184795 /* XelaToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004AD2942677500184795 /* XelaToggleStyle.swift */; };
+		B53005042942677600184795 /* XelaToggleSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004AE2942677500184795 /* XelaToggleSize.swift */; };
+		B53005052942677600184795 /* XelaTextareaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004B02942677500184795 /* XelaTextareaState.swift */; };
+		B53005062942677600184795 /* XelaButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004B22942677500184795 /* XelaButtonType.swift */; };
+		B53005072942677600184795 /* XelaButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004B32942677500184795 /* XelaButtonState.swift */; };
+		B53005082942677600184795 /* XelaButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004B42942677500184795 /* XelaButtonSize.swift */; };
+		B53005092942677600184795 /* XelaStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004B62942677500184795 /* XelaStep.swift */; };
+		B530050A2942677600184795 /* XelaStepsItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004B72942677500184795 /* XelaStepsItems.swift */; };
+		B530050B2942677600184795 /* XelaStepsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004B82942677500184795 /* XelaStepsState.swift */; };
+		B530050C2942677600184795 /* XelaStepsOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004B92942677500184795 /* XelaStepsOrientation.swift */; };
+		B530050D2942677600184795 /* XelaStepItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004BA2942677500184795 /* XelaStepItem.swift */; };
+		B530050E2942677600184795 /* XelaDividerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004BC2942677500184795 /* XelaDividerStyle.swift */; };
+		B530050F2942677600184795 /* XelaDividerOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004BD2942677500184795 /* XelaDividerOrientation.swift */; };
+		B53005102942677600184795 /* XelaUserAvatarDecoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004BF2942677500184795 /* XelaUserAvatarDecoration.swift */; };
+		B53005112942677600184795 /* XelaUserAvatarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004C02942677500184795 /* XelaUserAvatarStyle.swift */; };
+		B53005122942677600184795 /* XelaUserAvatarSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004C12942677500184795 /* XelaUserAvatarSize.swift */; };
+		B53005132942677600184795 /* XelaUserAvatarDecorationPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004C22942677500184795 /* XelaUserAvatarDecorationPosition.swift */; };
+		B53005142942677600184795 /* XelaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004C32942677500184795 /* XelaColor.swift */; };
+		B53005152942677600184795 /* XelaNumberInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004C52942677500184795 /* XelaNumberInputState.swift */; };
+		B53005162942677600184795 /* XelaNumberInputControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004C62942677500184795 /* XelaNumberInputControls.swift */; };
+		B53005172942677600184795 /* XelaColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004C72942677500184795 /* XelaColorModel.swift */; };
+		B53005182942677600184795 /* XelaTooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004C82942677500184795 /* XelaTooltip.swift */; };
+		B53005192942677600184795 /* XelaBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004C92942677500184795 /* XelaBadge.swift */; };
+		B530051A2942677600184795 /* XelaRangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004CA2942677500184795 /* XelaRangeSlider.swift */; };
+		B530051B2942677600184795 /* XelaDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004CB2942677500184795 /* XelaDivider.swift */; };
+		B530051C2942677600184795 /* XelaToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004CC2942677500184795 /* XelaToast.swift */; };
+		B530051D2942677600184795 /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004CE2942677500184795 /* TextExtensions.swift */; };
+		B530051E2942677600184795 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004CF2942677500184795 /* ColorExtensions.swift */; };
+		B530051F2942677600184795 /* OtherExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004D02942677500184795 /* OtherExtensions.swift */; };
+		B53005202942677600184795 /* XelaNumberInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004D12942677500184795 /* XelaNumberInput.swift */; };
+		B53005212942677600184795 /* XelaUserAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004D22942677500184795 /* XelaUserAvatar.swift */; };
+		B53005222942677600184795 /* XelaDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004D32942677500184795 /* XelaDatePicker.swift */; };
+		B53005232942677600184795 /* XelaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004D42942677600184795 /* XelaButton.swift */; };
+		B53005242942677600184795 /* XelaDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004D52942677600184795 /* XelaDialog.swift */; };
+		B53005252942677600184795 /* XelaRadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004D62942677600184795 /* XelaRadioButtonGroup.swift */; };
+		B53005262942677600184795 /* XelaChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004D72942677600184795 /* XelaChart.swift */; };
+		B53005272942677600184795 /* XelaChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004D82942677600184795 /* XelaChip.swift */; };
+		B53005282942677600184795 /* XelaTextarea.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004D92942677600184795 /* XelaTextarea.swift */; };
+		B53005292942677600184795 /* XelaSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004DA2942677600184795 /* XelaSlider.swift */; };
+		B530052A2942677700184795 /* XelaTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004DB2942677600184795 /* XelaTabs.swift */; };
+		B530052B2942677700184795 /* XelaSegmentedControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004DC2942677600184795 /* XelaSegmentedControll.swift */; };
+		B530052D29426F5C00184795 /* NewLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530052C29426F5C00184795 /* NewLoginView.swift */; };
+		B530052F29427DCE00184795 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530052E29427DCE00184795 /* XCAssets+Generated.swift */; };
+		B5300542294287D100184795 /* NunitoSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300533294287D000184795 /* NunitoSans-LightItalic.ttf */; };
+		B5300543294287D100184795 /* NunitoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300534294287D000184795 /* NunitoSans-BoldItalic.ttf */; };
+		B5300544294287D100184795 /* NunitoSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300535294287D000184795 /* NunitoSans-ExtraLight.ttf */; };
+		B5300545294287D100184795 /* NunitoSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300536294287D000184795 /* NunitoSans-Light.ttf */; };
+		B5300546294287D100184795 /* NunitoSans-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300537294287D000184795 /* NunitoSans-BlackItalic.ttf */; };
+		B5300547294287D100184795 /* NunitoSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300538294287D000184795 /* NunitoSans-ExtraBold.ttf */; };
+		B5300548294287D100184795 /* NunitoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300539294287D000184795 /* NunitoSans-Regular.ttf */; };
+		B5300549294287D100184795 /* NunitoSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B530053A294287D000184795 /* NunitoSans-SemiBoldItalic.ttf */; };
+		B530054A294287D100184795 /* NunitoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B530053B294287D000184795 /* NunitoSans-Italic.ttf */; };
+		B530054B294287D100184795 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = B530053C294287D000184795 /* OFL.txt */; };
+		B530054C294287D100184795 /* NunitoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B530053D294287D000184795 /* NunitoSans-Bold.ttf */; };
+		B530054D294287D100184795 /* NunitoSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B530053E294287D000184795 /* NunitoSans-SemiBold.ttf */; };
+		B530054E294287D100184795 /* NunitoSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B530053F294287D000184795 /* NunitoSans-Black.ttf */; };
+		B530054F294287D100184795 /* NunitoSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300540294287D000184795 /* NunitoSans-ExtraBoldItalic.ttf */; };
+		B5300550294287D100184795 /* NunitoSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300541294287D000184795 /* NunitoSans-ExtraLightItalic.ttf */; };
 		B53CCA1F2806F39A00258FBC /* AddMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CCA1E2806F39A00258FBC /* AddMatchView.swift */; };
 		B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D40672791342D00F36EE1 /* RDTextField.swift */; };
 		B54D406A27913F8A00F36EE1 /* RDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D406927913F8A00F36EE1 /* RDButton.swift */; };
-		B561AFDF29422CEF001CA23F /* KymaToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF7E29422CEF001CA23F /* KymaToast.swift */; };
-		B561AFE029422CEF001CA23F /* KymaUserAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF7F29422CEF001CA23F /* KymaUserAvatar.swift */; };
-		B561AFE129422CEF001CA23F /* KymaDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8029422CEF001CA23F /* KymaDatePicker.swift */; };
-		B561AFE229422CEF001CA23F /* KymaBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8129422CEF001CA23F /* KymaBadge.swift */; };
-		B561AFE329422CEF001CA23F /* KymaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8229422CEF001CA23F /* KymaButton.swift */; };
-		B561AFE429422CEF001CA23F /* KymaDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8329422CEF001CA23F /* KymaDialog.swift */; };
-		B561AFE529422CEF001CA23F /* KymaTooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8429422CEF001CA23F /* KymaTooltip.swift */; };
-		B561AFE629422CEF001CA23F /* KymaAccordion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8529422CEF001CA23F /* KymaAccordion.swift */; };
-		B561AFE729422CEF001CA23F /* KymaSegmentedControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8629422CEF001CA23F /* KymaSegmentedControll.swift */; };
-		B561AFE829422CEF001CA23F /* KymaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8729422CEF001CA23F /* KymaTextField.swift */; };
-		B561AFE929422CEF001CA23F /* KymaTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8A29422CEF001CA23F /* KymaTab.swift */; };
-		B561AFEA29422CEF001CA23F /* KymaTabsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8B29422CEF001CA23F /* KymaTabsItem.swift */; };
-		B561AFEB29422CEF001CA23F /* KymaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8C29422CEF001CA23F /* KymaColor.swift */; };
-		B561AFEC29422CEF001CA23F /* KymaTooltipArrowAlign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8E29422CEF001CA23F /* KymaTooltipArrowAlign.swift */; };
-		B561AFED29422CEF001CA23F /* KymaTooltipTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF8F29422CEF001CA23F /* KymaTooltipTriangle.swift */; };
-		B561AFEE29422CEF001CA23F /* KymaTooltipAlign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9029422CEF001CA23F /* KymaTooltipAlign.swift */; };
-		B561AFEF29422CEF001CA23F /* KymaRadioButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9229422CEF001CA23F /* KymaRadioButtonState.swift */; };
-		B561AFF029422CEF001CA23F /* KymaRadioButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9329422CEF001CA23F /* KymaRadioButtonSize.swift */; };
-		B561AFF129422CEF001CA23F /* KymaRadioButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9429422CEF001CA23F /* KymaRadioButtonItem.swift */; };
-		B561AFF229422CEF001CA23F /* KymaColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9529422CEF001CA23F /* KymaColorModel.swift */; };
-		B561AFF329422CEF001CA23F /* KymaSegmentedControllButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9729422CEF001CA23F /* KymaSegmentedControllButton.swift */; };
-		B561AFF429422CEF001CA23F /* KymaSegmentedControllItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9829422CEF001CA23F /* KymaSegmentedControllItem.swift */; };
-		B561AFF529422CEF001CA23F /* KymaColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9A29422CEF001CA23F /* KymaColorSettings.swift */; };
-		B561AFF629422CEF001CA23F /* KymaDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9B29422CEF001CA23F /* KymaDate.swift */; };
-		B561AFF729422CEF001CA23F /* KymaDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9C29422CEF001CA23F /* KymaDatePickerCell.swift */; };
-		B561AFF829422CEF001CA23F /* KymaMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9D29422CEF001CA23F /* KymaMonth.swift */; };
-		B561AFF929422CEF001CA23F /* KymaDateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9E29422CEF001CA23F /* KymaDateManager.swift */; };
-		B561AFFA29422CEF001CA23F /* KymaWeekdayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AF9F29422CEF001CA23F /* KymaWeekdayHeader.swift */; };
-		B561AFFB29422CEF001CA23F /* KymaDoughnutChartBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA129422CEF001CA23F /* KymaDoughnutChartBody.swift */; };
-		B561AFFC29422CEF001CA23F /* KymaBarDatasets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA229422CEF001CA23F /* KymaBarDatasets.swift */; };
-		B561AFFD29422CEF001CA23F /* KymaLineDatasets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA329422CEF001CA23F /* KymaLineDatasets.swift */; };
-		B561AFFE29422CEF001CA23F /* KymaLineChartBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA429422CEF001CA23F /* KymaLineChartBody.swift */; };
-		B561AFFF29422CEF001CA23F /* KymaChartDataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA529422CEF001CA23F /* KymaChartDataset.swift */; };
-		B561B00029422CEF001CA23F /* KymaChartLineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA629422CEF001CA23F /* KymaChartLineShape.swift */; };
-		B561B00129422CEF001CA23F /* KymaChartPieItemShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA729422CEF001CA23F /* KymaChartPieItemShape.swift */; };
-		B561B00229422CEF001CA23F /* KymaChartType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA829422CEF001CA23F /* KymaChartType.swift */; };
-		B561B00329422CEF001CA23F /* KymaPieDatasets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFA929422CEF001CA23F /* KymaPieDatasets.swift */; };
-		B561B00429422CEF001CA23F /* KymaDoughnutDatasets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFAA29422CEF001CA23F /* KymaDoughnutDatasets.swift */; };
-		B561B00529422CEF001CA23F /* KymaBarChartBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFAB29422CEF001CA23F /* KymaBarChartBody.swift */; };
-		B561B00629422CEF001CA23F /* KymaPieChartBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFAC29422CEF001CA23F /* KymaPieChartBody.swift */; };
-		B561B00729422CEF001CA23F /* KymaChipSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFAE29422CEF001CA23F /* KymaChipSize.swift */; };
-		B561B00829422CEF001CA23F /* KymaCheckboxSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFB029422CEF001CA23F /* KymaCheckboxSize.swift */; };
-		B561B00929422CEF001CA23F /* KymaCheckboxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFB129422CEF001CA23F /* KymaCheckboxState.swift */; };
-		B561B00A29422CEF001CA23F /* KymaTextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFB329422CEF001CA23F /* KymaTextFieldState.swift */; };
-		B561B00B29422CEF001CA23F /* KymaToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFB529422CEF001CA23F /* KymaToggleStyle.swift */; };
-		B561B00C29422CEF001CA23F /* KymaToggleSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFB629422CEF001CA23F /* KymaToggleSize.swift */; };
-		B561B00D29422CEF001CA23F /* KymaTextareaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFB829422CEF001CA23F /* KymaTextareaState.swift */; };
-		B561B00E29422CEF001CA23F /* KymaButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFBA29422CEF001CA23F /* KymaButtonSize.swift */; };
-		B561B00F29422CEF001CA23F /* KymaButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFBB29422CEF001CA23F /* KymaButtonType.swift */; };
-		B561B01029422CEF001CA23F /* KymaButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFBC29422CEF001CA23F /* KymaButtonState.swift */; };
-		B561B01129422CEF001CA23F /* KymaStepItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFBE29422CEF001CA23F /* KymaStepItem.swift */; };
-		B561B01229422CEF001CA23F /* KymaStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFBF29422CEF001CA23F /* KymaStep.swift */; };
-		B561B01329422CEF001CA23F /* KymaStepsOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC029422CEF001CA23F /* KymaStepsOrientation.swift */; };
-		B561B01429422CEF001CA23F /* KymaStepsItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC129422CEF001CA23F /* KymaStepsItems.swift */; };
-		B561B01529422CEF001CA23F /* KymaStepsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC229422CEF001CA23F /* KymaStepsState.swift */; };
-		B561B01629422CEF001CA23F /* KymaDividerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC429422CEF001CA23F /* KymaDividerStyle.swift */; };
-		B561B01729422CEF001CA23F /* KymaDividerOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC529422CEF001CA23F /* KymaDividerOrientation.swift */; };
-		B561B01829422CEF001CA23F /* KymaUserAvatarSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC729422CEF001CA23F /* KymaUserAvatarSize.swift */; };
-		B561B01929422CEF001CA23F /* KymaUserAvatarDecorationPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC829422CEF001CA23F /* KymaUserAvatarDecorationPosition.swift */; };
-		B561B01A29422CEF001CA23F /* KymaUserAvatarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFC929422CEF001CA23F /* KymaUserAvatarStyle.swift */; };
-		B561B01B29422CEF001CA23F /* KymaUserAvatarDecoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFCA29422CEF001CA23F /* KymaUserAvatarDecoration.swift */; };
-		B561B01C29422CEF001CA23F /* KymaNumberInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFCC29422CEF001CA23F /* KymaNumberInputState.swift */; };
-		B561B01D29422CEF001CA23F /* KymaNumberInputControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFCD29422CEF001CA23F /* KymaNumberInputControls.swift */; };
-		B561B01E29422CEF001CA23F /* KymaRoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFCE29422CEF001CA23F /* KymaRoundedCorner.swift */; };
-		B561B01F29422CEF001CA23F /* KymaChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFCF29422CEF001CA23F /* KymaChart.swift */; };
-		B561B02029422CEF001CA23F /* KymaTextarea.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD029422CEF001CA23F /* KymaTextarea.swift */; };
-		B561B02129422CEF001CA23F /* KymaSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD129422CEF001CA23F /* KymaSlider.swift */; };
-		B561B02229422CEF001CA23F /* KymaTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD229422CEF001CA23F /* KymaTabs.swift */; };
-		B561B02329422CEF001CA23F /* KymaChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD329422CEF001CA23F /* KymaChip.swift */; };
-		B561B02429422CEF001CA23F /* KymaSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD429422CEF001CA23F /* KymaSteps.swift */; };
-		B561B02529422CEF001CA23F /* KymaCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD529422CEF001CA23F /* KymaCheckbox.swift */; };
-		B561B02629422CEF001CA23F /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD729422CEF001CA23F /* TextExtensions.swift */; };
-		B561B02729422CEF001CA23F /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD829422CEF001CA23F /* ColorExtensions.swift */; };
-		B561B02829422CEF001CA23F /* OtherExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFD929422CEF001CA23F /* OtherExtensions.swift */; };
-		B561B02929422CEF001CA23F /* KymaRangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFDA29422CEF001CA23F /* KymaRangeSlider.swift */; };
-		B561B02A29422CEF001CA23F /* KymaDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFDB29422CEF001CA23F /* KymaDivider.swift */; };
-		B561B02B29422CEF001CA23F /* KymaAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFDC29422CEF001CA23F /* KymaAlert.swift */; };
-		B561B02C29422CEF001CA23F /* KymaRadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFDD29422CEF001CA23F /* KymaRadioButtonGroup.swift */; };
-		B561B02D29422CEF001CA23F /* KymaNumberInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561AFDE29422CEF001CA23F /* KymaNumberInput.swift */; };
 		B564F72F2799F13D00052CA3 /* RDHeaderTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */; };
 		B564F7312799F73A00052CA3 /* RDBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564F7302799F73A00052CA3 /* RDBadgeButton.swift */; };
 		B567575327A8EFE200381DD5 /* StringRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567575227A8EFE200381DD5 /* StringRowView.swift */; };
@@ -228,7 +300,7 @@
 		B5C95EBE2936632700C9C8A7 /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E952936632700C9C8A7 /* Statistic.swift */; };
 		B5C95EBF2936632700C9C8A7 /* TennisOfficials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E962936632700C9C8A7 /* TennisOfficials.swift */; };
 		B5C95EC02936632700C9C8A7 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E972936632700C9C8A7 /* Contact.swift */; };
-		B5C95EC12936632700C9C8A7 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E982936632700C9C8A7 /* Set.swift */; };
+		B5C95EC12936632700C9C8A7 /* Sett.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E982936632700C9C8A7 /* Sett.swift */; };
 		B5C95EC22936632700C9C8A7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E992936632700C9C8A7 /* Extension.swift */; };
 		B5C95EC32936632700C9C8A7 /* RoundItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E9A2936632700C9C8A7 /* RoundItem.swift */; };
 		B5C95EC42936632700C9C8A7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C95E9B2936632700C9C8A7 /* Person.swift */; };
@@ -393,88 +465,160 @@
 		B513A39A26A038BD00145D2D /* MatchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVM.swift; sourceTree = "<group>"; };
 		B513A39C26A0390600145D2D /* ClubsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsView.swift; sourceTree = "<group>"; };
 		B52F300127A92D4000237915 /* HalfModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalView.swift; sourceTree = "<group>"; };
+		B530040B2942670200184795 /* UsersList2Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersList2Block.swift; sourceTree = "<group>"; };
+		B530040C2942670200184795 /* SocialMediaCardsBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaCardsBlock.swift; sourceTree = "<group>"; };
+		B530040D2942670200184795 /* Form3Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form3Block.swift; sourceTree = "<group>"; };
+		B530040E2942670200184795 /* Sidebar2Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sidebar2Block.swift; sourceTree = "<group>"; };
+		B530040F2942670200184795 /* Form4Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form4Block.swift; sourceTree = "<group>"; };
+		B53004102942670200184795 /* Cryptocurrency2Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptocurrency2Block.swift; sourceTree = "<group>"; };
+		B53004112942670200184795 /* EcommerceCardsBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceCardsBlock.swift; sourceTree = "<group>"; };
+		B53004122942670200184795 /* Filter2Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter2Block.swift; sourceTree = "<group>"; };
+		B53004132942670200184795 /* MusicApp2Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicApp2Block.swift; sourceTree = "<group>"; };
+		B53004142942670200184795 /* Form1Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form1Block.swift; sourceTree = "<group>"; };
+		B53004152942670200184795 /* Filter1Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter1Block.swift; sourceTree = "<group>"; };
+		B53004162942670200184795 /* Form2Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form2Block.swift; sourceTree = "<group>"; };
+		B53004172942670200184795 /* MusicApp1Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicApp1Block.swift; sourceTree = "<group>"; };
+		B53004182942670200184795 /* Cryptocurrency1Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptocurrency1Block.swift; sourceTree = "<group>"; };
+		B53004192942670200184795 /* Sidebar1Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sidebar1Block.swift; sourceTree = "<group>"; };
+		B530041A2942670200184795 /* UsersList3Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersList3Block.swift; sourceTree = "<group>"; };
+		B530041B2942670200184795 /* MusicApp3Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicApp3Block.swift; sourceTree = "<group>"; };
+		B530041C2942670200184795 /* Sidebar3Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sidebar3Block.swift; sourceTree = "<group>"; };
+		B530041D2942670200184795 /* UsersList1Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersList1Block.swift; sourceTree = "<group>"; };
+		B530041E2942670200184795 /* Cryptocurrency3Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptocurrency3Block.swift; sourceTree = "<group>"; };
+		B53004202942670200184795 /* SliderInputComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderInputComponent.swift; sourceTree = "<group>"; };
+		B53004212942670200184795 /* TextareaComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextareaComponent.swift; sourceTree = "<group>"; };
+		B53004222942670200184795 /* ColorsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsComponent.swift; sourceTree = "<group>"; };
+		B53004232942670200184795 /* TextInputComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputComponent.swift; sourceTree = "<group>"; };
+		B53004242942670200184795 /* ButtonsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsComponent.swift; sourceTree = "<group>"; };
+		B53004252942670200184795 /* SegmentedControllComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControllComponent.swift; sourceTree = "<group>"; };
+		B53004262942670200184795 /* NumberInputComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberInputComponent.swift; sourceTree = "<group>"; };
+		B53004272942670200184795 /* DialogsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogsComponent.swift; sourceTree = "<group>"; };
+		B53004282942670200184795 /* ToggleComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleComponent.swift; sourceTree = "<group>"; };
+		B53004292942670200184795 /* TabsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsComponent.swift; sourceTree = "<group>"; };
+		B530042A2942670200184795 /* UserAvatarComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAvatarComponent.swift; sourceTree = "<group>"; };
+		B530042B2942670200184795 /* ChipsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChipsComponent.swift; sourceTree = "<group>"; };
+		B530042C2942670200184795 /* CheckboxComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxComponent.swift; sourceTree = "<group>"; };
+		B530042D2942670200184795 /* ToastComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastComponent.swift; sourceTree = "<group>"; };
+		B530042E2942670200184795 /* StepsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsComponent.swift; sourceTree = "<group>"; };
+		B530042F2942670200184795 /* ChartsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsComponent.swift; sourceTree = "<group>"; };
+		B53004302942670200184795 /* AlertComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertComponent.swift; sourceTree = "<group>"; };
+		B53004312942670200184795 /* RangeSliderInputComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderInputComponent.swift; sourceTree = "<group>"; };
+		B53004322942670200184795 /* BadgeComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeComponent.swift; sourceTree = "<group>"; };
+		B53004332942670200184795 /* DividerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DividerComponent.swift; sourceTree = "<group>"; };
+		B53004342942670200184795 /* TooltipsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TooltipsComponent.swift; sourceTree = "<group>"; };
+		B53004352942670200184795 /* DatePickerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerComponent.swift; sourceTree = "<group>"; };
+		B53004362942670200184795 /* RadioButtonComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonComponent.swift; sourceTree = "<group>"; };
+		B53004372942670200184795 /* TypographyComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyComponent.swift; sourceTree = "<group>"; };
+		B53004382942670200184795 /* AccordionComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccordionComponent.swift; sourceTree = "<group>"; };
+		B530043A2942670200184795 /* CheckoutTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutTemplate.swift; sourceTree = "<group>"; };
+		B530043B2942670200184795 /* MusicServiceTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicServiceTemplate.swift; sourceTree = "<group>"; };
+		B530043C2942670200184795 /* SocialTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialTemplate.swift; sourceTree = "<group>"; };
+		B530043D2942670200184795 /* TaskManagerTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManagerTemplate.swift; sourceTree = "<group>"; };
+		B530043E2942670200184795 /* MailboxTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailboxTemplate.swift; sourceTree = "<group>"; };
+		B530043F2942670200184795 /* AnaliticsTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnaliticsTemplate.swift; sourceTree = "<group>"; };
+		B53004402942670200184795 /* JobSearchTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchTemplate.swift; sourceTree = "<group>"; };
+		B53004412942670200184795 /* DataTableTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTableTemplate.swift; sourceTree = "<group>"; };
+		B53004422942670200184795 /* EcommerceTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceTemplate.swift; sourceTree = "<group>"; };
+		B53004432942670200184795 /* TasksProjectsTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksProjectsTemplate.swift; sourceTree = "<group>"; };
+		B530047C2942677500184795 /* XelaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTextField.swift; sourceTree = "<group>"; };
+		B530047D2942677500184795 /* XelaAccordion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaAccordion.swift; sourceTree = "<group>"; };
+		B530047E2942677500184795 /* XelaSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSteps.swift; sourceTree = "<group>"; };
+		B530047F2942677500184795 /* XelaCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaCheckbox.swift; sourceTree = "<group>"; };
+		B53004802942677500184795 /* XelaAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaAlert.swift; sourceTree = "<group>"; };
+		B53004832942677500184795 /* XelaTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTab.swift; sourceTree = "<group>"; };
+		B53004842942677500184795 /* XelaTabsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTabsItem.swift; sourceTree = "<group>"; };
+		B53004862942677500184795 /* XelaTooltipAlign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTooltipAlign.swift; sourceTree = "<group>"; };
+		B53004872942677500184795 /* XelaTooltipArrowAlign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTooltipArrowAlign.swift; sourceTree = "<group>"; };
+		B53004882942677500184795 /* XelaTooltipTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTooltipTriangle.swift; sourceTree = "<group>"; };
+		B530048A2942677500184795 /* XelaRadioButtonState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaRadioButtonState.swift; sourceTree = "<group>"; };
+		B530048B2942677500184795 /* XelaRadioButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaRadioButtonItem.swift; sourceTree = "<group>"; };
+		B530048C2942677500184795 /* XelaRadioButtonSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaRadioButtonSize.swift; sourceTree = "<group>"; };
+		B530048D2942677500184795 /* XelaRoundedCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaRoundedCorner.swift; sourceTree = "<group>"; };
+		B530048F2942677500184795 /* XelaSegmentedControllItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSegmentedControllItem.swift; sourceTree = "<group>"; };
+		B53004902942677500184795 /* XelaSegmentedControllButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSegmentedControllButton.swift; sourceTree = "<group>"; };
+		B53004922942677500184795 /* XelaDatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaDatePickerCell.swift; sourceTree = "<group>"; };
+		B53004932942677500184795 /* XelaDateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaDateManager.swift; sourceTree = "<group>"; };
+		B53004942942677500184795 /* XelaWeekdayHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaWeekdayHeader.swift; sourceTree = "<group>"; };
+		B53004952942677500184795 /* XelaDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaDate.swift; sourceTree = "<group>"; };
+		B53004962942677500184795 /* XelaColorSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaColorSettings.swift; sourceTree = "<group>"; };
+		B53004972942677500184795 /* XelaMonth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaMonth.swift; sourceTree = "<group>"; };
+		B53004992942677500184795 /* XelaLineDatasets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaLineDatasets.swift; sourceTree = "<group>"; };
+		B530049A2942677500184795 /* XelaChartDataset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaChartDataset.swift; sourceTree = "<group>"; };
+		B530049B2942677500184795 /* XelaChartLineShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaChartLineShape.swift; sourceTree = "<group>"; };
+		B530049C2942677500184795 /* XelaBarDatasets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaBarDatasets.swift; sourceTree = "<group>"; };
+		B530049D2942677500184795 /* XelaPieDatasets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaPieDatasets.swift; sourceTree = "<group>"; };
+		B530049E2942677500184795 /* XelaDoughnutChartBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaDoughnutChartBody.swift; sourceTree = "<group>"; };
+		B530049F2942677500184795 /* XelaBarChartBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaBarChartBody.swift; sourceTree = "<group>"; };
+		B53004A02942677500184795 /* XelaChartPieItemShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaChartPieItemShape.swift; sourceTree = "<group>"; };
+		B53004A12942677500184795 /* XelaChartType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaChartType.swift; sourceTree = "<group>"; };
+		B53004A22942677500184795 /* XelaDoughnutDatasets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaDoughnutDatasets.swift; sourceTree = "<group>"; };
+		B53004A32942677500184795 /* XelaLineChartBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaLineChartBody.swift; sourceTree = "<group>"; };
+		B53004A42942677500184795 /* XelaPieChartBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaPieChartBody.swift; sourceTree = "<group>"; };
+		B53004A62942677500184795 /* XelaChipSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaChipSize.swift; sourceTree = "<group>"; };
+		B53004A82942677500184795 /* XelaCheckboxSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaCheckboxSize.swift; sourceTree = "<group>"; };
+		B53004A92942677500184795 /* XelaCheckboxState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaCheckboxState.swift; sourceTree = "<group>"; };
+		B53004AB2942677500184795 /* XelaTextFieldState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTextFieldState.swift; sourceTree = "<group>"; };
+		B53004AD2942677500184795 /* XelaToggleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaToggleStyle.swift; sourceTree = "<group>"; };
+		B53004AE2942677500184795 /* XelaToggleSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaToggleSize.swift; sourceTree = "<group>"; };
+		B53004B02942677500184795 /* XelaTextareaState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTextareaState.swift; sourceTree = "<group>"; };
+		B53004B22942677500184795 /* XelaButtonType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaButtonType.swift; sourceTree = "<group>"; };
+		B53004B32942677500184795 /* XelaButtonState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaButtonState.swift; sourceTree = "<group>"; };
+		B53004B42942677500184795 /* XelaButtonSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaButtonSize.swift; sourceTree = "<group>"; };
+		B53004B62942677500184795 /* XelaStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaStep.swift; sourceTree = "<group>"; };
+		B53004B72942677500184795 /* XelaStepsItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaStepsItems.swift; sourceTree = "<group>"; };
+		B53004B82942677500184795 /* XelaStepsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaStepsState.swift; sourceTree = "<group>"; };
+		B53004B92942677500184795 /* XelaStepsOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaStepsOrientation.swift; sourceTree = "<group>"; };
+		B53004BA2942677500184795 /* XelaStepItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaStepItem.swift; sourceTree = "<group>"; };
+		B53004BC2942677500184795 /* XelaDividerStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaDividerStyle.swift; sourceTree = "<group>"; };
+		B53004BD2942677500184795 /* XelaDividerOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaDividerOrientation.swift; sourceTree = "<group>"; };
+		B53004BF2942677500184795 /* XelaUserAvatarDecoration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaUserAvatarDecoration.swift; sourceTree = "<group>"; };
+		B53004C02942677500184795 /* XelaUserAvatarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaUserAvatarStyle.swift; sourceTree = "<group>"; };
+		B53004C12942677500184795 /* XelaUserAvatarSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaUserAvatarSize.swift; sourceTree = "<group>"; };
+		B53004C22942677500184795 /* XelaUserAvatarDecorationPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaUserAvatarDecorationPosition.swift; sourceTree = "<group>"; };
+		B53004C32942677500184795 /* XelaColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaColor.swift; sourceTree = "<group>"; };
+		B53004C52942677500184795 /* XelaNumberInputState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaNumberInputState.swift; sourceTree = "<group>"; };
+		B53004C62942677500184795 /* XelaNumberInputControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaNumberInputControls.swift; sourceTree = "<group>"; };
+		B53004C72942677500184795 /* XelaColorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaColorModel.swift; sourceTree = "<group>"; };
+		B53004C82942677500184795 /* XelaTooltip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTooltip.swift; sourceTree = "<group>"; };
+		B53004C92942677500184795 /* XelaBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaBadge.swift; sourceTree = "<group>"; };
+		B53004CA2942677500184795 /* XelaRangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaRangeSlider.swift; sourceTree = "<group>"; };
+		B53004CB2942677500184795 /* XelaDivider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaDivider.swift; sourceTree = "<group>"; };
+		B53004CC2942677500184795 /* XelaToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaToast.swift; sourceTree = "<group>"; };
+		B53004CE2942677500184795 /* TextExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextExtensions.swift; sourceTree = "<group>"; };
+		B53004CF2942677500184795 /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		B53004D02942677500184795 /* OtherExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherExtensions.swift; sourceTree = "<group>"; };
+		B53004D12942677500184795 /* XelaNumberInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaNumberInput.swift; sourceTree = "<group>"; };
+		B53004D22942677500184795 /* XelaUserAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaUserAvatar.swift; sourceTree = "<group>"; };
+		B53004D32942677500184795 /* XelaDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaDatePicker.swift; sourceTree = "<group>"; };
+		B53004D42942677600184795 /* XelaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaButton.swift; sourceTree = "<group>"; };
+		B53004D52942677600184795 /* XelaDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaDialog.swift; sourceTree = "<group>"; };
+		B53004D62942677600184795 /* XelaRadioButtonGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaRadioButtonGroup.swift; sourceTree = "<group>"; };
+		B53004D72942677600184795 /* XelaChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaChart.swift; sourceTree = "<group>"; };
+		B53004D82942677600184795 /* XelaChip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaChip.swift; sourceTree = "<group>"; };
+		B53004D92942677600184795 /* XelaTextarea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTextarea.swift; sourceTree = "<group>"; };
+		B53004DA2942677600184795 /* XelaSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSlider.swift; sourceTree = "<group>"; };
+		B53004DB2942677600184795 /* XelaTabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTabs.swift; sourceTree = "<group>"; };
+		B53004DC2942677600184795 /* XelaSegmentedControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSegmentedControll.swift; sourceTree = "<group>"; };
+		B530052C29426F5C00184795 /* NewLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginView.swift; sourceTree = "<group>"; };
+		B530052E29427DCE00184795 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		B5300533294287D000184795 /* NunitoSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		B5300534294287D000184795 /* NunitoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		B5300535294287D000184795 /* NunitoSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		B5300536294287D000184795 /* NunitoSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Light.ttf"; sourceTree = "<group>"; };
+		B5300537294287D000184795 /* NunitoSans-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-BlackItalic.ttf"; sourceTree = "<group>"; };
+		B5300538294287D000184795 /* NunitoSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		B5300539294287D000184795 /* NunitoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Regular.ttf"; sourceTree = "<group>"; };
+		B530053A294287D000184795 /* NunitoSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		B530053B294287D000184795 /* NunitoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Italic.ttf"; sourceTree = "<group>"; };
+		B530053C294287D000184795 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		B530053D294287D000184795 /* NunitoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Bold.ttf"; sourceTree = "<group>"; };
+		B530053E294287D000184795 /* NunitoSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		B530053F294287D000184795 /* NunitoSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Black.ttf"; sourceTree = "<group>"; };
+		B5300540294287D000184795 /* NunitoSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		B5300541294287D000184795 /* NunitoSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		B53CCA1E2806F39A00258FBC /* AddMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMatchView.swift; sourceTree = "<group>"; };
 		B54D40672791342D00F36EE1 /* RDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDTextField.swift; sourceTree = "<group>"; };
 		B54D406927913F8A00F36EE1 /* RDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDButton.swift; sourceTree = "<group>"; };
-		B561AF7E29422CEF001CA23F /* KymaToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaToast.swift; sourceTree = "<group>"; };
-		B561AF7F29422CEF001CA23F /* KymaUserAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaUserAvatar.swift; sourceTree = "<group>"; };
-		B561AF8029422CEF001CA23F /* KymaDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDatePicker.swift; sourceTree = "<group>"; };
-		B561AF8129422CEF001CA23F /* KymaBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaBadge.swift; sourceTree = "<group>"; };
-		B561AF8229422CEF001CA23F /* KymaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaButton.swift; sourceTree = "<group>"; };
-		B561AF8329422CEF001CA23F /* KymaDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDialog.swift; sourceTree = "<group>"; };
-		B561AF8429422CEF001CA23F /* KymaTooltip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTooltip.swift; sourceTree = "<group>"; };
-		B561AF8529422CEF001CA23F /* KymaAccordion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaAccordion.swift; sourceTree = "<group>"; };
-		B561AF8629422CEF001CA23F /* KymaSegmentedControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaSegmentedControll.swift; sourceTree = "<group>"; };
-		B561AF8729422CEF001CA23F /* KymaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTextField.swift; sourceTree = "<group>"; };
-		B561AF8A29422CEF001CA23F /* KymaTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTab.swift; sourceTree = "<group>"; };
-		B561AF8B29422CEF001CA23F /* KymaTabsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTabsItem.swift; sourceTree = "<group>"; };
-		B561AF8C29422CEF001CA23F /* KymaColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaColor.swift; sourceTree = "<group>"; };
-		B561AF8E29422CEF001CA23F /* KymaTooltipArrowAlign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTooltipArrowAlign.swift; sourceTree = "<group>"; };
-		B561AF8F29422CEF001CA23F /* KymaTooltipTriangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTooltipTriangle.swift; sourceTree = "<group>"; };
-		B561AF9029422CEF001CA23F /* KymaTooltipAlign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTooltipAlign.swift; sourceTree = "<group>"; };
-		B561AF9229422CEF001CA23F /* KymaRadioButtonState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaRadioButtonState.swift; sourceTree = "<group>"; };
-		B561AF9329422CEF001CA23F /* KymaRadioButtonSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaRadioButtonSize.swift; sourceTree = "<group>"; };
-		B561AF9429422CEF001CA23F /* KymaRadioButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaRadioButtonItem.swift; sourceTree = "<group>"; };
-		B561AF9529422CEF001CA23F /* KymaColorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaColorModel.swift; sourceTree = "<group>"; };
-		B561AF9729422CEF001CA23F /* KymaSegmentedControllButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaSegmentedControllButton.swift; sourceTree = "<group>"; };
-		B561AF9829422CEF001CA23F /* KymaSegmentedControllItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaSegmentedControllItem.swift; sourceTree = "<group>"; };
-		B561AF9A29422CEF001CA23F /* KymaColorSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaColorSettings.swift; sourceTree = "<group>"; };
-		B561AF9B29422CEF001CA23F /* KymaDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDate.swift; sourceTree = "<group>"; };
-		B561AF9C29422CEF001CA23F /* KymaDatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDatePickerCell.swift; sourceTree = "<group>"; };
-		B561AF9D29422CEF001CA23F /* KymaMonth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaMonth.swift; sourceTree = "<group>"; };
-		B561AF9E29422CEF001CA23F /* KymaDateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDateManager.swift; sourceTree = "<group>"; };
-		B561AF9F29422CEF001CA23F /* KymaWeekdayHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaWeekdayHeader.swift; sourceTree = "<group>"; };
-		B561AFA129422CEF001CA23F /* KymaDoughnutChartBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDoughnutChartBody.swift; sourceTree = "<group>"; };
-		B561AFA229422CEF001CA23F /* KymaBarDatasets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaBarDatasets.swift; sourceTree = "<group>"; };
-		B561AFA329422CEF001CA23F /* KymaLineDatasets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaLineDatasets.swift; sourceTree = "<group>"; };
-		B561AFA429422CEF001CA23F /* KymaLineChartBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaLineChartBody.swift; sourceTree = "<group>"; };
-		B561AFA529422CEF001CA23F /* KymaChartDataset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaChartDataset.swift; sourceTree = "<group>"; };
-		B561AFA629422CEF001CA23F /* KymaChartLineShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaChartLineShape.swift; sourceTree = "<group>"; };
-		B561AFA729422CEF001CA23F /* KymaChartPieItemShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaChartPieItemShape.swift; sourceTree = "<group>"; };
-		B561AFA829422CEF001CA23F /* KymaChartType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaChartType.swift; sourceTree = "<group>"; };
-		B561AFA929422CEF001CA23F /* KymaPieDatasets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaPieDatasets.swift; sourceTree = "<group>"; };
-		B561AFAA29422CEF001CA23F /* KymaDoughnutDatasets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDoughnutDatasets.swift; sourceTree = "<group>"; };
-		B561AFAB29422CEF001CA23F /* KymaBarChartBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaBarChartBody.swift; sourceTree = "<group>"; };
-		B561AFAC29422CEF001CA23F /* KymaPieChartBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaPieChartBody.swift; sourceTree = "<group>"; };
-		B561AFAE29422CEF001CA23F /* KymaChipSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaChipSize.swift; sourceTree = "<group>"; };
-		B561AFB029422CEF001CA23F /* KymaCheckboxSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaCheckboxSize.swift; sourceTree = "<group>"; };
-		B561AFB129422CEF001CA23F /* KymaCheckboxState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaCheckboxState.swift; sourceTree = "<group>"; };
-		B561AFB329422CEF001CA23F /* KymaTextFieldState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTextFieldState.swift; sourceTree = "<group>"; };
-		B561AFB529422CEF001CA23F /* KymaToggleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaToggleStyle.swift; sourceTree = "<group>"; };
-		B561AFB629422CEF001CA23F /* KymaToggleSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaToggleSize.swift; sourceTree = "<group>"; };
-		B561AFB829422CEF001CA23F /* KymaTextareaState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTextareaState.swift; sourceTree = "<group>"; };
-		B561AFBA29422CEF001CA23F /* KymaButtonSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaButtonSize.swift; sourceTree = "<group>"; };
-		B561AFBB29422CEF001CA23F /* KymaButtonType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaButtonType.swift; sourceTree = "<group>"; };
-		B561AFBC29422CEF001CA23F /* KymaButtonState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaButtonState.swift; sourceTree = "<group>"; };
-		B561AFBE29422CEF001CA23F /* KymaStepItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaStepItem.swift; sourceTree = "<group>"; };
-		B561AFBF29422CEF001CA23F /* KymaStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaStep.swift; sourceTree = "<group>"; };
-		B561AFC029422CEF001CA23F /* KymaStepsOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaStepsOrientation.swift; sourceTree = "<group>"; };
-		B561AFC129422CEF001CA23F /* KymaStepsItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaStepsItems.swift; sourceTree = "<group>"; };
-		B561AFC229422CEF001CA23F /* KymaStepsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaStepsState.swift; sourceTree = "<group>"; };
-		B561AFC429422CEF001CA23F /* KymaDividerStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDividerStyle.swift; sourceTree = "<group>"; };
-		B561AFC529422CEF001CA23F /* KymaDividerOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDividerOrientation.swift; sourceTree = "<group>"; };
-		B561AFC729422CEF001CA23F /* KymaUserAvatarSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaUserAvatarSize.swift; sourceTree = "<group>"; };
-		B561AFC829422CEF001CA23F /* KymaUserAvatarDecorationPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaUserAvatarDecorationPosition.swift; sourceTree = "<group>"; };
-		B561AFC929422CEF001CA23F /* KymaUserAvatarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaUserAvatarStyle.swift; sourceTree = "<group>"; };
-		B561AFCA29422CEF001CA23F /* KymaUserAvatarDecoration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaUserAvatarDecoration.swift; sourceTree = "<group>"; };
-		B561AFCC29422CEF001CA23F /* KymaNumberInputState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaNumberInputState.swift; sourceTree = "<group>"; };
-		B561AFCD29422CEF001CA23F /* KymaNumberInputControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaNumberInputControls.swift; sourceTree = "<group>"; };
-		B561AFCE29422CEF001CA23F /* KymaRoundedCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaRoundedCorner.swift; sourceTree = "<group>"; };
-		B561AFCF29422CEF001CA23F /* KymaChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaChart.swift; sourceTree = "<group>"; };
-		B561AFD029422CEF001CA23F /* KymaTextarea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTextarea.swift; sourceTree = "<group>"; };
-		B561AFD129422CEF001CA23F /* KymaSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaSlider.swift; sourceTree = "<group>"; };
-		B561AFD229422CEF001CA23F /* KymaTabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaTabs.swift; sourceTree = "<group>"; };
-		B561AFD329422CEF001CA23F /* KymaChip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaChip.swift; sourceTree = "<group>"; };
-		B561AFD429422CEF001CA23F /* KymaSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaSteps.swift; sourceTree = "<group>"; };
-		B561AFD529422CEF001CA23F /* KymaCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaCheckbox.swift; sourceTree = "<group>"; };
-		B561AFD729422CEF001CA23F /* TextExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextExtensions.swift; sourceTree = "<group>"; };
-		B561AFD829422CEF001CA23F /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
-		B561AFD929422CEF001CA23F /* OtherExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherExtensions.swift; sourceTree = "<group>"; };
-		B561AFDA29422CEF001CA23F /* KymaRangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaRangeSlider.swift; sourceTree = "<group>"; };
-		B561AFDB29422CEF001CA23F /* KymaDivider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaDivider.swift; sourceTree = "<group>"; };
-		B561AFDC29422CEF001CA23F /* KymaAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaAlert.swift; sourceTree = "<group>"; };
-		B561AFDD29422CEF001CA23F /* KymaRadioButtonGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaRadioButtonGroup.swift; sourceTree = "<group>"; };
-		B561AFDE29422CEF001CA23F /* KymaNumberInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KymaNumberInput.swift; sourceTree = "<group>"; };
 		B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHeaderTitle.swift; sourceTree = "<group>"; };
 		B564F7302799F73A00052CA3 /* RDBadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDBadgeButton.swift; sourceTree = "<group>"; };
 		B567575227A8EFE200381DD5 /* StringRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRowView.swift; sourceTree = "<group>"; };
@@ -538,7 +682,7 @@
 		B5C95E952936632700C9C8A7 /* Statistic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 		B5C95E962936632700C9C8A7 /* TennisOfficials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TennisOfficials.swift; sourceTree = "<group>"; };
 		B5C95E972936632700C9C8A7 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		B5C95E982936632700C9C8A7 /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		B5C95E982936632700C9C8A7 /* Sett.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sett.swift; sourceTree = "<group>"; };
 		B5C95E992936632700C9C8A7 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		B5C95E9A2936632700C9C8A7 /* RoundItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundItem.swift; sourceTree = "<group>"; };
 		B5C95E9B2936632700C9C8A7 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -672,7 +816,12 @@
 		764A60C725B90E5500789373 /* Tennis */ = {
 			isa = PBXGroup;
 			children = (
-				B561AF7D29422CEF001CA23F /* KymaUIKit */,
+				B5300532294287D000184795 /* NunitoSans */,
+				B530052E29427DCE00184795 /* XCAssets+Generated.swift */,
+				B530047B2942677400184795 /* XelaUIKit */,
+				B530040A2942670200184795 /* XelaBlocks */,
+				B530041F2942670200184795 /* XelaComponents */,
+				B53004392942670200184795 /* XelaTemplates */,
 				764A60C825B90E5600789373 /* TennisApp.swift */,
 				76DB132825CEDAD9003EDA38 /* Models.swift */,
 				9FA0978525CFAF320039A73E /* Extensions.swift */,
@@ -770,6 +919,7 @@
 				764A611A25B91C7300789373 /* LoginVM.swift */,
 				764A618225B9493F00789373 /* RegisterVM.swift */,
 				76183EE1260ED38D00189619 /* ResetPasswordVM.swift */,
+				B530052C29426F5C00184795 /* NewLoginView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -780,7 +930,7 @@
 				B5C95E822936632500C9C8A7 /* Game.swift */,
 				B5C95E7D2936632500C9C8A7 /* MatchUp.swift */,
 				B5C95E8D2936632600C9C8A7 /* Point.swift */,
-				B5C95E982936632700C9C8A7 /* Set.swift */,
+				B5C95E982936632700C9C8A7 /* Sett.swift */,
 				B5C95E8E2936632600C9C8A7 /* Shot.swift */,
 			);
 			path = Match;
@@ -852,6 +1002,334 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		B530040A2942670200184795 /* XelaBlocks */ = {
+			isa = PBXGroup;
+			children = (
+				B530040B2942670200184795 /* UsersList2Block.swift */,
+				B530040C2942670200184795 /* SocialMediaCardsBlock.swift */,
+				B530040D2942670200184795 /* Form3Block.swift */,
+				B530040E2942670200184795 /* Sidebar2Block.swift */,
+				B530040F2942670200184795 /* Form4Block.swift */,
+				B53004102942670200184795 /* Cryptocurrency2Block.swift */,
+				B53004112942670200184795 /* EcommerceCardsBlock.swift */,
+				B53004122942670200184795 /* Filter2Block.swift */,
+				B53004132942670200184795 /* MusicApp2Block.swift */,
+				B53004142942670200184795 /* Form1Block.swift */,
+				B53004152942670200184795 /* Filter1Block.swift */,
+				B53004162942670200184795 /* Form2Block.swift */,
+				B53004172942670200184795 /* MusicApp1Block.swift */,
+				B53004182942670200184795 /* Cryptocurrency1Block.swift */,
+				B53004192942670200184795 /* Sidebar1Block.swift */,
+				B530041A2942670200184795 /* UsersList3Block.swift */,
+				B530041B2942670200184795 /* MusicApp3Block.swift */,
+				B530041C2942670200184795 /* Sidebar3Block.swift */,
+				B530041D2942670200184795 /* UsersList1Block.swift */,
+				B530041E2942670200184795 /* Cryptocurrency3Block.swift */,
+			);
+			path = XelaBlocks;
+			sourceTree = "<group>";
+		};
+		B530041F2942670200184795 /* XelaComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B53004202942670200184795 /* SliderInputComponent.swift */,
+				B53004212942670200184795 /* TextareaComponent.swift */,
+				B53004222942670200184795 /* ColorsComponent.swift */,
+				B53004232942670200184795 /* TextInputComponent.swift */,
+				B53004242942670200184795 /* ButtonsComponent.swift */,
+				B53004252942670200184795 /* SegmentedControllComponent.swift */,
+				B53004262942670200184795 /* NumberInputComponent.swift */,
+				B53004272942670200184795 /* DialogsComponent.swift */,
+				B53004282942670200184795 /* ToggleComponent.swift */,
+				B53004292942670200184795 /* TabsComponent.swift */,
+				B530042A2942670200184795 /* UserAvatarComponent.swift */,
+				B530042B2942670200184795 /* ChipsComponent.swift */,
+				B530042C2942670200184795 /* CheckboxComponent.swift */,
+				B530042D2942670200184795 /* ToastComponent.swift */,
+				B530042E2942670200184795 /* StepsComponent.swift */,
+				B530042F2942670200184795 /* ChartsComponent.swift */,
+				B53004302942670200184795 /* AlertComponent.swift */,
+				B53004312942670200184795 /* RangeSliderInputComponent.swift */,
+				B53004322942670200184795 /* BadgeComponent.swift */,
+				B53004332942670200184795 /* DividerComponent.swift */,
+				B53004342942670200184795 /* TooltipsComponent.swift */,
+				B53004352942670200184795 /* DatePickerComponent.swift */,
+				B53004362942670200184795 /* RadioButtonComponent.swift */,
+				B53004372942670200184795 /* TypographyComponent.swift */,
+				B53004382942670200184795 /* AccordionComponent.swift */,
+			);
+			path = XelaComponents;
+			sourceTree = "<group>";
+		};
+		B53004392942670200184795 /* XelaTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				B530043A2942670200184795 /* CheckoutTemplate.swift */,
+				B530043B2942670200184795 /* MusicServiceTemplate.swift */,
+				B530043C2942670200184795 /* SocialTemplate.swift */,
+				B530043D2942670200184795 /* TaskManagerTemplate.swift */,
+				B530043E2942670200184795 /* MailboxTemplate.swift */,
+				B530043F2942670200184795 /* AnaliticsTemplate.swift */,
+				B53004402942670200184795 /* JobSearchTemplate.swift */,
+				B53004412942670200184795 /* DataTableTemplate.swift */,
+				B53004422942670200184795 /* EcommerceTemplate.swift */,
+				B53004432942670200184795 /* TasksProjectsTemplate.swift */,
+			);
+			path = XelaTemplates;
+			sourceTree = "<group>";
+		};
+		B530047B2942677400184795 /* XelaUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B530047C2942677500184795 /* XelaTextField.swift */,
+				B530047D2942677500184795 /* XelaAccordion.swift */,
+				B530047E2942677500184795 /* XelaSteps.swift */,
+				B530047F2942677500184795 /* XelaCheckbox.swift */,
+				B53004802942677500184795 /* XelaAlert.swift */,
+				B53004812942677500184795 /* Models */,
+				B53004C82942677500184795 /* XelaTooltip.swift */,
+				B53004C92942677500184795 /* XelaBadge.swift */,
+				B53004CA2942677500184795 /* XelaRangeSlider.swift */,
+				B53004CB2942677500184795 /* XelaDivider.swift */,
+				B53004CC2942677500184795 /* XelaToast.swift */,
+				B53004CD2942677500184795 /* Extentions */,
+				B53004D12942677500184795 /* XelaNumberInput.swift */,
+				B53004D22942677500184795 /* XelaUserAvatar.swift */,
+				B53004D32942677500184795 /* XelaDatePicker.swift */,
+				B53004D42942677600184795 /* XelaButton.swift */,
+				B53004D52942677600184795 /* XelaDialog.swift */,
+				B53004D62942677600184795 /* XelaRadioButtonGroup.swift */,
+				B53004D72942677600184795 /* XelaChart.swift */,
+				B53004D82942677600184795 /* XelaChip.swift */,
+				B53004D92942677600184795 /* XelaTextarea.swift */,
+				B53004DA2942677600184795 /* XelaSlider.swift */,
+				B53004DB2942677600184795 /* XelaTabs.swift */,
+				B53004DC2942677600184795 /* XelaSegmentedControll.swift */,
+			);
+			path = XelaUIKit;
+			sourceTree = "<group>";
+		};
+		B53004812942677500184795 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B53004822942677500184795 /* Tabs */,
+				B53004852942677500184795 /* Tooltip */,
+				B53004892942677500184795 /* RadioButton */,
+				B530048D2942677500184795 /* XelaRoundedCorner.swift */,
+				B530048E2942677500184795 /* SegmentedControll */,
+				B53004912942677500184795 /* DatePicker */,
+				B53004982942677500184795 /* Chart */,
+				B53004A52942677500184795 /* Chip */,
+				B53004A72942677500184795 /* Checkbox */,
+				B53004AA2942677500184795 /* TextField */,
+				B53004AC2942677500184795 /* Toggle */,
+				B53004AF2942677500184795 /* Textarea */,
+				B53004B12942677500184795 /* Button */,
+				B53004B52942677500184795 /* Steps */,
+				B53004BB2942677500184795 /* Divider */,
+				B53004BE2942677500184795 /* UserAvatar */,
+				B53004C32942677500184795 /* XelaColor.swift */,
+				B53004C42942677500184795 /* NumberInput */,
+				B53004C72942677500184795 /* XelaColorModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B53004822942677500184795 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				B53004832942677500184795 /* XelaTab.swift */,
+				B53004842942677500184795 /* XelaTabsItem.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		B53004852942677500184795 /* Tooltip */ = {
+			isa = PBXGroup;
+			children = (
+				B53004862942677500184795 /* XelaTooltipAlign.swift */,
+				B53004872942677500184795 /* XelaTooltipArrowAlign.swift */,
+				B53004882942677500184795 /* XelaTooltipTriangle.swift */,
+			);
+			path = Tooltip;
+			sourceTree = "<group>";
+		};
+		B53004892942677500184795 /* RadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				B530048A2942677500184795 /* XelaRadioButtonState.swift */,
+				B530048B2942677500184795 /* XelaRadioButtonItem.swift */,
+				B530048C2942677500184795 /* XelaRadioButtonSize.swift */,
+			);
+			path = RadioButton;
+			sourceTree = "<group>";
+		};
+		B530048E2942677500184795 /* SegmentedControll */ = {
+			isa = PBXGroup;
+			children = (
+				B530048F2942677500184795 /* XelaSegmentedControllItem.swift */,
+				B53004902942677500184795 /* XelaSegmentedControllButton.swift */,
+			);
+			path = SegmentedControll;
+			sourceTree = "<group>";
+		};
+		B53004912942677500184795 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				B53004922942677500184795 /* XelaDatePickerCell.swift */,
+				B53004932942677500184795 /* XelaDateManager.swift */,
+				B53004942942677500184795 /* XelaWeekdayHeader.swift */,
+				B53004952942677500184795 /* XelaDate.swift */,
+				B53004962942677500184795 /* XelaColorSettings.swift */,
+				B53004972942677500184795 /* XelaMonth.swift */,
+			);
+			path = DatePicker;
+			sourceTree = "<group>";
+		};
+		B53004982942677500184795 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				B53004992942677500184795 /* XelaLineDatasets.swift */,
+				B530049A2942677500184795 /* XelaChartDataset.swift */,
+				B530049B2942677500184795 /* XelaChartLineShape.swift */,
+				B530049C2942677500184795 /* XelaBarDatasets.swift */,
+				B530049D2942677500184795 /* XelaPieDatasets.swift */,
+				B530049E2942677500184795 /* XelaDoughnutChartBody.swift */,
+				B530049F2942677500184795 /* XelaBarChartBody.swift */,
+				B53004A02942677500184795 /* XelaChartPieItemShape.swift */,
+				B53004A12942677500184795 /* XelaChartType.swift */,
+				B53004A22942677500184795 /* XelaDoughnutDatasets.swift */,
+				B53004A32942677500184795 /* XelaLineChartBody.swift */,
+				B53004A42942677500184795 /* XelaPieChartBody.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		B53004A52942677500184795 /* Chip */ = {
+			isa = PBXGroup;
+			children = (
+				B53004A62942677500184795 /* XelaChipSize.swift */,
+			);
+			path = Chip;
+			sourceTree = "<group>";
+		};
+		B53004A72942677500184795 /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				B53004A82942677500184795 /* XelaCheckboxSize.swift */,
+				B53004A92942677500184795 /* XelaCheckboxState.swift */,
+			);
+			path = Checkbox;
+			sourceTree = "<group>";
+		};
+		B53004AA2942677500184795 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				B53004AB2942677500184795 /* XelaTextFieldState.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		B53004AC2942677500184795 /* Toggle */ = {
+			isa = PBXGroup;
+			children = (
+				B53004AD2942677500184795 /* XelaToggleStyle.swift */,
+				B53004AE2942677500184795 /* XelaToggleSize.swift */,
+			);
+			path = Toggle;
+			sourceTree = "<group>";
+		};
+		B53004AF2942677500184795 /* Textarea */ = {
+			isa = PBXGroup;
+			children = (
+				B53004B02942677500184795 /* XelaTextareaState.swift */,
+			);
+			path = Textarea;
+			sourceTree = "<group>";
+		};
+		B53004B12942677500184795 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				B53004B22942677500184795 /* XelaButtonType.swift */,
+				B53004B32942677500184795 /* XelaButtonState.swift */,
+				B53004B42942677500184795 /* XelaButtonSize.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		B53004B52942677500184795 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				B53004B62942677500184795 /* XelaStep.swift */,
+				B53004B72942677500184795 /* XelaStepsItems.swift */,
+				B53004B82942677500184795 /* XelaStepsState.swift */,
+				B53004B92942677500184795 /* XelaStepsOrientation.swift */,
+				B53004BA2942677500184795 /* XelaStepItem.swift */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
+		B53004BB2942677500184795 /* Divider */ = {
+			isa = PBXGroup;
+			children = (
+				B53004BC2942677500184795 /* XelaDividerStyle.swift */,
+				B53004BD2942677500184795 /* XelaDividerOrientation.swift */,
+			);
+			path = Divider;
+			sourceTree = "<group>";
+		};
+		B53004BE2942677500184795 /* UserAvatar */ = {
+			isa = PBXGroup;
+			children = (
+				B53004BF2942677500184795 /* XelaUserAvatarDecoration.swift */,
+				B53004C02942677500184795 /* XelaUserAvatarStyle.swift */,
+				B53004C12942677500184795 /* XelaUserAvatarSize.swift */,
+				B53004C22942677500184795 /* XelaUserAvatarDecorationPosition.swift */,
+			);
+			path = UserAvatar;
+			sourceTree = "<group>";
+		};
+		B53004C42942677500184795 /* NumberInput */ = {
+			isa = PBXGroup;
+			children = (
+				B53004C52942677500184795 /* XelaNumberInputState.swift */,
+				B53004C62942677500184795 /* XelaNumberInputControls.swift */,
+			);
+			path = NumberInput;
+			sourceTree = "<group>";
+		};
+		B53004CD2942677500184795 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				B53004CE2942677500184795 /* TextExtensions.swift */,
+				B53004CF2942677500184795 /* ColorExtensions.swift */,
+				B53004D02942677500184795 /* OtherExtensions.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		B5300532294287D000184795 /* NunitoSans */ = {
+			isa = PBXGroup;
+			children = (
+				B5300533294287D000184795 /* NunitoSans-LightItalic.ttf */,
+				B5300534294287D000184795 /* NunitoSans-BoldItalic.ttf */,
+				B5300535294287D000184795 /* NunitoSans-ExtraLight.ttf */,
+				B5300536294287D000184795 /* NunitoSans-Light.ttf */,
+				B5300537294287D000184795 /* NunitoSans-BlackItalic.ttf */,
+				B5300538294287D000184795 /* NunitoSans-ExtraBold.ttf */,
+				B5300539294287D000184795 /* NunitoSans-Regular.ttf */,
+				B530053A294287D000184795 /* NunitoSans-SemiBoldItalic.ttf */,
+				B530053B294287D000184795 /* NunitoSans-Italic.ttf */,
+				B530053C294287D000184795 /* OFL.txt */,
+				B530053D294287D000184795 /* NunitoSans-Bold.ttf */,
+				B530053E294287D000184795 /* NunitoSans-SemiBold.ttf */,
+				B530053F294287D000184795 /* NunitoSans-Black.ttf */,
+				B5300540294287D000184795 /* NunitoSans-ExtraBoldItalic.ttf */,
+				B5300541294287D000184795 /* NunitoSans-ExtraLightItalic.ttf */,
+			);
+			path = NunitoSans;
+			sourceTree = "<group>";
+		};
 		B54D40662791340800F36EE1 /* RDComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -864,236 +1342,6 @@
 				B5A239A727F5538500D7A9FE /* RDEmptyListPlaceholder.swift */,
 			);
 			path = RDComponents;
-			sourceTree = "<group>";
-		};
-		B561AF7D29422CEF001CA23F /* KymaUIKit */ = {
-			isa = PBXGroup;
-			children = (
-				B561AF8529422CEF001CA23F /* KymaAccordion.swift */,
-				B561AFDC29422CEF001CA23F /* KymaAlert.swift */,
-				B561AF8129422CEF001CA23F /* KymaBadge.swift */,
-				B561AF8229422CEF001CA23F /* KymaButton.swift */,
-				B561AFCF29422CEF001CA23F /* KymaChart.swift */,
-				B561AFD529422CEF001CA23F /* KymaCheckbox.swift */,
-				B561AFD329422CEF001CA23F /* KymaChip.swift */,
-				B561AF8029422CEF001CA23F /* KymaDatePicker.swift */,
-				B561AF8329422CEF001CA23F /* KymaDialog.swift */,
-				B561AFDB29422CEF001CA23F /* KymaDivider.swift */,
-				B561AFDE29422CEF001CA23F /* KymaNumberInput.swift */,
-				B561AFDD29422CEF001CA23F /* KymaRadioButtonGroup.swift */,
-				B561AFDA29422CEF001CA23F /* KymaRangeSlider.swift */,
-				B561AF8629422CEF001CA23F /* KymaSegmentedControll.swift */,
-				B561AFD129422CEF001CA23F /* KymaSlider.swift */,
-				B561AFD429422CEF001CA23F /* KymaSteps.swift */,
-				B561AFD229422CEF001CA23F /* KymaTabs.swift */,
-				B561AFD029422CEF001CA23F /* KymaTextarea.swift */,
-				B561AF8729422CEF001CA23F /* KymaTextField.swift */,
-				B561AF7E29422CEF001CA23F /* KymaToast.swift */,
-				B561AF8429422CEF001CA23F /* KymaTooltip.swift */,
-				B561AF7F29422CEF001CA23F /* KymaUserAvatar.swift */,
-				B561AFD629422CEF001CA23F /* Extentions */,
-				B561AF8829422CEF001CA23F /* Models */,
-			);
-			path = KymaUIKit;
-			sourceTree = "<group>";
-		};
-		B561AF8829422CEF001CA23F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				B561AF8C29422CEF001CA23F /* KymaColor.swift */,
-				B561AF9529422CEF001CA23F /* KymaColorModel.swift */,
-				B561AFCE29422CEF001CA23F /* KymaRoundedCorner.swift */,
-				B561AFB929422CEF001CA23F /* Button */,
-				B561AFA029422CEF001CA23F /* Chart */,
-				B561AFAF29422CEF001CA23F /* Checkbox */,
-				B561AFAD29422CEF001CA23F /* Chip */,
-				B561AF9929422CEF001CA23F /* DatePicker */,
-				B561AFC329422CEF001CA23F /* Divider */,
-				B561AFCB29422CEF001CA23F /* NumberInput */,
-				B561AF9129422CEF001CA23F /* RadioButton */,
-				B561AF9629422CEF001CA23F /* SegmentedControll */,
-				B561AFBD29422CEF001CA23F /* Steps */,
-				B561AF8929422CEF001CA23F /* Tabs */,
-				B561AFB729422CEF001CA23F /* Textarea */,
-				B561AFB229422CEF001CA23F /* TextField */,
-				B561AF8D29422CEF001CA23F /* Tooltip */,
-				B561AFB429422CEF001CA23F /* Toggle */,
-				B561AFC629422CEF001CA23F /* UserAvatar */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		B561AF8929422CEF001CA23F /* Tabs */ = {
-			isa = PBXGroup;
-			children = (
-				B561AF8A29422CEF001CA23F /* KymaTab.swift */,
-				B561AF8B29422CEF001CA23F /* KymaTabsItem.swift */,
-			);
-			path = Tabs;
-			sourceTree = "<group>";
-		};
-		B561AF8D29422CEF001CA23F /* Tooltip */ = {
-			isa = PBXGroup;
-			children = (
-				B561AF8E29422CEF001CA23F /* KymaTooltipArrowAlign.swift */,
-				B561AF8F29422CEF001CA23F /* KymaTooltipTriangle.swift */,
-				B561AF9029422CEF001CA23F /* KymaTooltipAlign.swift */,
-			);
-			path = Tooltip;
-			sourceTree = "<group>";
-		};
-		B561AF9129422CEF001CA23F /* RadioButton */ = {
-			isa = PBXGroup;
-			children = (
-				B561AF9229422CEF001CA23F /* KymaRadioButtonState.swift */,
-				B561AF9329422CEF001CA23F /* KymaRadioButtonSize.swift */,
-				B561AF9429422CEF001CA23F /* KymaRadioButtonItem.swift */,
-			);
-			path = RadioButton;
-			sourceTree = "<group>";
-		};
-		B561AF9629422CEF001CA23F /* SegmentedControll */ = {
-			isa = PBXGroup;
-			children = (
-				B561AF9729422CEF001CA23F /* KymaSegmentedControllButton.swift */,
-				B561AF9829422CEF001CA23F /* KymaSegmentedControllItem.swift */,
-			);
-			path = SegmentedControll;
-			sourceTree = "<group>";
-		};
-		B561AF9929422CEF001CA23F /* DatePicker */ = {
-			isa = PBXGroup;
-			children = (
-				B561AF9A29422CEF001CA23F /* KymaColorSettings.swift */,
-				B561AF9B29422CEF001CA23F /* KymaDate.swift */,
-				B561AF9C29422CEF001CA23F /* KymaDatePickerCell.swift */,
-				B561AF9D29422CEF001CA23F /* KymaMonth.swift */,
-				B561AF9E29422CEF001CA23F /* KymaDateManager.swift */,
-				B561AF9F29422CEF001CA23F /* KymaWeekdayHeader.swift */,
-			);
-			path = DatePicker;
-			sourceTree = "<group>";
-		};
-		B561AFA029422CEF001CA23F /* Chart */ = {
-			isa = PBXGroup;
-			children = (
-				B561AFA129422CEF001CA23F /* KymaDoughnutChartBody.swift */,
-				B561AFA229422CEF001CA23F /* KymaBarDatasets.swift */,
-				B561AFA329422CEF001CA23F /* KymaLineDatasets.swift */,
-				B561AFA429422CEF001CA23F /* KymaLineChartBody.swift */,
-				B561AFA529422CEF001CA23F /* KymaChartDataset.swift */,
-				B561AFA629422CEF001CA23F /* KymaChartLineShape.swift */,
-				B561AFA729422CEF001CA23F /* KymaChartPieItemShape.swift */,
-				B561AFA829422CEF001CA23F /* KymaChartType.swift */,
-				B561AFA929422CEF001CA23F /* KymaPieDatasets.swift */,
-				B561AFAA29422CEF001CA23F /* KymaDoughnutDatasets.swift */,
-				B561AFAB29422CEF001CA23F /* KymaBarChartBody.swift */,
-				B561AFAC29422CEF001CA23F /* KymaPieChartBody.swift */,
-			);
-			path = Chart;
-			sourceTree = "<group>";
-		};
-		B561AFAD29422CEF001CA23F /* Chip */ = {
-			isa = PBXGroup;
-			children = (
-				B561AFAE29422CEF001CA23F /* KymaChipSize.swift */,
-			);
-			path = Chip;
-			sourceTree = "<group>";
-		};
-		B561AFAF29422CEF001CA23F /* Checkbox */ = {
-			isa = PBXGroup;
-			children = (
-				B561AFB029422CEF001CA23F /* KymaCheckboxSize.swift */,
-				B561AFB129422CEF001CA23F /* KymaCheckboxState.swift */,
-			);
-			path = Checkbox;
-			sourceTree = "<group>";
-		};
-		B561AFB229422CEF001CA23F /* TextField */ = {
-			isa = PBXGroup;
-			children = (
-				B561AFB329422CEF001CA23F /* KymaTextFieldState.swift */,
-			);
-			path = TextField;
-			sourceTree = "<group>";
-		};
-		B561AFB429422CEF001CA23F /* Toggle */ = {
-			isa = PBXGroup;
-			children = (
-				B561AFB529422CEF001CA23F /* KymaToggleStyle.swift */,
-				B561AFB629422CEF001CA23F /* KymaToggleSize.swift */,
-			);
-			path = Toggle;
-			sourceTree = "<group>";
-		};
-		B561AFB729422CEF001CA23F /* Textarea */ = {
-			isa = PBXGroup;
-			children = (
-				B561AFB829422CEF001CA23F /* KymaTextareaState.swift */,
-			);
-			path = Textarea;
-			sourceTree = "<group>";
-		};
-		B561AFB929422CEF001CA23F /* Button */ = {
-			isa = PBXGroup;
-			children = (
-				B561AFBA29422CEF001CA23F /* KymaButtonSize.swift */,
-				B561AFBB29422CEF001CA23F /* KymaButtonType.swift */,
-				B561AFBC29422CEF001CA23F /* KymaButtonState.swift */,
-			);
-			path = Button;
-			sourceTree = "<group>";
-		};
-		B561AFBD29422CEF001CA23F /* Steps */ = {
-			isa = PBXGroup;
-			children = (
-				B561AFBE29422CEF001CA23F /* KymaStepItem.swift */,
-				B561AFBF29422CEF001CA23F /* KymaStep.swift */,
-				B561AFC029422CEF001CA23F /* KymaStepsOrientation.swift */,
-				B561AFC129422CEF001CA23F /* KymaStepsItems.swift */,
-				B561AFC229422CEF001CA23F /* KymaStepsState.swift */,
-			);
-			path = Steps;
-			sourceTree = "<group>";
-		};
-		B561AFC329422CEF001CA23F /* Divider */ = {
-			isa = PBXGroup;
-			children = (
-				B561AFC429422CEF001CA23F /* KymaDividerStyle.swift */,
-				B561AFC529422CEF001CA23F /* KymaDividerOrientation.swift */,
-			);
-			path = Divider;
-			sourceTree = "<group>";
-		};
-		B561AFC629422CEF001CA23F /* UserAvatar */ = {
-			isa = PBXGroup;
-			children = (
-				B561AFC729422CEF001CA23F /* KymaUserAvatarSize.swift */,
-				B561AFC829422CEF001CA23F /* KymaUserAvatarDecorationPosition.swift */,
-				B561AFC929422CEF001CA23F /* KymaUserAvatarStyle.swift */,
-				B561AFCA29422CEF001CA23F /* KymaUserAvatarDecoration.swift */,
-			);
-			path = UserAvatar;
-			sourceTree = "<group>";
-		};
-		B561AFCB29422CEF001CA23F /* NumberInput */ = {
-			isa = PBXGroup;
-			children = (
-				B561AFCC29422CEF001CA23F /* KymaNumberInputState.swift */,
-				B561AFCD29422CEF001CA23F /* KymaNumberInputControls.swift */,
-			);
-			path = NumberInput;
-			sourceTree = "<group>";
-		};
-		B561AFD629422CEF001CA23F /* Extentions */ = {
-			isa = PBXGroup;
-			children = (
-				B561AFD829422CEF001CA23F /* ColorExtensions.swift */,
-				B561AFD929422CEF001CA23F /* OtherExtensions.swift */,
-				B561AFD729422CEF001CA23F /* TextExtensions.swift */,
-			);
-			path = Extentions;
 			sourceTree = "<group>";
 		};
 		B58917DA25CF26E1001BFA0E /* Friends */ = {
@@ -1447,9 +1695,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B530054D294287D100184795 /* NunitoSans-SemiBold.ttf in Resources */,
+				B5300546294287D100184795 /* NunitoSans-BlackItalic.ttf in Resources */,
+				B530054F294287D100184795 /* NunitoSans-ExtraBoldItalic.ttf in Resources */,
+				B530054C294287D100184795 /* NunitoSans-Bold.ttf in Resources */,
+				B5300549294287D100184795 /* NunitoSans-SemiBoldItalic.ttf in Resources */,
+				B5300547294287D100184795 /* NunitoSans-ExtraBold.ttf in Resources */,
+				B5300543294287D100184795 /* NunitoSans-BoldItalic.ttf in Resources */,
 				764A60D025B90E5600789373 /* Preview Assets.xcassets in Resources */,
+				B5300545294287D100184795 /* NunitoSans-Light.ttf in Resources */,
+				B530054A294287D100184795 /* NunitoSans-Italic.ttf in Resources */,
+				B5300544294287D100184795 /* NunitoSans-ExtraLight.ttf in Resources */,
+				B530054B294287D100184795 /* OFL.txt in Resources */,
 				764A60CD25B90E5600789373 /* Assets.xcassets in Resources */,
+				B530054E294287D100184795 /* NunitoSans-Black.ttf in Resources */,
+				B5300548294287D100184795 /* NunitoSans-Regular.ttf in Resources */,
 				B5EFB4ED27E9D745004180E6 /* GoogleService-Info.plist in Resources */,
+				B5300550294287D100184795 /* NunitoSans-ExtraLightItalic.ttf in Resources */,
+				B5300542294287D100184795 /* NunitoSans-LightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1505,212 +1768,269 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B561AFE329422CEF001CA23F /* KymaButton.swift in Sources */,
+				B53004F32942677600184795 /* XelaLineDatasets.swift in Sources */,
+				B53004F62942677600184795 /* XelaBarDatasets.swift in Sources */,
+				B53004FE2942677600184795 /* XelaPieChartBody.swift in Sources */,
+				B53004582942670300184795 /* SliderInputComponent.swift in Sources */,
 				B513A39B26A038BD00145D2D /* MatchVM.swift in Sources */,
+				B530051B2942677600184795 /* XelaDivider.swift in Sources */,
 				B5A239B027F7036400D7A9FE /* BaseViewVM.swift in Sources */,
 				B5132A62293A1FE900C2E396 /* ShotDetail.swift in Sources */,
 				B5132A60293A1E3800C2E396 /* RankingType.swift in Sources */,
 				76AADBA625C64F6A00EB0C43 /* PlayerSearchView.swift in Sources */,
+				B530046F2942670300184795 /* TypographyComponent.swift in Sources */,
 				B5EA4D812940777F0015D379 /* StringEntries.swift in Sources */,
-				B561B00829422CEF001CA23F /* KymaCheckboxSize.swift in Sources */,
-				B561B02529422CEF001CA23F /* KymaCheckbox.swift in Sources */,
-				B561B01129422CEF001CA23F /* KymaStepItem.swift in Sources */,
 				B5C95EB02936632700C9C8A7 /* ScheduleItem.swift in Sources */,
 				B5C95EAC2936632700C9C8A7 /* Draw.swift in Sources */,
-				B561B02429422CEF001CA23F /* KymaSteps.swift in Sources */,
 				76183EE2260ED38D00189619 /* ResetPasswordVM.swift in Sources */,
 				B5C95EBE2936632700C9C8A7 /* Statistic.swift in Sources */,
-				B561AFE529422CEF001CA23F /* KymaTooltip.swift in Sources */,
 				B5C95EA32936632700C9C8A7 /* Venue.swift in Sources */,
-				B561AFFB29422CEF001CA23F /* KymaDoughnutChartBody.swift in Sources */,
-				B561B00129422CEF001CA23F /* KymaChartPieItemShape.swift in Sources */,
 				B5D1F76527AA0C140091AC2F /* SideMenuView.swift in Sources */,
+				B53004E32942677600184795 /* XelaTabsItem.swift in Sources */,
 				B5BDA1D8293A11710048B727 /* DrawStatus.swift in Sources */,
 				B5C95EB62936632700C9C8A7 /* Point.swift in Sources */,
+				B530045F2942670300184795 /* DialogsComponent.swift in Sources */,
 				B5C95EA62936632700C9C8A7 /* MatchUp.swift in Sources */,
-				B561AFEC29422CEF001CA23F /* KymaTooltipArrowAlign.swift in Sources */,
+				B53005212942677600184795 /* XelaUserAvatar.swift in Sources */,
 				B5C95EBB2936632700C9C8A7 /* OnlineProfile.swift in Sources */,
 				9FA0978625CFAF320039A73E /* Extensions.swift in Sources */,
-				B561B01B29422CEF001CA23F /* KymaUserAvatarDecoration.swift in Sources */,
-				B561AFF429422CEF001CA23F /* KymaSegmentedControllItem.swift in Sources */,
 				B5132A5A293A1A5000C2E396 /* ParticipantStatus.swift in Sources */,
+				B530045B2942670300184795 /* TextInputComponent.swift in Sources */,
+				B53004F52942677600184795 /* XelaChartLineShape.swift in Sources */,
 				B5C95EA12936632700C9C8A7 /* TournamentGroup.swift in Sources */,
+				B53005082942677600184795 /* XelaButtonSize.swift in Sources */,
 				7662D40225C39DBE004544BF /* BasicMatchScoringView.swift in Sources */,
 				B5BDA1BE293A0A060048B727 /* DrawStructure.swift in Sources */,
-				B561B02D29422CEF001CA23F /* KymaNumberInput.swift in Sources */,
 				B5C95EC22936632700C9C8A7 /* Extension.swift in Sources */,
+				B53005262942677600184795 /* XelaChart.swift in Sources */,
+				B53004E22942677600184795 /* XelaTab.swift in Sources */,
 				76278C1F25B9E8060005EBD4 /* NewUserView.swift in Sources */,
-				B561B01229422CEF001CA23F /* KymaStep.swift in Sources */,
+				B53004772942670300184795 /* JobSearchTemplate.swift in Sources */,
 				7662D3F525C391A1004544BF /* NewMatchView.swift in Sources */,
+				B53004592942670300184795 /* TextareaComponent.swift in Sources */,
+				B53004542942670300184795 /* MusicApp3Block.swift in Sources */,
+				B53004E52942677600184795 /* XelaTooltipArrowAlign.swift in Sources */,
+				B530045C2942670300184795 /* ButtonsComponent.swift in Sources */,
+				B53005002942677600184795 /* XelaCheckboxSize.swift in Sources */,
+				B53004682942670300184795 /* AlertComponent.swift in Sources */,
 				B513A39D26A0390600145D2D /* ClubsView.swift in Sources */,
+				B53004EF2942677600184795 /* XelaWeekdayHeader.swift in Sources */,
 				B5B22A3526A6DECA002CAA61 /* ProfileSettings.swift in Sources */,
+				B530051A2942677600184795 /* XelaRangeSlider.swift in Sources */,
+				B530050A2942677600184795 /* XelaStepsItems.swift in Sources */,
 				B5132A70293A244500C2E396 /* TournamentLevel.swift in Sources */,
+				B53004E12942677600184795 /* XelaAlert.swift in Sources */,
+				B53004E92942677600184795 /* XelaRadioButtonSize.swift in Sources */,
 				B564F7312799F73A00052CA3 /* RDBadgeButton.swift in Sources */,
+				B53005042942677600184795 /* XelaToggleSize.swift in Sources */,
+				B530044F2942670300184795 /* Form2Block.swift in Sources */,
+				B530051C2942677600184795 /* XelaToast.swift in Sources */,
 				B5BDA1BC293A097C0048B727 /* ContactType.swift in Sources */,
 				B5BDA1E0293A15D30048B727 /* MatchUpType.swift in Sources */,
-				B561B01D29422CEF001CA23F /* KymaNumberInputControls.swift in Sources */,
+				B530052B2942677700184795 /* XelaSegmentedControll.swift in Sources */,
+				B53005182942677600184795 /* XelaTooltip.swift in Sources */,
+				B53004F82942677600184795 /* XelaDoughnutChartBody.swift in Sources */,
+				B53004612942670300184795 /* TabsComponent.swift in Sources */,
 				B5132A6C293A237900C2E396 /* StageType.swift in Sources */,
-				B561B02B29422CEF001CA23F /* KymaAlert.swift in Sources */,
 				B59E2DE727F4DF4600CB6B27 /* PlayerSearchCellView.swift in Sources */,
-				B561AFF929422CEF001CA23F /* KymaDateManager.swift in Sources */,
-				B561B02329422CEF001CA23F /* KymaChip.swift in Sources */,
-				B561AFFF29422CEF001CA23F /* KymaChartDataset.swift in Sources */,
+				B53004442942670300184795 /* UsersList2Block.swift in Sources */,
+				B53004ED2942677600184795 /* XelaDatePickerCell.swift in Sources */,
+				B53004572942670300184795 /* Cryptocurrency3Block.swift in Sources */,
+				B53005112942677600184795 /* XelaUserAvatarStyle.swift in Sources */,
+				B53005052942677600184795 /* XelaTextareaState.swift in Sources */,
 				B5BDA1E4293A177C0048B727 /* StartType.swift in Sources */,
 				B5132A66293A213000C2E396 /* ShotMadeFrom.swift in Sources */,
 				B5C95EBF2936632700C9C8A7 /* TennisOfficials.swift in Sources */,
-				B561AFEF29422CEF001CA23F /* KymaRadioButtonState.swift in Sources */,
+				B53004552942670300184795 /* Sidebar3Block.swift in Sources */,
+				B53004EE2942677600184795 /* XelaDateManager.swift in Sources */,
 				B5BDA1DC293A13C80048B727 /* WheelchairClass.swift in Sources */,
+				B530052A2942677700184795 /* XelaTabs.swift in Sources */,
 				B5C95EAB2936632700C9C8A7 /* Game.swift in Sources */,
-				B561B02C29422CEF001CA23F /* KymaRadioButtonGroup.swift in Sources */,
+				B53004742942670300184795 /* TaskManagerTemplate.swift in Sources */,
 				B5C95EB52936632700C9C8A7 /* GoesTo.swift in Sources */,
-				B561AFEA29422CEF001CA23F /* KymaTabsItem.swift in Sources */,
-				B561B00929422CEF001CA23F /* KymaCheckboxState.swift in Sources */,
 				B5C95EA82936632700C9C8A7 /* Entry.swift in Sources */,
+				B53004F72942677600184795 /* XelaPieDatasets.swift in Sources */,
+				B53004662942670300184795 /* StepsComponent.swift in Sources */,
+				B530046A2942670300184795 /* BadgeComponent.swift in Sources */,
+				B530052D29426F5C00184795 /* NewLoginView.swift in Sources */,
 				B5BDA1D0293A0BD20048B727 /* EventType.swift in Sources */,
-				B561B01429422CEF001CA23F /* KymaStepsItems.swift in Sources */,
-				B561AFFA29422CEF001CA23F /* KymaWeekdayHeader.swift in Sources */,
 				B5C95EA52936632700C9C8A7 /* Participant.swift in Sources */,
-				B561AFF529422CEF001CA23F /* KymaColorSettings.swift in Sources */,
-				B561B01C29422CEF001CA23F /* KymaNumberInputState.swift in Sources */,
+				B530050B2942677600184795 /* XelaStepsState.swift in Sources */,
+				B53004512942670300184795 /* Cryptocurrency1Block.swift in Sources */,
+				B53004692942670300184795 /* RangeSliderInputComponent.swift in Sources */,
+				B53005272942677600184795 /* XelaChip.swift in Sources */,
 				7619A62925CA421800014ADA /* PlayerProfileView.swift in Sources */,
-				B561B01E29422CEF001CA23F /* KymaRoundedCorner.swift in Sources */,
+				B530051F2942677600184795 /* OtherExtensions.swift in Sources */,
+				B53004E82942677600184795 /* XelaRadioButtonItem.swift in Sources */,
 				B5C95EBA2936632700C9C8A7 /* Event.swift in Sources */,
+				B53004EB2942677600184795 /* XelaSegmentedControllItem.swift in Sources */,
+				B530051E2942677600184795 /* ColorExtensions.swift in Sources */,
+				B53005172942677600184795 /* XelaColorModel.swift in Sources */,
 				764B745E25D2552E0035B02C /* CurrentMatchStatistics.swift in Sources */,
-				B561AFF329422CEF001CA23F /* KymaSegmentedControllButton.swift in Sources */,
+				B53004E72942677600184795 /* XelaRadioButtonState.swift in Sources */,
 				76343B8625C2B2140061ABB5 /* StringsListView.swift in Sources */,
+				B53004FC2942677600184795 /* XelaDoughnutDatasets.swift in Sources */,
 				B5132A64293A20B100C2E396 /* ShotType.swift in Sources */,
 				B5BDA1E2293A16250048B727 /* MatchUpStatus.swift in Sources */,
+				B530044B2942670300184795 /* Filter2Block.swift in Sources */,
 				B5C95EBD2936632700C9C8A7 /* Stage.swift in Sources */,
 				B5BDA1E6293A18300048B727 /* OrganisationType.swift in Sources */,
-				B561B00B29422CEF001CA23F /* KymaToggleStyle.swift in Sources */,
-				B561B01829422CEF001CA23F /* KymaUserAvatarSize.swift in Sources */,
 				B5C95EC52936632700C9C8A7 /* Side.swift in Sources */,
+				B530051D2942677600184795 /* TextExtensions.swift in Sources */,
 				B567575327A8EFE200381DD5 /* StringRowView.swift in Sources */,
 				B59E2DE427F3F9DC00CB6B27 /* PlayerSearchModel.swift in Sources */,
+				B53004732942670300184795 /* SocialTemplate.swift in Sources */,
 				762F87CF25C9C0EC004B46FD /* MatchesListView.swift in Sources */,
+				B530050D2942677600184795 /* XelaStepItem.swift in Sources */,
+				B53005062942677600184795 /* XelaButtonType.swift in Sources */,
 				B5BDA1CA293A0B390048B727 /* Discipline.swift in Sources */,
+				B53004FD2942677600184795 /* XelaLineChartBody.swift in Sources */,
 				B5C95EAA2936632700C9C8A7 /* Tournament.swift in Sources */,
-				B561B01529422CEF001CA23F /* KymaStepsState.swift in Sources */,
 				B53CCA1F2806F39A00258FBC /* AddMatchView.swift in Sources */,
-				B561B02629422CEF001CA23F /* TextExtensions.swift in Sources */,
-				B561B02029422CEF001CA23F /* KymaTextarea.swift in Sources */,
-				B561B00C29422CEF001CA23F /* KymaToggleSize.swift in Sources */,
 				B5BDA1BA293A08C20048B727 /* BallType.swift in Sources */,
+				B53004EC2942677600184795 /* XelaSegmentedControllButton.swift in Sources */,
 				760719B925BB52F000F09A1A /* DashboardView.swift in Sources */,
+				B53005012942677600184795 /* XelaCheckboxState.swift in Sources */,
+				B530046B2942670300184795 /* DividerComponent.swift in Sources */,
+				B53005252942677600184795 /* XelaRadioButtonGroup.swift in Sources */,
 				B5C95EA72936632700C9C8A7 /* RankingItem.swift in Sources */,
-				B561AFF029422CEF001CA23F /* KymaRadioButtonSize.swift in Sources */,
+				B530050C2942677600184795 /* XelaStepsOrientation.swift in Sources */,
+				B530044D2942670300184795 /* Form1Block.swift in Sources */,
 				B5CF6EA82938E11300DFFF16 /* AddressType.swift in Sources */,
-				B5C95EC12936632700C9C8A7 /* Set.swift in Sources */,
-				B561B00329422CEF001CA23F /* KymaPieDatasets.swift in Sources */,
+				B5C95EC12936632700C9C8A7 /* Sett.swift in Sources */,
+				B53004F22942677600184795 /* XelaMonth.swift in Sources */,
 				B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */,
 				B5BDA1DA293A13000048B727 /* EventLevel.swift in Sources */,
-				B561AFE229422CEF001CA23F /* KymaBadge.swift in Sources */,
-				B561AFFE29422CEF001CA23F /* KymaLineChartBody.swift in Sources */,
-				B561B02729422CEF001CA23F /* ColorExtensions.swift in Sources */,
-				B561B01329422CEF001CA23F /* KymaStepsOrientation.swift in Sources */,
+				B530045A2942670300184795 /* ColorsComponent.swift in Sources */,
+				B53004782942670300184795 /* DataTableTemplate.swift in Sources */,
 				B5D1F76E27AA342A0091AC2F /* RDMenuButton.swift in Sources */,
+				B53004E42942677600184795 /* XelaTooltipAlign.swift in Sources */,
+				B530044E2942670300184795 /* Filter1Block.swift in Sources */,
+				B53005142942677600184795 /* XelaColor.swift in Sources */,
+				B53005202942677600184795 /* XelaNumberInput.swift in Sources */,
+				B53004472942670300184795 /* Sidebar2Block.swift in Sources */,
 				76B8153025CD3AF10029EE83 /* TextFieldWithPickerView.swift in Sources */,
-				B561B01629422CEF001CA23F /* KymaDividerStyle.swift in Sources */,
 				B5C95EB12936632700C9C8A7 /* Player.swift in Sources */,
+				B53005292942677600184795 /* XelaSlider.swift in Sources */,
+				B53004672942670300184795 /* ChartsComponent.swift in Sources */,
+				B530044A2942670300184795 /* EcommerceCardsBlock.swift in Sources */,
+				B53004F42942677600184795 /* XelaChartDataset.swift in Sources */,
 				B5132A5E293A1CA400C2E396 /* WinReason.swift in Sources */,
-				B561AFDF29422CEF001CA23F /* KymaToast.swift in Sources */,
+				B530046C2942670300184795 /* TooltipsComponent.swift in Sources */,
+				B53005072942677600184795 /* XelaButtonState.swift in Sources */,
 				764A618325B9493F00789373 /* RegisterVM.swift in Sources */,
 				B5BDA1D2293A0BF60048B727 /* Gender.swift in Sources */,
 				B5BDA1D6293A10740048B727 /* SurfaceCategory.swift in Sources */,
-				B561B00F29422CEF001CA23F /* KymaButtonType.swift in Sources */,
-				B561AFE629422CEF001CA23F /* KymaAccordion.swift in Sources */,
-				B561AFE429422CEF001CA23F /* KymaDialog.swift in Sources */,
 				B5A239AE27F6FFF000D7A9FE /* UserDataModel.swift in Sources */,
 				B52F300227A92D4000237915 /* HalfModalView.swift in Sources */,
-				B561B00529422CEF001CA23F /* KymaBarChartBody.swift in Sources */,
 				9FFCF2E425CF2C7E00C6C94E /* FriendsVM.swift in Sources */,
-				B561B01029422CEF001CA23F /* KymaButtonState.swift in Sources */,
+				B530045E2942670300184795 /* NumberInputComponent.swift in Sources */,
 				B5EA4D83294079FA0015D379 /* Friends.swift in Sources */,
+				B53005132942677600184795 /* XelaUserAvatarDecorationPosition.swift in Sources */,
 				B5132A5C293A1A5800C2E396 /* ParticipantType.swift in Sources */,
-				B561B01A29422CEF001CA23F /* KymaUserAvatarStyle.swift in Sources */,
 				B5132A6A293A223100C2E396 /* RoundCode.swift in Sources */,
+				B53004492942670300184795 /* Cryptocurrency2Block.swift in Sources */,
+				B53005282942677600184795 /* XelaTextarea.swift in Sources */,
 				B564F72F2799F13D00052CA3 /* RDHeaderTitle.swift in Sources */,
+				B53004762942670300184795 /* AnaliticsTemplate.swift in Sources */,
 				B5C95EAE2936632700C9C8A7 /* TotalPrizeMoney.swift in Sources */,
+				B53004752942670300184795 /* MailboxTemplate.swift in Sources */,
 				B5C95EA42936632700C9C8A7 /* TODSModel.swift in Sources */,
-				B561AFF129422CEF001CA23F /* KymaRadioButtonItem.swift in Sources */,
+				B53004FF2942677600184795 /* XelaChipSize.swift in Sources */,
 				76FA5EF125C7E495005DACE9 /* ExpertMatchScoringView.swift in Sources */,
 				764A612825B91C8E00789373 /* LoginView.swift in Sources */,
-				B561B02929422CEF001CA23F /* KymaRangeSlider.swift in Sources */,
+				B53005152942677600184795 /* XelaNumberInputState.swift in Sources */,
 				76DB132925CEDAD9003EDA38 /* Models.swift in Sources */,
+				B53005092942677600184795 /* XelaStep.swift in Sources */,
 				B5132A58293A1A4500C2E396 /* ParticipantRole.swift in Sources */,
-				B561B00729422CEF001CA23F /* KymaChipSize.swift in Sources */,
+				B53005192942677600184795 /* XelaBadge.swift in Sources */,
 				B5C95E9E2936632700C9C8A7 /* WorldTennisNumber.swift in Sources */,
 				760719C325BB530600F09A1A /* AddNewStringView.swift in Sources */,
 				B5C95EA02936632700C9C8A7 /* OrderOfPlayItem.swift in Sources */,
-				B561AFE129422CEF001CA23F /* KymaDatePicker.swift in Sources */,
 				B5C95E9F2936632700C9C8A7 /* BiographicalInformation.swift in Sources */,
-				B561AFED29422CEF001CA23F /* KymaTooltipTriangle.swift in Sources */,
 				B5BDA1D4293A0ED80048B727 /* PlayingDoubleHandCode.swift in Sources */,
 				B5C95EB42936632700C9C8A7 /* Organisation.swift in Sources */,
-				B561AFF629422CEF001CA23F /* KymaDate.swift in Sources */,
-				B561B01929422CEF001CA23F /* KymaUserAvatarDecorationPosition.swift in Sources */,
-				B561B01F29422CEF001CA23F /* KymaChart.swift in Sources */,
+				B53005032942677600184795 /* XelaToggleStyle.swift in Sources */,
 				B5C95EB92936632700C9C8A7 /* Team.swift in Sources */,
+				B53005242942677600184795 /* XelaDialog.swift in Sources */,
 				B5C95EC42936632700C9C8A7 /* Person.swift in Sources */,
+				B53004562942670300184795 /* UsersList1Block.swift in Sources */,
 				764A611B25B91C7300789373 /* LoginVM.swift in Sources */,
 				B5132A6E293A23E100C2E396 /* TieStatus.swift in Sources */,
+				B53004EA2942677600184795 /* XelaRoundedCorner.swift in Sources */,
+				B53004482942670300184795 /* Form4Block.swift in Sources */,
 				B5C95EB82936632700C9C8A7 /* OrderOfPlay.swift in Sources */,
+				B53004602942670300184795 /* ToggleComponent.swift in Sources */,
+				B53004FB2942677600184795 /* XelaChartType.swift in Sources */,
+				B53004462942670300184795 /* Form3Block.swift in Sources */,
+				B53004502942670300184795 /* MusicApp1Block.swift in Sources */,
 				B5C95EC02936632700C9C8A7 /* Contact.swift in Sources */,
-				B561AFEE29422CEF001CA23F /* KymaTooltipAlign.swift in Sources */,
-				B561AFF229422CEF001CA23F /* KymaColorModel.swift in Sources */,
 				B5132A68293A21AF00C2E396 /* ShotOutcome.swift in Sources */,
+				B53005222942677600184795 /* XelaDatePicker.swift in Sources */,
+				B53004522942670300184795 /* Sidebar1Block.swift in Sources */,
+				B530045D2942670300184795 /* SegmentedControllComponent.swift in Sources */,
+				B53004DD2942677600184795 /* XelaTextField.swift in Sources */,
 				76D1B86025BAEE4700FE1B4B /* LoadingScreenView.swift in Sources */,
 				76AADB9E25C64F3800EB0C43 /* StringsVM.swift in Sources */,
-				B561AFE829422CEF001CA23F /* KymaTextField.swift in Sources */,
-				B561AFF729422CEF001CA23F /* KymaDatePickerCell.swift in Sources */,
 				B5BDA1B42939F3960048B727 /* PlayingHandCode.swift in Sources */,
 				B5C95EAF2936632700C9C8A7 /* PrizeMoney.swift in Sources */,
-				B561AFE729422CEF001CA23F /* KymaSegmentedControll.swift in Sources */,
+				B53004652942670300184795 /* ToastComponent.swift in Sources */,
 				B5CF6EAB2938E2D300DFFF16 /* Sex.swift in Sources */,
-				B561B00E29422CEF001CA23F /* KymaButtonSize.swift in Sources */,
 				764A617E25B9479700789373 /* ResetPasswordView.swift in Sources */,
 				B5BDA1CE293A0B9E0048B727 /* EntryStatus.swift in Sources */,
 				B5D1F76C27AA1E370091AC2F /* RDHeader.swift in Sources */,
-				B561B02229422CEF001CA23F /* KymaTabs.swift in Sources */,
-				B561B00229422CEF001CA23F /* KymaChartType.swift in Sources */,
 				B5C95EAD2936632700C9C8A7 /* IDS.swift in Sources */,
 				762F87DA25CA34FE004B46FD /* ProfileImagePickerView.swift in Sources */,
-				B561B00629422CEF001CA23F /* KymaPieChartBody.swift in Sources */,
+				B530050F2942677600184795 /* XelaDividerOrientation.swift in Sources */,
+				B53005102942677600184795 /* XelaUserAvatarDecoration.swift in Sources */,
+				B530046D2942670300184795 /* DatePickerComponent.swift in Sources */,
+				B53005232942677600184795 /* XelaButton.swift in Sources */,
+				B53004FA2942677600184795 /* XelaChartPieItemShape.swift in Sources */,
+				B53004E02942677600184795 /* XelaCheckbox.swift in Sources */,
+				B530052F29427DCE00184795 /* XCAssets+Generated.swift in Sources */,
 				76F5424825CDC81F00557BF9 /* FriendsListView.swift in Sources */,
+				B53004DF2942677600184795 /* XelaSteps.swift in Sources */,
 				76D731A025CA7BB7001D2D64 /* ProfileView.swift in Sources */,
+				B53004F02942677600184795 /* XelaDate.swift in Sources */,
 				B5BDA1B8293A07A30048B727 /* AgeCategory.swift in Sources */,
+				B53004642942670300184795 /* CheckboxComponent.swift in Sources */,
 				B5C95EB72936632700C9C8A7 /* Shot.swift in Sources */,
-				B561B00429422CEF001CA23F /* KymaDoughnutDatasets.swift in Sources */,
 				B5C95EB22936632700C9C8A7 /* Court.swift in Sources */,
+				B53004DE2942677600184795 /* XelaAccordion.swift in Sources */,
+				B53004532942670300184795 /* UsersList3Block.swift in Sources */,
+				B530046E2942670300184795 /* RadioButtonComponent.swift in Sources */,
+				B53004F12942677600184795 /* XelaColorSettings.swift in Sources */,
+				B53005162942677600184795 /* XelaNumberInputControls.swift in Sources */,
 				76DBB01425C29C8E00F238D9 /* AddStringVM.swift in Sources */,
-				B561AFE029422CEF001CA23F /* KymaUserAvatar.swift in Sources */,
+				B530050E2942677600184795 /* XelaDividerStyle.swift in Sources */,
 				B5C95EC32936632700C9C8A7 /* RoundItem.swift in Sources */,
+				B53004702942670300184795 /* AccordionComponent.swift in Sources */,
+				B53004722942670300184795 /* MusicServiceTemplate.swift in Sources */,
 				B5C95EB32936632700C9C8A7 /* Address.swift in Sources */,
 				B5BDA1DE293A15050048B727 /* IndoorOutdoor.swift in Sources */,
-				B561AFF829422CEF001CA23F /* KymaMonth.swift in Sources */,
 				B5C95EA92936632700C9C8A7 /* Ranking.swift in Sources */,
-				B561AFE929422CEF001CA23F /* KymaTab.swift in Sources */,
-				B561B01729422CEF001CA23F /* KymaDividerOrientation.swift in Sources */,
+				B53004452942670300184795 /* SocialMediaCardsBlock.swift in Sources */,
+				B530044C2942670300184795 /* MusicApp2Block.swift in Sources */,
+				B53005122942677600184795 /* XelaUserAvatarSize.swift in Sources */,
+				B53004622942670300184795 /* UserAvatarComponent.swift in Sources */,
 				B5D1F76827AA0EBC0091AC2F /* BaseView.swift in Sources */,
-				B561AFEB29422CEF001CA23F /* KymaColor.swift in Sources */,
-				B561B02829422CEF001CA23F /* OtherExtensions.swift in Sources */,
+				B530047A2942670300184795 /* TasksProjectsTemplate.swift in Sources */,
+				B53004E62942677600184795 /* XelaTooltipTriangle.swift in Sources */,
 				B5A239A827F5538500D7A9FE /* RDEmptyListPlaceholder.swift in Sources */,
-				B561B00D29422CEF001CA23F /* KymaTextareaState.swift in Sources */,
 				B54D406A27913F8A00F36EE1 /* RDButton.swift in Sources */,
-				B561B00A29422CEF001CA23F /* KymaTextFieldState.swift in Sources */,
 				764A60C925B90E5600789373 /* TennisApp.swift in Sources */,
 				76FA5EEC25C7E457005DACE9 /* AdvancedMatchScoringView.swift in Sources */,
 				76FA5EF625C7E6E9005DACE9 /* ScoringViewTemplates.swift in Sources */,
-				B561B02A29422CEF001CA23F /* KymaDivider.swift in Sources */,
+				B53004632942670300184795 /* ChipsComponent.swift in Sources */,
+				B53004712942670300184795 /* CheckoutTemplate.swift in Sources */,
 				76AADBB425C6514800EB0C43 /* PlayersVM.swift in Sources */,
-				B561B00029422CEF001CA23F /* KymaChartLineShape.swift in Sources */,
-				B561B02129422CEF001CA23F /* KymaSlider.swift in Sources */,
-				B561AFFC29422CEF001CA23F /* KymaBarDatasets.swift in Sources */,
+				B53005022942677600184795 /* XelaTextFieldState.swift in Sources */,
 				764A617625B9475000789373 /* RegisterView.swift in Sources */,
 				B5BDA1CC293A0B850048B727 /* EndType.swift in Sources */,
 				B5C95EA22936632700C9C8A7 /* Round.swift in Sources */,
+				B53004F92942677600184795 /* XelaBarChartBody.swift in Sources */,
 				B5EA4D7F29404FEB0015D379 /* MatchUpFormatParser.swift in Sources */,
-				B561AFFD29422CEF001CA23F /* KymaLineDatasets.swift in Sources */,
+				B53004792942670300184795 /* EcommerceTemplate.swift in Sources */,
 				764A613D25B9204B00789373 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

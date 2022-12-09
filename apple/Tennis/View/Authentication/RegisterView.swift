@@ -90,7 +90,7 @@ struct RegisterView: View {
 
                 .padding(.vertical)
             }
-            .background(Color("bg").ignoresSafeArea(.all, edges: .all))
+//            .background(Color("bg").ignoresSafeArea(.all, edges: .all))
             .animation(startAnimate ? .easeOut : .none)
 
             if vm.isLoading {

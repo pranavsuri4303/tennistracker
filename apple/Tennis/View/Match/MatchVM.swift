@@ -206,7 +206,7 @@ final class MatchVM: ObservableObject {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
     
-    func addSet(_ set: Set) {
+    func addSet(_ set: Sett) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
     
