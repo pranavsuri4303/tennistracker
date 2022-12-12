@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum XelaUserAvatarSize:String {
+enum XelaUserAvatarSize: String {
     case Large
     case Medium
     case Small

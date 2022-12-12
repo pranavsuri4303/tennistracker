@@ -6,10 +6,9 @@
 //
 
 import Foundation
-enum XelaChartType:String {
+enum XelaChartType: String {
     case Line
     case Bar
     case Pie
     case Doughnut
-    
 }

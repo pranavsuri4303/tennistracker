@@ -192,34 +192,33 @@ final class MatchVM: ObservableObject {
             return
         }
     }
-    
-    func addShot(_ shot: Shot) {
-        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
 
-    }
-    
-    func addPoint(_ point: Point) {
+    func addShot(_: Shot) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
-    
-    func addGame(_ game: Game)  {
+
+    func addPoint(_: Point) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
-    
-    func addSet(_ set: Sett) {
+
+    func addGame(_: Game) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
-    
+
+    func addSet(_: Sett) {
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
+    }
+
     func gameIsOver() -> Bool {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         return false
     }
-    
+
     func setIsOver() -> Bool {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         return false
     }
-    
+
     func matchUpIsOver() -> Bool {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         return false
@@ -309,5 +308,3 @@ struct Playered {
     var totalSecondServes = 0
     var secondServesIn = 0
 }
-
-

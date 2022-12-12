@@ -67,21 +67,21 @@ enum MatchUpStatus: String, CaseIterable {
         case .deadRubber: return "Dead rubber"
         }
     }
-    
+
     static func getMatchUpStatus(matchUpStatus: String) -> MatchUpStatus {
         switch matchUpStatus {
-        case "ABN" : return .abandoned
-        case "BYE" : return .bye
-        case "DEF" : return .defaulted
-        case "RET" : return .retired
-        case "WO" : return .walkover
-        case "CO" : return .completed
-        case "IP" : return .inProgress
-        case "NP" : return .notPlayed
-        case "SUS" : return .suspended
-        case "TBP" : return .toBePlayed
-        case "DR" : return .deadRubber
-        default : return .notPlayed
+        case "ABN": return .abandoned
+        case "BYE": return .bye
+        case "DEF": return .defaulted
+        case "RET": return .retired
+        case "WO": return .walkover
+        case "CO": return .completed
+        case "IP": return .inProgress
+        case "NP": return .notPlayed
+        case "SUS": return .suspended
+        case "TBP": return .toBePlayed
+        case "DR": return .deadRubber
+        default: return .notPlayed
         }
     }
 }
@@ -95,6 +95,6 @@ extension MatchUpStatus: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

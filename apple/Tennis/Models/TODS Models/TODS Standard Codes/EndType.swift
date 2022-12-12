@@ -31,7 +31,7 @@ enum EndType: String, CaseIterable {
         case .actual: return "Actual"
         }
     }
-    
+
     static func getEndType(endType: String) -> EndType {
         switch endType {
         case "FX":
@@ -53,6 +53,6 @@ extension EndType: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

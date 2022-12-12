@@ -43,7 +43,7 @@ enum AddressType: String, CaseIterable {
         case .venue: return "Venue Location"
         }
     }
-    
+
     static func getAddressType(addressType: String) -> AddressType {
         switch addressType {
         case "H":
@@ -71,6 +71,6 @@ extension AddressType: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

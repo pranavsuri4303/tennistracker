@@ -31,7 +31,7 @@ enum WheelchairClass: String, CaseIterable {
         case .standard: return "Standard"
         }
     }
-    
+
     static func getWheelchairClass(wheelchairClass: String) -> WheelchairClass {
         switch wheelchairClass {
         case "Q":
@@ -53,6 +53,6 @@ extension WheelchairClass: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

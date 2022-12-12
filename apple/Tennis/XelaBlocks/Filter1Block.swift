@@ -9,28 +9,27 @@ import SwiftUI
 
 struct Filter1Block: View {
     var isDark = false
-    
-    @State var selectedSegment:Int = 0
-    
+
+    @State var selectedSegment: Int = 0
+
     @State var sourceIsOpen = true
     @State var dataIsOpen = true
     @State var popularIsOpen = true
-    
-    
+
     @State var typeValue = "Heatmap"
-    @State var typeState:XelaTextFieldState = .Default
+    @State var typeState: XelaTextFieldState = .Default
     @State var typeHelperText = ""
-    
+
     @State var sourceValue = "Twitter"
-    @State var sourceState:XelaTextFieldState = .Default
+    @State var sourceState: XelaTextFieldState = .Default
     @State var sourceHelperText = ""
-    
-    @State var valueLeft:CGFloat = 20
-    @State var valueRight:CGFloat = 90
-    
+
+    @State var valueLeft: CGFloat = 20
+    @State var valueRight: CGFloat = 90
+
     var body: some View {
-        VStack(spacing:16) {
-            VStack(alignment: .leading, spacing:8) {
+        VStack(spacing: 16) {
+            VStack(alignment: .leading, spacing: 8) {
                 HStack {
                     Text("Filters")
                         .xelaHeadline()
@@ -40,9 +39,7 @@ struct Filter1Block: View {
             }
             .padding(.horizontal, 24)
             .padding(.top, 16)
-            
-            
-            
+
             XelaSegmentedControll(
                 items: [XelaSegmentedControllItem(id: 0, label: "General"), XelaSegmentedControllItem(id: 1, label: "Trend")],
                 selectedId: $selectedSegment,
@@ -52,11 +49,11 @@ struct Filter1Block: View {
                 secondaryFontColor: isDark ? Color(xelaColor: .Gray11) : Color(xelaColor: .Gray2)
             )
             .padding(.horizontal, 24)
-            
+
             ScrollView {
-                VStack(spacing:8) {
+                VStack(spacing: 8) {
                     XelaAccordion(title: "Source", isOpen: $sourceIsOpen, rightIconClose: "add", rightIconOpen: "minus", backgroundOpen: Color.clear, backgroundClose: Color.clear, titleColorClose: isDark ? Color(xelaColor: .Gray10) : Color(xelaColor: .Gray3), titleColorOpen: isDark ? Color(xelaColor: .Gray10) : Color(xelaColor: .Gray3), dividerColor: Color.clear, iconsSize: 15) {
-                        VStack(spacing:16) {
+                        VStack(spacing: 16) {
                             XelaTextField(
                                 placeholder: "Type",
                                 value: $typeValue,
@@ -69,7 +66,7 @@ struct Filter1Block: View {
                                 borderDefaultColor: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11),
                                 iconDefaultColor: isDark ? Color(xelaColor: .Gray8) : Color(xelaColor: .Gray8)
                             )
-                            
+
                             XelaTextField(
                                 placeholder: "Source",
                                 value: $sourceValue,
@@ -84,20 +81,20 @@ struct Filter1Block: View {
                             )
                         }
                     }
-                    
+
                     XelaDivider(style: .Dotted, color: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11))
-                    
+
                     XelaAccordion(title: "Data", isOpen: $dataIsOpen, rightIconClose: "add", rightIconOpen: "minus", backgroundOpen: Color.clear, backgroundClose: Color.clear, titleColorClose: isDark ? Color(xelaColor: .Gray10) : Color(xelaColor: .Gray3), titleColorOpen: isDark ? Color(xelaColor: .Gray10) : Color(xelaColor: .Gray3), dividerColor: Color.clear, iconsSize: 15) {
-                        VStack(spacing:16) {
+                        VStack(spacing: 16) {
                             XelaCheckbox(label: "Hashtags", selectedColor: isDark ? Color(xelaColor: .Blue5) : Color(xelaColor: .Blue3), defaultColor: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11), size: .Medium, labelColor: isDark ? Color(xelaColor: .Gray11) : Color(xelaColor: .Gray2))
-                            
+
                             XelaCheckbox(label: "Tweets", selectedColor: isDark ? Color(xelaColor: .Blue5) : Color(xelaColor: .Blue3), defaultColor: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11), size: .Medium, labelColor: isDark ? Color(xelaColor: .Gray11) : Color(xelaColor: .Gray2))
-                            
+
                             VStack(alignment: .leading, spacing: 0) {
                                 Text("Quantity, k")
                                     .xelaCaption()
                                     .foregroundColor(Color(xelaColor: .Gray8))
-                                XelaRangeSlider(valueLeft: $valueLeft, valueRight: $valueRight, range: 10...100, secondaryColor: isDark ? Color(xelaColor: .Gray3) : Color(xelaColor: .Gray11))
+                                XelaRangeSlider(valueLeft: $valueLeft, valueRight: $valueRight, range: 10 ... 100, secondaryColor: isDark ? Color(xelaColor: .Gray3) : Color(xelaColor: .Gray11))
                                 HStack {
                                     Text("10")
                                         .xelaSmallBodyBold()
@@ -110,18 +107,18 @@ struct Filter1Block: View {
                             }
                         }
                     }
-                    
+
                     XelaDivider(style: .Dotted, color: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11))
-                    
+
                     XelaAccordion(title: "Popular Hashtags", isOpen: $popularIsOpen, rightIconClose: "add", rightIconOpen: "minus", backgroundOpen: Color.clear, backgroundClose: Color.clear, titleColorClose: isDark ? Color(xelaColor: .Gray10) : Color(xelaColor: .Gray3), titleColorOpen: isDark ? Color(xelaColor: .Gray10) : Color(xelaColor: .Gray3), dividerColor: Color.clear, iconsSize: 15) {
-                        VStack(spacing:16) {
+                        VStack(spacing: 16) {
                             XelaCheckbox(label: "#Figma", selectedColor: isDark ? Color(xelaColor: .Blue5) : Color(xelaColor: .Blue3), defaultColor: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11), size: .Medium, labelColor: isDark ? Color(xelaColor: .Gray11) : Color(xelaColor: .Gray2))
-                            
+
                             XelaCheckbox(label: "#Prototyping", selectedColor: isDark ? Color(xelaColor: .Blue5) : Color(xelaColor: .Blue3), defaultColor: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11), size: .Medium, labelColor: isDark ? Color(xelaColor: .Gray11) : Color(xelaColor: .Gray2))
-                            
+
                             XelaCheckbox(label: "#UI&UX", selectedColor: isDark ? Color(xelaColor: .Blue5) : Color(xelaColor: .Blue3), defaultColor: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11), size: .Medium, labelColor: isDark ? Color(xelaColor: .Gray11) : Color(xelaColor: .Gray2))
-                            
-                            Button(action:{}) {
+
+                            Button(action: {}) {
                                 HStack {
                                     Text("View more")
                                         .xelaCaption()
@@ -131,16 +128,12 @@ struct Filter1Block: View {
                             .foregroundColor(isDark ? Color(xelaColor: .Blue5) : Color(xelaColor: .Blue3))
                         }
                     }
-                    
+
                     Spacer()
                 }
                 .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
             }
-            
-           
-            
         }
         .background(isDark ? Color(xelaColor: .Gray2) : Color(.white))
     }
 }
-

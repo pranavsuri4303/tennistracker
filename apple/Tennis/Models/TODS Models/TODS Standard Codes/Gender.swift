@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Gender: String, CaseIterable{
+enum Gender: String, CaseIterable {
     case male
     case female
     case mixed
@@ -39,7 +39,7 @@ enum Gender: String, CaseIterable{
         case .any: return "Any Gender"
         }
     }
-    
+
     static func getGender(gender: String) -> Gender {
         switch gender {
         case "M":
@@ -65,7 +65,6 @@ extension Gender: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }
-

@@ -43,7 +43,7 @@ enum ContactType: String, CaseIterable {
         case .press: return "Press"
         }
     }
-    
+
     static func getContactType(contactType: String) -> ContactType {
         switch contactType {
         case "D":
@@ -71,6 +71,6 @@ extension ContactType: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

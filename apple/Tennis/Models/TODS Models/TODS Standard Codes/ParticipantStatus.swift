@@ -31,12 +31,12 @@ enum ParticipantStatus: String, CaseIterable {
         case .withdrawn: return "Withdrawn"
         }
     }
-    
+
     static func getParticipantStatus(participantStatus: String) -> ParticipantStatus {
         switch participantStatus {
-        case "AC" : return .active
-        case "WD" : return .withdrawn
-        default : return .active
+        case "AC": return .active
+        case "WD": return .withdrawn
+        default: return .active
         }
     }
 }
@@ -50,6 +50,6 @@ extension ParticipantStatus: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum XelaTextFieldState:String {
+enum XelaTextFieldState: String {
     case Default
     case Hover
     case Error

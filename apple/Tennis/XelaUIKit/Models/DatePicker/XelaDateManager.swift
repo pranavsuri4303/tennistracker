@@ -9,21 +9,20 @@ import SwiftUI
 
 class XelaDateManager: ObservableObject {
     @Published var calendar = Calendar.current
-    @Published var minimumDate: Date = Date()
-    @Published var maximumDate: Date = Date()
-    @Published var disabledDates: [Date] = [Date]()
-    @Published var selectedDates: [Date] = [Date]()
+    @Published var minimumDate: Date = .init()
+    @Published var maximumDate: Date = .init()
+    @Published var disabledDates: [Date] = .init()
+    @Published var selectedDates: [Date] = .init()
     @Published var selectedDate: Date! = nil
     @Published var startDate: Date! = nil
     @Published var endDate: Date! = nil
-    
+
     @Published var mode: Int = 0
-    
-    
+
     @Published var colors = XelaColorSettings()
-    var cellWidth:CGFloat = 40
-    
-    init(calendar: Calendar, minimumDate: Date, maximumDate: Date, disabledDates:[Date] = [Date](), selectedDate:Date? = nil, selectedDates: [Date] = [Date](), mode: Int, colors:XelaColorSettings = XelaColorSettings(), cellWidth:CGFloat = 40) {
+    var cellWidth: CGFloat = 40
+
+    init(calendar: Calendar, minimumDate: Date, maximumDate: Date, disabledDates: [Date] = [Date](), selectedDate: Date? = nil, selectedDates: [Date] = [Date](), mode: Int, colors: XelaColorSettings = XelaColorSettings(), cellWidth: CGFloat = 40) {
         self.calendar = calendar
         self.minimumDate = minimumDate
         self.maximumDate = maximumDate
@@ -34,28 +33,26 @@ class XelaDateManager: ObservableObject {
         self.colors = colors
         self.cellWidth = cellWidth
     }
-    
-    
-    
+
     func selectedDatesContains(date: Date) -> Bool {
-        if let _ = self.selectedDates.first(where: { calendar.isDate($0, inSameDayAs: date) }) {
+        if let _ = selectedDates.first(where: { calendar.isDate($0, inSameDayAs: date) }) {
             return true
         }
         return false
     }
-    
+
     func selectedDatesFindIndex(date: Date) -> Int? {
-        return self.selectedDates.firstIndex(where: { calendar.isDate($0, inSameDayAs: date) })
+        return selectedDates.firstIndex(where: { calendar.isDate($0, inSameDayAs: date) })
     }
-    
+
     func disabledDatesContains(date: Date) -> Bool {
-        if let _ = self.disabledDates.first(where: { calendar.isDate($0, inSameDayAs: date) }) {
+        if let _ = disabledDates.first(where: { calendar.isDate($0, inSameDayAs: date) }) {
             return true
         }
         return false
     }
-    
+
     func disabledDatesFindIndex(date: Date) -> Int? {
-        return self.disabledDates.firstIndex(where: { calendar.isDate($0, inSameDayAs: date) })
+        return disabledDates.firstIndex(where: { calendar.isDate($0, inSameDayAs: date) })
     }
 }

@@ -35,7 +35,7 @@ enum ShotMadeFrom: String, CaseIterable {
         case .net: return "Net "
         }
     }
-    
+
     static func getShotMadeFrom(shotMadeFrom: String) -> ShotMadeFrom {
         switch shotMadeFrom {
         case "BL": return .baseline
@@ -55,6 +55,6 @@ extension ShotMadeFrom: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

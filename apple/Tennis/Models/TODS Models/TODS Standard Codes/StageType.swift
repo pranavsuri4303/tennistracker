@@ -39,6 +39,7 @@ enum StageType: String, CaseIterable {
         case .consolation: return "Consolation Stage"
         }
     }
+
     static func getStageType(stageType: String) -> StageType {
         switch stageType {
         case "M": return .main
@@ -59,6 +60,6 @@ extension StageType: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

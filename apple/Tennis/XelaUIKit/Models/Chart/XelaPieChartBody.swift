@@ -8,24 +8,22 @@
 import SwiftUI
 
 struct XelaPieChartBody: View {
-    
-    var dataset:XelaPieDatasets
-    var background:Color = Color(xelaColor: .Gray11)
-    
-    var endDegrees:Double = 0
-    
+    var dataset: XelaPieDatasets
+    var background: Color = .init(xelaColor: .Gray11)
+
+    var endDegrees: Double = 0
+
     var body: some View {
-        GeometryReader { geometryReader in
+        GeometryReader { _ in
             ZStack {
                 Circle()
                     .fill(background)
-                
-                ForEach(0..<dataset.dataset.data.count) { i in
+
+                ForEach(0 ..< dataset.dataset.data.count) { i in
                     XelaChartPieItemShape(startAngle: .init(degrees: dataset.startDegrees[i]), endAngle: .init(degrees: dataset.endDegrees[i]))
                         .fill(dataset.dataset.fillColors[i])
                 }
             }
         }
-        
     }
 }

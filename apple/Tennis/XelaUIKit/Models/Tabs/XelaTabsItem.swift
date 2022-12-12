@@ -7,8 +7,8 @@
 
 import Foundation
 struct XelaTabsItem: Identifiable {
-    var id:Int
-    var label:String = ""
-    var icon:String = ""
-    var badgeText:String = ""
+    var id: Int
+    var label: String = ""
+    var icon: String = ""
+    var badgeText: String = ""
 }

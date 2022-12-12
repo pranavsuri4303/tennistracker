@@ -39,7 +39,7 @@ enum PlayingDoubleHandCode: String, CaseIterable {
         case .none: return "None"
         }
     }
-    
+
     static func getPlayingDoubleHandCode(playingDoubleHandCode: String) -> PlayingDoubleHandCode {
         switch playingDoubleHandCode {
         case "FH":
@@ -65,6 +65,6 @@ extension PlayingDoubleHandCode: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

@@ -103,7 +103,7 @@ struct NewUserView: View {
                 .background(.white.opacity(sex == "" ? 0.04 : 0.12))
                 .cornerRadius(12)
                 .padding(.horizontal)
-                
+
                 VStack(alignment: .leading, spacing: 5) {
                     Text("Playing Hand")
                         .font(.headline)
@@ -167,9 +167,10 @@ struct NewUserView: View {
         }
     }
 }
+
 //
-//struct Register_Preview: PreviewProvider {
+// struct Register_Preview: PreviewProvider {
 //    static var previews: some View {
 //        NewUserView(isPresented: .constant(false), vm: RegisterVM())
 //    }
-//}
+// }

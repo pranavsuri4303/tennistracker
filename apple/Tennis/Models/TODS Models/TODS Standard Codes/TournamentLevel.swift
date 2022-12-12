@@ -51,7 +51,7 @@ enum TournamentLevel: String, CaseIterable {
         case .recreational: return "Recreational"
         }
     }
-    
+
     static func getTournamentLevel(tournamentLevel: String) -> TournamentLevel {
         switch tournamentLevel {
         case "INT":
@@ -83,7 +83,6 @@ extension TournamentLevel: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }
-

@@ -35,7 +35,7 @@ enum ShotType: String, CaseIterable {
         case .serve: return "Serve"
         }
     }
-    
+
     static func getShotType(shotType: String) -> ShotType {
         switch shotType {
         case "FH": return .forehand
@@ -55,6 +55,6 @@ extension ShotType: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

@@ -7,30 +7,28 @@
 
 import SwiftUI
 struct XelaColorSettings {
-
     // foreground colors
-    @State var textColor: Color = Color(xelaColor: .Gray3)
-    var todayColor: Color = Color(xelaColor: .Blue3)
-    var selectedColor: Color = Color(.white)
-    var disabledColor: Color = Color(xelaColor: .Gray9)
-    var betweenStartAndEndColor: Color = Color(xelaColor: .Gray3)
+    @State var textColor: Color = .init(xelaColor: .Gray3)
+    var todayColor: Color = .init(xelaColor: .Blue3)
+    var selectedColor: Color = .init(.white)
+    var disabledColor: Color = .init(xelaColor: .Gray9)
+    var betweenStartAndEndColor: Color = .init(xelaColor: .Gray3)
     // background colors
-    var textBackgroundColor: Color = Color.clear
-    var todayBackgroundColor: Color = Color(.white)
-    var selectedBackgroundColor: Color = Color(xelaColor: .Blue3)
-    var disabledBackgroundColor: Color = Color.clear
-    var betweenStartAndEndBackgroundColor: Color = Color(xelaColor: .Blue8)
+    var textBackgroundColor: Color = .clear
+    var todayBackgroundColor: Color = .init(.white)
+    var selectedBackgroundColor: Color = .init(xelaColor: .Blue3)
+    var disabledBackgroundColor: Color = .clear
+    var betweenStartAndEndBackgroundColor: Color = .init(xelaColor: .Blue8)
     // headers foreground colors
-    var weekdayHeaderColor: Color = Color(xelaColor: .Gray7)
-    var monthHeaderColor: Color = Color(xelaColor: .Gray2)
-    var yearHeaderColor: Color = Color(xelaColor: .Gray9)
+    var weekdayHeaderColor: Color = .init(xelaColor: .Gray7)
+    var monthHeaderColor: Color = .init(xelaColor: .Gray2)
+    var yearHeaderColor: Color = .init(xelaColor: .Gray9)
     // headers background colors
-    var weekdayHeaderBackgroundColor: Color = Color.clear
-    var monthBackgroundColor: Color = Color.clear
-    //next & prev button colors
-    var changeMonthButtonBackground: Color = Color(.white)
-    var changeMonthButtonForeground: Color = Color(xelaColor: .Gray3)
-    
-    var dividerColor:Color = Color(xelaColor: .Gray9)
+    var weekdayHeaderBackgroundColor: Color = .clear
+    var monthBackgroundColor: Color = .clear
+    // next & prev button colors
+    var changeMonthButtonBackground: Color = .init(.white)
+    var changeMonthButtonForeground: Color = .init(xelaColor: .Gray3)
 
+    var dividerColor: Color = .init(xelaColor: .Gray9)
 }

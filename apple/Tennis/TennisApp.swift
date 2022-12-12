@@ -32,18 +32,18 @@ class Delegate: NSObject, UIApplicationDelegate {
         FirebaseApp.configure()
         for family in UIFont.familyNames {
             print(family)
-            
-            for names in UIFont.fontNames(forFamilyName: family){
+
+            for names in UIFont.fontNames(forFamilyName: family) {
                 print("== \(names)")
             }
         }
-        
+
         return true
     }
-    
+
     func application(_: UIApplication, open url: URL,
                      options _: [UIApplication.OpenURLOptionsKey: Any])
-    -> Bool
+        -> Bool
     {
         GIDSignIn.sharedInstance.handle(url)
     }

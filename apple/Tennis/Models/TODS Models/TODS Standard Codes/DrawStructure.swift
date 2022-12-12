@@ -39,7 +39,7 @@ enum DrawStructure: String, CaseIterable {
         case .other: return "Other structure"
         }
     }
-    
+
     static func getDrawStructure(drawStructure: String) -> DrawStructure {
         switch drawStructure {
         case "KO":
@@ -65,6 +65,6 @@ extension DrawStructure: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

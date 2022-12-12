@@ -22,7 +22,7 @@ class LoginVM: ObservableObject {
     @Published var store_Info = false
 
     @Published var isLoading = false
-    
+
     @Published var emailTF = XelaTextFieldProperties(placeholder: "Email",
                                                      value: "",
                                                      state: .Default,
@@ -31,7 +31,7 @@ class LoginVM: ObservableObject {
                                                         value: "",
                                                         state: .Default,
                                                         helperText: "")
-    
+
     func getBioMetricStatus() -> Bool {
         let scanner = LAContext()
         if email != "", email == Stored_User, scanner.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: .none) {
@@ -91,22 +91,18 @@ class XelaTextFieldProperties: Equatable {
         self.state = state
         self.helperText = helperText
     }
-    
+
     var placeholder: String
     var value: String
     var state: XelaTextFieldState
     var helperText: String
-    
+
     static func == (lhs: XelaTextFieldProperties, rhs: XelaTextFieldProperties) -> Bool {
         return lhs.placeholder == rhs.placeholder &&
-        lhs.value == rhs.value &&
-        lhs.state == rhs.state &&
-        lhs.helperText == rhs.helperText
+            lhs.value == rhs.value &&
+            lhs.state == rhs.state &&
+            lhs.helperText == rhs.helperText
     }
-    
 }
 
-
-class XelaButtonProperties {
-    
-}
+class XelaButtonProperties {}

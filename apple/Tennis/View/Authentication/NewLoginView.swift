@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NewLoginView: View {
     var body: some View {
-        VStack(spacing: 0){
+        VStack(spacing: 0) {
             Text("Login")
                 .xelaTitle1()
             Text("")

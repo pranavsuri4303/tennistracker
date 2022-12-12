@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct XelaWeekdayHeader: View {
-    var xelaManager:XelaDateManager
-    
+    var xelaManager: XelaDateManager
+
     var body: some View {
         HStack(alignment: .center, spacing: 0) {
             ForEach(self.getWeekdayHeaders(calendar: self.xelaManager.calendar), id: \.self) { weekday in
@@ -20,25 +20,19 @@ struct XelaWeekdayHeader: View {
             }
         }.background(xelaManager.colors.weekdayHeaderBackgroundColor)
     }
-    
+
     func getWeekdayHeaders(calendar: Calendar) -> [String] {
-        
         let formatter = DateFormatter()
-        
+
         var weekdaySymbols = formatter.shortStandaloneWeekdaySymbols
         let weekdaySymbolsCount = weekdaySymbols?.count ?? 0
-        
-        
-        
-        for _ in 0 ..< (1 - calendar.firstWeekday + weekdaySymbolsCount){
+
+        for _ in 0 ..< (1 - calendar.firstWeekday + weekdaySymbolsCount) {
             let lastObject = weekdaySymbols?.last
             weekdaySymbols?.removeLast()
             weekdaySymbols?.insert(lastObject!, at: 0)
         }
-        
-        
+
         return weekdaySymbols ?? []
     }
 }
-
-

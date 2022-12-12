@@ -89,7 +89,7 @@ struct AddNewStringView: View {
 
                     Spacer()
                     Button(action: {
-                        vm.stringEntry.stringingDate = Timestamp.init(date: dateSelected)
+                        vm.stringEntry.stringingDate = Timestamp(date: dateSelected)
                         vm.addString { res in
                             switch res {
                             case let .failure(err):

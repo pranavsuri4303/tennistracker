@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct XelaSegmentedControllButton: View {
-    var item:XelaSegmentedControllItem
-    @Binding var selectedId:Int
-    var primaryBackground:Color = Color(xelaColor: .Blue6)
-    var secondaryBackground:Color = Color(xelaColor: .Gray12)
-    var primaryFontColor:Color = Color(.white)
-    var secondaryFontColor:Color = Color(xelaColor: .Gray2)
-    var autoResize:Bool = false
-    
+    var item: XelaSegmentedControllItem
+    @Binding var selectedId: Int
+    var primaryBackground: Color = .init(xelaColor: .Blue6)
+    var secondaryBackground: Color = .init(xelaColor: .Gray12)
+    var primaryFontColor: Color = .init(.white)
+    var secondaryFontColor: Color = .init(xelaColor: .Gray2)
+    var autoResize: Bool = false
+
     var body: some View {
-        
-        HStack(spacing:0) {
+        HStack(spacing: 0) {
             if !autoResize {
                 Spacer()
             }
@@ -26,7 +25,7 @@ struct XelaSegmentedControllButton: View {
                 Image(item.icon)
                     .renderingMode(.template)
                     .resizable()
-                    .frame(width:16, height: 16)
+                    .frame(width: 16, height: 16)
                     .foregroundColor(item.id == selectedId ? primaryFontColor : secondaryFontColor)
                     .padding(.trailing, item.label.isEmpty ? 0 : 8)
             }
@@ -49,7 +48,7 @@ struct XelaSegmentedControllButton: View {
             }
         }
     }
-    
+
     func getPadding() -> CGFloat {
         if !autoResize {
             return 0
@@ -57,4 +56,3 @@ struct XelaSegmentedControllButton: View {
         return 16
     }
 }
-

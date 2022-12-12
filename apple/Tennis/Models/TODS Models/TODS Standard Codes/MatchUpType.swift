@@ -31,7 +31,7 @@ enum MatchUpType: String, CaseIterable {
         case .doubles: return "Doubles"
         }
     }
-    
+
     static func getMatchUpType(matchUpType: String) -> MatchUpType {
         switch matchUpType {
         case "S":
@@ -53,6 +53,6 @@ extension MatchUpType: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

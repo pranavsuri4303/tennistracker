@@ -31,7 +31,7 @@ enum Sex: String, CaseIterable {
         case .female: return "Female"
         }
     }
-    
+
     static func getSex(sex: String) -> Sex {
         switch sex {
         case "M": return .male
@@ -50,6 +50,6 @@ extension Sex: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

@@ -51,7 +51,7 @@ enum EventLevel: String, CaseIterable {
         case .recreational: return "Recreational"
         }
     }
-    
+
     static func getEventLevel(eventLevel: String) -> EventLevel {
         switch eventLevel {
         case "INT":
@@ -83,7 +83,6 @@ extension EventLevel: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }
-

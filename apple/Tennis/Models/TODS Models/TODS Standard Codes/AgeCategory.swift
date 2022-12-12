@@ -39,7 +39,7 @@ enum AgeCategory: String, CaseIterable {
         case .combined: return "The combined ages of all players on a single side (usually a PAIR)"
         }
     }
-    
+
     static func getAgeCategory(ageCategory: String) -> AgeCategory {
         switch ageCategory {
         case "U":
@@ -65,6 +65,6 @@ extension AgeCategory: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

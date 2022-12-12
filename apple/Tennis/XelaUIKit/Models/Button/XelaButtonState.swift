@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum XelaButtonState:String {
+enum XelaButtonState: String {
     case Default
     case Hover
     case Focus

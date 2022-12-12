@@ -7,36 +7,30 @@
 
 import SwiftUI
 class XelaPieDatasets: ObservableObject {
-    @Published var dataset:XelaPieChartDataset
-    @Published var sum:CGFloat
-    @Published var startDegrees:[Double] = [Double]()
-    @Published var endDegrees:[Double] = [Double]()
-    
-    init(dataset:XelaPieChartDataset, total:CGFloat? = nil) {
+    @Published var dataset: XelaPieChartDataset
+    @Published var sum: CGFloat
+    @Published var startDegrees: [Double] = .init()
+    @Published var endDegrees: [Double] = .init()
+
+    init(dataset: XelaPieChartDataset, total: CGFloat? = nil) {
         self.dataset = dataset
-        
+
         if total != nil {
             sum = total!
-        }
-        else {
+        } else {
             sum = 0
             for data in dataset.data {
-                self.sum += data
+                sum += data
             }
         }
-        
-        var tempEndDegrees:Double = -90
+
+        var tempEndDegrees: Double = -90
         for data in dataset.data {
-            let temp = Double((data * 360 / self.sum))
+            let temp = Double(data * 360 / sum)
             startDegrees.append(tempEndDegrees)
             endDegrees.append(tempEndDegrees + temp)
-            
-           
-            
+
             tempEndDegrees += temp
-            
-            
         }
     }
 }
-

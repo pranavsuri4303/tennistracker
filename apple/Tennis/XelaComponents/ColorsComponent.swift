@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ColorsComponent: View {
     var body: some View {
-        VStack(alignment:.leading, spacing:0) {
+        VStack(alignment: .leading, spacing: 0) {
             HStack {
                 Text("Colors")
                     .xelaSubheadline()
@@ -19,11 +19,11 @@ struct ColorsComponent: View {
             .padding(.horizontal, 24)
             .padding(.top, 24)
             .padding(.bottom, 16)
-            
+
             ScrollView {
-                HStack(spacing:0) {
-                    VStack(alignment:.center, spacing:16) {
-                        VStack(spacing:14) {
+                HStack(spacing: 0) {
+                    VStack(alignment: .center, spacing: 16) {
+                        VStack(spacing: 14) {
                             HStack {
                                 Spacer()
                                 Text("Main colors")
@@ -31,22 +31,22 @@ struct ColorsComponent: View {
                                     .foregroundColor(Color(xelaColor: .Gray4))
                                 Spacer()
                             }
-                            
-                            XelaDivider(color:Color(xelaColor: .Gray11))
+
+                            XelaDivider(color: Color(xelaColor: .Gray11))
                         }
                         .padding(.vertical, 8)
-                        
+
                         Group {
-                            HStack(spacing:16) {
+                            HStack(spacing: 16) {
                                 ZStack {
                                     Color(xelaColor: .Blue)
                                         .cornerRadius(20)
-                                        
+
                                     Text(".Blue")
                                         .xelaCaption()
                                         .foregroundColor(Color(.white))
                                 }
-                                .frame(width:68)
+                                .frame(width: 68)
                                 ZStack {
                                     Color(xelaColor: .Pink)
                                         .cornerRadius(20)
@@ -54,7 +54,7 @@ struct ColorsComponent: View {
                                         .xelaCaption()
                                         .foregroundColor(Color(.white))
                                 }
-                                .frame(width:68)
+                                .frame(width: 68)
                                 ZStack {
                                     Color(xelaColor: .Green)
                                         .cornerRadius(20)
@@ -62,7 +62,7 @@ struct ColorsComponent: View {
                                         .xelaCaption()
                                         .foregroundColor(Color(.white))
                                 }
-                                .frame(width:68)
+                                .frame(width: 68)
                                 ZStack {
                                     Color(xelaColor: .Yellow)
                                         .cornerRadius(20)
@@ -70,19 +70,19 @@ struct ColorsComponent: View {
                                         .xelaCaption()
                                         .foregroundColor(Color(.white))
                                 }
-                                .frame(width:68)
+                                .frame(width: 68)
                             }
                             .frame(height: 68)
-                            HStack(spacing:16) {
+                            HStack(spacing: 16) {
                                 ZStack {
                                     Color(xelaColor: .Orange)
                                         .cornerRadius(20)
-                                        
+
                                     Text(".Orange")
                                         .xelaCaption()
                                         .foregroundColor(Color(.white))
                                 }
-                                .frame(width:68)
+                                .frame(width: 68)
                                 ZStack {
                                     Color(xelaColor: .Red)
                                         .cornerRadius(20)
@@ -90,7 +90,7 @@ struct ColorsComponent: View {
                                         .xelaCaption()
                                         .foregroundColor(Color(.white))
                                 }
-                                .frame(width:68)
+                                .frame(width: 68)
                                 ZStack {
                                     Color(xelaColor: .Purple)
                                         .cornerRadius(20)
@@ -98,7 +98,7 @@ struct ColorsComponent: View {
                                         .xelaCaption()
                                         .foregroundColor(Color(.white))
                                 }
-                                .frame(width:68)
+                                .frame(width: 68)
                                 ZStack {
                                     Color(xelaColor: .Gray)
                                         .cornerRadius(20)
@@ -106,33 +106,31 @@ struct ColorsComponent: View {
                                         .xelaCaption()
                                         .foregroundColor(Color(.white))
                                 }
-                                .frame(width:68)
+                                .frame(width: 68)
                             }
                             .frame(height: 68)
                             Group {
                                 createGrayColorShades()
-                                
+
                                 createBlueColorShades()
-                                
+
                                 createPinkColorShades()
-                                
+
                                 createGreenColorShades()
-                                
+
                                 createYellowColorShades()
-                                
+
                                 createOrangeColorShades()
-                                
+
                                 createRedColorShades()
-                                
+
                                 createPurpleColorShades()
                             }
-                            
+
                             Group {
                                 createGradientsColor()
                             }
                         }
-                        
-                            
                     }
                     .padding(EdgeInsets(top: 8, leading: 24, bottom: 24, trailing: 24))
                     Spacer()
@@ -142,10 +140,10 @@ struct ColorsComponent: View {
         }
         .background(Color(.white))
     }
-    
+
     @ViewBuilder
     func createGradientsColor() -> some View {
-        VStack(spacing:14) {
+        VStack(spacing: 14) {
             HStack {
                 Spacer()
                 Text("Gradients")
@@ -153,13 +151,13 @@ struct ColorsComponent: View {
                     .foregroundColor(Color(xelaColor: .Gray4))
                 Spacer()
             }
-            
-            XelaDivider(color:Color(xelaColor: .Gray11))
+
+            XelaDivider(color: Color(xelaColor: .Gray11))
         }
         .padding(.vertical, 8)
-        
+
         Group {
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Pink), Color(xelaColor: .Blue)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -168,7 +166,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Green), Color(xelaColor: .Blue)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -177,11 +175,11 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
             }
             .frame(height: 68)
-            
-            HStack(spacing:16) {
+
+            HStack(spacing: 16) {
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Yellow), Color(xelaColor: .Blue)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -190,7 +188,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Orange), Color(xelaColor: .Blue)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -199,11 +197,11 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
             }
             .frame(height: 68)
-            
-            HStack(spacing:16) {
+
+            HStack(spacing: 16) {
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Red), Color(xelaColor: .Blue)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -212,7 +210,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Purple), Color(xelaColor: .Blue)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -221,11 +219,11 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
             }
             .frame(height: 68)
-            
-            HStack(spacing:16) {
+
+            HStack(spacing: 16) {
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Green), Color(xelaColor: .Pink)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -234,7 +232,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Yellow), Color(xelaColor: .Pink)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -243,11 +241,11 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
             }
             .frame(height: 68)
-            
-            HStack(spacing:16) {
+
+            HStack(spacing: 16) {
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Orange), Color(xelaColor: .Pink)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -256,7 +254,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Red), Color(xelaColor: .Pink)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -265,11 +263,11 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
             }
             .frame(height: 68)
-            
-            HStack(spacing:16) {
+
+            HStack(spacing: 16) {
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Purple), Color(xelaColor: .Pink)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -278,7 +276,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Red), Color(xelaColor: .Orange)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -287,11 +285,11 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
             }
             .frame(height: 68)
-            
-            HStack(spacing:16) {
+
+            HStack(spacing: 16) {
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Orange), Color(xelaColor: .Yellow)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -300,7 +298,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Red), Color(xelaColor: .Yellow)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -309,11 +307,11 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
             }
             .frame(height: 68)
-            
-            HStack(spacing:16) {
+
+            HStack(spacing: 16) {
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Purple), Color(xelaColor: .Yellow)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -322,7 +320,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Purple), Color(xelaColor: .Orange)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -331,11 +329,11 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
             }
             .frame(height: 68)
-            
-            HStack(spacing:16) {
+
+            HStack(spacing: 16) {
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Purple), Color(xelaColor: .Red)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -344,7 +342,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Red), Color(xelaColor: .Green)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -353,11 +351,11 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
             }
             .frame(height: 68)
-            
-            HStack(spacing:16) {
+
+            HStack(spacing: 16) {
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Yellow), Color(xelaColor: .Green)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -366,7 +364,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color(xelaColor: .Orange), Color(xelaColor: .Green)]), startPoint: .bottomLeading, endPoint: .topTrailing)
                         .cornerRadius(20)
@@ -375,16 +373,15 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:136)
+                .frame(width: 136)
             }
             .frame(height: 68)
-            
         }
     }
-    
+
     @ViewBuilder
     func createPurpleColorShades() -> some View {
-        VStack(spacing:14) {
+        VStack(spacing: 14) {
             HStack {
                 Spacer()
                 Text("Purple shades")
@@ -392,22 +389,22 @@ struct ColorsComponent: View {
                     .foregroundColor(Color(xelaColor: .Gray4))
                 Spacer()
             }
-            
-            XelaDivider(color:Color(xelaColor: .Gray11))
+
+            XelaDivider(color: Color(xelaColor: .Gray11))
         }
         .padding(.vertical, 8)
-        
+
         Group {
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Purple1)
                         .cornerRadius(20)
-                        
+
                     Text(".Purple1")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Purple2)
                         .cornerRadius(20)
@@ -415,7 +412,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Purple3)
                         .cornerRadius(20)
@@ -423,7 +420,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Purple4)
                         .cornerRadius(20)
@@ -431,19 +428,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Purple5)
                         .cornerRadius(20)
-                        
+
                     Text(".Purple5")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Purple6)
                         .cornerRadius(20)
@@ -451,7 +448,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Purple7)
                         .cornerRadius(20)
@@ -459,7 +456,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Purple8)
                         .cornerRadius(20)
@@ -467,19 +464,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Purple9)
                         .cornerRadius(20)
-                        
+
                     Text(".Purple9")
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Purple10)
                         .cornerRadius(20)
@@ -487,7 +484,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Purple11)
                         .cornerRadius(20)
@@ -495,7 +492,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Purple12)
                         .cornerRadius(20)
@@ -503,15 +500,15 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
         }
     }
-    
+
     @ViewBuilder
     func createRedColorShades() -> some View {
-        VStack(spacing:14) {
+        VStack(spacing: 14) {
             HStack {
                 Spacer()
                 Text("Red shades")
@@ -519,22 +516,22 @@ struct ColorsComponent: View {
                     .foregroundColor(Color(xelaColor: .Gray4))
                 Spacer()
             }
-            
-            XelaDivider(color:Color(xelaColor: .Gray11))
+
+            XelaDivider(color: Color(xelaColor: .Gray11))
         }
         .padding(.vertical, 8)
-        
+
         Group {
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Red1)
                         .cornerRadius(20)
-                        
+
                     Text(".Red1")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Red2)
                         .cornerRadius(20)
@@ -542,7 +539,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Red3)
                         .cornerRadius(20)
@@ -550,7 +547,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Red4)
                         .cornerRadius(20)
@@ -558,19 +555,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Red5)
                         .cornerRadius(20)
-                        
+
                     Text(".Red5")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Red6)
                         .cornerRadius(20)
@@ -578,7 +575,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Red7)
                         .cornerRadius(20)
@@ -586,7 +583,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Red8)
                         .cornerRadius(20)
@@ -594,19 +591,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Red9)
                         .cornerRadius(20)
-                        
+
                     Text(".Red9")
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Red10)
                         .cornerRadius(20)
@@ -614,7 +611,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Red11)
                         .cornerRadius(20)
@@ -622,7 +619,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Red12)
                         .cornerRadius(20)
@@ -630,15 +627,15 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
         }
     }
-    
+
     @ViewBuilder
     func createOrangeColorShades() -> some View {
-        VStack(spacing:14) {
+        VStack(spacing: 14) {
             HStack {
                 Spacer()
                 Text("Orange shades")
@@ -646,22 +643,22 @@ struct ColorsComponent: View {
                     .foregroundColor(Color(xelaColor: .Gray4))
                 Spacer()
             }
-            
-            XelaDivider(color:Color(xelaColor: .Gray11))
+
+            XelaDivider(color: Color(xelaColor: .Gray11))
         }
         .padding(.vertical, 8)
-        
+
         Group {
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Orange1)
                         .cornerRadius(20)
-                        
+
                     Text(".Orange1")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Orange2)
                         .cornerRadius(20)
@@ -669,7 +666,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Orange3)
                         .cornerRadius(20)
@@ -677,7 +674,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Orange4)
                         .cornerRadius(20)
@@ -685,19 +682,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Orange5)
                         .cornerRadius(20)
-                        
+
                     Text(".Orange5")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Orange6)
                         .cornerRadius(20)
@@ -705,7 +702,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Orange7)
                         .cornerRadius(20)
@@ -713,7 +710,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Orange8)
                         .cornerRadius(20)
@@ -721,19 +718,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Orange9)
                         .cornerRadius(20)
-                        
+
                     Text(".Orange9")
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Orange10)
                         .cornerRadius(20)
@@ -741,7 +738,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Orange11)
                         .cornerRadius(20)
@@ -749,7 +746,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Orange12)
                         .cornerRadius(20)
@@ -757,15 +754,15 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
         }
     }
-    
+
     @ViewBuilder
     func createYellowColorShades() -> some View {
-        VStack(spacing:14) {
+        VStack(spacing: 14) {
             HStack {
                 Spacer()
                 Text("Yellow shades")
@@ -773,22 +770,22 @@ struct ColorsComponent: View {
                     .foregroundColor(Color(xelaColor: .Gray4))
                 Spacer()
             }
-            
-            XelaDivider(color:Color(xelaColor: .Gray11))
+
+            XelaDivider(color: Color(xelaColor: .Gray11))
         }
         .padding(.vertical, 8)
-        
+
         Group {
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Yellow1)
                         .cornerRadius(20)
-                        
+
                     Text(".Yellow1")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Yellow2)
                         .cornerRadius(20)
@@ -796,7 +793,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Yellow3)
                         .cornerRadius(20)
@@ -804,7 +801,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Yellow4)
                         .cornerRadius(20)
@@ -812,19 +809,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Yellow5)
                         .cornerRadius(20)
-                        
+
                     Text(".Yellow5")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Yellow6)
                         .cornerRadius(20)
@@ -832,7 +829,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Yellow7)
                         .cornerRadius(20)
@@ -840,7 +837,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Yellow8)
                         .cornerRadius(20)
@@ -848,19 +845,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Yellow9)
                         .cornerRadius(20)
-                        
+
                     Text(".Yellow9")
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Yellow10)
                         .cornerRadius(20)
@@ -868,7 +865,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Yellow11)
                         .cornerRadius(20)
@@ -876,7 +873,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Yellow12)
                         .cornerRadius(20)
@@ -884,15 +881,15 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
         }
     }
-    
+
     @ViewBuilder
     func createGreenColorShades() -> some View {
-        VStack(spacing:14) {
+        VStack(spacing: 14) {
             HStack {
                 Spacer()
                 Text("Green shades")
@@ -900,22 +897,22 @@ struct ColorsComponent: View {
                     .foregroundColor(Color(xelaColor: .Gray4))
                 Spacer()
             }
-            
-            XelaDivider(color:Color(xelaColor: .Gray11))
+
+            XelaDivider(color: Color(xelaColor: .Gray11))
         }
         .padding(.vertical, 8)
-        
+
         Group {
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Green1)
                         .cornerRadius(20)
-                        
+
                     Text(".Green1")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Green2)
                         .cornerRadius(20)
@@ -923,7 +920,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Green3)
                         .cornerRadius(20)
@@ -931,7 +928,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Green4)
                         .cornerRadius(20)
@@ -939,19 +936,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Green5)
                         .cornerRadius(20)
-                        
+
                     Text(".Green5")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Green6)
                         .cornerRadius(20)
@@ -959,7 +956,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Green7)
                         .cornerRadius(20)
@@ -967,7 +964,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Green8)
                         .cornerRadius(20)
@@ -975,19 +972,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Green9)
                         .cornerRadius(20)
-                        
+
                     Text(".Green9")
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Green10)
                         .cornerRadius(20)
@@ -995,7 +992,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Green11)
                         .cornerRadius(20)
@@ -1003,7 +1000,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Green12)
                         .cornerRadius(20)
@@ -1011,15 +1008,15 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
         }
     }
-    
+
     @ViewBuilder
     func createPinkColorShades() -> some View {
-        VStack(spacing:14) {
+        VStack(spacing: 14) {
             HStack {
                 Spacer()
                 Text("Pink shades")
@@ -1027,22 +1024,22 @@ struct ColorsComponent: View {
                     .foregroundColor(Color(xelaColor: .Gray4))
                 Spacer()
             }
-            
-            XelaDivider(color:Color(xelaColor: .Gray11))
+
+            XelaDivider(color: Color(xelaColor: .Gray11))
         }
         .padding(.vertical, 8)
-        
+
         Group {
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Pink1)
                         .cornerRadius(20)
-                        
+
                     Text(".Pink1")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Pink2)
                         .cornerRadius(20)
@@ -1050,7 +1047,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Pink3)
                         .cornerRadius(20)
@@ -1058,7 +1055,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Pink4)
                         .cornerRadius(20)
@@ -1066,19 +1063,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Pink5)
                         .cornerRadius(20)
-                        
+
                     Text(".Pink5")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Pink6)
                         .cornerRadius(20)
@@ -1086,7 +1083,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Pink7)
                         .cornerRadius(20)
@@ -1094,7 +1091,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Pink8)
                         .cornerRadius(20)
@@ -1102,19 +1099,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Pink9)
                         .cornerRadius(20)
-                        
+
                     Text(".Pink9")
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Pink10)
                         .cornerRadius(20)
@@ -1122,7 +1119,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Pink11)
                         .cornerRadius(20)
@@ -1130,7 +1127,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Pink12)
                         .cornerRadius(20)
@@ -1138,15 +1135,15 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
         }
     }
-    
+
     @ViewBuilder
     func createBlueColorShades() -> some View {
-        VStack(spacing:14) {
+        VStack(spacing: 14) {
             HStack {
                 Spacer()
                 Text("Blue shades")
@@ -1154,22 +1151,22 @@ struct ColorsComponent: View {
                     .foregroundColor(Color(xelaColor: .Gray4))
                 Spacer()
             }
-            
-            XelaDivider(color:Color(xelaColor: .Gray11))
+
+            XelaDivider(color: Color(xelaColor: .Gray11))
         }
         .padding(.vertical, 8)
-        
+
         Group {
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Blue1)
                         .cornerRadius(20)
-                        
+
                     Text(".Blue1")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Blue2)
                         .cornerRadius(20)
@@ -1177,7 +1174,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Blue3)
                         .cornerRadius(20)
@@ -1185,7 +1182,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Blue4)
                         .cornerRadius(20)
@@ -1193,19 +1190,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Blue5)
                         .cornerRadius(20)
-                        
+
                     Text(".Blue5")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Blue6)
                         .cornerRadius(20)
@@ -1213,7 +1210,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Blue7)
                         .cornerRadius(20)
@@ -1221,7 +1218,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Blue8)
                         .cornerRadius(20)
@@ -1229,19 +1226,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Blue9)
                         .cornerRadius(20)
-                        
+
                     Text(".Blue9")
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Blue10)
                         .cornerRadius(20)
@@ -1249,7 +1246,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Blue11)
                         .cornerRadius(20)
@@ -1257,7 +1254,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Blue12)
                         .cornerRadius(20)
@@ -1265,15 +1262,15 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
         }
     }
-    
+
     @ViewBuilder
     func createGrayColorShades() -> some View {
-        VStack(spacing:14) {
+        VStack(spacing: 14) {
             HStack {
                 Spacer()
                 Text("Gray shades")
@@ -1281,22 +1278,22 @@ struct ColorsComponent: View {
                     .foregroundColor(Color(xelaColor: .Gray4))
                 Spacer()
             }
-            
-            XelaDivider(color:Color(xelaColor: .Gray11))
+
+            XelaDivider(color: Color(xelaColor: .Gray11))
         }
         .padding(.vertical, 8)
-        
+
         Group {
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Gray1)
                         .cornerRadius(20)
-                        
+
                     Text(".Gray1")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Gray2)
                         .cornerRadius(20)
@@ -1304,7 +1301,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Gray3)
                         .cornerRadius(20)
@@ -1312,7 +1309,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Gray4)
                         .cornerRadius(20)
@@ -1320,19 +1317,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Gray5)
                         .cornerRadius(20)
-                        
+
                     Text(".Gray5")
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Gray6)
                         .cornerRadius(20)
@@ -1340,7 +1337,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Gray7)
                         .cornerRadius(20)
@@ -1348,7 +1345,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Gray8)
                         .cornerRadius(20)
@@ -1356,19 +1353,19 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.white))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
-            HStack(spacing:16) {
+            HStack(spacing: 16) {
                 ZStack {
                     Color(xelaColor: .Gray9)
                         .cornerRadius(20)
-                        
+
                     Text(".Gray9")
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Gray10)
                         .cornerRadius(20)
@@ -1376,7 +1373,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Gray11)
                         .cornerRadius(20)
@@ -1384,7 +1381,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
                 ZStack {
                     Color(xelaColor: .Gray12)
                         .cornerRadius(20)
@@ -1392,7 +1389,7 @@ struct ColorsComponent: View {
                         .xelaCaption()
                         .foregroundColor(Color(.black))
                 }
-                .frame(width:68)
+                .frame(width: 68)
             }
             .frame(height: 68)
         }

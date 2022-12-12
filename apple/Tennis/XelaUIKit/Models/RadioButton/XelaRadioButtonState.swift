@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum XelaRadioButtonState:String {
+enum XelaRadioButtonState: String {
     case Default
     case Hover
     case Selected

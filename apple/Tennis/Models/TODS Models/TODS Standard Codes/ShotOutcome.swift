@@ -35,7 +35,7 @@ enum ShotOutcome: String, CaseIterable {
         case .shotLet: return "Let "
         }
     }
-    
+
     static func getShotOutcome(shotOutcome: String) -> ShotOutcome {
         switch shotOutcome {
         case "I": return .shotIn
@@ -55,6 +55,6 @@ extension ShotOutcome: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

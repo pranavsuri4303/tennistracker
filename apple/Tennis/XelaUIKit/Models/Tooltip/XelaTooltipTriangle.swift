@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-struct XelaTooltipTriangle:Shape {
+struct XelaTooltipTriangle: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
 

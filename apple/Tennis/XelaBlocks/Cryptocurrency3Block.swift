@@ -10,9 +10,9 @@ import SwiftUI
 struct Cryptocurrency3Block: View {
     var isDark = false
     var body: some View {
-        VStack(spacing:24) {
-            HStack(spacing:16) {
-                XelaButton(leftIcon:"down-1", size: .Small, background: Color.clear, foregroundColor: isDark ? Color(.white) : Color(xelaColor: .Gray2))
+        VStack(spacing: 24) {
+            HStack(spacing: 16) {
+                XelaButton(leftIcon: "down-1", size: .Small, background: Color.clear, foregroundColor: isDark ? Color(.white) : Color(xelaColor: .Gray2))
                 Text("My Account")
                     .xelaSubheadline()
                     .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
@@ -21,9 +21,9 @@ struct Cryptocurrency3Block: View {
             }
             .padding(.top, 24)
             .padding(.horizontal, 16)
-            
+
             HStack(spacing: 16) {
-                VStack(alignment:.leading, spacing:0) {
+                VStack(alignment: .leading, spacing: 0) {
                     Text("Your active Deposit")
                         .xelaCaption()
                         .foregroundColor(isDark ? Color(xelaColor: .Gray6) : Color(xelaColor: .Gray8))
@@ -32,50 +32,48 @@ struct Cryptocurrency3Block: View {
                         .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
                 }
                 Spacer()
-                Button(action:{}) {
-                    HStack(spacing:8) {
+                Button(action: {}) {
+                    HStack(spacing: 8) {
                         Text("View transactions")
                             .xelaSmallBodyBold()
-                            
+
                         Image("right-small")
                             .resizable()
                             .renderingMode(.template)
-                            .frame(width:15, height:15)
-                        
+                            .frame(width: 15, height: 15)
                     }
                 }
                 .foregroundColor(isDark ? Color(xelaColor: .Blue6) : Color(xelaColor: .Blue3))
             }
             .padding(.horizontal, 16)
-            
-            XelaDivider(style:.Dotted, color: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11))
+
+            XelaDivider(style: .Dotted, color: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11))
                 .padding(.horizontal, 16)
             ScrollView {
-                VStack(spacing:24) {
-                    VStack(spacing:8) {
+                VStack(spacing: 24) {
+                    VStack(spacing: 8) {
                         HStack {
                             Text("Balances")
                                 .xelaBodyBold()
                                 .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
                             Spacer()
-                            XelaButton(text:"Add New", rightIcon: "add-small", size: .Small, type: .Secondary, background: Color.clear, foregroundColor: isDark ? Color(.white) : Color(xelaColor: .Gray2), defaultBorderColor: isDark ? Color(xelaColor: .Gray3) : Color(xelaColor: .Gray11))
+                            XelaButton(text: "Add New", rightIcon: "add-small", size: .Small, type: .Secondary, background: Color.clear, foregroundColor: isDark ? Color(.white) : Color(xelaColor: .Gray2), defaultBorderColor: isDark ? Color(xelaColor: .Gray3) : Color(xelaColor: .Gray11))
                         }
-                        
-                        HStack(spacing:8) {
-                            VStack(spacing:8) {
+
+                        HStack(spacing: 8) {
+                            VStack(spacing: 8) {
                                 HStack {
                                     Image("ethereum")
                                         .resizable()
                                         .frame(width: 24, height: 24)
                                     Spacer()
                                 }
-                                VStack(spacing:0) {
+                                VStack(spacing: 0) {
                                     HStack {
                                         Text("83.874 ETH")
                                             .xelaSubheadline()
                                             .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
                                         Spacer()
-                                            
                                     }
                                     HStack {
                                         Text("$3,284.00")
@@ -88,21 +86,20 @@ struct Cryptocurrency3Block: View {
                             .padding(EdgeInsets(top: 24, leading: 24, bottom: 24, trailing: 24))
                             .background(isDark ? Color(xelaColor: .Gray2) : Color(xelaColor: .Gray12))
                             .cornerRadius(16)
-                            
-                            VStack(spacing:8) {
+
+                            VStack(spacing: 8) {
                                 HStack {
                                     Image("bitcoin")
                                         .resizable()
                                         .frame(width: 24, height: 24)
                                     Spacer()
                                 }
-                                VStack(spacing:0) {
+                                VStack(spacing: 0) {
                                     HStack {
                                         Text("1 BTC")
                                             .xelaSubheadline()
                                             .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
                                         Spacer()
-                                            
                                     }
                                     HStack {
                                         Text("$8,006.00 ")
@@ -116,22 +113,21 @@ struct Cryptocurrency3Block: View {
                             .background(isDark ? Color(xelaColor: .Gray2) : Color(xelaColor: .Gray12))
                             .cornerRadius(16)
                         }
-                        
-                        HStack(spacing:8) {
-                            VStack(spacing:8) {
+
+                        HStack(spacing: 8) {
+                            VStack(spacing: 8) {
                                 HStack {
                                     Image("dash")
                                         .resizable()
                                         .frame(width: 24, height: 24)
                                     Spacer()
                                 }
-                                VStack(spacing:0) {
+                                VStack(spacing: 0) {
                                     HStack {
                                         Text("1000 DASH")
                                             .xelaSubheadline()
                                             .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
                                         Spacer()
-                                            
                                     }
                                     HStack {
                                         Text("$2,833.00")
@@ -144,21 +140,20 @@ struct Cryptocurrency3Block: View {
                             .padding(EdgeInsets(top: 24, leading: 24, bottom: 24, trailing: 24))
                             .background(isDark ? Color(xelaColor: .Gray2) : Color(xelaColor: .Gray12))
                             .cornerRadius(16)
-                            
-                            VStack(spacing:8) {
+
+                            VStack(spacing: 8) {
                                 HStack {
                                     Image("binance")
                                         .resizable()
                                         .frame(width: 24, height: 24)
                                     Spacer()
                                 }
-                                VStack(spacing:0) {
+                                VStack(spacing: 0) {
                                     HStack {
                                         Text("0.04869 BIN")
                                             .xelaSubheadline()
                                             .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
                                         Spacer()
-                                            
                                     }
                                     HStack {
                                         Text("$1,366.00")
@@ -174,7 +169,7 @@ struct Cryptocurrency3Block: View {
                         }
                     }
                     .padding(.horizontal, 16)
-                    VStack(spacing:16) {
+                    VStack(spacing: 16) {
                         HStack {
                             Text("Exchange rate")
                                 .xelaBodyBold()
@@ -182,7 +177,7 @@ struct Cryptocurrency3Block: View {
                             Spacer()
                         }
                         .padding(.horizontal, 16)
-                        
+
                         HStack {
                             Text("Name")
                                 .xelaCaption()
@@ -193,7 +188,7 @@ struct Cryptocurrency3Block: View {
                                 .foregroundColor(isDark ? Color(xelaColor: .Gray6) : Color(xelaColor: .Gray8))
                         }
                         .padding(.horizontal, 16)
-                        
+
                         rate(image: "bitcoin", title: "Bitcoin", caption: "BTC", price: "$5,950", percent: "6.82%", up: false)
                             .padding(.horizontal, 16)
                         rate(image: "ethereum", title: "Etherium", caption: "ETH", price: "$3,698", percent: "3.19%", up: true)
@@ -204,27 +199,25 @@ struct Cryptocurrency3Block: View {
                             .padding(.horizontal, 16)
                             .padding(.bottom, 24)
                     }
-                    
-                    
                 }
             }
         }
         .background(isDark ? Color(xelaColor: .Gray1) : Color(.white))
     }
-    
+
     @ViewBuilder
-    func rate(image:String, title:String, caption:String, price:String, percent:String, up:Bool) -> some View {
-        HStack(spacing:12) {
+    func rate(image: String, title: String, caption: String, price: String, percent: String, up: Bool) -> some View {
+        HStack(spacing: 12) {
             VStack {
                 Image(image)
                     .resizable()
-                    .frame(width:24, height: 24)
+                    .frame(width: 24, height: 24)
                     .padding(8)
             }
             .background(isDark ? Color(xelaColor: .Gray3) : Color(xelaColor: .Gray12))
             .cornerRadius(8)
-            
-            VStack(alignment:.leading, spacing:0) {
+
+            VStack(alignment: .leading, spacing: 0) {
                 Text(title)
                     .xelaSmallBodyBold()
                     .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
@@ -232,18 +225,18 @@ struct Cryptocurrency3Block: View {
                     .xelaCaption()
                     .foregroundColor(isDark ? Color(xelaColor: .Gray6) : Color(xelaColor: .Gray8))
             }
-            
+
             Spacer()
-            VStack(alignment:.trailing, spacing:0) {
+            VStack(alignment: .trailing, spacing: 0) {
                 Text(price)
                     .xelaButtonMedium()
                     .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
-                HStack(spacing:0) {
+                HStack(spacing: 0) {
                     Image(up ? "arrow-up-small" : "arrow-down-small")
                         .resizable()
                         .renderingMode(.template)
                         .foregroundColor(Color(xelaColor: up ? .Green1 : .Red6))
-                        .frame(width:15, height: 15)
+                        .frame(width: 15, height: 15)
                     Text(percent)
                         .xelaCaption()
                         .foregroundColor(Color(xelaColor: up ? .Green1 : .Red6))
@@ -252,4 +245,3 @@ struct Cryptocurrency3Block: View {
         }
     }
 }
-

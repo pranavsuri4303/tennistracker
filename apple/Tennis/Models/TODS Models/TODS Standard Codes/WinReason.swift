@@ -47,7 +47,7 @@ enum WinReason: String, CaseIterable {
         case .doubleFault: return "Double Fault"
         }
     }
-    
+
     static func getWinReason(winReason: String) -> WinReason {
         switch winReason {
         case "A": return .ace
@@ -70,6 +70,6 @@ extension WinReason: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

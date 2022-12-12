@@ -39,14 +39,14 @@ enum ParticipantRole: String, CaseIterable {
         case .coach: return "Coach"
         }
     }
-    
+
     static func getParticipantRole(participantRole: String) -> ParticipantRole {
         switch participantRole {
-        case "COMP" : return .competitor
-        case "OFF" : return .official
-        case "CAP" : return .captain
+        case "COMP": return .competitor
+        case "OFF": return .official
+        case "CAP": return .captain
         case "CCH": return .coach
-        default : return .competitor
+        default: return .competitor
         }
     }
 }
@@ -60,6 +60,6 @@ extension ParticipantRole: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

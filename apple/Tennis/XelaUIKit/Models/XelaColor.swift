@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum XelaMainColor:String {
+enum XelaMainColor: String {
     case Blue = "#1d1929"
     case Pink = "#34303e"
     case Green = "#4a4754"
@@ -18,8 +18,7 @@ enum XelaMainColor:String {
     case Gray = "#bbbabf"
 }
 
-enum XelaColorShades:String {
-    
+enum XelaColorShades: String {
     case Gray1 = "#0f0d15"
     case Gray2 = "#1d1929"
     case Gray3 = "#34303e"
@@ -32,7 +31,7 @@ enum XelaColorShades:String {
     case Gray10 = "#d2d1d4"
     case Gray11 = "#e8e8ea"
     case Gray12 = "#f9f9f9"
-    
+
     case Blue1 = "#0030cc"
     case Blue2 = "#0036e6"
     case Blue3 = "#003cff"
@@ -45,7 +44,7 @@ enum XelaColorShades:String {
     case Blue10 = "#b3c5ff"
     case Blue11 = "#ccd8ff"
     case Blue12 = "#e6ecff"
-    
+
     case Pink1 = "#c80068"
     case Pink2 = "#e10075"
     case Pink3 = "#fa0082"
@@ -58,7 +57,7 @@ enum XelaColorShades:String {
     case Pink10 = "#feb3da"
     case Pink11 = "#fecce6"
     case Pink12 = "#ffe6f3"
-    
+
     case Green1 = "#18ba92"
     case Green2 = "#1bd2a4"
     case Green3 = "#1ee9b6"
@@ -71,7 +70,7 @@ enum XelaColorShades:String {
     case Green10 = "#bcf8e9"
     case Green11 = "#d2fbf0"
     case Green12 = "#e9fdf8"
-    
+
     case Yellow1 = "#ccb243"
     case Yellow2 = "#e6c84c"
     case Yellow3 = "#ffde54"
@@ -84,7 +83,7 @@ enum XelaColorShades:String {
     case Yellow10 = "#fff5cc"
     case Yellow11 = "#fff8dd"
     case Yellow12 = "#fffcee"
-    
+
     case Orange1 = "#cc5801"
     case Orange2 = "#e66301"
     case Orange3 = "#ff6e01"
@@ -97,7 +96,7 @@ enum XelaColorShades:String {
     case Orange10 = "#ffd4b3"
     case Orange11 = "#ffe2cc"
     case Orange12 = "#fff1e6"
-    
+
     case Red1 = "#c32021"
     case Red2 = "#dc2425"
     case Red3 = "#f42829"
@@ -110,7 +109,7 @@ enum XelaColorShades:String {
     case Red10 = "#fcbfbf"
     case Red11 = "#fdd4d4"
     case Red12 = "#feeaea"
-    
+
     case Purple1 = "#ae59c6"
     case Purple2 = "#c364df"
     case Purple3 = "#d96ff8"
@@ -123,6 +122,4 @@ enum XelaColorShades:String {
     case Purple10 = "#f4d4fd"
     case Purple11 = "#f7e2fe"
     case Purple12 = "#fbf1fe"
-    
-    
 }

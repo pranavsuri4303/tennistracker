@@ -7,7 +7,7 @@
 
 import Foundation
 struct XelaSegmentedControllItem: Identifiable {
-    public var id:Int
-    public var label:String = ""
-    public var icon:String = ""
+    public var id: Int
+    public var label: String = ""
+    public var icon: String = ""
 }

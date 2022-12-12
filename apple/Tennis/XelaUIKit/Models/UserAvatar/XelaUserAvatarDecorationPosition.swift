@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum XelaUserAvatarDecorationPosition:String {
+enum XelaUserAvatarDecorationPosition: String {
     case BottomRight
     case TopRight
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum XelaButtonType:String {
+enum XelaButtonType: String {
     case Primary
     case Secondary
 }

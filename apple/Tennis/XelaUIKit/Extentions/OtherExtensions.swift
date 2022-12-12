@@ -14,10 +14,10 @@ extension View {
      - Returns: `Textfield` with `placeholder`
      */
     func xelaPlaceholder<Content: View>(
-        when shouldShow: Bool,
+        when _: Bool,
         alignment: Alignment = .leading,
-        @ViewBuilder placeholder: () -> Content) -> some View {
-
+        @ViewBuilder placeholder: () -> Content
+    ) -> some View {
         ZStack(alignment: alignment) {
             placeholder()
                 .zIndex(-1)
@@ -45,7 +45,7 @@ extension Binding {
 }
 
 extension CGFloat {
-    func map(from: ClosedRange<CGFloat>, to: ClosedRange<CGFloat>, step:CGFloat) -> CGFloat {
+    func map(from: ClosedRange<CGFloat>, to: ClosedRange<CGFloat>, step: CGFloat) -> CGFloat {
         let result = ((self - from.lowerBound) / (from.upperBound - from.lowerBound)) * (to.upperBound - to.lowerBound) + to.lowerBound
         let newVal = (result / step).rounded() * step
         return newVal
@@ -54,7 +54,7 @@ extension CGFloat {
 
 extension View {
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
-        clipShape( XelaRoundedCorner(radius: radius, corners: corners) )
+        clipShape(XelaRoundedCorner(radius: radius, corners: corners))
     }
 }
 

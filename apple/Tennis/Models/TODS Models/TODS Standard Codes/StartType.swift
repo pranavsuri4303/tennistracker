@@ -43,15 +43,15 @@ enum StartType: String, CaseIterable {
         case .actual: return "Actual"
         }
     }
-    
+
     static func getStartType(startType: String) -> StartType {
         switch startType {
-        case "FX" : return .fixed
-        case "FO" : return .follows
-        case "FD" : return .followsWithDelay
-        case "NB" : return .notBefore
-        case "AC" : return .actual
-        default : return .actual
+        case "FX": return .fixed
+        case "FO": return .follows
+        case "FD": return .followsWithDelay
+        case "NB": return .notBefore
+        case "AC": return .actual
+        default: return .actual
         }
     }
 }
@@ -65,6 +65,6 @@ extension StartType: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

@@ -39,7 +39,7 @@ class Sett: Codable, Equatable {
         self.updated = updated
         self.winningSide = winningSide
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case extensions
         case games

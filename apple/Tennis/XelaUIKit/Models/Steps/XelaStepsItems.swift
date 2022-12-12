@@ -8,11 +8,9 @@
 import SwiftUI
 
 class XelaStepsItems: ObservableObject {
-    @Published var items:[XelaStepItem]
-    
-    init(items:[XelaStepItem]) {
+    @Published var items: [XelaStepItem]
+
+    init(items: [XelaStepItem]) {
         self.items = items
     }
-    
-    
 }

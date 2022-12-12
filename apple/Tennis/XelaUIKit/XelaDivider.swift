@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct XelaDivider: View {
-    
-    var style:XelaDividerStyle = .Solid
-    var orientation:XelaDividerOrientation = .Horizontal
-    var color:Color = Color(xelaColor: .Gray11)
-    
+    var style: XelaDividerStyle = .Solid
+    var orientation: XelaDividerOrientation = .Horizontal
+    var color: Color = .init(xelaColor: .Gray11)
+
     var body: some View {
         if orientation == .Horizontal {
             if style == .Dotted {
@@ -20,42 +19,35 @@ struct XelaDivider: View {
                     .stroke(style: StrokeStyle(lineWidth: 2, dash: [2, 6]))
                     .frame(height: 2)
                     .foregroundColor(color)
-            }
-            else if style == .Dashed {
+            } else if style == .Dashed {
                 XelaHorizontalLine()
                     .stroke(style: StrokeStyle(lineWidth: 1, dash: [8, 4]))
                     .frame(height: 1)
                     .foregroundColor(color)
-            }
-            else {
+            } else {
                 XelaHorizontalLine()
                     .stroke(lineWidth: 1)
                     .frame(height: 1)
                     .foregroundColor(color)
             }
-            
-        }
-        else {
+        } else {
             if style == .Dotted {
                 XelaVerticalLine()
                     .stroke(style: StrokeStyle(lineWidth: 2, dash: [2, 6]))
                     .frame(width: 2)
                     .foregroundColor(color)
-            }
-            else if style == .Dashed {
+            } else if style == .Dashed {
                 XelaVerticalLine()
                     .stroke(style: StrokeStyle(lineWidth: 1, dash: [8, 4]))
                     .frame(width: 1)
                     .foregroundColor(color)
-            }
-            else {
+            } else {
                 XelaVerticalLine()
                     .stroke(lineWidth: 1)
                     .frame(width: 1)
                     .foregroundColor(color)
             }
         }
-        
     }
 }
 

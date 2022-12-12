@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct XelaDate {
-    var date:Date
-    
-    var xelaManager:XelaDateManager
-    
-    var isDisabled:Bool = false
-    var isToday:Bool = false
-    var isSelected:Bool = false
-    var isBetweenStartAndEnd:Bool = false
-    
+    var date: Date
+
+    var xelaManager: XelaDateManager
+
+    var isDisabled: Bool = false
+    var isToday: Bool = false
+    var isSelected: Bool = false
+    var isBetweenStartAndEnd: Bool = false
+
     func getText() -> String {
-        let day = formatDate(date: date, calendar: self.xelaManager.calendar)
+        let day = formatDate(date: date, calendar: xelaManager.calendar)
         return day
     }
-    
+
     func getTextColor() -> Color {
         var textColor = xelaManager.colors.textColor
         if isDisabled {
@@ -35,7 +35,7 @@ struct XelaDate {
         }
         return textColor
     }
-    
+
     func getBackgroundColor() -> Color {
         var backgroundColor = xelaManager.colors.textBackgroundColor
         if isBetweenStartAndEnd {
@@ -52,32 +52,31 @@ struct XelaDate {
         }
         return backgroundColor
     }
-    
+
     func getChangeMonthBackgroundColor() -> Color {
         return xelaManager.colors.changeMonthButtonBackground
     }
-    
+
     func getChangeMonthForegroundColor() -> Color {
         return xelaManager.colors.changeMonthButtonForeground
     }
-    
+
     func formatDate(date: Date, calendar: Calendar) -> String {
         let formatter = dateFormatter()
         return stringFrom(date: date, formatter: formatter, calendar: calendar)
     }
-    
+
     func dateFormatter() -> DateFormatter {
         let formatter = DateFormatter()
         formatter.locale = .current
         formatter.dateFormat = "d"
         return formatter
     }
-    
+
     func stringFrom(date: Date, formatter: DateFormatter, calendar: Calendar) -> String {
         if formatter.calendar != calendar {
             formatter.calendar = calendar
         }
         return formatter.string(from: date)
     }
-    
 }

@@ -8,7 +8,6 @@
 import SwiftUI
 
 extension Color {
-    
     /**
      Modify the Color.
 
@@ -69,7 +68,7 @@ extension Color {
             self.init(.sRGB, red: red, green: green, blue: blue, opacity: 1)
 
         } else if string.count == 8 {
-            let mask = 0x000000FF
+            let mask = 0x0000_00FF
             let r = Int(color >> 24) & mask
             let g = Int(color >> 16) & mask
             let b = Int(color >> 8) & mask
@@ -87,5 +86,3 @@ extension Color {
         }
     }
 }
-
-

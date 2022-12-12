@@ -35,7 +35,7 @@ enum EventType: String, CaseIterable {
         case .team: return "Team"
         }
     }
-    
+
     static func getEventType(eventType: String) -> EventType {
         switch eventType {
         case "S":
@@ -59,7 +59,6 @@ extension EventType: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }
-

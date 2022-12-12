@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum XelaTextareaState:String {
+enum XelaTextareaState: String {
     case Default
     case Hover
     case Error

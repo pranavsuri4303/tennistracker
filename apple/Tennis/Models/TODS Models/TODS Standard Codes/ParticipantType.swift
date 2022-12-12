@@ -39,14 +39,14 @@ enum ParticipantType: String, CaseIterable {
         case .squad: return "Squad"
         }
     }
-    
+
     static func getParticipantType(participantType: String) -> ParticipantType {
         switch participantType {
-        case "I" : return .individual
-        case "P" : return .pair
-        case "T" : return .team
+        case "I": return .individual
+        case "P": return .pair
+        case "T": return .team
         case "S": return .squad
-        default : return .individual
+        default: return .individual
         }
     }
 }
@@ -60,6 +60,6 @@ extension ParticipantType: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

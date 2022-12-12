@@ -39,7 +39,7 @@ enum RankingType: String, CaseIterable {
         case .squad: return "Squad"
         }
     }
-    
+
     static func getRankingType(rankingType: String) -> RankingType {
         switch rankingType {
         case "I": return .individual
@@ -60,6 +60,6 @@ extension RankingType: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

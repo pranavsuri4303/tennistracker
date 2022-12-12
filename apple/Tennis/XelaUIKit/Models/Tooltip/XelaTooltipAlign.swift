@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum XelaTooltipAlign:String {
+enum XelaTooltipAlign: String {
     case Left
     case Right
     case Top

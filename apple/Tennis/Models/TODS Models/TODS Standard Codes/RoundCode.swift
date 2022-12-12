@@ -99,7 +99,7 @@ enum RoundCode: String, CaseIterable {
         case .round1: return "Round 1"
         }
     }
-    
+
     static func getRoundCode(roundCode: String) -> RoundCode {
         switch roundCode {
         case "FR": return .final
@@ -135,6 +135,6 @@ extension RoundCode: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

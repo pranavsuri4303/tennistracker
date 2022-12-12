@@ -51,7 +51,7 @@ enum EntryStatus: String, CaseIterable {
         case .withdrawn: return "Withdrawn"
         }
     }
-    
+
     static func getEntryStatus(entryStatus: String) -> EntryStatus {
         switch entryStatus {
         case "DA":
@@ -83,6 +83,6 @@ extension EntryStatus: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

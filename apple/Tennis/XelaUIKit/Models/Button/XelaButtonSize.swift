@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum XelaButtonSize:String {
+enum XelaButtonSize: String {
     case Large
     case Medium
     case Small

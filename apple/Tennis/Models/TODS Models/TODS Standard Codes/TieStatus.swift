@@ -35,7 +35,7 @@ enum TieStatus: String, CaseIterable {
         case .complete: return "Complete"
         }
     }
-    
+
     static func getTieStatus(tieStatus: String) -> TieStatus {
         switch tieStatus {
         case "TP":
@@ -59,6 +59,6 @@ extension TieStatus: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

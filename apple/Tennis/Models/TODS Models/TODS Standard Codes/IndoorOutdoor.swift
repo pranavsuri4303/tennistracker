@@ -31,7 +31,7 @@ enum IndoorOutdoor: String, CaseIterable {
         case .outdoor: return "Outdoor"
         }
     }
-    
+
     static func getIndoorOutdoor(indoorOutdoor: String) -> IndoorOutdoor {
         switch indoorOutdoor {
         case "I":
@@ -53,6 +53,6 @@ extension IndoorOutdoor: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

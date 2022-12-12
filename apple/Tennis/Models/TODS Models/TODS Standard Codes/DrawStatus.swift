@@ -35,7 +35,7 @@ enum DrawStatus: String, CaseIterable {
         case .complete: return "Complete"
         }
     }
-    
+
     static func getDrawStatus(drawStatus: String) -> DrawStatus {
         switch drawStatus {
         case "TP":
@@ -59,6 +59,6 @@ extension DrawStatus: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

@@ -5,10 +5,9 @@
 //  Created by Sherhan on 04.08.2021.
 //
 
-import UIKit
 import SwiftUI
+import UIKit
 struct XelaRoundedCorner: Shape {
-
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners
 

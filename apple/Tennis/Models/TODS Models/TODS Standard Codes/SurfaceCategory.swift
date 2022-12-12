@@ -39,7 +39,7 @@ enum SurfaceCategory: String, CaseIterable {
         case .grass: return "Grass"
         }
     }
-    
+
     static func getSurfaceCategory(surfaceCategory: String) -> SurfaceCategory {
         switch surfaceCategory {
         case "H":
@@ -65,6 +65,6 @@ extension SurfaceCategory: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

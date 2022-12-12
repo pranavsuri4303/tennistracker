@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum XelaUserAvatarDecoration:String {
+enum XelaUserAvatarDecoration: String {
     case Counter
     case Indicator
     case Plus

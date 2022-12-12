@@ -17,7 +17,7 @@ class MatchUp: Codable, Equatable {
     var indoorOutdoor: IndoorOutdoor?
     var loserGoesTo: GoesTo?
     var matchUpDuration: String?
-    var matchUpFormat: String? //TODO: add parser for matchUpForma
+    var matchUpFormat: String? // TODO: add parser for matchUpForma
     var matchUpID: String?
     var matchUpStatus: MatchUpStatus?
     var matchUpType: MatchUpType?

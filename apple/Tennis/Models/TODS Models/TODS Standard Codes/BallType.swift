@@ -55,7 +55,7 @@ enum BallType: String, CaseIterable {
         case .highAltitude: return "High Altitude"
         }
     }
-    
+
     static func getBallType(ballType: String) -> BallType {
         switch ballType {
         case "T1":
@@ -89,6 +89,6 @@ extension BallType: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

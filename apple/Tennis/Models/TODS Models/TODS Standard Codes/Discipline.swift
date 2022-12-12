@@ -35,7 +35,7 @@ enum Discipline: String, CaseIterable {
         case .wheelchairTennis: return "Wheelchair tennis"
         }
     }
-    
+
     static func getDiscipline(discipline: String) -> Discipline {
         switch discipline {
         case "TE":
@@ -59,6 +59,6 @@ extension Discipline: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

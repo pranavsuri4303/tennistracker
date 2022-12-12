@@ -55,7 +55,7 @@ enum ShotDetail: String, CaseIterable {
         case .smash: return "Smash"
         }
     }
-    
+
     static func getShotDetail(shotDetail: String) -> ShotDetail {
         switch shotDetail {
         case "DS": return .dropShot
@@ -80,6 +80,6 @@ extension ShotDetail: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }

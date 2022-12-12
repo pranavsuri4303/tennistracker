@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct XelaBadge: View {
-    @Binding var text:String
-    var background:Color = Color(xelaColor: .Blue3)
-    var foregroundColor:Color = Color(.white)
+    @Binding var text: String
+    var background: Color = .init(xelaColor: .Blue3)
+    var foregroundColor: Color = .init(.white)
     var body: some View {
         Text(text)
             .xelaCaption()
@@ -20,4 +20,3 @@ struct XelaBadge: View {
             .cornerRadius(10)
     }
 }
-

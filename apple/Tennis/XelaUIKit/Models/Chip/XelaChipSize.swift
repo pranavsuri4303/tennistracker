@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum XelaChipSize:String {
+enum XelaChipSize: String {
     case Large
     case Medium
     case Small

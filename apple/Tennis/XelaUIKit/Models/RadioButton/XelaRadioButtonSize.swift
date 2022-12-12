@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum XelaRadioButtonSize:String {
+enum XelaRadioButtonSize: String {
     case Large
     case Medium
     case Small

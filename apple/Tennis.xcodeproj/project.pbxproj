@@ -212,23 +212,9 @@
 		B530052A2942677700184795 /* XelaTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004DB2942677600184795 /* XelaTabs.swift */; };
 		B530052B2942677700184795 /* XelaSegmentedControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004DC2942677600184795 /* XelaSegmentedControll.swift */; };
 		B530052D29426F5C00184795 /* NewLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530052C29426F5C00184795 /* NewLoginView.swift */; };
-		B530052F29427DCE00184795 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530052E29427DCE00184795 /* XCAssets+Generated.swift */; };
-		B5300542294287D100184795 /* NunitoSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300533294287D000184795 /* NunitoSans-LightItalic.ttf */; };
-		B5300543294287D100184795 /* NunitoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300534294287D000184795 /* NunitoSans-BoldItalic.ttf */; };
-		B5300544294287D100184795 /* NunitoSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300535294287D000184795 /* NunitoSans-ExtraLight.ttf */; };
-		B5300545294287D100184795 /* NunitoSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300536294287D000184795 /* NunitoSans-Light.ttf */; };
-		B5300546294287D100184795 /* NunitoSans-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300537294287D000184795 /* NunitoSans-BlackItalic.ttf */; };
-		B5300547294287D100184795 /* NunitoSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300538294287D000184795 /* NunitoSans-ExtraBold.ttf */; };
-		B5300548294287D100184795 /* NunitoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300539294287D000184795 /* NunitoSans-Regular.ttf */; };
-		B5300549294287D100184795 /* NunitoSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B530053A294287D000184795 /* NunitoSans-SemiBoldItalic.ttf */; };
-		B530054A294287D100184795 /* NunitoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B530053B294287D000184795 /* NunitoSans-Italic.ttf */; };
-		B530054B294287D100184795 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = B530053C294287D000184795 /* OFL.txt */; };
-		B530054C294287D100184795 /* NunitoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B530053D294287D000184795 /* NunitoSans-Bold.ttf */; };
-		B530054D294287D100184795 /* NunitoSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B530053E294287D000184795 /* NunitoSans-SemiBold.ttf */; };
-		B530054E294287D100184795 /* NunitoSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B530053F294287D000184795 /* NunitoSans-Black.ttf */; };
-		B530054F294287D100184795 /* NunitoSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300540294287D000184795 /* NunitoSans-ExtraBoldItalic.ttf */; };
-		B5300550294287D100184795 /* NunitoSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5300541294287D000184795 /* NunitoSans-ExtraLightItalic.ttf */; };
 		B53CCA1F2806F39A00258FBC /* AddMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CCA1E2806F39A00258FBC /* AddMatchView.swift */; };
+		B544FEED29453D3B00469B9F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B544FEEC29453D3B00469B9F /* Colors.xcassets */; };
+		B544FEEF2945467C00469B9F /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544FEEE2945467C00469B9F /* XCAssets+Generated.swift */; };
 		B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D40672791342D00F36EE1 /* RDTextField.swift */; };
 		B54D406A27913F8A00F36EE1 /* RDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D406927913F8A00F36EE1 /* RDButton.swift */; };
 		B564F72F2799F13D00052CA3 /* RDHeaderTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */; };
@@ -312,6 +298,20 @@
 		B5D1F76C27AA1E370091AC2F /* RDHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76B27AA1E370091AC2F /* RDHeader.swift */; };
 		B5D1F76E27AA342A0091AC2F /* RDMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1F76D27AA342A0091AC2F /* RDMenuButton.swift */; };
 		B5D1F77427AA3F770091AC2F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B5D1F77327AA3F770091AC2F /* SDWebImageSwiftUI */; };
+		B5DA30AC2947ACA5003566F6 /* NunitoSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA309E2947ACA5003566F6 /* NunitoSans-LightItalic.ttf */; };
+		B5DA30AD2947ACA5003566F6 /* NunitoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA309F2947ACA5003566F6 /* NunitoSans-BoldItalic.ttf */; };
+		B5DA30AE2947ACA5003566F6 /* NunitoSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA30A02947ACA5003566F6 /* NunitoSans-ExtraLight.ttf */; };
+		B5DA30AF2947ACA5003566F6 /* NunitoSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA30A12947ACA5003566F6 /* NunitoSans-Light.ttf */; };
+		B5DA30B02947ACA5003566F6 /* NunitoSans-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA30A22947ACA5003566F6 /* NunitoSans-BlackItalic.ttf */; };
+		B5DA30B12947ACA5003566F6 /* NunitoSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA30A32947ACA5003566F6 /* NunitoSans-ExtraBold.ttf */; };
+		B5DA30B22947ACA5003566F6 /* NunitoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA30A42947ACA5003566F6 /* NunitoSans-Regular.ttf */; };
+		B5DA30B32947ACA5003566F6 /* NunitoSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA30A52947ACA5003566F6 /* NunitoSans-SemiBoldItalic.ttf */; };
+		B5DA30B42947ACA5003566F6 /* NunitoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA30A62947ACA5003566F6 /* NunitoSans-Italic.ttf */; };
+		B5DA30B52947ACA5003566F6 /* NunitoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA30A72947ACA5003566F6 /* NunitoSans-Bold.ttf */; };
+		B5DA30B62947ACA5003566F6 /* NunitoSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA30A82947ACA5003566F6 /* NunitoSans-SemiBold.ttf */; };
+		B5DA30B72947ACA5003566F6 /* NunitoSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA30A92947ACA5003566F6 /* NunitoSans-Black.ttf */; };
+		B5DA30B82947ACA5003566F6 /* NunitoSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA30AA2947ACA5003566F6 /* NunitoSans-ExtraBoldItalic.ttf */; };
+		B5DA30B92947ACA5003566F6 /* NunitoSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA30AB2947ACA5003566F6 /* NunitoSans-ExtraLightItalic.ttf */; };
 		B5EA4D7F29404FEB0015D379 /* MatchUpFormatParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA4D7E29404FEB0015D379 /* MatchUpFormatParser.swift */; };
 		B5EA4D812940777F0015D379 /* StringEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA4D802940777F0015D379 /* StringEntries.swift */; };
 		B5EA4D83294079FA0015D379 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA4D82294079FA0015D379 /* Friends.swift */; };
@@ -600,23 +600,9 @@
 		B53004DB2942677600184795 /* XelaTabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTabs.swift; sourceTree = "<group>"; };
 		B53004DC2942677600184795 /* XelaSegmentedControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSegmentedControll.swift; sourceTree = "<group>"; };
 		B530052C29426F5C00184795 /* NewLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginView.swift; sourceTree = "<group>"; };
-		B530052E29427DCE00184795 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
-		B5300533294287D000184795 /* NunitoSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-LightItalic.ttf"; sourceTree = "<group>"; };
-		B5300534294287D000184795 /* NunitoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
-		B5300535294287D000184795 /* NunitoSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraLight.ttf"; sourceTree = "<group>"; };
-		B5300536294287D000184795 /* NunitoSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Light.ttf"; sourceTree = "<group>"; };
-		B5300537294287D000184795 /* NunitoSans-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-BlackItalic.ttf"; sourceTree = "<group>"; };
-		B5300538294287D000184795 /* NunitoSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBold.ttf"; sourceTree = "<group>"; };
-		B5300539294287D000184795 /* NunitoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Regular.ttf"; sourceTree = "<group>"; };
-		B530053A294287D000184795 /* NunitoSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
-		B530053B294287D000184795 /* NunitoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Italic.ttf"; sourceTree = "<group>"; };
-		B530053C294287D000184795 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
-		B530053D294287D000184795 /* NunitoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Bold.ttf"; sourceTree = "<group>"; };
-		B530053E294287D000184795 /* NunitoSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-SemiBold.ttf"; sourceTree = "<group>"; };
-		B530053F294287D000184795 /* NunitoSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Black.ttf"; sourceTree = "<group>"; };
-		B5300540294287D000184795 /* NunitoSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		B5300541294287D000184795 /* NunitoSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		B53CCA1E2806F39A00258FBC /* AddMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMatchView.swift; sourceTree = "<group>"; };
+		B544FEEC29453D3B00469B9F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		B544FEEE2945467C00469B9F /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		B54D40672791342D00F36EE1 /* RDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDTextField.swift; sourceTree = "<group>"; };
 		B54D406927913F8A00F36EE1 /* RDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDButton.swift; sourceTree = "<group>"; };
 		B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHeaderTitle.swift; sourceTree = "<group>"; };
@@ -693,6 +679,20 @@
 		B5D1F76727AA0EBC0091AC2F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B5D1F76B27AA1E370091AC2F /* RDHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHeader.swift; sourceTree = "<group>"; };
 		B5D1F76D27AA342A0091AC2F /* RDMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDMenuButton.swift; sourceTree = "<group>"; };
+		B5DA309E2947ACA5003566F6 /* NunitoSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		B5DA309F2947ACA5003566F6 /* NunitoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		B5DA30A02947ACA5003566F6 /* NunitoSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		B5DA30A12947ACA5003566F6 /* NunitoSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Light.ttf"; sourceTree = "<group>"; };
+		B5DA30A22947ACA5003566F6 /* NunitoSans-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-BlackItalic.ttf"; sourceTree = "<group>"; };
+		B5DA30A32947ACA5003566F6 /* NunitoSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		B5DA30A42947ACA5003566F6 /* NunitoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Regular.ttf"; sourceTree = "<group>"; };
+		B5DA30A52947ACA5003566F6 /* NunitoSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		B5DA30A62947ACA5003566F6 /* NunitoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Italic.ttf"; sourceTree = "<group>"; };
+		B5DA30A72947ACA5003566F6 /* NunitoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Bold.ttf"; sourceTree = "<group>"; };
+		B5DA30A82947ACA5003566F6 /* NunitoSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		B5DA30A92947ACA5003566F6 /* NunitoSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Black.ttf"; sourceTree = "<group>"; };
+		B5DA30AA2947ACA5003566F6 /* NunitoSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		B5DA30AB2947ACA5003566F6 /* NunitoSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		B5EA4D7E29404FEB0015D379 /* MatchUpFormatParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchUpFormatParser.swift; sourceTree = "<group>"; };
 		B5EA4D802940777F0015D379 /* StringEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEntries.swift; sourceTree = "<group>"; };
 		B5EA4D82294079FA0015D379 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
@@ -816,8 +816,8 @@
 		764A60C725B90E5500789373 /* Tennis */ = {
 			isa = PBXGroup;
 			children = (
-				B5300532294287D000184795 /* NunitoSans */,
-				B530052E29427DCE00184795 /* XCAssets+Generated.swift */,
+				B5DA309D2947ACA5003566F6 /* Font */,
+				B544FEEE2945467C00469B9F /* XCAssets+Generated.swift */,
 				B530047B2942677400184795 /* XelaUIKit */,
 				B530040A2942670200184795 /* XelaBlocks */,
 				B530041F2942670200184795 /* XelaComponents */,
@@ -831,6 +831,7 @@
 				764A60CC25B90E5600789373 /* Assets.xcassets */,
 				764A60CE25B90E5600789373 /* Preview Content */,
 				764A60D125B90E5600789373 /* Info.plist */,
+				B544FEEC29453D3B00469B9F /* Colors.xcassets */,
 			);
 			path = Tennis;
 			sourceTree = "<group>";
@@ -1308,28 +1309,6 @@
 			path = Extentions;
 			sourceTree = "<group>";
 		};
-		B5300532294287D000184795 /* NunitoSans */ = {
-			isa = PBXGroup;
-			children = (
-				B5300533294287D000184795 /* NunitoSans-LightItalic.ttf */,
-				B5300534294287D000184795 /* NunitoSans-BoldItalic.ttf */,
-				B5300535294287D000184795 /* NunitoSans-ExtraLight.ttf */,
-				B5300536294287D000184795 /* NunitoSans-Light.ttf */,
-				B5300537294287D000184795 /* NunitoSans-BlackItalic.ttf */,
-				B5300538294287D000184795 /* NunitoSans-ExtraBold.ttf */,
-				B5300539294287D000184795 /* NunitoSans-Regular.ttf */,
-				B530053A294287D000184795 /* NunitoSans-SemiBoldItalic.ttf */,
-				B530053B294287D000184795 /* NunitoSans-Italic.ttf */,
-				B530053C294287D000184795 /* OFL.txt */,
-				B530053D294287D000184795 /* NunitoSans-Bold.ttf */,
-				B530053E294287D000184795 /* NunitoSans-SemiBold.ttf */,
-				B530053F294287D000184795 /* NunitoSans-Black.ttf */,
-				B5300540294287D000184795 /* NunitoSans-ExtraBoldItalic.ttf */,
-				B5300541294287D000184795 /* NunitoSans-ExtraLightItalic.ttf */,
-			);
-			path = NunitoSans;
-			sourceTree = "<group>";
-		};
 		B54D40662791340800F36EE1 /* RDComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -1478,6 +1457,27 @@
 			path = SlideMenuUpdate;
 			sourceTree = "<group>";
 		};
+		B5DA309D2947ACA5003566F6 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B5DA309E2947ACA5003566F6 /* NunitoSans-LightItalic.ttf */,
+				B5DA309F2947ACA5003566F6 /* NunitoSans-BoldItalic.ttf */,
+				B5DA30A02947ACA5003566F6 /* NunitoSans-ExtraLight.ttf */,
+				B5DA30A12947ACA5003566F6 /* NunitoSans-Light.ttf */,
+				B5DA30A22947ACA5003566F6 /* NunitoSans-BlackItalic.ttf */,
+				B5DA30A32947ACA5003566F6 /* NunitoSans-ExtraBold.ttf */,
+				B5DA30A42947ACA5003566F6 /* NunitoSans-Regular.ttf */,
+				B5DA30A52947ACA5003566F6 /* NunitoSans-SemiBoldItalic.ttf */,
+				B5DA30A62947ACA5003566F6 /* NunitoSans-Italic.ttf */,
+				B5DA30A72947ACA5003566F6 /* NunitoSans-Bold.ttf */,
+				B5DA30A82947ACA5003566F6 /* NunitoSans-SemiBold.ttf */,
+				B5DA30A92947ACA5003566F6 /* NunitoSans-Black.ttf */,
+				B5DA30AA2947ACA5003566F6 /* NunitoSans-ExtraBoldItalic.ttf */,
+				B5DA30AB2947ACA5003566F6 /* NunitoSans-ExtraLightItalic.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1489,6 +1489,7 @@
 				764A60C225B90E5500789373 /* Frameworks */,
 				764A60C325B90E5500789373 /* Resources */,
 				B5132AB4293EA5C100C2E396 /* Embed Watch Content */,
+				B544FEF029454B2100469B9F /* Swiftgen Assets */,
 			);
 			buildRules = (
 			);
@@ -1695,24 +1696,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B530054D294287D100184795 /* NunitoSans-SemiBold.ttf in Resources */,
-				B5300546294287D100184795 /* NunitoSans-BlackItalic.ttf in Resources */,
-				B530054F294287D100184795 /* NunitoSans-ExtraBoldItalic.ttf in Resources */,
-				B530054C294287D100184795 /* NunitoSans-Bold.ttf in Resources */,
-				B5300549294287D100184795 /* NunitoSans-SemiBoldItalic.ttf in Resources */,
-				B5300547294287D100184795 /* NunitoSans-ExtraBold.ttf in Resources */,
-				B5300543294287D100184795 /* NunitoSans-BoldItalic.ttf in Resources */,
+				B5DA30B62947ACA5003566F6 /* NunitoSans-SemiBold.ttf in Resources */,
+				B5DA30B12947ACA5003566F6 /* NunitoSans-ExtraBold.ttf in Resources */,
+				B5DA30B82947ACA5003566F6 /* NunitoSans-ExtraBoldItalic.ttf in Resources */,
+				B5DA30B52947ACA5003566F6 /* NunitoSans-Bold.ttf in Resources */,
+				B5DA30B42947ACA5003566F6 /* NunitoSans-Italic.ttf in Resources */,
 				764A60D025B90E5600789373 /* Preview Assets.xcassets in Resources */,
-				B5300545294287D100184795 /* NunitoSans-Light.ttf in Resources */,
-				B530054A294287D100184795 /* NunitoSans-Italic.ttf in Resources */,
-				B5300544294287D100184795 /* NunitoSans-ExtraLight.ttf in Resources */,
-				B530054B294287D100184795 /* OFL.txt in Resources */,
+				B5DA30AD2947ACA5003566F6 /* NunitoSans-BoldItalic.ttf in Resources */,
+				B544FEED29453D3B00469B9F /* Colors.xcassets in Resources */,
 				764A60CD25B90E5600789373 /* Assets.xcassets in Resources */,
-				B530054E294287D100184795 /* NunitoSans-Black.ttf in Resources */,
-				B5300548294287D100184795 /* NunitoSans-Regular.ttf in Resources */,
+				B5DA30B32947ACA5003566F6 /* NunitoSans-SemiBoldItalic.ttf in Resources */,
+				B5DA30B22947ACA5003566F6 /* NunitoSans-Regular.ttf in Resources */,
 				B5EFB4ED27E9D745004180E6 /* GoogleService-Info.plist in Resources */,
-				B5300550294287D100184795 /* NunitoSans-ExtraLightItalic.ttf in Resources */,
-				B5300542294287D100184795 /* NunitoSans-LightItalic.ttf in Resources */,
+				B5DA30AC2947ACA5003566F6 /* NunitoSans-LightItalic.ttf in Resources */,
+				B5DA30B72947ACA5003566F6 /* NunitoSans-Black.ttf in Resources */,
+				B5DA30AE2947ACA5003566F6 /* NunitoSans-ExtraLight.ttf in Resources */,
+				B5DA30B02947ACA5003566F6 /* NunitoSans-BlackItalic.ttf in Resources */,
+				B5DA30B92947ACA5003566F6 /* NunitoSans-ExtraLightItalic.ttf in Resources */,
+				B5DA30AF2947ACA5003566F6 /* NunitoSans-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1762,6 +1763,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B544FEF029454B2100469B9F /* Swiftgen Assets */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swiftgen Assets";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftgen >/dev/null; then\n  swiftgen\nelse\n  echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		764A60C125B90E5500789373 /* Sources */ = {
@@ -1987,7 +2009,7 @@
 				B53005232942677600184795 /* XelaButton.swift in Sources */,
 				B53004FA2942677600184795 /* XelaChartPieItemShape.swift in Sources */,
 				B53004E02942677600184795 /* XelaCheckbox.swift in Sources */,
-				B530052F29427DCE00184795 /* XCAssets+Generated.swift in Sources */,
+				B544FEEF2945467C00469B9F /* XCAssets+Generated.swift in Sources */,
 				76F5424825CDC81F00557BF9 /* FriendsListView.swift in Sources */,
 				B53004DF2942677600184795 /* XelaSteps.swift in Sources */,
 				76D731A025CA7BB7001D2D64 /* ProfileView.swift in Sources */,

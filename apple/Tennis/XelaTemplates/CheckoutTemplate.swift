@@ -13,14 +13,12 @@ struct CheckoutTemplate: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                HStack(spacing:16) {
-                    Button(action:{
-                       
-                    }) {
+                HStack(spacing: 16) {
+                    Button(action: {}) {
                         Image("arrow-left")
                             .renderingMode(.template)
                             .resizable()
-                            .frame(width:20, height:20)
+                            .frame(width: 20, height: 20)
                             .foregroundColor(Color(.white))
                     }
                     Text("Your Cart")
@@ -28,7 +26,7 @@ struct CheckoutTemplate: View {
                         .foregroundColor(Color(.white))
                 }
                 Spacer()
-                Button(action:{}) {
+                Button(action: {}) {
                     Text("Edit")
                         .xelaButtonLarge()
                         .foregroundColor(Color(xelaColor: .Blue8))
@@ -36,24 +34,21 @@ struct CheckoutTemplate: View {
             }
             .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
             .background(Color(xelaColor: .Gray2))
-            
-            
+
             ScrollView(showsIndicators: false) {
-                VStack(spacing:24) {
-                    
-                    VStack(alignment:.leading, spacing:16) {
-                        HStack(spacing:16) {
+                VStack(spacing: 24) {
+                    VStack(alignment: .leading, spacing: 16) {
+                        HStack(spacing: 16) {
                             ZStack {
-                                
                                 Image("prod-t1")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                             }
-                            .frame(width:96, height: 96)
+                            .frame(width: 96, height: 96)
                             .cornerRadius(16)
-                            
-                            VStack(alignment:.leading, spacing:8) {
-                                VStack(alignment:.leading, spacing:0) {
+
+                            VStack(alignment: .leading, spacing: 8) {
+                                VStack(alignment: .leading, spacing: 0) {
                                     Text("Adidas Gazelle Black")
                                         .xelaSmallBodyBold()
                                         .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
@@ -66,27 +61,26 @@ struct CheckoutTemplate: View {
                                         .xelaSubheadline()
                                         .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
                                     Spacer()
-                                    XelaButton(leftIcon:"x", size: .Small, background: isDark ? Color(xelaColor: .Gray3) : Color(xelaColor: .Gray2), foregroundColor: Color(.white))
+                                    XelaButton(leftIcon: "x", size: .Small, background: isDark ? Color(xelaColor: .Gray3) : Color(xelaColor: .Gray2), foregroundColor: Color(.white))
                                 }
                             }
-                            //.padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
+                            // .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
                         }
-                        //.padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
-                        //.background(isDark ? Color(xelaColor: .Gray1) : Color(xelaColor: .Gray12))
-                        //.cornerRadius(16)
-                        
-                        HStack(spacing:16) {
+                        // .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
+                        // .background(isDark ? Color(xelaColor: .Gray1) : Color(xelaColor: .Gray12))
+                        // .cornerRadius(16)
+
+                        HStack(spacing: 16) {
                             ZStack {
-                                
                                 Image("prod-t2")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                             }
-                            .frame(width:96, height: 96)
+                            .frame(width: 96, height: 96)
                             .cornerRadius(16)
-                            
-                            VStack(alignment:.leading, spacing:8) {
-                                VStack(alignment:.leading, spacing:0) {
+
+                            VStack(alignment: .leading, spacing: 8) {
+                                VStack(alignment: .leading, spacing: 0) {
                                     Text("Adidas Yeezy Boost 350 V2")
                                         .xelaSmallBodyBold()
                                         .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
@@ -99,20 +93,19 @@ struct CheckoutTemplate: View {
                                         .xelaSubheadline()
                                         .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
                                     Spacer()
-                                    XelaButton(leftIcon:"x", size: .Small, background: isDark ? Color(xelaColor: .Gray3) : Color(xelaColor: .Gray2), foregroundColor: Color(.white))
+                                    XelaButton(leftIcon: "x", size: .Small, background: isDark ? Color(xelaColor: .Gray3) : Color(xelaColor: .Gray2), foregroundColor: Color(.white))
                                 }
                             }
-                            //.padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
+                            // .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
                         }
-                        //.padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
-                        //.background(isDark ? Color(xelaColor: .Gray1) : Color(xelaColor: .Gray12))
-                        //.cornerRadius(16)
+                        // .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
+                        // .background(isDark ? Color(xelaColor: .Gray1) : Color(xelaColor: .Gray12))
+                        // .cornerRadius(16)
                     }
                     .padding(.horizontal, 16)
                     .padding(.top, 16)
-                    
-                    
-                    VStack(spacing:20) {
+
+                    VStack(spacing: 20) {
                         HStack {
                             Text("Subtotal")
                                 .xelaSmallBody()
@@ -122,7 +115,7 @@ struct CheckoutTemplate: View {
                                 .xelaBodyBold()
                                 .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
                         }
-                        
+
                         HStack {
                             Text("Shipping")
                                 .xelaSmallBody()
@@ -132,7 +125,7 @@ struct CheckoutTemplate: View {
                                 .xelaSmallBody()
                                 .foregroundColor(isDark ? Color(xelaColor: .Gray8) : Color(xelaColor: .Gray6))
                         }
-                        
+
                         HStack {
                             Text("Taxes (estimated)")
                                 .xelaSmallBody()
@@ -142,7 +135,7 @@ struct CheckoutTemplate: View {
                                 .xelaBodyBold()
                                 .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
                         }
-                        
+
                         HStack {
                             Text("Discount")
                                 .xelaSmallBody()
@@ -152,7 +145,7 @@ struct CheckoutTemplate: View {
                                 .xelaBodyBold()
                                 .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
                         }
-                        
+
                         HStack {
                             Text("Total")
                                 .xelaSmallBody()
@@ -165,19 +158,19 @@ struct CheckoutTemplate: View {
                     }
                     .padding(.horizontal, 16)
                     .padding(.vertical, 24)
-                    
-                    XelaDivider(style:.Dotted, color: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11))
+
+                    XelaDivider(style: .Dotted, color: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11))
                         .padding(.horizontal, 16)
-                    
-                    VStack(alignment:.leading, spacing:24) {
-                        HStack(spacing:16) {
+
+                    VStack(alignment: .leading, spacing: 24) {
+                        HStack(spacing: 16) {
                             Image("car")
                                 .resizable()
                                 .renderingMode(.template)
-                                .frame(width:15, height:15)
+                                .frame(width: 15, height: 15)
                                 .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
-                            
-                            VStack(alignment:.leading, spacing:0) {
+
+                            VStack(alignment: .leading, spacing: 0) {
                                 Text("Delivery")
                                     .xelaSmallBodyBold()
                                     .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
@@ -186,15 +179,15 @@ struct CheckoutTemplate: View {
                                     .foregroundColor(isDark ? Color(xelaColor: .Gray8) : Color(xelaColor: .Gray6))
                             }
                         }
-                        
-                        HStack(spacing:16) {
+
+                        HStack(spacing: 16) {
                             Image("clockwise")
                                 .resizable()
                                 .renderingMode(.template)
-                                .frame(width:15, height:15)
+                                .frame(width: 15, height: 15)
                                 .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
-                            
-                            VStack(alignment:.leading, spacing:0) {
+
+                            VStack(alignment: .leading, spacing: 0) {
                                 Text("Returns")
                                     .xelaSmallBodyBold()
                                     .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
@@ -206,14 +199,12 @@ struct CheckoutTemplate: View {
                     }
                     .padding(.horizontal, 16)
                     .padding(.vertical, 24)
-                    
-                    XelaButton(text:"Proceed to checkout", action: {showCheckout.toggle()}, rightIcon: "right-small", background: Color(xelaColor: .Blue5), foregroundColor: Color(.white), autoResize: false)
+
+                    XelaButton(text: "Proceed to checkout", action: { showCheckout.toggle() }, rightIcon: "right-small", background: Color(xelaColor: .Blue5), foregroundColor: Color(.white), autoResize: false)
                         .padding(.horizontal, 16)
                         .padding(.bottom, 24)
                 }
             }
-            
-            
         }
         .background(isDark ? Color(.black) : Color(.white))
         .sheet(isPresented: $showCheckout) {
@@ -223,57 +214,54 @@ struct CheckoutTemplate: View {
     }
 }
 
-
 struct CheckoutOrderTemplate: View {
     var isDark = false
-    
-    @State var firstNameText:String = "Roselle"
-    @State var firstNameState:XelaTextFieldState = .Default
-    @State var firstNameHelperText:String = ""
-    
-    @State var lastNameText:String = "Ehrman"
-    @State var lastNameState:XelaTextFieldState = .Default
-    @State var lastNameHelperText:String = ""
-    
-    @State var phoneText:String = "(+33)7 45 55 87 71"
-    @State var phoneState:XelaTextFieldState = .Default
-    @State var phoneHelperText:String = ""
-    
-    @State var emailText:String = "vuhaithuongnute@gmail.com"
-    @State var emailState:XelaTextFieldState = .Default
-    @State var emailHelperText:String = ""
-    
-    @State var countryText:String = ""
-    @State var countryState:XelaTextFieldState = .Default
-    @State var countryHelperText:String = ""
-    
-    @State var stateText:String = ""
-    @State var stateState:XelaTextFieldState = .Default
-    @State var stateHelperText:String = ""
-    
-    @State var cityText:String = ""
-    @State var cityState:XelaTextFieldState = .Default
-    @State var cityHelperText:String = ""
-    
-    @State var zipText:String = ""
-    @State var zipState:XelaTextFieldState = .Default
-    @State var zipHelperText:String = ""
-    
-    @State var addressText:String = "775 Rolling Green Rd."
-    @State var addressState:XelaTextFieldState = .Default
-    @State var addressHelperText:String = ""
-   
+
+    @State var firstNameText: String = "Roselle"
+    @State var firstNameState: XelaTextFieldState = .Default
+    @State var firstNameHelperText: String = ""
+
+    @State var lastNameText: String = "Ehrman"
+    @State var lastNameState: XelaTextFieldState = .Default
+    @State var lastNameHelperText: String = ""
+
+    @State var phoneText: String = "(+33)7 45 55 87 71"
+    @State var phoneState: XelaTextFieldState = .Default
+    @State var phoneHelperText: String = ""
+
+    @State var emailText: String = "vuhaithuongnute@gmail.com"
+    @State var emailState: XelaTextFieldState = .Default
+    @State var emailHelperText: String = ""
+
+    @State var countryText: String = ""
+    @State var countryState: XelaTextFieldState = .Default
+    @State var countryHelperText: String = ""
+
+    @State var stateText: String = ""
+    @State var stateState: XelaTextFieldState = .Default
+    @State var stateHelperText: String = ""
+
+    @State var cityText: String = ""
+    @State var cityState: XelaTextFieldState = .Default
+    @State var cityHelperText: String = ""
+
+    @State var zipText: String = ""
+    @State var zipState: XelaTextFieldState = .Default
+    @State var zipHelperText: String = ""
+
+    @State var addressText: String = "775 Rolling Green Rd."
+    @State var addressState: XelaTextFieldState = .Default
+    @State var addressHelperText: String = ""
+
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                HStack(spacing:16) {
-                    Button(action:{
-                       
-                    }) {
+                HStack(spacing: 16) {
+                    Button(action: {}) {
                         Image("arrow-left")
                             .renderingMode(.template)
                             .resizable()
-                            .frame(width:20, height:20)
+                            .frame(width: 20, height: 20)
                             .foregroundColor(Color(.white))
                     }
                     Text("Checkout")
@@ -287,11 +275,10 @@ struct CheckoutOrderTemplate: View {
             }
             .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
             .background(Color(xelaColor: .Gray2))
-            
-            
+
             ScrollView(showsIndicators: false) {
-                VStack(spacing:24) {
-                    HStack(spacing:16) {
+                VStack(spacing: 24) {
+                    HStack(spacing: 16) {
                         ZStack {
                             Text("1")
                                 .xelaButtonMedium()
@@ -300,16 +287,16 @@ struct CheckoutOrderTemplate: View {
                         .frame(width: 32, height: 32)
                         .background(isDark ? Color(xelaColor: .Blue8) : Color(xelaColor: .Blue11))
                         .cornerRadius(12)
-                        
-                        VStack(alignment:.leading, spacing:0) {
+
+                        VStack(alignment: .leading, spacing: 0) {
                             Text("Personal Details")
                                 .xelaHeadline()
                                 .foregroundColor(isDark ? Color(.white) : Color(xelaColor: .Gray2))
-                            HStack(spacing:0) {
+                            HStack(spacing: 0) {
                                 Text("If you already have an account ")
                                     .xelaCaption()
                                     .foregroundColor(Color(xelaColor: .Gray6))
-                                Button(action:{}) {
+                                Button(action: {}) {
                                     Text("Sign in here")
                                         .xelaCaption()
                                         .foregroundColor(isDark ? Color(xelaColor: .Blue2) : Color(xelaColor: .Blue3))
@@ -321,9 +308,8 @@ struct CheckoutOrderTemplate: View {
                     .padding(.horizontal, 16)
                     .padding(.top, 16)
                     .padding(.bottom, 24)
-                    
-                    VStack(spacing:24) {
-                       
+
+                    VStack(spacing: 24) {
                         XelaTextField(
                             placeholder: "First Name",
                             value: $firstNameText,
@@ -335,7 +321,7 @@ struct CheckoutOrderTemplate: View {
                             borderDefaultColor: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11),
                             iconDefaultColor: isDark ? Color(xelaColor: .Gray11) : nil
                         )
-                        
+
                         XelaTextField(
                             placeholder: "Last Name",
                             value: $lastNameText,
@@ -347,7 +333,7 @@ struct CheckoutOrderTemplate: View {
                             borderDefaultColor: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11),
                             iconDefaultColor: isDark ? Color(xelaColor: .Gray11) : nil
                         )
-                        
+
                         XelaTextField(
                             placeholder: "Phone Number",
                             value: $phoneText,
@@ -359,7 +345,7 @@ struct CheckoutOrderTemplate: View {
                             borderDefaultColor: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11),
                             iconDefaultColor: isDark ? Color(xelaColor: .Gray11) : nil
                         )
-                        
+
                         XelaTextField(
                             placeholder: "E-mail",
                             value: $emailText,
@@ -371,7 +357,7 @@ struct CheckoutOrderTemplate: View {
                             borderDefaultColor: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11),
                             iconDefaultColor: isDark ? Color(xelaColor: .Gray11) : nil
                         )
-                        
+
                         XelaTextField(
                             placeholder: "Country",
                             value: $countryText,
@@ -383,7 +369,7 @@ struct CheckoutOrderTemplate: View {
                             borderDefaultColor: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11),
                             iconDefaultColor: isDark ? Color(xelaColor: .Gray11) : nil
                         )
-                        
+
                         XelaTextField(
                             placeholder: "State",
                             value: $stateText,
@@ -395,7 +381,7 @@ struct CheckoutOrderTemplate: View {
                             borderDefaultColor: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11),
                             iconDefaultColor: isDark ? Color(xelaColor: .Gray11) : nil
                         )
-                        
+
                         XelaTextField(
                             placeholder: "City",
                             value: $cityText,
@@ -407,7 +393,7 @@ struct CheckoutOrderTemplate: View {
                             borderDefaultColor: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11),
                             iconDefaultColor: isDark ? Color(xelaColor: .Gray11) : nil
                         )
-                        
+
                         XelaTextField(
                             placeholder: "Zip Code",
                             value: $zipText,
@@ -419,7 +405,7 @@ struct CheckoutOrderTemplate: View {
                             borderDefaultColor: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11),
                             iconDefaultColor: isDark ? Color(xelaColor: .Gray11) : nil
                         )
-                        
+
                         XelaTextField(
                             placeholder: "Address",
                             value: $addressText,
@@ -431,31 +417,27 @@ struct CheckoutOrderTemplate: View {
                             borderDefaultColor: isDark ? Color(xelaColor: .Gray4) : Color(xelaColor: .Gray11),
                             iconDefaultColor: isDark ? Color(xelaColor: .Gray11) : nil
                         )
-                       
                     }
                     .padding(.horizontal, 16)
-                    
+
                     HStack {
-                    XelaButton(text: "Add secondary address", leftIcon: "add-small", size: .Small, type: .Secondary, background: Color.clear, foregroundColor: isDark ? Color(xelaColor: .Blue5) : Color(xelaColor: .Blue3), defaultBorderColor: isDark ? Color(xelaColor: .Gray3) : Color(xelaColor: .Gray11))
-                        .padding(.horizontal, 16)
+                        XelaButton(text: "Add secondary address", leftIcon: "add-small", size: .Small, type: .Secondary, background: Color.clear, foregroundColor: isDark ? Color(xelaColor: .Blue5) : Color(xelaColor: .Blue3), defaultBorderColor: isDark ? Color(xelaColor: .Gray3) : Color(xelaColor: .Gray11))
+                            .padding(.horizontal, 16)
                         Spacer()
                     }
-                    
+
                     XelaCheckbox(label: "My billing address is the same as my delivery address", defaultColor: isDark ? Color(xelaColor: .Gray3) : Color(xelaColor: .Gray11), size: .Medium, state: .Selected, labelColor: isDark ? Color(.white) : Color(xelaColor: .Gray2))
                         .padding(.horizontal, 16)
-                    
+
                     HStack {
-                        XelaButton(leftIcon:"left-small", size: .Medium, type: .Secondary, background: Color.clear, foregroundColor: isDark ? Color(xelaColor: .Blue5) : Color(xelaColor: .Blue3), defaultBorderColor: isDark ? Color(xelaColor: .Gray3) : Color(xelaColor: .Gray11))
+                        XelaButton(leftIcon: "left-small", size: .Medium, type: .Secondary, background: Color.clear, foregroundColor: isDark ? Color(xelaColor: .Blue5) : Color(xelaColor: .Blue3), defaultBorderColor: isDark ? Color(xelaColor: .Gray3) : Color(xelaColor: .Gray11))
                         Spacer()
-                        XelaButton(text:"Continue to delivery", rightIcon: "right-small", size:.Medium, background: isDark ? Color(xelaColor: .Blue5) : Color(xelaColor: .Blue3), foregroundColor: Color(.white), autoResize: true)
+                        XelaButton(text: "Continue to delivery", rightIcon: "right-small", size: .Medium, background: isDark ? Color(xelaColor: .Blue5) : Color(xelaColor: .Blue3), foregroundColor: Color(.white), autoResize: true)
                     }
                     .padding(.horizontal, 16)
                     .padding(.bottom, 24)
-                    
                 }
             }
-            
-            
         }
         .background(isDark ? Color(.black) : Color(.white))
     }

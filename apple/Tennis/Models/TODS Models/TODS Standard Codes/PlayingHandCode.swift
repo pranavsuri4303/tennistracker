@@ -35,7 +35,7 @@ enum PlayingHandCode: String, CaseIterable {
         case .right: return "Right handed"
         }
     }
-    
+
     static func getPlayingHandCode(playingHandCode: String) -> PlayingHandCode {
         switch playingHandCode {
         case "A": return .ambidextrous
@@ -55,6 +55,6 @@ extension PlayingHandCode: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        try container.encode(self.code)
+        try container.encode(code)
     }
 }
