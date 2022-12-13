@@ -90,7 +90,7 @@ struct LoginView: View {
             }
             .padding(.vertical)
         }
-        .background(Color(asset: Asset.background).ignoresSafeArea(.all, edges: .all))
+        .background(Color(asset: Colors.background).ignoresSafeArea(.all, edges: .all))
         //            .background(Color("bg").ignoresSafeArea(.all, edges: .all))
         .animation(startAnimate ? .easeOut : .none)
         .onAppear(perform: {

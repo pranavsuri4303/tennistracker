@@ -29,8 +29,8 @@
      - templateName: swift5
        params:
          forceProvidesNamespaces: true
+         enumName: Colors
        output: Tennis/XCAssets+Generated.swift
-
 
 ## Generate constants for your storyboards and XIBs.
 ##   This one generates 2 output files, one containing the storyboard scenes, and another for the segues.
