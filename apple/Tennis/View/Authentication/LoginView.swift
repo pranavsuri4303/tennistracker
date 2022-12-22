@@ -42,15 +42,18 @@ struct LoginView: View {
             VStack {
                 XelaTextField(placeholder: vm.emailTF.placeholder, value: $vm.emailTF.value, state: $vm.emailTF.state, helperText: $vm.emailTF.helperText, leftIcon: "envelope")
                 XelaTextField(placeholder: vm.passwordTF.placeholder, value: $vm.passwordTF.value, state: $vm.passwordTF.state, helperText: $vm.passwordTF.helperText, secureField: true)
+                XelaButton(text: "Sign In", action: {
+                    vm.verifyUser()
+                }, size: .Medium, autoResize: false)
             }
             .padding(.horizontal)
 
-            RDButton(withTitle: "SIGN IN", performAction: { vm.verifyUser() })
-                .opacity(vm.email != "" && vm.password != "" ? 1 : 0.5)
-                .disabled(vm.email != "" && vm.password != "" ? false : true)
-                .alert(isPresented: $vm.alert, content: {
-                    Alert(title: Text("Error"), message: Text(vm.alertMsg), dismissButton: .destructive(Text("Ok")))
-                })
+//            RDButton(withTitle: "SIGN IN", performAction: { vm.verifyUser() })
+//                .opacity(vm.email != "" && vm.password != "" ? 1 : 0.5)
+//                .disabled(vm.email != "" && vm.password != "" ? false : true)
+//                .alert(isPresented: $vm.alert, content: {
+//                    Alert(title: Text("Error"), message: Text(vm.alertMsg), dismissButton: .destructive(Text("Ok")))
+//                })
 
             Button(action: {
                 self.showingResetPassword.toggle()

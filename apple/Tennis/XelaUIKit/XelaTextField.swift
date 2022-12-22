@@ -100,12 +100,12 @@ struct XelaTextField: View {
                         .foregroundColor(state == .Disabled ? iconDisabledColor : state == .Error ? iconErrorColor : state == .Success ? iconSuccessColor : iconDefaultColor)
                 }
             }
-            .frame(height: 40)
-            .padding(EdgeInsets(top: 8, leading: leftIcon != nil ? 16 : 24, bottom: 8, trailing: rightIcon != nil ? 16 : 24))
+            .frame(height: 38)
+            .padding(EdgeInsets(top: 6, leading: leftIcon != nil ? 14 : 22, bottom: 6, trailing: rightIcon != nil ? 14 : 22))
             .background(state == .Disabled ? disabledBackground : background)
-            .cornerRadius(18)
+            .cornerRadius(16)
             .overlay(
-                RoundedRectangle(cornerRadius: 18)
+                RoundedRectangle(cornerRadius: 16)
                     .strokeBorder(state == .Disabled ? borderDisabledColor : state == .Error ? borderErrorColor : state == .Success ? borderSuccessColor : state == .Hover ? borderHoverColor : state == .Focus ? borderFocusColor : borderDefaultColor, lineWidth: state == .Focus ? 2 : 1)
             )
             .onHover { over in

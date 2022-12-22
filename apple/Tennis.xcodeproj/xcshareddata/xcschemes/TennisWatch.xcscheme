@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B5132A75293EA5B900C2E396"
+               BuildableName = "TennisWatch.app"
+               BlueprintName = "TennisWatch"
+               ReferencedContainer = "container:Tennis.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "764A60C425B90E5500789373"
                BuildableName = "Tennis.app"
                BlueprintName = "Tennis"
@@ -28,6 +42,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B5132A97293EA5C100C2E396"
+               BuildableName = "TennisWatchTests.xctest"
+               BlueprintName = "TennisWatchTests"
+               ReferencedContainer = "container:Tennis.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B5132AA1293EA5C100C2E396"
+               BuildableName = "TennisWatchUITests.xctest"
+               BlueprintName = "TennisWatchUITests"
+               ReferencedContainer = "container:Tennis.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -44,15 +78,15 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "764A60C425B90E5500789373"
-            BuildableName = "Tennis.app"
-            BlueprintName = "Tennis"
+            BlueprintIdentifier = "B5132A75293EA5B900C2E396"
+            BuildableName = "TennisWatch.app"
+            BlueprintName = "TennisWatch"
             ReferencedContainer = "container:Tennis.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -61,9 +95,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "764A60C425B90E5500789373"
-            BuildableName = "Tennis.app"
-            BlueprintName = "Tennis"
+            BlueprintIdentifier = "B5132A75293EA5B900C2E396"
+            BuildableName = "TennisWatch.app"
+            BlueprintName = "TennisWatch"
             ReferencedContainer = "container:Tennis.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -72,8 +106,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Debug"
-      customArchiveName = "Tennis"
+      buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

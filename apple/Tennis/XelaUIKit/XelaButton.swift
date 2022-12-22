@@ -91,16 +91,16 @@ struct XelaButton: View {
                     }
                 }
                 // .padding(EdgeInsets(top: size == .Large ? 16 : size == .Medium ? 16 : 8, leading: size == .Large ? 24 : size == .Medium ? 16 : 16, bottom: size == .Large ? 16 : size == .Medium ? 16 : 8, trailing: size == .Large ? 24 : size == .Medium ? 16 : 16))
-                .padding(.trailing, removePaddings ? 0 : rightIcon != nil && text != nil ? (size == .Large ? 23 : size == .Medium ? 15 : 7) : (size == .Large ? 23 : size == .Medium ? 15 : text != nil ? 15 : 7))
-                .padding(.leading, removePaddings ? 0 : leftIcon != nil && text != nil ? (size == .Large ? 23 : size == .Medium ? 15 : 7) : (size == .Large ? 23 : size == .Medium ? 15 : text != nil ? 15 : 7))
-                .padding(.vertical, removePaddings ? 0 : size == .Large ? 15 : size == .Medium ? 15 : 7)
+                .padding(.trailing, removePaddings ? 0 : rightIcon != nil && text != nil ? (size == .Large ? 20 : size == .Medium ? 12 : 4) : (size == .Large ? 20 : size == .Medium ? 12 : text != nil ? 12 : 4))
+                .padding(.leading, removePaddings ? 0 : rightIcon != nil && text != nil ? (size == .Large ? 20 : size == .Medium ? 12 : 4) : (size == .Large ? 20 : size == .Medium ? 12 : text != nil ? 12 : 4))
+                .padding(.vertical, removePaddings ? 0 : size == .Large ? 12 : size == .Medium ? 12 : 4)
             }
             .foregroundColor(foregroundColor)
             .background(background)
-            .cornerRadius(size == .Small ? 12 : 16)
+            .cornerRadius(size == .Small ? 9 : 13)
             // .border(background.opacity(0.8), width: 4)
             .overlay(
-                RoundedRectangle(cornerRadius: size == .Small ? 12 : 16)
+                RoundedRectangle(cornerRadius: size == .Small ? 9 : 13)
                     .stroke(background, lineWidth: borderLineWidth)
             )
             .opacity(state == .Disabled ? 0.4 : state == .Hover ? 0.8 : 1)
