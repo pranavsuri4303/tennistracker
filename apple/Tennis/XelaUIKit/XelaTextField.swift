@@ -15,6 +15,8 @@ struct XelaTextField: View {
 
     @State var leftIcon: String? = nil
     @State var rightIcon: String? = nil
+    
+    @FocusState private var isFocused: Bool
 
     var disableAutocorrection: Bool = true
 
@@ -70,6 +72,20 @@ struct XelaTextField: View {
                         .frame(height: 40)
                         .offset(y: value.isEmpty ? 0 : 10)
                         .disableAutocorrection(disableAutocorrection)
+                        .onHover { didHover in
+                            if didHover{
+                                self.state = .Hover
+                            }
+                        }
+                        .focused($isFocused)
+                        .onChange(of: isFocused) { isFocused in
+                            if isFocused {
+                                self.state = .Focus
+                            }
+                            else {
+                                self.state = .Default
+                            }
+                        }
                 } else {
                     TextField("", text: $value)
                         .font(.system(size: 14, weight: .bold))
@@ -90,6 +106,20 @@ struct XelaTextField: View {
                         .frame(height: 40)
                         .offset(y: value.isEmpty ? 0 : 10)
                         .disableAutocorrection(disableAutocorrection)
+                        .onHover { didHover in
+                            if didHover{
+                                self.state = .Hover
+                            }
+                        }
+                        .focused($isFocused)
+                        .onChange(of: isFocused) { isFocused in
+                            if isFocused {
+                                self.state = .Focus
+                            }
+                            else {
+                                self.state = .Default
+                            }
+                        }
                 }
 
                 if rightIcon != nil {

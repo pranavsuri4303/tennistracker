@@ -14,6 +14,12 @@ struct RegisterView: View {
     @State var newUserViewPresented = false
     @State private var alertShown = false
     @State private var errorMessage = ""
+    
+    @State private var emailTFState: XelaTextFieldState = .Default
+    @State private var emailTFHelperText = ""
+    @State private var passwordTFState: XelaTextFieldState = .Default
+    @State private var passwordTFHelperText = ""
+    @State private var buttonState: XelaButtonState = .Default
 
     @State var startAnimate = false
     var body: some View {
@@ -46,27 +52,21 @@ struct RegisterView: View {
 
                 RDTextField(placeholder: "Email", text: $vm.newUser.emailAddress.toUnwrapped(defaultValue: ""), imageName: "envelope", isSecure: false, isPicker: false)
                     .padding(.horizontal)
-
-                RDTextField(placeholder: "Password", text: $vm.password, imageName: "lock", isSecure: true, isPicker: false)
-                    .padding(.horizontal)
-
-                RDButton(withTitle: "REGISTER", performAction: {
-                    vm.createAccount { result in
-                        switch result {
-                        case .success:
-                            newUserViewPresented.toggle()
-                        case let .failure(error):
-                            self.errorMessage = error.localizedDescription
-                            self.alertShown = true
+                VStack {
+                    XelaTextField(placeholder: "Email", value: $vm.newUser.emailAddress.toUnwrapped(defaultValue: ""), state: $emailTFState, helperText: $emailTFHelperText)
+                    XelaTextField(placeholder: "Password", value: $vm.password, state: $passwordTFState, helperText: $passwordTFHelperText, secureField: true)
+                    XelaButton(text: "Sign In", action: {
+                        vm.createAccount { result in
+                            switch result {
+                            case .success:
+                                newUserViewPresented.toggle()
+                            case let .failure(error):
+                                self.errorMessage = error.localizedDescription
+                                self.alertShown = true
+                            }
                         }
-                    }
-                })
-                .opacity(vm.newUser.emailAddress != "" && vm.password != "" ? 1 : 0.5)
-                .disabled(vm.newUser.emailAddress != "" && vm.password != "" ? false : true)
-                .padding(.top)
-//                .onAppear {
-//                    vm.newUser.sex = .male
-//                }
+                    }, size: .Medium, state: $buttonState, autoResize: false)
+                }
                 Button(action: {}, label: {
                     Image("googleLogo")
                         .resizable()

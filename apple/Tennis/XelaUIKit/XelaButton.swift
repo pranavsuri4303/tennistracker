@@ -17,7 +17,7 @@ struct XelaButton: View {
     @State var rightIcon: String? = nil
 
     @State var size: XelaButtonSize = .Medium
-    @State var state: XelaButtonState = .Default
+    @Binding var state: XelaButtonState
     @State var type: XelaButtonType = .Primary
     @State var background: Color = .init(asset: Colors.primaryButtonBlue)
     @State var foregroundColor: Color = .init(asset: Colors.primaryButtonForeground)

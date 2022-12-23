@@ -34,9 +34,9 @@ struct XelaMonth: View {
                     .foregroundColor(self.xelaManager.colors.monthHeaderColor)
 
                 Spacer()
-
-                XelaButton(action: { withAnimation { monthOffset -= 1 }}, size: .Small, type: .Secondary, background: xelaManager.colors.changeMonthButtonBackground, foregroundColor: xelaManager.colors.changeMonthButtonForeground, systemIcon: "chevron.left")
-                XelaButton(action: { withAnimation { monthOffset += 1 }}, size: .Small, type: .Secondary, background: xelaManager.colors.changeMonthButtonBackground, foregroundColor: xelaManager.colors.changeMonthButtonForeground, systemIcon: "chevron.right")
+//
+//                XelaButton(action: { withAnimation { monthOffset -= 1 }}, size: .Small, type: .Secondary, background: xelaManager.colors.changeMonthButtonBackground, foregroundColor: xelaManager.colors.changeMonthButtonForeground, systemIcon: "chevron.left")
+//                XelaButton(action: { withAnimation { monthOffset += 1 }}, size: .Small, type: .Secondary, background: xelaManager.colors.changeMonthButtonBackground, foregroundColor: xelaManager.colors.changeMonthButtonForeground, systemIcon: "chevron.right")
             }
             .frame(width: xelaManager.cellWidth * CGFloat(daysPerWeek))
 

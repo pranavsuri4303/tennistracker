@@ -75,61 +75,6 @@
 		B513A39B26A038BD00145D2D /* MatchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B513A39A26A038BD00145D2D /* MatchVM.swift */; };
 		B513A39D26A0390600145D2D /* ClubsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B513A39C26A0390600145D2D /* ClubsView.swift */; };
 		B52F300227A92D4000237915 /* HalfModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52F300127A92D4000237915 /* HalfModalView.swift */; };
-		B53004442942670300184795 /* UsersList2Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530040B2942670200184795 /* UsersList2Block.swift */; };
-		B53004452942670300184795 /* SocialMediaCardsBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530040C2942670200184795 /* SocialMediaCardsBlock.swift */; };
-		B53004462942670300184795 /* Form3Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530040D2942670200184795 /* Form3Block.swift */; };
-		B53004472942670300184795 /* Sidebar2Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530040E2942670200184795 /* Sidebar2Block.swift */; };
-		B53004482942670300184795 /* Form4Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530040F2942670200184795 /* Form4Block.swift */; };
-		B53004492942670300184795 /* Cryptocurrency2Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004102942670200184795 /* Cryptocurrency2Block.swift */; };
-		B530044A2942670300184795 /* EcommerceCardsBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004112942670200184795 /* EcommerceCardsBlock.swift */; };
-		B530044B2942670300184795 /* Filter2Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004122942670200184795 /* Filter2Block.swift */; };
-		B530044C2942670300184795 /* MusicApp2Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004132942670200184795 /* MusicApp2Block.swift */; };
-		B530044D2942670300184795 /* Form1Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004142942670200184795 /* Form1Block.swift */; };
-		B530044E2942670300184795 /* Filter1Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004152942670200184795 /* Filter1Block.swift */; };
-		B530044F2942670300184795 /* Form2Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004162942670200184795 /* Form2Block.swift */; };
-		B53004502942670300184795 /* MusicApp1Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004172942670200184795 /* MusicApp1Block.swift */; };
-		B53004512942670300184795 /* Cryptocurrency1Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004182942670200184795 /* Cryptocurrency1Block.swift */; };
-		B53004522942670300184795 /* Sidebar1Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004192942670200184795 /* Sidebar1Block.swift */; };
-		B53004532942670300184795 /* UsersList3Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530041A2942670200184795 /* UsersList3Block.swift */; };
-		B53004542942670300184795 /* MusicApp3Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530041B2942670200184795 /* MusicApp3Block.swift */; };
-		B53004552942670300184795 /* Sidebar3Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530041C2942670200184795 /* Sidebar3Block.swift */; };
-		B53004562942670300184795 /* UsersList1Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530041D2942670200184795 /* UsersList1Block.swift */; };
-		B53004572942670300184795 /* Cryptocurrency3Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530041E2942670200184795 /* Cryptocurrency3Block.swift */; };
-		B53004582942670300184795 /* SliderInputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004202942670200184795 /* SliderInputComponent.swift */; };
-		B53004592942670300184795 /* TextareaComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004212942670200184795 /* TextareaComponent.swift */; };
-		B530045A2942670300184795 /* ColorsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004222942670200184795 /* ColorsComponent.swift */; };
-		B530045B2942670300184795 /* TextInputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004232942670200184795 /* TextInputComponent.swift */; };
-		B530045C2942670300184795 /* ButtonsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004242942670200184795 /* ButtonsComponent.swift */; };
-		B530045D2942670300184795 /* SegmentedControllComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004252942670200184795 /* SegmentedControllComponent.swift */; };
-		B530045E2942670300184795 /* NumberInputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004262942670200184795 /* NumberInputComponent.swift */; };
-		B530045F2942670300184795 /* DialogsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004272942670200184795 /* DialogsComponent.swift */; };
-		B53004602942670300184795 /* ToggleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004282942670200184795 /* ToggleComponent.swift */; };
-		B53004612942670300184795 /* TabsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004292942670200184795 /* TabsComponent.swift */; };
-		B53004622942670300184795 /* UserAvatarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530042A2942670200184795 /* UserAvatarComponent.swift */; };
-		B53004632942670300184795 /* ChipsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530042B2942670200184795 /* ChipsComponent.swift */; };
-		B53004642942670300184795 /* CheckboxComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530042C2942670200184795 /* CheckboxComponent.swift */; };
-		B53004652942670300184795 /* ToastComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530042D2942670200184795 /* ToastComponent.swift */; };
-		B53004662942670300184795 /* StepsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530042E2942670200184795 /* StepsComponent.swift */; };
-		B53004672942670300184795 /* ChartsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530042F2942670200184795 /* ChartsComponent.swift */; };
-		B53004682942670300184795 /* AlertComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004302942670200184795 /* AlertComponent.swift */; };
-		B53004692942670300184795 /* RangeSliderInputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004312942670200184795 /* RangeSliderInputComponent.swift */; };
-		B530046A2942670300184795 /* BadgeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004322942670200184795 /* BadgeComponent.swift */; };
-		B530046B2942670300184795 /* DividerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004332942670200184795 /* DividerComponent.swift */; };
-		B530046C2942670300184795 /* TooltipsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004342942670200184795 /* TooltipsComponent.swift */; };
-		B530046D2942670300184795 /* DatePickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004352942670200184795 /* DatePickerComponent.swift */; };
-		B530046E2942670300184795 /* RadioButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004362942670200184795 /* RadioButtonComponent.swift */; };
-		B530046F2942670300184795 /* TypographyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004372942670200184795 /* TypographyComponent.swift */; };
-		B53004702942670300184795 /* AccordionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004382942670200184795 /* AccordionComponent.swift */; };
-		B53004712942670300184795 /* CheckoutTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530043A2942670200184795 /* CheckoutTemplate.swift */; };
-		B53004722942670300184795 /* MusicServiceTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530043B2942670200184795 /* MusicServiceTemplate.swift */; };
-		B53004732942670300184795 /* SocialTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530043C2942670200184795 /* SocialTemplate.swift */; };
-		B53004742942670300184795 /* TaskManagerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530043D2942670200184795 /* TaskManagerTemplate.swift */; };
-		B53004752942670300184795 /* MailboxTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530043E2942670200184795 /* MailboxTemplate.swift */; };
-		B53004762942670300184795 /* AnaliticsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530043F2942670200184795 /* AnaliticsTemplate.swift */; };
-		B53004772942670300184795 /* JobSearchTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004402942670200184795 /* JobSearchTemplate.swift */; };
-		B53004782942670300184795 /* DataTableTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004412942670200184795 /* DataTableTemplate.swift */; };
-		B53004792942670300184795 /* EcommerceTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004422942670200184795 /* EcommerceTemplate.swift */; };
-		B530047A2942670300184795 /* TasksProjectsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004432942670200184795 /* TasksProjectsTemplate.swift */; };
 		B53004DD2942677600184795 /* XelaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530047C2942677500184795 /* XelaTextField.swift */; };
 		B53004DE2942677600184795 /* XelaAccordion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530047D2942677500184795 /* XelaAccordion.swift */; };
 		B53004DF2942677600184795 /* XelaSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530047E2942677500184795 /* XelaSteps.swift */; };
@@ -431,61 +376,6 @@
 		B513A39A26A038BD00145D2D /* MatchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVM.swift; sourceTree = "<group>"; };
 		B513A39C26A0390600145D2D /* ClubsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsView.swift; sourceTree = "<group>"; };
 		B52F300127A92D4000237915 /* HalfModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalView.swift; sourceTree = "<group>"; };
-		B530040B2942670200184795 /* UsersList2Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersList2Block.swift; sourceTree = "<group>"; };
-		B530040C2942670200184795 /* SocialMediaCardsBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaCardsBlock.swift; sourceTree = "<group>"; };
-		B530040D2942670200184795 /* Form3Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form3Block.swift; sourceTree = "<group>"; };
-		B530040E2942670200184795 /* Sidebar2Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sidebar2Block.swift; sourceTree = "<group>"; };
-		B530040F2942670200184795 /* Form4Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form4Block.swift; sourceTree = "<group>"; };
-		B53004102942670200184795 /* Cryptocurrency2Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptocurrency2Block.swift; sourceTree = "<group>"; };
-		B53004112942670200184795 /* EcommerceCardsBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceCardsBlock.swift; sourceTree = "<group>"; };
-		B53004122942670200184795 /* Filter2Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter2Block.swift; sourceTree = "<group>"; };
-		B53004132942670200184795 /* MusicApp2Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicApp2Block.swift; sourceTree = "<group>"; };
-		B53004142942670200184795 /* Form1Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form1Block.swift; sourceTree = "<group>"; };
-		B53004152942670200184795 /* Filter1Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter1Block.swift; sourceTree = "<group>"; };
-		B53004162942670200184795 /* Form2Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form2Block.swift; sourceTree = "<group>"; };
-		B53004172942670200184795 /* MusicApp1Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicApp1Block.swift; sourceTree = "<group>"; };
-		B53004182942670200184795 /* Cryptocurrency1Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptocurrency1Block.swift; sourceTree = "<group>"; };
-		B53004192942670200184795 /* Sidebar1Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sidebar1Block.swift; sourceTree = "<group>"; };
-		B530041A2942670200184795 /* UsersList3Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersList3Block.swift; sourceTree = "<group>"; };
-		B530041B2942670200184795 /* MusicApp3Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicApp3Block.swift; sourceTree = "<group>"; };
-		B530041C2942670200184795 /* Sidebar3Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sidebar3Block.swift; sourceTree = "<group>"; };
-		B530041D2942670200184795 /* UsersList1Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersList1Block.swift; sourceTree = "<group>"; };
-		B530041E2942670200184795 /* Cryptocurrency3Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptocurrency3Block.swift; sourceTree = "<group>"; };
-		B53004202942670200184795 /* SliderInputComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderInputComponent.swift; sourceTree = "<group>"; };
-		B53004212942670200184795 /* TextareaComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextareaComponent.swift; sourceTree = "<group>"; };
-		B53004222942670200184795 /* ColorsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsComponent.swift; sourceTree = "<group>"; };
-		B53004232942670200184795 /* TextInputComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputComponent.swift; sourceTree = "<group>"; };
-		B53004242942670200184795 /* ButtonsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsComponent.swift; sourceTree = "<group>"; };
-		B53004252942670200184795 /* SegmentedControllComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControllComponent.swift; sourceTree = "<group>"; };
-		B53004262942670200184795 /* NumberInputComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberInputComponent.swift; sourceTree = "<group>"; };
-		B53004272942670200184795 /* DialogsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogsComponent.swift; sourceTree = "<group>"; };
-		B53004282942670200184795 /* ToggleComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleComponent.swift; sourceTree = "<group>"; };
-		B53004292942670200184795 /* TabsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsComponent.swift; sourceTree = "<group>"; };
-		B530042A2942670200184795 /* UserAvatarComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAvatarComponent.swift; sourceTree = "<group>"; };
-		B530042B2942670200184795 /* ChipsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChipsComponent.swift; sourceTree = "<group>"; };
-		B530042C2942670200184795 /* CheckboxComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxComponent.swift; sourceTree = "<group>"; };
-		B530042D2942670200184795 /* ToastComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastComponent.swift; sourceTree = "<group>"; };
-		B530042E2942670200184795 /* StepsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsComponent.swift; sourceTree = "<group>"; };
-		B530042F2942670200184795 /* ChartsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsComponent.swift; sourceTree = "<group>"; };
-		B53004302942670200184795 /* AlertComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertComponent.swift; sourceTree = "<group>"; };
-		B53004312942670200184795 /* RangeSliderInputComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSliderInputComponent.swift; sourceTree = "<group>"; };
-		B53004322942670200184795 /* BadgeComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeComponent.swift; sourceTree = "<group>"; };
-		B53004332942670200184795 /* DividerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DividerComponent.swift; sourceTree = "<group>"; };
-		B53004342942670200184795 /* TooltipsComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TooltipsComponent.swift; sourceTree = "<group>"; };
-		B53004352942670200184795 /* DatePickerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerComponent.swift; sourceTree = "<group>"; };
-		B53004362942670200184795 /* RadioButtonComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonComponent.swift; sourceTree = "<group>"; };
-		B53004372942670200184795 /* TypographyComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyComponent.swift; sourceTree = "<group>"; };
-		B53004382942670200184795 /* AccordionComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccordionComponent.swift; sourceTree = "<group>"; };
-		B530043A2942670200184795 /* CheckoutTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutTemplate.swift; sourceTree = "<group>"; };
-		B530043B2942670200184795 /* MusicServiceTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicServiceTemplate.swift; sourceTree = "<group>"; };
-		B530043C2942670200184795 /* SocialTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialTemplate.swift; sourceTree = "<group>"; };
-		B530043D2942670200184795 /* TaskManagerTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManagerTemplate.swift; sourceTree = "<group>"; };
-		B530043E2942670200184795 /* MailboxTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailboxTemplate.swift; sourceTree = "<group>"; };
-		B530043F2942670200184795 /* AnaliticsTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnaliticsTemplate.swift; sourceTree = "<group>"; };
-		B53004402942670200184795 /* JobSearchTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobSearchTemplate.swift; sourceTree = "<group>"; };
-		B53004412942670200184795 /* DataTableTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTableTemplate.swift; sourceTree = "<group>"; };
-		B53004422942670200184795 /* EcommerceTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceTemplate.swift; sourceTree = "<group>"; };
-		B53004432942670200184795 /* TasksProjectsTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksProjectsTemplate.swift; sourceTree = "<group>"; };
 		B530047C2942677500184795 /* XelaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTextField.swift; sourceTree = "<group>"; };
 		B530047D2942677500184795 /* XelaAccordion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaAccordion.swift; sourceTree = "<group>"; };
 		B530047E2942677500184795 /* XelaSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSteps.swift; sourceTree = "<group>"; };
@@ -789,9 +679,6 @@
 				B5DA309D2947ACA5003566F6 /* Font */,
 				B544FEEE2945467C00469B9F /* XCAssets+Generated.swift */,
 				B530047B2942677400184795 /* XelaUIKit */,
-				B530040A2942670200184795 /* XelaBlocks */,
-				B530041F2942670200184795 /* XelaComponents */,
-				B53004392942670200184795 /* XelaTemplates */,
 				764A60C825B90E5600789373 /* TennisApp.swift */,
 				76DB132825CEDAD9003EDA38 /* Models.swift */,
 				9FA0978525CFAF320039A73E /* Extensions.swift */,
@@ -973,86 +860,11 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		B530040A2942670200184795 /* XelaBlocks */ = {
-			isa = PBXGroup;
-			children = (
-				B530040B2942670200184795 /* UsersList2Block.swift */,
-				B530040C2942670200184795 /* SocialMediaCardsBlock.swift */,
-				B530040D2942670200184795 /* Form3Block.swift */,
-				B530040E2942670200184795 /* Sidebar2Block.swift */,
-				B530040F2942670200184795 /* Form4Block.swift */,
-				B53004102942670200184795 /* Cryptocurrency2Block.swift */,
-				B53004112942670200184795 /* EcommerceCardsBlock.swift */,
-				B53004122942670200184795 /* Filter2Block.swift */,
-				B53004132942670200184795 /* MusicApp2Block.swift */,
-				B53004142942670200184795 /* Form1Block.swift */,
-				B53004152942670200184795 /* Filter1Block.swift */,
-				B53004162942670200184795 /* Form2Block.swift */,
-				B53004172942670200184795 /* MusicApp1Block.swift */,
-				B53004182942670200184795 /* Cryptocurrency1Block.swift */,
-				B53004192942670200184795 /* Sidebar1Block.swift */,
-				B530041A2942670200184795 /* UsersList3Block.swift */,
-				B530041B2942670200184795 /* MusicApp3Block.swift */,
-				B530041C2942670200184795 /* Sidebar3Block.swift */,
-				B530041D2942670200184795 /* UsersList1Block.swift */,
-				B530041E2942670200184795 /* Cryptocurrency3Block.swift */,
-			);
-			path = XelaBlocks;
-			sourceTree = "<group>";
-		};
-		B530041F2942670200184795 /* XelaComponents */ = {
-			isa = PBXGroup;
-			children = (
-				B53004202942670200184795 /* SliderInputComponent.swift */,
-				B53004212942670200184795 /* TextareaComponent.swift */,
-				B53004222942670200184795 /* ColorsComponent.swift */,
-				B53004232942670200184795 /* TextInputComponent.swift */,
-				B53004242942670200184795 /* ButtonsComponent.swift */,
-				B53004252942670200184795 /* SegmentedControllComponent.swift */,
-				B53004262942670200184795 /* NumberInputComponent.swift */,
-				B53004272942670200184795 /* DialogsComponent.swift */,
-				B53004282942670200184795 /* ToggleComponent.swift */,
-				B53004292942670200184795 /* TabsComponent.swift */,
-				B530042A2942670200184795 /* UserAvatarComponent.swift */,
-				B530042B2942670200184795 /* ChipsComponent.swift */,
-				B530042C2942670200184795 /* CheckboxComponent.swift */,
-				B530042D2942670200184795 /* ToastComponent.swift */,
-				B530042E2942670200184795 /* StepsComponent.swift */,
-				B530042F2942670200184795 /* ChartsComponent.swift */,
-				B53004302942670200184795 /* AlertComponent.swift */,
-				B53004312942670200184795 /* RangeSliderInputComponent.swift */,
-				B53004322942670200184795 /* BadgeComponent.swift */,
-				B53004332942670200184795 /* DividerComponent.swift */,
-				B53004342942670200184795 /* TooltipsComponent.swift */,
-				B53004352942670200184795 /* DatePickerComponent.swift */,
-				B53004362942670200184795 /* RadioButtonComponent.swift */,
-				B53004372942670200184795 /* TypographyComponent.swift */,
-				B53004382942670200184795 /* AccordionComponent.swift */,
-			);
-			path = XelaComponents;
-			sourceTree = "<group>";
-		};
-		B53004392942670200184795 /* XelaTemplates */ = {
-			isa = PBXGroup;
-			children = (
-				B530043A2942670200184795 /* CheckoutTemplate.swift */,
-				B530043B2942670200184795 /* MusicServiceTemplate.swift */,
-				B530043C2942670200184795 /* SocialTemplate.swift */,
-				B530043D2942670200184795 /* TaskManagerTemplate.swift */,
-				B530043E2942670200184795 /* MailboxTemplate.swift */,
-				B530043F2942670200184795 /* AnaliticsTemplate.swift */,
-				B53004402942670200184795 /* JobSearchTemplate.swift */,
-				B53004412942670200184795 /* DataTableTemplate.swift */,
-				B53004422942670200184795 /* EcommerceTemplate.swift */,
-				B53004432942670200184795 /* TasksProjectsTemplate.swift */,
-			);
-			path = XelaTemplates;
-			sourceTree = "<group>";
-		};
 		B530047B2942677400184795 /* XelaUIKit */ = {
 			isa = PBXGroup;
 			children = (
 				B530047C2942677500184795 /* XelaTextField.swift */,
+				B53004D42942677600184795 /* XelaButton.swift */,
 				B530047D2942677500184795 /* XelaAccordion.swift */,
 				B530047E2942677500184795 /* XelaSteps.swift */,
 				B530047F2942677500184795 /* XelaCheckbox.swift */,
@@ -1067,7 +879,6 @@
 				B53004D12942677500184795 /* XelaNumberInput.swift */,
 				B53004D22942677500184795 /* XelaUserAvatar.swift */,
 				B53004D32942677500184795 /* XelaDatePicker.swift */,
-				B53004D42942677600184795 /* XelaButton.swift */,
 				B53004D52942677600184795 /* XelaDialog.swift */,
 				B53004D62942677600184795 /* XelaRadioButtonGroup.swift */,
 				B53004D72942677600184795 /* XelaChart.swift */,
@@ -1749,7 +1560,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftgen >/dev/null; then\n  swiftgen\nelse\n  echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftgen >/dev/null; then\n  swiftgen .\nelse\n  echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1761,14 +1572,12 @@
 				B53004F32942677600184795 /* XelaLineDatasets.swift in Sources */,
 				B53004F62942677600184795 /* XelaBarDatasets.swift in Sources */,
 				B53004FE2942677600184795 /* XelaPieChartBody.swift in Sources */,
-				B53004582942670300184795 /* SliderInputComponent.swift in Sources */,
 				B513A39B26A038BD00145D2D /* MatchVM.swift in Sources */,
 				B530051B2942677600184795 /* XelaDivider.swift in Sources */,
 				B5A239B027F7036400D7A9FE /* BaseViewVM.swift in Sources */,
 				B5132A62293A1FE900C2E396 /* ShotDetail.swift in Sources */,
 				B5132A60293A1E3800C2E396 /* RankingType.swift in Sources */,
 				76AADBA625C64F6A00EB0C43 /* PlayerSearchView.swift in Sources */,
-				B530046F2942670300184795 /* TypographyComponent.swift in Sources */,
 				B5EA4D812940777F0015D379 /* StringEntries.swift in Sources */,
 				B5C95EB02936632700C9C8A7 /* ScheduleItem.swift in Sources */,
 				B5C95EAC2936632700C9C8A7 /* Draw.swift in Sources */,
@@ -1779,13 +1588,11 @@
 				B53004E32942677600184795 /* XelaTabsItem.swift in Sources */,
 				B5BDA1D8293A11710048B727 /* DrawStatus.swift in Sources */,
 				B5C95EB62936632700C9C8A7 /* Point.swift in Sources */,
-				B530045F2942670300184795 /* DialogsComponent.swift in Sources */,
 				B5C95EA62936632700C9C8A7 /* MatchUp.swift in Sources */,
 				B53005212942677600184795 /* XelaUserAvatar.swift in Sources */,
 				B5C95EBB2936632700C9C8A7 /* OnlineProfile.swift in Sources */,
 				9FA0978625CFAF320039A73E /* Extensions.swift in Sources */,
 				B5132A5A293A1A5000C2E396 /* ParticipantStatus.swift in Sources */,
-				B530045B2942670300184795 /* TextInputComponent.swift in Sources */,
 				B53004F52942677600184795 /* XelaChartLineShape.swift in Sources */,
 				B5C95EA12936632700C9C8A7 /* TournamentGroup.swift in Sources */,
 				B53005082942677600184795 /* XelaButtonSize.swift in Sources */,
@@ -1795,14 +1602,9 @@
 				B53005262942677600184795 /* XelaChart.swift in Sources */,
 				B53004E22942677600184795 /* XelaTab.swift in Sources */,
 				76278C1F25B9E8060005EBD4 /* NewUserView.swift in Sources */,
-				B53004772942670300184795 /* JobSearchTemplate.swift in Sources */,
 				7662D3F525C391A1004544BF /* NewMatchView.swift in Sources */,
-				B53004592942670300184795 /* TextareaComponent.swift in Sources */,
-				B53004542942670300184795 /* MusicApp3Block.swift in Sources */,
 				B53004E52942677600184795 /* XelaTooltipArrowAlign.swift in Sources */,
-				B530045C2942670300184795 /* ButtonsComponent.swift in Sources */,
 				B53005002942677600184795 /* XelaCheckboxSize.swift in Sources */,
-				B53004682942670300184795 /* AlertComponent.swift in Sources */,
 				B513A39D26A0390600145D2D /* ClubsView.swift in Sources */,
 				B53004EF2942677600184795 /* XelaWeekdayHeader.swift in Sources */,
 				B5B22A3526A6DECA002CAA61 /* ProfileSettings.swift in Sources */,
@@ -1813,41 +1615,31 @@
 				B53004E92942677600184795 /* XelaRadioButtonSize.swift in Sources */,
 				B564F7312799F73A00052CA3 /* RDBadgeButton.swift in Sources */,
 				B53005042942677600184795 /* XelaToggleSize.swift in Sources */,
-				B530044F2942670300184795 /* Form2Block.swift in Sources */,
 				B530051C2942677600184795 /* XelaToast.swift in Sources */,
 				B5BDA1BC293A097C0048B727 /* ContactType.swift in Sources */,
 				B5BDA1E0293A15D30048B727 /* MatchUpType.swift in Sources */,
 				B530052B2942677700184795 /* XelaSegmentedControll.swift in Sources */,
 				B53005182942677600184795 /* XelaTooltip.swift in Sources */,
 				B53004F82942677600184795 /* XelaDoughnutChartBody.swift in Sources */,
-				B53004612942670300184795 /* TabsComponent.swift in Sources */,
 				B5132A6C293A237900C2E396 /* StageType.swift in Sources */,
 				B59E2DE727F4DF4600CB6B27 /* PlayerSearchCellView.swift in Sources */,
-				B53004442942670300184795 /* UsersList2Block.swift in Sources */,
 				B53004ED2942677600184795 /* XelaDatePickerCell.swift in Sources */,
-				B53004572942670300184795 /* Cryptocurrency3Block.swift in Sources */,
 				B53005112942677600184795 /* XelaUserAvatarStyle.swift in Sources */,
 				B53005052942677600184795 /* XelaTextareaState.swift in Sources */,
 				B5BDA1E4293A177C0048B727 /* StartType.swift in Sources */,
 				B5132A66293A213000C2E396 /* ShotMadeFrom.swift in Sources */,
 				B5C95EBF2936632700C9C8A7 /* TennisOfficials.swift in Sources */,
-				B53004552942670300184795 /* Sidebar3Block.swift in Sources */,
 				B53004EE2942677600184795 /* XelaDateManager.swift in Sources */,
 				B5BDA1DC293A13C80048B727 /* WheelchairClass.swift in Sources */,
 				B530052A2942677700184795 /* XelaTabs.swift in Sources */,
 				B5C95EAB2936632700C9C8A7 /* Game.swift in Sources */,
-				B53004742942670300184795 /* TaskManagerTemplate.swift in Sources */,
 				B5C95EB52936632700C9C8A7 /* GoesTo.swift in Sources */,
 				B5C95EA82936632700C9C8A7 /* Entry.swift in Sources */,
 				B53004F72942677600184795 /* XelaPieDatasets.swift in Sources */,
-				B53004662942670300184795 /* StepsComponent.swift in Sources */,
-				B530046A2942670300184795 /* BadgeComponent.swift in Sources */,
 				B530052D29426F5C00184795 /* NewLoginView.swift in Sources */,
 				B5BDA1D0293A0BD20048B727 /* EventType.swift in Sources */,
 				B5C95EA52936632700C9C8A7 /* Participant.swift in Sources */,
 				B530050B2942677600184795 /* XelaStepsState.swift in Sources */,
-				B53004512942670300184795 /* Cryptocurrency1Block.swift in Sources */,
-				B53004692942670300184795 /* RangeSliderInputComponent.swift in Sources */,
 				B53005272942677600184795 /* XelaChip.swift in Sources */,
 				7619A62925CA421800014ADA /* PlayerProfileView.swift in Sources */,
 				B530051F2942677600184795 /* OtherExtensions.swift in Sources */,
@@ -1862,14 +1654,12 @@
 				B53004FC2942677600184795 /* XelaDoughnutDatasets.swift in Sources */,
 				B5132A64293A20B100C2E396 /* ShotType.swift in Sources */,
 				B5BDA1E2293A16250048B727 /* MatchUpStatus.swift in Sources */,
-				B530044B2942670300184795 /* Filter2Block.swift in Sources */,
 				B5C95EBD2936632700C9C8A7 /* Stage.swift in Sources */,
 				B5BDA1E6293A18300048B727 /* OrganisationType.swift in Sources */,
 				B5C95EC52936632700C9C8A7 /* Side.swift in Sources */,
 				B530051D2942677600184795 /* TextExtensions.swift in Sources */,
 				B567575327A8EFE200381DD5 /* StringRowView.swift in Sources */,
 				B59E2DE427F3F9DC00CB6B27 /* PlayerSearchModel.swift in Sources */,
-				B53004732942670300184795 /* SocialTemplate.swift in Sources */,
 				762F87CF25C9C0EC004B46FD /* MatchesListView.swift in Sources */,
 				B530050D2942677600184795 /* XelaStepItem.swift in Sources */,
 				B53005062942677600184795 /* XelaButtonType.swift in Sources */,
@@ -1881,32 +1671,23 @@
 				B53004EC2942677600184795 /* XelaSegmentedControllButton.swift in Sources */,
 				760719B925BB52F000F09A1A /* DashboardView.swift in Sources */,
 				B53005012942677600184795 /* XelaCheckboxState.swift in Sources */,
-				B530046B2942670300184795 /* DividerComponent.swift in Sources */,
 				B53005252942677600184795 /* XelaRadioButtonGroup.swift in Sources */,
 				B5C95EA72936632700C9C8A7 /* RankingItem.swift in Sources */,
 				B530050C2942677600184795 /* XelaStepsOrientation.swift in Sources */,
-				B530044D2942670300184795 /* Form1Block.swift in Sources */,
 				B5CF6EA82938E11300DFFF16 /* AddressType.swift in Sources */,
 				B5C95EC12936632700C9C8A7 /* Sett.swift in Sources */,
 				B53004F22942677600184795 /* XelaMonth.swift in Sources */,
 				B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */,
 				B5BDA1DA293A13000048B727 /* EventLevel.swift in Sources */,
-				B530045A2942670300184795 /* ColorsComponent.swift in Sources */,
-				B53004782942670300184795 /* DataTableTemplate.swift in Sources */,
 				B5D1F76E27AA342A0091AC2F /* RDMenuButton.swift in Sources */,
 				B53004E42942677600184795 /* XelaTooltipAlign.swift in Sources */,
-				B530044E2942670300184795 /* Filter1Block.swift in Sources */,
 				B53005142942677600184795 /* XelaColor.swift in Sources */,
 				B53005202942677600184795 /* XelaNumberInput.swift in Sources */,
-				B53004472942670300184795 /* Sidebar2Block.swift in Sources */,
 				76B8153025CD3AF10029EE83 /* TextFieldWithPickerView.swift in Sources */,
 				B5C95EB12936632700C9C8A7 /* Player.swift in Sources */,
 				B53005292942677600184795 /* XelaSlider.swift in Sources */,
-				B53004672942670300184795 /* ChartsComponent.swift in Sources */,
-				B530044A2942670300184795 /* EcommerceCardsBlock.swift in Sources */,
 				B53004F42942677600184795 /* XelaChartDataset.swift in Sources */,
 				B5132A5E293A1CA400C2E396 /* WinReason.swift in Sources */,
-				B530046C2942670300184795 /* TooltipsComponent.swift in Sources */,
 				B53005072942677600184795 /* XelaButtonState.swift in Sources */,
 				764A618325B9493F00789373 /* RegisterVM.swift in Sources */,
 				B5BDA1D2293A0BF60048B727 /* Gender.swift in Sources */,
@@ -1914,17 +1695,13 @@
 				B5A239AE27F6FFF000D7A9FE /* UserDataModel.swift in Sources */,
 				B52F300227A92D4000237915 /* HalfModalView.swift in Sources */,
 				9FFCF2E425CF2C7E00C6C94E /* FriendsVM.swift in Sources */,
-				B530045E2942670300184795 /* NumberInputComponent.swift in Sources */,
 				B5EA4D83294079FA0015D379 /* Friends.swift in Sources */,
 				B53005132942677600184795 /* XelaUserAvatarDecorationPosition.swift in Sources */,
 				B5132A5C293A1A5800C2E396 /* ParticipantType.swift in Sources */,
 				B5132A6A293A223100C2E396 /* RoundCode.swift in Sources */,
-				B53004492942670300184795 /* Cryptocurrency2Block.swift in Sources */,
 				B53005282942677600184795 /* XelaTextarea.swift in Sources */,
 				B564F72F2799F13D00052CA3 /* RDHeaderTitle.swift in Sources */,
-				B53004762942670300184795 /* AnaliticsTemplate.swift in Sources */,
 				B5C95EAE2936632700C9C8A7 /* TotalPrizeMoney.swift in Sources */,
-				B53004752942670300184795 /* MailboxTemplate.swift in Sources */,
 				B5C95EA42936632700C9C8A7 /* TODSModel.swift in Sources */,
 				B53004FF2942677600184795 /* XelaChipSize.swift in Sources */,
 				76FA5EF125C7E495005DACE9 /* ExpertMatchScoringView.swift in Sources */,
@@ -1944,27 +1721,19 @@
 				B5C95EB92936632700C9C8A7 /* Team.swift in Sources */,
 				B53005242942677600184795 /* XelaDialog.swift in Sources */,
 				B5C95EC42936632700C9C8A7 /* Person.swift in Sources */,
-				B53004562942670300184795 /* UsersList1Block.swift in Sources */,
 				764A611B25B91C7300789373 /* LoginVM.swift in Sources */,
 				B5132A6E293A23E100C2E396 /* TieStatus.swift in Sources */,
 				B53004EA2942677600184795 /* XelaRoundedCorner.swift in Sources */,
-				B53004482942670300184795 /* Form4Block.swift in Sources */,
 				B5C95EB82936632700C9C8A7 /* OrderOfPlay.swift in Sources */,
-				B53004602942670300184795 /* ToggleComponent.swift in Sources */,
 				B53004FB2942677600184795 /* XelaChartType.swift in Sources */,
-				B53004462942670300184795 /* Form3Block.swift in Sources */,
-				B53004502942670300184795 /* MusicApp1Block.swift in Sources */,
 				B5C95EC02936632700C9C8A7 /* Contact.swift in Sources */,
 				B5132A68293A21AF00C2E396 /* ShotOutcome.swift in Sources */,
 				B53005222942677600184795 /* XelaDatePicker.swift in Sources */,
-				B53004522942670300184795 /* Sidebar1Block.swift in Sources */,
-				B530045D2942670300184795 /* SegmentedControllComponent.swift in Sources */,
 				B53004DD2942677600184795 /* XelaTextField.swift in Sources */,
 				76D1B86025BAEE4700FE1B4B /* LoadingScreenView.swift in Sources */,
 				76AADB9E25C64F3800EB0C43 /* StringsVM.swift in Sources */,
 				B5BDA1B42939F3960048B727 /* PlayingHandCode.swift in Sources */,
 				B5C95EAF2936632700C9C8A7 /* PrizeMoney.swift in Sources */,
-				B53004652942670300184795 /* ToastComponent.swift in Sources */,
 				B5CF6EAB2938E2D300DFFF16 /* Sex.swift in Sources */,
 				764A617E25B9479700789373 /* ResetPasswordView.swift in Sources */,
 				B5BDA1CE293A0B9E0048B727 /* EntryStatus.swift in Sources */,
@@ -1973,7 +1742,6 @@
 				762F87DA25CA34FE004B46FD /* ProfileImagePickerView.swift in Sources */,
 				B530050F2942677600184795 /* XelaDividerOrientation.swift in Sources */,
 				B53005102942677600184795 /* XelaUserAvatarDecoration.swift in Sources */,
-				B530046D2942670300184795 /* DatePickerComponent.swift in Sources */,
 				B53005232942677600184795 /* XelaButton.swift in Sources */,
 				B53004FA2942677600184795 /* XelaChartPieItemShape.swift in Sources */,
 				B53004E02942677600184795 /* XelaCheckbox.swift in Sources */,
@@ -1983,36 +1751,25 @@
 				76D731A025CA7BB7001D2D64 /* ProfileView.swift in Sources */,
 				B53004F02942677600184795 /* XelaDate.swift in Sources */,
 				B5BDA1B8293A07A30048B727 /* AgeCategory.swift in Sources */,
-				B53004642942670300184795 /* CheckboxComponent.swift in Sources */,
 				B5C95EB72936632700C9C8A7 /* Shot.swift in Sources */,
 				B5C95EB22936632700C9C8A7 /* Court.swift in Sources */,
 				B53004DE2942677600184795 /* XelaAccordion.swift in Sources */,
-				B53004532942670300184795 /* UsersList3Block.swift in Sources */,
-				B530046E2942670300184795 /* RadioButtonComponent.swift in Sources */,
 				B53004F12942677600184795 /* XelaColorSettings.swift in Sources */,
 				B53005162942677600184795 /* XelaNumberInputControls.swift in Sources */,
 				76DBB01425C29C8E00F238D9 /* AddStringVM.swift in Sources */,
 				B530050E2942677600184795 /* XelaDividerStyle.swift in Sources */,
 				B5C95EC32936632700C9C8A7 /* RoundItem.swift in Sources */,
-				B53004702942670300184795 /* AccordionComponent.swift in Sources */,
-				B53004722942670300184795 /* MusicServiceTemplate.swift in Sources */,
 				B5C95EB32936632700C9C8A7 /* Address.swift in Sources */,
 				B5BDA1DE293A15050048B727 /* IndoorOutdoor.swift in Sources */,
 				B5C95EA92936632700C9C8A7 /* Ranking.swift in Sources */,
-				B53004452942670300184795 /* SocialMediaCardsBlock.swift in Sources */,
-				B530044C2942670300184795 /* MusicApp2Block.swift in Sources */,
 				B53005122942677600184795 /* XelaUserAvatarSize.swift in Sources */,
-				B53004622942670300184795 /* UserAvatarComponent.swift in Sources */,
 				B5D1F76827AA0EBC0091AC2F /* BaseView.swift in Sources */,
-				B530047A2942670300184795 /* TasksProjectsTemplate.swift in Sources */,
 				B53004E62942677600184795 /* XelaTooltipTriangle.swift in Sources */,
 				B5A239A827F5538500D7A9FE /* RDEmptyListPlaceholder.swift in Sources */,
 				B54D406A27913F8A00F36EE1 /* RDButton.swift in Sources */,
 				764A60C925B90E5600789373 /* TennisApp.swift in Sources */,
 				76FA5EEC25C7E457005DACE9 /* AdvancedMatchScoringView.swift in Sources */,
 				76FA5EF625C7E6E9005DACE9 /* ScoringViewTemplates.swift in Sources */,
-				B53004632942670300184795 /* ChipsComponent.swift in Sources */,
-				B53004712942670300184795 /* CheckoutTemplate.swift in Sources */,
 				76AADBB425C6514800EB0C43 /* PlayersVM.swift in Sources */,
 				B53005022942677600184795 /* XelaTextFieldState.swift in Sources */,
 				764A617625B9475000789373 /* RegisterView.swift in Sources */,
@@ -2020,7 +1777,6 @@
 				B5C95EA22936632700C9C8A7 /* Round.swift in Sources */,
 				B53004F92942677600184795 /* XelaBarChartBody.swift in Sources */,
 				B5EA4D7F29404FEB0015D379 /* MatchUpFormatParser.swift in Sources */,
-				B53004792942670300184795 /* EcommerceTemplate.swift in Sources */,
 				764A613D25B9204B00789373 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
