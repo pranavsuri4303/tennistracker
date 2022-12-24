@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BaseView: View {
-    @State var currentTab: CurrentTab = .profile
+    @State var currentTab: Tabs = .profile
     @State var showMenu: Bool = false
 
     @State var offset: CGFloat = 0
@@ -27,15 +27,16 @@ struct BaseView: View {
                     .environmentObject(vm)
                 NavigationView {
                     VStack {
-                        switch currentTab {
-                        case .string: StringsListView()
-                        case .profile: ProfileView()
-                        case .dashboard: DashboardView()
-                        case .players: PlayerSearchView()
-                        case .matches: MatchesHistoryView()
-                        case .friends: FriendsListView()
-                        case .clubs: ClubsView()
-                        }
+                        Text("Test")
+//                        switch currentTab {
+//                        case .string: StringsListView()
+//                        case .profile: ProfileView()
+//                        case .dashboard: DashboardView()
+//                        case .players: PlayerSearchView()
+//                        case .matches: MatchesHistoryView()
+//                        case .friends: FriendsListView()
+//                        case .clubs: ClubsView()
+//                        }
                     }
                     .environmentObject(vm)
                     .navigationBarTitleDisplayMode(.inline)

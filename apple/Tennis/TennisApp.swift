@@ -16,9 +16,10 @@ struct TennisApp: App {
     var body: some Scene {
         WindowGroup {
             if logged {
-                BaseView()
-                    .navigationBarHidden(true)
-                //                    .preferredColorScheme(.dark)
+                NewBaseView()
+//                BaseView()
+//                    .navigationBarHidden(true)
+//                //                    .preferredColorScheme(.dark)
             } else {
                 LoginView()
                 //                    .preferredColorScheme(.dark)
@@ -37,7 +38,7 @@ class Delegate: NSObject, UIApplicationDelegate {
             print("[FIREBASE] Production mode.")
             filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist", inDirectory: "Release")
         #endif
-        let options = FirebaseOptions.init(contentsOfFile: filePath)!
+        let options = FirebaseOptions(contentsOfFile: filePath)!
         FirebaseApp.configure(options: options)
         for family in UIFont.familyNames {
             print(family)

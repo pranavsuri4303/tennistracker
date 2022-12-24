@@ -31,7 +31,7 @@ class LoginVM: ObservableObject {
                                                         value: "",
                                                         state: .Default,
                                                         helperText: "")
-    
+
     func getBioMetricStatus() -> Bool {
         let scanner = LAContext()
         if email != "", email == Stored_User, scanner.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: .none) {

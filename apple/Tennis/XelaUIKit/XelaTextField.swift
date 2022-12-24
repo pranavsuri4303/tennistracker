@@ -15,7 +15,7 @@ struct XelaTextField: View {
 
     @State var leftIcon: String? = nil
     @State var rightIcon: String? = nil
-    
+
     @FocusState private var isFocused: Bool
 
     var disableAutocorrection: Bool = true
@@ -73,7 +73,7 @@ struct XelaTextField: View {
                         .offset(y: value.isEmpty ? 0 : 10)
                         .disableAutocorrection(disableAutocorrection)
                         .onHover { didHover in
-                            if didHover{
+                            if didHover {
                                 self.state = .Hover
                             }
                         }
@@ -81,8 +81,7 @@ struct XelaTextField: View {
                         .onChange(of: isFocused) { isFocused in
                             if isFocused {
                                 self.state = .Focus
-                            }
-                            else {
+                            } else {
                                 self.state = .Default
                             }
                         }
@@ -107,7 +106,7 @@ struct XelaTextField: View {
                         .offset(y: value.isEmpty ? 0 : 10)
                         .disableAutocorrection(disableAutocorrection)
                         .onHover { didHover in
-                            if didHover{
+                            if didHover {
                                 self.state = .Hover
                             }
                         }
@@ -115,8 +114,7 @@ struct XelaTextField: View {
                         .onChange(of: isFocused) { isFocused in
                             if isFocused {
                                 self.state = .Focus
-                            }
-                            else {
+                            } else {
                                 self.state = .Default
                             }
                         }

@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct RDMenuButton: View {
-    @Binding var currentTab: CurrentTab
+    @Binding var currentTab: Tabs
     @Binding var showMenu: Bool
     var title: String
-    var menuItemTab: CurrentTab
+    var menuItemTab: Tabs
 
     var body: some View {
         HStack(spacing: 15) {

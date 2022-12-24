@@ -27,7 +27,7 @@ struct LoginView: View {
             Image("homeLogo")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-            // Dynamic Frame...
+                // Dynamic Frame...
                 .padding(.horizontal, 35)
                 .padding(.vertical)
             HStack {
@@ -35,14 +35,14 @@ struct LoginView: View {
                     Text("Sign In")
                         .xelaHeadline()
                 })
-                
+
                 Spacer(minLength: 0)
             }
             .padding()
             .padding(.leading, 15)
             VStack {
                 XelaTextField(placeholder: vm.emailTF.placeholder, value: $vm.emailTF.value, state: $vm.emailTF.state, helperText: $vm.emailTF.helperText, leftIcon: "envelope")
-                    .onChange(of: vm.emailTF.value) { newValue in
+                    .onChange(of: vm.emailTF.value) { _ in
                         if vm.emailTF.value == "" || vm.passwordTF.value == "" {
                             buttonState = .Disabled
                         } else {
@@ -50,7 +50,7 @@ struct LoginView: View {
                         }
                     }
                 XelaTextField(placeholder: vm.passwordTF.placeholder, value: $vm.passwordTF.value, state: $vm.passwordTF.state, helperText: $vm.passwordTF.helperText, secureField: true)
-                    .onChange(of: vm.passwordTF.value) { newValue in
+                    .onChange(of: vm.passwordTF.value) { _ in
                         if vm.passwordTF.value == "" || vm.passwordTF.value == "" {
                             buttonState = .Disabled
                         } else {
@@ -62,7 +62,7 @@ struct LoginView: View {
                 }, size: .Medium, state: $buttonState, autoResize: false)
             }
             .padding(.horizontal)
-            
+
             Button(action: {
                 self.showingResetPassword.toggle()
             }, label: {
@@ -73,7 +73,7 @@ struct LoginView: View {
             } onEnd: {
                 print("Reset Password Closed")
             }
-            
+
             .padding(.top, 8)
             .alert(isPresented: $vm.store_Info, content: {
                 Alert(title: Text("Message"), message: Text("Store Information For Future Login Using BioMetric Authentication?"), primaryButton: .default(Text("Accept"), action: {
@@ -87,7 +87,7 @@ struct LoginView: View {
                 })
             })
             Spacer()
-            
+
             HStack(spacing: 5) {
                 Text("Don't have an account? ")
                     .foregroundColor(Color(.white).opacity(0.6))

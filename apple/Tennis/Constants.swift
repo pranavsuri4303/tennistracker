@@ -8,6 +8,7 @@
 import Firebase
 import FirebaseAuth
 import Foundation
+import SwiftUI
 enum AuthState: String {
     case success = "Success"
     case error = "Error"
@@ -22,7 +23,7 @@ enum ViewState: String {
     case error = "Error"
 }
 
-enum CurrentTab: String, Equatable, CaseIterable {
+enum CurrentMenuTab: String, Equatable, CaseIterable {
     case profile = "Profile"
     case dashboard = "Dashboard"
     case string = "String"
@@ -30,6 +31,44 @@ enum CurrentTab: String, Equatable, CaseIterable {
     case matches = "Matches"
     case friends = "Friends"
     case clubs = "Clubs"
+}
+
+enum Tabs: String, Equatable, CaseIterable {
+    case home = "Home"
+    case search = "Search"
+    case dashboard = "Dashboard"
+    case tennis = "Tennis"
+    case profile = "Profile"
+
+    func title() -> String {
+        switch self {
+        case .home: return "Home"
+        case .search: return "Search"
+        case .dashboard: return "Dashboard"
+        case .tennis: return "Tennis"
+        case .profile: return "Profile"
+        }
+    }
+
+    func imageName() -> String {
+        switch self {
+        case .home: return "house"
+        case .search: return "magnifyingglass"
+        case .dashboard: return "chart.bar"
+        case .tennis: return "number"
+        case .profile: return "person"
+        }
+    }
+
+    func view() -> any View {
+        switch self {
+        case .home: return Text("Home")
+        case .search: return PlayerSearchView()
+        case .dashboard: return DashboardView()
+        case .tennis: return Text("Tennis")
+        case .profile: return ProfileView()
+        }
+    }
 }
 
 // MARK: Sorting Key Enums and Structs

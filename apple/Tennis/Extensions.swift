@@ -73,7 +73,7 @@ struct HalfSheetHelper<SheetView: View>: UIViewControllerRepresentable {
             sheetController.presentationController?.delegate = context.coordinator
             uiViewController.present(sheetController, animated: true)
         } else if !showSheet, presenting {
-            uiViewController.dismiss(animated: true)
+//            uiViewController.dismiss(animated: true)
         }
     }
 
@@ -113,5 +113,25 @@ struct TransparentGroupBox: GroupBoxStyle {
 extension Binding {
     func toUnwrapped<T>(defaultValue: T) -> Binding<T> where Value == T? {
         Binding<T>(get: { self.wrappedValue ?? defaultValue }, set: { self.wrappedValue = $0 })
+    }
+}
+
+extension View {
+    func getRect() -> CGRect {
+        UIScreen.main.bounds
+    }
+
+    func safeArea() -> UIEdgeInsets {
+        let null = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+
+        guard let screen = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+            return null
+        }
+
+        guard let safeArea = screen.windows.first?.safeAreaInsets else {
+            return null
+        }
+
+        return safeArea
     }
 }

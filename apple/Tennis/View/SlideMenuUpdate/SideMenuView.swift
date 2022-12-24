@@ -9,10 +9,10 @@ import FirebaseAuth
 import SwiftUI
 
 struct SideMenuView: View {
-    @Binding var currentSelectedView: CurrentTab
+    @Binding var currentSelectedView: Tabs
     @Binding var showMenu: Bool
     @AppStorage("status") var logged = false
-    @EnvironmentObject var vm: BaseViewVM
+    @EnvironmentObject var vm: NewBaseViewVM
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -51,41 +51,13 @@ struct SideMenuView: View {
             }
             .padding()
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        // Max Width...
-        .frame(width: getRect().width - 90)
+        .frame(width: getRect().width * 0.75)
         .frame(maxHeight: .infinity)
-        .background(
-            Color.primary
-                .opacity(0.04)
-                .ignoresSafeArea(.container, edges: .vertical)
-        )
-        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
-// Extending View to get SCreen Rect...
-extension View {
-    func getRect() -> CGRect {
-        UIScreen.main.bounds
-    }
 
-    func safeArea() -> UIEdgeInsets {
-        let null = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-
-        guard let screen = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
-            return null
-        }
-
-        guard let safeArea = screen.windows.first?.safeAreaInsets else {
-            return null
-        }
-
-        return safeArea
-    }
-}
-
-var menuButtons: [CurrentTab] {
-    let all = CurrentTab.allCases
+var menuButtons: [Tabs] {
+    let all = Tabs.allCases
     return all
 }

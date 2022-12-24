@@ -14,7 +14,7 @@ struct RegisterView: View {
     @State var newUserViewPresented = false
     @State private var alertShown = false
     @State private var errorMessage = ""
-    
+
     @State private var emailTFState: XelaTextFieldState = .Default
     @State private var emailTFHelperText = ""
     @State private var passwordTFState: XelaTextFieldState = .Default
