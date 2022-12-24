@@ -1301,7 +1301,6 @@
 				764A60C225B90E5500789373 /* Frameworks */,
 				764A60C325B90E5500789373 /* Resources */,
 				B544FEF029454B2100469B9F /* Swiftgen Assets */,
-				B5E22106295680D400EE9331 /* Swiftformat */,
 			);
 			buildRules = (
 			);
@@ -1568,24 +1567,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftgen >/dev/null; then\n  swiftgen\nelse\n  echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
-		};
-		B5E22106295680D400EE9331 /* Swiftformat */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Swiftformat;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftformat >/dev/null; then\n  swiftformat .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -56,7 +56,6 @@ struct SideMenuView: View {
     }
 }
 
-
 var menuButtons: [Tabs] {
     let all = Tabs.allCases
     return all

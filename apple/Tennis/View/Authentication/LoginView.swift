@@ -57,44 +57,45 @@ struct LoginView: View {
                             buttonState = .Default
                         }
                     }
-                XelaButton(text: "Sign In", action: {
-                    vm.verifyUser()
-                }, size: .Medium, state: $buttonState, autoResize: false)
+                Button(action: {
+                    self.showingResetPassword.toggle()
+                }, label: {
+                    Text("Forgot password?")
+                        .xelaButtonMedium()
+                }).halfSheet(showSheet: $showingResetPassword) {
+                    ResetPasswordView()
+                } onEnd: {
+                    print("Reset Password Closed")
+                }
             }
             .padding(.horizontal)
+            XelaButton(text: "Sign In", action: {
+                vm.verifyUser()
+            }, size: .Medium, state: $buttonState, autoResize: false)
 
-            Button(action: {
-                self.showingResetPassword.toggle()
-            }, label: {
-                Text("Forget password?")
-                    .foregroundColor(Color("green"))
-            }).halfSheet(showSheet: $showingResetPassword) {
-                ResetPasswordView()
-            } onEnd: {
-                print("Reset Password Closed")
-            }
-
-            .padding(.top, 8)
-            .alert(isPresented: $vm.store_Info, content: {
-                Alert(title: Text("Message"), message: Text("Store Information For Future Login Using BioMetric Authentication?"), primaryButton: .default(Text("Accept"), action: {
-                    // storing Info For BioMetric...
-                    Stored_User = vm.email
-                    Stored_Password = vm.password
-                    withAnimation { self.logged = true }
-                }), secondaryButton: .cancel {
-                    // redirecting to Home
-                    withAnimation { self.logged = true }
+                .padding(.top, 6)
+                .alert(isPresented: $vm.store_Info, content: {
+                    Alert(title: Text("Message"), message: Text("Store Information For Future Login Using BioMetric Authentication?"), primaryButton: .default(Text("Accept"), action: {
+                        // storing Info For BioMetric...
+                        Stored_User = vm.email
+                        Stored_Password = vm.password
+                        withAnimation { self.logged = true }
+                    }), secondaryButton: .cancel {
+                        // redirecting to Home
+                        withAnimation { self.logged = true }
+                    })
                 })
-            })
             Spacer()
 
             HStack(spacing: 5) {
                 Text("Don't have an account? ")
-                    .foregroundColor(Color(.white).opacity(0.6))
-                Button("Signup") {
+                    .xelaButtonMedium()
+                Button {
                     goToSignup.toggle()
+
+                } label: {
+                    Text("Signup").xelaButtonMedium()
                 }
-                .foregroundColor(Color("green"))
                 .fullScreenCover(isPresented: $goToSignup) {
                     RegisterView(registerViewPresented: $goToSignup)
                 }
