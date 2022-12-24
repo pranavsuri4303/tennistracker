@@ -11,7 +11,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @AppStorage("status") var logged = false
-    @EnvironmentObject var vm: BaseViewVM
+    @EnvironmentObject var vm: RDBaseViewVM
     @State private var goToSettings = false
 
     var body: some View {

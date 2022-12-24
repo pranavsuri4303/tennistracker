@@ -16,7 +16,7 @@ struct TennisApp: App {
     var body: some Scene {
         WindowGroup {
             if logged {
-                NewBaseView()
+                RDBaseView()
 //                BaseView()
 //                    .navigationBarHidden(true)
 //                //                    .preferredColorScheme(.dark)

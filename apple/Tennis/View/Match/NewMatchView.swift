@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NewMatchView: View {
     @State var friendsVM = FriendsVM()
-    @EnvironmentObject var baseVM: BaseViewVM
+    @EnvironmentObject var baseVM: RDBaseViewVM
     @ObservedObject var vm = MatchVM()
     @State var matchScorerIsPresented = false
     @State var selectionP1 = 0

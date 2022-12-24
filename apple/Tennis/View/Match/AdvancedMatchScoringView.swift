@@ -30,7 +30,7 @@ struct AdvancedMatchScoringView: View {
                             .foregroundColor(Color("green"))
                             .multilineTextAlignment(.trailing)
                     }).fullScreenCover(isPresented: $dashboardIsPresented, content: {
-                        BaseView()
+                        RDBaseView()
                     }).padding(.all)
                 }
             }

@@ -31,7 +31,7 @@ struct BasicMatchScoringView: View {
                             .frame(width: 25, height: 25, alignment: .center)
                             .foregroundColor(Color("green"))
                     }).fullScreenCover(isPresented: $dashboardIsPresented, content: {
-                        BaseView()
+                        RDBaseView()
                     }).padding(.all)
                 }
             }

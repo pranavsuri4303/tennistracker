@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StringsListView: View {
     @State var showingAddString = false
-    @EnvironmentObject var baseVM: BaseViewVM
+    @EnvironmentObject var baseVM: RDBaseViewVM
     @ObservedObject var vm = StringsVM()
 
     var body: some View {
@@ -41,8 +41,7 @@ struct StringsListView: View {
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
-                RDBadgeButton(systemImageTitle: "plus",
-                              action: { showingAddString.toggle() })
+                Image("add")
                     .halfSheet(showSheet: $showingAddString) { AddNewStringView(showingAddString: $showingAddString) }
             onEnd: { print("Add String View Closed") }
             }

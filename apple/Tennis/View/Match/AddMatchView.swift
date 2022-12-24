@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftUI
 
 struct AddMatchView: View {
-    @EnvironmentObject var baseVM: BaseViewVM
+    @EnvironmentObject var baseVM: RDBaseViewVM
     @State var p1Name = ""
     @State var p2Name = ""
     @State private var p1Other = false

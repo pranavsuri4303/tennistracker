@@ -12,7 +12,7 @@ struct FriendsListView: View {
     @StateObject var friendRequestVM = FriendsVM()
     @State private var goToRequests = false
     let imageUrl = "https://www.atptour.com/-/media/alias/player-headshot/N409"
-    @EnvironmentObject var baseVm: BaseViewVM
+    @EnvironmentObject var baseVm: RDBaseViewVM
     var count = 1
     var body: some View {
         VStack {

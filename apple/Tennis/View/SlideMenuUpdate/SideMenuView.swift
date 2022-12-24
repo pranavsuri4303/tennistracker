@@ -12,7 +12,7 @@ struct SideMenuView: View {
     @Binding var currentSelectedView: Tabs
     @Binding var showMenu: Bool
     @AppStorage("status") var logged = false
-    @EnvironmentObject var vm: NewBaseViewVM
+    @EnvironmentObject var vm: RDBaseViewVM
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -29,7 +29,7 @@ struct SideMenuView: View {
 
                     }.frame(alignment: .center)
                 }
-                Text(vm.userData?.firstName ?? "User")
+                Text(vm.personData?.standardGivenName ?? "User")
                     .font(.title3)
                     .fontWeight(.bold)
                     .foregroundColor(.white)

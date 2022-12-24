@@ -13,23 +13,27 @@ class StringEntries: Codable, Equatable {
     var count: Int?
     var lastUpdated: Timestamp?
     var stringEntries: [StringEntry?]?
+    var personID: String?
 
-    internal init(count: Int? = nil, lastUpdated: Timestamp? = nil, stringEntries: [StringEntry?]? = nil) {
+    internal init(count: Int? = nil, lastUpdated: Timestamp? = nil, stringEntries: [StringEntry?]? = nil, personID: String?) {
         self.count = count
         self.lastUpdated = lastUpdated
         self.stringEntries = stringEntries
+        self.personID = personID
     }
 
     enum CodingKeys: String, CodingKey {
         case count
         case lastUpdated
         case stringEntries
+        case personID
     }
 
     static func == (lhs: StringEntries, rhs: StringEntries) -> Bool {
         return lhs.count == rhs.count &&
             lhs.lastUpdated == rhs.lastUpdated &&
-            lhs.stringEntries == rhs.stringEntries
+            lhs.stringEntries == rhs.stringEntries &&
+            lhs.personID == rhs.personID
     }
 }
 
