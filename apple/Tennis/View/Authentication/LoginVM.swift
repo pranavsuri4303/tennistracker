@@ -10,9 +10,6 @@ import LocalAuthentication
 import SwiftUI
 
 class LoginVM: ObservableObject {
-    @Published var email = ""
-    @Published var password = ""
-
     @Published var alert = false
     @Published var alertMsg = ""
 
@@ -34,7 +31,7 @@ class LoginVM: ObservableObject {
 
     func getBioMetricStatus() -> Bool {
         let scanner = LAContext()
-        if email != "", email == Stored_User, scanner.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: .none) {
+        if emailTF.value != "", emailTF.value == Stored_User, scanner.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: .none) {
             return true
         }
 
@@ -44,14 +41,14 @@ class LoginVM: ObservableObject {
     func authenticateUser() {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         let scanner = LAContext()
-        scanner.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To Unlock \(email)") { _, err in
+        scanner.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To Unlock \(emailTF.value)") { _, err in
             if err != nil {
                 return
             }
 
             // Settig User Password And Logging IN...
             DispatchQueue.main.async {
-                self.password = self.Stored_Password
+                self.passwordTF.value = self.Stored_Password
                 self.verifyUser()
             }
         }
@@ -65,7 +62,7 @@ class LoginVM: ObservableObject {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
 
         isLoading = true
-        Auth.auth().signIn(withEmail: email, password: password) { _, err in
+        Auth.auth().signIn(withEmail: emailTF.value, password: passwordTF.value) { _, err in
 
             self.isLoading = false
 
