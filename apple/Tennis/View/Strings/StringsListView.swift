@@ -26,7 +26,6 @@ struct StringsListView: View {
                         Spacer()
                         Text("Swipe left ← to delete string entry.")
                             .foregroundColor(.secondary)
-
                         Spacer()
                     }
                     .listRowBackground(Color.clear)
@@ -41,10 +40,18 @@ struct StringsListView: View {
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Image("add")
-                    .halfSheet(showSheet: $showingAddString) { AddNewStringView(showingAddString: $showingAddString) }
-            onEnd: { print("Add String View Closed") }
+                Menu {
+                    Button("Add Match", action: { print("add match") })
+                    Button("Add String", action: { showingAddString.toggle() })
+                } label: {
+                    Image(systemName: "plus")
+                }
             }
         })
+        .halfSheet(showSheet: $showingAddString) {
+            AddNewStringView(showingAddString: $showingAddString)
+        } onEnd: {
+            print("ended")
+        }
     }
 }

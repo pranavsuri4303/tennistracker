@@ -19,14 +19,12 @@ struct RDBaseView: View {
         HStack(spacing: 0, content: {
             SideMenuView(currentSelectedView: $vm.currentTab, showMenu: $showMenu)
             TabView(selection: $vm.currentTab) {
-                RDNavigationView(showMenu: $showMenu) {
-                    Text(Tabs.home.title())
-                }
-                .tabItem {
-                    Label(Tabs.home.title(), systemImage: Tabs.home.imageName())
-                    Image(systemName: Tabs.home.imageName())
-                }
-                .tag(Tabs.home)
+                RDNavigationView(showMenu: $showMenu) { Text(Tabs.home.title()) }
+                    .tabItem {
+                        Label(Tabs.home.title(), systemImage: Tabs.home.imageName())
+                        Image(systemName: Tabs.home.imageName())
+                    }
+                    .tag(Tabs.home)
                 RDNavigationView(showMenu: $showMenu) {
                     PlayerSearchView()
                 }
@@ -36,7 +34,6 @@ struct RDBaseView: View {
                 .tag(Tabs.search)
                 RDNavigationView(showMenu: $showMenu) {
                     DashboardView()
-
                 }.tabItem {
                     Label(Tabs.dashboard.title(), systemImage: Tabs.dashboard.imageName())
                 }
