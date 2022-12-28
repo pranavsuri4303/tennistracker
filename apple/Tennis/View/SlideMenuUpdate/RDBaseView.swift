@@ -22,34 +22,28 @@ struct RDBaseView: View {
                 RDNavigationView(showMenu: $showMenu) { Text(Tabs.home.title()) }
                     .tabItem {
                         Label(Tabs.home.title(), systemImage: Tabs.home.imageName())
-                        Image(systemName: Tabs.home.imageName())
                     }
                     .tag(Tabs.home)
-                RDNavigationView(showMenu: $showMenu) {
-                    PlayerSearchView()
-                }
-                .tabItem {
-                    Label(Tabs.home.title(), systemImage: Tabs.search.imageName())
-                }
-                .tag(Tabs.search)
-                RDNavigationView(showMenu: $showMenu) {
-                    DashboardView()
-                }.tabItem {
-                    Label(Tabs.dashboard.title(), systemImage: Tabs.dashboard.imageName())
-                }
-                .tag(Tabs.dashboard)
-                RDNavigationView(showMenu: $showMenu) {
-                    StringsListView()
-                }.tabItem {
-                    Label(Tabs.tennis.title(), systemImage: Tabs.tennis.imageName())
-                }
-                .tag(Tabs.tennis)
-                RDNavigationView(showMenu: $showMenu) {
-                    ProfileView()
-                }.tabItem {
-                    Label(Tabs.profile.title(), systemImage: Tabs.profile.imageName())
-                }
-                .tag(Tabs.profile)
+                RDNavigationView(showMenu: $showMenu) { PlayerSearchView() }
+                    .tabItem {
+                        Label(Tabs.home.title(), systemImage: Tabs.search.imageName())
+                    }
+                    .tag(Tabs.search)
+                RDNavigationView(showMenu: $showMenu) { DashboardView() }
+                    .tabItem {
+                        Label(Tabs.dashboard.title(), systemImage: Tabs.dashboard.imageName())
+                    }
+                    .tag(Tabs.dashboard)
+                RDNavigationView(showMenu: $showMenu) { StringsListView() }
+                    .tabItem {
+                        Label(Tabs.tennis.title(), systemImage: Tabs.tennis.imageName())
+                    }
+                    .tag(Tabs.tennis)
+                RDNavigationView(showMenu: $showMenu) { ProfileView() }
+                    .tabItem {
+                        Label(Tabs.profile.title(), systemImage: Tabs.profile.imageName())
+                    }
+                    .tag(Tabs.profile)
             }
             .overlay(Rectangle()
                 .fill(Color.primary.opacity(Double((offset / sideBarWidth) / 5)))

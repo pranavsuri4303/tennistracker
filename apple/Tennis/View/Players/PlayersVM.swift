@@ -12,7 +12,7 @@ import LocalAuthentication
 import SwiftUI
 
 class PlayersVM: ObservableObject {
-    private let index = SearchClient(appID: "FLI02CKHLZ", apiKey: "da18a12522a494f64204acf9c6f09e6c").index(withName: "dev_users")
+    private let index = SearchClient(appID: "ISTIKEBW1B", apiKey: "364cd4a18649ba904ddd898120e73b35").index(withName: "tennisTrackerUsers")
     @Published var hits: [Hit] = []
     @Published var pageNo = 0
     @Published var pages = 0

@@ -9,13 +9,6 @@ import Combine
 import Firebase
 import Foundation
 
-enum FriendshipStatus: String {
-    case friend
-    case pending
-    case notFriend
-    case me
-}
-
 class FriendsVM: ObservableObject {
     let friendsDocRef = Firestore.firestore().collection("users").document(Auth.auth().currentUser!.uid).collection("extensions").document("friends")
     @Published var buttonTitle: String = FriendshipStatus.notFriend.rawValue
@@ -23,16 +16,18 @@ class FriendsVM: ObservableObject {
     @Published var friendsList: [PlayerModel] = []
     @Published var friendsListP1: [String] = ["(You)"]
     @Published var friendsListP2: [String] = [""]
+    @Published var data: Friendships?
 
-    var currentStatus = FriendshipStatus.notFriend {
-        didSet {
-            switch currentStatus {
-            case .friend: buttonTitle = "Friend"
-            case .notFriend: buttonTitle = "Send Friend Request"
-            case .pending: buttonTitle = "Pending Request"
-            case .me: buttonTitle = "Your Profile"
-            }
-        }
+    func getData() {
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
+    }
+
+    func getPendingRequest() {
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
+    }
+
+    func getSentRequests() {
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
     }
 
     func acceptFriendRequest() {
@@ -54,13 +49,3 @@ class FriendsVM: ObservableObject {
         // 1. Delete index from friend's list array
     }
 }
-
-/*
- --->Users
-     --->Friends
-             friendUID|uid, name, country, yob, friendSince|
-     --->Matches
-             randomID|uid?, name, country?, yob?, friendStatus
-     --->Strings
-
- */

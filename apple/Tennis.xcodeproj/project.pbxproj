@@ -1106,6 +1106,7 @@
 		B58917DA25CF26E1001BFA0E /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				B5EA4D82294079FA0015D379 /* Friends.swift */,
 				76F5424725CDC81F00557BF9 /* FriendsListView.swift */,
 				9FFCF2E325CF2C7E00C6C94E /* FriendsVM.swift */,
 			);
@@ -1131,7 +1132,6 @@
 				B5EA4D7E29404FEB0015D379 /* MatchUpFormatParser.swift */,
 				B5EA4D802940777F0015D379 /* StringEntries.swift */,
 				B5C95E742936631600C9C8A7 /* TODS Models */,
-				B5EA4D82294079FA0015D379 /* Friends.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
