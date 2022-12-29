@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		760719B925BB52F000F09A1A /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760719B825BB52F000F09A1A /* DashboardView.swift */; };
 		760719C325BB530600F09A1A /* AddNewStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760719C225BB530600F09A1A /* AddNewStringView.swift */; };
 		76183EE2260ED38D00189619 /* ResetPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76183EE1260ED38D00189619 /* ResetPasswordVM.swift */; };
-		7619A62925CA421800014ADA /* PlayerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7619A62825CA421700014ADA /* PlayerProfileView.swift */; };
 		76278C1F25B9E8060005EBD4 /* NewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76278C1E25B9E8060005EBD4 /* NewUserView.swift */; };
 		762F87CF25C9C0EC004B46FD /* MatchesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F87CE25C9C0EC004B46FD /* MatchesListView.swift */; };
 		762F87DA25CA34FE004B46FD /* ProfileImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F87D925CA34FE004B46FD /* ProfileImagePickerView.swift */; };
@@ -156,7 +155,6 @@
 		B530052B2942677700184795 /* XelaSegmentedControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004DC2942677600184795 /* XelaSegmentedControll.swift */; };
 		B53CCA1F2806F39A00258FBC /* AddMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CCA1E2806F39A00258FBC /* AddMatchView.swift */; };
 		B544FEED29453D3B00469B9F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B544FEEC29453D3B00469B9F /* Colors.xcassets */; };
-		B544FEEF2945467C00469B9F /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544FEEE2945467C00469B9F /* XCAssets+Generated.swift */; };
 		B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D40672791342D00F36EE1 /* RDTextField.swift */; };
 		B54D406A27913F8A00F36EE1 /* RDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D406927913F8A00F36EE1 /* RDButton.swift */; };
 		B564F72F2799F13D00052CA3 /* RDHeaderTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */; };
@@ -257,6 +255,9 @@
 		B5E2210129565D2800EE9331 /* RDBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2210029565D2800EE9331 /* RDBaseView.swift */; };
 		B5E2210329565E7B00EE9331 /* RDBaseViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2210229565E7B00EE9331 /* RDBaseViewVM.swift */; };
 		B5E221082956AEC700EE9331 /* RDNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E221072956AEC700EE9331 /* RDNavigationView.swift */; };
+		B5E4801A295D7A1100EB02F4 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E48019295D7A1100EB02F4 /* Icons.xcassets */; };
+		B5E48021295D870100EB02F4 /* Colors-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E4801F295D870000EB02F4 /* Colors-Constants.swift */; };
+		B5E48022295D870100EB02F4 /* Icons-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E48020295D870000EB02F4 /* Icons-Constants.swift */; };
 		B5EA4D7F29404FEB0015D379 /* MatchUpFormatParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA4D7E29404FEB0015D379 /* MatchUpFormatParser.swift */; };
 		B5EA4D812940777F0015D379 /* StringEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA4D802940777F0015D379 /* StringEntries.swift */; };
 		B5EA4D83294079FA0015D379 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA4D82294079FA0015D379 /* Friends.swift */; };
@@ -304,7 +305,6 @@
 		760719B825BB52F000F09A1A /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		760719C225BB530600F09A1A /* AddNewStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewStringView.swift; sourceTree = "<group>"; };
 		76183EE1260ED38D00189619 /* ResetPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVM.swift; sourceTree = "<group>"; };
-		7619A62825CA421700014ADA /* PlayerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileView.swift; sourceTree = "<group>"; };
 		76278C1E25B9E8060005EBD4 /* NewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserView.swift; sourceTree = "<group>"; };
 		762F87CE25C9C0EC004B46FD /* MatchesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesListView.swift; sourceTree = "<group>"; };
 		762F87D925CA34FE004B46FD /* ProfileImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImagePickerView.swift; sourceTree = "<group>"; };
@@ -457,7 +457,6 @@
 		B53004DC2942677600184795 /* XelaSegmentedControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSegmentedControll.swift; sourceTree = "<group>"; };
 		B53CCA1E2806F39A00258FBC /* AddMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMatchView.swift; sourceTree = "<group>"; };
 		B544FEEC29453D3B00469B9F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		B544FEEE2945467C00469B9F /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		B54D40672791342D00F36EE1 /* RDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDTextField.swift; sourceTree = "<group>"; };
 		B54D406927913F8A00F36EE1 /* RDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDButton.swift; sourceTree = "<group>"; };
 		B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHeaderTitle.swift; sourceTree = "<group>"; };
@@ -553,6 +552,9 @@
 		B5E2210029565D2800EE9331 /* RDBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDBaseView.swift; sourceTree = "<group>"; };
 		B5E2210229565E7B00EE9331 /* RDBaseViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDBaseViewVM.swift; sourceTree = "<group>"; };
 		B5E221072956AEC700EE9331 /* RDNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDNavigationView.swift; sourceTree = "<group>"; };
+		B5E48019295D7A1100EB02F4 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		B5E4801F295D870000EB02F4 /* Colors-Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors-Constants.swift"; sourceTree = "<group>"; };
+		B5E48020295D870000EB02F4 /* Icons-Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Icons-Constants.swift"; sourceTree = "<group>"; };
 		B5EA4D7E29404FEB0015D379 /* MatchUpFormatParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchUpFormatParser.swift; sourceTree = "<group>"; };
 		B5EA4D802940777F0015D379 /* StringEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEntries.swift; sourceTree = "<group>"; };
 		B5EA4D82294079FA0015D379 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
@@ -620,7 +622,6 @@
 			children = (
 				76AADBA525C64F6A00EB0C43 /* PlayerSearchView.swift */,
 				B59E2DE627F4DF4600CB6B27 /* PlayerSearchCellView.swift */,
-				7619A62825CA421700014ADA /* PlayerProfileView.swift */,
 				76AADBB325C6514800EB0C43 /* PlayersVM.swift */,
 			);
 			path = Players;
@@ -675,9 +676,10 @@
 		764A60C725B90E5500789373 /* Tennis */ = {
 			isa = PBXGroup;
 			children = (
+				B5E4801F295D870000EB02F4 /* Colors-Constants.swift */,
+				B5E48020295D870000EB02F4 /* Icons-Constants.swift */,
 				B5A9C113295484F400E42F72 /* Firebase */,
 				B5DA309D2947ACA5003566F6 /* Font */,
-				B544FEEE2945467C00469B9F /* XCAssets+Generated.swift */,
 				B530047B2942677400184795 /* XelaUIKit */,
 				764A60C825B90E5600789373 /* TennisApp.swift */,
 				76DB132825CEDAD9003EDA38 /* Models.swift */,
@@ -689,6 +691,7 @@
 				764A60CE25B90E5600789373 /* Preview Content */,
 				764A60D125B90E5600789373 /* Info.plist */,
 				B544FEEC29453D3B00469B9F /* Colors.xcassets */,
+				B5E48019295D7A1100EB02F4 /* Icons.xcassets */,
 			);
 			path = Tennis;
 			sourceTree = "<group>";
@@ -1494,6 +1497,7 @@
 				B5DA30B32947ACA5003566F6 /* NunitoSans-SemiBoldItalic.ttf in Resources */,
 				B5DA30B22947ACA5003566F6 /* NunitoSans-Regular.ttf in Resources */,
 				B5DA30AC2947ACA5003566F6 /* NunitoSans-LightItalic.ttf in Resources */,
+				B5E4801A295D7A1100EB02F4 /* Icons.xcassets in Resources */,
 				B5DA30B72947ACA5003566F6 /* NunitoSans-Black.ttf in Resources */,
 				B5DA30AE2947ACA5003566F6 /* NunitoSans-ExtraLight.ttf in Resources */,
 				B5DA30B02947ACA5003566F6 /* NunitoSans-BlackItalic.ttf in Resources */,
@@ -1545,7 +1549,6 @@
 /* Begin PBXShellScriptBuildPhase section */
 		B544FEF029454B2100469B9F /* Swiftgen Assets */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1582,6 +1585,7 @@
 				B5C95EAC2936632700C9C8A7 /* Draw.swift in Sources */,
 				76183EE2260ED38D00189619 /* ResetPasswordVM.swift in Sources */,
 				B5C95EBE2936632700C9C8A7 /* Statistic.swift in Sources */,
+				B5E48021295D870100EB02F4 /* Colors-Constants.swift in Sources */,
 				B5C95EA32936632700C9C8A7 /* Venue.swift in Sources */,
 				B5D1F76527AA0C140091AC2F /* SideMenuView.swift in Sources */,
 				B53004E32942677600184795 /* XelaTabsItem.swift in Sources */,
@@ -1639,7 +1643,6 @@
 				B5C95EA52936632700C9C8A7 /* Participant.swift in Sources */,
 				B530050B2942677600184795 /* XelaStepsState.swift in Sources */,
 				B53005272942677600184795 /* XelaChip.swift in Sources */,
-				7619A62925CA421800014ADA /* PlayerProfileView.swift in Sources */,
 				B530051F2942677600184795 /* OtherExtensions.swift in Sources */,
 				B53004E82942677600184795 /* XelaRadioButtonItem.swift in Sources */,
 				B5C95EBA2936632700C9C8A7 /* Event.swift in Sources */,
@@ -1745,7 +1748,6 @@
 				B53005232942677600184795 /* XelaButton.swift in Sources */,
 				B53004FA2942677600184795 /* XelaChartPieItemShape.swift in Sources */,
 				B53004E02942677600184795 /* XelaCheckbox.swift in Sources */,
-				B544FEEF2945467C00469B9F /* XCAssets+Generated.swift in Sources */,
 				76F5424825CDC81F00557BF9 /* FriendsListView.swift in Sources */,
 				B53004DF2942677600184795 /* XelaSteps.swift in Sources */,
 				76D731A025CA7BB7001D2D64 /* ProfileView.swift in Sources */,
@@ -1775,6 +1777,7 @@
 				764A617625B9475000789373 /* RegisterView.swift in Sources */,
 				B5BDA1CC293A0B850048B727 /* EndType.swift in Sources */,
 				B5C95EA22936632700C9C8A7 /* Round.swift in Sources */,
+				B5E48022295D870100EB02F4 /* Icons-Constants.swift in Sources */,
 				B53004F92942677600184795 /* XelaBarChartBody.swift in Sources */,
 				B5EA4D7F29404FEB0015D379 /* MatchUpFormatParser.swift in Sources */,
 				764A613D25B9204B00789373 /* Constants.swift in Sources */,
