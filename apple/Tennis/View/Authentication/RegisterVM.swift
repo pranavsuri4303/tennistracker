@@ -104,6 +104,7 @@ class RegisterVM: ObservableObject {
             Auth.auth().createUser(withEmail: email, password: password) { res, err in
                 if let err = err {
                     self.isLoading = false
+                    print(err)
                     completion(.failure(err))
                 } else {
                     self.isLoading = false
