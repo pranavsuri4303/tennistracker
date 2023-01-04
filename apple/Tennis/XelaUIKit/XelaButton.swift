@@ -198,3 +198,18 @@ struct XelaButton: View {
         return 15
     }
 }
+
+class XelaButtonProperties: Equatable {
+    internal init(text: String, state: XelaButtonState) {
+        self.text = text
+        self.state = state
+    }
+
+    var text: String
+    var state: XelaButtonState
+
+    static func == (lhs: XelaButtonProperties, rhs: XelaButtonProperties) -> Bool {
+        return lhs.text == rhs.text &&
+            lhs.state == rhs.state
+    }
+}

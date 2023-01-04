@@ -22,6 +22,10 @@
 internal enum Icons {
     internal static let ball = SymbolAsset(name: "ball")
     internal static let court2 = SymbolAsset(name: "court2")
+    internal static let envelope = SymbolAsset(name: "envelope")
+    internal static let eyeClosed = SymbolAsset(name: "eye-closed")
+    internal static let eye = SymbolAsset(name: "eye")
+    internal static let lock = SymbolAsset(name: "lock")
     internal static let racketBall = SymbolAsset(name: "racket.ball")
 }
 

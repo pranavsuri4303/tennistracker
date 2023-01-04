@@ -12,55 +12,34 @@ struct ResetPasswordView: View {
 
     var body: some View {
         ZStack {
-            GeometryReader { _ in
-                VStack {
-                    Image("resetPassword")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        // Dynamic Frame...
-                        .padding()
-                    HStack {
-                        VStack(alignment: .leading, spacing: 12, content: {
-                            Text("Reset password")
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-
-                            Text("Enter email to reset password")
-                                .foregroundColor(Color(.white).opacity(0.5))
-                        })
-                        Spacer()
-                    }
-                    .padding()
-                    .padding(.leading, 15)
-
-                    RDTextField(placeholder: "Email", text: $vm.email, imageName: "envelope", isSecure: false, isPicker: false)
-                        .padding(.horizontal)
-
-                    Spacer()
-
-                    RDButton(withTitle: "Reset Password") {
-                        vm.resetPassword()
-                    }
-                    .opacity(vm.email != "" ? 1 : 0.5)
-                    .disabled(vm.email != "" ? false : true)
+            VStack(spacing: 12) {
+                Image("resetPassword")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                VStack(alignment: .leading, spacing: 4, content: {
+                    Text("Reset password")
+                        .xelaHeadline()
+                    Text("A password reset link will be sent to your email.")
+                        .xelaSubheadline()
+                        .foregroundColor(.secondary)
+                        .lineLimit(2)
+                        .fixedSize(horizontal: false, vertical: true)
+                })
+                XelaTextField(placeholder: vm.emailTF.placeholder, value: $vm.emailTF.value, state: $vm.emailTF.state, helperText: $vm.emailTF.helperText, leftIcon: Icons.envelope.name, disableAutocorrection: true)
+                Spacer()
+                XelaButton(text: vm.resetButton.text, action: {
+                    vm.resetPassword()
+                }, size: .Large, state: $vm.resetButton.state, type: .Primary, autoResize: false)
                     .alert(isPresented: $vm.alert, content: {
                         Alert(title: Text(""), message: Text(vm.alertMsg), dismissButton: .destructive(Text("Ok")))
                     })
-                }
-                .background(Color("bg").ignoresSafeArea(.all, edges: .all))
             }
-
+            .padding(.horizontal, 24)
+            .padding(.vertical)
+            .background(Color(asset: Colors.background).ignoresSafeArea(.all, edges: .all))
             if vm.isLoading {
                 LoadingScreenView()
             }
-        }.edgesIgnoringSafeArea(.top)
+        }
     }
 }
-
-//
-// struct ResetPasswordView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ResetPasswordView()
-//    }
-// }

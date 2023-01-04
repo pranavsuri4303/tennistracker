@@ -21,7 +21,7 @@ struct TennisApp: App {
 //                    .navigationBarHidden(true)
 //                //                    .preferredColorScheme(.dark)
             } else {
-                LoginView()
+                NewLoginView()
                 //                    .preferredColorScheme(.dark)
             }
         }

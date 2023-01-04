@@ -28,6 +28,8 @@ class LoginVM: ObservableObject {
                                                         value: "",
                                                         state: .Default,
                                                         helperText: "")
+    @Published var logInButton = XelaButtonProperties(text: "Log in", state: .Default)
+    @Published var googleButton = XelaButtonProperties(text: "Sign in with Google", state: .Default)
 
     func getBioMetricStatus() -> Bool {
         let scanner = LAContext()
@@ -69,6 +71,8 @@ class LoginVM: ObservableObject {
             if let error = err {
                 self.alertMsg = error.localizedDescription
                 self.alert.toggle()
+                self.emailTF.state = .Error
+                self.passwordTF.state = .Error
                 return
             }
             if self.Stored_User == "" || self.Stored_Password == "" {
@@ -80,26 +84,3 @@ class LoginVM: ObservableObject {
         }
     }
 }
-
-class XelaTextFieldProperties: Equatable {
-    internal init(placeholder: String, value: String, state: XelaTextFieldState, helperText: String) {
-        self.placeholder = placeholder
-        self.value = value
-        self.state = state
-        self.helperText = helperText
-    }
-
-    var placeholder: String
-    var value: String
-    var state: XelaTextFieldState
-    var helperText: String
-
-    static func == (lhs: XelaTextFieldProperties, rhs: XelaTextFieldProperties) -> Bool {
-        return lhs.placeholder == rhs.placeholder &&
-            lhs.value == rhs.value &&
-            lhs.state == rhs.state &&
-            lhs.helperText == rhs.helperText
-    }
-}
-
-class XelaButtonProperties {}

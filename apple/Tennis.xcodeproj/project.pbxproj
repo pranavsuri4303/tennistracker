@@ -155,6 +155,7 @@
 		B530052B2942677700184795 /* XelaSegmentedControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004DC2942677600184795 /* XelaSegmentedControll.swift */; };
 		B53CCA1F2806F39A00258FBC /* AddMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CCA1E2806F39A00258FBC /* AddMatchView.swift */; };
 		B544FEED29453D3B00469B9F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B544FEEC29453D3B00469B9F /* Colors.xcassets */; };
+		B547C4892965287900BF77B3 /* NewLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B547C4882965287900BF77B3 /* NewLoginView.swift */; };
 		B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D40672791342D00F36EE1 /* RDTextField.swift */; };
 		B54D406A27913F8A00F36EE1 /* RDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D406927913F8A00F36EE1 /* RDButton.swift */; };
 		B564F72F2799F13D00052CA3 /* RDHeaderTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */; };
@@ -457,6 +458,7 @@
 		B53004DC2942677600184795 /* XelaSegmentedControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSegmentedControll.swift; sourceTree = "<group>"; };
 		B53CCA1E2806F39A00258FBC /* AddMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMatchView.swift; sourceTree = "<group>"; };
 		B544FEEC29453D3B00469B9F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		B547C4882965287900BF77B3 /* NewLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginView.swift; sourceTree = "<group>"; };
 		B54D40672791342D00F36EE1 /* RDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDTextField.swift; sourceTree = "<group>"; };
 		B54D406927913F8A00F36EE1 /* RDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDButton.swift; sourceTree = "<group>"; };
 		B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHeaderTitle.swift; sourceTree = "<group>"; };
@@ -779,6 +781,7 @@
 				764A611A25B91C7300789373 /* LoginVM.swift */,
 				764A618225B9493F00789373 /* RegisterVM.swift */,
 				76183EE1260ED38D00189619 /* ResetPasswordVM.swift */,
+				B547C4882965287900BF77B3 /* NewLoginView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -1583,6 +1586,7 @@
 				B5EA4D812940777F0015D379 /* StringEntries.swift in Sources */,
 				B5C95EB02936632700C9C8A7 /* ScheduleItem.swift in Sources */,
 				B5C95EAC2936632700C9C8A7 /* Draw.swift in Sources */,
+				B547C4892965287900BF77B3 /* NewLoginView.swift in Sources */,
 				76183EE2260ED38D00189619 /* ResetPasswordVM.swift in Sources */,
 				B5C95EBE2936632700C9C8A7 /* Statistic.swift in Sources */,
 				B5E48021295D870100EB02F4 /* Colors-Constants.swift in Sources */,

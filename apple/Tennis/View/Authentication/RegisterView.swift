@@ -15,47 +15,22 @@ struct RegisterView: View {
     @State private var alertShown = false
     @State private var errorMessage = ""
 
-    @State private var emailTFState: XelaTextFieldState = .Default
-    @State private var emailTFHelperText = ""
-    @State private var passwordTFState: XelaTextFieldState = .Default
-    @State private var passwordTFHelperText = ""
-    @State private var buttonState: XelaButtonState = .Default
-
     @State var startAnimate = false
     var body: some View {
         ZStack {
-            VStack {
-                Spacer(minLength: 0)
-
+            VStack(spacing: 18) {
                 Image("signup")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    // Dynamic Frame...
-                    .padding([.leading, .bottom, .trailing], 35)
-                    .padding()
                 HStack {
-                    VStack(alignment: .leading, spacing: 12, content: {
-                        Text("Create Account")
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-
-                        Text("Please sign up to create account")
-                            .foregroundColor(Color(.white).opacity(0.5))
-                    })
-                    .padding(.bottom)
-
-                    Spacer(minLength: 0)
+                    Text("Sign up")
+                        .xelaHeadline()
+                    Spacer()
                 }
-                .padding()
-                .padding(.leading, 15)
-
-                RDTextField(placeholder: "Email", text: $vm.newUser.emailAddress.toUnwrapped(defaultValue: ""), imageName: "envelope", isSecure: false, isPicker: false)
-                    .padding(.horizontal)
-                VStack {
-                    XelaTextField(placeholder: "Email", value: $vm.newUser.emailAddress.toUnwrapped(defaultValue: ""), state: $emailTFState, helperText: $emailTFHelperText)
-                    XelaTextField(placeholder: "Password", value: $vm.password, state: $passwordTFState, helperText: $passwordTFHelperText, secureField: true)
-                    XelaButton(text: "Sign In", action: {
+                VStack(spacing: 12) {
+                    XelaTextField(placeholder: vm.emailTF.placeholder, value: $vm.newUser.emailAddress.toUnwrapped(defaultValue: ""), state: $vm.emailTF.state, helperText: $vm.emailTF.helperText, leftIcon: Icons.envelope.name, disableAutocorrection: true)
+                    XelaTextField(placeholder: vm.passwordTF.placeholder, value: $vm.passwordTF.value, state: $vm.passwordTF.state, helperText: $vm.passwordTF.helperText, leftIcon: Icons.lock.name, rightIcon: Icons.eye.name, disableAutocorrection: true, secureField: true)
+                    XelaButton(text: vm.registerButton.text, action: {
                         vm.createAccount { result in
                             switch result {
                             case .success:
@@ -65,33 +40,31 @@ struct RegisterView: View {
                                 self.alertShown = true
                             }
                         }
-                    }, size: .Medium, state: $buttonState, autoResize: false)
+                    }, size: .Medium, state: $vm.googleSsoButton.state, autoResize: false)
                 }
-                Button(action: {}, label: {
-                    Image("googleLogo")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 40, height: 40, alignment: .center)
-
-                })
-                .padding(.all)
-
-                // SignUp...
+                Text("or")
+                    .xelaCaption()
+                XelaButton(text: vm.googleSsoButton.text, action: {
+                    print("sign in with google")
+                }, leftIcon: "google", size: .Medium, state: $vm.googleSsoButton.state, type: .Secondary)
+                Spacer()
 
                 HStack(spacing: 5) {
                     Text("Already have an account? ")
-                        .foregroundColor(Color(.white).opacity(0.6))
-
-                    Button("Login") {
-                        registerViewPresented.toggle()
+                        .xelaButtonSmall()
+                    Button {
+                        withAnimation {
+                            registerViewPresented.toggle()
+                        }
+                    } label: {
+                        Text("Sign in")
+                            .xelaButtonSmall()
                     }
-                    .foregroundColor(Color("green"))
                 }
-
-                .padding(.vertical)
             }
-//            .background(Color("bg").ignoresSafeArea(.all, edges: .all))
-            .animation(startAnimate ? .easeOut : .none)
+            .padding(.horizontal, 24)
+            .padding(.vertical)
+            .background(Color(asset: Colors.background).ignoresSafeArea(.all, edges: .all))
 
             if vm.isLoading {
                 LoadingScreenView()

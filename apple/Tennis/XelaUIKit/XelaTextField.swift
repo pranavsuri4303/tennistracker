@@ -49,8 +49,8 @@ struct XelaTextField: View {
                 if leftIcon != nil {
                     Image(leftIcon!)
                         .resizable()
-                        .renderingMode(.template)
-                        .frame(width: 15, height: 15)
+                        .scaledToFit()
+                        .frame(width: 16, height: 16)
                         .foregroundColor(state == .Disabled ? iconDisabledColor : state == .Error ? iconErrorColor : state == .Success ? iconSuccessColor : iconDefaultColor)
                 }
                 if secureField {
@@ -87,6 +87,7 @@ struct XelaTextField: View {
                         }
                 } else {
                     TextField("", text: $value)
+                        .autocapitalization(.none)
                         .font(.system(size: 14, weight: .bold))
                         .disabled(state == .Disabled ? true : false)
                         .foregroundColor(state == .Disabled ? disabledTextfieldColor : textfieldColor)
@@ -123,8 +124,8 @@ struct XelaTextField: View {
                 if rightIcon != nil {
                     Image(rightIcon!)
                         .resizable()
-                        .renderingMode(.template)
-                        .frame(width: 15, height: 15)
+                        .scaledToFit()
+                        .frame(width: 16, height: 16)
                         .foregroundColor(state == .Disabled ? iconDisabledColor : state == .Error ? iconErrorColor : state == .Success ? iconSuccessColor : iconDefaultColor)
                 }
             }
@@ -153,5 +154,26 @@ struct XelaTextField: View {
                     .foregroundColor(state == .Disabled ? disabledHelperTextColor : state == .Error ? errorHelperTextColor : state == .Success ? successHelperTextColor : defaultHelperTextColor)
             }
         }
+    }
+}
+
+class XelaTextFieldProperties: Equatable {
+    internal init(placeholder: String, value: String, state: XelaTextFieldState, helperText: String) {
+        self.placeholder = placeholder
+        self.value = value
+        self.state = state
+        self.helperText = helperText
+    }
+
+    var placeholder: String
+    var value: String
+    var state: XelaTextFieldState
+    var helperText: String
+
+    static func == (lhs: XelaTextFieldProperties, rhs: XelaTextFieldProperties) -> Bool {
+        return lhs.placeholder == rhs.placeholder &&
+            lhs.value == rhs.value &&
+            lhs.state == rhs.state &&
+            lhs.helperText == rhs.helperText
     }
 }

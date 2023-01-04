@@ -13,6 +13,10 @@ class RegisterVM: ObservableObject {
     @Published var password = ""
     @Published var isLoading = false
     @Published var newUser = Person()
+    @Published var emailTF = XelaTextFieldProperties(placeholder: "Email", value: "", state: .Default, helperText: "")
+    @Published var passwordTF = XelaTextFieldProperties(placeholder: "Password", value: "", state: .Default, helperText: "")
+    @Published var registerButton = XelaButtonProperties(text: "Sign up", state: .Default)
+    @Published var googleSsoButton = XelaButtonProperties(text: "Sign up with Google.", state: .Default)
 
     let yearsList = Array(Calendar.current.component(.year, from: Date()) - 100 ... Calendar.current.component(.year, from: Date()) - 5).map { String($0) }.sorted { $0 > $1 }
     let nationsList = Locale.isoRegionCodes.compactMap { "\($0) | \(Locale(identifier: "en_US").localizedString(forRegionCode: $0)!)" }.sorted { $0 < $1 }
@@ -101,7 +105,7 @@ class RegisterVM: ObservableObject {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         isLoading = true
         if let email = newUser.emailAddress {
-            Auth.auth().createUser(withEmail: email, password: password) { res, err in
+            Auth.auth().createUser(withEmail: email, password: passwordTF.value) { res, err in
                 if let err = err {
                     self.isLoading = false
                     print(err)
