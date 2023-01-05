@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @ObservedObject var vm = RegisterVM()
+    @StateObject var vm = RegisterVM()
     @Binding var registerViewPresented: Bool
-
     @State var newUserViewPresented = false
     @State private var alertShown = false
     @State private var errorMessage = ""
-
-    @State var startAnimate = false
+    @State private var showPasswordText = false
     var body: some View {
         ZStack {
             VStack(spacing: 18) {
@@ -29,7 +27,9 @@ struct RegisterView: View {
                 }
                 VStack(spacing: 12) {
                     XelaTextField(placeholder: vm.emailTF.placeholder, value: $vm.newUser.emailAddress.toUnwrapped(defaultValue: ""), state: $vm.emailTF.state, helperText: $vm.emailTF.helperText, leftIcon: Icons.envelope.name, disableAutocorrection: true)
-                    XelaTextField(placeholder: vm.passwordTF.placeholder, value: $vm.passwordTF.value, state: $vm.passwordTF.state, helperText: $vm.passwordTF.helperText, leftIcon: Icons.lock.name, rightIcon: Icons.eye.name, disableAutocorrection: true, secureField: true)
+                    XelaTextField(placeholder: vm.passwordTF.placeholder, value: $vm.passwordTF.value, state: $vm.passwordTF.state, helperText: $vm.passwordTF.helperText, leftIcon: Icons.password.name, rightIcon: showPasswordText ? Icons.eyeClosed.name : Icons.eye.name, rightIconAction: {
+                        showPasswordText.toggle()
+                    }, disableAutocorrection: true, secureField: showPasswordText ? false : true)
                     XelaButton(text: vm.registerButton.text, action: {
                         vm.createAccount { result in
                             switch result {
@@ -65,16 +65,10 @@ struct RegisterView: View {
             .padding(.horizontal, 24)
             .padding(.vertical)
             .background(Color(asset: Colors.background).ignoresSafeArea(.all, edges: .all))
-
             if vm.isLoading {
                 LoadingScreenView()
             }
         }
-        .onAppear(perform: {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.startAnimate.toggle()
-            }
-        })
         .fullScreenCover(isPresented: $newUserViewPresented, content: {
             NewUserView(isPresented: $newUserViewPresented, vm: vm)
         })

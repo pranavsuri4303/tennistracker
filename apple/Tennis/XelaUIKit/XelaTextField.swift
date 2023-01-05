@@ -14,9 +14,11 @@ struct XelaTextField: View {
     @Binding var helperText: String
 
     @State var leftIcon: String? = nil
-    @State var rightIcon: String? = nil
+    var rightIcon: String? = nil
 
     @FocusState private var isFocused: Bool
+
+    var rightIconAction: (() -> Void?)?
 
     var disableAutocorrection: Bool = true
 
@@ -120,13 +122,25 @@ struct XelaTextField: View {
                             }
                         }
                 }
+                if let action = rightIconAction {
+                    Button {
+                        action()
+                    } label: {
+                        Image(rightIcon!)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 16, height: 16)
+                            .foregroundColor(state == .Disabled ? iconDisabledColor : state == .Error ? iconErrorColor : state == .Success ? iconSuccessColor : iconDefaultColor)
+                    }
 
-                if rightIcon != nil {
-                    Image(rightIcon!)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 16, height: 16)
-                        .foregroundColor(state == .Disabled ? iconDisabledColor : state == .Error ? iconErrorColor : state == .Success ? iconSuccessColor : iconDefaultColor)
+                } else {
+                    if rightIcon != nil {
+                        Image(rightIcon!)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 16, height: 16)
+                            .foregroundColor(state == .Disabled ? iconDisabledColor : state == .Error ? iconErrorColor : state == .Success ? iconSuccessColor : iconDefaultColor)
+                    }
                 }
             }
             .frame(height: 38)

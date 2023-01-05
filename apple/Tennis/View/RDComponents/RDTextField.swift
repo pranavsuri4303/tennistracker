@@ -45,6 +45,5 @@ struct RDTextField: View {
         .padding(12)
         .background(Color(.white).opacity(text == "" ? 0.04 : 0.12))
         .cornerRadius(12)
-        .preferredColorScheme(.dark)
     }
 }

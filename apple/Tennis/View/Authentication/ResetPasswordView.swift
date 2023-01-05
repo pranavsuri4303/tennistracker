@@ -16,15 +16,18 @@ struct ResetPasswordView: View {
                 Image("resetPassword")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                VStack(alignment: .leading, spacing: 4, content: {
-                    Text("Reset password")
-                        .xelaHeadline()
-                    Text("A password reset link will be sent to your email.")
-                        .xelaSubheadline()
-                        .foregroundColor(.secondary)
-                        .lineLimit(2)
-                        .fixedSize(horizontal: false, vertical: true)
-                })
+                HStack {
+                    VStack(alignment: .leading, spacing: 4, content: {
+                        Text("Reset password")
+                            .xelaHeadline()
+                        Text("A password reset link will be sent to your email.")
+                            .xelaSubheadline()
+                            .foregroundColor(.secondary)
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
+                    })
+                    Spacer()
+                }
                 XelaTextField(placeholder: vm.emailTF.placeholder, value: $vm.emailTF.value, state: $vm.emailTF.state, helperText: $vm.emailTF.helperText, leftIcon: Icons.envelope.name, disableAutocorrection: true)
                 Spacer()
                 XelaButton(text: vm.resetButton.text, action: {

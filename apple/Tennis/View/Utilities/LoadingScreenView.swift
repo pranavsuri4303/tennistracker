@@ -30,3 +30,15 @@ struct LoadingScreenView: View {
         })
     }
 }
+
+struct FullScreenActivityIndicator: ViewModifier {
+    @Binding var isLoading: Bool
+    func body(content: Content) -> some View {
+        if isLoading {
+            content
+                .overlay(content: {
+                    LoadingScreenView()
+                })
+        }
+    }
+}

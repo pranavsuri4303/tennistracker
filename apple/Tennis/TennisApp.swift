@@ -17,12 +17,9 @@ struct TennisApp: App {
         WindowGroup {
             if logged {
                 RDBaseView()
-//                BaseView()
-//                    .navigationBarHidden(true)
-//                //                    .preferredColorScheme(.dark)
+
             } else {
-                NewLoginView()
-                //                    .preferredColorScheme(.dark)
+                LoginView()
             }
         }
     }

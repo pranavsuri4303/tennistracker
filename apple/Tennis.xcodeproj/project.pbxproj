@@ -20,7 +20,6 @@
 		764A60DB25B90E5600789373 /* TennisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A60DA25B90E5600789373 /* TennisTests.swift */; };
 		764A60E625B90E5600789373 /* TennisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A60E525B90E5600789373 /* TennisUITests.swift */; };
 		764A611B25B91C7300789373 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A611A25B91C7300789373 /* LoginVM.swift */; };
-		764A612825B91C8E00789373 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A612725B91C8E00789373 /* LoginView.swift */; };
 		764A613D25B9204B00789373 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A613C25B9204B00789373 /* Constants.swift */; };
 		764A617625B9475000789373 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A617525B9475000789373 /* RegisterView.swift */; };
 		764A617E25B9479700789373 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A617D25B9479700789373 /* ResetPasswordView.swift */; };
@@ -155,7 +154,7 @@
 		B530052B2942677700184795 /* XelaSegmentedControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004DC2942677600184795 /* XelaSegmentedControll.swift */; };
 		B53CCA1F2806F39A00258FBC /* AddMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CCA1E2806F39A00258FBC /* AddMatchView.swift */; };
 		B544FEED29453D3B00469B9F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B544FEEC29453D3B00469B9F /* Colors.xcassets */; };
-		B547C4892965287900BF77B3 /* NewLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B547C4882965287900BF77B3 /* NewLoginView.swift */; };
+		B547C4892965287900BF77B3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B547C4882965287900BF77B3 /* LoginView.swift */; };
 		B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D40672791342D00F36EE1 /* RDTextField.swift */; };
 		B54D406A27913F8A00F36EE1 /* RDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D406927913F8A00F36EE1 /* RDButton.swift */; };
 		B564F72F2799F13D00052CA3 /* RDHeaderTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */; };
@@ -322,7 +321,6 @@
 		764A60E525B90E5600789373 /* TennisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisUITests.swift; sourceTree = "<group>"; };
 		764A60E725B90E5600789373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		764A611A25B91C7300789373 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
-		764A612725B91C8E00789373 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		764A613C25B9204B00789373 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		764A617525B9475000789373 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		764A617D25B9479700789373 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
@@ -458,7 +456,7 @@
 		B53004DC2942677600184795 /* XelaSegmentedControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSegmentedControll.swift; sourceTree = "<group>"; };
 		B53CCA1E2806F39A00258FBC /* AddMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMatchView.swift; sourceTree = "<group>"; };
 		B544FEEC29453D3B00469B9F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		B547C4882965287900BF77B3 /* NewLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginView.swift; sourceTree = "<group>"; };
+		B547C4882965287900BF77B3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B54D40672791342D00F36EE1 /* RDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDTextField.swift; sourceTree = "<group>"; };
 		B54D406927913F8A00F36EE1 /* RDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDButton.swift; sourceTree = "<group>"; };
 		B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHeaderTitle.swift; sourceTree = "<group>"; };
@@ -774,14 +772,13 @@
 		76AADBC325C6718E00EB0C43 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				764A612725B91C8E00789373 /* LoginView.swift */,
-				764A617D25B9479700789373 /* ResetPasswordView.swift */,
 				764A617525B9475000789373 /* RegisterView.swift */,
+				B547C4882965287900BF77B3 /* LoginView.swift */,
+				764A617D25B9479700789373 /* ResetPasswordView.swift */,
 				76278C1E25B9E8060005EBD4 /* NewUserView.swift */,
 				764A611A25B91C7300789373 /* LoginVM.swift */,
 				764A618225B9493F00789373 /* RegisterVM.swift */,
 				76183EE1260ED38D00189619 /* ResetPasswordVM.swift */,
-				B547C4882965287900BF77B3 /* NewLoginView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -1586,7 +1583,7 @@
 				B5EA4D812940777F0015D379 /* StringEntries.swift in Sources */,
 				B5C95EB02936632700C9C8A7 /* ScheduleItem.swift in Sources */,
 				B5C95EAC2936632700C9C8A7 /* Draw.swift in Sources */,
-				B547C4892965287900BF77B3 /* NewLoginView.swift in Sources */,
+				B547C4892965287900BF77B3 /* LoginView.swift in Sources */,
 				76183EE2260ED38D00189619 /* ResetPasswordVM.swift in Sources */,
 				B5C95EBE2936632700C9C8A7 /* Statistic.swift in Sources */,
 				B5E48021295D870100EB02F4 /* Colors-Constants.swift in Sources */,
@@ -1711,7 +1708,6 @@
 				B5C95EA42936632700C9C8A7 /* TODSModel.swift in Sources */,
 				B53004FF2942677600184795 /* XelaChipSize.swift in Sources */,
 				76FA5EF125C7E495005DACE9 /* ExpertMatchScoringView.swift in Sources */,
-				764A612825B91C8E00789373 /* LoginView.swift in Sources */,
 				B53005152942677600184795 /* XelaNumberInputState.swift in Sources */,
 				76DB132925CEDAD9003EDA38 /* Models.swift in Sources */,
 				B53005092942677600184795 /* XelaStep.swift in Sources */,
