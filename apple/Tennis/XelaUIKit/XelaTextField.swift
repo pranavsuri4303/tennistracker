@@ -44,106 +44,121 @@ struct XelaTextField: View {
     var disabledHelperTextColor: Color = .init(asset: Colors.tfDisabledHelperText)
     var errorHelperTextColor: Color = .init(asset: Colors.tfErrorHelperText)
     var successHelperTextColor: Color = .init(asset: Colors.tfSuccessHelperText)
+    var isDatePicker = false
+    var datePickerView: XelaDatePicker?
+    var showDatePicker: Bool = false
+    let dateFormat = DateFormatter()
 
     var body: some View {
         VStack(alignment: .leading) {
-            HStack(spacing: 16) {
-                if leftIcon != nil {
-                    Image(leftIcon!)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 16, height: 16)
-                        .foregroundColor(state == .Disabled ? iconDisabledColor : state == .Error ? iconErrorColor : state == .Success ? iconSuccessColor : iconDefaultColor)
-                }
-                if secureField {
-                    SecureField("", text: $value)
-                        .disabled(state == .Disabled ? true : false)
-                        .foregroundColor(state == .Disabled ? disabledTextfieldColor : textfieldColor)
-                        .xelaPlaceholder(when: value.isEmpty) {
-                            VStack(spacing: 8) {
-                                Text(placeholder)
-                                    .xelaSmallBody()
-                                    .foregroundColor(placeholderColor)
-                                    .offset(y: value.isEmpty ? 0 : -10)
-                                    .lineLimit(1)
-                                if !value.isEmpty {
-                                    Spacer()
-                                }
-                            }
-                        }
-                        .frame(height: 40)
-                        .offset(y: value.isEmpty ? 0 : 10)
-                        .disableAutocorrection(disableAutocorrection)
-                        .onHover { didHover in
-                            if didHover {
-                                self.state = .Hover
-                            }
-                        }
-                        .focused($isFocused)
-                        .onChange(of: isFocused) { isFocused in
-                            if isFocused {
-                                self.state = .Focus
-                            } else {
-                                self.state = .Default
-                            }
-                        }
-                } else {
-                    TextField("", text: $value)
-                        .autocapitalization(.none)
-                        .font(.system(size: 14, weight: .bold))
-                        .disabled(state == .Disabled ? true : false)
-                        .foregroundColor(state == .Disabled ? disabledTextfieldColor : textfieldColor)
-                        .xelaPlaceholder(when: value.isEmpty) {
-                            VStack(spacing: 8) {
-                                Text(placeholder)
-                                    .xelaSmallBody()
-                                    .foregroundColor(placeholderColor)
-                                    .offset(y: value.isEmpty ? 0 : -10)
-                                    .lineLimit(1)
-                                if !value.isEmpty {
-                                    Spacer()
-                                }
-                            }
-                        }
-                        .frame(height: 40)
-                        .offset(y: value.isEmpty ? 0 : 10)
-                        .disableAutocorrection(disableAutocorrection)
-                        .onHover { didHover in
-                            if didHover {
-                                self.state = .Hover
-                            }
-                        }
-                        .focused($isFocused)
-                        .onChange(of: isFocused) { isFocused in
-                            if isFocused {
-                                self.state = .Focus
-                            } else {
-                                self.state = .Default
-                            }
-                        }
-                }
-                if let action = rightIconAction {
-                    Button {
-                        action()
-                    } label: {
-                        Image(rightIcon!)
+            VStack(alignment: .leading) {
+                HStack(spacing: 16) {
+                    if leftIcon != nil {
+                        Image(leftIcon!)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 16, height: 16)
                             .foregroundColor(state == .Disabled ? iconDisabledColor : state == .Error ? iconErrorColor : state == .Success ? iconSuccessColor : iconDefaultColor)
                     }
+                    if secureField {
+                        SecureField("", text: $value)
+                            .disabled(state == .Disabled ? true : false)
+                            .foregroundColor(state == .Disabled ? disabledTextfieldColor : textfieldColor)
+                            .xelaPlaceholder(when: value.isEmpty) {
+                                VStack(spacing: 8) {
+                                    Text(placeholder)
+                                        .xelaSmallBody()
+                                        .foregroundColor(placeholderColor)
+                                        .offset(y: value.isEmpty ? 0 : -10)
+                                        .lineLimit(1)
+                                    if !value.isEmpty {
+                                        Spacer()
+                                    }
+                                }
+                            }
+                            .frame(height: 40)
+                            .offset(y: value.isEmpty ? 0 : 10)
+                            .disableAutocorrection(disableAutocorrection)
+                            .onHover { didHover in
+                                if didHover {
+                                    self.state = .Hover
+                                }
+                            }
+                            .focused($isFocused)
+                            .onChange(of: isFocused) { isFocused in
+                                if isFocused {
+                                    self.state = .Focus
+                                } else {
+                                    self.state = .Default
+                                }
+                            }
+                    } else {
+                        TextField("", text: $value)
+                            .autocapitalization(.none)
+                            .font(.system(size: 14, weight: .bold))
+                            .disabled(state == .Disabled ? true : false)
+                            .foregroundColor(state == .Disabled ? disabledTextfieldColor : textfieldColor)
+                            .xelaPlaceholder(when: value.isEmpty) {
+                                VStack(spacing: 8) {
+                                    Text(placeholder)
+                                        .xelaSmallBody()
+                                        .foregroundColor(placeholderColor)
+                                        .offset(y: value.isEmpty ? 0 : -10)
+                                        .lineLimit(1)
+                                    if !value.isEmpty {
+                                        Spacer()
+                                    }
+                                }
+                            }
+                            .frame(height: 40)
+                            .offset(y: value.isEmpty ? 0 : 10)
+                            .disableAutocorrection(disableAutocorrection)
+                            .onHover { didHover in
+                                if didHover {
+                                    self.state = .Hover
+                                }
+                            }
+                            .focused($isFocused)
+                            .onChange(of: isFocused) { isFocused in
+                                if isFocused {
+                                    self.state = .Focus
+                                } else {
+                                    self.state = .Default
+                                }
+                            }
+                            .disabled(isDatePicker)
+                    }
+                    if let action = rightIconAction {
+                        Button {
+                            action()
+                        } label: {
+                            Image(rightIcon!)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 16, height: 16)
+                                .foregroundColor(state == .Disabled ? iconDisabledColor : state == .Error ? iconErrorColor : state == .Success ? iconSuccessColor : iconDefaultColor)
+                        }
 
-                } else {
-                    if rightIcon != nil {
-                        Image(rightIcon!)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 16, height: 16)
-                            .foregroundColor(state == .Disabled ? iconDisabledColor : state == .Error ? iconErrorColor : state == .Success ? iconSuccessColor : iconDefaultColor)
+                    } else {
+                        if rightIcon != nil {
+                            Image(rightIcon!)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 16, height: 16)
+                                .foregroundColor(state == .Disabled ? iconDisabledColor : state == .Error ? iconErrorColor : state == .Success ? iconSuccessColor : iconDefaultColor)
+                        }
+                    }
+                }
+                if isDatePicker && showDatePicker {
+                    if let datePickerView = datePickerView {
+                        datePickerView
+                            .onChange(of: datePickerView.xelaDateManager.selectedDate) { selectedDate in
+                                dateFormat.dateFormat = "MMM d, y"
+                                value = dateFormat.string(from: selectedDate ?? Date())
+                            }
                     }
                 }
             }
-            .frame(height: 38)
             .padding(EdgeInsets(top: 6, leading: leftIcon != nil ? 14 : 22, bottom: 6, trailing: rightIcon != nil ? 14 : 22))
             .background(state == .Disabled ? disabledBackground : background)
             .cornerRadius(16)

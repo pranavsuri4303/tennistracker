@@ -18,6 +18,9 @@ class StringsVM: ObservableObject {
     @Published var isLoading = false
     @Published var stringEntry = StringEntry(stringName: "", crossTension: 50, mainTension: 50, stringingDate: Timestamp(), lastUpdated: Timestamp())
 
+    @Published var mainsInput = XelaNumberInputProperties(label: "Mains", value: 50, state: .Default, helperText: "Strings tension for mains.", decreaseIcon: "plus", increaseIcon: "minus")
+    @Published var crossesInput = XelaNumberInputProperties(label: "Crosses", value: 50, state: .Default, helperText: "Strings tension for crosses.", decreaseIcon: "plus", increaseIcon: "minus")
+
     let db = Firestore.firestore().collection("users")
     private let uidStr = Auth.auth().currentUser?.uid
 

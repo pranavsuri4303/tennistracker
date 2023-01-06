@@ -20,9 +20,10 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Icons {
+    internal static let appointments = SymbolAsset(name: "appointments")
     internal static let ball = SymbolAsset(name: "ball")
     internal static let camera = SymbolAsset(name: "camera")
-    internal static let court2 = SymbolAsset(name: "court2")
+    internal static let down = SymbolAsset(name: "down")
     internal static let envelope = SymbolAsset(name: "envelope")
     internal static let eyeClosed = SymbolAsset(name: "eye-closed")
     internal static let eye = SymbolAsset(name: "eye")

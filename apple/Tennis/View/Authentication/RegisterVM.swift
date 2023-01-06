@@ -20,6 +20,20 @@ class RegisterVM: ObservableObject {
     @Published var givenNameTF = XelaTextFieldProperties(placeholder: "First name", value: "", state: .Default, helperText: "")
     @Published var familyNameTF = XelaTextFieldProperties(placeholder: "Last name", value: "", state: .Default, helperText: "")
 
+    @Published var dobTF = XelaTextFieldProperties(placeholder: "Date of Birth", value: "", state: .Default, helperText: "")
+    @Published var nationalityTF = XelaTextFieldProperties(placeholder: "Nationality", value: "", state: .Default, helperText: "")
+
+    @Published var yobDateManager: XelaDateManager = .init(
+        calendar: Calendar.current,
+        minimumDate: Date().addingTimeInterval(60 * 60 * 24 * 365 * 100 * -1),
+        maximumDate: Date().addingTimeInterval(0),
+        selectedDate: Date(),
+        mode: 0,
+        colors: XelaColorSettings(textColor: Color(xelaColor: .Gray3), todayColor: Color(xelaColor: .Blue3), selectedColor: Color(.white), disabledColor: Color(xelaColor: .Gray9), betweenStartAndEndColor: Color(xelaColor: .Gray3), textBackgroundColor: Color.clear, todayBackgroundColor: Color(.white), selectedBackgroundColor: Color(xelaColor: .Blue3), disabledBackgroundColor: Color.clear, betweenStartAndEndBackgroundColor: Color(xelaColor: .Blue8), weekdayHeaderColor: Color(xelaColor: .Gray7), monthHeaderColor: Color(xelaColor: .Gray2), yearHeaderColor: Color(xelaColor: .Gray9), weekdayHeaderBackgroundColor: Color.clear, monthBackgroundColor: Color.clear, changeMonthButtonBackground: Color(.white), changeMonthButtonForeground: Color(xelaColor: .Gray3), dividerColor: Color(xelaColor: .Gray9)),
+        cellWidth: 40
+    )
+    let dateFormatter = DateFormatter()
+        .dateFormat = "MMM d, y"
     let yearsList = Array(Calendar.current.component(.year, from: Date()) - 100 ... Calendar.current.component(.year, from: Date()) - 5).map { String($0) }.sorted { $0 > $1 }
     let nationsList = Locale.isoRegionCodes.compactMap { "\($0) | \(Locale(identifier: "en_US").localizedString(forRegionCode: $0)!)" }.sorted { $0 < $1 }
 

@@ -34,7 +34,6 @@
 		76D1B86025BAEE4700FE1B4B /* LoadingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D1B85F25BAEE4700FE1B4B /* LoadingScreenView.swift */; };
 		76D731A025CA7BB7001D2D64 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D7319F25CA7BB7001D2D64 /* ProfileView.swift */; };
 		76DB132925CEDAD9003EDA38 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DB132825CEDAD9003EDA38 /* Models.swift */; };
-		76DBB01425C29C8E00F238D9 /* AddStringVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DBB01325C29C8E00F238D9 /* AddStringVM.swift */; };
 		76F5424825CDC81F00557BF9 /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F5424725CDC81F00557BF9 /* FriendsListView.swift */; };
 		76FA5EEC25C7E457005DACE9 /* AdvancedMatchScoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA5EEB25C7E457005DACE9 /* AdvancedMatchScoringView.swift */; };
 		76FA5EF125C7E495005DACE9 /* ExpertMatchScoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA5EF025C7E495005DACE9 /* ExpertMatchScoringView.swift */; };
@@ -336,7 +335,6 @@
 		76D1B85F25BAEE4700FE1B4B /* LoadingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenView.swift; sourceTree = "<group>"; };
 		76D7319F25CA7BB7001D2D64 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		76DB132825CEDAD9003EDA38 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		76DBB01325C29C8E00F238D9 /* AddStringVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStringVM.swift; sourceTree = "<group>"; };
 		76F5424725CDC81F00557BF9 /* FriendsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
 		76FA5EEB25C7E457005DACE9 /* AdvancedMatchScoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedMatchScoringView.swift; sourceTree = "<group>"; };
 		76FA5EF025C7E495005DACE9 /* ExpertMatchScoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertMatchScoringView.swift; sourceTree = "<group>"; };
@@ -752,7 +750,6 @@
 		76AADBBB25C6716D00EB0C43 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
-				76DBB01325C29C8E00F238D9 /* AddStringVM.swift */,
 				76343B8525C2B2140061ABB5 /* StringsListView.swift */,
 				B567575227A8EFE200381DD5 /* StringRowView.swift */,
 				760719C225BB530600F09A1A /* AddNewStringView.swift */,
@@ -1758,7 +1755,6 @@
 				B53004DE2942677600184795 /* XelaAccordion.swift in Sources */,
 				B53004F12942677600184795 /* XelaColorSettings.swift in Sources */,
 				B53005162942677600184795 /* XelaNumberInputControls.swift in Sources */,
-				76DBB01425C29C8E00F238D9 /* AddStringVM.swift in Sources */,
 				B530050E2942677600184795 /* XelaDividerStyle.swift in Sources */,
 				B5E221082956AEC700EE9331 /* RDNavigationView.swift in Sources */,
 				B5C95EC32936632700C9C8A7 /* RoundItem.swift in Sources */,

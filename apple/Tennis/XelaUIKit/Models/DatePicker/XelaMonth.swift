@@ -11,32 +11,51 @@ struct XelaMonth: View {
     // @Binding var isPresented: Bool
 
     @ObservedObject var xelaManager: XelaDateManager
-
     @State var monthOffset: Int
-
     let calendarUnitYMD = Set<Calendar.Component>([.year, .month, .day])
     let daysPerWeek = 7
     var monthsArray: [[Date]] {
         monthArray()
     }
 
-    // let cellWidth = CGFloat(40)
+    @State var increaseButtonState = XelaButtonState.Default
+    @State var decreaseButtonState = XelaButtonState.Default
+    let years = ((Calendar.current.component(.year, from: Date()) - 100) ... (Calendar.current.component(.year, from: Date()))).map { String($0) }
 
     var body: some View {
         VStack(alignment: HorizontalAlignment.center, spacing: 0) {
             HStack {
-                Text(getYearHeader())
-                    .xelaHeadline()
-                    .foregroundColor(self.xelaManager.colors.yearHeaderColor)
-
-                Text(getMonthHeader())
-                    .xelaHeadline()
-                    .foregroundColor(self.xelaManager.colors.monthHeaderColor)
+                Menu {
+                    ForEach(years, id: \.self) { year in
+                        Button {
+                            monthOffset = monthOffset - ((Int(getYearHeader())! - Int(year)!) * 12)
+                        } label: {
+                            Text(year)
+                        }
+                    }
+                } label: {
+                    Text(getYearHeader())
+                        .xelaHeadline()
+                        .foregroundColor(self.xelaManager.colors.yearHeaderColor)
+                }
+                Menu {
+                    ForEach(DateFormatter().monthSymbols.indices) { month in
+                        Button {
+                            monthOffset = monthOffset - (DateFormatter().monthSymbols.firstIndex(of: getMonthHeader())! - month)
+                        } label: {
+                            Text(DateFormatter().monthSymbols[month])
+                        }
+                    }
+                } label: {
+                    Text(getMonthHeader())
+                        .xelaHeadline()
+                        .foregroundColor(self.xelaManager.colors.monthHeaderColor)
+                }
 
                 Spacer()
-//
-//                XelaButton(action: { withAnimation { monthOffset -= 1 }}, size: .Small, type: .Secondary, background: xelaManager.colors.changeMonthButtonBackground, foregroundColor: xelaManager.colors.changeMonthButtonForeground, systemIcon: "chevron.left")
-//                XelaButton(action: { withAnimation { monthOffset += 1 }}, size: .Small, type: .Secondary, background: xelaManager.colors.changeMonthButtonBackground, foregroundColor: xelaManager.colors.changeMonthButtonForeground, systemIcon: "chevron.right")
+
+                XelaButton(action: { withAnimation { monthOffset -= 1 }}, size: .Small, state: $decreaseButtonState, type: .Secondary, background: xelaManager.colors.changeMonthButtonBackground, foregroundColor: xelaManager.colors.changeMonthButtonForeground, systemIcon: "chevron.left")
+                XelaButton(action: { withAnimation { monthOffset += 1 }}, size: .Small, state: $increaseButtonState, type: .Secondary, background: xelaManager.colors.changeMonthButtonBackground, foregroundColor: xelaManager.colors.changeMonthButtonForeground, systemIcon: "chevron.right")
             }
             .frame(width: xelaManager.cellWidth * CGFloat(daysPerWeek))
 
@@ -81,7 +100,7 @@ struct XelaMonth: View {
                 Spacer()
             }
             .frame(minWidth: 0, maxWidth: .infinity)
-            .frame(height: xelaManager.cellWidth * 7)
+            .frame(height: xelaManager.cellWidth * 6)
 
         }.background(xelaManager.colors.monthBackgroundColor)
     }
@@ -94,13 +113,15 @@ struct XelaMonth: View {
         if isEnabled(date: date) {
             switch xelaManager.mode {
             case 0:
-                if xelaManager.selectedDate != nil,
-                   xelaManager.calendar.isDate(xelaManager.selectedDate, inSameDayAs: date)
-                {
-                    xelaManager.selectedDate = nil
-                } else {
-                    xelaManager.selectedDate = date
-                }
+                xelaManager.selectedDate = date
+//
+//                if xelaManager.selectedDate != nil,
+//                   xelaManager.calendar.isDate(xelaManager.selectedDate, inSameDayAs: date)
+//                {
+//                    xelaManager.selectedDate = nil
+//                } else {
+//                    xelaManager.selectedDate = date
+//                }
 
             case 1:
                 xelaManager.startDate = date

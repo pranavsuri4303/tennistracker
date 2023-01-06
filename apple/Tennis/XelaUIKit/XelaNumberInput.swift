@@ -128,3 +128,30 @@ struct XelaNumberInput: View {
         }
     }
 }
+
+class XelaNumberInputProperties: Equatable {
+    internal init(label: String, value: Int, state: XelaNumberInputState, helperText: String, decreaseIcon: String, increaseIcon: String) {
+        self.label = label
+        self.value = value
+        self.state = state
+        self.helperText = helperText
+        self.decreaseIcon = decreaseIcon
+        self.increaseIcon = increaseIcon
+    }
+
+    var label: String
+    var value: Int
+    var state: XelaNumberInputState
+    var helperText: String
+    var decreaseIcon: String
+    var increaseIcon: String
+
+    static func == (lhs: XelaNumberInputProperties, rhs: XelaNumberInputProperties) -> Bool {
+        return lhs.label == rhs.label &&
+            lhs.value == rhs.value &&
+            lhs.state == rhs.state &&
+            lhs.helperText == rhs.helperText &&
+            lhs.decreaseIcon == rhs.decreaseIcon &&
+            lhs.increaseIcon == rhs.increaseIcon
+    }
+}

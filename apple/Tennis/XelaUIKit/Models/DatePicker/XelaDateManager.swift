@@ -14,6 +14,22 @@ class XelaDateManager: ObservableObject {
     @Published var disabledDates: [Date] = .init()
     @Published var selectedDates: [Date] = .init()
     @Published var selectedDate: Date! = nil
+    var selectedDateString: String {
+        get {
+            let dateFormatter = DateFormatter()
+            dateFormatter.timeStyle = .none
+            dateFormatter.dateFormat = "MMMM d, y"
+            if selectedDate != nil {
+                return dateFormatter.string(from: selectedDate)
+            } else {
+                return dateFormatter.string(from: Date())
+            }
+        }
+        set {
+            self.selectedDateString = newValue
+        }
+    }
+
     @Published var startDate: Date! = nil
     @Published var endDate: Date! = nil
 
@@ -55,4 +71,6 @@ class XelaDateManager: ObservableObject {
     func disabledDatesFindIndex(date: Date) -> Int? {
         return disabledDates.firstIndex(where: { calendar.isDate($0, inSameDayAs: date) })
     }
+
+    func dateToString(date _: Date) {}
 }
