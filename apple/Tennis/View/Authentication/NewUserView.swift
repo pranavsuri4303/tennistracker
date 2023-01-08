@@ -58,7 +58,7 @@ struct NewUserView: View {
                         VStack(spacing: 12) {
                             XelaTextField(placeholder: vm.givenNameTF.placeholder, value: $vm.newUser.standardGivenName.toUnwrapped(defaultValue: ""), state: $vm.givenNameTF.state, helperText: $vm.givenNameTF.helperText, leftIcon: Icons.user.name, disableAutocorrection: false)
                             XelaTextField(placeholder: vm.familyNameTF.placeholder, value: $vm.newUser.standardFamilyName.toUnwrapped(defaultValue: ""), state: $vm.familyNameTF.state, helperText: $vm.familyNameTF.helperText, leftIcon: Icons.user.name, disableAutocorrection: false)
-                            XelaTextField(placeholder: vm.dobTF.placeholder, value: $vm.yobDateManager.selectedDateString, state: $vm.dobTF.state, helperText: $vm.dobTF.helperText, leftIcon: Icons.appointments.name, isDatePicker: true, datePickerView: XelaDatePicker(xelaDateManager: vm.yobDateManager, monthOffset: 100 * 12), showDatePicker: showDatePicker)
+                            XelaTextField(placeholder: vm.dobTF.placeholder, value: $vm.yobDateManager.selectedDateString, state: $vm.dobTF.state, helperText: $vm.dobTF.helperText, leftIcon: Icons.appointments.name, isDatePicker: true, datePickerView: XelaDatePicker(xelaDateManager: vm.yobDateManager, monthOffset: (100 * 12) - 1), showDatePicker: showDatePicker)
                                 .overlay(alignment: .top, content: {
                                     Button {
                                         withAnimation {
