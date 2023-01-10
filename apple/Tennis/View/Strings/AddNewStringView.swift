@@ -22,10 +22,11 @@ struct AddNewStringView: View {
                 Text("Add new string")
                     .xelaHeadline()
                 RDTextField(placeholder: "String name", text: $vm.stringEntry.stringName.toUnwrapped(defaultValue: ""), imageName: "number", isSecure: false, isPicker: false)
+                
                 HStack {
-                    XelaNumberInput(value: $vm.mainsInput.value, helperText: $vm.mainsInput.helperText, label: vm.mainsInput.label, state: $vm.mainsInput.state, controls: .LeftRight, decreaseIcon: vm.mainsInput.decreaseIcon, increaseIcon: vm.mainsInput.increaseIcon)
+                    XelaNumberInput(value: $vm.mainsInput.value, helperText: vm.mainsInput.helperText, label: vm.mainsInput.label, state: vm.mainsInput.state, controls: .LeftRight, decreaseIcon: vm.mainsInput.decreaseIcon, increaseIcon: vm.mainsInput.increaseIcon)
                     Spacer()
-                    XelaNumberInput(value: $vm.crossesInput.value, helperText: $vm.crossesInput.helperText, label: vm.crossesInput.label, state: $vm.crossesInput.state, controls: .LeftRight, decreaseIcon: vm.crossesInput.decreaseIcon, increaseIcon: vm.crossesInput.increaseIcon)
+                    XelaNumberInput(value: $vm.crossesInput.value, helperText: vm.crossesInput.helperText, label: vm.crossesInput.label, state: vm.crossesInput.state, controls: .LeftRight, decreaseIcon: vm.crossesInput.decreaseIcon, increaseIcon: vm.crossesInput.increaseIcon)
                 }
                 Spacer()
                 RDButton(withTitle: "Test")

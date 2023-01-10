@@ -8,22 +8,17 @@
 import SwiftUI
 
 struct XelaTextField: View {
-    @State var placeholder: String
+    var placeholder: String = ""
     @Binding var value: String
-    @Binding var state: XelaTextFieldState
-    @Binding var helperText: String
-
-    @State var leftIcon: String? = nil
-    var rightIcon: String? = nil
-
+    @State var state: XelaTextFieldState = .Default
+    var helperText: String = ""
+    
     @FocusState private var isFocused: Bool
-
+    var leftIcon: String? = nil
+    var rightIcon: String? = nil
     var rightIconAction: (() -> Void?)?
-
     var disableAutocorrection: Bool = true
-
     var secureField: Bool = false
-
     var background: Color = .init(asset: Colors.tfDefaultFill)
     var disabledBackground: Color = .init(asset: Colors.tfDisabledFill)
     var placeholderColor: Color = .init(asset: Colors.tfDefaultPlaceholder)
@@ -168,7 +163,7 @@ struct XelaTextField: View {
             )
             .onHover { over in
 
-                if over {
+                if !over {
                     if state == .Default {
                         state = .Hover
                     }

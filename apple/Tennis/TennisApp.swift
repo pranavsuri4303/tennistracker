@@ -37,14 +37,6 @@ class Delegate: NSObject, UIApplicationDelegate {
         #endif
         let options = FirebaseOptions(contentsOfFile: filePath)!
         FirebaseApp.configure(options: options)
-        for family in UIFont.familyNames {
-            print(family)
-
-            for names in UIFont.fontNames(forFamilyName: family) {
-                print("== \(names)")
-            }
-        }
-
         return true
     }
 

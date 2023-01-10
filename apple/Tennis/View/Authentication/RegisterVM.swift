@@ -7,14 +7,13 @@
 
 import Firebase
 import LocalAuthentication
+import FirebaseFirestoreSwift
 import SwiftUI
 
 class RegisterVM: ObservableObject {
-    @Published var password = ""
     @Published var isLoading = false
-    @Published var newUser = Person()
-    @Published var emailTF = XelaTextFieldProperties(placeholder: "Email", value: "", state: .Default, helperText: "")
-    @Published var passwordTF = XelaTextFieldProperties(placeholder: "Password", value: "", state: .Default, helperText: "")
+    @Published var user = Person()
+    @Published var password = ""
     @Published var registerButton = XelaButtonProperties(text: "Sign up", state: .Default)
     @Published var googleSsoButton = XelaButtonProperties(text: "Sign up with Google.", state: .Default)
     @Published var givenNameTF = XelaTextFieldProperties(placeholder: "First name", value: "", state: .Default, helperText: "")
@@ -22,16 +21,16 @@ class RegisterVM: ObservableObject {
 
     @Published var dobTF = XelaTextFieldProperties(placeholder: "Date of Birth", value: "", state: .Default, helperText: "")
     @Published var nationalityTF = XelaTextFieldProperties(placeholder: "Nationality", value: "", state: .Default, helperText: "")
-
-    @Published var yobDateManager: XelaDateManager = .init(
-        calendar: Calendar.current,
-        minimumDate: Date().addingTimeInterval(60 * 60 * 24 * 365 * 100 * -1),
-        maximumDate: Date().addingTimeeInterval(0),
-        selectedDate: Date(),
-        mode: 0,
-        cellWidth: 40
-    )
-    let dateFormatter = DateFormatter()
+//
+//    @Published var yobDateManager: XelaDateManager = .init(
+//        calendar: Calendar.current,
+//        minimumDate: Date().addingTimeInterval(60 * 60 * 24 * 365 * 100 * -1),
+//        maximumDate: Date().addingTimeeInterval(0),
+//        selectedDate: Date(),
+//        mode: 0,
+//        cellWidth: 40
+//    )
+    let dateFormatter: () = DateFormatter()
         .dateFormat = "MMM d, y"
     let yearsList = Array(Calendar.current.component(.year, from: Date()) - 100 ... Calendar.current.component(.year, from: Date()) - 5).map { String($0) }.sorted { $0 > $1 }
     let nationsList = Locale.isoRegionCodes.compactMap { "\($0) | \(Locale(identifier: "en_US").localizedString(forRegionCode: $0)!)" }.sorted { $0 < $1 }
@@ -43,7 +42,7 @@ class RegisterVM: ObservableObject {
     func uploadImage(UIImage image: UIImage, completion: @escaping (Result<Data?, Error>) -> Void) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         imageData = (image.jpegData(compressionQuality: 0.9))
-        if let uid = newUser.personID {
+        if let uid = user.personID {
             let imageRef = Firebase.Storage.storage().reference().child(uid).child("profilePicture").child("\(uid).jpg")
             imageRef.putData(imageData!, metadata: nil) { _, err in
                 if let err = err {
@@ -53,8 +52,8 @@ class RegisterVM: ObservableObject {
                     userImageUrl.extensionDescription = "URL for Profile Picture"
                     userImageUrl.name = "profilePicture"
                     userImageUrl.value = "https://firebasestorage.googleapis.com/v0/b/tennistrackerdev.appspot.com/o/\(uid)%2FprofilePicture%2F\(uid).jpg?alt=media"
-                    self.newUser.extensions = []
-                    self.newUser.extensions?.append(userImageUrl)
+                    self.user.extensions = []
+                    self.user.extensions?.append(userImageUrl)
                     completion(.success(nil))
                 }
             }
@@ -64,9 +63,9 @@ class RegisterVM: ObservableObject {
     func uploadFirestore(completion: @escaping (Result<Data?, Error>) -> Void) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         do {
-            if let uid = newUser.personID {
-                try usersCollectionRef.document(uid).setData(from: newUser)
-                dump(newUser)
+            if let uid = user.personID {
+//                try usersCollectionRef.document(uid).setData(from: user)
+                dump(user)
                 completion(.success(nil))
             }
         } catch {
@@ -119,8 +118,8 @@ class RegisterVM: ObservableObject {
     func createAccount(completion: @escaping (Result<Data?, Error>) -> Void) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         isLoading = true
-        if let email = newUser.emailAddress {
-            Auth.auth().createUser(withEmail: email, password: passwordTF.value) { res, err in
+        if let email = user.emailAddress {
+            Auth.auth().createUser(withEmail: user.emailAddress ?? "", password: password) { res, err in
                 if let err = err {
                     self.isLoading = false
                     print(err)
@@ -130,8 +129,8 @@ class RegisterVM: ObservableObject {
                     if let uid = res?.user.uid,
                        let email = res?.user.email
                     {
-                        self.newUser.personID = uid
-                        self.newUser.emailAddress = email
+                        self.user.personID = uid
+                        self.user.emailAddress = email
                     }
                     completion(.success(nil))
                 }

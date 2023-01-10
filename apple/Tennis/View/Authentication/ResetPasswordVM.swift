@@ -12,7 +12,8 @@ import SwiftUI
 class ResetPasswordVM: ObservableObject {
     @Published var isLoading = false
 
-    @Published var emailTF = XelaTextFieldProperties(placeholder: "Email", value: "", state: .Default, helperText: "")
+//    @Published var emailTF = XelaTextFieldProperties(placeholder: "Email", value: "", state: .Default, helperText: "")
+    @Published var email = ""
     @Published var resetButton = XelaButtonProperties(text: "Reset Password", state: .Default)
     // For Alerts..
     @Published var alert = false
@@ -21,7 +22,7 @@ class ResetPasswordVM: ObservableObject {
     func resetPassword() {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         isLoading = true
-        Auth.auth().sendPasswordReset(withEmail: emailTF.value) { err in
+        Auth.auth().sendPasswordReset(withEmail: email) { err in
             if let error = err {
                 self.isLoading.toggle()
                 self.alertMsg = error.localizedDescription

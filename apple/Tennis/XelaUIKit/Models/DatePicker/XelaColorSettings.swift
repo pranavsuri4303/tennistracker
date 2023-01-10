@@ -9,14 +9,14 @@ import SwiftUI
 struct XelaColorSettings {
     // foreground colors
     @State var textColor: Color = .init(asset: Colors.tfDefaultValue)
-    var todayColor: Color = .init(asset: Colors.primaryButtonBlue)
-    var selectedColor: Color = .init(asset: Colors.primaryButtonForeground)
+    var todayColor: Color = .init(asset: Colors.buttonPrimaryDefaultFill)
+    var selectedColor: Color = .init(asset: Colors.buttonPrimaryDefaultForeground)
     var disabledColor: Color = .init(asset: Colors.tfDisabledValue)
     var betweenStartAndEndColor: Color = .init(xelaColor: .Gray3)
     // background colors
     var textBackgroundColor: Color = .clear
     var todayBackgroundColor: Color = .init(asset: Colors.tfDefaultFill)
-    var selectedBackgroundColor: Color = .init(asset: Colors.primaryButtonBlue)
+    var selectedBackgroundColor: Color = .init(asset: Colors.buttonPrimaryDefaultFill)
     var disabledBackgroundColor: Color = .init(asset: Colors.tfDisabledFill)
     var betweenStartAndEndBackgroundColor: Color = .init(xelaColor: .Blue8)
     // headers foreground colors

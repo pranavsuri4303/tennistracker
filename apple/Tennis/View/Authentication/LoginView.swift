@@ -12,7 +12,7 @@ struct LoginView: View {
     @State var showingRegister = false
 
     @StateObject var vm = LoginVM()
-    @State var showPasswordText = false
+    @State var revealPassword = false
 
     var body: some View {
         ZStack {
@@ -26,11 +26,11 @@ struct LoginView: View {
                     Spacer()
                 }
                 VStack(spacing: 12) {
-                    XelaTextField(placeholder: vm.emailTF.placeholder, value: $vm.emailTF.value, state: $vm.emailTF.state, helperText: $vm.emailTF.helperText, leftIcon: Icons.envelope.name, disableAutocorrection: true)
+                    XelaTextField(placeholder: "Email", value: $vm.email, state: .Default, helperText: "", leftIcon:  Icons.envelope.name, disableAutocorrection:true)
                     VStack(spacing: 8) {
-                        XelaTextField(placeholder: vm.passwordTF.placeholder, value: $vm.passwordTF.value, state: $vm.passwordTF.state, helperText: $vm.passwordTF.helperText, leftIcon: Icons.password.name, rightIcon: showPasswordText ? Icons.eyeClosed.name : Icons.eye.name, rightIconAction: {
-                            showPasswordText.toggle()
-                        }, disableAutocorrection: true, secureField: showPasswordText ? false : true)
+                        XelaTextField(placeholder: "Password", value: $vm.password, state: .Default, helperText: "", leftIcon: Icons.password.name, rightIcon: !revealPassword ? Icons.eye.name : Icons.eyeClosed.name, rightIconAction: {
+                            revealPassword.toggle()
+                        }, disableAutocorrection: true, secureField: !revealPassword)
                         HStack {
                             Spacer()
                             Button {

@@ -13,7 +13,7 @@ struct RegisterView: View {
     @State var newUserViewPresented = false
     @State private var alertShown = false
     @State private var errorMessage = ""
-    @State private var showPasswordText = false
+    @State private var revealPassword = false
     var body: some View {
         ZStack {
             VStack(spacing: 18) {
@@ -26,10 +26,9 @@ struct RegisterView: View {
                     Spacer()
                 }
                 VStack(spacing: 12) {
-                    XelaTextField(placeholder: vm.emailTF.placeholder, value: $vm.newUser.emailAddress.toUnwrapped(defaultValue: ""), state: $vm.emailTF.state, helperText: $vm.emailTF.helperText, leftIcon: Icons.envelope.name, disableAutocorrection: true)
-                    XelaTextField(placeholder: vm.passwordTF.placeholder, value: $vm.passwordTF.value, state: $vm.passwordTF.state, helperText: $vm.passwordTF.helperText, leftIcon: Icons.password.name, rightIcon: showPasswordText ? Icons.eyeClosed.name : Icons.eye.name, rightIconAction: {
-                        showPasswordText.toggle()
-                    }, disableAutocorrection: true, secureField: showPasswordText ? false : true)
+//                    XelaTextField(placeholder: vm.emailTF.placeholder, value: $vm.user.emailAddress.toUnwrapped(defaultValue: ""), state: $vm.emailTF.state, helperText: $vm.emailTF.helperText, leftIcon: Icons.envelope.name, disableAutocorrection: true)
+                    XelaTextField(placeholder: "Email", value: $vm.user.emailAddress.toUnwrapped(defaultValue: ""), state: .Default, helperText: "", leftIcon: Icons.envelope.name, disableAutocorrection: true)
+                    XelaTextField(placeholder: "Password", value: $vm.password, state: .Default, helperText: "", leftIcon: Icons.password.name, rightIcon: !revealPassword ? Icons.eye.name : Icons.eyeClosed.name, rightIconAction: { revealPassword.toggle() }, disableAutocorrection: true, secureField: !revealPassword)
                     XelaButton(text: vm.registerButton.text, action: {
                         vm.createAccount { result in
                             switch result {

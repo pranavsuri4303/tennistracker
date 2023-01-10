@@ -9,31 +9,31 @@ import SwiftUI
 
 struct XelaNumberInput: View {
     @Binding var value: Int
-    @Binding var helperText: String
-    @State var label: String? = nil
+    var helperText: String
+    var label: String? = nil
 
-    @Binding var state: XelaNumberInputState
-    @State var controls: XelaNumberInputControls = .LeftRight
+    @State var state: XelaNumberInputState
+    var controls: XelaNumberInputControls = .LeftRight
 
-    @State var decreaseIcon: String
-    @State var increaseIcon: String
+    var decreaseIcon: String
+    var increaseIcon: String
 
-    var labelColor: Color = .init(xelaColor: .Gray8)
-    var valueColor: Color = .init(xelaColor: .Gray2)
+    var labelColor: Color = .init(asset: Colors.tfDefaultValue)
+    var valueColor: Color = .init(asset: Colors.tfDefaultValue)
 
-    var helperTextColor: Color = .init(xelaColor: .Gray8)
+    var helperTextColor: Color = .init(asset: Colors.tfDefaultHelperText)
 
-    var controlsColor: Color = .init(xelaColor: .Gray2)
+    var controlsColor: Color = .init(asset: Colors.buttonPrimaryDefaultFill)
 
-    var defaultBackground: Color = .init(.white)
-    var disabledBackground: Color = .init(xelaColor: .Gray12)
+    var defaultBackground: Color = .init(asset: Colors.tfDefaultFill)
+    var disabledBackground: Color = .init(asset: Colors.tfDisabledFill)
 
-    var defaultBorderColor: Color = .init(xelaColor: .Gray11)
-    var focusBorderColor: Color = .init(xelaColor: .Blue5)
-    var errorBorderColor: Color = .init(xelaColor: .Red3)
-    var successBorderColor: Color = .init(xelaColor: .Green1)
-    var hoverBorderColor: Color = .init(xelaColor: .Blue5)
-    var disabledBorderColor: Color = .init(xelaColor: .Gray8)
+    var defaultBorderColor: Color = .init(asset: Colors.tfDefaultBorder)
+    var focusBorderColor: Color = .init(asset: Colors.tfFocusedBorder)
+    var errorBorderColor: Color = .init(asset: Colors.tfErrorBorder)
+    var successBorderColor: Color = .init(asset: Colors.tfSuccessBorder)
+    var hoverBorderColor: Color = .init(asset: Colors.tfHoverBorder)
+    var disabledBorderColor: Color = .init(asset: Colors.tfDisabledBorder)
 
     var body: some View {
         VStack(alignment: .leading) {

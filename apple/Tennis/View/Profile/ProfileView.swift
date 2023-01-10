@@ -114,14 +114,5 @@ struct ProfileView: View {
         }
         .frame(width: getRect().width, height: getRect().height)
         .background(Color("bg"))
-//        .toolbar(content: {
-//            ToolbarItem(placement: .navigationBarTrailing) {
-//                RDBadgeButton(systemImageTitle: "gear",
-//                              action: { goToSettings.toggle() })
-//                    .fullScreenCover(isPresented: $goToSettings,
-//                                     content: { ProfileSettings(profileSettingsPresented: $goToSettings,
-//                                                                vm: vm)})
-//            }
-//        })
     }
 }

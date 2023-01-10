@@ -28,7 +28,8 @@ struct ResetPasswordView: View {
                     })
                     Spacer()
                 }
-                XelaTextField(placeholder: vm.emailTF.placeholder, value: $vm.emailTF.value, state: $vm.emailTF.state, helperText: $vm.emailTF.helperText, leftIcon: Icons.envelope.name, disableAutocorrection: true)
+//                XelaTextField(placeholder: vm.emailTF.placeholder, value: $vm.emailTF.value, state: $vm.emailTF.state, helperText: $vm.emailTF.helperText, leftIcon: Icons.envelope.name, disableAutocorrection: true)
+                XelaTextField(placeholder: "Email", value: $vm.email, state: .Default, helperText: "", leftIcon: Icons.envelope.name, disableAutocorrection: true)
                 Spacer()
                 XelaButton(text: vm.resetButton.text, action: {
                     vm.resetPassword()

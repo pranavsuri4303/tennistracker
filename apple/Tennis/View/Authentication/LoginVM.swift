@@ -18,17 +18,10 @@ class LoginVM: ObservableObject {
     @AppStorage("status") var logged = false
 
     @Published var isLoading = false
-
-    @Published var emailTF = XelaTextFieldProperties(placeholder: "Email",
-                                                     value: "",
-                                                     state: .Default,
-                                                     helperText: "")
-    @Published var passwordTF = XelaTextFieldProperties(placeholder: "Password",
-                                                        value: "",
-                                                        state: .Default,
-                                                        helperText: "")
-    @Published var logInButton = XelaButtonProperties(text: "Log in", state: .Default)
+    @Published var email = ""
+    @Published var password = ""
     @Published var googleButton = XelaButtonProperties(text: "Sign in with Google", state: .Default)
+    @Published var logInButton = XelaButtonProperties(text: "Log in", state: .Default)
 
     func signInWithGoogle() {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
@@ -37,13 +30,11 @@ class LoginVM: ObservableObject {
     func verifyUser() {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         isLoading = true
-        Auth.auth().signIn(withEmail: emailTF.value, password: passwordTF.value) { _, err in
+        Auth.auth().signIn(withEmail: email, password: password) { _, err in
             self.isLoading = false
             if let error = err {
                 self.alertMsg = error.localizedDescription
                 self.alert.toggle()
-                self.emailTF.state = .Error
-                self.passwordTF.state = .Error
                 return
             } else {
                 withAnimation { self.logged = true }
