@@ -251,6 +251,8 @@
 		B5DA30B72947ACA5003566F6 /* NunitoSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA30A92947ACA5003566F6 /* NunitoSans-Black.ttf */; };
 		B5DA30B82947ACA5003566F6 /* NunitoSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA30AA2947ACA5003566F6 /* NunitoSans-ExtraBoldItalic.ttf */; };
 		B5DA30B92947ACA5003566F6 /* NunitoSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5DA30AB2947ACA5003566F6 /* NunitoSans-ExtraLightItalic.ttf */; };
+		B5DED90C296D0E3F007CCFEC /* NewProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DED90B296D0E3F007CCFEC /* NewProfileView.swift */; };
+		B5DED90E296D0E7E007CCFEC /* Padding-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DED90D296D0E7E007CCFEC /* Padding-Constants.swift */; };
 		B5E2210129565D2800EE9331 /* RDBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2210029565D2800EE9331 /* RDBaseView.swift */; };
 		B5E2210329565E7B00EE9331 /* RDBaseViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E2210229565E7B00EE9331 /* RDBaseViewVM.swift */; };
 		B5E221082956AEC700EE9331 /* RDNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E221072956AEC700EE9331 /* RDNavigationView.swift */; };
@@ -547,6 +549,8 @@
 		B5DA30A92947ACA5003566F6 /* NunitoSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Black.ttf"; sourceTree = "<group>"; };
 		B5DA30AA2947ACA5003566F6 /* NunitoSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		B5DA30AB2947ACA5003566F6 /* NunitoSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		B5DED90B296D0E3F007CCFEC /* NewProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileView.swift; sourceTree = "<group>"; };
+		B5DED90D296D0E7E007CCFEC /* Padding-Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Padding-Constants.swift"; sourceTree = "<group>"; };
 		B5E2210029565D2800EE9331 /* RDBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDBaseView.swift; sourceTree = "<group>"; };
 		B5E2210229565E7B00EE9331 /* RDBaseViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDBaseViewVM.swift; sourceTree = "<group>"; };
 		B5E221072956AEC700EE9331 /* RDNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDNavigationView.swift; sourceTree = "<group>"; };
@@ -676,6 +680,7 @@
 			children = (
 				B5E4801F295D870000EB02F4 /* Colors-Constants.swift */,
 				B5E48020295D870000EB02F4 /* Icons-Constants.swift */,
+				B5DED90D296D0E7E007CCFEC /* Padding-Constants.swift */,
 				B5A9C113295484F400E42F72 /* Firebase */,
 				B5DA309D2947ACA5003566F6 /* Font */,
 				B530047B2942677400184795 /* XelaUIKit */,
@@ -854,6 +859,7 @@
 			children = (
 				76D7319F25CA7BB7001D2D64 /* ProfileView.swift */,
 				B5B22A3426A6DECA002CAA61 /* ProfileSettings.swift */,
+				B5DED90B296D0E3F007CCFEC /* NewProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1692,6 +1698,7 @@
 				B5BDA1D2293A0BF60048B727 /* Gender.swift in Sources */,
 				B5E2210129565D2800EE9331 /* RDBaseView.swift in Sources */,
 				B5BDA1D6293A10740048B727 /* SurfaceCategory.swift in Sources */,
+				B5DED90E296D0E7E007CCFEC /* Padding-Constants.swift in Sources */,
 				B5A239AE27F6FFF000D7A9FE /* UserDataModel.swift in Sources */,
 				B52F300227A92D4000237915 /* HalfModalView.swift in Sources */,
 				9FFCF2E425CF2C7E00C6C94E /* FriendsVM.swift in Sources */,
@@ -1761,6 +1768,7 @@
 				B5C95EB32936632700C9C8A7 /* Address.swift in Sources */,
 				B5BDA1DE293A15050048B727 /* IndoorOutdoor.swift in Sources */,
 				B5C95EA92936632700C9C8A7 /* Ranking.swift in Sources */,
+				B5DED90C296D0E3F007CCFEC /* NewProfileView.swift in Sources */,
 				B53005122942677600184795 /* XelaUserAvatarSize.swift in Sources */,
 				B53004E62942677600184795 /* XelaTooltipTriangle.swift in Sources */,
 				B5A239A827F5538500D7A9FE /* RDEmptyListPlaceholder.swift in Sources */,

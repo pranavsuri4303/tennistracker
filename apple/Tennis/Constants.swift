@@ -66,7 +66,7 @@ enum Tabs: String, Equatable, CaseIterable {
         case .search: return PlayerSearchView()
         case .dashboard: return DashboardView()
         case .tennis: return Text("Tennis")
-        case .profile: return ProfileView()
+        case .profile: return NewProfileView()
         }
     }
 }

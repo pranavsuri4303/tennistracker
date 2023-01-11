@@ -302,7 +302,7 @@ struct XelaUserAvatar: View {
 
     func getAvatarSize() -> CGFloat {
         if size == .Large {
-            return 64
+            return 80
         } else if size == .Medium {
             return 48
         }

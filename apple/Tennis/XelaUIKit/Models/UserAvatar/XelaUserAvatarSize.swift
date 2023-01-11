@@ -7,7 +7,9 @@
 
 import Foundation
 enum XelaUserAvatarSize: String {
+    case ExtraLarge
     case Large
     case Medium
     case Small
+    case ExtraSmall
 }

@@ -39,7 +39,7 @@ struct RDBaseView: View {
                         Label(Tabs.tennis.title(), systemImage: Tabs.tennis.imageName())
                     }
                     .tag(Tabs.tennis)
-                RDNavigationView(showMenu: $showMenu) { ProfileView() }
+                RDNavigationView(showMenu: $showMenu) { NewProfileView() }
                     .tabItem {
                         Label(Tabs.profile.title(), systemImage: Tabs.profile.imageName())
                     }
