@@ -63,7 +63,7 @@ enum Tabs: String, Equatable, CaseIterable {
     func view() -> any View {
         switch self {
         case .home: return Text("Home")
-        case .search: return PlayerSearchView()
+        case .search: return SearchView()
         case .dashboard: return DashboardView()
         case .tennis: return Text("Tennis")
         case .profile: return NewProfileView()

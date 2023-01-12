@@ -1,5 +1,5 @@
 //
-//  Friends.swift
+//  Friendships.swift
 //  Tennis
 //
 //  Created by Pranav Suri on 7/12/22.
@@ -14,16 +14,18 @@ class Friendships: Codable, Equatable {
     var friendsCount: Int?
     var sentRequestsCount: Int?
     var pendingRequestsCount: Int?
-    var lastUpdated: Date?
+    var updated: Date?
     var friendships: [Friendship?]?
+    var personId: String?
 
-    internal init(count: Int? = nil, friendsCount: Int? = nil, sentRequestsCount: Int? = nil, pendingRequestsCount: Int? = nil, lastUpdated: Date? = nil, friendships: [Friendship?]? = nil) {
+    internal init(count: Int? = nil, friendsCount: Int? = nil, sentRequestsCount: Int? = nil, pendingRequestsCount: Int? = nil, updated: Date? = nil, friendships: [Friendship?]? = nil, personId: String? = nil) {
         self.count = count
         self.friendsCount = friendsCount
         self.sentRequestsCount = sentRequestsCount
         self.pendingRequestsCount = pendingRequestsCount
-        self.lastUpdated = lastUpdated
+        self.updated = updated
         self.friendships = friendships
+        self.personId = personId
     }
 
     enum CodingKeys: String, CodingKey {
@@ -31,8 +33,9 @@ class Friendships: Codable, Equatable {
         case friendsCount
         case sentRequestsCount
         case pendingRequestsCount
-        case lastUpdated
+        case updated
         case friendships
+        case personId
     }
 
     static func == (lhs: Friendships, rhs: Friendships) -> Bool {
@@ -40,8 +43,9 @@ class Friendships: Codable, Equatable {
             lhs.friendsCount == rhs.friendsCount &&
             lhs.sentRequestsCount == rhs.sentRequestsCount &&
             lhs.pendingRequestsCount == rhs.pendingRequestsCount &&
-            lhs.lastUpdated == rhs.lastUpdated &&
-            lhs.friendships == rhs.friendships
+            lhs.updated == rhs.updated &&
+            lhs.friendships == rhs.friendships &&
+            lhs.personId == rhs.personId
     }
 }
 
@@ -51,15 +55,15 @@ class Friendship: Codable, Equatable {
     var friendRequestReceived: Date?
     var friendRequestSent: Date?
     var friendsSince: Date?
-    var lastUpdated: Date?
+    var updated: Date?
 
-    internal init(friend: Person? = nil, friendshipStatus: FriendshipStatus? = nil, friendRequestReceived: Date? = nil, friendRequestSent: Date? = nil, friendsSince: Date? = nil, lastUpdated: Date? = nil) {
+    internal init(friend: Person? = nil, friendshipStatus: FriendshipStatus? = nil, friendRequestReceived: Date? = nil, friendRequestSent: Date? = nil, friendsSince: Date? = nil, updated: Date? = nil) {
         self.friend = friend
         self.friendshipStatus = friendshipStatus
         self.friendRequestReceived = friendRequestReceived
         self.friendRequestSent = friendRequestSent
         self.friendsSince = friendsSince
-        self.lastUpdated = lastUpdated
+        self.updated = updated
     }
 
     enum CodingKeys: String, CodingKey {
@@ -68,7 +72,7 @@ class Friendship: Codable, Equatable {
         case friendRequestReceived
         case friendRequestSent
         case friendsSince
-        case lastUpdated
+        case updated
     }
 
     static func == (lhs: Friendship, rhs: Friendship) -> Bool {
@@ -77,7 +81,7 @@ class Friendship: Codable, Equatable {
             lhs.friendRequestReceived == rhs.friendRequestReceived &&
             lhs.friendRequestSent == rhs.friendRequestSent &&
             lhs.friendsSince == rhs.friendsSince &&
-            lhs.lastUpdated == rhs.lastUpdated
+            lhs.updated == rhs.updated
     }
 }
 

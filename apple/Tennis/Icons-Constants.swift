@@ -34,6 +34,7 @@ internal enum Icons {
   internal static let minusCircle = SymbolAsset(name: "minus-circle")
   internal static let password = SymbolAsset(name: "password")
   internal static let racketBall = SymbolAsset(name: "racket.ball")
+  internal static let `right` = SymbolAsset(name: "right")
   internal static let user = SymbolAsset(name: "user")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

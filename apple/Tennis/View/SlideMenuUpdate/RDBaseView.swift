@@ -24,7 +24,7 @@ struct RDBaseView: View {
                         Label(Tabs.home.title(), systemImage: Tabs.home.imageName())
                     }
                     .tag(Tabs.home)
-                RDNavigationView(showMenu: $showMenu) { PlayerSearchView() }
+                RDNavigationView(showMenu: $showMenu) { SearchView() }
                     .tabItem {
                         Label(Tabs.home.title(), systemImage: Tabs.search.imageName())
                     }

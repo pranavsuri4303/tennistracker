@@ -23,7 +23,7 @@ struct XelaTabs: View {
     var body: some View {
         GeometryReader { geometry in
             VStack(alignment: .leading, spacing: 0) {
-                HStack(spacing: 8) {
+                HStack {
                     ForEach(items) { item in
                         XelaTab(item: item, selectedId: $selectedId, primaryColor: primaryColor, secondaryColor: secondaryColor, badgeBackground: badgeBackground, badgeTextColor: badgeTextColor, badgeBackgroundSelected: badgeBackgroundSelected, badgeTextColorSelected: badgeTextColorSelected)
                     }
@@ -39,6 +39,6 @@ struct XelaTabs: View {
                     .offset(x: (geometry.size.width / CGFloat(items.count)) * CGFloat(selectedId - items.first!.id), y: -3)
             }
         }
-        .frame(height: 46)
+        .frame(height: 36)
     }
 }

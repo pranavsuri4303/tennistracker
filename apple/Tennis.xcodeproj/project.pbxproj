@@ -28,7 +28,7 @@
 		7662D3F525C391A1004544BF /* NewMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7662D3F425C391A1004544BF /* NewMatchView.swift */; };
 		7662D40225C39DBE004544BF /* BasicMatchScoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7662D40125C39DBE004544BF /* BasicMatchScoringView.swift */; };
 		76AADB9E25C64F3800EB0C43 /* StringsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AADB9D25C64F3800EB0C43 /* StringsVM.swift */; };
-		76AADBA625C64F6A00EB0C43 /* PlayerSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AADBA525C64F6A00EB0C43 /* PlayerSearchView.swift */; };
+		76AADBA625C64F6A00EB0C43 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AADBA525C64F6A00EB0C43 /* SearchView.swift */; };
 		76AADBB425C6514800EB0C43 /* PlayersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AADBB325C6514800EB0C43 /* PlayersVM.swift */; };
 		76B8153025CD3AF10029EE83 /* TextFieldWithPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B8152F25CD3AF10029EE83 /* TextFieldWithPickerView.swift */; };
 		76D1B86025BAEE4700FE1B4B /* LoadingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D1B85F25BAEE4700FE1B4B /* LoadingScreenView.swift */; };
@@ -152,6 +152,10 @@
 		B530052A2942677700184795 /* XelaTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004DB2942677600184795 /* XelaTabs.swift */; };
 		B530052B2942677700184795 /* XelaSegmentedControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004DC2942677600184795 /* XelaSegmentedControll.swift */; };
 		B53CCA1F2806F39A00258FBC /* AddMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CCA1E2806F39A00258FBC /* AddMatchView.swift */; };
+		B544EC76296F279700E52261 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544EC75296F279700E52261 /* LinkedList.swift */; };
+		B544EC782970B73C00E52261 /* PlayersSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544EC772970B73C00E52261 /* PlayersSearchListView.swift */; };
+		B544EC7A2970C48100E52261 /* ClubsSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544EC792970C48100E52261 /* ClubsSearchListView.swift */; };
+		B544EC7C2970C4AA00E52261 /* MatchesSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544EC7B2970C4AA00E52261 /* MatchesSearchListView.swift */; };
 		B544FEED29453D3B00469B9F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B544FEEC29453D3B00469B9F /* Colors.xcassets */; };
 		B547C4892965287900BF77B3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B547C4882965287900BF77B3 /* LoginView.swift */; };
 		B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D40672791342D00F36EE1 /* RDTextField.swift */; };
@@ -331,7 +335,7 @@
 		7662D3F925C392BB004544BF /* MatchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVM.swift; sourceTree = "<group>"; };
 		7662D40125C39DBE004544BF /* BasicMatchScoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMatchScoringView.swift; sourceTree = "<group>"; };
 		76AADB9D25C64F3800EB0C43 /* StringsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsVM.swift; sourceTree = "<group>"; wrapsLines = 1; };
-		76AADBA525C64F6A00EB0C43 /* PlayerSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchView.swift; sourceTree = "<group>"; };
+		76AADBA525C64F6A00EB0C43 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		76AADBB325C6514800EB0C43 /* PlayersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersVM.swift; sourceTree = "<group>"; };
 		76B8152F25CD3AF10029EE83 /* TextFieldWithPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithPickerView.swift; sourceTree = "<group>"; };
 		76D1B85F25BAEE4700FE1B4B /* LoadingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenView.swift; sourceTree = "<group>"; };
@@ -455,6 +459,10 @@
 		B53004DB2942677600184795 /* XelaTabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTabs.swift; sourceTree = "<group>"; };
 		B53004DC2942677600184795 /* XelaSegmentedControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSegmentedControll.swift; sourceTree = "<group>"; };
 		B53CCA1E2806F39A00258FBC /* AddMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMatchView.swift; sourceTree = "<group>"; };
+		B544EC75296F279700E52261 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		B544EC772970B73C00E52261 /* PlayersSearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersSearchListView.swift; sourceTree = "<group>"; };
+		B544EC792970C48100E52261 /* ClubsSearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsSearchListView.swift; sourceTree = "<group>"; };
+		B544EC7B2970C4AA00E52261 /* MatchesSearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesSearchListView.swift; sourceTree = "<group>"; };
 		B544FEEC29453D3B00469B9F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B547C4882965287900BF77B3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B54D40672791342D00F36EE1 /* RDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDTextField.swift; sourceTree = "<group>"; };
@@ -619,14 +627,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7619A62D25CA422000014ADA /* Players */ = {
+		7619A62D25CA422000014ADA /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				76AADBA525C64F6A00EB0C43 /* PlayerSearchView.swift */,
+				76AADBA525C64F6A00EB0C43 /* SearchView.swift */,
 				B59E2DE627F4DF4600CB6B27 /* PlayerSearchCellView.swift */,
+				B544EC772970B73C00E52261 /* PlayersSearchListView.swift */,
+				B544EC792970C48100E52261 /* ClubsSearchListView.swift */,
+				B544EC7B2970C4AA00E52261 /* MatchesSearchListView.swift */,
 				76AADBB325C6514800EB0C43 /* PlayersVM.swift */,
 			);
-			path = Players;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		762F87C725C9C0C9004B46FD /* Match */ = {
@@ -695,6 +706,7 @@
 				764A60D125B90E5600789373 /* Info.plist */,
 				B544FEEC29453D3B00469B9F /* Colors.xcassets */,
 				B5E48019295D7A1100EB02F4 /* Icons.xcassets */,
+				B544EC75296F279700E52261 /* LinkedList.swift */,
 			);
 			path = Tennis;
 			sourceTree = "<group>";
@@ -735,7 +747,7 @@
 				B5297F7B27A62CE3003641E3 /* Profile */,
 				76AADBBF25C6717900EB0C43 /* Dashboard */,
 				76AADBBB25C6716D00EB0C43 /* Strings */,
-				7619A62D25CA422000014ADA /* Players */,
+				7619A62D25CA422000014ADA /* Search */,
 				762F87C725C9C0C9004B46FD /* Match */,
 				B58917DA25CF26E1001BFA0E /* Friends */,
 				B513A39E26A03B4B00145D2D /* Clubs */,
@@ -1582,7 +1594,7 @@
 				B530051B2942677600184795 /* XelaDivider.swift in Sources */,
 				B5132A62293A1FE900C2E396 /* ShotDetail.swift in Sources */,
 				B5132A60293A1E3800C2E396 /* RankingType.swift in Sources */,
-				76AADBA625C64F6A00EB0C43 /* PlayerSearchView.swift in Sources */,
+				76AADBA625C64F6A00EB0C43 /* SearchView.swift in Sources */,
 				B5EA4D812940777F0015D379 /* StringEntries.swift in Sources */,
 				B5C95EB02936632700C9C8A7 /* ScheduleItem.swift in Sources */,
 				B5C95EAC2936632700C9C8A7 /* Draw.swift in Sources */,
@@ -1650,6 +1662,7 @@
 				B530051F2942677600184795 /* OtherExtensions.swift in Sources */,
 				B53004E82942677600184795 /* XelaRadioButtonItem.swift in Sources */,
 				B5C95EBA2936632700C9C8A7 /* Event.swift in Sources */,
+				B544EC782970B73C00E52261 /* PlayersSearchListView.swift in Sources */,
 				B53004EB2942677600184795 /* XelaSegmentedControllItem.swift in Sources */,
 				B530051E2942677600184795 /* ColorExtensions.swift in Sources */,
 				B53005172942677600184795 /* XelaColorModel.swift in Sources */,
@@ -1666,6 +1679,7 @@
 				B567575327A8EFE200381DD5 /* StringRowView.swift in Sources */,
 				B59E2DE427F3F9DC00CB6B27 /* PlayerSearchModel.swift in Sources */,
 				762F87CF25C9C0EC004B46FD /* MatchesListView.swift in Sources */,
+				B544EC7C2970C4AA00E52261 /* MatchesSearchListView.swift in Sources */,
 				B530050D2942677600184795 /* XelaStepItem.swift in Sources */,
 				B53005062942677600184795 /* XelaButtonType.swift in Sources */,
 				B5BDA1CA293A0B390048B727 /* Discipline.swift in Sources */,
@@ -1701,6 +1715,7 @@
 				B5DED90E296D0E7E007CCFEC /* Padding-Constants.swift in Sources */,
 				B5A239AE27F6FFF000D7A9FE /* UserDataModel.swift in Sources */,
 				B52F300227A92D4000237915 /* HalfModalView.swift in Sources */,
+				B544EC7A2970C48100E52261 /* ClubsSearchListView.swift in Sources */,
 				9FFCF2E425CF2C7E00C6C94E /* FriendsVM.swift in Sources */,
 				B5EA4D83294079FA0015D379 /* Friends.swift in Sources */,
 				B53005132942677600184795 /* XelaUserAvatarDecorationPosition.swift in Sources */,
@@ -1784,6 +1799,7 @@
 				B5E48022295D870100EB02F4 /* Icons-Constants.swift in Sources */,
 				B53004F92942677600184795 /* XelaBarChartBody.swift in Sources */,
 				B5EA4D7F29404FEB0015D379 /* MatchUpFormatParser.swift in Sources */,
+				B544EC76296F279700E52261 /* LinkedList.swift in Sources */,
 				764A613D25B9204B00789373 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
