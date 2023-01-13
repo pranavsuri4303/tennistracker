@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Side
 
-class Side: Codable, Equatable {
+struct Side: Codable, Equatable {
     var extensions: [Extension?]?
     var ids: IDS?
     var notes: String?

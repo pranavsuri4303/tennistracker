@@ -6,7 +6,7 @@ initializeApp();
 
 const db = getFirestore();
 
-exports.createUserDocs = functions.auth.user().beforeCreate((data,context) => {
+exports.createUserDocs = functions.auth.user().onCreate((data,context) => {
     const uid = data.uid;
     const email = data.email;
     const userDocRef = db.collection('users').doc(uid);

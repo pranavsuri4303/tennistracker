@@ -9,7 +9,7 @@ import Firebase
 import FirebaseFirestoreSwift
 import Foundation
 
-class StringEntries: Codable, Equatable {
+struct StringEntries: Codable, Equatable {
     var count: Int?
     var lastUpdated: Timestamp?
     var stringEntries: [StringEntry?]?
@@ -37,7 +37,7 @@ class StringEntries: Codable, Equatable {
     }
 }
 
-class StringEntry: Codable, Equatable {
+struct StringEntry: Codable, Equatable {
     var stringName: String?
     var crossTension: Int?
     var mainTension: Int?

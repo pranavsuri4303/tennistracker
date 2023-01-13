@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Team
 
-class Team: Codable, Equatable {
+struct Team: Codable, Equatable {
     var extensions: [Extension?]?
     var gender: Gender?
     var ids: IDS?

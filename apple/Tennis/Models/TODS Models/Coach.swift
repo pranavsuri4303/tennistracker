@@ -1,16 +1,24 @@
+//
+//  Coach.swift
+//  Tennis
+//
+//  Created by Pranav Suri on 13/1/23.
+//
+
+import Foundation
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
 //   let person = try? newJSONDecoder().decode(Person.self, from: jsonData)
 
 import Foundation
-import Firebase
+
 // MARK: - Person
 
-struct Person: Codable, Equatable {
+struct Coach: Codable, Equatable {
     var addresses: [Address?]?
-    var biographicalInformation: BiographicalInformation?
-    var birthDate: String?
+//    var biographicalInformation: BiographicalInformation?
+    var birthDate: Date?
     var emailAddress: String?
     var extensions: [Extension?]?
     var ids: IDS?
@@ -28,11 +36,10 @@ struct Person: Codable, Equatable {
     var standardFamilyName: String?
     var standardGivenName: String?
     var tennisID: String?
-    var updated: String?
+    var updated: Date?
 
-    internal init(addresses: [Address?]? = nil, biographicalInformation: BiographicalInformation? = nil, birthDate: String? = nil, emailAddress: String? = nil, extensions: [Extension?]? = nil, ids: IDS? = nil, nationalityCode: String? = nil, nativeFamilyName: String? = nil, nativeGivenName: String? = nil, notes: String? = nil, onlineProfiles: [OnlineProfile?]? = nil, otherNames: String? = nil, passportFamilyName: String? = nil, passportGivenName: String? = nil, personID: String? = nil, previousNames: String? = nil, sex: Sex? = nil, standardFamilyName: String? = nil, standardGivenName: String? = nil, tennisID: String? = nil, updated: String? = nil) {
+    internal init(addresses: [Address?]? = nil, birthDate: Date? = nil, emailAddress: String? = nil, extensions: [Extension?]? = nil, ids: IDS? = nil, nationalityCode: String? = nil, nativeFamilyName: String? = nil, nativeGivenName: String? = nil, notes: String? = nil, onlineProfiles: [OnlineProfile?]? = nil, otherNames: String? = nil, passportFamilyName: String? = nil, passportGivenName: String? = nil, personID: String? = nil, previousNames: String? = nil, sex: Sex? = nil, standardFamilyName: String? = nil, standardGivenName: String? = nil, tennisID: String? = nil, updated: Date? = nil) {
         self.addresses = addresses
-        self.biographicalInformation = biographicalInformation
         self.birthDate = birthDate
         self.emailAddress = emailAddress
         self.extensions = extensions
@@ -56,7 +63,6 @@ struct Person: Codable, Equatable {
 
     enum CodingKeys: String, CodingKey {
         case addresses
-        case biographicalInformation
         case birthDate
         case emailAddress
         case extensions
@@ -78,9 +84,8 @@ struct Person: Codable, Equatable {
         case updated
     }
 
-    static func == (lhs: Person, rhs: Person) -> Bool {
+    static func == (lhs: Coach, rhs: Coach) -> Bool {
         return lhs.addresses == rhs.addresses &&
-            lhs.biographicalInformation == rhs.biographicalInformation &&
             lhs.birthDate == rhs.birthDate &&
             lhs.emailAddress == rhs.emailAddress &&
             lhs.extensions == rhs.extensions &&

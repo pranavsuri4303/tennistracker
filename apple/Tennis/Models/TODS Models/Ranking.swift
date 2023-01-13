@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Ranking
 
-class Ranking: Codable, Equatable {
+struct Ranking: Codable, Equatable {
     var ageCategory: String? // TODO: add parser for age category
     var discipline: Discipline?
     var gender: Gender?

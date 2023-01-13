@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - OnlineProfile
 
-class OnlineProfile: Codable, Equatable {
+struct OnlineProfile: Codable, Equatable {
     var identifier: String?
     var type: String?
 

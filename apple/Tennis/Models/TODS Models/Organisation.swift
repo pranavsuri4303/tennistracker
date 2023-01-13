@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Organisation
 
-class Organisation: Codable, Equatable {
+struct Organisation: Codable, Equatable {
     var addresses: [Address?]?
     var extensions: [Extension?]?
     var ids: IDS?

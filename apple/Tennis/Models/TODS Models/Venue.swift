@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Venue
 
-class Venue: Codable, Equatable {
+struct Venue: Codable, Equatable {
     var addresses: [Address?]?
     var courts: [Court?]?
     var extensions: [Extension?]?

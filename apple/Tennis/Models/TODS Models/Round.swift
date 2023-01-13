@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Round
 
-class Round: Codable, Equatable {
+struct Round: Codable, Equatable {
     var roundItems: [RoundItem?]?
     var roundNumber: Int?
 

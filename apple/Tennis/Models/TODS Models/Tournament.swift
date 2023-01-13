@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Tournament
 
-class Tournament: Codable, Equatable {
+struct Tournament: Codable, Equatable {
     var endDate: Date?
     var entriesClose: Date?
     var entriesOpen: Date?

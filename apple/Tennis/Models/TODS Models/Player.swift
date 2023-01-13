@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Player
 
-class Player: Codable, Equatable {
+struct Player: Codable, Equatable {
     var participant: Participant?
     var playerNumber: Int?
 

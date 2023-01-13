@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Stage
 
-class Stage: Codable, Equatable {
+struct Stage: Codable, Equatable {
     var draws: [Draw?]?
     var entries: [Entry?]?
     var name: String?

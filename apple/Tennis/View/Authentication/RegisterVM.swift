@@ -11,6 +11,7 @@ import FirebaseFirestoreSwift
 import SwiftUI
 
 class RegisterVM: ObservableObject {
+    @AppStorage("status") var logged = false
     @Published var isLoading = false
     @Published var user = Person()
     @Published var password = ""
@@ -18,26 +19,17 @@ class RegisterVM: ObservableObject {
     @Published var googleSsoButton = XelaButtonProperties(text: "Sign up with Google.", state: .Default)
     @Published var givenNameTF = XelaTextFieldProperties(placeholder: "First name", value: "", state: .Default, helperText: "")
     @Published var familyNameTF = XelaTextFieldProperties(placeholder: "Last name", value: "", state: .Default, helperText: "")
-
+    @Published var dobDateManager = XelaDateManager(calendar: Calendar.current,
+                                                    minimumDate: Date().addingTimeInterval(60 * 60 * 24 * 365 * 100 * -1),
+                                                    maximumDate: Date().addingTimeInterval(0),
+                                                    selectedDate: Date(),
+                                                    mode: 0)
     @Published var dobTF = XelaTextFieldProperties(placeholder: "Date of Birth", value: "", state: .Default, helperText: "")
     @Published var nationalityTF = XelaTextFieldProperties(placeholder: "Nationality", value: "", state: .Default, helperText: "")
-//
-//    @Published var yobDateManager: XelaDateManager = .init(
-//        calendar: Calendar.current,
-//        minimumDate: Date().addingTimeInterval(60 * 60 * 24 * 365 * 100 * -1),
-//        maximumDate: Date().addingTimeeInterval(0),
-//        selectedDate: Date(),
-//        mode: 0,
-//        cellWidth: 40
-//    )
-    let dateFormatter: () = DateFormatter()
-        .dateFormat = "MMM d, y"
-    let yearsList = Array(Calendar.current.component(.year, from: Date()) - 100 ... Calendar.current.component(.year, from: Date()) - 5).map { String($0) }.sorted { $0 > $1 }
     let nationsList = Locale.isoRegionCodes.compactMap { "\($0) | \(Locale(identifier: "en_US").localizedString(forRegionCode: $0)!)" }.sorted { $0 < $1 }
 
     private let usersCollectionRef = Firestore.firestore().collection("users")
     var imageData: Data?
-    @AppStorage("status") var logged = false
 
     func uploadImage(UIImage image: UIImage, completion: @escaping (Result<Data?, Error>) -> Void) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
@@ -48,7 +40,7 @@ class RegisterVM: ObservableObject {
                 if let err = err {
                     completion(.failure(err))
                 } else {
-                    let userImageUrl = Extension()
+                    var userImageUrl = Extension()
                     userImageUrl.extensionDescription = "URL for Profile Picture"
                     userImageUrl.name = "profilePicture"
                     userImageUrl.value = "https://firebasestorage.googleapis.com/v0/b/tennistrackerdev.appspot.com/o/\(uid)%2FprofilePicture%2F\(uid).jpg?alt=media"
@@ -64,7 +56,7 @@ class RegisterVM: ObservableObject {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         do {
             if let uid = user.personID {
-//                try usersCollectionRef.document(uid).setData(from: user)
+                try usersCollectionRef.document(uid).setData(from: user, merge: true)
                 dump(user)
                 completion(.success(nil))
             }
@@ -136,5 +128,25 @@ class RegisterVM: ObservableObject {
                 }
             }
         }
+    }
+    
+    func updateNationality(for country: String) {
+        let codeIndex = country.index(country.startIndex, offsetBy: 2)
+        let descriptionIndex = country.index(country.startIndex, offsetBy: 5)
+        user.nationalityCode = String(country.prefix(upTo: codeIndex))
+        nationalityTF.value = String(country.suffix(from: descriptionIndex))
+    }
+
+    private func getCountryCode(for fullCountryName : String) -> String {
+        let locales : String = ""
+        for localeCode in NSLocale.isoCountryCodes {
+            let identifier = NSLocale(localeIdentifier: localeCode)
+            let countryName = identifier.displayName(forKey: NSLocale.Key.countryCode, value: localeCode)
+            if fullCountryName.lowercased() == countryName?.lowercased() {
+                print(localeCode)
+                return localeCode
+            }
+        }
+        return locales
     }
 }

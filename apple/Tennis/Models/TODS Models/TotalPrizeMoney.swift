@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - TotalPrizeMoney
 
-class TotalPrizeMoney: Codable, Equatable {
+struct TotalPrizeMoney: Codable, Equatable {
     var prizeMoney: [PrizeMoney?]?
 
     internal init(prizeMoney: [PrizeMoney?]?) {

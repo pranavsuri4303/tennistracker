@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Address
 
-class Address: Codable, Equatable {
+struct Address: Codable, Equatable {
     var addressLine1: String?
     var addressLine2: String?
     var addressLine3: String?

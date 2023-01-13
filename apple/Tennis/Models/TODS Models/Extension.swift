@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Extension
 
-class Extension: Codable, Equatable {
+struct Extension: Codable, Equatable {
     var extensionDescription: String?
     var name: String?
     var value: String?

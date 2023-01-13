@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Statistic
 
-class Statistic: Codable, Equatable {
+struct Statistic: Codable, Equatable {
     var code: String?
     var extensions: [Extension?]?
     var ids: IDS?

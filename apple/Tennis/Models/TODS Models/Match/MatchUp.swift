@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - MatchUp
 
-class MatchUp: Codable, Equatable {
+struct MatchUp: Codable, Equatable {
     var court: Court?
     var drawID: String?
     var endDate: Date?

@@ -9,8 +9,9 @@ import SwiftUI
 
 struct XelaDatePicker: View {
     @ObservedObject var xelaDateManager: XelaDateManager
+    @Binding var selectedDateString: String
     var monthOffset = 0
     var body: some View {
-        XelaMonth(xelaManager: xelaDateManager, monthOffset: monthOffset)
+        XelaMonth(xelaManager: xelaDateManager, monthOffset: monthOffset, selectedDateString: $selectedDateString)
     }
 }

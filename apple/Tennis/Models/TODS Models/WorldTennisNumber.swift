@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - WorldTennisNumber
 
-class WorldTennisNumber: Codable, Equatable {
+struct WorldTennisNumber: Codable, Equatable {
     var confidence: Double?
     var extensions: [Extension?]?
     var ids: IDS?

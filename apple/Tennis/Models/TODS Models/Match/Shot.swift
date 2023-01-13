@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Shot
 
-class Shot: Codable, Equatable {
+struct Shot: Codable, Equatable {
     var bounceAt: String?
     var participant: Participant?
     var returned: String? // Yes or No

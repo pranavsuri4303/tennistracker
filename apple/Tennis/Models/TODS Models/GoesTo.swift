@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - GoesTo
 
-class GoesTo: Codable, Equatable {
+struct GoesTo: Codable, Equatable {
     var drawID: String?
     var eventID: String?
     var matchUpID: String?

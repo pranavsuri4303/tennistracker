@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - TournamentGroup
 
-class TournamentGroup: Codable, Equatable {
+struct TournamentGroup: Codable, Equatable {
     var group: String?
 
     internal init(group: String?) {

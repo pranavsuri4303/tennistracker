@@ -17,7 +17,7 @@ struct XelaMonth: View {
     var monthsArray: [[Date]] {
         monthArray()
     }
-
+    @Binding var selectedDateString: String
     @State var increaseButtonState = XelaButtonState.Default
     @State var decreaseButtonState = XelaButtonState.Default
     let years = ((Calendar.current.component(.year, from: Date()) - 100) ... (Calendar.current.component(.year, from: Date()))).map { String($0) }
@@ -80,7 +80,9 @@ struct XelaMonth: View {
                                         isBetweenStartAndEnd: self.isBetweenStartAndEnd(date: column)
                                     ),
                                     cellWidth: xelaManager.cellWidth)
-                                        .onTapGesture { self.dateTapped(date: column) }
+                                        .onTapGesture {
+                                            self.dateTapped(date: column)
+                                        }
                                 } else {
                                     // Text("").frame(width: xelaManager.cellWidth, height: xelaManager.cellWidth)
                                     XelaDatePickerCell(xelaDate: XelaDate(
@@ -114,15 +116,7 @@ struct XelaMonth: View {
             switch xelaManager.mode {
             case 0:
                 xelaManager.selectedDate = date
-//
-//                if xelaManager.selectedDate != nil,
-//                   xelaManager.calendar.isDate(xelaManager.selectedDate, inSameDayAs: date)
-//                {
-//                    xelaManager.selectedDate = nil
-//                } else {
-//                    xelaManager.selectedDate = date
-//                }
-
+                selectedDateString = xelaManager.dateToString(forDate: date)
             case 1:
                 xelaManager.startDate = date
                 xelaManager.endDate = nil
@@ -145,6 +139,7 @@ struct XelaMonth: View {
                 }
             default:
                 xelaManager.selectedDate = date
+                selectedDateString = xelaManager.dateToString(forDate: date)
             }
         }
     }

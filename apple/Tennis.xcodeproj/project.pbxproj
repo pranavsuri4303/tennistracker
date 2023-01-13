@@ -156,6 +156,7 @@
 		B544EC782970B73C00E52261 /* PlayersSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544EC772970B73C00E52261 /* PlayersSearchListView.swift */; };
 		B544EC7A2970C48100E52261 /* ClubsSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544EC792970C48100E52261 /* ClubsSearchListView.swift */; };
 		B544EC7C2970C4AA00E52261 /* MatchesSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544EC7B2970C4AA00E52261 /* MatchesSearchListView.swift */; };
+		B544EC802971EAAB00E52261 /* Coach.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544EC7F2971EAAB00E52261 /* Coach.swift */; };
 		B544FEED29453D3B00469B9F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B544FEEC29453D3B00469B9F /* Colors.xcassets */; };
 		B547C4892965287900BF77B3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B547C4882965287900BF77B3 /* LoginView.swift */; };
 		B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D40672791342D00F36EE1 /* RDTextField.swift */; };
@@ -462,6 +463,7 @@
 		B544EC772970B73C00E52261 /* PlayersSearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersSearchListView.swift; sourceTree = "<group>"; };
 		B544EC792970C48100E52261 /* ClubsSearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsSearchListView.swift; sourceTree = "<group>"; };
 		B544EC7B2970C4AA00E52261 /* MatchesSearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesSearchListView.swift; sourceTree = "<group>"; };
+		B544EC7F2971EAAB00E52261 /* Coach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coach.swift; sourceTree = "<group>"; };
 		B544FEEC29453D3B00469B9F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B547C4882965287900BF77B3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B54D40672791342D00F36EE1 /* RDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDTextField.swift; sourceTree = "<group>"; };
@@ -1204,6 +1206,7 @@
 				B5C95E8B2936632600C9C8A7 /* Organisation.swift */,
 				B5C95E7C2936632500C9C8A7 /* Participant.swift */,
 				B5C95E9B2936632700C9C8A7 /* Person.swift */,
+				B544EC7F2971EAAB00E52261 /* Coach.swift */,
 				B5C95E882936632600C9C8A7 /* Player.swift */,
 				B5C95E862936632600C9C8A7 /* PrizeMoney.swift */,
 				B5C95E802936632500C9C8A7 /* Ranking.swift */,
@@ -1782,6 +1785,7 @@
 				B5DED90C296D0E3F007CCFEC /* NewProfileView.swift in Sources */,
 				B53005122942677600184795 /* XelaUserAvatarSize.swift in Sources */,
 				B53004E62942677600184795 /* XelaTooltipTriangle.swift in Sources */,
+				B544EC802971EAAB00E52261 /* Coach.swift in Sources */,
 				B5A239A827F5538500D7A9FE /* RDEmptyListPlaceholder.swift in Sources */,
 				B54D406A27913F8A00F36EE1 /* RDButton.swift in Sources */,
 				764A60C925B90E5600789373 /* TennisApp.swift in Sources */,

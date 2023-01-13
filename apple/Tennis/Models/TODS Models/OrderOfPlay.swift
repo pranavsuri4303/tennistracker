@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - OrderOfPlay
 
-class OrderOfPlay: Codable, Equatable {
+struct OrderOfPlay: Codable, Equatable {
     var extensions: [Extension?]?
     var ids: IDS?
     var localTimeZone: String?

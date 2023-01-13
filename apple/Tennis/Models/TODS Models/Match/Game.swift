@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Game
 
-class Game: Codable, Equatable {
+struct Game: Codable, Equatable {
     var extensions: [Extension?]?
     var gameDuration: String?
     var gameFormat: String?

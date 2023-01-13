@@ -26,7 +26,6 @@ struct RegisterView: View {
                     Spacer()
                 }
                 VStack(spacing: 12) {
-//                    XelaTextField(placeholder: vm.emailTF.placeholder, value: $vm.user.emailAddress.toUnwrapped(defaultValue: ""), state: $vm.emailTF.state, helperText: $vm.emailTF.helperText, leftIcon: Icons.envelope.name, disableAutocorrection: true)
                     XelaTextField(placeholder: "Email", value: $vm.user.emailAddress.toUnwrapped(defaultValue: ""), state: .Default, helperText: "", leftIcon: Icons.envelope.name, disableAutocorrection: true)
                     XelaTextField(placeholder: "Password", value: $vm.password, state: .Default, helperText: "", leftIcon: Icons.password.name, rightIcon: !revealPassword ? Icons.eye.name : Icons.eyeClosed.name, rightIconAction: { revealPassword.toggle() }, disableAutocorrection: true, secureField: !revealPassword)
                     XelaButton(text: vm.registerButton.text, action: {
@@ -74,6 +73,11 @@ struct RegisterView: View {
         .alert(errorMessage, isPresented: $alertShown) {
             Button("Ok") {
                 alertShown = false
+            }
+        }
+        .onChange(of: vm.logged) { logged in
+            if logged {
+                registerViewPresented = false
             }
         }
     }

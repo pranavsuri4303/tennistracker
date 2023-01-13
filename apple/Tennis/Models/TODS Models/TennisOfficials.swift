@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - TennisOfficials
 
-class TennisOfficials: Codable, Equatable {
+struct TennisOfficials: Codable, Equatable {
     var tennisOfficial: [Participant?]?
 
     internal init(tennisOfficial: [Participant?]? = nil) {

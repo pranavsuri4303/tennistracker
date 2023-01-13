@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - RankingItem
 
-class RankingItem: Codable, Equatable {
+struct RankingItem: Codable, Equatable {
     var person: Person?
     var rank: Int?
     var rankingItemCode: String?

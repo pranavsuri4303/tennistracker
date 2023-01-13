@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Coordinate
 
-class TODSModel: Codable, Equatable {
+struct TODSModel: Codable, Equatable {
     var codesVersion: String?
     var courts: [Court?]?
     var dataStandardsVersion: String?

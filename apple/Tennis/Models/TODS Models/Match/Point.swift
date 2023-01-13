@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Point
 
-class Point: Codable, Equatable {
+struct Point: Codable, Equatable {
     var pointDuration: String?
     var pointNumber: Int?
     var shots: [Shot?]?

@@ -40,6 +40,8 @@ struct XelaTextField: View {
     var errorHelperTextColor: Color = .init(asset: Colors.tfErrorHelperText)
     var successHelperTextColor: Color = .init(asset: Colors.tfSuccessHelperText)
     var isDatePicker = false
+    var isDataPicker = false
+    var leftImageDataPickerText = ""
     var datePickerView: XelaDatePicker?
     var showDatePicker: Bool = false
     let dateFormat = DateFormatter()
@@ -49,11 +51,16 @@ struct XelaTextField: View {
             VStack(alignment: .leading) {
                 HStack(spacing: 16) {
                     if leftIcon != nil {
-                        Image(leftIcon!)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 16, height: 16)
-                            .foregroundColor(state == .Disabled ? iconDisabledColor : state == .Error ? iconErrorColor : state == .Success ? iconSuccessColor : iconDefaultColor)
+                        if isDataPicker && leftImageDataPickerText != "" {
+                            Text("\(leftImageDataPickerText)")
+//                                .frame(width: 16, height: 16)
+                        } else {
+                            Image(leftIcon!)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 16, height: 16)
+                                .foregroundColor(state == .Disabled ? iconDisabledColor : state == .Error ? iconErrorColor : state == .Success ? iconSuccessColor : iconDefaultColor)
+                        }
                     }
                     if secureField {
                         SecureField("", text: $value)
@@ -121,7 +128,7 @@ struct XelaTextField: View {
                                     self.state = .Default
                                 }
                             }
-                            .disabled(isDatePicker)
+                            .disabled(isDatePicker || isDataPicker)
                     }
                     if let action = rightIconAction {
                         Button {
@@ -147,10 +154,6 @@ struct XelaTextField: View {
                 if isDatePicker && showDatePicker {
                     if let datePickerView = datePickerView {
                         datePickerView
-                            .onChange(of: datePickerView.xelaDateManager.selectedDate) { selectedDate in
-                                dateFormat.dateFormat = "MMM d, y"
-                                value = dateFormat.string(from: selectedDate ?? Date())
-                            }
                     }
                 }
             }

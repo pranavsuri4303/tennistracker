@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Court
 
-class Court: Codable, Equatable {
+struct Court: Codable, Equatable {
     var altitude: String?
     var courtDimensions: String?
     var courtID: String?

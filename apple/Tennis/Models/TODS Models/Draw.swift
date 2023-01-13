@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Draw
 
-class Draw: Codable, Equatable {
+struct Draw: Codable, Equatable {
     var drawID: String?
     var drawSize: Int?
     var drawStatus: DrawStatus?

@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Contact
 
-class Contact: Codable, Equatable {
+struct Contact: Codable, Equatable {
     var contactType: ContactType?
     var emailAddress: String?
     var fax: String?

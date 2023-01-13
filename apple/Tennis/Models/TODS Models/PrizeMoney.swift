@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - PrizeMoney
 
-class PrizeMoney: Codable, Equatable {
+struct PrizeMoney: Codable, Equatable {
     var amount: Double?
     var currencyCode: String?
 

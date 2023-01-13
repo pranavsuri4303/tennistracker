@@ -14,28 +14,13 @@ class XelaDateManager: ObservableObject {
     @Published var disabledDates: [Date] = .init()
     @Published var selectedDates: [Date] = .init()
     @Published var selectedDate: Date! = nil
-    var selectedDateString: String {
-        get {
-            let dateFormatter = DateFormatter()
-            dateFormatter.timeStyle = .none
-            dateFormatter.dateFormat = "MMMM d, y"
-            if selectedDate != nil {
-                return dateFormatter.string(from: selectedDate)
-            } else {
-                return dateFormatter.string(from: Date())
-            }
-        }
-        set {
-            self.selectedDateString = newValue
-        }
-    }
 
     @Published var startDate: Date! = nil
     @Published var endDate: Date! = nil
 
     @Published var mode: Int = 0
 
-    @Published var colors = XelaColorSettings()
+    var colors = XelaColorSettings()
     var cellWidth: CGFloat = 40
 
     init(calendar: Calendar, minimumDate: Date, maximumDate: Date, disabledDates: [Date] = [Date](), selectedDate: Date? = nil, selectedDates: [Date] = [Date](), mode: Int, colors: XelaColorSettings = XelaColorSettings(), cellWidth: CGFloat = 40) {
@@ -72,5 +57,11 @@ class XelaDateManager: ObservableObject {
         return disabledDates.firstIndex(where: { calendar.isDate($0, inSameDayAs: date) })
     }
 
-    func dateToString(date _: Date) {}
+    func dateToString(forDate: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .none
+        dateFormatter.dateFormat = "MMMM d, y"
+        return dateFormatter.string(from: forDate)
+    }
+    
 }

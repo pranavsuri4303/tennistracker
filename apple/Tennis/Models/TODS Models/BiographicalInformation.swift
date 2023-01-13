@@ -7,12 +7,12 @@ import Foundation
 
 // MARK: - BiographicalInformation
 
-class BiographicalInformation: Codable, Equatable {
+struct BiographicalInformation: Codable, Equatable {
     var ageBeganTennis: Int?
     var ageTurnedPro: Int?
     var birthCountryCode: String?
     var club: Organisation?
-    var coach: Person?
+    var coach: Coach?
     var doublePlayingHand: PlayingDoubleHandCode?
     var height: Double?
     var placeOfResidence: String?
@@ -20,7 +20,7 @@ class BiographicalInformation: Codable, Equatable {
     var residenceCountryCode: String?
     var weight: Double?
 
-    internal init(ageBeganTennis: Int? = nil, ageTurnedPro: Int? = nil, birthCountryCode: String? = nil, club: Organisation? = nil, coach: Person? = nil, doublePlayingHand: PlayingDoubleHandCode? = nil, height: Double? = nil, placeOfResidence: String? = nil, playingHand: PlayingHandCode? = nil, residenceCountryCode: String? = nil, weight: Double? = nil) {
+    internal init(ageBeganTennis: Int? = nil, ageTurnedPro: Int? = nil, birthCountryCode: String? = nil, club: Organisation? = nil, coach: Coach? = nil, doublePlayingHand: PlayingDoubleHandCode? = nil, height: Double? = nil, placeOfResidence: String? = nil, playingHand: PlayingHandCode? = nil, residenceCountryCode: String? = nil, weight: Double? = nil) {
         self.ageBeganTennis = ageBeganTennis
         self.ageTurnedPro = ageTurnedPro
         self.birthCountryCode = birthCountryCode

@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Set
 
-class Sett: Codable, Equatable {
+struct Sett: Codable, Equatable {
     var extensions: [Extension?]?
     var games: [Game?]?
     var ids: IDS?

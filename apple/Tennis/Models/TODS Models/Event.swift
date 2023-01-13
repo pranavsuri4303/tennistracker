@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Event
 
-class Event: Codable, Equatable {
+struct Event: Codable, Equatable {
     var ageCategory: String? // TODO: create parses for age category
     var ageCategoryCutoffDate: Date?
     var ballType: BallType?

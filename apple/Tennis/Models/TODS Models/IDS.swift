@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - IDS
 
-class IDS: Codable, Equatable {
+struct IDS: Codable, Equatable {
     var id: [String?]?
 
     internal init(id: [String?]? = nil) {

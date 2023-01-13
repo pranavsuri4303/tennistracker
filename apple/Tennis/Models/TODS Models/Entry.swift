@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Entry
 
-class Entry: Codable, Equatable {
+struct Entry: Codable, Equatable {
     var entryID: String?
     var entryStatus: EntryStatus?
     var extensions: [Extension?]?
