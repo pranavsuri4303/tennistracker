@@ -110,22 +110,20 @@ class RegisterVM: ObservableObject {
     func createAccount(completion: @escaping (Result<Data?, Error>) -> Void) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         isLoading = true
-        if let email = user.emailAddress {
-            Auth.auth().createUser(withEmail: user.emailAddress ?? "", password: password) { res, err in
-                if let err = err {
-                    self.isLoading = false
-                    print(err)
-                    completion(.failure(err))
-                } else {
-                    self.isLoading = false
-                    if let uid = res?.user.uid,
-                       let email = res?.user.email
-                    {
-                        self.user.personID = uid
-                        self.user.emailAddress = email
-                    }
-                    completion(.success(nil))
+        Auth.auth().createUser(withEmail: user.emailAddress ?? "", password: password) { res, err in
+            if let err = err {
+                self.isLoading = false
+                print(err)
+                completion(.failure(err))
+            } else {
+                self.isLoading = false
+                if let uid = res?.user.uid,
+                   let email = res?.user.email
+                {
+                    self.user.personID = uid
+                    self.user.emailAddress = email
                 }
+                completion(.success(nil))
             }
         }
     }
