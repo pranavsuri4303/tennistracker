@@ -168,7 +168,6 @@
 		B59C408927A9DBB400ACE493 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B59C408827A9DBB400ACE493 /* GoogleSignIn */; };
 		B59E2DE127F3CDAF00CB6B27 /* AlgoliaSearchClient in Frameworks */ = {isa = PBXBuildFile; productRef = B59E2DE027F3CDAF00CB6B27 /* AlgoliaSearchClient */; };
 		B59E2DE427F3F9DC00CB6B27 /* PlayerSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E2DE327F3F9DB00CB6B27 /* PlayerSearchModel.swift */; };
-		B59E2DE727F4DF4600CB6B27 /* PlayerSearchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E2DE627F4DF4600CB6B27 /* PlayerSearchCellView.swift */; };
 		B59E2DEA27F4E08900CB6B27 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = B59E2DE927F4E08900CB6B27 /* CachedAsyncImage */; };
 		B5A239A827F5538500D7A9FE /* RDEmptyListPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A239A727F5538500D7A9FE /* RDEmptyListPlaceholder.swift */; };
 		B5A239AE27F6FFF000D7A9FE /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A239AD27F6FFF000D7A9FE /* UserDataModel.swift */; };
@@ -471,7 +470,6 @@
 		B564F7302799F73A00052CA3 /* RDBadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDBadgeButton.swift; sourceTree = "<group>"; };
 		B567575227A8EFE200381DD5 /* StringRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRowView.swift; sourceTree = "<group>"; };
 		B59E2DE327F3F9DB00CB6B27 /* PlayerSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchModel.swift; sourceTree = "<group>"; };
-		B59E2DE627F4DF4600CB6B27 /* PlayerSearchCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearchCellView.swift; sourceTree = "<group>"; };
 		B5A239A727F5538500D7A9FE /* RDEmptyListPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDEmptyListPlaceholder.swift; sourceTree = "<group>"; };
 		B5A239AD27F6FFF000D7A9FE /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		B5A9C12B295492AE00E42F72 /* Debug */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Debug; sourceTree = "<group>"; };
@@ -631,7 +629,6 @@
 			isa = PBXGroup;
 			children = (
 				76AADBA525C64F6A00EB0C43 /* SearchView.swift */,
-				B59E2DE627F4DF4600CB6B27 /* PlayerSearchCellView.swift */,
 				B544EC772970B73C00E52261 /* PlayersSearchListView.swift */,
 				B544EC792970C48100E52261 /* ClubsSearchListView.swift */,
 				B544EC7B2970C4AA00E52261 /* MatchesSearchListView.swift */,
@@ -889,7 +886,6 @@
 				B53004C82942677500184795 /* XelaTooltip.swift */,
 				B53004C92942677500184795 /* XelaBadge.swift */,
 				B53004CA2942677500184795 /* XelaRangeSlider.swift */,
-				B53004CB2942677500184795 /* XelaDivider.swift */,
 				B53004CC2942677500184795 /* XelaToast.swift */,
 				B53004CD2942677500184795 /* Extentions */,
 				B53004D12942677500184795 /* XelaNumberInput.swift */,
@@ -1099,6 +1095,7 @@
 		B53004CD2942677500184795 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				B53004CB2942677500184795 /* XelaDivider.swift */,
 				B53004CE2942677500184795 /* TextExtensions.swift */,
 				B53004CF2942677500184795 /* ColorExtensions.swift */,
 				B53004D02942677500184795 /* OtherExtensions.swift */,
@@ -1641,7 +1638,6 @@
 				B53005182942677600184795 /* XelaTooltip.swift in Sources */,
 				B53004F82942677600184795 /* XelaDoughnutChartBody.swift in Sources */,
 				B5132A6C293A237900C2E396 /* StageType.swift in Sources */,
-				B59E2DE727F4DF4600CB6B27 /* PlayerSearchCellView.swift in Sources */,
 				B53004ED2942677600184795 /* XelaDatePickerCell.swift in Sources */,
 				B53005112942677600184795 /* XelaUserAvatarStyle.swift in Sources */,
 				B53005052942677600184795 /* XelaTextareaState.swift in Sources */,

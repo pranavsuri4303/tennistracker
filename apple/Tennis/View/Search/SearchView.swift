@@ -35,7 +35,7 @@ struct SearchView: View {
                 Button {
                     print("Filter Button Pressed")
                 } label: {
-                    Image("cog")
+                    Image(asset: Icons.adjustVerticalAlt )
                 }
             }
         })

@@ -10,24 +10,62 @@ import SwiftUI
 struct PlayersSearchListView: View {
     var body: some View {
         ScrollView{
+
             VStack{
-                Button {
-                    print("Button pressed")
+                NavigationLink {
+                    Text("Profile View")
                 } label: {
                     PlayerSearchCell()
                 }
-                PlayerSearchCell()
-                PlayerSearchCell()
-                PlayerSearchCell()
-                PlayerSearchCell()
-                PlayerSearchCell()
-                PlayerSearchCell()
-                PlayerSearchCell()
-                PlayerSearchCell()
-                PlayerSearchCell()
+                NavigationLink {
+                    Text("Profile View")
+                } label: {
+                    PlayerSearchCell()
+                }
+                NavigationLink {
+                    Text("Profile View")
+                } label: {
+                    PlayerSearchCell()
+                }
+                NavigationLink {
+                    Text("Profile View")
+                } label: {
+                    PlayerSearchCell()
+                }
+                NavigationLink {
+                    Text("Profile View")
+                } label: {
+                    PlayerSearchCell()
+                }
+                NavigationLink {
+                    Text("Profile View")
+                } label: {
+                    PlayerSearchCell()
+                }
+                NavigationLink {
+                    Text("Profile View")
+                } label: {
+                    PlayerSearchCell()
+                }
+                NavigationLink {
+                    Text("Profile View")
+                } label: {
+                    PlayerSearchCell()
+                }
+                NavigationLink {
+                    Text("Profile View")
+                } label: {
+                    PlayerSearchCell()
+                }
+                NavigationLink {
+                    Text("Profile View")
+                } label: {
+                    PlayerSearchCell()
+                }
             }
+            .padding(.horizontal, 12)
+            .padding(.top, 3)
         }
-        .padding(.horizontal, 24)
     }
 }
 
@@ -45,13 +83,30 @@ struct PlayerSearchCell: View {
             VStack(alignment: .leading){
                 Text("Pranav Suri")
                     .xelaBodyBold()
-                Text("Male • 🇮🇳 IND")
+                    .foregroundColor(.primary)
+                Text("19 • Male • 🇮🇳 IND")
                     .xelaBody()
                     .foregroundColor(.secondary)
             }
             Spacer()
             Image(asset: Icons.right)
         }
+        .padding(8)
+        .overlay {
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(Color(asset: Colors.tfDefaultBorder), lineWidth: 1)
+        }
+        .padding(.horizontal, 4)
         
+    }
+    
+    private func getFlag(from countryCode: String) -> String {
+        print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
+        return countryCode
+            .unicodeScalars
+            .map { 127_397 + $0.value }
+            .compactMap(UnicodeScalar.init)
+            .map(String.init)
+            .joined()
     }
 }

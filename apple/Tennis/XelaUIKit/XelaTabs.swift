@@ -39,6 +39,6 @@ struct XelaTabs: View {
                     .offset(x: (geometry.size.width / CGFloat(items.count)) * CGFloat(selectedId - items.first!.id), y: -3)
             }
         }
-        .frame(height: 36)
+        .frame(height: 30)
     }
 }

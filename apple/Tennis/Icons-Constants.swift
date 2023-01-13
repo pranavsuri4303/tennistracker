@@ -22,6 +22,7 @@
 internal enum Icons {
   internal static let addCircle = SymbolAsset(name: "add-circle")
   internal static let add = SymbolAsset(name: "add")
+  internal static let adjustVerticalAlt = SymbolAsset(name: "adjust-vertical-alt")
   internal static let appointments = SymbolAsset(name: "appointments")
   internal static let ball = SymbolAsset(name: "ball")
   internal static let camera = SymbolAsset(name: "camera")

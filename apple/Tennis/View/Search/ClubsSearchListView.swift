@@ -10,6 +10,7 @@ import SwiftUI
 struct ClubsSearchListView: View {
     var body: some View {
         Text("ClubsSearchListView")
+            .xelaHeadline()
     }
 }
 
