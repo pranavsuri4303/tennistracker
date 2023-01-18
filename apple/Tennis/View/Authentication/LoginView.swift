@@ -13,6 +13,7 @@ struct LoginView: View {
 
     @StateObject var vm = LoginVM()
     @State var revealPassword = false
+    @Binding var additionalInfoRequired: Bool
 
     var body: some View {
         ZStack {
@@ -70,7 +71,7 @@ struct LoginView: View {
                             .xelaButtonSmall()
                     }
                     .fullScreenCover(isPresented: $showingRegister) {
-                        RegisterView(registerViewPresented: $showingRegister)
+                        RegisterView(registerViewPresented: $showingRegister, additionalInfoRequired: $additionalInfoRequired)
                     }
                 }
             }
@@ -88,8 +89,3 @@ struct LoginView: View {
     }
 }
 
-struct NewLoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}

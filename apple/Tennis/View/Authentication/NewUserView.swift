@@ -10,6 +10,7 @@ import SwiftUI
 
 struct NewUserView: View {
     @Binding var isPresented: Bool
+    @Binding var additionalInfoRequired: Bool
     @ObservedObject var vm: RegisterVM
     @State var startAnimate = false
     // Image
@@ -23,7 +24,6 @@ struct NewUserView: View {
     @State var showNationalityPicker = false
     @State var showDatePicker = false
     let dateFormat = DateFormatter()
-    
     var body: some View {
         ZStack {
             VStack(spacing: 18) {
@@ -149,6 +149,7 @@ struct NewUserView: View {
                         switch res {
                         case .success(_):
                             isPresented = false
+                            additionalInfoRequired = false
                         case .failure(let failure):
                             print(failure.localizedDescription)
                         }

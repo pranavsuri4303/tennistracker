@@ -13,13 +13,18 @@ import SwiftUI
 struct TennisApp: App {
     @UIApplicationDelegateAdaptor(Delegate.self) var delegate
     @AppStorage("status") var logged = false
+    @AppStorage("additionalInfoRequired") var additionalInfoRequired = false
     var body: some Scene {
         WindowGroup {
-            if logged {
+            if logged && !additionalInfoRequired{
                 RDBaseView()
-
-            } else {
-                LoginView()
+            }
+            else {
+                if additionalInfoRequired {
+                    NewUserView(isPresented: $additionalInfoRequired, additionalInfoRequired: $additionalInfoRequired, vm: RegisterVM())
+                } else {
+                    LoginView(additionalInfoRequired: $additionalInfoRequired)
+                }
             }
         }
     }

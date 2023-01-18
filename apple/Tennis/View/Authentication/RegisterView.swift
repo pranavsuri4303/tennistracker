@@ -14,6 +14,7 @@ struct RegisterView: View {
     @State private var alertShown = false
     @State private var errorMessage = ""
     @State private var revealPassword = false
+    @Binding var additionalInfoRequired: Bool
     var body: some View {
         ZStack {
             VStack(spacing: 18) {
@@ -32,6 +33,7 @@ struct RegisterView: View {
                         vm.createAccount { result in
                             switch result {
                             case .success:
+                                additionalInfoRequired = true
                                 newUserViewPresented.toggle()
                             case let .failure(error):
                                 self.errorMessage = error.localizedDescription
@@ -68,7 +70,7 @@ struct RegisterView: View {
             }
         }
         .fullScreenCover(isPresented: $newUserViewPresented, content: {
-            NewUserView(isPresented: $newUserViewPresented, vm: vm)
+            NewUserView(isPresented: $newUserViewPresented, additionalInfoRequired: $additionalInfoRequired, vm: vm)
         })
         .alert(errorMessage, isPresented: $alertShown) {
             Button("Ok") {

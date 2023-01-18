@@ -55,7 +55,7 @@ class RegisterVM: ObservableObject {
     func uploadFirestore(completion: @escaping (Result<Data?, Error>) -> Void) {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         do {
-            if let uid = user.personID {
+            if let uid = Auth.auth().currentUser?.uid {
                 try usersCollectionRef.document(uid).setData(from: user, merge: true)
                 dump(user)
                 completion(.success(nil))
@@ -83,10 +83,12 @@ class RegisterVM: ObservableObject {
                             }
                             completion(.success(nil))
                         case let .failure(error):
+                            self.isLoading = false
                             completion(.failure(error))
                         }
                     }
                 case let .failure(error):
+                    self.isLoading = false
                     completion(.failure(error))
                 }
             }
@@ -101,6 +103,7 @@ class RegisterVM: ObservableObject {
                     }
                     completion(.success(nil))
                 case let .failure(error):
+                    self.isLoading = false
                     completion(.failure(error))
                 }
             }
