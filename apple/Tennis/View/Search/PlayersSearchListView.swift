@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PlayersSearchListView: View {
+    @State var searchString = ""
+
     var body: some View {
         ScrollView{
 
@@ -66,6 +68,7 @@ struct PlayersSearchListView: View {
             .padding(.horizontal, 12)
             .padding(.top, 3)
         }
+        .searchable(text: $searchString, placement: .navigationBarDrawer(displayMode: .automatic), prompt: "Search for a player...")
     }
 }
 

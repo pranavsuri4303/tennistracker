@@ -56,6 +56,7 @@ class RegisterVM: ObservableObject {
         print("[Function Called]: \n\t [Name]: \(#function)\n\t [From File]: \(#fileID)")
         do {
             if let uid = Auth.auth().currentUser?.uid {
+                user.birthDate = dobDateManager.selectedDate
                 try usersCollectionRef.document(uid).setData(from: user, merge: true)
                 dump(user)
                 completion(.success(nil))

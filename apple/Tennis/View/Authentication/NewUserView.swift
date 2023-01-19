@@ -56,7 +56,7 @@ struct NewUserView: View {
                             XelaTextField(placeholder: vm.givenNameTF.placeholder, value: $vm.user.standardGivenName.toUnwrapped(defaultValue: ""), state: vm.givenNameTF.state, helperText: vm.givenNameTF.helperText, leftIcon: Icons.user.name, disableAutocorrection: true)
                             XelaTextField(placeholder: vm.familyNameTF.placeholder, value: $vm.user.standardFamilyName.toUnwrapped(defaultValue: ""), state:  vm.familyNameTF.state, helperText: vm.familyNameTF.helperText, leftIcon: Icons.user.name, disableAutocorrection: true)
                             XelaTextField(placeholder: vm.dobTF.placeholder,
-                                          value: $vm.user.birthDate.toUnwrapped(defaultValue: ""),
+                                          value: $vm.dobTF.value,
                                           state: vm.dobTF.state,
                                           helperText: "",
                                           leftIcon: Icons.appointments.name,
@@ -64,7 +64,7 @@ struct NewUserView: View {
                                           rightIconAction: { withAnimation { showDatePicker.toggle() } },
                                           isDatePicker: true,
                                           datePickerView: XelaDatePicker(xelaDateManager: vm.dobDateManager,
-                                                                         selectedDateString: $vm.user.birthDate.toUnwrapped(defaultValue: ""),
+                                                                         selectedDateString: $vm.dobTF.value,
                                                                          monthOffset: ((100 * 12) - 1)),
                                           showDatePicker: showDatePicker)
                             XelaTextField(placeholder: vm.nationalityTF.placeholder,

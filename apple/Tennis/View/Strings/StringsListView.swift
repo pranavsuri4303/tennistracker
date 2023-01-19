@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StringsListView: View {
     @State var showingAddString = false
+    @State var showingNewMatch = false
     @EnvironmentObject var baseVM: RDBaseViewVM
     @ObservedObject var vm = StringsVM()
 
@@ -41,7 +42,7 @@ struct StringsListView: View {
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Menu {
-                    Button("Add Match", action: { print("add match") })
+                    Button("Add Match", action: { showingNewMatch.toggle() })
                     Button("Add String", action: { showingAddString.toggle() })
                 } label: {
                     Image(systemName: "plus")
@@ -53,5 +54,8 @@ struct StringsListView: View {
         } onEnd: {
             print("ended")
         }
+        .sheet(isPresented: $showingNewMatch, content: {
+            NewAddMatchView(showingAddMatch: $showingNewMatch)
+        })
     }
 }

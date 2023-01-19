@@ -27,7 +27,7 @@ class RDBaseViewVM: ObservableObject {
             if let err = err {
                 print("[Error]: \(err.localizedDescription)")
             } else {
-                self.personData = try! snap?.data(as: Person.self)
+//                self.personData = try! snap?.data(as: Person.self)
                 dump(self.personData)
             }
         }

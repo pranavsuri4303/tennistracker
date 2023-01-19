@@ -159,6 +159,9 @@
 		B544EC802971EAAB00E52261 /* Coach.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544EC7F2971EAAB00E52261 /* Coach.swift */; };
 		B544FEED29453D3B00469B9F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B544FEEC29453D3B00469B9F /* Colors.xcassets */; };
 		B547C4892965287900BF77B3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B547C4882965287900BF77B3 /* LoginView.swift */; };
+		B5495304297892DE00D79B3E /* NewAddMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5495303297892DE00D79B3E /* NewAddMatchView.swift */; };
+		B54953062978962800D79B3E /* MatchUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54953052978962800D79B3E /* MatchUpVM.swift */; };
+		B5495308297899B300D79B3E /* MatchUpFormatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5495307297899B300D79B3E /* MatchUpFormatView.swift */; };
 		B54D40682791342D00F36EE1 /* RDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D40672791342D00F36EE1 /* RDTextField.swift */; };
 		B54D406A27913F8A00F36EE1 /* RDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D406927913F8A00F36EE1 /* RDButton.swift */; };
 		B564F72F2799F13D00052CA3 /* RDHeaderTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */; };
@@ -466,6 +469,9 @@
 		B544EC7F2971EAAB00E52261 /* Coach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coach.swift; sourceTree = "<group>"; };
 		B544FEEC29453D3B00469B9F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B547C4882965287900BF77B3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B5495303297892DE00D79B3E /* NewAddMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAddMatchView.swift; sourceTree = "<group>"; };
+		B54953052978962800D79B3E /* MatchUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchUpVM.swift; sourceTree = "<group>"; };
+		B5495307297899B300D79B3E /* MatchUpFormatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchUpFormatView.swift; sourceTree = "<group>"; };
 		B54D40672791342D00F36EE1 /* RDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDTextField.swift; sourceTree = "<group>"; };
 		B54D406927913F8A00F36EE1 /* RDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDButton.swift; sourceTree = "<group>"; };
 		B564F72E2799F13D00052CA3 /* RDHeaderTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHeaderTitle.swift; sourceTree = "<group>"; };
@@ -642,6 +648,9 @@
 		762F87C725C9C0C9004B46FD /* Match */ = {
 			isa = PBXGroup;
 			children = (
+				B5495307297899B300D79B3E /* MatchUpFormatView.swift */,
+				B54953052978962800D79B3E /* MatchUpVM.swift */,
+				B5495303297892DE00D79B3E /* NewAddMatchView.swift */,
 				B513A39A26A038BD00145D2D /* MatchVM.swift */,
 				B53CCA1E2806F39A00258FBC /* AddMatchView.swift */,
 				7662D3F425C391A1004544BF /* NewMatchView.swift */,
@@ -799,10 +808,10 @@
 		B5132A71293E361800C2E396 /* Match */ = {
 			isa = PBXGroup;
 			children = (
-				B5C95E822936632500C9C8A7 /* Game.swift */,
 				B5C95E7D2936632500C9C8A7 /* MatchUp.swift */,
-				B5C95E8D2936632600C9C8A7 /* Point.swift */,
 				B5C95E982936632700C9C8A7 /* Sett.swift */,
+				B5C95E822936632500C9C8A7 /* Game.swift */,
+				B5C95E8D2936632600C9C8A7 /* Point.swift */,
 				B5C95E8E2936632600C9C8A7 /* Shot.swift */,
 			);
 			path = Match;
@@ -1674,11 +1683,13 @@
 				B5C95EBD2936632700C9C8A7 /* Stage.swift in Sources */,
 				B5BDA1E6293A18300048B727 /* OrganisationType.swift in Sources */,
 				B5C95EC52936632700C9C8A7 /* Side.swift in Sources */,
+				B54953062978962800D79B3E /* MatchUpVM.swift in Sources */,
 				B530051D2942677600184795 /* TextExtensions.swift in Sources */,
 				B567575327A8EFE200381DD5 /* StringRowView.swift in Sources */,
 				B59E2DE427F3F9DC00CB6B27 /* PlayerSearchModel.swift in Sources */,
 				762F87CF25C9C0EC004B46FD /* MatchesListView.swift in Sources */,
 				B544EC7C2970C4AA00E52261 /* MatchesSearchListView.swift in Sources */,
+				B5495304297892DE00D79B3E /* NewAddMatchView.swift in Sources */,
 				B530050D2942677600184795 /* XelaStepItem.swift in Sources */,
 				B53005062942677600184795 /* XelaButtonType.swift in Sources */,
 				B5BDA1CA293A0B390048B727 /* Discipline.swift in Sources */,
@@ -1751,6 +1762,7 @@
 				B53005222942677600184795 /* XelaDatePicker.swift in Sources */,
 				B53004DD2942677600184795 /* XelaTextField.swift in Sources */,
 				76D1B86025BAEE4700FE1B4B /* LoadingScreenView.swift in Sources */,
+				B5495308297899B300D79B3E /* MatchUpFormatView.swift in Sources */,
 				76AADB9E25C64F3800EB0C43 /* StringsVM.swift in Sources */,
 				B5BDA1B42939F3960048B727 /* PlayingHandCode.swift in Sources */,
 				B5C95EAF2936632700C9C8A7 /* PrizeMoney.swift in Sources */,

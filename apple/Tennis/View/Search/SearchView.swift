@@ -9,7 +9,6 @@ import SwiftUI
 struct SearchView: View {
     @State var currentSearchTab = 0
     @State var isLoading = true
-    @State var searchString = ""
     @StateObject var vm = PlayersVM()
     @State var showProfile = false
     var body: some View {
@@ -29,7 +28,6 @@ struct SearchView: View {
             Spacer()
         }
         .background(Color(asset: Colors.background).ignoresSafeArea(.all, edges: .all))
-        .searchable(text: $searchString, placement: .navigationBarDrawer(displayMode: .automatic), prompt: "Search for a player...")
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {

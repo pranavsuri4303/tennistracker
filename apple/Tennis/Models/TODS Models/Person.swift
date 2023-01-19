@@ -10,7 +10,7 @@ import Firebase
 struct Person: Codable, Equatable {
     var addresses: [Address?]?
     var biographicalInformation: BiographicalInformation?
-    var birthDate: String?
+    var birthDate: Date?
     var emailAddress: String?
     var extensions: [Extension?]?
     var ids: IDS?
@@ -30,7 +30,7 @@ struct Person: Codable, Equatable {
     var tennisID: String?
     var updated: String?
 
-    internal init(addresses: [Address?]? = nil, biographicalInformation: BiographicalInformation? = nil, birthDate: String? = nil, emailAddress: String? = nil, extensions: [Extension?]? = nil, ids: IDS? = nil, nationalityCode: String? = nil, nativeFamilyName: String? = nil, nativeGivenName: String? = nil, notes: String? = nil, onlineProfiles: [OnlineProfile?]? = nil, otherNames: String? = nil, passportFamilyName: String? = nil, passportGivenName: String? = nil, personID: String? = nil, previousNames: String? = nil, sex: Sex? = nil, standardFamilyName: String? = nil, standardGivenName: String? = nil, tennisID: String? = nil, updated: String? = nil) {
+    internal init(addresses: [Address?]? = nil, biographicalInformation: BiographicalInformation? = nil, birthDate: Date? = nil, emailAddress: String? = nil, extensions: [Extension?]? = nil, ids: IDS? = nil, nationalityCode: String? = nil, nativeFamilyName: String? = nil, nativeGivenName: String? = nil, notes: String? = nil, onlineProfiles: [OnlineProfile?]? = nil, otherNames: String? = nil, passportFamilyName: String? = nil, passportGivenName: String? = nil, personID: String? = nil, previousNames: String? = nil, sex: Sex? = nil, standardFamilyName: String? = nil, standardGivenName: String? = nil, tennisID: String? = nil, updated: String? = nil) {
         self.addresses = addresses
         self.biographicalInformation = biographicalInformation
         self.birthDate = birthDate
