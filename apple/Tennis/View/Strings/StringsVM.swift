@@ -17,9 +17,19 @@ class StringsVM: ObservableObject {
     @Published var alertMsg = ""
     @Published var isLoading = false
     @Published var stringEntry = StringEntry(stringName: "", crossTension: 50, mainTension: 50, stringingDate: Timestamp(), lastUpdated: Timestamp())
+    
+
 
     @Published var mainsInput = XelaNumberInputProperties(label: "Mains", value: 50, state: .Default, helperText: "Strings tension for mains.", decreaseIcon: Icons.minusCircle.name, increaseIcon: Icons.addCircle.name)
     @Published var crossesInput = XelaNumberInputProperties(label: "Crosses", value: 50, state: .Default, helperText: "Strings tension for crosses.", decreaseIcon: Icons.minusCircle.name, increaseIcon: Icons.addCircle.name)
+    
+    @Published var stringDateManager = XelaDateManager(calendar: Calendar.current,
+                                                    minimumDate: Date().addingTimeInterval(60 * 60 * 24 * 365 * 100 * -1),
+                                                    maximumDate: Date().addingTimeInterval(0),
+                                                    selectedDate: Date(),
+                                                    mode: 0)
+    
+    @Published var reStringingDateTF = XelaTextFieldProperties(placeholder: "Restring date", value: "", state: .Default, helperText: "")
 
     let db = Firestore.firestore().collection("users")
     private let uidStr = Auth.auth().currentUser?.uid
