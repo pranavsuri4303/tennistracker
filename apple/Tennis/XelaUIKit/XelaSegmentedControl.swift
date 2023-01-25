@@ -1,5 +1,5 @@
 //
-//  XelaSegmentedControll.swift
+//  XelaSegmentedControl.swift
 //  XelaExampleApp
 //
 //  Created by Sherhan on 04.08.2021.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct XelaSegmentedControll: View {
-    var items: [XelaSegmentedControllItem]
+struct XelaSegmentedControl: View {
+    var items: [XelaSegmentedControlItem]
     @Binding var selectedId: Int
     var primaryBackground: Color = .init(xelaColor: .Blue6)
     var secondaryBackground: Color = .init(xelaColor: .Gray12)
@@ -36,7 +36,7 @@ struct XelaSegmentedControll: View {
                     }
                     HStack(spacing: 8) {
                         ForEach(items) { item in
-                            XelaSegmentedControllButton(item: item, selectedId: $selectedId, primaryBackground: primaryBackground, secondaryBackground: secondaryBackground, primaryFontColor: primaryFontColor, secondaryFontColor: secondaryFontColor, autoResize: autoResize)
+                            XelaSegmentedControlButton(item: item, selectedId: $selectedId, primaryBackground: primaryBackground, secondaryBackground: secondaryBackground, primaryFontColor: primaryFontColor, secondaryFontColor: secondaryFontColor, autoResize: autoResize)
                         }
                     }
                     .background(autoResize ? secondaryBackground : Color.clear)

@@ -55,7 +55,7 @@ struct StringsListView: View {
             print("ended")
         }
         .sheet(isPresented: $showingNewMatch, content: {
-            NewAddMatchView(showingAddMatch: $showingNewMatch)
+            MatchUpFormatView()
         })
     }
 }

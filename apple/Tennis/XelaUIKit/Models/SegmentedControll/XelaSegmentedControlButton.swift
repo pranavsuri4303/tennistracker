@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct XelaSegmentedControllButton: View {
-    var item: XelaSegmentedControllItem
+struct XelaSegmentedControlButton: View {
+    var item: XelaSegmentedControlItem
     @Binding var selectedId: Int
     var primaryBackground: Color = .init(xelaColor: .Blue6)
     var secondaryBackground: Color = .init(xelaColor: .Gray12)

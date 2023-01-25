@@ -86,8 +86,8 @@
 		B53004E82942677600184795 /* XelaRadioButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530048B2942677500184795 /* XelaRadioButtonItem.swift */; };
 		B53004E92942677600184795 /* XelaRadioButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530048C2942677500184795 /* XelaRadioButtonSize.swift */; };
 		B53004EA2942677600184795 /* XelaRoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530048D2942677500184795 /* XelaRoundedCorner.swift */; };
-		B53004EB2942677600184795 /* XelaSegmentedControllItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530048F2942677500184795 /* XelaSegmentedControllItem.swift */; };
-		B53004EC2942677600184795 /* XelaSegmentedControllButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004902942677500184795 /* XelaSegmentedControllButton.swift */; };
+		B53004EB2942677600184795 /* XelaSegmentedControlItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530048F2942677500184795 /* XelaSegmentedControlItem.swift */; };
+		B53004EC2942677600184795 /* XelaSegmentedControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004902942677500184795 /* XelaSegmentedControlButton.swift */; };
 		B53004ED2942677600184795 /* XelaDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004922942677500184795 /* XelaDatePickerCell.swift */; };
 		B53004EE2942677600184795 /* XelaDateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004932942677500184795 /* XelaDateManager.swift */; };
 		B53004EF2942677600184795 /* XelaWeekdayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004942942677500184795 /* XelaWeekdayHeader.swift */; };
@@ -150,7 +150,7 @@
 		B53005282942677600184795 /* XelaTextarea.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004D92942677600184795 /* XelaTextarea.swift */; };
 		B53005292942677600184795 /* XelaSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004DA2942677600184795 /* XelaSlider.swift */; };
 		B530052A2942677700184795 /* XelaTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004DB2942677600184795 /* XelaTabs.swift */; };
-		B530052B2942677700184795 /* XelaSegmentedControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004DC2942677600184795 /* XelaSegmentedControll.swift */; };
+		B530052B2942677700184795 /* XelaSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53004DC2942677600184795 /* XelaSegmentedControl.swift */; };
 		B53CCA1F2806F39A00258FBC /* AddMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CCA1E2806F39A00258FBC /* AddMatchView.swift */; };
 		B544EC76296F279700E52261 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544EC75296F279700E52261 /* LinkedList.swift */; };
 		B544EC782970B73C00E52261 /* PlayersSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B544EC772970B73C00E52261 /* PlayersSearchListView.swift */; };
@@ -396,8 +396,8 @@
 		B530048B2942677500184795 /* XelaRadioButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaRadioButtonItem.swift; sourceTree = "<group>"; };
 		B530048C2942677500184795 /* XelaRadioButtonSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaRadioButtonSize.swift; sourceTree = "<group>"; };
 		B530048D2942677500184795 /* XelaRoundedCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaRoundedCorner.swift; sourceTree = "<group>"; };
-		B530048F2942677500184795 /* XelaSegmentedControllItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSegmentedControllItem.swift; sourceTree = "<group>"; };
-		B53004902942677500184795 /* XelaSegmentedControllButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSegmentedControllButton.swift; sourceTree = "<group>"; };
+		B530048F2942677500184795 /* XelaSegmentedControlItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSegmentedControlItem.swift; sourceTree = "<group>"; };
+		B53004902942677500184795 /* XelaSegmentedControlButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSegmentedControlButton.swift; sourceTree = "<group>"; };
 		B53004922942677500184795 /* XelaDatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaDatePickerCell.swift; sourceTree = "<group>"; };
 		B53004932942677500184795 /* XelaDateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaDateManager.swift; sourceTree = "<group>"; };
 		B53004942942677500184795 /* XelaWeekdayHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaWeekdayHeader.swift; sourceTree = "<group>"; };
@@ -460,7 +460,7 @@
 		B53004D92942677600184795 /* XelaTextarea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTextarea.swift; sourceTree = "<group>"; };
 		B53004DA2942677600184795 /* XelaSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSlider.swift; sourceTree = "<group>"; };
 		B53004DB2942677600184795 /* XelaTabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaTabs.swift; sourceTree = "<group>"; };
-		B53004DC2942677600184795 /* XelaSegmentedControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSegmentedControll.swift; sourceTree = "<group>"; };
+		B53004DC2942677600184795 /* XelaSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XelaSegmentedControl.swift; sourceTree = "<group>"; };
 		B53CCA1E2806F39A00258FBC /* AddMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMatchView.swift; sourceTree = "<group>"; };
 		B544EC75296F279700E52261 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		B544EC772970B73C00E52261 /* PlayersSearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersSearchListView.swift; sourceTree = "<group>"; };
@@ -909,7 +909,7 @@
 				B53004D92942677600184795 /* XelaTextarea.swift */,
 				B53004DA2942677600184795 /* XelaSlider.swift */,
 				B53004DB2942677600184795 /* XelaTabs.swift */,
-				B53004DC2942677600184795 /* XelaSegmentedControll.swift */,
+				B53004DC2942677600184795 /* XelaSegmentedControl.swift */,
 			);
 			path = XelaUIKit;
 			sourceTree = "<group>";
@@ -972,8 +972,8 @@
 		B530048E2942677500184795 /* SegmentedControll */ = {
 			isa = PBXGroup;
 			children = (
-				B530048F2942677500184795 /* XelaSegmentedControllItem.swift */,
-				B53004902942677500184795 /* XelaSegmentedControllButton.swift */,
+				B530048F2942677500184795 /* XelaSegmentedControlItem.swift */,
+				B53004902942677500184795 /* XelaSegmentedControlButton.swift */,
 			);
 			path = SegmentedControll;
 			sourceTree = "<group>";
@@ -1646,7 +1646,7 @@
 				B530051C2942677600184795 /* XelaToast.swift in Sources */,
 				B5BDA1BC293A097C0048B727 /* ContactType.swift in Sources */,
 				B5BDA1E0293A15D30048B727 /* MatchUpType.swift in Sources */,
-				B530052B2942677700184795 /* XelaSegmentedControll.swift in Sources */,
+				B530052B2942677700184795 /* XelaSegmentedControl.swift in Sources */,
 				B53005182942677600184795 /* XelaTooltip.swift in Sources */,
 				B53004F82942677600184795 /* XelaDoughnutChartBody.swift in Sources */,
 				B5132A6C293A237900C2E396 /* StageType.swift in Sources */,
@@ -1671,7 +1671,7 @@
 				B53004E82942677600184795 /* XelaRadioButtonItem.swift in Sources */,
 				B5C95EBA2936632700C9C8A7 /* Event.swift in Sources */,
 				B544EC782970B73C00E52261 /* PlayersSearchListView.swift in Sources */,
-				B53004EB2942677600184795 /* XelaSegmentedControllItem.swift in Sources */,
+				B53004EB2942677600184795 /* XelaSegmentedControlItem.swift in Sources */,
 				B530051E2942677600184795 /* ColorExtensions.swift in Sources */,
 				B53005172942677600184795 /* XelaColorModel.swift in Sources */,
 				764B745E25D2552E0035B02C /* CurrentMatchStatistics.swift in Sources */,
@@ -1697,7 +1697,7 @@
 				B5C95EAA2936632700C9C8A7 /* Tournament.swift in Sources */,
 				B53CCA1F2806F39A00258FBC /* AddMatchView.swift in Sources */,
 				B5BDA1BA293A08C20048B727 /* BallType.swift in Sources */,
-				B53004EC2942677600184795 /* XelaSegmentedControllButton.swift in Sources */,
+				B53004EC2942677600184795 /* XelaSegmentedControlButton.swift in Sources */,
 				760719B925BB52F000F09A1A /* DashboardView.swift in Sources */,
 				B53005012942677600184795 /* XelaCheckboxState.swift in Sources */,
 				B53005252942677600184795 /* XelaRadioButtonGroup.swift in Sources */,

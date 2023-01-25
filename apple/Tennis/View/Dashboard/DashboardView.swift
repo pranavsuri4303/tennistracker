@@ -17,7 +17,7 @@ struct DashboardView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     RDBadgeButton(systemImageTitle: "plus",
                                   action: { showAddMatch.toggle() })
-                        .sheet(isPresented: $showAddMatch) { NewMatchView() }
+                        .sheet(isPresented: $showAddMatch) { MatchUpFormatView() }
                 }
             })
     }
