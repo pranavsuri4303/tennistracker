@@ -125,3 +125,9 @@ extension Text {
         font(Font.custom("NunitoSans-Bold", size: 12))
     }
 }
+
+extension VStack {
+    func singleColumnPadding() -> VStack {
+        padding(.horizontal,24) as! VStack<Content>
+    }
+}

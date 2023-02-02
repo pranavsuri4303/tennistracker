@@ -10,10 +10,10 @@ import SwiftUI
 struct XelaSegmentedControl: View {
     var items: [XelaSegmentedControlItem]
     @Binding var selectedId: Int
-    var primaryBackground: Color = .init(xelaColor: .Blue6)
-    var secondaryBackground: Color = .init(xelaColor: .Gray12)
-    var primaryFontColor: Color = .init(.white)
-    var secondaryFontColor: Color = .init(xelaColor: .Gray2)
+    var primaryBackground: Color = Color(asset: Colors.scSelectedBackground)
+    var secondaryBackground: Color = Color(asset: Colors.scUnselectedBackground)
+    var primaryFontColor: Color = Color(asset: Colors.scSelectedFont)
+    var secondaryFontColor: Color = Color(asset: Colors.scUnselectedFont)
     var autoResize: Bool = false
 
     var body: some View {
@@ -23,7 +23,7 @@ struct XelaSegmentedControl: View {
                     HStack(spacing: 0) {
                         RoundedRectangle(cornerRadius: 12)
                             .foregroundColor(primaryBackground)
-                            .frame(width: geometry.size.width / CGFloat(items.count), height: 46)
+                            .frame(width: geometry.size.width / CGFloat(items.count), height: 40)
                             .offset(x: (geometry.size.width / CGFloat(items.count)) * CGFloat(selectedId))
 
                         Spacer()
@@ -34,7 +34,7 @@ struct XelaSegmentedControl: View {
                     if autoResize {
                         Spacer()
                     }
-                    HStack(spacing: 8) {
+                    HStack {
                         ForEach(items) { item in
                             XelaSegmentedControlButton(item: item, selectedId: $selectedId, primaryBackground: primaryBackground, secondaryBackground: secondaryBackground, primaryFontColor: primaryFontColor, secondaryFontColor: secondaryFontColor, autoResize: autoResize)
                         }
@@ -49,6 +49,6 @@ struct XelaSegmentedControl: View {
             .background(!autoResize ? secondaryBackground : Color.clear)
             .cornerRadius(12)
         }
-        .frame(height: 46)
+        .frame(height: 40)
     }
 }

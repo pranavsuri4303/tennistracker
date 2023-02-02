@@ -10,10 +10,10 @@ import SwiftUI
 struct XelaSegmentedControlButton: View {
     var item: XelaSegmentedControlItem
     @Binding var selectedId: Int
-    var primaryBackground: Color = .init(xelaColor: .Blue6)
-    var secondaryBackground: Color = .init(xelaColor: .Gray12)
-    var primaryFontColor: Color = .init(.white)
-    var secondaryFontColor: Color = .init(xelaColor: .Gray2)
+    var primaryBackground: Color = Color(asset: Colors.scSelectedBackground)
+    var secondaryBackground: Color = Color(asset: Colors.scUnselectedBackground)
+    var primaryFontColor: Color = Color(asset: Colors.scSelectedFont)
+    var secondaryFontColor: Color = Color(asset: Colors.scUnselectedFont)
     var autoResize: Bool = false
 
     var body: some View {
@@ -38,7 +38,7 @@ struct XelaSegmentedControlButton: View {
                 Spacer()
             }
         }
-        .padding(EdgeInsets(top: 16, leading: getPadding(), bottom: 16, trailing: getPadding()))
+        .padding(EdgeInsets(top: 10, leading: getPadding(), bottom: 10, trailing: getPadding()))
         .background(autoResize && selectedId == item.id ? primaryBackground : Color.clear)
         .contentShape(Rectangle())
         .cornerRadius(12)
@@ -53,6 +53,6 @@ struct XelaSegmentedControlButton: View {
         if !autoResize {
             return 0
         }
-        return 16
+        return 10
     }
 }

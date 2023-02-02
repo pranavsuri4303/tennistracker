@@ -16,11 +16,20 @@ struct MatchUpFormatView: View {
     @State var tempText5 = ""
     @State var tempText6 = ""
     var body: some View {
-        XelaSegmentedControl(items: [XelaSegmentedControlItem(id: 0,
-                                                              label: "Best of"),
-                                     XelaSegmentedControlItem(id: 1,
-                                                              label: "Exactly")], selectedId: $selectedId)
-        XelaTextField(placeholder: "No. of Set", value: $tempText2, state: .Default, isDataPicker: true) 
+        VStack(spacing: 12) {
+            HStack(alignment: .center, spacing: 5){
+                VStack{
+                    Text("Best of/Exactly")
+                        .xelaBodyBold()
+                    XelaSegmentedControl(items: [XelaSegmentedControlItem(id: 0,
+                                                                          label: "Best of"),
+                                                 XelaSegmentedControlItem(id: 1,
+                                                                          label: "Exactly")], selectedId: $selectedId)
+                }
+            }
+            XelaTextField(placeholder: "No. of Set", value: $tempText2, state: .Default, isDataPicker: true)
+        }
+        .padding(.horizontal, 24)
     }
 }
 
