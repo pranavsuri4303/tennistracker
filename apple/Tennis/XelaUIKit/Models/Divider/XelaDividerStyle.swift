@@ -2,7 +2,7 @@
 //  XelaDividerStyle.swift
 //  XelaExampleApp
 //
-//  Created by Sherhan on 07.08.2021.
+//  Created by Pranav Suri on 07.08.2021.
 //
 
 import Foundation

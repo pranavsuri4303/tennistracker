@@ -2,7 +2,7 @@
 //  XelaDate.swift
 //  XelaExampleApp
 //
-//  Created by Sherhan on 06.08.2021.
+//  Created by Pranav Suri on 06.08.2021.
 //
 
 import SwiftUI

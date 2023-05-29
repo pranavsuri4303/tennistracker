@@ -2,7 +2,7 @@
 //  XelaNumberInputControls.swift
 //  XelaExampleApp
 //
-//  Created by Sherhan on 01.08.2021.
+//  Created by Pranav Suri on 01.08.2021.
 //
 
 import Foundation

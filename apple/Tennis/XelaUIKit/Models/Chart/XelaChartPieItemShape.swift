@@ -2,7 +2,7 @@
 //  XelaChartPieItemShape.swift
 //  XelaExampleApp
 //
-//  Created by Sherhan on 09.08.2021.
+//  Created by Pranav Suri on 09.08.2021.
 //
 
 import SwiftUI

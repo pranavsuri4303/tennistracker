@@ -2,7 +2,7 @@
 //  XelaTooltipAlign.swift
 //  XelaExampleApp
 //
-//  Created by Sherhan on 03.08.2021.
+//  Created by Pranav Suri on 03.08.2021.
 //
 
 import Foundation
