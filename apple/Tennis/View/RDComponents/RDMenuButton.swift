@@ -21,9 +21,9 @@ struct RDMenuButton: View {
                 .renderingMode(.template)
                 .frame(width: 24, height: 24, alignment: .center)
                 .aspectRatio(1, contentMode: .fit)
-                .foregroundColor(.gray)
+                .foregroundColor(.black)
             Text(title)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
 
             Spacer(minLength: 0)
         }

@@ -32,7 +32,7 @@ struct SideMenuView: View {
                 Text(vm.personData?.standardGivenName ?? "User")
                     .font(.title3)
                     .fontWeight(.bold)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                 Divider()
                     .frame(height: 10)
 

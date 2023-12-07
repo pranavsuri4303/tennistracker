@@ -55,11 +55,7 @@ struct XelaTextField: View {
                             Text("\(leftImageDataPickerText)")
 //                                .frame(width: 16, height: 16)
                         } else {
-                            Image(leftIcon!)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 16, height: 16)
-                                .foregroundColor(state == .Disabled ? iconDisabledColor : state == .Error ? iconErrorColor : state == .Success ? iconSuccessColor : iconDefaultColor)
+
                         }
                     }
                     if secureField {
